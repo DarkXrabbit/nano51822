@@ -29,17 +29,13 @@
 
 // TODO: insert other include files here
 #include <class/ble/ble_device.h>
-#include <class/ble/ble_gap.h>
-#include <class/ble/ble_advertising.h>
-#include <class/ble/ble_conn_params.h>
-#include <class/ble/ble_device_manager.h>
 #include <class/pin.h>
 
 // TODO: insert other definitions and declarations here
 #define APP_BEACON_INFO_LENGTH           0x17                              /**< Total length of information advertised by the Beacon. */
 #define APP_ADV_DATA_LENGTH              0x15                              /**< Length of manufacturer specific data in the advertisement. */
 #define APP_DEVICE_TYPE                  0x02                              /**< 0x02 refers to Beacon. */
-#define APP_MEASURED_RSSI                ((int8_t)-76)                     /**< The Beacon's measured RSSI at 1 meter distance in dBm. */
+#define APP_MEASURED_RSSI                ((uint8_t)-66)                    /**< The Beacon's measured RSSI at 1 meter distance in dBm. */
 #define APP_COMPANY_IDENTIFIER           0x004C                            /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 #define APP_BEACON_UUID                  0x01, 0x12, 0x23, 0x34, \
                                          0x45, 0x56, 0x67, 0x78, \
@@ -89,7 +85,7 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
 class ledTask: public CThread {
 protected:
 	virtual void run() {
-		CPin led(22);	// P0.22
+		CPin led(22);	// Use SoC pin No. P0.22
 		led.output();
 		while(isAlive()) {
 			led = !led;
@@ -110,31 +106,39 @@ int main(void)
 #endif
 
 	bleDevice ble;
-	ble.enable();									// enable BLE stack
+	ble.enable();										// enable BLE stack
 
-	// device manager
-	bleDeviceManager dm(ble);
-	dm.settings();
+	// GAP
+	ble.m_gap.settings("nano51822");					// set ble device name
+	ble.m_gap.tx_power(BLE_TX_4dBm);					// set TX radio power
 
-	bleAdvertising adv(ble);						// declare advertising object
-	adv.interval(100);
-	adv.name_type(BLE_ADVDATA_NO_NAME);				// set beacon name type (No Name)
-	adv.commpany_identifier(APP_COMPANY_IDENTIFIER);
-	adv.manuf_specific_data(m_beacon_info, APP_BEACON_INFO_LENGTH);
-	adv.flags(&flags, sizeof(flags));
-	adv.update();									// update advertising data
+	// Advertising
+	ble.m_advertising.interval(100);					// set advertising interval = 100ms
+	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
+	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
+	ble.m_advertising.manuf_specific_data(m_beacon_info, APP_BEACON_INFO_LENGTH); // set beacon data
+	ble.m_advertising.flags(&flags, sizeof(flags));		// set flags
+	ble.m_advertising.update();							// update advertising data
 
-	adv.start();									// start advertising, interval = 100ms
-	// */
+	ble.m_advertising.start();							// let's go to start the advertising
 
+
+	//
+	// Multi-Task Test
+	//
 	ledTask t;
 	t.start("LED", 38);
 
-	CPin led(P38);
+	//
+	// blink LED
+	//
+	CPin led(P38);			// Use framework pin name P38
 	led.output();
+
+	//
     // Enter main loop.
-    for (;;)
-    {
+	//
+    while(1) {
         led.invert();
         sleep(200);
     }
