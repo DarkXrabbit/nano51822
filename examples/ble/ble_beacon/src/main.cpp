@@ -3,7 +3,8 @@
  Name        : main.c
  Author      : uCXpresso
  Version     : v1.0.0
- Copyright   : MIT
+ Copyright	 : www.ucxpresso.net
+ License   	 : MIT
  Description : beacon test
 ===============================================================================
  	 	 	 	 	 	 	 	 History
@@ -26,10 +27,10 @@
 #define DBG(...)
 #endif
 
-
 // TODO: insert other include files here
 #include <class/ble/ble_device.h>
 #include <class/pin.h>
+#include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
 #define APP_BEACON_INFO_LENGTH           0x17                              /**< Total length of information advertised by the Beacon. */
@@ -41,7 +42,6 @@
                                          0x45, 0x56, 0x67, 0x78, \
                                          0x89, 0x9a, 0xab, 0xbc, \
                                          0xcd, 0xde, 0xef, 0xf0            /**< Proprietary UUID for Beacon. */
-
 
 #define USE_UICR_FOR_MAJ_MIN_VALUES	 0
 
@@ -59,11 +59,11 @@
     // nrfjprog --snr <Segger-chip-Serial-Number> --memwr 0x10001080 --val 0xabcd0102
 #define major_value  	(((*(uint32_t *)UICR_ADDRESS) & 0xFFFF0000) >> 16)
 #define minor_value 	((*(uint32_t *)UICR_ADDRESS) & 0x0000FFFF)
-#define APP_MAJOR_VALUE MSB(major_value), LSB(major_value)                 /**< Major value used to identify Beacons. */
-#define APP_MINOR_VALUE MSB(minor_value), LSB(minor_value)                 /**< Minor value used to identify Beacons. */
+#define APP_MAJOR_VALUE 	MSB_FIRST(major_value)	/**< Major value used to identify Beacons. */
+#define APP_MINOR_VALUE 	MSB_FIRST(minor_value)	/**< Minor value used to identify Beacons. */
 #else
-#define APP_MAJOR_VALUE                  0x01, 0x02                        /**< Major value used to identify Beacons. */
-#define APP_MINOR_VALUE                  0x03, 0x04                        /**< Minor value used to identify Beacons. */
+#define APP_MAJOR_VALUE		MSB_FIRST(0x0102)		/**< Major value used to identify Beacons. */
+#define APP_MINOR_VALUE     MSB_FIRST(0x0304)		/**< Minor value used to identify Beacons. */
 #endif
 
 static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< Information advertised by the Beacon. */
@@ -122,7 +122,6 @@ int main(void)
 
 	ble.m_advertising.start();							// let's go to start the advertising
 
-
 	//
 	// Multi-Task Test
 	//
@@ -138,8 +137,11 @@ int main(void)
 	//
     // Enter main loop.
 	//
+	CTimeout tm;
     while(1) {
-        led.invert();
-        sleep(200);
+    	if ( tm.isExpired(500) ) {
+    		tm.reset();
+    		led.invert();
+    	}
     }
 }
