@@ -76,6 +76,7 @@ int main(void) {
 	// ADVERTISING
 	ble.m_advertising.interval(APP_ADV_INTERVAL);								// set advertising interval
 	ble.m_advertising.uuids_complete_list(adv_uuids, UUID_COUNT(adv_uuids));	// add HRM UUID on advertising
+	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);				// add company identifier
 	ble.m_advertising.update();													// update advertising data
 
 	// Declare a HRM service object
