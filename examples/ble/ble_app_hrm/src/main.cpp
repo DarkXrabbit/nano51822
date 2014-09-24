@@ -28,6 +28,8 @@
 // TODO: insert other include files here
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service_hrm.h>
+#include <class/ble/ble_service_htm.h>
+
 #include <class/pin.h>
 #include <class/thread.h>
 #include <class/timeout.h>
@@ -35,12 +37,15 @@
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     40                     /**< The advertising interval (in units of 0.625 ms. This value corresponds to 25 ms). */
+#define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
 #define APP_ADV_TIMEOUT_IN_SECONDS           180                    /**< The advertising timeout in units of seconds. */
 #define APP_COMPANY_IDENTIFIER           	 0x004C                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
+static const uint8_t manufactory_code[] = {0x12, 0x34, 0x56};
+
 static const ble_uuid_t adv_uuids[] = {
-	{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE}
+	{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE},
+	{BLE_UUID_HEALTH_THERMOMETER_SERVICE, BLE_UUID_TYPE_BLE}
 };
 
 //
@@ -49,7 +54,7 @@ static const ble_uuid_t adv_uuids[] = {
 class ledTask: public CThread {
 protected:
 	virtual void run() {
-		CPin led(P38);
+		CPin led(18);
 		led.output();
 		while(1) {
 			led.invert();
@@ -73,20 +78,21 @@ int main(void) {
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 
-	// ADVERTISING
+	// update ADVERTISING contents
 	ble.m_advertising.interval(APP_ADV_INTERVAL);								// set advertising interval
 	ble.m_advertising.uuids_complete_list(adv_uuids, UUID_COUNT(adv_uuids));	// add HRM UUID on advertising
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);				// add company identifier
+	ble.m_advertising.manuf_specific_data(manufactory_code, sizeof(manufactory_code));
 	ble.m_advertising.update();													// update advertising data
+
+	// Start advertising
+	ble.m_advertising.start();
 
 	// Declare a HRM service object
 	bleServiceHRM hrm(ble);
 
-	// Setup connection parameters
-	ble.conn_params(hrm.cccd_handle());
-
-	// Start advertising
-	ble.m_advertising.start();
+	// Declare a HTM service object
+	bleServiceHTM htm(ble);
 
 	//
 	// A RTOS task test
@@ -97,31 +103,53 @@ int main(void) {
 	//
 	// LED for debug
 	//
-	CPin led1(P4);
-	CPin led2(P5);
+	CPin led1(20);	// led1 for connection
+	CPin led2(21);	// led2 for HRM service
+	CPin led3(22);	// led3 for HTM service
 	led1.output();
 	led2.output();
+	led3.output();
 
 	//
 	// Use timeout class for HRM interval
 	//
-	CTimeout tmHRM;
+	CTimeout tmHRM, tmHTM;
+
+	float temp;
 
 	//
     // Enter main loop.
 	//
     while(1) {
-    	if ( ble.isConnected() ) {
-    		led1 = LED_ON;		// set led on when BLE connected.
+    	//
+    	// Check Connection
+    	//
+    	led1 = ble.isConnected() ? LED_ON : LED_OFF;
 
-    		// check HRM timer expired (800ms)
-    		if ( tmHRM.isExpired(800) ) {
-    			tmHRM.reset();	// reset timeout count
+    	//
+    	// Heart Rate Measurement Service
+    	//
+    	if ( hrm.isAvailable() ) {
+    		// check HRM timer expired (1000ms)
+    		if ( tmHRM.isExpired(1000) ) {
     			led2 = !led2;
+    			tmHRM.reset();	// reset timeout count
     			hrm.send(70);	// send Heart Rate Measurement
     		}
-    	} else {
-    		led1 = LED_OFF;		// set led off when BLE disconnected.
+    	}
+
+    	//
+    	// Health Thermometer Measurement Service
+    	//
+    	if ( htm.isAvailable() ) {
+    		if ( tmHTM.isExpired(1000)) {
+    			tmHTM.reset();
+      			// read the temperature of SoC
+    			if ( bleServiceHTM::get_temperature(temp) ) {
+					led3 = !led3;
+					htm.send(temp);	// send temp
+    			}
+    		}
     	}
     }
 }
