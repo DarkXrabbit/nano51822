@@ -79,20 +79,6 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
                          // this implementation.
 };
 
-//
-// task test
-//
-class ledTask: public CThread {
-protected:
-	virtual void run() {
-		CPin led(22);	// Use SoC pin No. P0.22
-		led.output();
-		while(isAlive()) {
-			led = !led;
-			sleep(100);
-		}
-	}
-};
 
 static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
 
@@ -120,18 +106,12 @@ int main(void)
 	ble.m_advertising.flags(&flags, sizeof(flags));		// set flags
 	ble.m_advertising.update();							// update advertising data
 
-	ble.m_advertising.start();							// let's go to start the advertising
-
-	//
-	// Multi-Task Test
-	//
-	ledTask t;
-	t.start("LED", 38);
+	ble.m_advertising.start();							// start the iBeacon advertising
 
 	//
 	// blink LED
 	//
-	CPin led(P38);			// Use framework pin name P38
+	CPin led(18);
 	led.output();
 
 	//
@@ -139,9 +119,17 @@ int main(void)
 	//
 	CTimeout tm;
     while(1) {
+    	//
+    	// led blink demo
+    	//
     	if ( tm.isExpired(500) ) {
     		tm.reset();
     		led.invert();
     	}
+
+    	//
+    	// BLE event manager (keep in main loop)
+    	//
+    	bleDevice::waitForEvent();
     }
 }

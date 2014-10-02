@@ -5,7 +5,7 @@
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
  License	 : MIT
- Description : Heart Rate Measurement Service
+ Description : Heart Rate Measurement & Heath Thermometer Measurement
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
@@ -44,8 +44,8 @@
 static const uint8_t manufactory_code[] = {0x12, 0x34, 0x56};
 
 static const ble_uuid_t adv_uuids[] = {
-	{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE},
-	{BLE_UUID_HEALTH_THERMOMETER_SERVICE, BLE_UUID_TYPE_BLE}
+	{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE},				/**< HRM Service UUID. */
+	{BLE_UUID_HEALTH_THERMOMETER_SERVICE, BLE_UUID_TYPE_BLE}		/**< HTM Service UUID. */
 };
 
 //
@@ -77,6 +77,7 @@ int main(void) {
 
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
+	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	// update ADVERTISING contents
 	ble.m_advertising.interval(APP_ADV_INTERVAL);								// set advertising interval
@@ -98,14 +99,14 @@ int main(void) {
 	// A RTOS task test
 	//
 	ledTask t;
-	t.start("LED", 38);
+	t.start("LED", 42);
 
 	//
 	// LED for debug
 	//
-	CPin led1(20);	// led1 for connection
-	CPin led2(21);	// led2 for HRM service
-	CPin led3(22);	// led3 for HTM service
+	CPin led1(19);	// led1 for connection
+	CPin led2(20);	// led2 for HRM service
+	CPin led3(21);	// led3 for HTM service
 	led1.output();
 	led2.output();
 	led3.output();
@@ -144,12 +145,17 @@ int main(void) {
     	if ( htm.isAvailable() ) {
     		if ( tmHTM.isExpired(1000)) {
     			tmHTM.reset();
-      			// read the temperature of SoC
+      			// read the temperature from SoC
     			if ( bleServiceHTM::get_temperature(temp) ) {
 					led3 = !led3;
 					htm.send(temp);	// send temp
     			}
     		}
     	}
+
+    	//
+    	// BLE event manager (keep in main loop)
+    	//
+    	bleDevice::waitForEvent();
     }
 }

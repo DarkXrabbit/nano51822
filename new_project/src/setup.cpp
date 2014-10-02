@@ -15,6 +15,7 @@
  */
 
 #include <uCXpresso.h>
+
 //
 // default memory pool
 //
@@ -25,5 +26,5 @@ static uint8_t mem_pool[DEFAULT_POOL_SIZE];	// reduce pool size to increase the 
 //
 extern "C" void sys_setup(void) {
 	pool_memadd((uint32_t)mem_pool, sizeof(mem_pool));
-	MAIN_STACK_SIZE = 256;
+	MAIN_STACK_SIZE = DEF_MAIN_STACK_SIZE;
 }
