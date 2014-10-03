@@ -77,9 +77,5 @@ int main(void) {
     		led1.invert();
     	}
 
-    	//
-    	// BLE event manager
-    	//
-    	bleDevice::waitForEvent();
     }
 }

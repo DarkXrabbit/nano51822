@@ -52,10 +52,5 @@ int main(void) {
     	// Your loop code here
     	//
 
-
-    	//
-    	// BLE event manager (keep in main loop)
-    	//
-    	bleDevice::waitForEvent();
     }
 }

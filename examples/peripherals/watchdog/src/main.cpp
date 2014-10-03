@@ -66,9 +66,5 @@ int main(void) {
     	//
     	CWatchdog::feed();	// if mask, will cause the system reset.
 
-    	//
-    	// BLE event manager (keep in main loop)
-    	//
-    	bleDevice::waitForEvent();
     }
 }

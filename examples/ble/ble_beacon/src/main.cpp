@@ -127,9 +127,5 @@ int main(void)
     		led.invert();
     	}
 
-    	//
-    	// BLE event manager (keep in main loop)
-    	//
-    	bleDevice::waitForEvent();
     }
 }

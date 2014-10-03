@@ -153,9 +153,5 @@ int main(void) {
     		}
     	}
 
-    	//
-    	// BLE event manager (keep in main loop)
-    	//
-    	bleDevice::waitForEvent();
     }
 }
