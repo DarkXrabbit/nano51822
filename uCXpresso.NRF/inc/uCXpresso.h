@@ -21,7 +21,7 @@ extern "C" {
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		0
 #define uCXpresso_VER_RC		0
-#define uCXpresso_VER_BUILD		"2014/10/2"
+#define uCXpresso_VER_BUILD		"2014/10/5"
 #define uCXpresso_VER_STR		"V1.0.0 Beta"
 
 //
@@ -32,7 +32,7 @@ extern "C" {
 //
 //	defined
 //
-#define DEFAULT_POOL_SIZE	(5400)
+#define DEFAULT_POOL_SIZE	(6*1024)
 
 #if __GNUC__				// GCC
 	#if __bool_true_false_are_defined==0

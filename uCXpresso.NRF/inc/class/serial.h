@@ -47,7 +47,6 @@ public:
 	typedef enum {
 	    UART_FLOW_CONTROL_DISABLED, /**< UART Hw Flow Control is disabled. */
 	    UART_FLOW_CONTROL_ENABLED,  /**< Standard UART Hw Flow Control is enabled. */
-	    UART_FLOW_CONTROL_LOW_POWER /**< Specialized UART Hw Flow Control is used. The Low Power setting allows the nRF51 to Power Off the UART module when CTS is in-active, and re-enabling the UART when the CTS signal becomes active. This allows the nRF51 to safe power by only using the UART module when it is needed by the remote site. */
 	} UART_FLOW_CONTROL_T;
 
 	/**
