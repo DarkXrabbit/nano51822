@@ -70,7 +70,6 @@ int main(void) {
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
 #endif
-
 	// SoftDevice
 	bleDevice ble;
 	ble.enable();						// enable BLE stack

@@ -83,10 +83,10 @@ public:
 	virtual uint32_t enable(UAET_BAUD_RATE_T baudrate = UART_BAUDRATE_115200,
 							UART_PARITY_T parity = UART_PARITY_NONE,
 							UART_FLOW_CONTROL_T flow_control = UART_FLOW_CONTROL_DISABLED,
-							int tx=9,
-							int rx=11,
-							int rts=8,
-							int cts=10);
+							int tx=DEF_TXD_PIN,
+							int rx=DEF_RXD_PIN,
+							int rts=DEF_RTS_PIN,
+							int cts=DEF_CTS_PIN);
 
 	virtual uint32_t disable();
 

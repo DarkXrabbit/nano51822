@@ -33,19 +33,30 @@
 // TODO: insert other definitions and declarations here
 
 //
-// GPIO Interrupt Task
+// GPIO Interrupt Demo Task
 //
 class tskGPIO : public CThread {
+public:
+	tskGPIO(int btn_pin, int led_pin) {
+		m_btn_pin = btn_pin;
+		m_led_pin = led_pin;
+	}
 protected:
-	virtual void run() {
-		gpioINT	btn(16, INTERNAL_PULL_UP);	// declare a button on P0.16 with internal pull up.
-		btn.enable(FALLING);				// Interrupt trigger on Falling.
+	int m_btn_pin;
+	int m_led_pin;
 
-		CPin led1(19);						// declare a LED on P0.19
-		led1.output();						// set led1 as an output pin
-		while(isAlive()) {
-			if ( btn.wait() ) {				// block and waiting for an interrupt
-				led1.invert();				// blink led1
+	//
+	// Implement the CThread::run() member function.
+	//
+	virtual void run() {
+		gpioINT	btn(m_btn_pin, INTERNAL_PULL_UP);	// declare a INT object with internal pull up.
+		btn.enable(FALLING);						// Interrupt trigger on Falling.
+
+		CPin led(m_led_pin);						// declare a LED pin.
+		led.output();								// set the led as an output pin
+		while(1) {
+			if ( btn.wait() ) {						// block and waiting for an interrupt
+				led.invert();						// blink led1
 			}
 		}
 	}
@@ -65,8 +76,11 @@ int main(void) {
 	//
 	// Your setup code here
 	//
-	tskGPIO t;
-	t.start("gpio", 96, PRI_HIGH);
+	tskGPIO t1(16, 19);	// set button pin on P0.16 and LED on P0.19
+	t1.start("gpio1", 56, PRI_HIGH);
+
+	tskGPIO t2(17, 20);	// set button pin on 0.17 and LED on P0.20
+	t2.start("gpio2", 56, PRI_HIGH);
 
 	CPin led0(18);	// declare the led0 on P0.18
 	led0.output();	// set led0 as an output pin

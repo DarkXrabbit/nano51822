@@ -34,16 +34,30 @@
 
 // TODO: insert other definitions and declarations here
 class tskTimer: public CThread {
+public:
+	tskTimer(float sec, int led_pin) {
+		m_interval = sec;
+		m_led_pin = led_pin;
+	}
+
 protected:
+	float m_interval;
+	int	  m_led_pin;
+
+	//
+	// Implement CThread::run() member function
+	//
 	virtual void run() {
-		CPin led0(18);
-		led0.output();
-		CTimer t;
-		t.second(0.2);
-		t.enable();
+		CPin led(m_led_pin);	// declare a LED object
+		led.output();			// set the LED as an output pin
+
+		CTimer t;				// declare a Timer object
+		t.second(m_interval);	// set Timer interval
+		t.enable();				// enable timer interrupt
+
 		while(isAlive()) {
-			if ( t.wait() ) {
-				led0.invert();
+			if ( t.wait() ) {	// block and waiting a timer interrupt
+				led.invert();
 			}
 		}
 	}
@@ -57,25 +71,24 @@ int main(void) {
 	dbg.start();
 #endif
 
-	CPin led1(19);
-	led1.output();
+	tskTimer t1(0.1, 18);
+	t1.start("Timer1", 56, PRI_HIGH);
 
-	tskTimer t;
-	t.start("Timer", 56, PRI_HIGH);
+//	CRTC::clockSource(LF_EXTERNAL);	// set RTC clock source from External crystal.
+	CRTC rtc;						// declare a RTC object
+	rtc.interval(1.0);				// set RTC interval 1 second
+	rtc.enable();					// enable RTC interrupt
 
-	CRTC::clockSource(LF_INTERNAL);
-	CRTC rtc;
-	rtc.interval(0.5);
-	rtc.enable();
+	CPin led1(19);					// declare a LED on P0.19
+	led1.output();					// set the LED as an output pin
 
 	//
     // Enter main loop.
 	//
     while(1) {
 
-    	if ( rtc.wait() ) {
+    	if ( rtc.wait() ) {			// block and waiting for RTC interrupt
     		led1.invert();
     	}
-
     }
 }

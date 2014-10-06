@@ -52,7 +52,7 @@ public:
 	 *
 	 * \code
 	 * Example:
-	 * 		CPin key(21);		// Create a key object to connect to pin 21.
+	 * 		CPin key(21);		// Create a key object to connect to P0.21.
 	 * 		key.input();		// set the key object as a input.
 	 *
 	 * 		if ( key==LOW ) {	// check the pin level
@@ -60,14 +60,14 @@ public:
 	 * 		}
 	 * \endcode
 	 */
-	CPin(int p);
+	CPin(uint8_t p);
 
 	/**Set the pin as an output pin.
 	 * \code
-	 * CPin myPin(P19);
-	 * myPin.output();		// set the P19 as an output pin. (use the default NOT_OPEN and LOW level output)
-	 * myPin = HIGH;		// set P19 to HIGH (use the operator '=')
-	 * myPin.write(LOW);	// set P19 to LOW  (use the write() member)
+	 * CPin myPin(19);
+	 * myPin.output();		// set the P0.19 as an output pin. (use the default NOT_OPEN and LOW level output)
+	 * myPin = HIGH;		// set P0.19 to HIGH (use the operator '=')
+	 * myPin.write(LOW);	// set P0.19 to LOW  (use the write() member)
 	 * \endcode
 	 * \param mode is a PIN_OUT_MODE_T enumeration to indicate the output mode.
 	 * \param defValue is a PIN_LEVEL_T enumeration to set the default level for the output pin.
@@ -77,8 +77,8 @@ public:
 	/**Set as an input pin
 	 * \code
 	 * PIN_LEVEL_T level;
-	 * CPin myPin(P19);
-	 * myPin.input(); 		// Set the P19 as an input pin. (with default INTERNAL_PULL_UP feature)
+	 * CPin myPin(19);
+	 * myPin.input(); 		// Set the P0.19 as an input pin. (with default INTERNAL_PULL_UP feature)
 	 * if ( myPin==HIGH ) {	// Read a pin level from myPin. (use the operator '==')
 	 * 		...
 	 * }
@@ -103,7 +103,7 @@ public:
 
 	/**Invert an output pin.
 	 * \code
-	 * CPin myPin(P19);
+	 * CPin myPin(19);
 	 * myPin.output();
 	 *
 	 * while(1) {
@@ -127,9 +127,9 @@ public:
 	/*! \cond PRIVATE */
 	CPin();
 	virtual ~CPin();
-	void assign(int pin);
+	void assign(uint8_t pin);
 protected:
-	int m_pin;
+	uint8_t m_pin;
 	/*! \endcond */
 };
 

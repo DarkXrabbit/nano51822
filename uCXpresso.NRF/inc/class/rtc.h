@@ -41,4 +41,6 @@ protected:
 	///@endcond
 };
 
+extern CRTC *gpRTC;
+
 #endif /* RTC_H_ */

@@ -3,7 +3,7 @@
  Name        : timer.h
  Author      : uCXpresso
  Version     : v1.0.0
- Date		 : 2014/8/4
+ Date		 : 2014/10/6
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : Timer class
  ===============================================================================
@@ -11,7 +11,7 @@
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2012/8/4	v1.0.0	First Edition									Jason
+ 2012/10/6	v1.0.0	First Edition									Jason
  ===============================================================================
  */
 
@@ -58,26 +58,12 @@ public:
 	 */
 	bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
-
-	/**Get current time count
-	 *
-	 */
-	inline uint32_t count() {
-		return m_count;
-	}
-
 	//
-	// PRIVATE
-	/// @cond
-
-	// for arduino user
-	inline void begin() { enable(); }
-	inline void end() { disable(); }
-
+	///@cond PRIVATE
+	//
 	virtual ~CTimer();
-	uint32_t 	m_count;
 	CSemaphore	m_semIrq;
-	/// @endcond
+	///@endcond
 };
 
 #endif /* TIMER_H_ */
