@@ -25,11 +25,7 @@
 #define BLE_UUID_UART_TX_CHARACTERISTIC  0x0002                       /**< The UUID of the TX Characteristic. */
 #define BLE_UUID_UART_RX_CHARACTERISTIC  0x0003                       /**< The UUID of the RX Characteristic. */
 
-#define BLE_NUS_MAX_DATA_LEN            (GATT_MTU_SIZE_DEFAULT - 3)  /**< Maximum length of data (in bytes) that can be transmitted by the UART service module to the peer. */
-#define BLE_NUS_MAX_RX_CHAR_LEN         BLE_NUS_MAX_DATA_LEN         /**< Maximum length of the RX Characteristic (in bytes). */
-#define BLE_NUS_MAX_TX_CHAR_LEN         20                           /**< Maximum length of the TX Characteristic (in bytes). */
-
-extern const ble_uuid128_t nus_base_uuid;							/**< Default UART's BLE base UUID */
+extern const ble_uuid128_t nus_base_uuid;	/**< Default UART's BLE base UUID */
 
 class bleServiceUART: public bleServiceCustomer, public CStream {
 public:
