@@ -57,11 +57,6 @@ public:
 	 */
 	void name_type(ble_advdata_name_type_t type);
 
-	/**@brief Include the appearance in the advertising data.
-	 *
-	 */
-	void include_appearance();
-
 	/**@brief Advertising data Flags field.
 	 *
 	 */

@@ -20,9 +20,9 @@
 
 #define BUTTON_DFU				0
 
-#define DEF_TXD_PIN				9
-#define DEF_RXD_PIN				11
-#define DEF_RTS_PIN				8
-#define DEF_CTS_PIN				10
+#define DEF_RTS_PIN				8	///< RTS (input) on P0.8
+#define DEF_TXD_PIN				9	///< TXD (output) on P0.9
+#define DEF_CTS_PIN				10	///< CTS (output) on P0.10
+#define DEF_RXD_PIN				11	///< RXD (input) on P0.11
 
 #endif /* MODULES_H_ */

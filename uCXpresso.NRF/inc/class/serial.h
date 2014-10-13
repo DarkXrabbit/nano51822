@@ -74,7 +74,7 @@ public:
 	/**Constructs a CSerial object.
 	 * \param fifo_size
 	 */
-	CSerial(size_t tx_fifo_size = 64, size_t rx_fifo_size = 64);
+	CSerial(size_t tx_fifo_size = 32, size_t rx_fifo_size = 32);
 
 	/**Call the member function to enable the serial port.
 	 * \param baudrate is a unsigned long integer to specified the data baud-rate.

@@ -1,8 +1,18 @@
 /*
- * ble_service.h
- *
- *  Created on: Aug 5, 2014
- *      Author: Jason
+ ===============================================================================
+ Name        : ble_service.h
+ Author      : uCXpresso
+ Version     : v1.0.0
+ Date		 : 2014/10/12
+ Copyright   : Copyright (C) www.embeda.com.tw
+ Description : BLE Services base class
+ ===============================================================================
+ 	 	 	 	 	 	 	 	 History
+ ---------+---------+--------------------------------------------+-------------
+ DATE     |	VERSION |	DESCRIPTIONS							 |	By
+ ---------+---------+--------------------------------------------+-------------
+ 2014/10/12	v1.0.0	First Edition for nano51822						Jason
+ ===============================================================================
  */
 
 #ifndef BLE_SERVICE_H_
@@ -12,10 +22,13 @@
 
 class bleService: virtual public bleBase {
 public:
+	/**@brief bleService constructor.
+	 * @param ble is a bleDevice to point the bleDevice object.
+	 */
 	bleService(bleBase &ble);
 
-	/** @brief Check this service is available for access
-	 * @return true if service available, false otherwise.
+	/** @brief Check the service available.
+	 * @return true if service is available, false otherwise.
 	 */
 	virtual inline bool isAvailable() { return true; }
 

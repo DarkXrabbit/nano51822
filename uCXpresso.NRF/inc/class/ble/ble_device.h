@@ -28,6 +28,34 @@
 #include <class/ble/ble_device_manager.h>
 #include <class/ble/ble_gap.h>
 
+/**@brief Possible lfclk oscillator sources.
+ * @ingroup Enumerations
+*/
+typedef enum
+{
+  NRF_LFCLKSRC_SYNTH_250_PPM,                       /**< LFCLK Synthesized from HFCLK.                    */
+  NRF_LFCLKSRC_XTAL_500_PPM,                        /**< LFCLK crystal oscillator 500 PPM accuracy.       */
+  NRF_LFCLKSRC_XTAL_250_PPM,                        /**< LFCLK crystal oscillator 250 PPM accuracy.       */
+  NRF_LFCLKSRC_XTAL_150_PPM,                        /**< LFCLK crystal oscillator 150 PPM accuracy.       */
+  NRF_LFCLKSRC_XTAL_100_PPM,                        /**< LFCLK crystal oscillator 100 PPM accuracy.       */
+  NRF_LFCLKSRC_XTAL_75_PPM,                         /**< LFCLK crystal oscillator 75 PPM accuracy.        */
+  NRF_LFCLKSRC_XTAL_50_PPM,                         /**< LFCLK crystal oscillator 50 PPM accuracy.        */
+  NRF_LFCLKSRC_XTAL_30_PPM,                         /**< LFCLK crystal oscillator 30 PPM accuracy.        */
+  NRF_LFCLKSRC_XTAL_20_PPM,                         /**< LFCLK crystal oscillator 20 PPM accuracy.        */
+  NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION,        /**< LFCLK RC oscillator, 250ms  calibration interval.*/
+  NRF_LFCLKSRC_RC_250_PPM_500MS_CALIBRATION,        /**< LFCLK RC oscillator, 500ms  calibration interval.*/
+  NRF_LFCLKSRC_RC_250_PPM_1000MS_CALIBRATION,       /**< LFCLK RC oscillator, 1000ms calibration interval.*/
+  NRF_LFCLKSRC_RC_250_PPM_2000MS_CALIBRATION,       /**< LFCLK RC oscillator, 2000ms calibration interval.*/
+  NRF_LFCLKSRC_RC_250_PPM_4000MS_CALIBRATION,       /**< LFCLK RC oscillator, 4000ms calibration interval.*/
+  NRF_LFCLKSRC_RC_250_PPM_8000MS_CALIBRATION,       /**< LFCLK RC oscillator, 8000ms calibration interval.*/
+  NRF_LFCLKSRC_RC_250_PPM_TEMP_1000MS_CALIBRATION,  /**< LFCLK RC oscillator. Temperature checked every 1000ms, if changed above a threshold, a calibration is done.*/
+  NRF_LFCLKSRC_RC_250_PPM_TEMP_2000MS_CALIBRATION,  /**< LFCLK RC oscillator. Temperature checked every 2000ms, if changed above a threshold, a calibration is done.*/
+  NRF_LFCLKSRC_RC_250_PPM_TEMP_4000MS_CALIBRATION,  /**< LFCLK RC oscillator. Temperature checked every 4000ms, if changed above a threshold, a calibration is done.*/
+  NRF_LFCLKSRC_RC_250_PPM_TEMP_8000MS_CALIBRATION,  /**< LFCLK RC oscillator. Temperature checked every 8000ms, if changed above a threshold, a calibration is done.*/
+  NRF_LFCLKSRC_RC_250_PPM_TEMP_16000MS_CALIBRATION, /**< LFCLK RC oscillator. Temperature checked every 16000ms, if changed above a threshold, a calibration is done.*/
+}NRF_LFCLKSRC_T;
+
+
 /**@brief 	BLE Device Class (SoftDevice).
  * @class 	bleDevice ble_device.h "class/ble/ble_device.h"
  *
@@ -38,6 +66,14 @@
  */
 class bleDevice : public bleBase, public CThread{
 public:
+	/**@brief BLE softdevice constructor.
+	 *
+	 * @param lfclksrc specific the Low Frequency Clock source, and default to use the internal RC with SYNTH feature.
+	 *
+	 * @note Recommend to use the external 32.768KHz crystal for low power features.
+	 */
+	bleDevice(NRF_LFCLKSRC_T lfclksrc=NRF_LFCLKSRC_SYNTH_250_PPM);
+
 	/**@brief Enable the BLE stack (device).
 	 *
 	 * @param stack Set the stack size for the BLE device task.
@@ -95,7 +131,6 @@ public:
 	//
 	/// @cond PRIVATE
 	//
-	bleDevice();
 	virtual ~bleDevice();
 	void on_ble_event(xHandle event);
 	void on_sys_event(uint32_t event);

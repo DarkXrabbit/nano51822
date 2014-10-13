@@ -1,8 +1,18 @@
 /*
- * ble_service_hrm.h
- *
- *  Created on: Jul 24, 2014
- *      Author: Jason
+ ===============================================================================
+ Name        : ble_service_hrm.h
+ Author      : uCXpresso
+ Version     : v1.0.0
+ Date		 : 2014/10/12
+ Copyright   : Copyright (C) www.embeda.com.tw
+ Description : BLE Heart Rate service class
+ ===============================================================================
+ 	 	 	 	 	 	 	 	 History
+ ---------+---------+--------------------------------------------+-------------
+ DATE     |	VERSION |	DESCRIPTIONS							 |	By
+ ---------+---------+--------------------------------------------+-------------
+ 2014/10/12	v1.0.0	First Edition for nano51822						Jason
+ ===============================================================================
  */
 
 #ifndef BLE_SERVICE_HRM_H_
@@ -21,7 +31,14 @@ typedef enum  {
 	HRS_BODY_SENSOR_LOCATION_FOOT
 }hrm_sensor_loc_t;
 
-
+/**@brief 	BLE Heart Rate service
+ * @class 	bleServiceHRM ble_service_hrm.h "class/ble/ble_service_hrm.h"
+ *
+ * @details This service exposes heart rate and other data from a
+ * Heart Rate Sensor intended for fitness applications.
+ *
+ * @ingroup BLE Class
+ */
 class bleServiceHRM: public bleService {
 public:
 	bleServiceHRM(bleDevice &ble,
@@ -30,6 +47,12 @@ public:
 
 	virtual bool isAvailable();
 
+	/**@brief Send the heart rate measurement value.
+	 *
+	 * @param[in] heart_rate Send the heart rate value to client.
+	 *
+	 * @return NRF_SUCCESS if send measurement value successful.
+	 */
 	virtual uint32_t send(uint16_t heart_rate);
 
 	/**@brief Function for adding a RR Interval measurement to the RR Interval buffer.
@@ -55,13 +78,16 @@ public:
 	 */
 	virtual void sensor_contact_detected_update(bool is_sensor_contact_detected);
 
+	//
+	///@cond PRIVATE
+	//
 	uint16_t cccd_handle();
 	virtual ~bleServiceHRM();
 	bool	m_bNotify;
 protected:
 	xHandle	m_handle;
 	virtual void on_ble_event(xHandle evt);
-friend class bleDevice;
+	//@endcond
 };
 
 #endif /* BLE_SERVICE_HRM_H_ */
