@@ -80,7 +80,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(uint32_t stack=86);
+	uint32_t enable(uint32_t stack=68);
 
 	/**@brief Check BLE connection.
 	 *

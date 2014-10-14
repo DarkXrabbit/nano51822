@@ -22,8 +22,8 @@
 #include <class/stream.h>
 
 #define BLE_UUID_UART_SERVICE            0x0001                       /**< The UUID of the UART Service. */
-#define BLE_UUID_UART_TX_CHARACTERISTIC  0x0002                       /**< The UUID of the TX Characteristic. */
-#define BLE_UUID_UART_RX_CHARACTERISTIC  0x0003                       /**< The UUID of the RX Characteristic. */
+#define BLE_UUID_UART_TX_CHARACTERISTIC  0x0002                       /**< The UUID of the TX Characteristic. (Device to App) */
+#define BLE_UUID_UART_RX_CHARACTERISTIC  0x0003                       /**< The UUID of the RX Characteristic. (App to Device) */
 
 extern const ble_uuid128_t nus_base_uuid;	/**< Default UART's BLE base UUID */
 
@@ -38,11 +38,15 @@ public:
 				   ble_uuid128_t const *base_uuid = &nus_base_uuid,
 				   uint16_t service_uuid = BLE_UUID_UART_SERVICE,
 				   uint16_t tx_char_uuid = BLE_UUID_UART_TX_CHARACTERISTIC,
-				   uint16_t rx_char_uuid = BLE_UUID_UART_TX_CHARACTERISTIC,
+				   uint16_t rx_char_uuid = BLE_UUID_UART_RX_CHARACTERISTIC,
 				   size_t tx_fifo_size = 64,
 				   size_t rx_fifo_size = 64);
 
 	virtual bool isAvailable();
+
+	virtual inline bool isConnected() {
+		return isAvailable();
+	}
 
 	//
 	///@cond PRIVATE
@@ -59,12 +63,12 @@ protected:
 	uint32_t rx_char_add(uint16_t rx_char_uuid);
 	uint32_t tx_char_add(uint16_t tx_char_uuid);
 
-	virtual void on_data_receive(uint8_t * data, uint16_t length, bool fromISR=true);
+	virtual void on_data_receive(uint8_t * data, uint16_t length);
 	virtual uint32_t on_data_transmit(uint8_t *data, uint16_t length);
 
 	virtual void on_disconnected(xHandle evt);
 	virtual void on_write(xHandle evt);
-	virtual inline void on_send(xHandle evt) { onSend(true); }
+	virtual void on_send(xHandle evt);
 	///@endcond
 };
 

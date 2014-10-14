@@ -89,6 +89,15 @@ public:
 	 */
 	void tx_power_level(int8_t value);
 
+	/**@brief Set GAP Appearance value.
+	 *
+	 * @param[in] value Appearance (16-bit), see @ref BLE_APPEARANCES.
+	 *
+	 * @return @ref NRF_SUCCESS  Appearance value set successfully.
+	 * @return @ref NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied.
+	 */
+	uint32_t appearance(uint16_t value);
+
 	/**@brief Update the all fields into Advertising
 	 *
 	 */
