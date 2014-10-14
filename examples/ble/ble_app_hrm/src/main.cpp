@@ -38,7 +38,6 @@
 #define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
-#define APP_ADV_TIMEOUT_IN_SECONDS           180                    /**< The advertising timeout in units of seconds. */
 #define APP_COMPANY_IDENTIFIER           	 0x004C                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
 static const uint8_t manufactory_code[] = {0x12, 0x34, 0x56};
@@ -73,19 +72,26 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
+	//
 	// Declare a HRM service object
+	//
 	bleServiceHRM hrm(ble);
 
+	//
 	// Declare a HTM service object
+	//
 	bleServiceHTM htm(ble);
 
+	//
 	// update ADVERTISING contents
+	//
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
 
 	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertising
 	ble.m_advertising.add_uuid_to_complete_list(htm);				// add htm object to the uuid_list of advertising
 
+	ble.m_advertising.appearance(BLE_APPEARANCE_HEART_RATE_SENSOR_HEART_RATE_BELT);
 	ble.m_advertising.manuf_specific_data(manufactory_code, sizeof(manufactory_code));
 	ble.m_advertising.update();													// update advertising data
 
