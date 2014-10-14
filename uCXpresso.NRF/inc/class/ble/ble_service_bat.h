@@ -50,6 +50,9 @@ public:
 	 */
 	virtual uint32_t send(uint8_t battery_level);
 
+	virtual inline uint16_t uuid() {
+		return BLE_UUID_BATTERY_SERVICE;
+	}
 	//
 	///@cond PRIVATE
 	//

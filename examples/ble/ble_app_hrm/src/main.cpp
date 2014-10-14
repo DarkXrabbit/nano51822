@@ -43,11 +43,6 @@
 
 static const uint8_t manufactory_code[] = {0x12, 0x34, 0x56};
 
-static const ble_uuid_t adv_uuids[] = {
-	{BLE_UUID_HEART_RATE_SERVICE, BLE_UUID_TYPE_BLE},				/**< HRM Service UUID. */
-	{BLE_UUID_HEALTH_THERMOMETER_SERVICE, BLE_UUID_TYPE_BLE}		/**< HTM Service UUID. */
-};
-
 //
 // A simple RTOS task (led blink) for test
 //
@@ -78,21 +73,24 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
-	// update ADVERTISING contents
-	ble.m_advertising.interval(APP_ADV_INTERVAL);								// set advertising interval
-	ble.m_advertising.uuids_complete_list(adv_uuids, UUID_COUNT(adv_uuids));	// add HRM UUID on advertising
-	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);				// add company identifier
-	ble.m_advertising.manuf_specific_data(manufactory_code, sizeof(manufactory_code));
-	ble.m_advertising.update();													// update advertising data
-
-	// Start advertising
-	ble.m_advertising.start();
-
 	// Declare a HRM service object
 	bleServiceHRM hrm(ble);
 
 	// Declare a HTM service object
 	bleServiceHTM htm(ble);
+
+	// update ADVERTISING contents
+	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
+	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
+
+	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertising
+	ble.m_advertising.add_uuid_to_complete_list(htm);				// add htm object to the uuid_list of advertising
+
+	ble.m_advertising.manuf_specific_data(manufactory_code, sizeof(manufactory_code));
+	ble.m_advertising.update();													// update advertising data
+
+	// Start advertising
+	ble.m_advertising.start();
 
 	//
 	// A RTOS task test

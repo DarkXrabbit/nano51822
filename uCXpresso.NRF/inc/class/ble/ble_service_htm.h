@@ -69,6 +69,10 @@ public:
 	 */
 	virtual uint32_t send(float temperature, hts_unit_t unit=HTS_UNIT_CELCIUS, hts_temp_type_t type=HTS_TEMP_TYPE_BODY);
 
+	virtual inline uint16_t uuid() {
+		return BLE_UUID_HEALTH_THERMOMETER_SERVICE;
+	}
+
 	/**@brief Get the temperature measured on the nano51822
 	 *
 	 * @param[out] p_temp Result of temperature measurement. Die temperature in celsius.

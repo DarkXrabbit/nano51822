@@ -18,11 +18,13 @@
 #ifndef BLE_ADVERTISING_H_
 #define BLE_ADVERTISING_H_
 
+#include <stdarg.h>
 #include <class/ble/nrf51/ble_data.h>
-#include <class/ble/ble_base.h>
+#include <class/ble/ble_service.h>
 
-#define DEF_ADV_INTERVAL	1000	// 1000 Milliseconds
-#define DEF_ADV_TIMEOUT		0		// No Adv. timeout  (unit:second)
+#define DEF_ADV_INTERVAL			1000	// 1000 Milliseconds
+#define DEF_ADV_TIMEOUT				0		// No Adv. timeout  (unit:second)
+#define MAX_ADV_UUID_COMPLETE_LIST	16
 
 /**@brief	BLE Advertising Class.
  *
@@ -75,7 +77,7 @@ public:
 	/**@brief Set the list of UUIDs in the 'Complete' list.
 	 *
 	 */
-	void uuids_complete_list(const ble_uuid_t *p_uuids, uint16_t count);
+	void add_uuid_to_complete_list(bleService &service);
 
 	/**@brief Set the Slave Connection Interval Range.
 	 *
@@ -127,7 +129,8 @@ protected:
 	ble_advdata_conn_int_t	 m_slave_conn_interval;
 	ble_gap_adv_params_t 	 m_adv_params;
 	int8_t					 m_tx_power_level;
-
+	ble_uuid_t				*m_uuid_list;
+	uint8_t					 m_uuid_count;
 friend class bleDevice;
 	///@endcond
 };

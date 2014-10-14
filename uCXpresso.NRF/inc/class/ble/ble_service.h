@@ -32,6 +32,18 @@ public:
 	 */
 	virtual inline bool isAvailable() { return true; }
 
+	/**@brief Get the UUID of service
+	 * @return an uint16_t value.
+	 */
+	virtual uint16_t uuid() = PURE_VIRTUAL_FUNC;
+
+	/**@brief Get the UUID type of service.
+	 * @return an uint8_t value.
+	 */
+	virtual inline uint8_t uuid_type() {
+		return BLE_UUID_TYPE_BLE;
+	}
+
 	//
 	/// @cond PRIVATE
 	//

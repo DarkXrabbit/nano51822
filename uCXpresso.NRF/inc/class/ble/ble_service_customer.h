@@ -36,6 +36,14 @@ public:
 
 	virtual bool isAvailable();
 
+	virtual inline uint16_t uuid() {
+		return m_service_uuid;
+	}
+
+	virtual inline uint8_t uuid_type() {
+		return m_uuid_type;
+	}
+
 	//
 	///@cond PRIVATE
 	//
@@ -44,6 +52,7 @@ public:
 protected:
 	uint16_t		m_conn_handle;
 	ble_uuid128_t	m_p_base_uuid;
+	uint16_t		m_service_uuid;
 	uint8_t			m_uuid_type;
 	uint16_t		m_service_handle;
 

@@ -26,7 +26,6 @@
 #endif
 
 // TODO: insert other include files here
-#include <class/ble/ble_device.h>
 #include <class/pin.h>
 
 // TODO: insert other definitions and declarations here

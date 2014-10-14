@@ -78,6 +78,10 @@ public:
 	 */
 	virtual void sensor_contact_detected_update(bool is_sensor_contact_detected);
 
+	virtual inline uint16_t uuid() {
+		return BLE_UUID_HEART_RATE_SERVICE;
+	}
+
 	//
 	///@cond PRIVATE
 	//
