@@ -43,12 +43,12 @@
 // Main Routine
 //
 int main(void) {
-#ifdef DEBUG
-	CSerial ser;		// declare a Serial object
-	ser.enable();
-	CDebug dbg(ser);	// Debug stream use the UART object
-	dbg.start();
-#endif
+//#ifdef DEBUG
+//	CSerial ser;		// declare a Serial object
+//	ser.enable();
+//	CDebug dbg(ser);	// Debug stream use the UART object
+//	dbg.start();
+//#endif
 
 	//
 	// SoftDevice
@@ -59,7 +59,7 @@ int main(void) {
 
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
-	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
+	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	//
 	// Add BLE Service
@@ -83,30 +83,20 @@ int main(void) {
 
 	CPin led0(18);	// led0 on P0.18
 	CPin led1(19);	// led1 on P0.19
-
 	led0.output();	// set led0 as an output pin
-	led1.output();	// set led1 as an output pin
-
+	led1.output();
 	CTimeout	tm;
-	uint8_t		ch;
 
+#ifdef DEBUG
+	CDebug dbg(nus);	// Debug Console stream use the NUS object
+	dbg.start();
+#endif
 	//
     // Enter main loop.
 	//
     while(1) {
-    	if ( nus.isAvailable() ) {	// check BLE NUS service
-    		led1= LED_ON;
-
-    		if ( nus.readable() ) {
-    			ch = nus.read();
-    			dbg.putc(ch);		// echo to Debug Console
-    		}
-
-    		if ( dbg.available() ) {
-    			ch = dbg.read();
-    			nus.write(ch);		// echo to BLE NUS service
-    		}
-
+    	if ( nus.isAvailable() ) {
+    		led1 = LED_ON;
     	} else {
     		led1 = LED_OFF;
     	}

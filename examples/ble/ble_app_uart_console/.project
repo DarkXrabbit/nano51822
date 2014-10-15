@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>gpio_int</name>
+	<name>ble_app_uart_console</name>
 	<comment></comment>
 	<projects>
 	</projects>

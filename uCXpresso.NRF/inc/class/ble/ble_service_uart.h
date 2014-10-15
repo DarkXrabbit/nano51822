@@ -68,7 +68,7 @@ protected:
 
 	virtual void on_disconnected(xHandle evt);
 	virtual void on_write(xHandle evt);
-	virtual void on_send(xHandle evt);
+	virtual inline void on_send(xHandle evt) { onSend(true); }
 	///@endcond
 };
 
