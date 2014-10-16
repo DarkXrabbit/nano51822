@@ -123,6 +123,7 @@ public:
 	inline bool operator ==(PIN_LEVEL_T val) { return (this->read()==val ? true : false); }
 	inline bool operator !=(PIN_LEVEL_T val) { return (this->read()!=val ? true : false); }
 	inline int pin() { return m_pin; }
+	inline void toggle() { invert(); }
 
 	/*! \cond PRIVATE */
 	CPin();

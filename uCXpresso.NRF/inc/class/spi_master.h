@@ -21,10 +21,10 @@
 #include <class/peripheral.h>
 #include <class/semaphore.h>
 
-#define DEF_SPI0_PIN_MOSI	21
-#define DEF_SPI0_PIN_MISO	22
-#define DEF_SPI0_PIN_SSL	23
-#define DEF_SPI0_PIN_SCK	24
+#define DEF_SPI_MASTER_PIN_MOSI		21
+#define DEF_SPI_MASTER_PIN_MISO		22
+#define DEF_SPI_MASTER_PIN_SSL		23
+#define DEF_SPI_MASTER_PIN_SCK		24
 
 /**
  * @brief Serial bit order
@@ -32,8 +32,8 @@
  * @ingroup Enumerations
  */
 typedef enum {
-	BIT_MSB = 0, 	///< Most significant bit transmitted out first.
-	BIT_LSB = 1		///< Least significant bit transmitted out first.
+	MSB_FIRST = 0, 	///< Most significant bit transmitted out first.
+	LSB_FIRST = 1		///< Least significant bit transmitted out first.
 }BIT_ORDER_T;
 
 /**
@@ -42,10 +42,10 @@ typedef enum {
  * @ingroup Enumerations
  */
 typedef enum {
-	SPI_MODE_0 = 0,	///< Mode 0: CPOL=0 / CPHA=0
-	SPI_MODE_1,		///< Mode 1: CPOL=0 / CPHA=1
-	SPI_MODE_2,		///< Mode 2: CPOL=1 / CPHA=0
-	SPI_MODE_3		///< Mode 3: CPOL=1 / CPHA=1
+	SPI_MODE0 = 0,	///< Mode 0: CPOL=0 / CPHA=0
+	SPI_MODE1,		///< Mode 1: CPOL=0 / CPHA=1
+	SPI_MODE2,		///< Mode 2: CPOL=1 / CPHA=0
+	SPI_MODE3		///< Mode 3: CPOL=1 / CPHA=1
 }SPI_MODE_T;
 
 /**
@@ -80,10 +80,10 @@ public:
 	 * @param ssl_pin	Specify the Slave selected pin.
 	 * @param sck_pin	Specify the Clock pin of SPI.
 	 */
-	spiMaster(int mosi_pin = DEF_SPI0_PIN_MOSI,
-			  int miso_pin = DEF_SPI0_PIN_MISO,
-			  int ssl_pin = DEF_SPI0_PIN_SSL,
-			  int sck_pin = DEF_SPI0_PIN_SCK );
+	spiMaster(int mosi_pin = DEF_SPI_MASTER_PIN_MOSI,
+			  int miso_pin = DEF_SPI_MASTER_PIN_MISO,
+			  int ssl_pin  = DEF_SPI_MASTER_PIN_SSL,
+			  int sck_pin  = DEF_SPI_MASTER_PIN_SCK );
 
 	/**
 	 * @brief Set the SPI Frequency
