@@ -29,7 +29,7 @@
 #include <class/pin.h>
 #include <class/i2cdev.h>
 #include <class/timeout.h>
-
+#include <class/ble/ble_device.h>
 // TODO: insert other definitions and declarations here
 
 
@@ -43,6 +43,10 @@ int main(void) {
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
 #endif
+
+	bleDevice ble;
+	ble.enable();
+
 	//
 	// Your setup code here
 	//
@@ -72,7 +76,7 @@ int main(void) {
 
     	if ( addr ) {
 			if ( i2c.readByte(addr, 0, &data) ) {
-				dbg.printf("0x%02X\n", addr);
+				dbg.printf(" 0x%02X ", addr);
 			} else {
 				dbg.putc('.');
 			}

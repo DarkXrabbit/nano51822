@@ -25,13 +25,16 @@
 #define DEF_I2C_DAT_PIN	28
 #define DEF_I2C_CLK_PIN	29
 
-/**The I2Cdev class provides the i2c interface and compatibility of i2cdevlib/i2cdev class.
- * \class I2Cdev i2cdev.h "class/i2cdev.h"
- * \ingroup Peripherals
+/**
+ * @brief The I2Cdev class provides the i2c interface and compatibility of i2cdevlib/i2cdev class.
+ *
+ * @class I2Cdev i2cdev.h "class/i2cdev.h"
+ *
+ * @ingroup Peripherals
  */
 class I2Cdev: public twiMaster {
 public:
-	I2Cdev(int dat_pin=DEF_I2C_DAT_PIN, int clk_pin=DEF_I2C_CLK_PIN);
+	I2Cdev(int dat_pin=DEF_I2C_DAT_PIN, int clk_pin=DEF_I2C_CLK_PIN, TWI_FREQ_T freq=TWI_FREQ_100KHZ);
 
 	/**
 	 * @brief Read a single bit from an 8-bit device register.

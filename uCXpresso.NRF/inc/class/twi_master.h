@@ -38,7 +38,7 @@ public:
 	 * @param dat_pin Specify a data pin number.
 	 * @param clk_pin Specify a clock pin number.
 	 */
-	twiMaster(int dat_pin, int clk_pin);
+	twiMaster(int dat_pin, int clk_pin, TWI_FREQ_T freq);
 
 	/**
 	 * @brief To enable the two wires interface.
@@ -49,7 +49,7 @@ public:
 	 * @retval	true 	If enable successful.
 	 * @retval	false	If enable failed.
 	 */
-	virtual bool enable(TWI_FREQ_T freq=TWI_FREQ_100KHZ);
+	virtual bool enable();
 
 	/**
 	 * @brief To disable the two wires interface.
