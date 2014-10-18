@@ -11,6 +11,7 @@ var classble_device =
     [ "isAlive", "d6/d49/classble_device.html#a4a0f0727be4714cef1e24150a869d403", null ],
     [ "isConnected", "d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1", null ],
     [ "isSuspend", "d6/d49/classble_device.html#a51dbe9909ce528b4113d2cc27314e965", null ],
+    [ "isThread", "d6/d49/classble_device.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isThread", "d6/d49/classble_device.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
     [ "isValid", "d6/d49/classble_device.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
     [ "onConnected", "d6/d49/classble_device.html#ab7bb9b2628c7897cb7573505d013972e", null ],

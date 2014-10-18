@@ -124,11 +124,12 @@ Inheritance diagram for bleServiceUART:</div>
  <div class="center">
   <img src="../../db/d84/classble_service_u_a_r_t.png" usemap="#bleServiceUART_map" alt=""/>
   <map id="bleServiceUART_map" name="bleServiceUART_map">
-<area href="../../de/d51/classble_service_customer.html" title="BLE customer services base class. " alt="bleServiceCustomer" shape="rect" coords="0,112,126,136"/>
-<area href="../../d4/d16/class_c_stream.html" alt="CStream" shape="rect" coords="136,112,262,136"/>
-<area href="../../da/d80/classble_service.html" title="BLE Service base class. " alt="bleService" shape="rect" coords="0,56,126,80"/>
-<area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="136,56,262,80"/>
-<area href="../../d2/dc4/classble_base.html" title="The bleBase class is an empty base class. " alt="bleBase" shape="rect" coords="0,0,126,24"/>
+<area href="../../de/d51/classble_service_customer.html" title="BLE customer services base class. " alt="bleServiceCustomer" shape="rect" coords="0,168,126,192"/>
+<area href="../../d4/d16/class_c_stream.html" alt="CStream" shape="rect" coords="136,168,262,192"/>
+<area href="../../da/d80/classble_service.html" title="BLE Service base class. " alt="bleService" shape="rect" coords="0,112,126,136"/>
+<area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="136,112,262,136"/>
+<area href="../../d2/dc4/classble_base.html" title="The bleBase class is an empty base class. " alt="bleBase" shape="rect" coords="0,56,126,80"/>
+<area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,126,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -148,6 +149,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a">uuid_type</a> ()</td></tr>
 <tr class="memdesc:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID type of service.  <a href="#a4119b0d8ce0f1e04bcff8c60fa51885a">More...</a><br /></td></tr>
 <tr class="separator:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
+<tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
+<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96328807241e15017868b845b06fd9e4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a96328807241e15017868b845b06fd9e4">readable</a> ()</td></tr>
 <tr class="separator:a96328807241e15017868b845b06fd9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ec27ee664f1a4eb9910988b78833d5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a56ec27ee664f1a4eb9910988b78833d5">writeable</a> ()</td></tr>
@@ -188,10 +193,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa314dfe6e8cf3c1da9ad6a6de2d2618e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#aa314dfe6e8cf3c1da9ad6a6de2d2618e">parseString</a> (LPTSTR buf, size_t size, bool echo=false)</td></tr>
 <tr class="memdesc:aa314dfe6e8cf3c1da9ad6a6de2d2618e"><td class="mdescLeft">&#160;</td><td class="mdescRight">input a string to specify buffer.  <a href="#aa314dfe6e8cf3c1da9ad6a6de2d2618e">More...</a><br /></td></tr>
 <tr class="separator:aa314dfe6e8cf3c1da9ad6a6de2d2618e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
-<tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
-<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE UART Service class. </p>
@@ -1029,7 +1030,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html">bleServiceUART</a></li>
-    <li class="footer">Generated on Sat Oct 18 2014 23:06:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Oct 18 2014 23:15:11 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

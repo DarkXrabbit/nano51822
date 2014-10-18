@@ -1,20 +1,20 @@
 var hierarchy =
 [
-    [ "bleBase", "d2/dc4/classble_base.html", [
-      [ "bleAdvertising", "d0/d2c/classble_advertising.html", null ],
-      [ "bleDevice", "d6/d49/classble_device.html", null ],
-      [ "bleDeviceManager", "d9/d34/classble_device_manager.html", null ],
-      [ "bleGAP", "dd/d89/classble_g_a_p.html", null ],
-      [ "bleService", "da/d80/classble_service.html", [
-        [ "bleServiceBattery", "d5/ded/classble_service_battery.html", null ],
-        [ "bleServiceCustomer", "de/d51/classble_service_customer.html", [
-          [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", null ]
-        ] ],
-        [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", null ],
-        [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", null ]
-      ] ]
-    ] ],
     [ "CObject", "dc/dac/class_c_object.html", [
+      [ "bleBase", "d2/dc4/classble_base.html", [
+        [ "bleAdvertising", "d0/d2c/classble_advertising.html", null ],
+        [ "bleDevice", "d6/d49/classble_device.html", null ],
+        [ "bleDeviceManager", "d9/d34/classble_device_manager.html", null ],
+        [ "bleGAP", "dd/d89/classble_g_a_p.html", null ],
+        [ "bleService", "da/d80/classble_service.html", [
+          [ "bleServiceBattery", "d5/ded/classble_service_battery.html", null ],
+          [ "bleServiceCustomer", "de/d51/classble_service_customer.html", [
+            [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", null ]
+          ] ],
+          [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", null ],
+          [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", null ]
+        ] ]
+      ] ],
       [ "CEventBit", "dd/d60/class_c_event_bit.html", null ],
       [ "CList", "df/db6/class_c_list.html", [
         [ "CListT< CType >", "da/d59/class_c_list_t.html", null ]

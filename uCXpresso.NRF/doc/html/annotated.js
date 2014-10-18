@@ -1,7 +1,7 @@
 var annotated =
 [
     [ "bleAdvertising", "d0/d2c/classble_advertising.html", "d0/d2c/classble_advertising" ],
-    [ "bleBase", "d2/dc4/classble_base.html", null ],
+    [ "bleBase", "d2/dc4/classble_base.html", "d2/dc4/classble_base" ],
     [ "bleDevice", "d6/d49/classble_device.html", "d6/d49/classble_device" ],
     [ "bleDeviceManager", "d9/d34/classble_device_manager.html", "d9/d34/classble_device_manager" ],
     [ "bleGAP", "dd/d89/classble_g_a_p.html", "dd/d89/classble_g_a_p" ],

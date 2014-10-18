@@ -8,6 +8,8 @@ var classble_advertising =
     [ "getAdvData", "d0/d2c/classble_advertising.html#a9f19b8e405a37a95fae0ac1d4a43208c", null ],
     [ "getManufData", "d0/d2c/classble_advertising.html#a30b7991a827b191cca06e1f7b4e84347", null ],
     [ "interval", "d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca", null ],
+    [ "isThread", "d0/d2c/classble_advertising.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+    [ "isValid", "d0/d2c/classble_advertising.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
     [ "manuf_specific_data", "d0/d2c/classble_advertising.html#af1f8b6ffbfa395f75edea27e35210838", null ],
     [ "name_type", "d0/d2c/classble_advertising.html#ab77f9940edde80f47e935c96e6638d6e", null ],
     [ "reset", "d0/d2c/classble_advertising.html#a799f35c749a1c31a37422aa274ab0921", null ],

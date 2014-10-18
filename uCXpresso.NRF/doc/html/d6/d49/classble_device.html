@@ -129,6 +129,7 @@ Inheritance diagram for bleDevice:</div>
   <map id="bleDevice_map" name="bleDevice_map">
 <area href="../../d2/dc4/classble_base.html" title="The bleBase class is an empty base class. " alt="bleBase" shape="rect" coords="0,56,69,80"/>
 <area href="../../d0/d26/class_c_thread.html" alt="CThread" shape="rect" coords="79,56,148,80"/>
+<area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,69,24"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="79,0,148,24"/>
 </map>
  </div></div>
@@ -162,6 +163,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a85532ba48f80496895a1e7fe3e012b27"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a85532ba48f80496895a1e7fe3e012b27">onRssiChanged</a> (int8_t rssi)</td></tr>
 <tr class="memdesc:a85532ba48f80496895a1e7fe3e012b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">A RSSI changed event.  <a href="#a85532ba48f80496895a1e7fe3e012b27">More...</a><br /></td></tr>
 <tr class="separator:a85532ba48f80496895a1e7fe3e012b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
+<tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
+<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ebabcc071634508511ae2fc7b868ab7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a3ebabcc071634508511ae2fc7b868ab7">start</a> (const char *name, int stack=DEF_THREAD_STACK, <a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a> priority=<a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402">PRI_LOW</a>)</td></tr>
 <tr class="separator:a3ebabcc071634508511ae2fc7b868ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacf955d1852e74da1f989251955ee6ec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aacf955d1852e74da1f989251955ee6ec">start</a> ()</td></tr>
@@ -186,8 +191,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4a0f0727be4714cef1e24150a869d403"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2513fd0fcad30e2e6605609c91f1984"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">isThread</a> ()</td></tr>
 <tr class="separator:ab2513fd0fcad30e2e6605609c91f1984"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
-<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -491,6 +494,35 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Call the member function to check the task is in suspended or not. </p><dl class="section return"><dt>Returns</dt><dd>true if task in suspended. otherwise, the task in running. </dd></dl>
 
+</div>
+</div>
+<a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CObject::isThread </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ab2513fd0fcad30e2e6605609c91f1984"></a>
@@ -1064,7 +1096,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Sat Oct 18 2014 23:06:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Oct 18 2014 23:15:11 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
