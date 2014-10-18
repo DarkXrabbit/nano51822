@@ -137,6 +137,13 @@ public:
 	 */
 	virtual int waiting();
 
+	/**
+	 * @brief Check object valid
+	 */
+	virtual inline bool isValid() {
+		return (m_xHandle ? true : false);
+	}
+
 	/*! \cond PRIVATE */
 public:
 	CSemaphore();

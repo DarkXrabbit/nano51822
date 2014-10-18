@@ -82,6 +82,18 @@ public:
 	 */
 	uint32_t enable(uint32_t stack=68);
 
+	/**
+	 * @brief Get SoftDevice driver version information.
+	 *
+	 * @param majorVer[out] Link Layer Version number for BT 4.1 spec is 7
+	 * @param minorVer[out] Link Layer Sub Version number, corresponds to the SoftDevice Firmware ID (FWID).
+	 *
+	 * @return @ref NRF_SUCCESS  Version information stored successfully.
+	 * @return @ref NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
+	 * @return @ref NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnection procedure).
+	 */
+	uint32_t sdVersion(uint8_t &majorVer, uint16_t &minorVer);
+
 	/**@brief Check BLE connection.
 	 *
 	 * @return true if ble is in connected, false otherwise.

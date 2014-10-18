@@ -1,17 +1,16 @@
 /*
 ===============================================================================
- Name        : main.c
- Author      :
+ Name        : BLE Battery Service
+ Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
- License	 :
- Description :
+ Description : Battery Service Demo
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
-
+ 2014/10/18 v1.0.0	First Edition.									LEO
  ===============================================================================
  */
 
@@ -29,6 +28,10 @@
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service.h>
 #include <class/pin.h>
+
+#include <class/adc.h>
+#include <class/ble/ble_service_bat.h>
+#include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
@@ -60,34 +63,66 @@ int main(void) {
 	//
 	// Add BLE Service
 	//
+	bleServiceBattery bat(ble);
 
 	//
 	// BLE Advertising
 	//
-	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
-	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
-
-//	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertising
-//	ble.m_advertising.appearance(BLE_APPEARANCE_HEART_RATE_SENSOR_HEART_RATE_BELT);
-
-//	ble.m_advertising.manuf_specific_data(manufactory_code, sizeof(manufactory_code));
-	ble.m_advertising.update();										// update advertisement data
+	ble.m_advertising.interval(APP_ADV_INTERVAL);			// set advertising interval
+	ble.m_advertising.add_uuid_to_complete_list(bat);		// add bat object to the uuid list of advertising
+	ble.m_advertising.update();								// update advertisement data
 
 	// Start advertising
 	ble.m_advertising.start();
 
 	//
-	// Your Application setup code here
+	// Analog
 	//
+	CAdc::init();
+	CAdc::source(VDD_1_3);	// to detect the VDD voltage
+	CAdc::enable();
 
+	//
+	// LED
+	//
+	CPin led0(18);
+	CPin led1(19);
+	led0.output();
+	led1.output();
+
+	CTimeout tmLED, tmBAT;
+
+	uint16_t value;
+	float 	 voltage, percentage;
 
 	//
     // Enter main loop.
 	//
     while(1) {
     	//
-    	// Your loop code here
+    	// BLE Battery Service
     	//
+    	if ( bat.isAvailable() ) {
+    		if ( tmBAT.isExpired(1000) ) {
+    			tmBAT.reset();
+    			if ( CAdc::read(value) ) {
 
+    				voltage = (value / 1024.0f) * 3.6f;
+    				percentage = (value / 1024.0f) * 100;
+    				DBG("V=%0.2f P=%0.2f\n", voltage, percentage);
+
+    				bat.send(percentage);
+    				led1.toggle();
+    			}
+    		}
+    	} else led1 = LED_OFF;
+
+    	//
+    	// blink LED
+    	//
+    	if ( tmLED.isExpired(500) ) {
+    		tmLED.reset();
+    		led0.toggle();
+    	}
     }
 }
