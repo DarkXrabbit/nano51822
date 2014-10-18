@@ -11,8 +11,8 @@
  GROUP(
  libgcc.a
  libc.a
- libnosys.a
  libstdc++.a
+ libm.a
  crti.o
  crtn.o
  crtbegin.o

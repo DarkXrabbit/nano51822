@@ -71,7 +71,7 @@ int main(void) {
 	dbg.start();
 #endif
 
-	tskTimer t1(0.1, 18);
+	tskTimer t1(0.1, 18);			// set timer interval 0.1 second with P0.18 led
 	t1.start("Timer1", 56, PRI_HIGH);
 
 //	CRTC::clockSource(LF_EXTERNAL);	// set RTC clock source from External crystal.

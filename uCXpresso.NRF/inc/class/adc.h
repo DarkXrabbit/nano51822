@@ -1,8 +1,18 @@
 /*
- * adc.h
- *
- *  Created on: 2014/10/18
- *      Author: Jason
+ ===============================================================================
+ Name        : Analog Convert Module
+ Author      : uCXpresso
+ Version     : v1.0.0
+ Date		 : 2014/10/18
+ Copyright   : Copyright (C) www.embeda.com.tw
+ Description : analog convert class
+ ===============================================================================
+ 	 	 	 	 	 	 	 	 History
+ ---------+---------+--------------------------------------------+-------------
+ DATE     |	VERSION |	DESCRIPTIONS							 |	By
+ ---------+---------+--------------------------------------------+-------------
+ 2014/10/18	v1.0.0	First Edition for nano51822						Jason
+ ===============================================================================
  */
 
 #ifndef ADC_H_
@@ -96,21 +106,39 @@ public:
 	 */
 	static void enable(ADC_RESOLUTION_T res=ADC_10_BITS);
 
+	/**
+	 * @brief Disable the analog module.
+	 */
 	static void disable();
 
+	/**
+	 * @brief Specified an analog input pin when analog source are AINxx.
+	 * @param pin An analog input pin on AD0~AD5. @ref AIN_T
+	 *
+	 * @ref source member
+	 */
 	static void pin(AIN_T ain);
 
+	/**
+	 * @brief Read analog convert value.
+	 *
+	 * @return
+	 * @retval true If analog convert successful. false otherwise.
+	 */
 	static bool read(uint16_t &value, uint32_t timeout=MAX_DELAY_TIME);
 
+	/**
+	 * @brief Check analog module busy
+	 * @return
+	 * @retval true If analog conversion in progress.
+	 */
 	static bool isBusy();
 
+	/**
+	 * @brief Reset the analog module.
+	 */
 	static void reset();
 
-	//
-	///@cond PRIVE
-	//
-protected:
-	///@endcond
 };
 
 #endif /* ADC_H_ */

@@ -35,7 +35,7 @@ public:
 
 	/**Call the second to set the period time by second.
 	 * \param sec is floating value to indicate the time period (unit: second).
-	 * \note The timer can be defined between the 32us to the 2.09sec
+	 * \note The timer can be defined in the range 4us to 200ms.
 	 */
 	void second(float sec);
 
