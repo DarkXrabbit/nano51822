@@ -203,7 +203,11 @@ Public Member Functions</h2></td></tr>
 <div class="line">}</div>
 </div><!-- fragment --> <dl class="section return"><dt>Returns</dt><dd>true if time is expired, otherwise not. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a11">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a16">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d5/dae/_2peripherals_2spi_loop_test_2src_2main_8cpp-example.html#a10">/peripherals/spi_loop_test/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a6">/peripherals/uart_echo/src/main.cpp</a>, and <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#a10">/peripherals/watchdog/src/main.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                               {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> ((<a class="code" href="../../d5/d5b/class_c_timeout.html#a1858ddcad4e18f8056441072616a457f">elapsed</a>()&gt;to )? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="ttc" id="class_c_timeout_html_a1858ddcad4e18f8056441072616a457f"><div class="ttname"><a href="../../d5/d5b/class_c_timeout.html#a1858ddcad4e18f8056441072616a457f">CTimeout::elapsed</a></div><div class="ttdeci">virtual uint32_t elapsed()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
@@ -229,7 +233,10 @@ Public Member Functions</h2></td></tr>
 <p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
@@ -254,7 +261,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a8af3a09c9ed9172b37e930d05865cfac"></a>
@@ -278,7 +288,11 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Call the <a class="el" href="../../d5/d5b/class_c_timeout.html#a8af3a09c9ed9172b37e930d05865cfac">read()</a> member to retrieve the time count value in second. </p><dl class="section return"><dt>Returns</dt><dd>a floating value to indicate the time count value in second, </dd></dl>
-
+<div class="fragment"><div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> (<a class="code" href="../../d5/d5b/class_c_timeout.html#a1858ddcad4e18f8056441072616a457f">elapsed</a>() / 1000.0f);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="ttc" id="class_c_timeout_html_a1858ddcad4e18f8056441072616a457f"><div class="ttname"><a href="../../d5/d5b/class_c_timeout.html#a1858ddcad4e18f8056441072616a457f">CTimeout::elapsed</a></div><div class="ttdeci">virtual uint32_t elapsed()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a663a09bb51c1de8f8d83bd62fdc1a688"></a>
@@ -363,7 +377,11 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                                       {    <span class="comment">// 0.1=100ms 0.02=20ms...</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d5/d5b/class_c_timeout.html#a9fdf45170cb38c2997fd944977178e42">wait</a>((uint32_t)(sec * 1000));</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<div class="ttc" id="class_c_timeout_html_a9fdf45170cb38c2997fd944977178e42"><div class="ttname"><a href="../../d5/d5b/class_c_timeout.html#a9fdf45170cb38c2997fd944977178e42">CTimeout::wait</a></div><div class="ttdeci">virtual void wait(uint32_t ms)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 </div><!-- contents -->
@@ -372,7 +390,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/d5b/class_c_timeout.html">CTimeout</a></li>
-    <li class="footer">Generated on Sat Oct 18 2014 22:44:30 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Oct 18 2014 23:06:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

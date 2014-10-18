@@ -253,7 +253,17 @@ Static Public Member Functions</h2></td></tr>
 <p>Set ADC module to default. </p>
 <dl class="section note"><dt>Note</dt><dd>The init member use the internal 1.2V bandgap voltge as reference for conversion with 1/3 prescaling analog input, so the inputcan be in the 3.6V (1.2Vx3) max. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a4">/peripherals/adc_test/src/main.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                              {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="../../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02">CAdc::reset</a>();                  <span class="comment">// disable &amp; reset the all configuration of analog.</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../d7/d0f/class_c_adc.html#a02da72af459ae098de9e76f816eed3d7">CAdc::reference</a>(<a class="code" href="../../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3">AREF_VBG</a>);      <span class="comment">// Use internal 1.2V bandgap voltage as reference for conversion.</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a>(<a class="code" href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904af37d947bcade886ed161d56a008a2d2f">AIN_1_3</a>);          <span class="comment">// External analog input with 1/3 prescaling used as input for the conversion.</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="ttc" id="group___enumerations_html_gga0c833a85d4bb66b56409631327ebe904af37d947bcade886ed161d56a008a2d2f"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904af37d947bcade886ed161d56a008a2d2f">AIN_1_3</a></div><div class="ttdoc">External analog with 1/3 prescaling used as input for the conversion. </div><div class="ttdef"><b>Definition:</b> adc.h:40</div></div>
+<div class="ttc" id="class_c_adc_html_a02da72af459ae098de9e76f816eed3d7"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a02da72af459ae098de9e76f816eed3d7">CAdc::reference</a></div><div class="ttdeci">static void reference(AREF_T ref)</div><div class="ttdoc">Analog reference source. </div></div>
+<div class="ttc" id="class_c_adc_html_a06c3d33be67fff2546c0fe8d945cd1bc"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a></div><div class="ttdeci">static void source(ADC_SOURCE_T input)</div><div class="ttdoc">Analog input selection. </div></div>
+<div class="ttc" id="class_c_adc_html_a43e9ed6fcc4ff33c9e86f1a6741eda02"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02">CAdc::reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdoc">Reset the analog module. </div></div>
+<div class="ttc" id="group___enumerations_html_ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3">AREF_VBG</a></div><div class="ttdoc">Use internal 1.2V band gap reference. </div><div class="ttdef"><b>Definition:</b> adc.h:29</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a0e94132f08c87cfc397a8f35dac6c532"></a>
@@ -311,7 +321,10 @@ Static Public Member Functions</h2></td></tr>
 <p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
@@ -336,7 +349,10 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a84c5a06a5d4d8ee65d75fcb16b1f2910"></a>
@@ -513,7 +529,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/d0f/class_c_adc.html">CAdc</a></li>
-    <li class="footer">Generated on Sat Oct 18 2014 22:44:29 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Oct 18 2014 23:06:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -289,7 +289,10 @@ Public Member Functions</h2></td></tr>
 <p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
@@ -314,7 +317,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
-
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a9037649d1e88192f5fde46b810c71299"></a>
@@ -337,7 +343,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">read</a>(); }</div>
+<div class="ttc" id="class_c_pin_html_a02060b0c9bbf0f75dead7bef1c75ce6b"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">CPin::read</a></div><div class="ttdeci">virtual PIN_LEVEL_T read()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a5ec08fca85a5f9472e82588a6a895b8f"></a>
@@ -360,7 +368,11 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">read</a>()==<a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a0c3a1dacf94061154b3ee354359c5893">HIGH</a>? <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a> : <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a0c3a1dacf94061154b3ee354359c5893">HIGH</a>); }</div>
+<div class="ttc" id="group___enumerations_html_gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a></div><div class="ttdoc">LOW level. </div><div class="ttdef"><b>Definition:</b> pin.h:38</div></div>
+<div class="ttc" id="group___enumerations_html_gga6f24594071a026b31238ab8cb80d6a80a0c3a1dacf94061154b3ee354359c5893"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a0c3a1dacf94061154b3ee354359c5893">HIGH</a></div><div class="ttdoc">HIGH level. </div><div class="ttdef"><b>Definition:</b> pin.h:39</div></div>
+<div class="ttc" id="class_c_pin_html_a02060b0c9bbf0f75dead7bef1c75ce6b"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">CPin::read</a></div><div class="ttdeci">virtual PIN_LEVEL_T read()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="aae98a7d34d72ccc58b6d799f7ad2e12e"></a>
@@ -384,7 +396,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;{ <span class="keywordflow">return</span> (this-&gt;<a class="code" href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">read</a>()!=val ? <span class="keyword">true</span> : <span class="keyword">false</span>); }</div>
+<div class="ttc" id="class_c_pin_html_a02060b0c9bbf0f75dead7bef1c75ce6b"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">CPin::read</a></div><div class="ttdeci">virtual PIN_LEVEL_T read()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a7d125bef83689d0f1db13b3f1acbd05e"></a>
@@ -408,7 +422,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;{ this-&gt;<a class="code" href="../../d7/db9/class_c_pin.html#a1fc3486f4afea4de56ae677c20600551">write</a>(val); }</div>
+<div class="ttc" id="class_c_pin_html_a1fc3486f4afea4de56ae677c20600551"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a1fc3486f4afea4de56ae677c20600551">CPin::write</a></div><div class="ttdeci">virtual void write(PIN_LEVEL_T val)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a01428eca1b98e2e194bd0848b3eb8904"></a>
@@ -432,7 +448,10 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;{ this-&gt;<a class="code" href="../../d7/db9/class_c_pin.html#a1fc3486f4afea4de56ae677c20600551">write</a>(pin.<a class="code" href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">read</a>());}</div>
+<div class="ttc" id="class_c_pin_html_a02060b0c9bbf0f75dead7bef1c75ce6b"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">CPin::read</a></div><div class="ttdeci">virtual PIN_LEVEL_T read()</div></div>
+<div class="ttc" id="class_c_pin_html_a1fc3486f4afea4de56ae677c20600551"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a1fc3486f4afea4de56ae677c20600551">CPin::write</a></div><div class="ttdeci">virtual void write(PIN_LEVEL_T val)</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="ae9f57493334eeb6e69a77a0cf4e50f95"></a>
@@ -456,7 +475,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;{ <span class="keywordflow">return</span> (this-&gt;<a class="code" href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">read</a>()==val ? <span class="keyword">true</span> : <span class="keyword">false</span>); }</div>
+<div class="ttc" id="class_c_pin_html_a02060b0c9bbf0f75dead7bef1c75ce6b"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">CPin::read</a></div><div class="ttdeci">virtual PIN_LEVEL_T read()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="adbf59d18abba5e28a3cbe7cb219330a3"></a>
@@ -515,7 +536,8 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-
+<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;{ <span class="keywordflow">return</span> m_pin; }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a02060b0c9bbf0f75dead7bef1c75ce6b"></a>
@@ -564,7 +586,9 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a14">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a8">/peripherals/uart_echo/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a5">/rtos/blink/src/main.cpp</a>.</dd>
-</dl>
+</dl><div class="fragment"><div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;{ <a class="code" href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">invert</a>(); }</div>
+<div class="ttc" id="class_c_pin_html_a240de24c726724aeda90bfacf1d50cc5"><div class="ttname"><a href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">CPin::invert</a></div><div class="ttdeci">virtual void invert()</div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a1fc3486f4afea4de56ae677c20600551"></a>
@@ -604,7 +628,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/db9/class_c_pin.html">CPin</a></li>
-    <li class="footer">Generated on Sat Oct 18 2014 22:44:30 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Oct 18 2014 23:06:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
