@@ -20,6 +20,13 @@
 
 #include <class/ble/ble_base.h>
 
+/**
+ * @brief BLE Service base class.
+ *
+ * @class bleService ble_service.h "class/ble/ble_service.h"
+ *
+ * @ingroup Bluetooth
+ */
 class bleService: virtual public bleBase {
 public:
 	/**@brief bleService constructor.

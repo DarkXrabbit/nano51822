@@ -31,4 +31,9 @@ public:
 	///@endcond
 };
 
+/**\example /peripherals/watchdog/src/main.cpp
+ * This is an example of how to use the CWatchdog class.
+ * More details about this example.
+ */
+
 #endif /* WATCHDOG_H_ */

@@ -10,6 +10,11 @@
 
 #include <class/ble/ble_base.h>
 
+/**
+ * @brief BLE Device Management
+ * @class bleDeviceManager ble_device_manager.h "class/ble/ble_device_manager.h"
+ * @ingroup Bluetooth
+ */
 class bleDeviceManager: public bleBase {
 public:
 	bleDeviceManager();

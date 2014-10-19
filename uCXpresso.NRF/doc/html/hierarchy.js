@@ -29,7 +29,9 @@ var hierarchy =
         ] ],
         [ "CRTC", "d4/d76/class_c_r_t_c.html", null ],
         [ "CStorage", "d3/de1/class_c_storage.html", null ],
-        [ "CTimer", "db/de1/class_c_timer.html", null ],
+        [ "CTimer", "db/de1/class_c_timer.html", [
+          [ "swPWM", "da/d88/classsw_p_w_m.html", null ]
+        ] ],
         [ "CWatchdog", "d3/d75/class_c_watchdog.html", null ],
         [ "spiMaster", "da/dc3/classspi_master.html", null ],
         [ "spiSlave", "da/d31/classspi_slave.html", null ],
@@ -49,8 +51,7 @@ var hierarchy =
       [ "CThread", "d0/d26/class_c_thread.html", [
         [ "bleDevice", "d6/d49/classble_device.html", null ],
         [ "CDebug", "d4/d37/class_c_debug.html", null ],
-        [ "CShell", "de/dba/class_c_shell.html", null ],
-        [ "swPWM", "da/d88/classsw_p_w_m.html", null ]
+        [ "CShell", "de/dba/class_c_shell.html", null ]
       ] ],
       [ "CTimeout", "d5/d5b/class_c_timeout.html", null ]
     ] ]

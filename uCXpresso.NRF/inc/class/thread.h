@@ -234,7 +234,7 @@ private:
 	/*! \endcond */
 };
 
-/**\example /rtos/blink_thread/src/main.cpp
+/**\example /rtos/blink/src/main.cpp
  * This is an example of how to use the CThread class.
  * More details about this example.
  */

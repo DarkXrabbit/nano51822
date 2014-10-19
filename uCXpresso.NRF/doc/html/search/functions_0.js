@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['add_5fchannel',['add_channel',['../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2',1,'swPWM']]],
+  ['add_5fchannel',['add_channel',['../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84',1,'swPWM']]],
   ['add_5fuuid_5fto_5fcomplete_5flist',['add_uuid_to_complete_list',['../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9',1,'bleAdvertising']]],
   ['addhead',['addHead',['../df/db6/class_c_list.html#af77b9f95976788ad6b74e825fad12e94',1,'CList']]],
   ['addheadt',['addHeadT',['../da/d59/class_c_list_t.html#a1135a93b349ac4ae024e45b8fbdc2842',1,'CListT']]],

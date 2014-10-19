@@ -37,7 +37,7 @@ public:
 	 * \param sec is floating value to indicate the time period (unit: second).
 	 * \note The timer can be defined in the range 4us to 200ms.
 	 */
-	void second(float sec);
+	virtual void second(float sec);
 
 	/**Call the millsecond to set the time period by millisecond.
 	 * \param ms is uint32_t value to indicate the tie period (unit: millisecond).
@@ -48,22 +48,28 @@ public:
 
 	/**Enable the timer.
 	 */
-	void enable();	// start
+	virtual void enable();	// start
 
 	/**Disable the timer.
 	 */
-	void disable();	// stop
+	virtual void disable();	// stop
 
 	/**Waiting for timer interrupt.
 	 */
-	bool wait(uint32_t timeout=MAX_DELAY_TIME);
+	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
 	//
 	///@cond PRIVATE
 	//
 	virtual ~CTimer();
+	virtual void onTimer() {}
 	CSemaphore	m_semIrq;
 	///@endcond
 };
+
+/**\example /peripherals/timer_rtc/src/main.cpp
+ * This is an example of how to use the CTimer class.
+ * More details about this example.
+ */
 
 #endif /* TIMER_H_ */

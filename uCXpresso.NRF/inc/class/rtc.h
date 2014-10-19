@@ -43,4 +43,9 @@ protected:
 
 extern CRTC *gpRTC;
 
+/**\example /peripherals/timer_rtc/src/main.cpp
+ * This is an example of how to use the CRTC class.
+ * More details about this example.
+ */
+
 #endif /* RTC_H_ */

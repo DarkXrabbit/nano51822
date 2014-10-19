@@ -62,7 +62,7 @@ typedef enum
  * @details This class manages the all BLE event from the SoftDevice driver,
  * 			and provides the device-manager, advertising and gap objects.
  *
- * @ingroup BLE Class
+ * @ingroup Bluetooth
  */
 class bleDevice : public bleBase, public CThread{
 public:

@@ -30,6 +30,11 @@ typedef enum {
 	BTLE_REMOTE_USER_TERMINATED_CONNECTION		= 0x13
 }GAP_DISCONN_REASON_T;
 
+/**
+ * @brief BLE GAP class
+ * @class bleGAP ble_gap.h "class/ble/ble_gap.h"
+ * @ingroup Bluetooth
+ */
 class bleGAP: public bleBase {
 public:
 	bleGAP();

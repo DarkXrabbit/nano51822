@@ -12,7 +12,7 @@ var searchData=
   ['adc_5f9_5fbits',['ADC_9_BITS',['../db/dff/group___enumerations.html#gga8c6157c51bd905c2070d18ff73073425ac9f1ef417956494dd21de8d2757fae41',1,'adc.h']]],
   ['adc_5fresolution_5ft',['ADC_RESOLUTION_T',['../db/dff/group___enumerations.html#ga8c6157c51bd905c2070d18ff73073425',1,'adc.h']]],
   ['adc_5fsource_5ft',['ADC_SOURCE_T',['../db/dff/group___enumerations.html#ga0c833a85d4bb66b56409631327ebe904',1,'adc.h']]],
-  ['add_5fchannel',['add_channel',['../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2',1,'swPWM']]],
+  ['add_5fchannel',['add_channel',['../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84',1,'swPWM']]],
   ['add_5fuuid_5fto_5fcomplete_5flist',['add_uuid_to_complete_list',['../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9',1,'bleAdvertising']]],
   ['addhead',['addHead',['../df/db6/class_c_list.html#af77b9f95976788ad6b74e825fad12e94',1,'CList']]],
   ['addheadt',['addHeadT',['../da/d59/class_c_list_t.html#a1135a93b349ac4ae024e45b8fbdc2842',1,'CListT']]],

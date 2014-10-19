@@ -35,7 +35,7 @@
  *
  * @note	The bleAdvertising object provides in the @ref bleDevice class.
  *
- * @ingroup BLE Class
+ * @ingroup Bluetooth
  */
 class bleAdvertising: public bleBase {
 public:

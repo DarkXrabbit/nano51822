@@ -152,4 +152,9 @@ protected:
 	///@endcond
 };
 
+/**\example /peripherals/spi_loop_test/src/main.cpp
+ * This is an example of how to use the spiMaster class.
+ * More details about this example.
+ */
+
 #endif /* SPI_MASTER_H_ */

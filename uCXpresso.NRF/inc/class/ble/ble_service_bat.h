@@ -20,7 +20,8 @@
 
 #include <class/ble/ble_device.h>
 
-/**@brief 	Battery Service Class.
+/**
+ * @brief 	Battery Service Class.
  * @class 	bleServiceBattery ble_service_bat.h "class/ble/ble_service_bat.h"
  *
  * @details This class implements the Battery Service with the Battery Level characteristic.
@@ -29,7 +30,7 @@
  *          to the Battery Level characteristic (used when including the Battery Service in
  *          the HID service).
  *
- * @ingroup BLE Class
+ * @ingroup Bluetooth
  */
 class bleServiceBattery: public bleService {
 public:

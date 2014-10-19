@@ -23,41 +23,45 @@
 #include <class/list.h>
 #include <class/pin.h>
 
-/**CTimer class
- * \class swPWM sw_pwm.h "class/sw_pwm.h
- * \ingroup Peripherals
+/**
+ * @brief swPWM class
+ * @class swPWM sw_pwm.h "class/sw_pwm.h
+ * @warning The swPWM will use the CTimer object resource to implement the PWM output.
+ * @ingroup Peripherals
  */
-class swPWM: public CThread {
+class swPWM: public CTimer {
 public:
 	/**
 	 * @brief swPWM constructor.
-	 * @param m_accuracy Set the sample level of PWM.
-	 *
 	 */
-	swPWM(float m_accuracy=100);	// default m_accuracy (sample level) 100
+	swPWM(uint16_t sample=256);		// default sample level is 256
 
 	/**
 	 * @brief Set the period time of PWM.
-	 * @param sec The period time, for example: 0.1=100ms, 0.02=20ms
+	 * @param sec The period time of PWM, for example: 0.1=100ms, 0.02=20ms
+	 * @warning The minimum period time is 2ms.
 	 */
-	void period(float sec);			// Remark: minimum 0.02 (20ms) / 50Hz
+	void period(float sec);			// Remark: minimum 0.002 (2ms) / 500Hz
 
 	/**
-	 * @brief Start the software PWM
+	 * @brief Enable the software PWM
 	 */
-	virtual bool start();			// start PWM
+	virtual void enable();
 
 	/**
-	 * @brief Stop the software PWM
+	 * @brief Disable the software PWM
 	 */
-	void stop();
+	virtual void disable();
 
 	/**
 	 * @brief add a PWM channel
+
 	 * @param pin To connect the pin to the PWM channel.
+	 * @param dutyCycle To set the duty cycle of PWM channel, the duty cycle is a percentage value. (ex. 0.1=10%, 0.52=52%)
+	 *
 	 * @retval channel number.
 	 */
-	int  add_channel(int pin, float dutyCycle=0.0f);
+	virtual int  add_channel(int pin, float dutyCycle=0.0f);
 
 	/**
 	 * @brief update the channel duty-cycle of PWM.
@@ -68,20 +72,31 @@ public:
 	 * @return
 	 * @retval	true	If update the duty cycle of channel successful.
 	 */
-	bool update(int channel, float dutyCycle);
+	virtual bool update(int channel, float dutyCycle);
+
+	/**
+	 * @brief Get PWM channel count.
+	 * @return Number of channel of PWM.
+	 */
+	inline int count() {
+		return m_lstPin.count();
+	}
 
 	//
 	///@cond PRIVATE
 	//
 	virtual ~swPWM();
-
+	virtual void onTimer();
 protected:
-	CTimer	 m_timer;
-	CList	 m_lstCH;
-	int		 m_cycle;
-	float 	 m_accuracy;
-	virtual void run();
+	CList	 m_lstPin;
+	uint16_t m_cycle;
+	uint16_t m_sample_level;
 	///@endcond
 };
+
+/**\example /peripherals/sw_pwm_firefly/src/main.cpp
+ * This is an example of how to use the swPWM class.
+ * More details about this example.
+ */
 
 #endif /* swPWM_H_ */

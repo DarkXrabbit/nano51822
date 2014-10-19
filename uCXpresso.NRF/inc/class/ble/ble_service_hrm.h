@@ -37,7 +37,7 @@ typedef enum  {
  * @details This service exposes heart rate and other data from a
  * Heart Rate Sensor intended for fitness applications.
  *
- * @ingroup BLE Class
+ * @ingroup Bluetooth
  */
 class bleServiceHRM: public bleService {
 public:

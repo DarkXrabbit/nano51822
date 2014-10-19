@@ -44,7 +44,7 @@ typedef enum {
  * @details he Health Thermometer service exposes temperature and other data
  * from a thermometer intended for healthcare and fitness applications.
  *
- * @ingroup BLE Class
+ * @ingroup Bluetooth
  */
 
 class bleServiceHTM: public bleService {

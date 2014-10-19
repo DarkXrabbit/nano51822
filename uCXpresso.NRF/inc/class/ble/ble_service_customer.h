@@ -28,7 +28,7 @@
  *
  * @details This class provides the service event handles for customer's service class.
  *
- * @ingroup BLE Class
+ * @ingroup Bluetooth
  */
 class bleServiceCustomer: public bleService {
 public:

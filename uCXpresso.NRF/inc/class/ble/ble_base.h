@@ -19,6 +19,7 @@
 #define BLE_BASE_H_
 
 #include <uCXpresso.h>
+#include <class/object.h>
 #include <class/ble/nrf51/ble_gap.h>
 #include <class/ble/nrf51/ble_data.h>
 #include <class/ble/nrf51/ble_gatt.h>
@@ -27,11 +28,17 @@
 #include <class/ble/nrf51/nrf_error.h>
 #include <class/ble/nrf51/nordic_common.h>
 
-/**@brief 	The bleBase class is an empty class.
- * @class 	bleBase ble_base.h "class/ble/ble_base.h"
- * @ingroup BLE Class
+/**
+ * @defgroup Bluetooth
+ * @ditails The Bluetooth LE modules
  */
-class bleBase {
+
+/**
+ * @brief 	The bleBase class is an empty base class.
+ * @class 	bleBase ble_base.h "class/ble/ble_base.h"
+ * @ingroup Bluetooth
+ */
+class bleBase : virtual public CObject {
 };
 
 #endif /* BLE_BASE_H_ */

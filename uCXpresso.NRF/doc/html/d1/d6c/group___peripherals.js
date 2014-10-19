@@ -183,38 +183,27 @@ var group___peripherals =
       [ "writeable", "d4/d16/class_c_stream.html#a56ec27ee664f1a4eb9910988b78833d5", null ]
     ] ],
     [ "swPWM", "da/d88/classsw_p_w_m.html", [
-      [ "swPWM", "da/d88/classsw_p_w_m.html#a8939515d25e788839d2da16906a2b92d", null ],
-      [ "add_channel", "da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2", null ],
-      [ "enterCriticalSection", "da/d88/classsw_p_w_m.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
-      [ "exitCriticalSection", "da/d88/classsw_p_w_m.html#aab3a51062666552690be49b8e8027161", null ],
-      [ "getName", "da/d88/classsw_p_w_m.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
-      [ "getPriority", "da/d88/classsw_p_w_m.html#ac30b0a1f51549a97b88771692319c0e4", null ],
-      [ "getStackHighWaterMark", "da/d88/classsw_p_w_m.html#ac0227eda51725b795a461a768703f588", null ],
-      [ "getState", "da/d88/classsw_p_w_m.html#a1e9cce461d8dfb3889cea24f1a703f6f", null ],
-      [ "isAlive", "da/d88/classsw_p_w_m.html#a4a0f0727be4714cef1e24150a869d403", null ],
-      [ "isSuspend", "da/d88/classsw_p_w_m.html#a51dbe9909ce528b4113d2cc27314e965", null ],
-      [ "isThread", "da/d88/classsw_p_w_m.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
+      [ "swPWM", "da/d88/classsw_p_w_m.html#a89f02f9e60f764119f91334ac569c0c1", null ],
+      [ "add_channel", "da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84", null ],
+      [ "count", "da/d88/classsw_p_w_m.html#a7dbbba82fb6124980b9392031011f383", null ],
+      [ "disable", "da/d88/classsw_p_w_m.html#a34a742636ca24b1a349cd534c4b25caa", null ],
+      [ "enable", "da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d", null ],
+      [ "isThread", "da/d88/classsw_p_w_m.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "da/d88/classsw_p_w_m.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "millisecond", "da/d88/classsw_p_w_m.html#a80328fea91b61d9ffb154671b5cae6df", null ],
       [ "period", "da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116", null ],
-      [ "resume", "da/d88/classsw_p_w_m.html#ac8c53aa8c145fc4ac70fa6d825b95742", null ],
-      [ "resumeAll", "da/d88/classsw_p_w_m.html#a743d4325b7e7da494283f3292773ff77", null ],
-      [ "run", "da/d88/classsw_p_w_m.html#a071c3d3b3c19a7bd6a01aca073a9b4d7", null ],
-      [ "setPriority", "da/d88/classsw_p_w_m.html#a6b0703ae0cc085a0c0aaa55b6945575b", null ],
-      [ "start", "da/d88/classsw_p_w_m.html#acfbae886b1633cd8c20b29384f3574bc", null ],
-      [ "start", "da/d88/classsw_p_w_m.html#a3ebabcc071634508511ae2fc7b868ab7", null ],
-      [ "stop", "da/d88/classsw_p_w_m.html#a3e1df5ef7055ce43eb4d2f0411c78d0c", null ],
-      [ "suspend", "da/d88/classsw_p_w_m.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
-      [ "suspendAll", "da/d88/classsw_p_w_m.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
-      [ "update", "da/d88/classsw_p_w_m.html#a13b193f6a1edbf53fbec470c1465260f", null ]
+      [ "second", "da/d88/classsw_p_w_m.html#aef5241e8a42850238e784951b93570dd", null ],
+      [ "update", "da/d88/classsw_p_w_m.html#a4cc413c4128483bd463f5530dbddea18", null ],
+      [ "wait", "da/d88/classsw_p_w_m.html#a025509145d6cd34e37f5e143606f638b", null ]
     ] ],
     [ "CTimer", "db/de1/class_c_timer.html", [
       [ "CTimer", "db/de1/class_c_timer.html#a93e4d770fd09f5e1b984768620cc52bf", null ],
-      [ "disable", "db/de1/class_c_timer.html#a61c79a568b4337520ed58e5f248a068e", null ],
-      [ "enable", "db/de1/class_c_timer.html#aeffc80e8f34a8c1e5e0850da92b7ee17", null ],
+      [ "disable", "db/de1/class_c_timer.html#a2cf88a86b8cf746048d0e99ee277b96e", null ],
+      [ "enable", "db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc", null ],
       [ "isThread", "db/de1/class_c_timer.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "db/de1/class_c_timer.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
       [ "millisecond", "db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df", null ],
-      [ "second", "db/de1/class_c_timer.html#aa4d48f568d057eccc1842748034fadbf", null ],
-      [ "wait", "db/de1/class_c_timer.html#a9e63f073da87bd67b2afded332d2aa2d", null ]
+      [ "second", "db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd", null ],
+      [ "wait", "db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b", null ]
     ] ]
 ];

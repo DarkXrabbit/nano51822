@@ -206,4 +206,9 @@ public:
 
 };
 
+/**\example /peripherals/i2c_scanner/src/main.cpp
+ * This is an example of how to use the I2Cdev class.
+ * More details about this example.
+ */
+
 #endif /* I2CDEV_H_ */

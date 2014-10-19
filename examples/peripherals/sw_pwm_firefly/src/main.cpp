@@ -51,13 +51,13 @@ int main(void) {
 	// Your setup code here
 	//
 	swPWM pwm;
-	pwm.period(0.025);		// set the period time of PWM to 25ms.
+	pwm.period(0.02);		// set the period time of PWM to 20ms.
 	pwm.add_channel(LED0);	// add PWM channel with LED0
 	pwm.add_channel(LED1);	// add PWM channel with LED1
 	pwm.add_channel(LED2);	// add PWM channel with LED2
 	pwm.add_channel(LED3);	// add PWM channel with LED3
 	pwm.add_channel(LED4);	// add PWM channel with LED4
-	pwm.start();			// start the pwm
+	pwm.enable();			// start the pwm
 
 	float y;
 	int x[5] = { 0, 9, 18, 27, 36 };        // initialize all channels x degree
@@ -70,9 +70,9 @@ int main(void) {
     	// FireFly loop
     	//
 		for (int ch = 0; ch < 5; ch++) {
-			x[ch] = (x[ch] + 2) % 360;                  		// degree 0~360, step by 2
-			y = sin((x[ch] * M_PI) / 180.0);                 // y = sine @x
-			pwm.update(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); // update the duty-cycle of channel
+			x[ch] = (x[ch] + 2) % 360;							// degree 0~360, step by 2
+			y = sin((x[ch] * M_PI) / 180.0);                 	// y = sine @x
+			pwm.update(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); 	// update the duty-cycle of channel
 		}
 		sleep(20);    // speed
     }

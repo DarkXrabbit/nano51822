@@ -156,13 +156,13 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line">    <span class="comment">// Your setup code here</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a4"></a><a class="code" href="../../da/d88/classsw_p_w_m.html">swPWM</a> pwm;</div>
-<div class="line">    pwm.<a name="a5"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116">period</a>(0.025);      <span class="comment">// set the period time of PWM to 25ms.</span></div>
-<div class="line">    pwm.<a name="a6"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2">add_channel</a>(LED0);  <span class="comment">// add PWM channel with LED0</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2">add_channel</a>(LED1);  <span class="comment">// add PWM channel with LED1</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2">add_channel</a>(LED2);  <span class="comment">// add PWM channel with LED2</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2">add_channel</a>(LED3);  <span class="comment">// add PWM channel with LED3</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a5e3dc5cc48acafe2a33a74d1dba7e5a2">add_channel</a>(LED4);  <span class="comment">// add PWM channel with LED4</span></div>
-<div class="line">    pwm.<a name="a7"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#acfbae886b1633cd8c20b29384f3574bc">start</a>();            <span class="comment">// start the pwm</span></div>
+<div class="line">    pwm.<a name="a5"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116">period</a>(0.02);       <span class="comment">// set the period time of PWM to 20ms.</span></div>
+<div class="line">    pwm.<a name="a6"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED0);  <span class="comment">// add PWM channel with LED0</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED1);  <span class="comment">// add PWM channel with LED1</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED2);  <span class="comment">// add PWM channel with LED2</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED3);  <span class="comment">// add PWM channel with LED3</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED4);  <span class="comment">// add PWM channel with LED4</span></div>
+<div class="line">    pwm.<a name="a7"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d">enable</a>();           <span class="comment">// start the pwm</span></div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">float</span> y;</div>
 <div class="line">    <span class="keywordtype">int</span> x[5] = { 0, 9, 18, 27, 36 };        <span class="comment">// initialize all channels x degree</span></div>
@@ -176,8 +176,8 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; 5; ch++) {</div>
 <div class="line">            x[ch] = (x[ch] + 2) % 360;                          <span class="comment">// degree 0~360, step by 2</span></div>
-<div class="line">            y = sin((x[ch] * M_PI) / 180.0);                 <span class="comment">// y = sine @x</span></div>
-<div class="line">            pwm.<a name="a8"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a13b193f6a1edbf53fbec470c1465260f">update</a>(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); <span class="comment">// update the duty-cycle of channel</span></div>
+<div class="line">            y = sin((x[ch] * M_PI) / 180.0);                    <span class="comment">// y = sine @x</span></div>
+<div class="line">            pwm.<a name="a8"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a4cc413c4128483bd463f5530dbddea18">update</a>(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f));    <span class="comment">// update the duty-cycle of channel</span></div>
 <div class="line">        }</div>
 <div class="line">        sleep(20);    <span class="comment">// speed</span></div>
 <div class="line">    }</div>
@@ -187,7 +187,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Oct 18 2014 23:15:11 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 19 2014 13:06:40 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

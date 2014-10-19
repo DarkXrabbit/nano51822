@@ -157,11 +157,11 @@ $(document).ready(function(){initNavTree('d0/d3a/_2peripherals_2timer_rtc_2src_2
 <div class="line">        led.<a name="a3"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();           <span class="comment">// set the LED as an output pin</span></div>
 <div class="line"></div>
 <div class="line">        <a name="_a4"></a><a class="code" href="../../db/de1/class_c_timer.html">CTimer</a> t;               <span class="comment">// declare a Timer object</span></div>
-<div class="line">        t.<a name="a5"></a><a class="code" href="../../db/de1/class_c_timer.html#aa4d48f568d057eccc1842748034fadbf">second</a>(m_interval);   <span class="comment">// set Timer interval</span></div>
-<div class="line">        t.<a name="a6"></a><a class="code" href="../../db/de1/class_c_timer.html#aeffc80e8f34a8c1e5e0850da92b7ee17">enable</a>();             <span class="comment">// enable timer interrupt</span></div>
+<div class="line">        t.<a name="a5"></a><a class="code" href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">second</a>(m_interval);   <span class="comment">// set Timer interval</span></div>
+<div class="line">        t.<a name="a6"></a><a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();             <span class="comment">// enable timer interrupt</span></div>
 <div class="line"></div>
 <div class="line">        <span class="keywordflow">while</span>(<a name="a7"></a><a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>()) {</div>
-<div class="line">            <span class="keywordflow">if</span> ( t.<a name="a8"></a><a class="code" href="../../db/de1/class_c_timer.html#a9e63f073da87bd67b2afded332d2aa2d">wait</a>() ) {   <span class="comment">// block and waiting a timer interrupt</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( t.<a name="a8"></a><a class="code" href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">wait</a>() ) {   <span class="comment">// block and waiting a timer interrupt</span></div>
 <div class="line">                led.<a name="a9"></a><a class="code" href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">invert</a>();</div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -202,7 +202,7 @@ $(document).ready(function(){initNavTree('d0/d3a/_2peripherals_2timer_rtc_2src_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Oct 18 2014 23:15:11 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 19 2014 13:06:40 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

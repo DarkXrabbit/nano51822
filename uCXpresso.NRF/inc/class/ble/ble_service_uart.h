@@ -27,6 +27,11 @@
 
 extern const ble_uuid128_t nus_base_uuid;	/**< Default UART's BLE base UUID */
 
+/**
+ * @brief BLE UART Service class.
+ * @class bleServiceUART ble_service_uart.h "class/ble/ble_service_uart.h"
+ * @ingroup Bluetooth
+ */
 class bleServiceUART: public bleServiceCustomer, public CStream {
 public:
 	/**@brief bleServiceUART constructor
