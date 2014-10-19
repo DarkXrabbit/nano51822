@@ -113,19 +113,36 @@ public:
 
 	/**
 	 * @brief Specified an analog input pin when analog source are AINxx.
+	 *
 	 * @param pin An analog input pin on AD0~AD5. @ref AIN_T
 	 *
-	 * @ref source member
+	 * @see CAdc::source
 	 */
 	static void pin(AIN_T ain);
 
 	/**
 	 * @brief Read analog convert value.
 	 *
+	 * @param value 	The analog convert result.
+	 *
 	 * @return
-	 * @retval true If analog convert successful. false otherwise.
+	 * @retval true If analog convert completed within timeout.
 	 */
 	static bool read(uint16_t &value, uint32_t timeout=MAX_DELAY_TIME);
+
+	/**
+	 * @brief Inline function to read an analog value from an AIN (AD0~AD5) pin.
+	 *
+	 * @param pin 	An AIN (AD0~AD5) pin.
+	 * @param value	Result analog value.
+	 *
+	 * @return
+	 * @retval true If analog convert completed within timeout.
+	 */
+	inline bool read(AIN_T ain, uint16_t &value, uint32_t timeout=MAX_DELAY_TIME) {
+		pin(ain);
+		return read(value);
+	}
 
 	/**
 	 * @brief Check analog module busy
@@ -135,7 +152,7 @@ public:
 	static bool isBusy();
 
 	/**
-	 * @brief Reset the analog module.
+	 * @brief Reset the analog module and all configurations.
 	 */
 	static void reset();
 
@@ -145,6 +162,5 @@ public:
  * This is an example of how to use the CAdc class.
  * More details about this example.
  */
-
 
 #endif /* ADC_H_ */

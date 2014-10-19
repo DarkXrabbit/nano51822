@@ -58,11 +58,17 @@ public:
 	 */
 	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
+	/**
+	 * @brief On Timer IRQ Event.
+	 * @warning The member function will be called by Timer IRQ.
+	 */
+	virtual void onTimer();
+
 	//
 	///@cond PRIVATE
 	//
 	virtual ~CTimer();
-	virtual void onTimer() {}
+protected:
 	CSemaphore	m_semIrq;
 	///@endcond
 };

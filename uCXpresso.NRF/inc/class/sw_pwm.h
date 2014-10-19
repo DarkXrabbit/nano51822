@@ -23,6 +23,8 @@
 #include <class/list.h>
 #include <class/pin.h>
 
+#define PWM_RESOLUTION	(0.000064f)		///< PWM resolution = 64us.
+
 /**
  * @brief swPWM class
  * @class swPWM sw_pwm.h "class/sw_pwm.h
@@ -34,14 +36,14 @@ public:
 	/**
 	 * @brief swPWM constructor.
 	 */
-	swPWM(uint16_t sample=256);		// default sample level is 256
+	swPWM();						// default sample level is 256
 
 	/**
 	 * @brief Set the period time of PWM.
 	 * @param sec The period time of PWM, for example: 0.1=100ms, 0.02=20ms
 	 * @warning The minimum period time is 2ms.
 	 */
-	void period(float sec);			// Remark: minimum 0.002 (2ms) / 500Hz
+	void period(float sec);			// Remark: minimum 0.02 (20ms) / 50Hz
 
 	/**
 	 * @brief Enable the software PWM
@@ -80,6 +82,13 @@ public:
 	 */
 	inline int count() {
 		return m_lstPin.count();
+	}
+
+	/**
+	 * @brief Get current sample level.
+	 */
+	inline uint16_t sample_level() {
+		return m_sample_level;
 	}
 
 	//

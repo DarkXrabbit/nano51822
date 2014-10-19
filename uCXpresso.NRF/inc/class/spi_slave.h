@@ -30,8 +30,18 @@
 #define DEF_CHARACTER 0xAAu             /**< SPI default character. Character clocked out in case of an ignored transaction. */
 #define ORC_CHARACTER 0x55u             /**< SPI over-read character. Character clocked out after an over-read of the transmit buffer. */
 
+/**
+ * @brief spiSlave class provides the Serial Peripheral slave Interface.
+ *
+ * @class spiSlave spi_slave.h "class/spi_slave.h"
+ *
+ * @ingroup Peripherals
+ */
 class spiSlave: public CPeripheral {
 public:
+	/**
+	 * @brief spiSlave constructor.
+	 */
 	spiSlave(int mosi_pin = DEF_SPI_SLAVE_PIN_MOSI,
 			 int miso_pin = DEF_SPI_SLAVE_PIN_MISO,
 			 int ssl_pin  = DEF_SPI_SLAVE_PIN_SSL,
