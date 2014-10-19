@@ -51,7 +51,7 @@ int main(void) {
 	// Your setup code here
 	//
 	swPWM pwm;
-	pwm.period(0.02);		// set the period time of PWM to 20ms.
+	pwm.period(0.01);		// set the period time of PWM to 10ms.
 	pwm.add_channel(LED0);	// add PWM channel with LED0
 	pwm.add_channel(LED1);	// add PWM channel with LED1
 	pwm.add_channel(LED2);	// add PWM channel with LED2
@@ -74,6 +74,6 @@ int main(void) {
 			y = sin((x[ch] * M_PI) / 180.0);                 	// y = sine @x
 			pwm.update(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); 	// update the duty-cycle of channel
 		}
-		sleep(20);    // speed
+		sleep(10);    // speed
     }
 }

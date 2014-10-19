@@ -132,6 +132,9 @@ Inheritance diagram for CAdc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a5c28e5d19bfd310dcadac067e9cb3398"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0f/class_c_adc.html#a5c28e5d19bfd310dcadac067e9cb3398">read</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b">AIN_T</a> ain, uint16_t &amp;value, uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:a5c28e5d19bfd310dcadac067e9cb3398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline function to read an analog value from an AIN (AD0~AD5) pin.  <a href="#a5c28e5d19bfd310dcadac067e9cb3398">More...</a><br /></td></tr>
+<tr class="separator:a5c28e5d19bfd310dcadac067e9cb3398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -164,7 +167,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a0e94132f08c87cfc397a8f35dac6c532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check analog module busy.  <a href="#a0e94132f08c87cfc397a8f35dac6c532">More...</a><br /></td></tr>
 <tr class="separator:a0e94132f08c87cfc397a8f35dac6c532"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a43e9ed6fcc4ff33c9e86f1a6741eda02"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02">reset</a> ()</td></tr>
-<tr class="memdesc:a43e9ed6fcc4ff33c9e86f1a6741eda02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the analog module.  <a href="#a43e9ed6fcc4ff33c9e86f1a6741eda02">More...</a><br /></td></tr>
+<tr class="memdesc:a43e9ed6fcc4ff33c9e86f1a6741eda02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the analog module and all configurations.  <a href="#a43e9ed6fcc4ff33c9e86f1a6741eda02">More...</a><br /></td></tr>
 <tr class="separator:a43e9ed6fcc4ff33c9e86f1a6741eda02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -261,7 +264,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="ttc" id="group___enumerations_html_gga0c833a85d4bb66b56409631327ebe904af37d947bcade886ed161d56a008a2d2f"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904af37d947bcade886ed161d56a008a2d2f">AIN_1_3</a></div><div class="ttdoc">External analog with 1/3 prescaling used as input for the conversion. </div><div class="ttdef"><b>Definition:</b> adc.h:40</div></div>
 <div class="ttc" id="class_c_adc_html_a02da72af459ae098de9e76f816eed3d7"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a02da72af459ae098de9e76f816eed3d7">CAdc::reference</a></div><div class="ttdeci">static void reference(AREF_T ref)</div><div class="ttdoc">Analog reference source. </div></div>
 <div class="ttc" id="class_c_adc_html_a06c3d33be67fff2546c0fe8d945cd1bc"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a></div><div class="ttdeci">static void source(ADC_SOURCE_T input)</div><div class="ttdoc">Analog input selection. </div></div>
-<div class="ttc" id="class_c_adc_html_a43e9ed6fcc4ff33c9e86f1a6741eda02"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02">CAdc::reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdoc">Reset the analog module. </div></div>
+<div class="ttc" id="class_c_adc_html_a43e9ed6fcc4ff33c9e86f1a6741eda02"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02">CAdc::reset</a></div><div class="ttdeci">static void reset()</div><div class="ttdoc">Reset the analog module and all configurations. </div></div>
 <div class="ttc" id="group___enumerations_html_ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3">AREF_VBG</a></div><div class="ttdoc">Use internal 1.2V band gap reference. </div><div class="ttdef"><b>Definition:</b> adc.h:29</div></div>
 </div><!-- fragment -->
 </div>
@@ -384,7 +387,7 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<p><a class="el" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">source</a> member </p>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc" title="Analog input selection. ">CAdc::source</a> </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a6">/peripherals/adc_test/src/main.cpp</a>.</dd>
 </dl>
 </div>
@@ -422,15 +425,83 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Read analog convert value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>The analog convert result.</td></tr>
+  </table>
+  </dd>
+</dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
-    <tr><td class="paramname">true</td><td>If analog convert successful. false otherwise. </td></tr>
+    <tr><td class="paramname">true</td><td>If analog convert completed within timeout. </td></tr>
   </table>
   </dd>
 </dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a13">/peripherals/adc_test/src/main.cpp</a>.</dd>
 </dl>
+</div>
+</div>
+<a class="anchor" id="a5c28e5d19bfd310dcadac067e9cb3398"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CAdc::read </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b">AIN_T</a>&#160;</td>
+          <td class="paramname"><em>ain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>MAX_DELAY_TIME</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inline function to read an analog value from an AIN (AD0~AD5) pin. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pin</td><td>An AIN (AD0~AD5) pin. </td></tr>
+    <tr><td class="paramname">value</td><td>Result analog value.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">true</td><td>If analog convert completed within timeout. </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="fragment"><div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                                                                                  {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <a class="code" href="../../d7/d0f/class_c_adc.html#a84c5a06a5d4d8ee65d75fcb16b1f2910">pin</a>(ain);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">read</a>(value);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
+<div class="ttc" id="class_c_adc_html_a83c787a93563538400e5004750dc72ee"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a></div><div class="ttdeci">static bool read(uint16_t &amp;value, uint32_t timeout=MAX_DELAY_TIME)</div><div class="ttdoc">Read analog convert value. </div></div>
+<div class="ttc" id="class_c_adc_html_a84c5a06a5d4d8ee65d75fcb16b1f2910"><div class="ttname"><a href="../../d7/d0f/class_c_adc.html#a84c5a06a5d4d8ee65d75fcb16b1f2910">CAdc::pin</a></div><div class="ttdeci">static void pin(AIN_T ain)</div><div class="ttdoc">Specified an analog input pin when analog source are AINxx. </div></div>
+</div><!-- fragment -->
 </div>
 </div>
 <a class="anchor" id="a02da72af459ae098de9e76f816eed3d7"></a>
@@ -487,7 +558,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reset the analog module. </p>
+<p>Reset the analog module and all configurations. </p>
 
 </div>
 </div>
@@ -529,7 +600,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/d0f/class_c_adc.html">CAdc</a></li>
-    <li class="footer">Generated on Sun Oct 19 2014 13:06:41 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 19 2014 16:30:45 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

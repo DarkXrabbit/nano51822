@@ -23,8 +23,8 @@ var NAVTREEINDEX =
 [
 "annotated.html",
 "d6/d56/class_console.html",
-"db/d84/classble_service_u_a_r_t.html#aa314dfe6e8cf3c1da9ad6a6de2d2618e",
-"df/d99/class_c_string.html#ad0593358c21cca96aca2403be6d6ec92"
+"db/d84/classble_service_u_a_r_t.html#a63f759c0494bc2affe5a7779ded6a40b",
+"df/d99/class_c_string.html#aade923167835efe164b5e06fb192e176"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

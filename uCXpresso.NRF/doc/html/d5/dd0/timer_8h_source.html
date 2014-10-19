@@ -143,20 +143,23 @@ $(document).ready(function(){initNavTree('d5/dd0/timer_8h_source.html','../../')
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">wait</a>(uint32_t timeout=MAX_DELAY_TIME);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../db/de1/class_c_timer.html">CTimer</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTimer() {}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a>  m_semIrq;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TIMER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e">onTimer</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../db/de1/class_c_timer.html">CTimer</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a>  m_semIrq;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* TIMER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_c_timer_html_ac71a056d71982f1c4e64dc21ef4f7dfc"><div class="ttname"><a href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">CTimer::enable</a></div><div class="ttdeci">virtual void enable()</div></div>
 <div class="ttc" id="class_c_timer_html_a80328fea91b61d9ffb154671b5cae6df"><div class="ttname"><a href="../../db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df">CTimer::millisecond</a></div><div class="ttdeci">void millisecond(uint32_t ms)</div><div class="ttdef"><b>Definition:</b> timer.h:45</div></div>
 <div class="ttc" id="class_c_semaphore_html"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html">CSemaphore</a></div><div class="ttdef"><b>Definition:</b> semaphore.h:33</div></div>
 <div class="ttc" id="class_c_timer_html_aef5241e8a42850238e784951b93570dd"><div class="ttname"><a href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">CTimer::second</a></div><div class="ttdeci">virtual void second(float sec)</div></div>
 <div class="ttc" id="class_c_timer_html_a2cf88a86b8cf746048d0e99ee277b96e"><div class="ttname"><a href="../../db/de1/class_c_timer.html#a2cf88a86b8cf746048d0e99ee277b96e">CTimer::disable</a></div><div class="ttdeci">virtual void disable()</div></div>
 <div class="ttc" id="class_c_timer_html"><div class="ttname"><a href="../../db/de1/class_c_timer.html">CTimer</a></div><div class="ttdef"><b>Definition:</b> timer.h:28</div></div>
+<div class="ttc" id="class_c_timer_html_a21ed9c9f77401f51e090cacce790448e"><div class="ttname"><a href="../../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e">CTimer::onTimer</a></div><div class="ttdeci">virtual void onTimer()</div><div class="ttdoc">On Timer IRQ Event. </div></div>
 <div class="ttc" id="class_c_peripheral_html"><div class="ttname"><a href="../../d9/db6/class_c_peripheral.html">CPeripheral</a></div><div class="ttdef"><b>Definition:</b> peripheral.h:27</div></div>
 <div class="ttc" id="class_c_timer_html_a93e4d770fd09f5e1b984768620cc52bf"><div class="ttname"><a href="../../db/de1/class_c_timer.html#a93e4d770fd09f5e1b984768620cc52bf">CTimer::CTimer</a></div><div class="ttdeci">CTimer()</div></div>
 <div class="ttc" id="class_c_timer_html_a025509145d6cd34e37f5e143606f638b"><div class="ttname"><a href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">CTimer::wait</a></div><div class="ttdeci">virtual bool wait(uint32_t timeout=MAX_DELAY_TIME)</div></div>
@@ -166,7 +169,7 @@ $(document).ready(function(){initNavTree('d5/dd0/timer_8h_source.html','../../')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>timer.h</b></li>
-    <li class="footer">Generated on Sun Oct 19 2014 13:06:41 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 19 2014 16:30:45 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

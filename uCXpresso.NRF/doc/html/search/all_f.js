@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['sample_5flevel',['sample_level',['../da/d88/classsw_p_w_m.html#a2c03ab5505d4d43cc3985f4ede8a1087',1,'swPWM']]],
   ['sdversion',['sdVersion',['../d6/d49/classble_device.html#a64679f3d5aa9b6ec419141935898872a',1,'bleDevice']]],
   ['second',['second',['../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd',1,'CTimer']]],
   ['send',['send',['../d5/ded/classble_service_battery.html#ab9d38650959d2167c66e3acbdaff4315',1,'bleServiceBattery::send()'],['../d0/dfc/classble_service_h_r_m.html#acc665d3430aa1483d764c2bb63a60c5f',1,'bleServiceHRM::send()'],['../d3/d27/classble_service_h_t_m.html#a8e4942f5407c238d34c341794fa85fc8',1,'bleServiceHTM::send()']]],
@@ -38,6 +39,6 @@ var searchData=
   ['suspend',['suspend',['../d0/d26/class_c_thread.html#a53e71e6db2221cd1c45aec21953d4aad',1,'CThread']]],
   ['suspendall',['suspendAll',['../d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a',1,'CThread']]],
   ['suspended',['SUSPENDED',['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1c2114335a42993ac5cc5dbf65f83d41',1,'thread.h']]],
-  ['swpwm',['swPWM',['../da/d88/classsw_p_w_m.html',1,'swPWM'],['../da/d88/classsw_p_w_m.html#a89f02f9e60f764119f91334ac569c0c1',1,'swPWM::swPWM()']]],
+  ['swpwm',['swPWM',['../da/d88/classsw_p_w_m.html',1,'swPWM'],['../da/d88/classsw_p_w_m.html#abf56cfc2f4ee96f1ce601ecf1d42fd55',1,'swPWM::swPWM()']]],
   ['sync',['sync',['../dd/d60/class_c_event_bit.html#a4a50fd1376946d508762fa00d01034ce',1,'CEventBit']]]
 ];
