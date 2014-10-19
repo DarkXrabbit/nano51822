@@ -133,47 +133,47 @@ $(document).ready(function(){initNavTree('dc/d73/spi__slave_8h_source.html','../
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define DEF_CHARACTER 0xAAu             </span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define ORC_CHARACTER 0x55u             </span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../da/d31/classspi_slave.html">   33</a></span>&#160;<span class="preprocessor">class spiSlave: public CPeripheral {</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <a class="code" href="../../da/d31/classspi_slave.html">spiSlave</a>(<span class="keywordtype">int</span> mosi_pin = DEF_SPI_SLAVE_PIN_MOSI,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;             <span class="keywordtype">int</span> miso_pin = DEF_SPI_SLAVE_PIN_MISO,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;             <span class="keywordtype">int</span> ssl_pin  = DEF_SPI_SLAVE_PIN_SSL,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;             <span class="keywordtype">int</span> sck_pin  = DEF_SPI_SLAVE_PIN_SCK);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> mode(<a class="code" href="../../db/dff/group___enumerations.html#ga296b79fb83e48fbffa9ee5978d200873">SPI_MODE_T</a> mode);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">void</span> bitOrder(<a class="code" href="../../db/dff/group___enumerations.html#ga610be6d45973f3f7da6299e97b99f3c2">BIT_ORDER_T</a> order);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> def_tx_character(uint8_t def);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">void</span> orc_tx_character(uint8_t orc);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> uint32_t transact(uint8_t *p_tx_buf, uint16_t tx_buf_len, uint8_t *p_rx_buf, uint16_t rx_buf_len);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> wait(uint32_t timeout=MAX_DELAY_TIME);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTransactionCompleted();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../da/d31/classspi_slave.html">spiSlave</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a> m_semTransaction;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    xHandle m_config;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../da/d31/classspi_slave.html">   40</a></span>&#160;<span class="preprocessor">class spiSlave: public CPeripheral {</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <a class="code" href="../../da/d31/classspi_slave.html">spiSlave</a>(<span class="keywordtype">int</span> mosi_pin = DEF_SPI_SLAVE_PIN_MOSI,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;             <span class="keywordtype">int</span> miso_pin = DEF_SPI_SLAVE_PIN_MISO,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;             <span class="keywordtype">int</span> ssl_pin  = DEF_SPI_SLAVE_PIN_SSL,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;             <span class="keywordtype">int</span> sck_pin  = DEF_SPI_SLAVE_PIN_SCK);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordtype">void</span> mode(<a class="code" href="../../db/dff/group___enumerations.html#ga296b79fb83e48fbffa9ee5978d200873">SPI_MODE_T</a> mode);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">void</span> bitOrder(<a class="code" href="../../db/dff/group___enumerations.html#ga610be6d45973f3f7da6299e97b99f3c2">BIT_ORDER_T</a> order);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordtype">void</span> def_tx_character(uint8_t def);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> orc_tx_character(uint8_t orc);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">virtual</span> uint32_t transact(uint8_t *p_tx_buf, uint16_t tx_buf_len, uint8_t *p_rx_buf, uint16_t rx_buf_len);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> wait(uint32_t timeout=MAX_DELAY_TIME);</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTransactionCompleted();</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPI_SLAVE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../da/d31/classspi_slave.html">spiSlave</a>();</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a> m_semTransaction;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    xHandle m_config;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SPI_SLAVE_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_c_semaphore_html"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html">CSemaphore</a></div><div class="ttdef"><b>Definition:</b> semaphore.h:33</div></div>
 <div class="ttc" id="group___enumerations_html_ga610be6d45973f3f7da6299e97b99f3c2"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ga610be6d45973f3f7da6299e97b99f3c2">BIT_ORDER_T</a></div><div class="ttdeci">BIT_ORDER_T</div><div class="ttdoc">Serial bit order. </div><div class="ttdef"><b>Definition:</b> spi_master.h:34</div></div>
 <div class="ttc" id="group___enumerations_html_ga296b79fb83e48fbffa9ee5978d200873"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ga296b79fb83e48fbffa9ee5978d200873">SPI_MODE_T</a></div><div class="ttdeci">SPI_MODE_T</div><div class="ttdoc">SPI Data To Clock Phase Relationship. </div><div class="ttdef"><b>Definition:</b> spi_master.h:44</div></div>
-<div class="ttc" id="classspi_slave_html"><div class="ttname"><a href="../../da/d31/classspi_slave.html">spiSlave</a></div><div class="ttdef"><b>Definition:</b> spi_slave.h:33</div></div>
+<div class="ttc" id="classspi_slave_html"><div class="ttname"><a href="../../da/d31/classspi_slave.html">spiSlave</a></div><div class="ttdoc">spiSlave class provides the Serial Peripheral slave Interface. </div><div class="ttdef"><b>Definition:</b> spi_slave.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>spi_slave.h</b></li>
-    <li class="footer">Generated on Sun Oct 19 2014 16:30:45 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 19 2014 16:41:05 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
