@@ -57,8 +57,8 @@
     // For example, for a major value and minor value of 0xabcd and 0x0102 respectively, the
     // the following command should be used.
     // nrfjprog --snr <Segger-chip-Serial-Number> --memwr 0x10001080 --val 0xabcd0102
-#define major_value  	(((*(uint32_t *)UICR_ADDRESS) & 0xFFFF0000) >> 16)
-#define minor_value 	((*(uint32_t *)UICR_ADDRESS) & 0x0000FFFF)
+#define major_value  		(((*(uint32_t *)UICR_ADDRESS) & 0xFFFF0000) >> 16)
+#define minor_value 		((*(uint32_t *)UICR_ADDRESS) & 0x0000FFFF)
 #define APP_MAJOR_VALUE 	MSB_FIRST(major_value)	/**< Major value used to identify Beacons. */
 #define APP_MINOR_VALUE 	MSB_FIRST(minor_value)	/**< Minor value used to identify Beacons. */
 #else
@@ -75,7 +75,7 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
     APP_BEACON_UUID,     // 128 bit UUID value.
     APP_MAJOR_VALUE,     // Major arbitrary value that can be used to distinguish between Beacons.
     APP_MINOR_VALUE,     // Minor arbitrary value that can be used to distinguish between Beacons.
-    APP_MEASURED_RSSI,    // Manufacturer specific information. The Beacon's measured TX power in
+    APP_MEASURED_RSSI,   // Manufacturer specific information. The Beacon's measured TX power in
                          // this implementation.
 };
 
@@ -117,15 +117,14 @@ int main(void)
 	//
     // Enter main loop.
 	//
-	CTimeout tm;
+	CTimeout tmLED;
     while(1) {
     	//
     	// led blink demo
     	//
-    	if ( tm.isExpired(500) ) {
-    		tm.reset();
+    	if ( tmLED.isExpired(500) ) {
+    		tmLED.reset();
     		led.invert();
     	}
-
     }
 }
