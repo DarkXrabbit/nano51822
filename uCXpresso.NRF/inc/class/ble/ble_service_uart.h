@@ -77,4 +77,9 @@ protected:
 	///@endcond
 };
 
+/**\example /ble/ble_app_uart/src/main.cpp
+ * This is an example of how to use the bleServiceUART class.
+ * More details about this example.
+ */
+
 #endif /* BLE_SERVICE_UART_H_ */

@@ -95,4 +95,9 @@ protected:
 	///@endcond
 };
 
+/**\example /ble/ble_app_hrm_htm_bat/src/main.cpp
+ * This is an example of how to use the bleServiceHTM class.
+ * More details about this example.
+ */
+
 #endif /* BLE_SERVICE_HTM_H_ */

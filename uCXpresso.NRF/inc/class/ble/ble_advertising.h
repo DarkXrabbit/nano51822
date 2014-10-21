@@ -144,6 +144,10 @@ friend class bleDevice;
 	///@endcond
 };
 
-#define UUID_COUNT(x)	(sizeof(x)/sizeof(x[0]))
+/**\example /ble/ble_beacon/src/main.cpp
+ * This is an example of how to use the bleAdvertising class to implement the iBeacon application.
+ * More details about this example.
+ */
+
 
 #endif /* BLE_ADVERTISING_H_ */

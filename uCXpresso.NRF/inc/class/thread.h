@@ -192,6 +192,11 @@ public:
 	 */
 	static void exitCriticalSection();
 
+	/**
+	 * @brief get the number of tasks in processor.
+	 */
+	static uint16_t count();
+
 protected:
 	/**The run member function is the task main procedure, and callback by RTOS when task start.
 	 *
