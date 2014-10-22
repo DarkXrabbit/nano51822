@@ -3,6 +3,7 @@ var examples =
     [ "/ble/ble_app_hrm_htm_bat/src/main.cpp", "dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_app_uart/src/main.cpp", "d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_beacon/src/main.cpp", "d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html", null ],
+    [ "/ble/ble_rssi_measure/src/main.cpp", "d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/adc_test/src/main.cpp", "d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/i2c_scanner/src/main.cpp", "d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/spi_loop_test/src/main.cpp", "d5/dae/_2peripherals_2spi_loop_test_2src_2main_8cpp-example.html", null ],

@@ -218,8 +218,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Call the member function to retrieve the number of pins in the bus. </p><dl class="section return"><dt>Returns</dt><dd>integer value. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;{ <span class="keywordflow">return</span> m_nPinCount; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad45a06493f12aef3d096ac3ed86a3b8f"></a>
@@ -267,10 +266,7 @@ Public Member Functions</h2></td></tr>
 <p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
@@ -295,10 +291,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="add3835bd7327b63bdaa480938d5a8adc"></a>
@@ -326,9 +319,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        <a class="code" href="../../de/d89/class_c_bus.html">CBus</a> bus(P21, P22, P23, P24, END);  <span class="comment">// Collect P21~P24 in the CBus object.</span></div>
 <div class="line">        bus.input();                        <span class="comment">// Set the bus as input pins.</span></div>
 <div class="line">        uint32_t val = bus;                 <span class="comment">// Read a value from bus.</span></div>
-</div><!-- fragment --> <div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1">read</a>(); }</div>
-<div class="ttc" id="class_c_bus_html_ae5c9d649c6f6b22a93fb29e0152a57c1"><div class="ttname"><a href="../../de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1">CBus::read</a></div><div class="ttdeci">virtual uint32_t read()</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a3ea59ccbb16b92e2763a00b3baa10fd6"></a>
@@ -353,9 +344,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for not equal to... </p><dl class="section return"><dt>Returns</dt><dd>true if the bus not equal the val; otherwise, failed. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="../../de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1">read</a>()!= val ? <span class="keyword">true</span> : <span class="keyword">false</span>); }</div>
-<div class="ttc" id="class_c_bus_html_ae5c9d649c6f6b22a93fb29e0152a57c1"><div class="ttname"><a href="../../de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1">CBus::read</a></div><div class="ttdeci">virtual uint32_t read()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a9f639b395906de4549c51deb0a0ad79c"></a>
@@ -384,9 +373,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        <a class="code" href="../../de/d89/class_c_bus.html">CBus</a> bus(P21, P22, P23, P24, END);  <span class="comment">// Collect P21~P24 in the CBus object.</span></div>
 <div class="line">        bus.output();                       <span class="comment">// Set the bus as output pins.</span></div>
 <div class="line">        bus = 0x05;                         <span class="comment">// Write 0x05 to bus.</span></div>
-</div><!-- fragment --> <div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;{ <a class="code" href="../../de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0">write</a>(val); }</div>
-<div class="ttc" id="class_c_bus_html_a4852669ff7ae53e68cf125aa49a87bd0"><div class="ttname"><a href="../../de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0">CBus::write</a></div><div class="ttdeci">virtual void write(uint32_t val)</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a55d1c493025b37e0f34801b8ced31068"></a>
@@ -411,9 +398,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for equal to... </p><dl class="section return"><dt>Returns</dt><dd>true if the bus==val, otherwise, failed. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;{ <span class="keywordflow">return</span> (<a class="code" href="../../de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1">read</a>()== val ? <span class="keyword">true</span> : <span class="keyword">false</span>); }</div>
-<div class="ttc" id="class_c_bus_html_ae5c9d649c6f6b22a93fb29e0152a57c1"><div class="ttname"><a href="../../de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1">CBus::read</a></div><div class="ttdeci">virtual uint32_t read()</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a12e4d076164971de589cbc5b2f6537e2"></a>
@@ -442,9 +427,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">        <a class="code" href="../../de/d89/class_c_bus.html">CBus</a> bus(P21, P22, P23, P24, END);  <span class="comment">// Collect P21~P24 in the CBus object.</span></div>
 <div class="line">        bus.output();                       <span class="comment">// Set the bus as output pins.</span></div>
 <div class="line">    bus[2] = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a>;                       <span class="comment">// Set P23 is LOW.</span></div>
-</div><!-- fragment --> <div class="fragment"><div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;{ <span class="keywordflow">return</span> <a class="code" href="../../de/d89/class_c_bus.html#a94da38619defc1c41c16c04c4c7991f8">pin</a>(index); }</div>
-<div class="ttc" id="class_c_bus_html_a94da38619defc1c41c16c04c4c7991f8"><div class="ttname"><a href="../../de/d89/class_c_bus.html#a94da38619defc1c41c16c04c4c7991f8">CBus::pin</a></div><div class="ttdeci">CPin &amp; pin(int index)</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a6c4770377cbd78099726f6cc626a4639"></a>
@@ -547,7 +530,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/d89/class_c_bus.html">CBus</a></li>
-    <li class="footer">Generated on Wed Oct 22 2014 15:20:39 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Oct 22 2014 16:57:25 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

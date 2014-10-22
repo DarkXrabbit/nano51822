@@ -15,6 +15,7 @@ var annotated =
     [ "CBus", "de/d89/class_c_bus.html", "de/d89/class_c_bus" ],
     [ "CDebug", "d4/d37/class_c_debug.html", "d4/d37/class_c_debug" ],
     [ "CEventBit", "dd/d60/class_c_event_bit.html", "dd/d60/class_c_event_bit" ],
+    [ "CKalman", "d7/d4b/class_c_kalman.html", "d7/d4b/class_c_kalman" ],
     [ "CList", "df/db6/class_c_list.html", "df/db6/class_c_list" ],
     [ "CListT", "da/d59/class_c_list_t.html", "da/d59/class_c_list_t" ],
     [ "CMailBox", "d8/d26/class_c_mail_box.html", "d8/d26/class_c_mail_box" ],

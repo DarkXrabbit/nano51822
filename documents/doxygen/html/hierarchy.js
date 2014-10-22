@@ -16,6 +16,7 @@ var hierarchy =
         ] ]
       ] ],
       [ "CEventBit", "dd/d60/class_c_event_bit.html", null ],
+      [ "CKalman", "d7/d4b/class_c_kalman.html", null ],
       [ "CList", "df/db6/class_c_list.html", [
         [ "CListT< CType >", "da/d59/class_c_list_t.html", null ]
       ] ],

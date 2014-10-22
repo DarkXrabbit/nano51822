@@ -191,24 +191,26 @@ public:
 	  */
 	 virtual int parseString(LPTSTR buf, size_t size, bool echo=false);
 
-	/// @cond
-	CStream();
-	virtual ~CStream();
+	 //
+	 //
+	 /// @cond
+	 CStream();
+	 virtual ~CStream();
 
-	CSemaphore *m_semESC;
-	virtual void onSend(bool fromISR) = PURE_VIRTUAL_FUNC;
+	 CSemaphore *m_semESC;
+	 virtual void onSend(bool fromISR) = PURE_VIRTUAL_FUNC;
 
 protected:
-	long parseInt(char skipChar, uint8_t base, bool echo);
-	float parseFloat(char skipChar, bool echo);
+	 long parseInt(char skipChar, uint8_t base, bool echo);
+	 float parseFloat(char skipChar, bool echo);
 
-	CSemaphore	m_semTx;
-	CSemaphore	m_semRx;
-	app_fifo_t	m_tx_fifo;
-	app_fifo_t	m_rx_fifo;
-	uint8_t		*m_p_tx_buf;
-	uint8_t		*m_p_rx_buf;
-	/// @endcond
+	 CSemaphore	m_semTx;
+	 CSemaphore	m_semRx;
+	 app_fifo_t	m_tx_fifo;
+	 app_fifo_t	m_rx_fifo;
+	 uint8_t	*m_p_tx_buf;
+	 uint8_t	*m_p_rx_buf;
+	 /// @endcond
 };
 
 #endif /* STREAM_H_ */

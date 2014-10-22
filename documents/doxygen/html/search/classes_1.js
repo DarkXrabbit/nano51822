@@ -4,6 +4,7 @@ var searchData=
   ['cbus',['CBus',['../de/d89/class_c_bus.html',1,'']]],
   ['cdebug',['CDebug',['../d4/d37/class_c_debug.html',1,'']]],
   ['ceventbit',['CEventBit',['../dd/d60/class_c_event_bit.html',1,'']]],
+  ['ckalman',['CKalman',['../d7/d4b/class_c_kalman.html',1,'']]],
   ['clist',['CList',['../df/db6/class_c_list.html',1,'']]],
   ['clistt',['CListT',['../da/d59/class_c_list_t.html',1,'']]],
   ['cmailbox',['CMailBox',['../d8/d26/class_c_mail_box.html',1,'']]],

@@ -4,6 +4,7 @@ var searchData=
   ['cdebug',['CDebug',['../d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e',1,'CDebug']]],
   ['ceventbit',['CEventBit',['../dd/d60/class_c_event_bit.html#afaccf4ea2315ce05229a3a0ae37ba6af',1,'CEventBit']]],
   ['chklength',['chkLength',['../df/d99/class_c_string.html#a5f5361665c7568d502d058992b14c016',1,'CString']]],
+  ['ckalman',['CKalman',['../d7/d4b/class_c_kalman.html#aa1485f8eb220b3609804c8852aebe2d2',1,'CKalman']]],
   ['clear',['clear',['../d6/d56/class_console.html#a61f9d57ebeecfd8553f02a84b4939e69',1,'Console::clear()'],['../d4/d76/class_c_r_t_c.html#a28de646d8702a88078865cf48545a82d',1,'CRTC::clear()'],['../d3/de1/class_c_storage.html#ada2ebb3aa35b76c0043b274465770027',1,'CStorage::clear()'],['../df/d99/class_c_string.html#a86bdac885b2d28689a62cbb6ae8b9ee4',1,'CString::clear()']]],
   ['clocksource',['clockSource',['../d4/d76/class_c_r_t_c.html#a8b60053a8046f5ff0d62c68f08067580',1,'CRTC']]],
   ['clone',['clone',['../df/d99/class_c_string.html#aeebb301ee8968688fd6ea8029a95ce9c',1,'CString']]],

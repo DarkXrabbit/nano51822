@@ -2,6 +2,7 @@ var searchData=
 [
   ['falling',['FALLING',['../db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924ad24712a6a30c1d431b927d1ba2f84b66',1,'gpio_int.h']]],
   ['feed',['feed',['../d3/d75/class_c_watchdog.html#a34f816a6e2a53dc92943e9c309244130',1,'CWatchdog']]],
+  ['filter',['filter',['../d7/d4b/class_c_kalman.html#aa0af19adeaee9c0bb1d43bc9f8db6bb4',1,'CKalman']]],
   ['find',['find',['../df/db6/class_c_list.html#ac10ff6ad96cb1a7aebb866d2a1cf62bf',1,'CList::find()'],['../df/d99/class_c_string.html#a34ca981fe4599b24ed4312ee95a7f008',1,'CString::find(LPCTSTR str, int start=0)'],['../df/d99/class_c_string.html#a225a9d464e22c27b750749426906c308',1,'CString::find(TCHAR ch, int start=0)']]],
   ['findic',['findIC',['../df/d99/class_c_string.html#a0d1d84239f8a01f8dd4e012fddc63cbe',1,'CString']]],
   ['flags',['flags',['../d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940',1,'bleAdvertising']]],

@@ -33,6 +33,12 @@ var group___miscellaneous =
       [ "read", "d6/d56/class_console.html#a10df5763117e36da9f029d1dfa9641be", null ],
       [ "write", "d6/d56/class_console.html#a3ff57fe349e1335039230e14b9fc0cb1", null ]
     ] ],
+    [ "CKalman", "d7/d4b/class_c_kalman.html", [
+      [ "CKalman", "d7/d4b/class_c_kalman.html#aa1485f8eb220b3609804c8852aebe2d2", null ],
+      [ "filter", "d7/d4b/class_c_kalman.html#aa0af19adeaee9c0bb1d43bc9f8db6bb4", null ],
+      [ "isThread", "d7/d4b/class_c_kalman.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d7/d4b/class_c_kalman.html#a18cf254bf2030ba75735238fc1a31f4d", null ]
+    ] ],
     [ "CList", "df/db6/class_c_list.html", [
       [ "addHead", "df/db6/class_c_list.html#af77b9f95976788ad6b74e825fad12e94", null ],
       [ "addTail", "df/db6/class_c_list.html#a81c34b9127ccce385b6699b9eaa799d1", null ],

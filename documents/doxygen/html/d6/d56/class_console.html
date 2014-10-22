@@ -302,8 +302,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Call the member function to get a character from the serial stream of console. </p><dl class="section return"><dt>Returns</dt><dd>the received character. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{ <span class="keywordflow">return</span> getc(); }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab28b81a0b1e462ec0df65ba0a573921f"></a>
@@ -402,10 +401,7 @@ Public Member Functions</h2></td></tr>
 <p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                   {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad4d21815c5cbc33e9015ba5babf5bf09"></a>
@@ -429,8 +425,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Call the member function to retrieve the input stream. </p><dl class="section return"><dt>Returns</dt><dd>a <a class="el" href="../../d4/d16/class_c_stream.html">CStream</a> object for input. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;{ <span class="keywordflow">return</span> m_input; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
@@ -455,10 +450,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
-<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                  {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="afc5355f4c4fee0a91c4ba5ae6647f07d"></a>
@@ -539,12 +531,7 @@ Public Member Functions</h2></td></tr>
 <p>A shorthand for write a integer value to console. </p><dl class="section return"><dt>Returns</dt><dd>*this.</dd></dl>
 <div class="fragment"><div class="line">Example:</div>
 <div class="line">        con &lt;&lt; <span class="charliteral">&#39;?&#39;</span> &lt;&lt; <span class="stringliteral">&quot;Whate is it this year? &quot;</span> &lt;&lt; 2012 &lt;&lt; endl;</div>
-</div><!-- fragment --> <div class="fragment"><div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                                  {</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>(val);</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="adaabaa6205705e13193e472a4cf7f194"></a>
@@ -569,12 +556,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for write a float value to console. </p><dl class="section return"><dt>Returns</dt><dd>*this. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                                    {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>((<span class="keywordtype">double</span>)val);</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ab765a1b1954e26b2cb725dc49c35fdeb"></a>
@@ -599,12 +581,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for write a double value to console. </p><dl class="section return"><dt>Returns</dt><dd>*this. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                                                     {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>(val);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a756e1e290f184491bf98dfaa1247fff7"></a>
@@ -629,12 +606,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for write a size_t value to console. </p><dl class="section return"><dt>Returns</dt><dd>*this; </dd></dl>
-<div class="fragment"><div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                                                     {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>((<span class="keywordtype">unsigned</span>)val);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a1da129a9f12eff89f82fc694bdc59231"></a>
@@ -659,12 +631,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for write a unsigned integer 16 bits value to console. </p><dl class="section return"><dt>Returns</dt><dd>*this. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                                                       {</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>((<span class="keywordtype">unsigned</span>)val);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="ad2d3cf94e3a31436681cc0839b760a75"></a>
@@ -688,12 +655,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="fragment"><div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                                       {</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>((<span class="keywordtype">unsigned</span>)val);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0b13c2318c5e62763b679c190223de54"></a>
@@ -718,12 +680,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>A shorthand for write a unsigned integer 8 bits value to console. </p><dl class="section return"><dt>Returns</dt><dd>*this. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                                      {</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <a class="code" href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">putv</a>((<span class="keywordtype">unsigned</span>)val);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    }</div>
-<div class="ttc" id="class_c_small_printf_html_a158dc1f45a1f19c8edd63e22544c30cc"><div class="ttname"><a href="../../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc">CSmallPrintf::putv</a></div><div class="ttdeci">int putv(int val)</div></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="aed5d1ad55ac69f1173f610d7c75793a6"></a>
@@ -830,8 +787,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Call the member function to retrieve the output stream. </p><dl class="section return"><dt>Returns</dt><dd>a CStrea object for output. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;{ <span class="keywordflow">return</span> m_output; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a6213c847987bc1cf18b980619ca49db7"></a>
@@ -930,8 +886,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>the same value, if put a character successful; </dd></dl>
-<div class="fragment"><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;{ <span class="keywordflow">return</span> putc(ch); }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a class="anchor" id="a0a229393c4d71b47cb68d30397d5de1e"></a>
@@ -1127,7 +1082,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d56/class_console.html">Console</a></li>
-    <li class="footer">Generated on Wed Oct 22 2014 15:20:39 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Oct 22 2014 16:57:25 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

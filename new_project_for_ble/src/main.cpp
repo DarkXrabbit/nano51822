@@ -34,8 +34,7 @@
 #define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
-#define APP_COMPANY_IDENTIFIER           	 0x004C                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
-
+#define APP_COMPANY_IDENTIFIER           	0x0059                  /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 //
 // Main Routine
 //
