@@ -2,6 +2,7 @@ var class_c_debug =
 [
     [ "CDebug", "d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e", null ],
     [ "available", "d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065", null ],
+    [ "count", "d4/d37/class_c_debug.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
     [ "enterCriticalSection", "d4/d37/class_c_debug.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
     [ "exitCriticalSection", "d4/d37/class_c_debug.html#aab3a51062666552690be49b8e8027161", null ],
     [ "getName", "d4/d37/class_c_debug.html#aa291909bc3ff7cc0decf46c885a7a725", null ],

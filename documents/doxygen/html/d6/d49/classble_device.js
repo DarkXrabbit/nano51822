@@ -1,6 +1,7 @@
 var classble_device =
 [
     [ "bleDevice", "d6/d49/classble_device.html#a33fc1e4995732c3c5f44351b412e70bd", null ],
+    [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
     [ "enable", "d6/d49/classble_device.html#a848c9777b4d9cf195f309853ddd5ae2e", null ],
     [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
     [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
@@ -8,6 +9,7 @@ var classble_device =
     [ "getPriority", "d6/d49/classble_device.html#ac30b0a1f51549a97b88771692319c0e4", null ],
     [ "getStackHighWaterMark", "d6/d49/classble_device.html#ac0227eda51725b795a461a768703f588", null ],
     [ "getState", "d6/d49/classble_device.html#a1e9cce461d8dfb3889cea24f1a703f6f", null ],
+    [ "information", "d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230", null ],
     [ "isAlive", "d6/d49/classble_device.html#a4a0f0727be4714cef1e24150a869d403", null ],
     [ "isConnected", "d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1", null ],
     [ "isSuspend", "d6/d49/classble_device.html#a51dbe9909ce528b4113d2cc27314e965", null ],
@@ -22,7 +24,7 @@ var classble_device =
     [ "resume", "d6/d49/classble_device.html#ac8c53aa8c145fc4ac70fa6d825b95742", null ],
     [ "resumeAll", "d6/d49/classble_device.html#a743d4325b7e7da494283f3292773ff77", null ],
     [ "run", "d6/d49/classble_device.html#a071c3d3b3c19a7bd6a01aca073a9b4d7", null ],
-    [ "sdVersion", "d6/d49/classble_device.html#a64679f3d5aa9b6ec419141935898872a", null ],
+    [ "sdVersion", "d6/d49/classble_device.html#a227676cfdadbc8bd4b3c55c5b82a5dd8", null ],
     [ "setPriority", "d6/d49/classble_device.html#a6b0703ae0cc085a0c0aaa55b6945575b", null ],
     [ "start", "d6/d49/classble_device.html#a3ebabcc071634508511ae2fc7b868ab7", null ],
     [ "start", "d6/d49/classble_device.html#aacf955d1852e74da1f989251955ee6ec", null ],

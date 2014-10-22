@@ -38,6 +38,7 @@ var group___r_t_o_s =
       [ "waiting", "d0/d06/class_c_semaphore.html#a2302ceb8f2f9e1bef3381f457589177d", null ]
     ] ],
     [ "CThread", "d0/d26/class_c_thread.html", [
+      [ "count", "d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
       [ "enterCriticalSection", "d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
       [ "exitCriticalSection", "d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161", null ],
       [ "getName", "d0/d26/class_c_thread.html#aa291909bc3ff7cc0decf46c885a7a725", null ],

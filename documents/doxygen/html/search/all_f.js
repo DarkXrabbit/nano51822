@@ -1,7 +1,7 @@
 var searchData=
 [
   ['sample_5flevel',['sample_level',['../da/d88/classsw_p_w_m.html#a2c03ab5505d4d43cc3985f4ede8a1087',1,'swPWM']]],
-  ['sdversion',['sdVersion',['../d6/d49/classble_device.html#a64679f3d5aa9b6ec419141935898872a',1,'bleDevice']]],
+  ['sdversion',['sdVersion',['../d6/d49/classble_device.html#a227676cfdadbc8bd4b3c55c5b82a5dd8',1,'bleDevice']]],
   ['second',['second',['../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd',1,'CTimer']]],
   ['send',['send',['../d5/ded/classble_service_battery.html#ab9d38650959d2167c66e3acbdaff4315',1,'bleServiceBattery::send()'],['../d0/dfc/classble_service_h_r_m.html#acc665d3430aa1483d764c2bb63a60c5f',1,'bleServiceHRM::send()'],['../d3/d27/classble_service_h_t_m.html#a8e4942f5407c238d34c341794fa85fc8',1,'bleServiceHTM::send()']]],
   ['sensor_5fcontact_5fdetected_5fupdate',['sensor_contact_detected_update',['../d0/dfc/classble_service_h_r_m.html#a4de4e07149f8c67134c0b4eaf7f69536',1,'bleServiceHRM']]],

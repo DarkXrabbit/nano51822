@@ -65,6 +65,8 @@ protected:
 	///@endcond
 };
 
+extern bleServiceBattery *gpBas;	///< the global point to the Battery Service object.
+
 /**\example /ble/ble_app_hrm_htm_bat/src/main.cpp
  * This is an example of how to use the bleServiceBattery class.
  * More details about this example.

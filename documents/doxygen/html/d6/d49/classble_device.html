@@ -142,9 +142,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a848c9777b4d9cf195f309853ddd5ae2e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a848c9777b4d9cf195f309853ddd5ae2e">enable</a> (uint32_t stack=68)</td></tr>
 <tr class="memdesc:a848c9777b4d9cf195f309853ddd5ae2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a848c9777b4d9cf195f309853ddd5ae2e">More...</a><br /></td></tr>
 <tr class="separator:a848c9777b4d9cf195f309853ddd5ae2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64679f3d5aa9b6ec419141935898872a"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a64679f3d5aa9b6ec419141935898872a">sdVersion</a> (uint8_t &amp;majorVer, uint16_t &amp;minorVer)</td></tr>
-<tr class="memdesc:a64679f3d5aa9b6ec419141935898872a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SoftDevice driver version information.  <a href="#a64679f3d5aa9b6ec419141935898872a">More...</a><br /></td></tr>
-<tr class="separator:a64679f3d5aa9b6ec419141935898872a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2587dc8be9c4e01e51b852c82ff07f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1">isConnected</a> ()</td></tr>
 <tr class="memdesc:ad2587dc8be9c4e01e51b852c82ff07f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check BLE connection.  <a href="#ad2587dc8be9c4e01e51b852c82ff07f1">More...</a><br /></td></tr>
 <tr class="separator:ad2587dc8be9c4e01e51b852c82ff07f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -194,6 +191,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a227676cfdadbc8bd4b3c55c5b82a5dd8">sdVersion</a> (uint8_t &amp;majorVer, uint16_t &amp;minorVer)</td></tr>
+<tr class="memdesc:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SoftDevice driver version information.  <a href="#a227676cfdadbc8bd4b3c55c5b82a5dd8">More...</a><br /></td></tr>
+<tr class="separator:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a80b4406fee2c94fb4112f7af91085230"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230">information</a> (LPCTSTR manufact_name, LPCTSTR model_number, LPCTSTR serial_number, LPCTSTR hw_rev=NULL, LPCTSTR fw_rev=NULL, LPCTSTR sw_rev=NULL, ble_dis_sys_id_t *p_sys_id=NULL, ble_dis_pnp_id_t *p_pnp_id=NULL)</td></tr>
+<tr class="memdesc:a80b4406fee2c94fb4112f7af91085230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for initializing the Device Information Service.  <a href="#a80b4406fee2c94fb4112f7af91085230">More...</a><br /></td></tr>
+<tr class="separator:a80b4406fee2c94fb4112f7af91085230"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a743d4325b7e7da494283f3292773ff77"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a743d4325b7e7da494283f3292773ff77">resumeAll</a> ()</td></tr>
 <tr class="separator:a743d4325b7e7da494283f3292773ff77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c09328581bd4e4a3e9e793f3376a92a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a">suspendAll</a> ()</td></tr>
@@ -202,6 +205,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aeb4cafe42d6cfc41294cf5dedcee8678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab3a51062666552690be49b8e8027161"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161">exitCriticalSection</a> ()</td></tr>
 <tr class="separator:aab3a51062666552690be49b8e8027161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb4293936653ccb14dfdfbd17bed88d0"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0">count</a> ()</td></tr>
+<tr class="memdesc:abb4293936653ccb14dfdfbd17bed88d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the number of tasks in processor.  <a href="#abb4293936653ccb14dfdfbd17bed88d0">More...</a><br /></td></tr>
+<tr class="separator:abb4293936653ccb14dfdfbd17bed88d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -251,6 +257,31 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="abb4293936653ccb14dfdfbd17bed88d0"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint16_t CThread::count </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>get the number of tasks in processor. </p>
+
+</div>
+</div>
 <a class="anchor" id="a848c9777b4d9cf195f309853ddd5ae2e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -418,6 +449,93 @@ Protected Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Retrieve the state of thread object (task) </p>
+
+</div>
+</div>
+<a class="anchor" id="a80b4406fee2c94fb4112f7af91085230"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint32_t bleDevice::information </td>
+          <td>(</td>
+          <td class="paramtype">LPCTSTR&#160;</td>
+          <td class="paramname"><em>manufact_name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&#160;</td>
+          <td class="paramname"><em>model_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&#160;</td>
+          <td class="paramname"><em>serial_number</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&#160;</td>
+          <td class="paramname"><em>hw_rev</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&#160;</td>
+          <td class="paramname"><em>fw_rev</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">LPCTSTR&#160;</td>
+          <td class="paramname"><em>sw_rev</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ble_dis_sys_id_t *&#160;</td>
+          <td class="paramname"><em>p_sys_id</em> = <code>NULL</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ble_dis_pnp_id_t *&#160;</td>
+          <td class="paramname"><em>p_pnp_id</em> = <code>NULL</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function for initializing the Device Information Service. </p>
+<p>This call allows the application to initialize the device information service. It adds the DIS service and DIS characteristics to the database, using the initial values supplied through the p_dis_init parameter. Characteristics which are not to be added, shall be set to NULL in p_dis_init.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">manufact_name</td><td>Manufacturer Name String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">model_number</td><td>Model Number String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">serial_number</td><td>Serial Number String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">hw_rev</td><td>Hardware Reversion String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fw_rev</td><td>Firmware Reversion String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">sw_rev</td><td>Software Reversion String. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_sys_id</td><td>Point to the ble_dis_sys_id_t. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_pnp_id</td><td>Point to the ble_dis_pnp_id_t.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS on successful initialization of service. </dd></dl>
 
 </div>
 </div>
@@ -824,12 +942,15 @@ Protected Member Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a64679f3d5aa9b6ec419141935898872a"></a>
+<a class="anchor" id="a227676cfdadbc8bd4b3c55c5b82a5dd8"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t bleDevice::sdVersion </td>
+          <td class="memname">static uint32_t bleDevice::sdVersion </td>
           <td>(</td>
           <td class="paramtype">uint8_t &amp;&#160;</td>
           <td class="paramname"><em>majorVer</em>, </td>
@@ -846,6 +967,11 @@ Protected Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get SoftDevice driver version information. </p>
@@ -1099,7 +1225,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Mon Oct 20 2014 16:39:01 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Oct 22 2014 15:20:39 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

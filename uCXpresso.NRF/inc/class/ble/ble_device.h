@@ -12,6 +12,8 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/8/1	v1.0.0	First Edition for nano51822						Jason
+ 2014/10/22 v1.0.1	Add information() member to provide "Device		Jason
+ 	 	 	 	 	Information Service".
  ===============================================================================
  */
 
@@ -27,6 +29,7 @@
 #include <class/ble/ble_advertising.h>
 #include <class/ble/ble_device_manager.h>
 #include <class/ble/ble_gap.h>
+#include <class/ble/nrf51/ble_dis.h>
 
 /**@brief Possible lfclk oscillator sources.
  * @ingroup Enumerations
@@ -82,18 +85,6 @@ public:
 	 */
 	uint32_t enable(uint32_t stack=68);
 
-	/**
-	 * @brief Get SoftDevice driver version information.
-	 *
-	 * @param majorVer[out] Link Layer Version number for BT 4.1 spec is 7
-	 * @param minorVer[out] Link Layer Sub Version number, corresponds to the SoftDevice Firmware ID (FWID).
-	 *
-	 * @return @ref NRF_SUCCESS  Version information stored successfully.
-	 * @return @ref NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
-	 * @return @ref NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnection procedure).
-	 */
-	uint32_t sdVersion(uint8_t &majorVer, uint16_t &minorVer);
-
 	/**@brief Check BLE connection.
 	 *
 	 * @return true if ble is in connected, false otherwise.
@@ -124,6 +115,46 @@ public:
 	 * @param rssi A received signal strength indication.
 	 */
 	virtual void onRssiChanged(int8_t rssi);
+
+	/**
+	 * @brief Get SoftDevice driver version information.
+	 *
+	 * @param majorVer[out] Link Layer Version number for BT 4.1 spec is 7
+	 * @param minorVer[out] Link Layer Sub Version number, corresponds to the SoftDevice Firmware ID (FWID).
+	 *
+	 * @return @ref NRF_SUCCESS  Version information stored successfully.
+	 * @return @ref NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
+	 * @return @ref NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnection procedure).
+	 */
+	static uint32_t sdVersion(uint8_t &majorVer, uint16_t &minorVer);
+
+	/**
+	 * @brief Function for initializing the Device Information Service.
+	 *
+	 * @details This call allows the application to initialize the device information service.
+	 *          It adds the DIS service and DIS characteristics to the database, using the initial
+	 *          values supplied through the p_dis_init parameter. Characteristics which are not to be
+	 *          added, shall be set to NULL in p_dis_init.
+	 *
+	 * @param[in]   manufact_name	Manufacturer Name String.
+	 * @param[in]	model_number	Model Number String.
+	 * @param[in]	serial_number	Serial Number String.
+	 * @param[in]	hw_rev			Hardware Reversion String.
+	 * @param[in]	fw_rev			Firmware Reversion String.
+	 * @param[in]	sw_rev			Software Reversion String.
+	 * @param[in]	p_sys_id		Point to the ble_dis_sys_id_t.
+	 * @param[in]	p_pnp_id		Point to the ble_dis_pnp_id_t.
+	 *
+	 * @return      NRF_SUCCESS on successful initialization of service.
+	 */
+	static uint32_t information(LPCTSTR manufact_name,
+								LPCTSTR model_number,
+								LPCTSTR serial_number,
+								LPCTSTR hw_rev = NULL,
+								LPCTSTR fw_rev = NULL,
+								LPCTSTR sw_rev = NULL,
+								ble_dis_sys_id_t *p_sys_id=NULL,
+								ble_dis_pnp_id_t *p_pnp_id=NULL);
 
 	/**@brief A device manager member object.
 	 * @ref bleDeviceManager class.

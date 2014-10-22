@@ -77,6 +77,8 @@ protected:
 	///@endcond
 };
 
+extern bleServiceUART *gpNUS;	///< the global point to the Nordic UART Service object.
+
 /**\example /ble/ble_app_uart/src/main.cpp
  * This is an example of how to use the bleServiceUART class.
  * More details about this example.

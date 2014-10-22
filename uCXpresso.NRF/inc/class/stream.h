@@ -25,7 +25,7 @@
  * \class CStream stream.h "class/stream.h"
  * \ingroup Peripherals
  */
-class CStream: public CObject {
+class CStream: virtual public CObject {
 public:
 	CStream(size_t tx_fifo_size, size_t rx_fifo_size);
 

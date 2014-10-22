@@ -1,6 +1,7 @@
 var searchData=
 [
   ['i2cdev',['I2Cdev',['../d0/d5e/class_i2_cdev.html#ad7af9d60db60000f70dd5b0b112cba83',1,'I2Cdev']]],
+  ['information',['information',['../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230',1,'bleDevice']]],
   ['init',['init',['../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154',1,'CAdc']]],
   ['input',['input',['../de/d89/class_c_bus.html#ad45a06493f12aef3d096ac3ed86a3b8f',1,'CBus::input()'],['../d7/db9/class_c_pin.html#a21aa5b473c1a3637a487c7724f8b9fcf',1,'CPin::input()']]],
   ['insertafter',['insertAfter',['../df/db6/class_c_list.html#ac30a5a1368438fbcf58b13bf4f2f44ad',1,'CList']]],

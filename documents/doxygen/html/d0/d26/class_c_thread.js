@@ -1,5 +1,6 @@
 var class_c_thread =
 [
+    [ "count", "d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
     [ "enterCriticalSection", "d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
     [ "exitCriticalSection", "d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161", null ],
     [ "getName", "d0/d26/class_c_thread.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
