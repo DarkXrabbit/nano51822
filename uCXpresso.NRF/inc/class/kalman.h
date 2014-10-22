@@ -19,10 +19,11 @@
 
 #include <class/object.h>
 
-/**CKalman class provides Kalman Filter.
- * \class CKalman kalman.h "class/kalman.h"
- * \note The CKalman class can be used in the analog signal measurement.
- * \ingroup Miscellaneous
+/**
+ * @brief CKalman class provides Kalman Filter.
+ * @class CKalman kalman.h "class/kalman.h"
+ * @note The CKalman class can be used for the analog signal measurement.
+ * @ingroup Miscellaneous
  */
 class CKalman: public CObject {
 public:
