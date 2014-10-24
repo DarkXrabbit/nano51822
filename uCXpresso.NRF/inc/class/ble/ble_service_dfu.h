@@ -64,7 +64,7 @@ protected:
 	virtual inline uint16_t uuid() { return 0;}
 	xHandle m_handle;
 	virtual void on_ble_event(xHandle evt);
-	///@cond
+	///@endcond
 };
 
 extern bleServiceDFU *gpDFU;

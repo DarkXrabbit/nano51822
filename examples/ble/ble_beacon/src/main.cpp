@@ -83,13 +83,8 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
 //
 // Board LED define
 //
-#define LILYPAD		1
-
-#if LILYPAD
-#define LED0_PIN		07
-#define LED1_PIN		20
-#endif
-
+#define BOARD_LILYPAD
+#include <config/board.h>
 
 static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
 
@@ -132,11 +127,8 @@ int main(void)
 	//
 	// blink LED
 	//
-	CPin led(LED0_PIN);
+	CPin led(LED_PIN_0);
 	led.output();
-
-	CPin btn(17);
-	btn.input();
 
 	//
     // Enter main loop.

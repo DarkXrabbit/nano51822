@@ -25,7 +25,6 @@ var annotated =
     [ "Console", "d6/d56/class_console.html", "d6/d56/class_console" ],
     [ "CPeripheral", "d9/db6/class_c_peripheral.html", "d9/db6/class_c_peripheral" ],
     [ "CPin", "d7/db9/class_c_pin.html", "d7/db9/class_c_pin" ],
-    [ "CRTC", "d4/d76/class_c_r_t_c.html", "d4/d76/class_c_r_t_c" ],
     [ "CSemaphore", "d0/d06/class_c_semaphore.html", "d0/d06/class_c_semaphore" ],
     [ "CSerial", "d8/d1d/class_c_serial.html", "d8/d1d/class_c_serial" ],
     [ "CShell", "de/dba/class_c_shell.html", "de/dba/class_c_shell" ],
@@ -36,11 +35,12 @@ var annotated =
     [ "CThread", "d0/d26/class_c_thread.html", "d0/d26/class_c_thread" ],
     [ "CTimeout", "d5/d5b/class_c_timeout.html", "d5/d5b/class_c_timeout" ],
     [ "CTimer", "db/de1/class_c_timer.html", "db/de1/class_c_timer" ],
-    [ "CWatchdog", "d3/d75/class_c_watchdog.html", "d3/d75/class_c_watchdog" ],
     [ "gpioINT", "d7/d3a/classgpio_i_n_t.html", "d7/d3a/classgpio_i_n_t" ],
     [ "I2Cdev", "d0/d5e/class_i2_cdev.html", "d0/d5e/class_i2_cdev" ],
+    [ "rtcMS", "d7/d2d/classrtc_m_s.html", "d7/d2d/classrtc_m_s" ],
     [ "spiMaster", "da/dc3/classspi_master.html", "da/dc3/classspi_master" ],
     [ "spiSlave", "da/d31/classspi_slave.html", "da/d31/classspi_slave" ],
     [ "swPWM", "da/d88/classsw_p_w_m.html", "da/d88/classsw_p_w_m" ],
-    [ "twiMaster", "d9/da7/classtwi_master.html", "d9/da7/classtwi_master" ]
+    [ "twiMaster", "d9/da7/classtwi_master.html", "d9/da7/classtwi_master" ],
+    [ "WDT", "dc/dd4/class_w_d_t.html", "dc/dd4/class_w_d_t" ]
 ];

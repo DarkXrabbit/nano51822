@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('dd/d5c/_2peripherals_2watchdog_2src_2m
 <div class="title">/peripherals/watchdog/src/main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>This is an example of how to use the <a class="el" href="../../d3/d75/class_c_watchdog.html">CWatchdog</a> class. More details about this example.</p>
+<p>This is an example of how to use the <a class="el" href="../../dc/dd4/class_w_d_t.html" title="Watch-Dog static class. ">WDT</a> class. More details about this example.</p>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment"> Name        : main.c</span></div>
@@ -146,14 +146,13 @@ $(document).ready(function(){initNavTree('dd/d5c/_2peripherals_2watchdog_2src_2m
 <div class="line">    dbg.<a name="a3"></a><a class="code" href="../../d4/d37/class_c_debug.html#a7249e40313ecf3df1b2094c58d78eb2d">start</a>();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="../../d3/d75/class_c_watchdog.html">CWatchdog</a> wdt;</div>
-<div class="line">    wdt.<a name="a5"></a><a class="code" href="../../d3/d75/class_c_watchdog.html#ab715b93af58f7b62513e9803f63e6118">timeout</a>(5);     <span class="comment">// set watchdog timeout in 5 seconds</span></div>
-<div class="line">    wdt.<a name="a6"></a><a class="code" href="../../d3/d75/class_c_watchdog.html#a1ed0ad5681a6c52b5455d188e82229c5">enable</a>();</div>
+<div class="line">    <a name="a4"></a><a class="code" href="../../dc/dd4/class_w_d_t.html#a7f0293dcc057fa36c55eaba80e56bcaf">WDT::timeout</a>(5);        <span class="comment">// set watchdog timeout in 5 seconds</span></div>
+<div class="line">    <a name="a5"></a><a class="code" href="../../dc/dd4/class_w_d_t.html#a24e0267b64ea84c69a2a4f0fff9ae996">WDT::enable</a>();</div>
 <div class="line"></div>
-<div class="line">    <a name="_a7"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(18);</div>
-<div class="line">    led.<a name="a8"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();</div>
+<div class="line">    <a name="_a6"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(18);</div>
+<div class="line">    led.<a name="a7"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();</div>
 <div class="line"></div>
-<div class="line">    <a name="_a9"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> tm;</div>
+<div class="line">    <a name="_a8"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> tm;</div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -161,15 +160,15 @@ $(document).ready(function(){initNavTree('dd/d5c/_2peripherals_2watchdog_2src_2m
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// LED blink demo</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( tm.<a name="a10"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(500) ) {</div>
-<div class="line">            tm.<a name="a11"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
-<div class="line">            led.<a name="a12"></a><a class="code" href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">invert</a>();</div>
+<div class="line">        <span class="keywordflow">if</span> ( tm.<a name="a9"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(500) ) {</div>
+<div class="line">            tm.<a name="a10"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
+<div class="line">            led.<a name="a11"></a><a class="code" href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">invert</a>();</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Watchdog feed</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <a name="a13"></a><a class="code" href="../../d3/d75/class_c_watchdog.html#a34f816a6e2a53dc92943e9c309244130">CWatchdog::feed</a>();  <span class="comment">// if mask, will cause the system reset.</span></div>
+<div class="line">        <a name="a12"></a><a class="code" href="../../dc/dd4/class_w_d_t.html#abdc13243bc032fa1ffab53921cac0b77">WDT::feed</a>();    <span class="comment">// if mask, will cause the system reset.</span></div>
 <div class="line"></div>
 <div class="line">    }</div>
 <div class="line">}</div>
@@ -178,7 +177,7 @@ $(document).ready(function(){initNavTree('dd/d5c/_2peripherals_2watchdog_2src_2m
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 24 2014 14:24:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Oct 24 2014 23:44:34 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

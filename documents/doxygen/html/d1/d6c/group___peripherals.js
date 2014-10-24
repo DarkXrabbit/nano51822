@@ -96,6 +96,18 @@ var group___peripherals =
       [ "toggle", "d7/db9/class_c_pin.html#a2000134208f704f1bf79082f518ef764", null ],
       [ "write", "d7/db9/class_c_pin.html#a1fc3486f4afea4de56ae677c20600551", null ]
     ] ],
+    [ "rtcMS", "d7/d2d/classrtc_m_s.html", [
+      [ "rtcMS", "d7/d2d/classrtc_m_s.html#aaed459cdb739296e35ea9e58554c2438", null ],
+      [ "clockSource", "d7/d2d/classrtc_m_s.html#a10870b55c07d8feef7b698e740b01921", null ],
+      [ "disable", "d7/d2d/classrtc_m_s.html#a1a1f86208d66d249e1674a9538c88836", null ],
+      [ "enable", "d7/d2d/classrtc_m_s.html#ab810eb0a523221346d3ca19343288ef4", null ],
+      [ "interval", "d7/d2d/classrtc_m_s.html#ad9e2cb9eba09150de411e50eb99a2ff7", null ],
+      [ "isThread", "d7/d2d/classrtc_m_s.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d7/d2d/classrtc_m_s.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "reset", "d7/d2d/classrtc_m_s.html#a8820f80d0f7efe873042d3fafdee12c1", null ],
+      [ "tick_count", "d7/d2d/classrtc_m_s.html#addd33a68e405540424652948c9ec1454", null ],
+      [ "wait", "d7/d2d/classrtc_m_s.html#a4eb0898bf1d33286699761cfc56b75d1", null ]
+    ] ],
     [ "CSerial", "d8/d1d/class_c_serial.html", [
       [ "UAET_BAUD_RATE_T", "d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634", [
         [ "UART_BAUDRATE_2400", "d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a606fdfca8bb82fd3dc74c15bd30f89cd", null ],
@@ -221,5 +233,14 @@ var group___peripherals =
       [ "onTimer", "db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e", null ],
       [ "second", "db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd", null ],
       [ "wait", "db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b", null ]
+    ] ],
+    [ "WDT", "dc/dd4/class_w_d_t.html", [
+      [ "disable", "dc/dd4/class_w_d_t.html#a7fb55c4b7a7a4a5b525983b3f0ee0eed", null ],
+      [ "enable", "dc/dd4/class_w_d_t.html#a24e0267b64ea84c69a2a4f0fff9ae996", null ],
+      [ "feed", "dc/dd4/class_w_d_t.html#abdc13243bc032fa1ffab53921cac0b77", null ],
+      [ "isThread", "dc/dd4/class_w_d_t.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "dc/dd4/class_w_d_t.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "running", "dc/dd4/class_w_d_t.html#a4758e66d9463ac55d6cb50d329b2ad6a", null ],
+      [ "timeout", "dc/dd4/class_w_d_t.html#a7f0293dcc057fa36c55eaba80e56bcaf", null ]
     ] ]
 ];

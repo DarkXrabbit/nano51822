@@ -202,6 +202,12 @@ Enumerations</h2></td></tr>
 <a class="el" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a> = HIGH
  }</td></tr>
 <tr class="separator:ga6f24594071a026b31238ab8cb80d6a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf361c072d6c657eb72cf1946a6d7c7cc"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gaf361c072d6c657eb72cf1946a6d7c7cc">rtc_source_t</a> { <a class="el" href="../../db/dff/group___enumerations.html#ggaf361c072d6c657eb72cf1946a6d7c7cca2b7f3ee52acca41b4278935f06046c70">LF_INTERNAL</a> = 0, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggaf361c072d6c657eb72cf1946a6d7c7cca5bbb8dba7a4147e5d9a3f378d2169981">LF_EXTERNAL</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggaf361c072d6c657eb72cf1946a6d7c7ccaf0e30bf1a70b6e2f2c63580af5d9a755">LF_SYNTH</a>
+ }</td></tr>
+<tr class="memdesc:gaf361c072d6c657eb72cf1946a6d7c7cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">LF Clock source.  <a href="../../db/dff/group___enumerations.html#gaf361c072d6c657eb72cf1946a6d7c7cc">More...</a><br /></td></tr>
+<tr class="separator:gaf361c072d6c657eb72cf1946a6d7c7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga610be6d45973f3f7da6299e97b99f3c2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga610be6d45973f3f7da6299e97b99f3c2">BIT_ORDER_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2a89da3ebae748913c4ea84ed340c20aec">MSB_FIRST</a> = 0, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2aa7a58f44a10c5b3ff637d315043f1767">LSB_FIRST</a> = 1
  }</td></tr>
@@ -605,6 +611,33 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gaf361c072d6c657eb72cf1946a6d7c7cc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gaf361c072d6c657eb72cf1946a6d7c7cc">rtc_source_t</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;rtc.h&gt;</code></p>
+
+<p>LF Clock source. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaf361c072d6c657eb72cf1946a6d7c7cca2b7f3ee52acca41b4278935f06046c70"></a>LF_INTERNAL&#160;</td><td class="fielddoc">
+<p>Internal 32KiHz RC oscillator. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaf361c072d6c657eb72cf1946a6d7c7cca5bbb8dba7a4147e5d9a3f378d2169981"></a>LF_EXTERNAL&#160;</td><td class="fielddoc">
+<p>External 32KiHz crystal. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaf361c072d6c657eb72cf1946a6d7c7ccaf0e30bf1a70b6e2f2c63580af5d9a755"></a>LF_SYNTH&#160;</td><td class="fielddoc">
+<p>Internal 32KiHz synthesizer from HFCLK system clock. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="ga2d645fa61295e3fd670effeb557d117d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -728,7 +761,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 24 2014 14:24:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Oct 24 2014 23:44:34 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

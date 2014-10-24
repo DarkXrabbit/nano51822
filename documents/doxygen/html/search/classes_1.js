@@ -13,7 +13,6 @@ var searchData=
   ['console',['Console',['../d6/d56/class_console.html',1,'']]],
   ['cperipheral',['CPeripheral',['../d9/db6/class_c_peripheral.html',1,'']]],
   ['cpin',['CPin',['../d7/db9/class_c_pin.html',1,'']]],
-  ['crtc',['CRTC',['../d4/d76/class_c_r_t_c.html',1,'']]],
   ['csemaphore',['CSemaphore',['../d0/d06/class_c_semaphore.html',1,'']]],
   ['cserial',['CSerial',['../d8/d1d/class_c_serial.html',1,'']]],
   ['cshell',['CShell',['../de/dba/class_c_shell.html',1,'']]],
@@ -23,6 +22,5 @@ var searchData=
   ['cstring',['CString',['../df/d99/class_c_string.html',1,'']]],
   ['cthread',['CThread',['../d0/d26/class_c_thread.html',1,'']]],
   ['ctimeout',['CTimeout',['../d5/d5b/class_c_timeout.html',1,'']]],
-  ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'']]],
-  ['cwatchdog',['CWatchdog',['../d3/d75/class_c_watchdog.html',1,'']]]
+  ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'']]]
 ];

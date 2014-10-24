@@ -29,17 +29,17 @@ var hierarchy =
         [ "CPin", "d7/db9/class_c_pin.html", [
           [ "gpioINT", "d7/d3a/classgpio_i_n_t.html", null ]
         ] ],
-        [ "CRTC", "d4/d76/class_c_r_t_c.html", null ],
         [ "CStorage", "d3/de1/class_c_storage.html", null ],
         [ "CTimer", "db/de1/class_c_timer.html", [
           [ "swPWM", "da/d88/classsw_p_w_m.html", null ]
         ] ],
-        [ "CWatchdog", "d3/d75/class_c_watchdog.html", null ],
+        [ "rtcMS", "d7/d2d/classrtc_m_s.html", null ],
         [ "spiMaster", "da/dc3/classspi_master.html", null ],
         [ "spiSlave", "da/d31/classspi_slave.html", null ],
         [ "twiMaster", "d9/da7/classtwi_master.html", [
           [ "I2Cdev", "d0/d5e/class_i2_cdev.html", null ]
-        ] ]
+        ] ],
+        [ "WDT", "dc/dd4/class_w_d_t.html", null ]
       ] ],
       [ "CSemaphore", "d0/d06/class_c_semaphore.html", null ],
       [ "CSmallPrintf", "de/db4/class_c_small_printf.html", [

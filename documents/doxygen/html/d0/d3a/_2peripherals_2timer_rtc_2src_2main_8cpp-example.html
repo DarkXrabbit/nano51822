@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d0/d3a/_2peripherals_2timer_rtc_2src_2
 <div class="title">/peripherals/timer_rtc/src/main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>This is an example of how to use the <a class="el" href="../../d4/d76/class_c_r_t_c.html">CRTC</a> class. More details about this example.</p>
+<p>This is an example of how to use the <a class="el" href="../../db/de1/class_c_timer.html">CTimer</a> class. More details about this example.</p>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment"> Name        : main.c</span></div>
@@ -131,69 +131,41 @@ $(document).ready(function(){initNavTree('d0/d3a/_2peripherals_2timer_rtc_2src_2
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// TODO: insert other include files here</span></div>
+<div class="line"><span class="preprocessor">#define BOARD_PCA10001</span></div>
+<div class="line"><span class="preprocessor">#include &lt;config/board.h&gt;</span></div>
+<div class="line"></div>
 <div class="line"><span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/pin.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/timer.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;class/rtc.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/thread.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// TODO: insert other definitions and declarations here</span></div>
-<div class="line"><span class="keyword">class </span>tskTimer: <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> {</div>
-<div class="line"><span class="keyword">public</span>:</div>
-<div class="line">    tskTimer(<span class="keywordtype">float</span> sec, <span class="keywordtype">int</span> led_pin) {</div>
-<div class="line">        m_interval = sec;</div>
-<div class="line">        m_led_pin = led_pin;</div>
-<div class="line">    }</div>
 <div class="line"></div>
-<div class="line"><span class="keyword">protected</span>:</div>
-<div class="line">    <span class="keywordtype">float</span> m_interval;</div>
-<div class="line">    <span class="keywordtype">int</span>   m_led_pin;</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="comment">// Implement CThread::run() member function</span></div>
-<div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a1"></a><a class="code" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run</a>() {</div>
-<div class="line">        <a name="_a2"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(m_led_pin);    <span class="comment">// declare a LED object</span></div>
-<div class="line">        led.<a name="a3"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();           <span class="comment">// set the LED as an output pin</span></div>
-<div class="line"></div>
-<div class="line">        <a name="_a4"></a><a class="code" href="../../db/de1/class_c_timer.html">CTimer</a> t;               <span class="comment">// declare a Timer object</span></div>
-<div class="line">        t.<a name="a5"></a><a class="code" href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">second</a>(m_interval);   <span class="comment">// set Timer interval</span></div>
-<div class="line">        t.<a name="a6"></a><a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();             <span class="comment">// enable timer interrupt</span></div>
-<div class="line"></div>
-<div class="line">        <span class="keywordflow">while</span>(<a name="a7"></a><a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>()) {</div>
-<div class="line">            <span class="keywordflow">if</span> ( t.<a name="a8"></a><a class="code" href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">wait</a>() ) {   <span class="comment">// block and waiting a timer interrupt</span></div>
-<div class="line">                led.<a name="a9"></a><a class="code" href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">invert</a>();</div>
-<div class="line">            }</div>
-<div class="line">        }</div>
-<div class="line">    }</div>
-<div class="line">};</div>
-<div class="line"></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// main routine</span></div>
+<div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
 <div class="line"><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line">    <a name="_a10"></a><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> ser;        <span class="comment">// declare a UART object</span></div>
-<div class="line">    ser.<a name="a11"></a><a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>();</div>
-<div class="line">    <a name="_a12"></a><a class="code" href="../../d4/d37/class_c_debug.html">CDebug</a> dbg(ser);    <span class="comment">// Debug stream use the UART object</span></div>
-<div class="line">    dbg.start();</div>
+<div class="line">    <a name="_a0"></a><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> ser;        <span class="comment">// declare a UART object</span></div>
+<div class="line">    ser.<a name="a1"></a><a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>();</div>
+<div class="line">    <a name="_a2"></a><a class="code" href="../../d4/d37/class_c_debug.html">CDebug</a> dbg(ser);    <span class="comment">// Debug stream use the UART object</span></div>
+<div class="line">    dbg.<a name="a3"></a><a class="code" href="../../d4/d37/class_c_debug.html#a7249e40313ecf3df1b2094c58d78eb2d">start</a>();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
-<div class="line">    tskTimer t1(0.1, 18);           <span class="comment">// set timer interval 0.1 second with P0.18 led</span></div>
-<div class="line">    t1.start(<span class="stringliteral">&quot;Timer1&quot;</span>, 56, <a name="a13"></a><a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b">PRI_HIGH</a>);</div>
+<div class="line">    <a name="_a4"></a><a class="code" href="../../db/de1/class_c_timer.html">CTimer</a> t;               <span class="comment">// declare a Timer object</span></div>
+<div class="line">    t.<a name="a5"></a><a class="code" href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">second</a>(0.1);          <span class="comment">// set Timer interval = 0.1 sec = 100ms</span></div>
+<div class="line">    t.<a name="a6"></a><a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();             <span class="comment">// enable timer interrupt</span></div>
 <div class="line"></div>
-<div class="line"><span class="comment">//  CRTC::clockSource(LF_EXTERNAL); // set RTC clock source from External crystal.</span></div>
-<div class="line">    <a name="_a14"></a><a class="code" href="../../d4/d76/class_c_r_t_c.html">CRTC</a> rtc;                       <span class="comment">// declare a RTC object</span></div>
-<div class="line">    rtc.<a name="a15"></a><a class="code" href="../../d4/d76/class_c_r_t_c.html#aa84bd8d6050463c1edf0d9c9bd7c2b03">interval</a>(1.0);              <span class="comment">// set RTC interval 1 second</span></div>
-<div class="line">    rtc.<a name="a16"></a><a class="code" href="../../d4/d76/class_c_r_t_c.html#a0b84dfbaed75f4bbd945d39b67c0527f">enable</a>();                   <span class="comment">// enable RTC interrupt</span></div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led1(19);                  <span class="comment">// declare a LED on P0.19</span></div>
-<div class="line">    led1.output();                  <span class="comment">// set the LED as an output pin</span></div>
+<div class="line">    <a name="_a7"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led1(LED_PIN_0);   <span class="comment">// declare a LED on P0.19</span></div>
+<div class="line">    led1.<a name="a8"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();          <span class="comment">// set the LED as an output pin</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="keywordflow">while</span>(1) {</div>
 <div class="line"></div>
-<div class="line">        <span class="keywordflow">if</span> ( rtc.<a name="a17"></a><a class="code" href="../../d4/d76/class_c_r_t_c.html#a06867ebe2924f73f538ee623a11a8c36">wait</a>() ) {         <span class="comment">// block and waiting for RTC interrupt</span></div>
-<div class="line">            led1.invert();</div>
+<div class="line">        <span class="keywordflow">if</span> ( t.<a name="a9"></a><a class="code" href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">wait</a>() ) {           <span class="comment">// block and waiting for RTC interrupt</span></div>
+<div class="line">            led1.<a name="a10"></a><a class="code" href="../../d7/db9/class_c_pin.html#a2000134208f704f1bf79082f518ef764">toggle</a>();</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
@@ -202,7 +174,7 @@ $(document).ready(function(){initNavTree('d0/d3a/_2peripherals_2timer_rtc_2src_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 24 2014 14:24:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Oct 24 2014 23:44:34 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

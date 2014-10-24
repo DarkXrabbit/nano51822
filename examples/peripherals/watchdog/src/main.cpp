@@ -41,9 +41,8 @@ int main(void) {
 	dbg.start();
 #endif
 
-	CWatchdog wdt;
-	wdt.timeout(5);		// set watchdog timeout in 5 seconds
-	wdt.enable();
+	WDT::timeout(5);		// set watchdog timeout in 5 seconds
+	WDT::enable();
 
 	CPin led(18);
 	led.output();
@@ -64,7 +63,7 @@ int main(void) {
     	//
     	// Watchdog feed
     	//
-    	CWatchdog::feed();	// if mask, will cause the system reset.
+    	WDT::feed();	// if mask, will cause the system reset.
 
     }
 }

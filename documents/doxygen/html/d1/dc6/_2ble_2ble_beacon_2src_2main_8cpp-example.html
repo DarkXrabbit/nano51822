@@ -186,13 +186,8 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Board LED define</span></div>
 <div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#define LILYPAD     1</span></div>
-<div class="line"></div>
-<div class="line"><span class="preprocessor">#if LILYPAD</span></div>
-<div class="line"><span class="preprocessor">#define LED0_PIN        07</span></div>
-<div class="line"><span class="preprocessor">#define LED1_PIN        20</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
-<div class="line"></div>
+<div class="line"><span class="preprocessor">#define BOARD_LILYPAD</span></div>
+<div class="line"><span class="preprocessor">#include &lt;config/board.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keyword">static</span> <span class="keyword">const</span> uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;</div>
 <div class="line"></div>
@@ -235,11 +230,8 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// blink LED</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a7"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED0_PIN);</div>
+<div class="line">    <a name="_a7"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
 <div class="line">    led.output();</div>
-<div class="line"></div>
-<div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> btn(17);</div>
-<div class="line">    btn.input();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
@@ -256,7 +248,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 24 2014 14:24:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Oct 24 2014 23:44:34 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
