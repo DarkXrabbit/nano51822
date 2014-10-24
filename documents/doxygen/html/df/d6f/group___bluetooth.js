@@ -105,6 +105,16 @@ var group___bluetooth =
       [ "uuid", "de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b", null ],
       [ "uuid_type", "de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a", null ]
     ] ],
+    [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html", [
+      [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html#a179c0f771e6e016f0c8d87c6bb3052a9", null ],
+      [ "disable", "d6/d2e/classble_service_d_f_u.html#ad166ec542b74c006b7015c7d92288b0a", null ],
+      [ "enable", "d6/d2e/classble_service_d_f_u.html#ae2a099b8303c7e236581922141f36531", null ],
+      [ "isAvailable", "d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce", null ],
+      [ "isThread", "d6/d2e/classble_service_d_f_u.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d6/d2e/classble_service_d_f_u.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "uuid", "d6/d2e/classble_service_d_f_u.html#aa34f2ea80269787a549a98e13bddb44f", null ],
+      [ "uuid_type", "d6/d2e/classble_service_d_f_u.html#a0c6deb48531bb020934e9a1ffb4e351f", null ]
+    ] ],
     [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", [
       [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af", null ],
       [ "isAvailable", "d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3", null ],

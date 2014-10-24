@@ -11,6 +11,7 @@ var hierarchy =
           [ "bleServiceCustomer", "de/d51/classble_service_customer.html", [
             [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", null ]
           ] ],
+          [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html", null ],
           [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", null ],
           [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", null ]
         ] ]

@@ -40,6 +40,16 @@
 #define APP_COMPANY_IDENTIFIER				0x0059          		/**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
 //
+// Board LED define
+//
+#define LILYPAD		1
+
+#if LILYPAD
+#define LED0_PIN		07
+#define LED1_PIN		20
+#endif
+
+//
 // Main Routine
 //
 int main(void) {
@@ -85,8 +95,8 @@ int main(void) {
 	//
 	// LED
 	//
-	CPin led0(18);
-	CPin led1(19);
+	CPin led0(LED0_PIN);
+	CPin led1(LED1_PIN);
 	led0.output();
 	led1.output();
 

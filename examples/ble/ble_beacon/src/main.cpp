@@ -29,6 +29,7 @@
 
 // TODO: insert other include files here
 #include <class/ble/ble_device.h>
+#include <class/ble/ble_service_dfu.h>
 #include <class/pin.h>
 #include <class/timeout.h>
 
@@ -79,6 +80,16 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
                          // this implementation.
 };
 
+//
+// Board LED define
+//
+#define LILYPAD		1
+
+#if LILYPAD
+#define LED0_PIN		07
+#define LED1_PIN		20
+#endif
+
 
 static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
 
@@ -91,15 +102,23 @@ int main(void)
 	dbg.start();
 #endif
 
-	bleDevice ble;
+	bleDevice ble(NRF_LFCLKSRC_XTAL_20_PPM);
+//	bleDevice ble;
 	ble.enable();										// enable BLE stack
 
 	// GAP
 	ble.m_gap.settings("nano51822");					// set ble device name
 	ble.m_gap.tx_power(BLE_TX_4dBm);					// set TX radio power
 
-	// Advertising
-	ble.m_advertising.interval(100);					// set advertising interval = 100ms
+	//
+	// Add BLE DFU Service
+	//
+	bleServiceDFU dfu(ble);
+
+	//
+	// Advertisement
+	//
+	ble.m_advertising.interval(1000);					// set advertising interval = 100ms
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
 	ble.m_advertising.manuf_specific_data(m_beacon_info, APP_BEACON_INFO_LENGTH); // set beacon data
@@ -108,23 +127,24 @@ int main(void)
 
 	ble.m_advertising.start();							// start the iBeacon advertising
 
+	dfu.enable();
+
 	//
 	// blink LED
 	//
-	CPin led(18);
+	CPin led(LED0_PIN);
 	led.output();
+
+	CPin btn(17);
+	btn.input();
 
 	//
     // Enter main loop.
 	//
-	CTimeout tmLED;
     while(1) {
-    	//
-    	// led blink demo
-    	//
-    	if ( tmLED.isExpired(500) ) {
-    		tmLED.reset();
-    		led.invert();
-    	}
+		led = LED_ON;
+		sleep(10);
+		led = LED_OFF;
+    	sleep(3000);	// to save power
     }
 }
