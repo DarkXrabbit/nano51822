@@ -22,7 +22,7 @@ extern "C" {
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		0
 #define uCXpresso_VER_RC		1
-#define uCXpresso_VER_BUILD		"2014/10/24"
+#define uCXpresso_VER_BUILD		"2014/10/25"
 #define uCXpresso_VER_STR		"V1.0.0 rc1"
 
 //
@@ -163,6 +163,12 @@ extern void *tryMalloc(size_t size);	// try to malloc a memory with
 
 #define MEM_ALIGNMENT 4
 #define MEM_SIZE_ALIGN(size)    	(((size) + MEM_ALIGNMENT - 1) & ~(MEM_ALIGNMENT-1))    // align=4
+
+//
+// END OF PIN
+//
+#define END		0
+#define NONE	0
 
 //
 // Miscellaneous

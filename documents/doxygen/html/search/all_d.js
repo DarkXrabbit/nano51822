@@ -5,7 +5,7 @@ var searchData=
   ['parseint',['parseInt',['../de/dba/class_c_shell.html#a0d9864ff2c6b6a993caf83cf8b8c91bc',1,'CShell::parseInt()'],['../d4/d16/class_c_stream.html#af60d539c037589ae50b495fe213dda0b',1,'CStream::parseInt()'],['../d4/d37/class_c_debug.html#ae672458ef356e3c208f43397b2dd81d4',1,'CDebug::parseInt()']]],
   ['parsestring',['parseString',['../d4/d16/class_c_stream.html#aa314dfe6e8cf3c1da9ad6a6de2d2618e',1,'CStream']]],
   ['peek',['peek',['../d8/d26/class_c_mail_box.html#adc923a33209756bb2ed9e1838b12b68c',1,'CMailBox']]],
-  ['period',['period',['../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116',1,'swPWM']]],
+  ['period',['period',['../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d',1,'hwPWM::period()'],['../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116',1,'swPWM::period()']]],
   ['peripherals',['Peripherals',['../d1/d6c/group___peripherals.html',1,'']]],
   ['pin',['pin',['../d7/d0f/class_c_adc.html#a84c5a06a5d4d8ee65d75fcb16b1f2910',1,'CAdc::pin()'],['../de/d89/class_c_bus.html#a94da38619defc1c41c16c04c4c7991f8',1,'CBus::pin()'],['../d7/db9/class_c_pin.html#aff5e5fcd8b9a6de40bc5d262d21a2512',1,'CPin::pin()']]],
   ['pin_5finput_5fmode_5ft',['PIN_INPUT_MODE_T',['../db/dff/group___enumerations.html#ga9f8f32709b482732d6e377ff26da36ef',1,'pin.h']]],
@@ -22,5 +22,9 @@ var searchData=
   ['putc',['putc',['../d4/d37/class_c_debug.html#a24a118274a820299586fd7dcc83087cb',1,'CDebug']]],
   ['putchar',['putchar',['../d6/d56/class_console.html#a1427b8f1d904381c49188a1f8d8da083',1,'Console']]],
   ['putstr',['putstr',['../d6/d56/class_console.html#a0a229393c4d71b47cb68d30397d5de1e',1,'Console']]],
-  ['putv',['putv',['../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc',1,'CSmallPrintf::putv(int val)'],['../de/db4/class_c_small_printf.html#a4396d279d38afdf4fd71514760b6ace3',1,'CSmallPrintf::putv(unsigned val)'],['../de/db4/class_c_small_printf.html#a9158226f537c34067bf2e6a7c25d3f8b',1,'CSmallPrintf::putv(double val)']]]
+  ['putv',['putv',['../de/db4/class_c_small_printf.html#a158dc1f45a1f19c8edd63e22544c30cc',1,'CSmallPrintf::putv(int val)'],['../de/db4/class_c_small_printf.html#a4396d279d38afdf4fd71514760b6ace3',1,'CSmallPrintf::putv(unsigned val)'],['../de/db4/class_c_small_printf.html#a9158226f537c34067bf2e6a7c25d3f8b',1,'CSmallPrintf::putv(double val)']]],
+  ['pwm_5fch_5f1',['PWM_CH_1',['../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71',1,'hw_pwm.h']]],
+  ['pwm_5fch_5f2',['PWM_CH_2',['../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded',1,'hw_pwm.h']]],
+  ['pwm_5fch_5f3',['PWM_CH_3',['../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db',1,'hw_pwm.h']]],
+  ['pwm_5fch_5ft',['PWM_CH_T',['../db/dff/group___enumerations.html#ga8b06d2bf1a2f8d7cd5e4bd6e1191ce93',1,'hw_pwm.h']]]
 ];

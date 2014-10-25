@@ -22,5 +22,5 @@ var searchData=
   ['cstorage',['CStorage',['../d3/de1/class_c_storage.html#a58e55ad86905e5eb9b5c1495f062cc0a',1,'CStorage']]],
   ['cstream',['CStream',['../d4/d16/class_c_stream.html#a147900f253c57d3223ae1220e0336808',1,'CStream']]],
   ['cstring',['CString',['../df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7',1,'CString::CString(int size=DEF_STRBUF_SIZE)'],['../df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f',1,'CString::CString(const CString &amp;str)'],['../df/d99/class_c_string.html#a233297b331dbc4c342745d67ad166b97',1,'CString::CString(LPCTSTR str, int length=0)'],['../df/d99/class_c_string.html#a4cc7726fc9fbaa450876ffd98e3e6ff4',1,'CString::CString(LPTSTR buf)']]],
-  ['ctimer',['CTimer',['../db/de1/class_c_timer.html#a93e4d770fd09f5e1b984768620cc52bf',1,'CTimer']]]
+  ['ctimer',['CTimer',['../db/de1/class_c_timer.html#a49086118dc061c0aeceb5dbe3c9d22ca',1,'CTimer']]]
 ];

@@ -31,6 +31,7 @@ var hierarchy =
         ] ],
         [ "CStorage", "d3/de1/class_c_storage.html", null ],
         [ "CTimer", "db/de1/class_c_timer.html", [
+          [ "hwPWM", "da/deb/classhw_p_w_m.html", null ],
           [ "swPWM", "da/d88/classsw_p_w_m.html", null ]
         ] ],
         [ "rtcMS", "d7/d2d/classrtc_m_s.html", null ],

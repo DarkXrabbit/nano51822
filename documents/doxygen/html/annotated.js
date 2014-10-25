@@ -36,6 +36,7 @@ var annotated =
     [ "CTimeout", "d5/d5b/class_c_timeout.html", "d5/d5b/class_c_timeout" ],
     [ "CTimer", "db/de1/class_c_timer.html", "db/de1/class_c_timer" ],
     [ "gpioINT", "d7/d3a/classgpio_i_n_t.html", "d7/d3a/classgpio_i_n_t" ],
+    [ "hwPWM", "da/deb/classhw_p_w_m.html", "da/deb/classhw_p_w_m" ],
     [ "I2Cdev", "d0/d5e/class_i2_cdev.html", "d0/d5e/class_i2_cdev" ],
     [ "rtcMS", "d7/d2d/classrtc_m_s.html", "d7/d2d/classrtc_m_s" ],
     [ "spiMaster", "da/dc3/classspi_master.html", "da/dc3/classspi_master" ],

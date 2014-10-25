@@ -7,5 +7,5 @@ var searchData=
   ['flags',['flags',['../d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940',1,'bleAdvertising']]],
   ['flush',['flush',['../d8/d1d/class_c_serial.html#a68aecf6351423ae0e8791870c9e694bf',1,'CSerial::flush()'],['../d4/d16/class_c_stream.html#a5bd707b33627e01c2069b14bbf10694a',1,'CStream::flush()']]],
   ['freeextra',['freeExtra',['../df/d99/class_c_string.html#a9cb7e6111fd46dd4d16a111ffe4af39d',1,'CString']]],
-  ['frequency',['frequency',['../da/dc3/classspi_master.html#aad106e401d4a40251e2d3672cb06cdcb',1,'spiMaster']]]
+  ['frequency',['frequency',['../da/deb/classhw_p_w_m.html#ae3b6408c0bf4539bf3a21fbd7102f862',1,'hwPWM::frequency()'],['../da/dc3/classspi_master.html#aad106e401d4a40251e2d3672cb06cdcb',1,'spiMaster::frequency()']]]
 ];

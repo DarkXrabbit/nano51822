@@ -96,7 +96,7 @@ protected:
 	///@endcond
 };
 
-extern rtcMS *gpRTC;
+extern rtcMS *gp_RTC;
 
 /**\example /peripherals/rtc/src/main.cpp
  * This is an example of how to use the rtcMS class.

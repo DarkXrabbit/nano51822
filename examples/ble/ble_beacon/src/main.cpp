@@ -83,7 +83,7 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
 //
 // Board LED define
 //
-#define BOARD_LILYPAD
+#define BOARD_PCA10001
 #include <config/board.h>
 
 static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;

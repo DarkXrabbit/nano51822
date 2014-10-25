@@ -22,8 +22,6 @@
 #include <stdarg.h>
 #include "class/pin.h"
 
-#define END	0
-
 /**A digital input/output bus, used for reading/writing the state of a collection of pins.
  * \class CBus bus.h "class/bus.h"
  * \ingroup Peripherals

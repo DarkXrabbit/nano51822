@@ -48,7 +48,7 @@ int main(void) {
 #endif
 
 	CTimer t;				// declare a Timer object
-	t.second(0.1);			// set Timer interval = 0.1 sec = 100ms
+	t.second(0.2);			// set Timer interval = 0.1 sec = 100ms (Timer range in 16us~200ms)
 	t.enable();				// enable timer interrupt
 
 	CPin led1(LED_PIN_0);	// declare a LED on P0.19

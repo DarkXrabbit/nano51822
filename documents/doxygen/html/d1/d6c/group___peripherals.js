@@ -1,5 +1,19 @@
 var group___peripherals =
 [
+    [ "hwPWM", "da/deb/classhw_p_w_m.html", [
+      [ "hwPWM", "da/deb/classhw_p_w_m.html#ac27d934b15d4f9ffe01450d63c805f41", null ],
+      [ "disable", "da/deb/classhw_p_w_m.html#a2cf88a86b8cf746048d0e99ee277b96e", null ],
+      [ "dutycycle", "da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2", null ],
+      [ "enable", "da/deb/classhw_p_w_m.html#ac71a056d71982f1c4e64dc21ef4f7dfc", null ],
+      [ "frequency", "da/deb/classhw_p_w_m.html#ae3b6408c0bf4539bf3a21fbd7102f862", null ],
+      [ "isThread", "da/deb/classhw_p_w_m.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "da/deb/classhw_p_w_m.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "millisecond", "da/deb/classhw_p_w_m.html#a80328fea91b61d9ffb154671b5cae6df", null ],
+      [ "onTimer", "da/deb/classhw_p_w_m.html#a21ed9c9f77401f51e090cacce790448e", null ],
+      [ "period", "da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d", null ],
+      [ "second", "da/deb/classhw_p_w_m.html#aef5241e8a42850238e784951b93570dd", null ],
+      [ "wait", "da/deb/classhw_p_w_m.html#a025509145d6cd34e37f5e143606f638b", null ]
+    ] ],
     [ "CAdc", "d7/d0f/class_c_adc.html", [
       [ "disable", "d7/d0f/class_c_adc.html#a25185986d1818185fc6b1e6a0bd249e7", null ],
       [ "enable", "d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5", null ],
@@ -83,7 +97,7 @@ var group___peripherals =
       [ "input", "d7/db9/class_c_pin.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
       [ "invert", "d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5", null ],
       [ "isThread", "d7/db9/class_c_pin.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
-      [ "isValid", "d7/db9/class_c_pin.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "isValid", "d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7", null ],
       [ "operator PIN_LEVEL_T", "d7/db9/class_c_pin.html#a9037649d1e88192f5fde46b810c71299", null ],
       [ "operator!", "d7/db9/class_c_pin.html#a5ec08fca85a5f9472e82588a6a895b8f", null ],
       [ "operator!=", "d7/db9/class_c_pin.html#aae98a7d34d72ccc58b6d799f7ad2e12e", null ],
@@ -224,7 +238,7 @@ var group___peripherals =
       [ "wait", "da/d88/classsw_p_w_m.html#a025509145d6cd34e37f5e143606f638b", null ]
     ] ],
     [ "CTimer", "db/de1/class_c_timer.html", [
-      [ "CTimer", "db/de1/class_c_timer.html#a93e4d770fd09f5e1b984768620cc52bf", null ],
+      [ "CTimer", "db/de1/class_c_timer.html#a49086118dc061c0aeceb5dbe3c9d22ca", null ],
       [ "disable", "db/de1/class_c_timer.html#a2cf88a86b8cf746048d0e99ee277b96e", null ],
       [ "enable", "db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc", null ],
       [ "isThread", "db/de1/class_c_timer.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],

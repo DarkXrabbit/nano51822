@@ -99,7 +99,7 @@ protected:
  * for Debug Build
  *
  ******************************************************************************/
-#ifdef DEBUG
+
 extern CDebug *gpDBG;
 
 //
@@ -112,15 +112,5 @@ extern "C" void dbg_printf(LPCTSTR format, ...);
 // and press any key to continue.
 //
 extern "C" void ASSERT(bool condition, LPCTSTR format, ...);
-
-#else
-/******************************************************************************
- *
- * for Release Build
- *
- ******************************************************************************/
-#define dbg_printf(...)
-#define ASSERT(...)
-#endif
 
 #endif	// _CDEBUG_H

@@ -141,6 +141,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a02060b0c9bbf0f75dead7bef1c75ce6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a240de24c726724aeda90bfacf1d50cc5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5">invert</a> ()</td></tr>
 <tr class="separator:a240de24c726724aeda90bfacf1d50cc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22332dbadc930db9d796036b408d47f7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">isValid</a> ()</td></tr>
+<tr class="separator:a22332dbadc930db9d796036b408d47f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7d125bef83689d0f1db13b3f1acbd05e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a7d125bef83689d0f1db13b3f1acbd05e">operator=</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> val)</td></tr>
 <tr class="separator:a7d125bef83689d0f1db13b3f1acbd05e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01428eca1b98e2e194bd0848b3eb8904"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a01428eca1b98e2e194bd0848b3eb8904">operator=</a> (<a class="el" href="../../d7/db9/class_c_pin.html">CPin</a> &amp;<a class="el" href="../../d7/db9/class_c_pin.html#aff5e5fcd8b9a6de40bc5d262d21a2512">pin</a>)</td></tr>
@@ -159,12 +161,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2000134208f704f1bf79082f518ef764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
-<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Pin define class </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a24">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a16">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#_a7">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#_a20">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#_a8">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#_a6">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html#_a2">/peripherals/rtc/src/main.cpp</a>, <a class="el" href="../../d5/dae/_2peripherals_2spi_loop_test_2src_2main_8cpp-example.html#_a3">/peripherals/spi_loop_test/src/main.cpp</a>, <a class="el" href="../../d0/d3a/_2peripherals_2timer_rtc_2src_2main_8cpp-example.html#_a7">/peripherals/timer_rtc/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#_a2">/peripherals/uart_echo/src/main.cpp</a>, <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#_a6">/peripherals/watchdog/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#_a2">/rtos/blink/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a24">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a16">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#_a7">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#_a20">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#_a8">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#_a11">/peripherals/hw_pwm/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#_a6">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html#_a2">/peripherals/rtc/src/main.cpp</a>, <a class="el" href="../../d5/dae/_2peripherals_2spi_loop_test_2src_2main_8cpp-example.html#_a3">/peripherals/spi_loop_test/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#_a2">/peripherals/uart_echo/src/main.cpp</a>, <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#_a6">/peripherals/watchdog/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#_a2">/rtos/blink/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a18255266b80947630ee79324a6ce446b"></a>
 <div class="memitem">
@@ -292,7 +292,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
+<a class="anchor" id="a22332dbadc930db9d796036b408d47f7"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -300,7 +300,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool CObject::isValid </td>
+          <td class="memname">virtual bool CPin::isValid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -308,12 +308,14 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
+<p>Reimplemented from <a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">CObject</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
 
 </div>
 </div>
@@ -491,7 +493,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a25">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a17">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a21">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a9">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a7">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html#a3">/peripherals/rtc/src/main.cpp</a>, <a class="el" href="../../d0/d3a/_2peripherals_2timer_rtc_2src_2main_8cpp-example.html#a8">/peripherals/timer_rtc/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a3">/peripherals/uart_echo/src/main.cpp</a>, <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#a7">/peripherals/watchdog/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a3">/rtos/blink/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a25">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a17">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a21">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a9">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#a12">/peripherals/hw_pwm/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a7">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html#a3">/peripherals/rtc/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a3">/peripherals/uart_echo/src/main.cpp</a>, <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#a7">/peripherals/watchdog/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a3">/rtos/blink/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -563,7 +565,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a31">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a29">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a14">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html#a7">/peripherals/rtc/src/main.cpp</a>, <a class="el" href="../../d0/d3a/_2peripherals_2timer_rtc_2src_2main_8cpp-example.html#a10">/peripherals/timer_rtc/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a8">/peripherals/uart_echo/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a5">/rtos/blink/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a31">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a29">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a14">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#a16">/peripherals/hw_pwm/src/main.cpp</a>, <a class="el" href="../../d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html#a7">/peripherals/rtc/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a8">/peripherals/uart_echo/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a5">/rtos/blink/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -604,7 +606,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/db9/class_c_pin.html">CPin</a></li>
-    <li class="footer">Generated on Fri Oct 24 2014 23:44:35 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Oct 25 2014 18:50:28 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

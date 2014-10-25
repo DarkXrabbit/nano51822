@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : timer.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/10/6
+ Version     : v1.0.1
+ Date		 : 2014/10/24
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : Timer class
  ===============================================================================
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2012/10/6	v1.0.0	First Edition									Jason
+ 2014/10/24 v1.0.1	Add prescaler option in constructor.			Jason
  ===============================================================================
  */
 
@@ -21,21 +22,26 @@
 #include <class/peripheral.h>
 #include <class/semaphore.h>
 
-/**CTimer class
- * \class CTimer timer.h "class/timer.h
- * \ingroup Peripherals
+/**
+ * @brief A 16 bits core timer class
+ * @class CTimer timer.h "class/timer.h
+ * @ingroup Peripherals
  */
 class CTimer: public CPeripheral {
 public:
 
-	/**CTimer constructor
+	/**
+	 * @brief CTimer constructor
+	 *
+	 * @param prescaler	A 4-bit prescaler to source clock frequency (max value 9).
+	 * default Scaler 5 = 2us （Max timer period= 2us x 65536 = ~130ms)
+	 *
+	 * @note The timer frequency = 16MHz / (2^prescaler).
 	 */
-	CTimer();
-
+	CTimer(uint8_t prescaler=5);
 
 	/**Call the second to set the period time by second.
 	 * \param sec is floating value to indicate the time period (unit: second).
-	 * \note The timer can be defined in the range 4us to 200ms.
 	 */
 	virtual void second(float sec);
 
@@ -70,10 +76,14 @@ public:
 	virtual ~CTimer();
 protected:
 	CSemaphore	m_semIrq;
+	uint8_t		m_prescaler;
+	double		m_period;
 	///@endcond
 };
 
-/**\example /peripherals/timer_rtc/src/main.cpp
+extern CTimer *gp_Timer;	///< Globel point to the timer object.
+
+/**\example /peripherals/timer/src/main.cpp
  * This is an example of how to use the CTimer class.
  * More details about this example.
  */

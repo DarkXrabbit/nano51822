@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rtcms',['rtcMS',['../d7/d2d/classrtc_m_s.html',1,'']]]
+  ['i2cdev',['I2Cdev',['../d0/d5e/class_i2_cdev.html',1,'']]]
 ];

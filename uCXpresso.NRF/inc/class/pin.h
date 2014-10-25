@@ -115,6 +115,10 @@ public:
 	 */
 	virtual void invert();					// invert current pin output value (for output)
 
+	virtual inline bool isValid() {
+		return (m_pin!=NONE ? true : false);
+	}
+
 	// Shorthand operators
 	inline void operator =(PIN_LEVEL_T val) { this->write(val); }
 	inline void operator =(CPin &pin) { this->write(pin.read());}

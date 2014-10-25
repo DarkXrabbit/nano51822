@@ -23,10 +23,10 @@
 #include <class/list.h>
 #include <class/pin.h>
 
-#define PWM_RESOLUTION	(0.000064f)		///< PWM resolution = 64us.
+#define SW_PWM_RESOLUTION	(0.000064f)		///< PWM resolution = 64us.
 
 /**
- * @brief swPWM class
+ * @brief Sowftware PWM (slow)
  * @class swPWM sw_pwm.h "class/sw_pwm.h
  * @warning The swPWM will use the CTimer object resource to implement the PWM output.
  * @ingroup Peripherals

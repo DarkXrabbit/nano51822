@@ -32,5 +32,5 @@ var searchData=
   ['cstring',['CString',['../df/d99/class_c_string.html',1,'CString'],['../df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7',1,'CString::CString(int size=DEF_STRBUF_SIZE)'],['../df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f',1,'CString::CString(const CString &amp;str)'],['../df/d99/class_c_string.html#a233297b331dbc4c342745d67ad166b97',1,'CString::CString(LPCTSTR str, int length=0)'],['../df/d99/class_c_string.html#a4cc7726fc9fbaa450876ffd98e3e6ff4',1,'CString::CString(LPTSTR buf)']]],
   ['cthread',['CThread',['../d0/d26/class_c_thread.html',1,'']]],
   ['ctimeout',['CTimeout',['../d5/d5b/class_c_timeout.html',1,'']]],
-  ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'CTimer'],['../db/de1/class_c_timer.html#a93e4d770fd09f5e1b984768620cc52bf',1,'CTimer::CTimer()']]]
+  ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'CTimer'],['../db/de1/class_c_timer.html#a49086118dc061c0aeceb5dbe3c9d22ca',1,'CTimer::CTimer()']]]
 ];

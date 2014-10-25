@@ -1,8 +1,13 @@
 var searchData=
 [
-  ['unlock',['unlock',['../d3/d0d/class_c_mutex.html#aee0e6661ae4b790104a9a4205910d53d',1,'CMutex']]],
-  ['update',['update',['../d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688',1,'bleAdvertising::update()'],['../da/d88/classsw_p_w_m.html#a4cc413c4128483bd463f5530dbddea18',1,'swPWM::update()']]],
-  ['uridecode',['uriDecode',['../df/d99/class_c_string.html#aade923167835efe164b5e06fb192e176',1,'CString']]],
-  ['uuid',['uuid',['../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f',1,'bleService::uuid()'],['../d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9',1,'bleServiceBattery::uuid()'],['../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b',1,'bleServiceCustomer::uuid()'],['../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee',1,'bleServiceHRM::uuid()'],['../d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca',1,'bleServiceHTM::uuid()']]],
-  ['uuid_5ftype',['uuid_type',['../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62',1,'bleService::uuid_type()'],['../de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a',1,'bleServiceCustomer::uuid_type()'],['../d6/d2e/classble_service_d_f_u.html#a0c6deb48531bb020934e9a1ffb4e351f',1,'bleServiceDFU::uuid_type()']]]
+  ['tick_5fcount',['tick_count',['../d7/d2d/classrtc_m_s.html#addd33a68e405540424652948c9ec1454',1,'rtcMS']]],
+  ['timeout',['timeout',['../d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf',1,'bleAdvertising::timeout()'],['../dc/dd4/class_w_d_t.html#a7f0293dcc057fa36c55eaba80e56bcaf',1,'WDT::timeout()']]],
+  ['toggle',['toggle',['../d7/db9/class_c_pin.html#a2000134208f704f1bf79082f518ef764',1,'CPin']]],
+  ['total_5fsize',['total_size',['../d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d',1,'CStorage']]],
+  ['transact',['transact',['../da/d31/classspi_slave.html#a7e9c6ee1aaf4084ccb7badcfa22ed3f0',1,'spiSlave']]],
+  ['transfer',['transfer',['../da/dc3/classspi_master.html#a794db5c033bededec6e93fc5a1a29c9b',1,'spiMaster::transfer(uint8_t *p_tx_buf, uint16_t tx_len, uint8_t *p_rx_buf, uint16_t rx_len, uint32_t timeout=MAX_DELAY_TIME)'],['../da/dc3/classspi_master.html#a14ed1edc76b7169efc3650d867ab2a4e',1,'spiMaster::transfer(uint8_t *p_tx_buf, uint8_t *p_rx_buf, uint16_t length)'],['../d9/da7/classtwi_master.html#a6f61b4814314e23b4c995ffee5693166',1,'twiMaster::transfer()']]],
+  ['trylock',['tryLock',['../d3/d0d/class_c_mutex.html#adb89cb4258a492458db9fb614c1681a9',1,'CMutex']]],
+  ['twimaster',['twiMaster',['../d9/da7/classtwi_master.html#ad2c7154c7f1f9ec688618c087fcbca50',1,'twiMaster']]],
+  ['tx_5fpower',['tx_power',['../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19',1,'bleGAP']]],
+  ['tx_5fpower_5flevel',['tx_power_level',['../d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4',1,'bleAdvertising']]]
 ];

@@ -55,9 +55,9 @@ protected:
 		CPin led(LED_PIN_1);
 		led.output();
 
-		gpRTC->interval(1000);		// set rtc timer interval 1000ms
+		gp_RTC->interval(1000);		// set rtc timer interval 1000ms
 		while(isAlive()) {
-			if ( gpRTC->wait() ) {	// wait for timer interrupt
+			if ( gp_RTC->wait() ) {	// wait for timer interrupt
 				led.toggle();
 				m_seconds++;
 			}
