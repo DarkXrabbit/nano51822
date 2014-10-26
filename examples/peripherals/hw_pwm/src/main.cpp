@@ -65,7 +65,7 @@ int main(void) {
 
 	// update pwm2 channels duty-cycle (can be updated in any-time)
 	pwm2.dutycycle(PWM_CH_1, 0.8f);	// CH1 duty-cycle = 80%
-	pwm2.dutycycle(PWM_CH_2, 0.1f);	// CH2 duty-cycle = 60%
+	pwm2.dutycycle(PWM_CH_2, 0.1f);	// CH2 duty-cycle = 10%
 
 	//
 	// LED
