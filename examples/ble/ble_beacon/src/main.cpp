@@ -1,8 +1,8 @@
 /*
 ===============================================================================
- Name        : main.c
+ Name        : iBeacon Demo
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Copyright	 : www.ucxpresso.net
  License   	 : MIT
  Description : beacon test
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/8/2	v1.0.0	First Edition for nano51822						Leo
+ 2014/10/26 v1.0.1	Add power save solution.						Jason
  ===============================================================================
  */
 
@@ -91,35 +92,42 @@ static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
 
 int main(void)
 {
+//
+// for Power Save, it is must to build with "Release Build" to disable the Debug feature.
+//
 #ifdef DEBUG
 	CSerial ser;
 	ser.enable();
 	CDebug dbg(ser);
 	dbg.start();
 #endif
+
+	//
+	// SoftDevice Driver
+	//
 	bleDevice ble;
 	ble.enable();										// enable BLE stack
 
 	// GAP
 	ble.m_gap.settings("nano51822");					// set ble device name
-	ble.m_gap.tx_power(BLE_TX_4dBm);					// set TX radio power
+	ble.m_gap.tx_power(BLE_TX_0dBm);					// set TX radio power
 
 	//
 	// Add BLE DFU Service
 	//
 	bleServiceDFU dfu(ble);
+
 	//
 	// Advertisement
 	//
-	ble.m_advertising.interval(1000);					// set advertising interval = 100ms
+	ble.m_advertising.interval(25);						// set advertising interval = 25ms
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
 	ble.m_advertising.manuf_specific_data(m_beacon_info, APP_BEACON_INFO_LENGTH); // set beacon data
 	ble.m_advertising.flags(&flags, sizeof(flags));		// set flags
 	ble.m_advertising.update();							// update advertising data
 
-	ble.m_advertising.start();							// start the iBeacon advertising
-
+	// enable DFU service if need.
 	dfu.enable();
 
 	//
@@ -132,9 +140,14 @@ int main(void)
     // Enter main loop.
 	//
     while(1) {
+    	//
+    	// Control the on/off interval of Advertisement for power save
+    	//
 		led = LED_ON;
-		sleep(10);
+		ble.m_advertising.start();	// turn on the advertisement
+		sleep(100);					// turn on with a short time
 		led = LED_OFF;
-    	sleep(3000);	// to save power
+		ble.m_advertising.stop();	// turn off the advertisement for power save
+    	sleep(3000);				// sleep with a long time
     }
 }
