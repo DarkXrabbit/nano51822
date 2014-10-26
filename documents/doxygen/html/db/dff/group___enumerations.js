@@ -85,11 +85,6 @@ var group___enumerations =
       [ "PWM_CH_2", "db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded", null ],
       [ "PWM_CH_3", "db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db", null ]
     ] ],
-    [ "rtc_source_t", "db/dff/group___enumerations.html#gaf361c072d6c657eb72cf1946a6d7c7cc", [
-      [ "LF_INTERNAL", "db/dff/group___enumerations.html#ggaf361c072d6c657eb72cf1946a6d7c7cca2b7f3ee52acca41b4278935f06046c70", null ],
-      [ "LF_EXTERNAL", "db/dff/group___enumerations.html#ggaf361c072d6c657eb72cf1946a6d7c7cca5bbb8dba7a4147e5d9a3f378d2169981", null ],
-      [ "LF_SYNTH", "db/dff/group___enumerations.html#ggaf361c072d6c657eb72cf1946a6d7c7ccaf0e30bf1a70b6e2f2c63580af5d9a755", null ]
-    ] ],
     [ "SPI_FREQ_T", "db/dff/group___enumerations.html#ga2d645fa61295e3fd670effeb557d117d", [
       [ "SPI_FREQ_125KHZ", "db/dff/group___enumerations.html#gga2d645fa61295e3fd670effeb557d117da18c5f543fd25627d0d61d0dc47ecdd95", null ],
       [ "SPI_FREQ_250KHZ", "db/dff/group___enumerations.html#gga2d645fa61295e3fd670effeb557d117da335f564977de273f4c8dbb2bcb49af3a", null ],
@@ -110,6 +105,10 @@ var group___enumerations =
       [ "BLOCKED", "db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba376c1b6a3f75d283a2efacf737438d61", null ],
       [ "SUSPENDED", "db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1c2114335a42993ac5cc5dbf65f83d41", null ],
       [ "DELETED", "db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441baae88752b9379248f07e2c3fdc064d998", null ]
+    ] ],
+    [ "TIMER_T", "db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3", [
+      [ "TIMER_1", "db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5", null ],
+      [ "TIMER_2", "db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b", null ]
     ] ],
     [ "TRIGGER_T", "db/dff/group___enumerations.html#ga502c1342cfcb1231253628a68ee19924", [
       [ "RISING", "db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924ad93abe7aced82e9a4fcac4127a36ece3", null ],

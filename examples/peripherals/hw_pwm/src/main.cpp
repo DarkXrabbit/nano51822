@@ -45,16 +45,27 @@ int main(void) {
 #endif
 
 	//
-	// PWM (Using Timer2)
+	// PWM (Using Timer1)
 	//
-	hwPWM pwm(5, 6, 7);				// set PWM pins on P0.5 (CH1), P0.6 (CH2) and P0.7 (CH3)
-	pwm.period(0.0002);				// period time = 200us
-	pwm.enable();					// enable PWM module
+	hwPWM pwm1(TIMER_1, 5, 6, 7);	// set pwm1 pins on P0.5 (CH1), P0.6 (CH2) and P0.7 (CH3)
+	pwm1.period(0.0002);			// period time = 200us
+	pwm1.enable();					// enable PWM module
 
 	// update pwm2 channels duty-cycle (can be updated in any-time)
-	pwm.dutycycle(PWM_CH_1, 0.8f);	// CH1 duty-cycle = 80%
-	pwm.dutycycle(PWM_CH_2, 0.6f);	// CH2 duty-cycle = 60%
-	pwm.dutycycle(PWM_CH_3, 0.2f);	// CH3 duty-cycle = 20%
+	pwm1.dutycycle(PWM_CH_1, 0.8f);	// CH1 duty-cycle = 80%
+	pwm1.dutycycle(PWM_CH_2, 0.6f);	// CH2 duty-cycle = 60%
+	pwm1.dutycycle(PWM_CH_3, 0.2f);	// CH3 duty-cycle = 20%
+
+	//
+	// PWM (Using Timer2)
+	//
+	hwPWM pwm2(TIMER_2, LED_PIN_1, LED_PIN_2);		// set pwm2 pins on LED1 (CH1) and LED2
+	pwm2.period(0.0005);			// period time = 500us
+	pwm2.enable();					// enable PWM module
+
+	// update pwm2 channels duty-cycle (can be updated in any-time)
+	pwm2.dutycycle(PWM_CH_1, 0.8f);	// CH1 duty-cycle = 80%
+	pwm2.dutycycle(PWM_CH_2, 0.1f);	// CH2 duty-cycle = 60%
 
 	//
 	// LED

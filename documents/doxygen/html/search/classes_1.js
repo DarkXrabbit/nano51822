@@ -13,6 +13,7 @@ var searchData=
   ['console',['Console',['../d6/d56/class_console.html',1,'']]],
   ['cperipheral',['CPeripheral',['../d9/db6/class_c_peripheral.html',1,'']]],
   ['cpin',['CPin',['../d7/db9/class_c_pin.html',1,'']]],
+  ['cpowersave',['CPowerSave',['../d5/d3e/class_c_power_save.html',1,'']]],
   ['csemaphore',['CSemaphore',['../d0/d06/class_c_semaphore.html',1,'']]],
   ['cserial',['CSerial',['../d8/d1d/class_c_serial.html',1,'']]],
   ['cshell',['CShell',['../de/dba/class_c_shell.html',1,'']]],

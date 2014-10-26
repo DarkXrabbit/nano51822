@@ -53,7 +53,6 @@ int main(void) {
 	//
 	// SoftDevice
 	//
-//	bleDevice ble(NRF_LFCLKSRC_XTAL_20_PPM);	/**< use external 32.768Khz crystal for SoftDevice */
 	bleDevice ble;	// use internal 32.768KHz for SoftDevice
 	ble.enable();	// enable BLE SoftDevice stack
 

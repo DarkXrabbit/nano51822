@@ -9,7 +9,6 @@ var searchData=
   ['onquery',['onQuery',['../de/dba/class_c_shell.html#a16e1dae0dedda35c0be64d1c8f40e6b4',1,'CShell']]],
   ['onrssichanged',['onRssiChanged',['../d6/d49/classble_device.html#a85532ba48f80496895a1e7fe3e012b27',1,'bleDevice']]],
   ['ontimeout',['onTimeout',['../d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa',1,'bleDevice']]],
-  ['ontimer',['onTimer',['../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e',1,'CTimer']]],
   ['ontransactioncompleted',['onTransactionCompleted',['../da/d31/classspi_slave.html#a6268b685c20ad68d55e427940e129382',1,'spiSlave']]],
   ['operator_20bool',['operator bool',['../d4/d37/class_c_debug.html#a5a1359725fca8337c5967a3c1811c460',1,'CDebug']]],
   ['operator_20char',['operator char',['../d4/d16/class_c_stream.html#acc833c2eea18af67b57ba641ec58fea7',1,'CStream']]],

@@ -21,12 +21,11 @@ var searchData=
   ['removetail',['removeTail',['../df/db6/class_c_list.html#adc7cb308e77a9e0550eecce9333b071b',1,'CList']]],
   ['removetailt',['removeTailT',['../da/d59/class_c_list_t.html#acb8c0cc7df7297b766065d3d89eba530',1,'CListT']]],
   ['replace',['replace',['../df/d99/class_c_string.html#a2330b9d10792cbf3dec9ccd747c67da1',1,'CString']]],
-  ['reset',['reset',['../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02',1,'CAdc::reset()'],['../d0/d2c/classble_advertising.html#a799f35c749a1c31a37422aa274ab0921',1,'bleAdvertising::reset()'],['../d8/d26/class_c_mail_box.html#a73d5b694b1e7ce4e05c7ccc8f1dfd695',1,'CMailBox::reset()'],['../d7/d2d/classrtc_m_s.html#a8820f80d0f7efe873042d3fafdee12c1',1,'rtcMS::reset()'],['../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688',1,'CTimeout::reset()']]],
+  ['reset',['reset',['../d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02',1,'CAdc::reset()'],['../d0/d2c/classble_advertising.html#a799f35c749a1c31a37422aa274ab0921',1,'bleAdvertising::reset()'],['../d8/d26/class_c_mail_box.html#a73d5b694b1e7ce4e05c7ccc8f1dfd695',1,'CMailBox::reset()'],['../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688',1,'CTimeout::reset()']]],
   ['resume',['resume',['../d0/d26/class_c_thread.html#ac8c53aa8c145fc4ac70fa6d825b95742',1,'CThread']]],
   ['resumeall',['resumeAll',['../d0/d26/class_c_thread.html#a743d4325b7e7da494283f3292773ff77',1,'CThread']]],
   ['rr_5finterval_5fadd',['rr_interval_add',['../d0/dfc/classble_service_h_r_m.html#a2537574b52864266e9d14d67d8fb1c7c',1,'bleServiceHRM']]],
   ['rr_5finterval_5fbuffer_5fis_5ffull',['rr_interval_buffer_is_full',['../d0/dfc/classble_service_h_r_m.html#acf3c3adccb1d2f869eaf66465353e89d',1,'bleServiceHRM']]],
-  ['rtcms',['rtcMS',['../d7/d2d/classrtc_m_s.html#aaed459cdb739296e35ea9e58554c2438',1,'rtcMS']]],
   ['run',['run',['../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f',1,'CShell::run()'],['../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7',1,'CThread::run()'],['../d4/d37/class_c_debug.html#a9a3e40cc8ee5d0c2a41577f658779c71',1,'CDebug::run()']]],
   ['running',['running',['../dc/dd4/class_w_d_t.html#a4758e66d9463ac55d6cb50d329b2ad6a',1,'WDT']]]
 ];

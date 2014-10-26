@@ -1,8 +1,10 @@
 var searchData=
 [
   ['task_5fstate_5ft',['TASK_STATE_T',['../db/dff/group___enumerations.html#ga25ee4013cc565a18ac2f4039b4ad441b',1,'thread.h']]],
-  ['tick_5fcount',['tick_count',['../d7/d2d/classrtc_m_s.html#addd33a68e405540424652948c9ec1454',1,'rtcMS']]],
   ['timeout',['timeout',['../d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf',1,'bleAdvertising::timeout()'],['../dc/dd4/class_w_d_t.html#a7f0293dcc057fa36c55eaba80e56bcaf',1,'WDT::timeout()']]],
+  ['timer_5f1',['TIMER_1',['../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5',1,'timer.h']]],
+  ['timer_5f2',['TIMER_2',['../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b',1,'timer.h']]],
+  ['timer_5ft',['TIMER_T',['../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3',1,'timer.h']]],
   ['toggle',['toggle',['../d7/db9/class_c_pin.html#a2000134208f704f1bf79082f518ef764',1,'CPin::toggle()'],['../db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924a4acfde02350139a12fcef53ff7289aa7',1,'TOGGLE():&#160;gpio_int.h']]],
   ['total_5fsize',['total_size',['../d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d',1,'CStorage']]],
   ['transact',['transact',['../da/d31/classspi_slave.html#a7e9c6ee1aaf4084ccb7badcfa22ed3f0',1,'spiSlave']]],

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc1</span>
+   &#160;<span id="projectnumber">v1.0.0 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('db/de1/class_c_timer.html','../../');}
 </div><!--header-->
 <div class="contents">
 
-<p>A 16 bits core timer class.  
+<p>Tiemr class provides timer service.  
  <a href="../../db/de1/class_c_timer.html#details">More...</a></p>
 
 <p><code>#include &quot;<a class="el" href="../../d5/dd0/timer_8h_source.html">class/timer.</a>&quot;</code></p>
@@ -133,52 +133,64 @@ Inheritance diagram for CTimer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a49086118dc061c0aeceb5dbe3c9d22ca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a49086118dc061c0aeceb5dbe3c9d22ca">CTimer</a> (uint8_t prescaler=5)</td></tr>
-<tr class="memdesc:a49086118dc061c0aeceb5dbe3c9d22ca"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/de1/class_c_timer.html" title="A 16 bits core timer class. ">CTimer</a> constructor.  <a href="#a49086118dc061c0aeceb5dbe3c9d22ca">More...</a><br /></td></tr>
-<tr class="separator:a49086118dc061c0aeceb5dbe3c9d22ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32a45397ba76138a08be664e8a87172d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a32a45397ba76138a08be664e8a87172d">CTimer</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a> t, uint8_t prescaler=6)</td></tr>
+<tr class="memdesc:a32a45397ba76138a08be664e8a87172d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/de1/class_c_timer.html" title="Tiemr class provides timer service. ">CTimer</a> constructor.  <a href="#a32a45397ba76138a08be664e8a87172d">More...</a><br /></td></tr>
+<tr class="separator:a32a45397ba76138a08be664e8a87172d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef5241e8a42850238e784951b93570dd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">second</a> (float sec)</td></tr>
+<tr class="memdesc:aef5241e8a42850238e784951b93570dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the second to set the period time by second.  <a href="#aef5241e8a42850238e784951b93570dd">More...</a><br /></td></tr>
 <tr class="separator:aef5241e8a42850238e784951b93570dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80328fea91b61d9ffb154671b5cae6df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df">millisecond</a> (uint32_t ms)</td></tr>
+<tr class="memdesc:a80328fea91b61d9ffb154671b5cae6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the millsecond to set the time period by millisecond.  <a href="#a80328fea91b61d9ffb154671b5cae6df">More...</a><br /></td></tr>
 <tr class="separator:a80328fea91b61d9ffb154671b5cae6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac71a056d71982f1c4e64dc21ef4f7dfc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a> ()</td></tr>
+<tr class="memdesc:ac71a056d71982f1c4e64dc21ef4f7dfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the timer.  <a href="#ac71a056d71982f1c4e64dc21ef4f7dfc">More...</a><br /></td></tr>
 <tr class="separator:ac71a056d71982f1c4e64dc21ef4f7dfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2cf88a86b8cf746048d0e99ee277b96e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a2cf88a86b8cf746048d0e99ee277b96e">disable</a> ()</td></tr>
+<tr class="memdesc:a2cf88a86b8cf746048d0e99ee277b96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable the timer.  <a href="#a2cf88a86b8cf746048d0e99ee277b96e">More...</a><br /></td></tr>
 <tr class="separator:a2cf88a86b8cf746048d0e99ee277b96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025509145d6cd34e37f5e143606f638b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:a025509145d6cd34e37f5e143606f638b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waiting for timer interrupt.  <a href="#a025509145d6cd34e37f5e143606f638b">More...</a><br /></td></tr>
 <tr class="separator:a025509145d6cd34e37f5e143606f638b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ed9c9f77401f51e090cacce790448e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e">onTimer</a> ()</td></tr>
-<tr class="memdesc:a21ed9c9f77401f51e090cacce790448e"><td class="mdescLeft">&#160;</td><td class="mdescRight">On Timer IRQ Event.  <a href="#a21ed9c9f77401f51e090cacce790448e">More...</a><br /></td></tr>
-<tr class="separator:a21ed9c9f77401f51e090cacce790448e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
 <tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>A 16 bits core timer class. </p>
+<div class="textblock"><p>Tiemr class provides timer service. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a49086118dc061c0aeceb5dbe3c9d22ca"></a>
+<a class="anchor" id="a32a45397ba76138a08be664e8a87172d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">CTimer::CTimer </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>prescaler</em> = <code>5</code></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a>&#160;</td>
+          <td class="paramname"><em>t</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>prescaler</em> = <code>6</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="../../db/de1/class_c_timer.html" title="A 16 bits core timer class. ">CTimer</a> constructor. </p>
+<p><a class="el" href="../../db/de1/class_c_timer.html" title="Tiemr class provides timer service. ">CTimer</a> constructor. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">prescaler</td><td>A 4-bit prescaler to source clock frequency (max value 9). default Scaler 5 = 2us （Max timer period= 2us x 65536 = ~130ms)</td></tr>
+    <tr><td class="paramname">t</td><td>Select TIMER_1 or TIMER_2 <a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a>. </td></tr>
+    <tr><td class="paramname">prescaler</td><td>A 4-bit prescaler to source clock frequency (Max. prescaler value = 9). default Scaler 6 = 4us （Max timer period= 4us x 65536 = ~240ms) </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section note"><dt>Note</dt><dd>The timer frequency = 16MHz / (2^prescaler). </dd></dl>
 
 </div>
 </div>
@@ -203,6 +215,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Disable the timer. </p>
 
 <p>Reimplemented in <a class="el" href="../../da/d88/classsw_p_w_m.html#a34a742636ca24b1a349cd534c4b25caa">swPWM</a>.</p>
@@ -229,10 +242,12 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Enable the timer. </p>
+<dl class="section warning"><dt>Warning</dt><dd>To set the period time before to enable the timer !! </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d">swPWM</a>.</p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#a6">/peripherals/hw_pwm/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#a7">/peripherals/hw_pwm/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -308,38 +323,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Call the millsecond to set the time period by millisecond. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Call the millsecond to set the time period by millisecond. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ms</td><td>is uint32_t value to indicate the tie period (unit: millisecond). </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a21ed9c9f77401f51e090cacce790448e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CTimer::onTimer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>On Timer IRQ Event. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The member function will be called by Timer IRQ. </dd></dl>
 
 </div>
 </div>
@@ -364,12 +355,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Call the second to set the period time by second. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Call the second to set the period time by second. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sec</td><td>is floating value to indicate the time period (unit: second). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>The timer can be defined in the range 4us to 200ms. </dd></dl>
 
 </div>
 </div>
@@ -394,6 +388,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Waiting for timer interrupt. </p>
 
 </div>
@@ -404,7 +399,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../db/de1/class_c_timer.html">CTimer</a></li>
-    <li class="footer">Generated on Sat Oct 25 2014 18:50:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 26 2014 16:04:31 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

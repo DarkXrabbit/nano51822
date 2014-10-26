@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc1</span>
+   &#160;<span id="projectnumber">v1.0.0 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -124,7 +124,7 @@ Inheritance diagram for swPWM:</div>
  <div class="center">
   <img src="../../da/d88/classsw_p_w_m.png" usemap="#swPWM_map" alt=""/>
   <map id="swPWM_map" name="swPWM_map">
-<area href="../../db/de1/class_c_timer.html" title="A 16 bits core timer class. " alt="CTimer" shape="rect" coords="0,112,80,136"/>
+<area href="../../db/de1/class_c_timer.html" title="Tiemr class provides timer service. " alt="CTimer" shape="rect" coords="0,112,80,136"/>
 <area href="../../d9/db6/class_c_peripheral.html" alt="CPeripheral" shape="rect" coords="0,56,80,80"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,80,24"/>
 </map>
@@ -132,9 +132,9 @@ Inheritance diagram for swPWM:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abf56cfc2f4ee96f1ce601ecf1d42fd55"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d88/classsw_p_w_m.html#abf56cfc2f4ee96f1ce601ecf1d42fd55">swPWM</a> ()</td></tr>
-<tr class="memdesc:abf56cfc2f4ee96f1ce601ecf1d42fd55"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d88/classsw_p_w_m.html" title="Sowftware PWM (slow) ">swPWM</a> constructor.  <a href="#abf56cfc2f4ee96f1ce601ecf1d42fd55">More...</a><br /></td></tr>
-<tr class="separator:abf56cfc2f4ee96f1ce601ecf1d42fd55"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af300cb30894b00317b07261e96931e63"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d88/classsw_p_w_m.html#af300cb30894b00317b07261e96931e63">swPWM</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a> t)</td></tr>
+<tr class="memdesc:af300cb30894b00317b07261e96931e63"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../da/d88/classsw_p_w_m.html" title="Sowftware PWM (slow) ">swPWM</a> constructor.  <a href="#af300cb30894b00317b07261e96931e63">More...</a><br /></td></tr>
+<tr class="separator:af300cb30894b00317b07261e96931e63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01d23b67c52c3415a887222c0256c116"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116">period</a> (float sec)</td></tr>
 <tr class="memdesc:a01d23b67c52c3415a887222c0256c116"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the period time of PWM.  <a href="#a01d23b67c52c3415a887222c0256c116">More...</a><br /></td></tr>
 <tr class="separator:a01d23b67c52c3415a887222c0256c116"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,14 +157,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2c03ab5505d4d43cc3985f4ede8a1087"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current sample level.  <a href="#a2c03ab5505d4d43cc3985f4ede8a1087">More...</a><br /></td></tr>
 <tr class="separator:a2c03ab5505d4d43cc3985f4ede8a1087"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aef5241e8a42850238e784951b93570dd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">second</a> (float sec)</td></tr>
+<tr class="memdesc:aef5241e8a42850238e784951b93570dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the second to set the period time by second.  <a href="#aef5241e8a42850238e784951b93570dd">More...</a><br /></td></tr>
 <tr class="separator:aef5241e8a42850238e784951b93570dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80328fea91b61d9ffb154671b5cae6df"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df">millisecond</a> (uint32_t ms)</td></tr>
+<tr class="memdesc:a80328fea91b61d9ffb154671b5cae6df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the millsecond to set the time period by millisecond.  <a href="#a80328fea91b61d9ffb154671b5cae6df">More...</a><br /></td></tr>
 <tr class="separator:a80328fea91b61d9ffb154671b5cae6df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a025509145d6cd34e37f5e143606f638b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a025509145d6cd34e37f5e143606f638b">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:a025509145d6cd34e37f5e143606f638b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waiting for timer interrupt.  <a href="#a025509145d6cd34e37f5e143606f638b">More...</a><br /></td></tr>
 <tr class="separator:a025509145d6cd34e37f5e143606f638b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21ed9c9f77401f51e090cacce790448e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e">onTimer</a> ()</td></tr>
-<tr class="memdesc:a21ed9c9f77401f51e090cacce790448e"><td class="mdescLeft">&#160;</td><td class="mdescRight">On Timer IRQ Event.  <a href="#a21ed9c9f77401f51e090cacce790448e">More...</a><br /></td></tr>
-<tr class="separator:a21ed9c9f77401f51e090cacce790448e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -172,23 +172,30 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Sowftware PWM (slow) </p>
-<dl class="section warning"><dt>Warning</dt><dd>The <a class="el" href="../../da/d88/classsw_p_w_m.html" title="Sowftware PWM (slow) ">swPWM</a> will use the <a class="el" href="../../db/de1/class_c_timer.html" title="A 16 bits core timer class. ">CTimer</a> object resource to implement the PWM output. </dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The <a class="el" href="../../da/d88/classsw_p_w_m.html" title="Sowftware PWM (slow) ">swPWM</a> will use the <a class="el" href="../../db/de1/class_c_timer.html" title="Tiemr class provides timer service. ">CTimer</a> object resource to implement the PWM output. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d6/df2/_2peripherals_2sw_pwm_firefly_2src_2main_8cpp-example.html#_a4">/peripherals/sw_pwm_firefly/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="abf56cfc2f4ee96f1ce601ecf1d42fd55"></a>
+<a class="anchor" id="af300cb30894b00317b07261e96931e63"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">swPWM::swPWM </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a>&#160;</td>
+          <td class="paramname"><em>t</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><a class="el" href="../../da/d88/classsw_p_w_m.html" title="Sowftware PWM (slow) ">swPWM</a> constructor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">t</td><td>Specify a <a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a> for the Software PWM module </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -396,38 +403,14 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Call the millsecond to set the time period by millisecond. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Call the millsecond to set the time period by millisecond. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ms</td><td>is uint32_t value to indicate the tie period (unit: millisecond). </td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="a21ed9c9f77401f51e090cacce790448e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CTimer::onTimer </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>On Timer IRQ Event. </p>
-<dl class="section warning"><dt>Warning</dt><dd>The member function will be called by Timer IRQ. </dd></dl>
 
 </div>
 </div>
@@ -503,12 +486,15 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Call the second to set the period time by second. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Call the second to set the period time by second. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">sec</td><td>is floating value to indicate the time period (unit: second). </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>The timer can be defined in the range 4us to 200ms. </dd></dl>
 
 </div>
 </div>
@@ -583,6 +569,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Waiting for timer interrupt. </p>
 
 </div>
@@ -593,7 +580,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../da/d88/classsw_p_w_m.html">swPWM</a></li>
-    <li class="footer">Generated on Sat Oct 25 2014 18:50:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 26 2014 16:04:31 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

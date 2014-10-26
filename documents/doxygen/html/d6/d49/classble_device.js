@@ -1,6 +1,6 @@
 var classble_device =
 [
-    [ "bleDevice", "d6/d49/classble_device.html#a33fc1e4995732c3c5f44351b412e70bd", null ],
+    [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
     [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
     [ "enable", "d6/d49/classble_device.html#a848c9777b4d9cf195f309853ddd5ae2e", null ],
     [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
@@ -10,6 +10,7 @@ var classble_device =
     [ "getStackHighWaterMark", "d6/d49/classble_device.html#ac0227eda51725b795a461a768703f588", null ],
     [ "getState", "d6/d49/classble_device.html#a1e9cce461d8dfb3889cea24f1a703f6f", null ],
     [ "information", "d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230", null ],
+    [ "Init", "d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d", null ],
     [ "isAlive", "d6/d49/classble_device.html#a4a0f0727be4714cef1e24150a869d403", null ],
     [ "isConnected", "d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1", null ],
     [ "isSuspend", "d6/d49/classble_device.html#a51dbe9909ce528b4113d2cc27314e965", null ],

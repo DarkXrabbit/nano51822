@@ -42,12 +42,12 @@ public:
 	/**
 	 * @brief hwPWM constructor.
 	 *
+	 * @param t Specify a @ref TIMER_T for the PWM module
 	 * @param ch1_pin Set pin number to connect to the PWM Channel 1
 	 * @param ch2_pin Set pin number to connect to the PWM Channel 2
 	 * @param ch3_pin Set pin number to connect to the PWM Channel 3
-	 *
 	 */
-	hwPWM(uint8_t ch1_pin, uint8_t ch2_pin=NONE, uint8_t ch3_pin=NONE);
+	hwPWM(TIMER_T t, uint8_t ch1_pin, uint8_t ch2_pin=NONE, uint8_t ch3_pin=NONE);
 
 	/**
 	 * @brief Set the PWM period time.
@@ -84,8 +84,6 @@ protected:
 	CPin  	 m_pins[MAX_HW_PWM_PINS];
 	///@endcond
 };
-
-extern hwPWM *gp_PWM;
 
 /**\example /peripherals/hw_pwm/src/main.cpp
  * This is an example of how to use the hwPWM class.

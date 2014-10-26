@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc1</span>
+   &#160;<span id="projectnumber">v1.0.0 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -135,7 +135,7 @@ $(document).ready(function(){initNavTree('d4/d54/hw__pwm_8h_source.html','../../
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../da/deb/classhw_p_w_m.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/deb/classhw_p_w_m.html">hwPWM</a>: <span class="keyword">public</span> <a class="code" href="../../db/de1/class_c_timer.html">CTimer</a> {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../da/deb/classhw_p_w_m.html#ac27d934b15d4f9ffe01450d63c805f41">hwPWM</a>(uint8_t ch1_pin, uint8_t ch2_pin=NONE, uint8_t ch3_pin=NONE);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../da/deb/classhw_p_w_m.html#abda7b5ebfb96b323ebc19bf529602adc">hwPWM</a>(<a class="code" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a> t, uint8_t ch1_pin, uint8_t ch2_pin=NONE, uint8_t ch3_pin=NONE);</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d">   57</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d">period</a>(<span class="keywordtype">float</span> sec) {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <a class="code" href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">CTimer::second</a>(sec);</div>
@@ -150,25 +150,23 @@ $(document).ready(function(){initNavTree('d4/d54/hw__pwm_8h_source.html','../../
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../da/deb/classhw_p_w_m.html">hwPWM</a>();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e">onTimer</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> onTimer();</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a>     m_pins[MAX_HW_PWM_PINS];</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../da/deb/classhw_p_w_m.html">hwPWM</a> *gp_PWM;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* HW_PWM_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* HW_PWM_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="group___enumerations_html_gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded">PWM_CH_2</a></div><div class="ttdoc">PWM Channel 2. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:32</div></div>
+<div class="ttc" id="classhw_p_w_m_html_abda7b5ebfb96b323ebc19bf529602adc"><div class="ttname"><a href="../../da/deb/classhw_p_w_m.html#abda7b5ebfb96b323ebc19bf529602adc">hwPWM::hwPWM</a></div><div class="ttdeci">hwPWM(TIMER_T t, uint8_t ch1_pin, uint8_t ch2_pin=NONE, uint8_t ch3_pin=NONE)</div><div class="ttdoc">hwPWM constructor. </div></div>
 <div class="ttc" id="classhw_p_w_m_html_a2e2ace996637d1569594803d4be9ce7d"><div class="ttname"><a href="../../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d">hwPWM::period</a></div><div class="ttdeci">void period(float sec)</div><div class="ttdoc">Set the PWM period time. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:57</div></div>
-<div class="ttc" id="class_c_timer_html_aef5241e8a42850238e784951b93570dd"><div class="ttname"><a href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">CTimer::second</a></div><div class="ttdeci">virtual void second(float sec)</div></div>
-<div class="ttc" id="class_c_timer_html"><div class="ttname"><a href="../../db/de1/class_c_timer.html">CTimer</a></div><div class="ttdoc">A 16 bits core timer class. </div><div class="ttdef"><b>Definition:</b> timer.h:30</div></div>
+<div class="ttc" id="class_c_timer_html_aef5241e8a42850238e784951b93570dd"><div class="ttname"><a href="../../db/de1/class_c_timer.html#aef5241e8a42850238e784951b93570dd">CTimer::second</a></div><div class="ttdeci">virtual void second(float sec)</div><div class="ttdoc">Call the second to set the period time by second. </div></div>
+<div class="ttc" id="class_c_timer_html"><div class="ttname"><a href="../../db/de1/class_c_timer.html">CTimer</a></div><div class="ttdoc">Tiemr class provides timer service. </div><div class="ttdef"><b>Definition:</b> timer.h:40</div></div>
 <div class="ttc" id="classhw_p_w_m_html_ae3b6408c0bf4539bf3a21fbd7102f862"><div class="ttname"><a href="../../da/deb/classhw_p_w_m.html#ae3b6408c0bf4539bf3a21fbd7102f862">hwPWM::frequency</a></div><div class="ttdeci">void frequency(uint32_t freq)</div><div class="ttdoc">Set the PWM frequency. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:66</div></div>
-<div class="ttc" id="classhw_p_w_m_html_ac27d934b15d4f9ffe01450d63c805f41"><div class="ttname"><a href="../../da/deb/classhw_p_w_m.html#ac27d934b15d4f9ffe01450d63c805f41">hwPWM::hwPWM</a></div><div class="ttdeci">hwPWM(uint8_t ch1_pin, uint8_t ch2_pin=NONE, uint8_t ch3_pin=NONE)</div><div class="ttdoc">hwPWM constructor. </div></div>
 <div class="ttc" id="group___enumerations_html_gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db">PWM_CH_3</a></div><div class="ttdoc">PWM Channel 3. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:33</div></div>
 <div class="ttc" id="class_c_pin_html"><div class="ttname"><a href="../../d7/db9/class_c_pin.html">CPin</a></div><div class="ttdef"><b>Definition:</b> pin.h:48</div></div>
-<div class="ttc" id="class_c_timer_html_a21ed9c9f77401f51e090cacce790448e"><div class="ttname"><a href="../../db/de1/class_c_timer.html#a21ed9c9f77401f51e090cacce790448e">CTimer::onTimer</a></div><div class="ttdeci">virtual void onTimer()</div><div class="ttdoc">On Timer IRQ Event. </div></div>
 <div class="ttc" id="classhw_p_w_m_html_ac93cd4ea79326c2ed6c5330bd71af9e2"><div class="ttname"><a href="../../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2">hwPWM::dutycycle</a></div><div class="ttdeci">void dutycycle(PWM_CH_T ch, float percentage)</div><div class="ttdoc">Update channel duty-cycle. </div></div>
 <div class="ttc" id="group___enumerations_html_gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71">PWM_CH_1</a></div><div class="ttdoc">PWM Channel 1. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:31</div></div>
+<div class="ttc" id="group___enumerations_html_ga17f00bfa542197547c31260bf04f9ab3"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a></div><div class="ttdeci">TIMER_T</div><div class="ttdoc">TIMER Source. </div><div class="ttdef"><b>Definition:</b> timer.h:30</div></div>
 <div class="ttc" id="group___enumerations_html_ga8b06d2bf1a2f8d7cd5e4bd6e1191ce93"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ga8b06d2bf1a2f8d7cd5e4bd6e1191ce93">PWM_CH_T</a></div><div class="ttdeci">PWM_CH_T</div><div class="ttdoc">PWM Channels. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:30</div></div>
 <div class="ttc" id="classhw_p_w_m_html"><div class="ttname"><a href="../../da/deb/classhw_p_w_m.html">hwPWM</a></div><div class="ttdoc">Use timer to implement the fast PWM. </div><div class="ttdef"><b>Definition:</b> hw_pwm.h:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -177,7 +175,7 @@ $(document).ready(function(){initNavTree('d4/d54/hw__pwm_8h_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>hw_pwm.h</b></li>
-    <li class="footer">Generated on Sat Oct 25 2014 18:50:27 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Oct 26 2014 16:04:30 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

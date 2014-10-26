@@ -6,6 +6,8 @@
 #ifndef BOARD_H_
 #define BOARD_H_
 
+#include <class/ble/ble_device.h>
+
 #ifdef BOARD_LILYPAD
 #define LED_PIN_0		7
 #define LED_PIN_1		20
@@ -16,6 +18,9 @@
 #define BUTTON_PIN_1	17
 #define LED_PIN_0		18
 #define LED_PIN_1		19
+#define LED_PIN_2		20
+#define LED_PIN_3		21
+#define LED_PIN_4		22
 #endif
 
 #endif /* BOARD_H_ */

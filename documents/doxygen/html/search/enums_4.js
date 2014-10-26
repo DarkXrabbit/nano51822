@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rtc_5fsource_5ft',['rtc_source_t',['../db/dff/group___enumerations.html#gaf361c072d6c657eb72cf1946a6d7c7cc',1,'rtc.h']]]
+  ['spi_5ffreq_5ft',['SPI_FREQ_T',['../db/dff/group___enumerations.html#ga2d645fa61295e3fd670effeb557d117d',1,'spi_master.h']]],
+  ['spi_5fmode_5ft',['SPI_MODE_T',['../db/dff/group___enumerations.html#ga296b79fb83e48fbffa9ee5978d200873',1,'spi_master.h']]]
 ];

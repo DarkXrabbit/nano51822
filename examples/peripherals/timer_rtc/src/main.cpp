@@ -47,7 +47,7 @@ int main(void) {
 	dbg.start();
 #endif
 
-	CTimer t;				// declare a Timer object
+	CTimer t(TIMER_2);		// declare a Timer object
 	t.second(0.2);			// set Timer interval = 0.1 sec = 100ms (Timer range in 16us~200ms)
 	t.enable();				// enable timer interrupt
 

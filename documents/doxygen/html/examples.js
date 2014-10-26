@@ -7,7 +7,6 @@ var examples =
     [ "/peripherals/adc_test/src/main.cpp", "d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/hw_pwm/src/main.cpp", "d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/i2c_scanner/src/main.cpp", "d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html", null ],
-    [ "/peripherals/rtc/src/main.cpp", "d8/d49/_2peripherals_2rtc_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/spi_loop_test/src/main.cpp", "d5/dae/_2peripherals_2spi_loop_test_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/sw_pwm_firefly/src/main.cpp", "d6/df2/_2peripherals_2sw_pwm_firefly_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/timer/src/main.cpp", "da/dbb/_2peripherals_2timer_2src_2main_8cpp-example.html", null ],

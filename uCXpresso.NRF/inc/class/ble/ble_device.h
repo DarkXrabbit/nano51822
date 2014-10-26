@@ -69,13 +69,16 @@ typedef enum
  */
 class bleDevice : public bleBase, public CThread{
 public:
-	/**@brief BLE softdevice constructor.
-	 *
-	 * @param lfclksrc specific the Low Frequency Clock source, and default to use the internal RC with SYNTH feature.
-	 *
+	/**
+	 * @brief Static function, to initialize the SoftDevice driver.
+	 * @param lfclksrc Low Frequency Crystal source (32.768KHz)
 	 * @note Recommend to use the external 32.768KHz crystal for low power features.
 	 */
-	bleDevice(NRF_LFCLKSRC_T lfclksrc=NRF_LFCLKSRC_SYNTH_250_PPM);
+	static void Init(NRF_LFCLKSRC_T lfclksrc=NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION);
+
+	/**@brief BLE softdevice constructor.
+	 */
+	bleDevice();
 
 	/**@brief Enable the BLE stack (device).
 	 *

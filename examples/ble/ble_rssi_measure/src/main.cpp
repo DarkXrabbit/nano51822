@@ -53,7 +53,6 @@ int main(void) {
 	//
 	// SoftDevice
 	//
-//	bleDevice ble(NRF_LFCLKSRC_XTAL_20_PPM);	/**< use external 32.768Khz crystal for SoftDevice */
 	bleDevice ble;	// use internal 32.768KHz for SoftDevice
 	ble.enable();	// enable BLE SoftDevice stack
 
@@ -124,7 +123,7 @@ int main(void) {
     	} else led1 = LED_OFF;
 
     	//
-    	// RSSI measure with Klman Filter
+    	// RSSI measure, and show (DBG) with the Klman Filter
     	//
     	if ( ble.isConnected() ) {
     		led0 = LED_ON;

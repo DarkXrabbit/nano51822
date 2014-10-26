@@ -83,7 +83,8 @@ static const uint8_t m_beacon_info[APP_BEACON_INFO_LENGTH] =               /**< 
 //
 // Board LED define
 //
-#define BOARD_PCA10001
+//#define BOARD_PCA10001
+#define BOARD_LILYPAD
 #include <config/board.h>
 
 static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
@@ -96,9 +97,7 @@ int main(void)
 	CDebug dbg(ser);
 	dbg.start();
 #endif
-
-	bleDevice ble(NRF_LFCLKSRC_XTAL_20_PPM);
-//	bleDevice ble;
+	bleDevice ble;
 	ble.enable();										// enable BLE stack
 
 	// GAP
@@ -109,7 +108,6 @@ int main(void)
 	// Add BLE DFU Service
 	//
 	bleServiceDFU dfu(ble);
-
 	//
 	// Advertisement
 	//

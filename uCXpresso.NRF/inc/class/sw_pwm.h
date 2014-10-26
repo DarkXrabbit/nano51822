@@ -35,8 +35,9 @@ class swPWM: public CTimer {
 public:
 	/**
 	 * @brief swPWM constructor.
+	 * @param t Specify a @ref TIMER_T for the Software PWM module
 	 */
-	swPWM();						// default sample level is 256
+	swPWM(TIMER_T t);						// default sample level is 256
 
 	/**
 	 * @brief Set the period time of PWM.
