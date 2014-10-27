@@ -199,8 +199,6 @@ int main(void) {
 			if (nus.readable()) {
 				ch = nus.read();
 				cmd.input(ch);
-				dbg.putc(ch);
-
 			}
 		} else {
 		//
