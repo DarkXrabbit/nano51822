@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/12	v1.0.0	First Edition for nano51822						Jason
+ 2014/10/27 v1.0.1	Update characteristic uuid.						Jason
  ===============================================================================
  */
 
@@ -22,8 +23,8 @@
 #include <class/stream.h>
 
 #define BLE_UUID_UART_SERVICE            0x0001                       /**< The UUID of the UART Service. */
-#define BLE_UUID_UART_TX_CHARACTERISTIC  0x0002                       /**< The UUID of the TX Characteristic. (Device to App) */
-#define BLE_UUID_UART_RX_CHARACTERISTIC  0x0003                       /**< The UUID of the RX Characteristic. (App to Device) */
+#define BLE_UUID_UART_RX_CHARACTERISTIC  0x0002                       /**< The UUID of the RX Characteristic. (App to Device) */
+#define BLE_UUID_UART_TX_CHARACTERISTIC  0x0003                       /**< The UUID of the TX Characteristic. (Device to App) */
 
 extern const ble_uuid128_t nus_base_uuid;	/**< Default UART's BLE base UUID */
 
