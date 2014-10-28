@@ -93,7 +93,7 @@ static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
 int main(void)
 {
 //
-// for Power Save, it is must to build with "Release Build" to disable the Debug feature.
+// for Save Power, it have to build with "Release Build" and disable the Debug feature.
 //
 #ifdef DEBUG
 	CSerial ser;
@@ -120,7 +120,7 @@ int main(void)
 	//
 	// Advertisement
 	//
-	ble.m_advertising.interval(25);						// set advertising interval = 25ms
+	ble.m_advertising.interval(20);						// set advertising interval = 25ms
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
 	ble.m_advertising.manuf_specific_data(m_beacon_info, APP_BEACON_INFO_LENGTH); // set beacon data
@@ -141,13 +141,13 @@ int main(void)
 	//
     while(1) {
     	//
-    	// Control the on/off interval of Advertisement for power save
+    	// Control the on/off interval of Advertisement for save power.
     	//
 		led = LED_ON;
 		ble.m_advertising.start();	// turn on the advertisement
-		sleep(100);					// turn on with a short time
+		sleep(50);					// turn on with a short time
 		led = LED_OFF;
-		ble.m_advertising.stop();	// turn off the advertisement for power save
-    	sleep(3000);				// sleep with a long time
+		ble.m_advertising.stop();	// turn off the advertisement for save power.
+    	sleep(1000);				// sleep with a long time
     }
 }

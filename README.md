@@ -6,6 +6,12 @@ uCXpresso.NRF RTOS C/C++ Framework for Bluetooth Low Energy
 ###Class Manual : https://cdn.rawgit.com/ucxpresso/nano51822/master/documents/doxygen/html/index.html
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_spec_beta.pdf
 
+v1.0.0 rc3 28th October 2014
+--------------------------------
+###Features: 
+	1. Add Tickless Technology for low power feaure. (Min. 5uA)
+	2. Updated bleServiceUART TX/RX char. UUID.
+
 v1.0.0 rc2 25th October 2014
 --------------------------------
 ###Features: 
