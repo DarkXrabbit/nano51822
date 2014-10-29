@@ -5,7 +5,7 @@
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
  Description : LFCLK Test with GPIO,
- 	 	 	   use the test to calibrate your 32.768KHz crystal.
+ 	 	 	   Use the lfclk_test to calibrate your 32.768KHz crystal.
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
@@ -40,11 +40,11 @@
 CPin pinProbe(1);	// declare the LFCLK probe pin on P0.01
 
 //
-// On Tick Event
+// On System Tick Event
 // The system tick frequency will be 1024Hz.
-// So, probe pin toggle frequency will be 512Hz.
+// So, probe pin toggle frequency could be 512Hz.
 //
-extern "C" void on_tick(uint32_t count) {
+extern "C" void on_sys_tick(uint32_t count) {
 	pinProbe.toggle();
 }
 
@@ -60,16 +60,18 @@ int main(void) {
 
 	pinProbe.output();
 
+	led = LED_ON;
+
 	//
     // Enter main loop.
 	//
     while(1) {
     	//
-    	// Your loop code here
+    	// Don't enter Tickless mode to measure the tick
     	//
-		led = LED_ON;
-		sleep(10);
-		led = LED_OFF;
-    	sleep(3000);
+//		led = LED_ON;
+//		sleep(10);
+//		led = LED_OFF;
+//    	sleep(100);
     }
 }
