@@ -29,7 +29,7 @@
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service.h>
 #include <class/pin.h>
-
+#include <class/power.h>
 #include <class/ble/ble_service_uart.h>
 #include <class/timeout.h>
 #include <class/string.h>
@@ -37,7 +37,7 @@
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
+#define APP_ADV_INTERVAL                     1000                   /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
 //#define BOARD_PCA10001
@@ -185,8 +185,12 @@ int main(void) {
 	ledLeft.output();	// set led0 as an output pin
 	ledRight.output();	// set led1 as an output pin
 
-	CTimeout tm;
-	uint8_t ch;
+	uint8_t ch= 0;
+
+	//
+	// Enable Tickless Technology
+	//
+	CPowerSave::tickless(true);
 
 	//
 	// Enter main loop.
@@ -196,19 +200,25 @@ int main(void) {
 		// Uart Service
 		//
 		if ( ble.isConnected() ) {
-			if (nus.readable()) {
-				ch = nus.read();
+			ch = nus.read();	// block in the read() to wait a char.
+			if ( ch ) {
 				cmd.input(ch);
 			}
+
 		} else {
 		//
 		// alternate led when disconnected (idle)
 		//
-			if (tm.isExpired(500)) {
-				tm.reset();
-				ledRight.toggle();
-				ledLeft = !ledRight;
+			if (ch) {
+				ledRight = LED_ON;
+			} else {
+				ledLeft = LED_ON;
 			}
+			sleep(50);	// blink a short time (50ms)
+			ledRight = LED_OFF;
+			ledLeft = LED_OFF;
+			ch = (ch ? 0 : 1);
+			sleep(950);	// save power with a long time (950ms)
 		}
 	}
 }

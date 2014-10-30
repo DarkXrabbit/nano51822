@@ -33,6 +33,7 @@
 #include <class/ble/ble_service_dfu.h>
 #include <class/pin.h>
 #include <class/timeout.h>
+#include <class/power.h>
 
 // TODO: insert other definitions and declarations here
 #define APP_BEACON_INFO_LENGTH           0x17                              /**< Total length of information advertised by the Beacon. */
@@ -137,6 +138,11 @@ int main(void)
 	led.output();
 
 	//
+	// Enable Tickless Technology
+	//
+	CPowerSave::tickless(true);
+
+	//
     // Enter main loop.
 	//
     while(1) {
@@ -148,6 +154,6 @@ int main(void)
 		sleep(50);					// turn on with a short time
 		led = LED_OFF;
 		ble.m_advertising.stop();	// turn off the advertisement for save power.
-    	sleep(1000);				// sleep with a long time
+    	sleep(950);				// sleep with a long time
     }
 }

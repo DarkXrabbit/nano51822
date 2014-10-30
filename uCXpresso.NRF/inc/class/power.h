@@ -11,7 +11,8 @@
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2014/10/26	v1.0.0	First Edition								Leo
+ 2014/10/26	v1.0.0	First Edition									Leo
+ 2014/10/30 v1.0.0	Add tickless enable/disable member.				Jason
  ===============================================================================
  */
 
@@ -27,6 +28,11 @@
  */
 class CPowerSave: public CPeripheral {
 public:
+	/**
+	 * @brief Enable (or disable) the tickless technology.
+	 * @param enable true to enable the tickless technology, false otherwise.
+	 */
+	static void tickless(bool enable);
 
 	/**
 	 * @brief Enter system OFF.
