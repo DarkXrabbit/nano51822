@@ -188,7 +188,6 @@ public:
 	ble_gap_sec_params_t	  m_sec_params;
 	CSemaphore	m_semBleEvent;
 protected:
-	uint32_t	m_flag;
 	bool		m_memory_access_in_progress;
 
 	void system_off_mode_enter();
@@ -205,6 +204,7 @@ protected:
 	void add_service(bleService *service);
 	void del_service(bleService *service);
 	void services_evt(xHandle evt);
+	void services_poll();
 
 	//
 	// Implement CThread::run()

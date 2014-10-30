@@ -55,6 +55,7 @@ public:
 	/// @cond PRIVATE
 	//
 	virtual void on_ble_event(xHandle evt) = PURE_VIRTUAL_FUNC;
+	virtual void on_ble_poll() {}
 	~bleService();
 protected:
 	bleBase	*m_p_ble;

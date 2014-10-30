@@ -83,8 +83,6 @@ public:
 
 protected:
 	bleBase	 	*m_p_ble;
-	ble_gap_conn_params_t	m_gap_conn_params;
-
 friend class bleDevice;
 };
 

@@ -70,7 +70,7 @@ protected:
 	uint32_t tx_char_add(uint16_t tx_char_uuid);
 
 	virtual void on_data_receive(uint8_t * data, uint16_t length);
-	virtual uint32_t on_data_transmit(uint8_t *data, uint16_t length);
+	virtual void on_ble_poll();
 
 	virtual void on_disconnected(xHandle evt);
 	virtual void on_write(xHandle evt);

@@ -84,16 +84,23 @@ int main(void) {
 	CPin led1(19);	// led1 on P0.19
 	led0.output();	// set led0 as an output pin
 	led1.output();
-	CTimeout	tm;
+
+	CPin btn(16);	// button on P0.16
+	btn.input();
 
 #ifdef DEBUG
 	CDebug dbg(nus);	// Debug Console stream use the NUS object
 	dbg.start();
 #endif
+
+	CTimeout	tm;
 	//
     // Enter main loop.
 	//
     while(1) {
+    	//
+    	// NUS indicate LED
+    	//
     	if ( nus.isAvailable() ) {
     		led1 = LED_ON;
     	} else {

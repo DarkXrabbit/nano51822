@@ -40,6 +40,13 @@ public:
 	 * @note After wakeup the chip will be reset, and the MCU will run from the main entry.
 	 */
 	static void system_off(int wakeup_pin);
+
+	/**
+	 * @brief Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD.
+	 * The resulting voltage is then used by an internal LDO that supplies the radio with power.
+	 * @param enable true to use the internal DC/DC convertor, false otherwise.
+	 */
+	static void dcdc(bool enable);
 };
 
 #endif /* POWER_H_ */
