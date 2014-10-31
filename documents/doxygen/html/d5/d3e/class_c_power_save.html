@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc3</span>
+   &#160;<span id="projectnumber">v1.0.0 rc4</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -145,10 +145,45 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa985158adfeb15c1584fb07b681d3027"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3e/class_c_power_save.html#aa985158adfeb15c1584fb07b681d3027">system_off</a> (int wakeup_pin)</td></tr>
 <tr class="memdesc:aa985158adfeb15c1584fb07b681d3027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter system OFF.  <a href="#aa985158adfeb15c1584fb07b681d3027">More...</a><br /></td></tr>
 <tr class="separator:aa985158adfeb15c1584fb07b681d3027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a915b07923779d45c1e262cfb6573de73"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3e/class_c_power_save.html#a915b07923779d45c1e262cfb6573de73">dcdc</a> (bool enable)</td></tr>
+<tr class="memdesc:a915b07923779d45c1e262cfb6573de73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD. The resulting voltage is then used by an internal LDO that supplies the radio with power.  <a href="#a915b07923779d45c1e262cfb6573de73">More...</a><br /></td></tr>
+<tr class="separator:a915b07923779d45c1e262cfb6573de73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d5/d3e/class_c_power_save.html" title="CPowerSave stack class. ">CPowerSave</a> stack class. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a915b07923779d45c1e262cfb6573de73"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CPowerSave::dcdc </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>enable</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD. The resulting voltage is then used by an internal LDO that supplies the radio with power. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">enable</td><td>true to use the internal DC/DC convertor, false otherwise. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -258,10 +293,13 @@ Static Public Member Functions</h2></td></tr>
 <p>Enable (or disable) the tickless technology. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">enable</td><td>true to enable the tickless technology, false otherwise. </td></tr>
+    <tr><td class="paramname">enable</td><td>true to enable the tickless technology, false otherwise.</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section note"><dt>Note</dt><dd>The uCXpresso.NRF Tickless Technology stops the periodic main clock (Enter to Deep-Sleep mode) during idle periods (periods when there are no application tasks to be executed), then makes a correcting adjustment to the RTOS tick count value when the main clock is restarted.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>The tickless feature have to use the external 32.768KHz crystal within 20ppm. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d" title="Static function, to initialize the SoftDevice driver. ">bleDevice::Init()</a> </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a18">/ble/ble_beacon/src/main.cpp</a>.</dd>
 </dl>
 </div>
@@ -272,7 +310,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/d3e/class_c_power_save.html">CPowerSave</a></li>
-    <li class="footer">Generated on Thu Oct 30 2014 19:04:45 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Oct 31 2014 17:52:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

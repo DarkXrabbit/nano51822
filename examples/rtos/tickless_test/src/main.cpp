@@ -30,8 +30,8 @@
 
 
 // TODO: insert other definitions and declarations here
-//#define BOARD_PCA10001
-#define BOARD_LILYPAD
+#define BOARD_PCA10001
+//#define BOARD_LILYPAD
 #include <config/board.h>
 
 
@@ -52,7 +52,7 @@ int main(void) {
 	CPin led(LED_PIN_0);
 	led.output();
 
-	CPin btn(1);
+	CPin btn(17);
 	btn.input();
 
 	//

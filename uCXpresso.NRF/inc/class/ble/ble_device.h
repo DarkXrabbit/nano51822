@@ -71,8 +71,12 @@ class bleDevice : public bleBase, public CThread{
 public:
 	/**
 	 * @brief Static function, to initialize the SoftDevice driver.
+	 *
 	 * @param lfclksrc Low Frequency Crystal source (32.768KHz)
+	 *
 	 * @note Recommend to use the external 32.768KHz crystal for low power features.
+	 *
+	 * @warning For tickless, please select the @ref NRF_LFCLKSRC_XTAL_20_PPM accurate crystal.
 	 */
 	static void Init(NRF_LFCLKSRC_T lfclksrc=NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION);
 
@@ -220,5 +224,12 @@ friend class bleService;
 };
 
 extern bleDevice *gpBLE;	///< Point to the global bleDevice object.
+
+/*
+ * @example /rtos/tickless_test/src/setup.cpp
+ * This is an example of how to use the bleDevice::Init(),
+ * More details about this example.
+ */
+
 
 #endif /* BLE_DEVICE_H_ */

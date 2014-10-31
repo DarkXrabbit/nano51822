@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc3</span>
+   &#160;<span id="projectnumber">v1.0.0 rc4</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -139,12 +139,13 @@ $(document).ready(function(){initNavTree('da/d66/ble__service_8h_source.html','.
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(xHandle evt) = PURE_VIRTUAL_FUNC;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    ~<a class="code" href="../../da/d80/classble_service.html">bleService</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="../../d2/dc4/classble_base.html">bleBase</a> *m_p_ble;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;};</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_poll() {}</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    ~<a class="code" href="../../da/d80/classble_service.html">bleService</a>();</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../d2/dc4/classble_base.html">bleBase</a> *m_p_ble;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classble_service_html_ae5045731a748b41a5153496d8fcb7257"><div class="ttname"><a href="../../da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257">bleService::isAvailable</a></div><div class="ttdeci">virtual bool isAvailable()</div><div class="ttdoc">Check the service available. </div><div class="ttdef"><b>Definition:</b> ble_service.h:40</div></div>
 <div class="ttc" id="classble_service_html_a8931a117eb7be5a52455b53459b0df62"><div class="ttname"><a href="../../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62">bleService::uuid_type</a></div><div class="ttdeci">virtual uint8_t uuid_type()</div><div class="ttdoc">Get the UUID type of service. </div><div class="ttdef"><b>Definition:</b> ble_service.h:50</div></div>
 <div class="ttc" id="classble_base_html"><div class="ttname"><a href="../../d2/dc4/classble_base.html">bleBase</a></div><div class="ttdoc">The bleBase class is an empty base class. </div><div class="ttdef"><b>Definition:</b> ble_base.h:41</div></div>
@@ -157,7 +158,7 @@ $(document).ready(function(){initNavTree('da/d66/ble__service_8h_source.html','.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_service.h</b></li>
-    <li class="footer">Generated on Thu Oct 30 2014 19:04:45 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Oct 31 2014 17:52:56 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

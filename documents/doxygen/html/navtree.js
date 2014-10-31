@@ -22,8 +22,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/d56/class_console.html",
-"da/deb/classhw_p_w_m.html#a80328fea91b61d9ffb154671b5cae6df",
+"d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678",
+"da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d",
 "df/d99/class_c_string.html#a181b18bf81568cee519617106706963f"
 ];
 

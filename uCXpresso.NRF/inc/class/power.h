@@ -30,7 +30,15 @@ class CPowerSave: public CPeripheral {
 public:
 	/**
 	 * @brief Enable (or disable) the tickless technology.
+	 *
 	 * @param enable true to enable the tickless technology, false otherwise.
+	 *
+	 * @note The uCXpresso.NRF Tickless Technology stops the periodic main clock (Enter to Deep-Sleep mode)
+	 * during idle periods (periods when there are no application tasks to be executed),
+	 * then makes a correcting adjustment to the RTOS tick count value when the main clock is restarted.
+	 *
+	 * @warning The tickless feature have to use the external 32.768KHz crystal within 20ppm.
+	 * @see bleDevice::Init()
 	 */
 	static void tickless(bool enable);
 
@@ -48,5 +56,11 @@ public:
 	 */
 	static void dcdc(bool enable);
 };
+
+/*
+ * @example /rtos/tickless_test/src/setup.cpp
+ * This is an example of how to use the CPowerSave::tickless(),
+ * More details about this example.
+ */
 
 #endif /* POWER_H_ */
