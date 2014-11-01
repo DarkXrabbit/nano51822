@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : iBeacon Demo
  Author      : uCXpresso
- Version     : v1.0.1
+ Version     : v1.0.2
  Copyright	 : www.ucxpresso.net
  License   	 : MIT
  Description : beacon test
@@ -13,6 +13,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/8/2	v1.0.0	First Edition for nano51822						Leo
  2014/10/26 v1.0.1	Add power save solution.						Jason
+ 2014/11/1	v1.0.2	Decrease the adv. time to 10ms					Leo
  ===============================================================================
  */
 
@@ -151,9 +152,9 @@ int main(void)
     	//
 		led = LED_ON;
 		ble.m_advertising.start();	// turn on the advertisement
-		sleep(50);					// turn on with a short time
+		sleep(10);					// turn on with a short time (10ms)
 		led = LED_OFF;
 		ble.m_advertising.stop();	// turn off the advertisement for save power.
-    	sleep(950);				// sleep with a long time
+    	sleep(990);					// sleep with a long time (990ms)
     }
 }

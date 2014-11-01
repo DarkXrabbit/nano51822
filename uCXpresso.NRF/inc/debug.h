@@ -35,7 +35,7 @@ public:
 	//
 	// start DEBUG task
 	//
-	virtual bool start(uint32_t stack=124);
+	virtual bool start(uint32_t stack=128);
 
 	//
 	// for DEBUG

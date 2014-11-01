@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : Tickless Test
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Copyright   : www.ucxpresso.net
  Description : To measure the current when tickless enable and disable.
 ===============================================================================
@@ -11,6 +11,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/30 v1.0.0	First Edition.									Jason
+ 2014/11/1	v1.0.1	Declare for LilyPad								Leo
  ===============================================================================
  */
 
@@ -30,8 +31,8 @@
 
 
 // TODO: insert other definitions and declarations here
-#define BOARD_PCA10001
-//#define BOARD_LILYPAD
+//#define BOARD_PCA10001
+#define BOARD_LILYPAD
 #include <config/board.h>
 
 
@@ -52,7 +53,7 @@ int main(void) {
 	CPin led(LED_PIN_0);
 	led.output();
 
-	CPin btn(17);
+	CPin btn(4);	// Declare a button on P0.4
 	btn.input();
 
 	//
@@ -63,16 +64,16 @@ int main(void) {
     	// Enable/Disable tickless technology
     	//
     	if ( btn==HIGH ) {
-    		CPowerSave::tickless(true);	// default (internal pull-up)
+    		CPowerSave::tickless(true);		// default (internal pull-up), around 5~8 uA
     	} else {
-    		CPowerSave::tickless(false);
+    		CPowerSave::tickless(false);	// around 480~500 uA
     	}
 
     	//
     	// Blink led with short time
     	//
     	led = LED_ON;
-    	sleep(10);
+    	sleep(5);
     	led = LED_OFF;
     	sleep(500);
     }
