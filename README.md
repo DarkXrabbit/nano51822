@@ -3,7 +3,7 @@ nano51822
 uCXpresso.NRF RTOS C/C++ Framework for Bluetooth Low Energy
 
 ###Getting Started: https://cdn.rawgit.com/ucxpresso/nano51822/master/documents/getting_started_with_ucxpresso.nrf.pdf
-###Class Manual : https://cdn.rawgit.com/ucxpresso/nano51822/master/documents/doxygen/html/index.html
+###Class Manual : https://rawgit.com/ucxpresso/nano51822/master/documents/doxygen/html/index.html
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 
 v1.0.0 rc4 31th October 2014
