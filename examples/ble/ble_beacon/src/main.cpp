@@ -133,7 +133,7 @@ int main(void)
 	dfu.enable();
 
 	//
-	// blink LED
+	// LED pin declared
 	//
 	CPin led(LED_PIN_0);
 	led.output();

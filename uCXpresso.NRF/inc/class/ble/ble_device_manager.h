@@ -9,6 +9,7 @@
 #define BLE_DEVICE_MANAGER_H_
 
 #include <class/ble/ble_base.h>
+#include <class/timeout.h>
 
 /**
  * @brief BLE Device Management
@@ -36,7 +37,6 @@ public:
 	~bleDeviceManager();
 	/// @cond
 protected:
-	bleBase	 	*m_p_ble;
 	uint8_t    	 m_app_handle;
 	virtual void on_ble_event(xHandle evt);
 

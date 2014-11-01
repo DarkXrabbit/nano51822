@@ -25,10 +25,20 @@ var group___bluetooth =
       [ "isThread", "d2/dc4/classble_base.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d2/dc4/classble_base.html#a18cf254bf2030ba75735238fc1a31f4d", null ]
     ] ],
+    [ "bleConnParams", "d9/d8b/classble_conn_params.html", [
+      [ "bleConnParams", "d9/d8b/classble_conn_params.html#a7f05c387b56ff2eea2d2976173adb53d", null ],
+      [ "change", "d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2", null ],
+      [ "isAvailable", "d9/d8b/classble_conn_params.html#ae5045731a748b41a5153496d8fcb7257", null ],
+      [ "isThread", "d9/d8b/classble_conn_params.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d9/d8b/classble_conn_params.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "stop", "d9/d8b/classble_conn_params.html#a20e3f9b23f4f7528a0972a3c5898c361", null ],
+      [ "uuid", "d9/d8b/classble_conn_params.html#aa34f2ea80269787a549a98e13bddb44f", null ],
+      [ "uuid_type", "d9/d8b/classble_conn_params.html#a8931a117eb7be5a52455b53459b0df62", null ]
+    ] ],
     [ "bleDevice", "d6/d49/classble_device.html", [
       [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
       [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
-      [ "enable", "d6/d49/classble_device.html#a848c9777b4d9cf195f309853ddd5ae2e", null ],
+      [ "enable", "d6/d49/classble_device.html#a951f81783549e5905323a44308525957", null ],
       [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
       [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
       [ "getName", "d6/d49/classble_device.html#aa291909bc3ff7cc0decf46c885a7a725", null ],

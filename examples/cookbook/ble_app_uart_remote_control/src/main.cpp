@@ -31,6 +31,7 @@
 #include <class/pin.h>
 #include <class/power.h>
 #include <class/ble/ble_service_uart.h>
+#include <class/ble/ble_conn_params.h>
 #include <class/timeout.h>
 #include <class/string.h>
 
@@ -160,9 +161,14 @@ int main(void) {
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
 
 	//
-	// Add BLE Service
+	// Add BLE UART Service
 	//
-	bleServiceUART nus(ble);	// declare a BLE "Nordic UART Service" object
+	bleServiceUART nus(ble);	// declare a BLE "Nordic UART Service" (NUS) object
+
+	//
+	// Add "connection parameters update" negotiation. (optional)
+	//
+	bleConnParams conn(ble);
 
 	//
 	// BLE Advertising

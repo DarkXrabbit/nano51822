@@ -15,6 +15,7 @@ var searchData=
   ['ble_5ftx_5fpower_5ft',['BLE_TX_POWER_T',['../db/dff/group___enumerations.html#ga3b6d6db9e13e93ae21f2a383d9903617',1,'ble_gap.h']]],
   ['bleadvertising',['bleAdvertising',['../d0/d2c/classble_advertising.html',1,'bleAdvertising'],['../d0/d2c/classble_advertising.html#ac3afd0716095c82f34e519b0bc0f403c',1,'bleAdvertising::bleAdvertising()']]],
   ['blebase',['bleBase',['../d2/dc4/classble_base.html',1,'']]],
+  ['bleconnparams',['bleConnParams',['../d9/d8b/classble_conn_params.html',1,'bleConnParams'],['../d9/d8b/classble_conn_params.html#a7f05c387b56ff2eea2d2976173adb53d',1,'bleConnParams::bleConnParams()']]],
   ['bledevice',['bleDevice',['../d6/d49/classble_device.html',1,'bleDevice'],['../dd/d89/classble_g_a_p.html#a08996a3ed5a47a51072cd37a2936420e',1,'bleGAP::bleDevice()'],['../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688',1,'bleDevice::bleDevice()']]],
   ['bledevicemanager',['bleDeviceManager',['../d9/d34/classble_device_manager.html',1,'bleDeviceManager'],['../d9/d34/classble_device_manager.html#a9bccd8c288f56bfe2baeea3304382da9',1,'bleDeviceManager::bleDeviceManager()']]],
   ['blegap',['bleGAP',['../dd/d89/classble_g_a_p.html',1,'bleGAP'],['../dd/d89/classble_g_a_p.html#a2b1aec1291fb6dc68bd7e20877eb6201',1,'bleGAP::bleGAP()']]],

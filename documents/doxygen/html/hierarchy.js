@@ -7,6 +7,7 @@ var hierarchy =
         [ "bleDeviceManager", "d9/d34/classble_device_manager.html", null ],
         [ "bleGAP", "dd/d89/classble_g_a_p.html", null ],
         [ "bleService", "da/d80/classble_service.html", [
+          [ "bleConnParams", "d9/d8b/classble_conn_params.html", null ],
           [ "bleServiceBattery", "d5/ded/classble_service_battery.html", null ],
           [ "bleServiceCustomer", "de/d51/classble_service_customer.html", [
             [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", null ]

@@ -24,6 +24,7 @@
 #include <class/semaphore.h>
 #include <class/peripheral.h>
 #include <class/list.h>
+#include <class/timeout.h>
 
 #include <class/ble/ble_service.h>
 #include <class/ble/ble_advertising.h>
@@ -59,7 +60,8 @@ typedef enum
 }NRF_LFCLKSRC_T;
 
 
-/**@brief 	BLE Device Class (SoftDevice).
+/**
+ * @brief 	BLE Device Class (SoftDevice).
  * @class 	bleDevice ble_device.h "class/ble/ble_device.h"
  *
  * @details This class manages the all BLE event from the SoftDevice driver,
@@ -90,7 +92,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(uint32_t stack=72);
+	uint32_t enable(uint32_t stack=78);
 
 	/**@brief Check BLE connection.
 	 *

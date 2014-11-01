@@ -31,7 +31,7 @@
 #include <class/ble/ble_service_hrm.h>
 #include <class/ble/ble_service_htm.h>
 #include <class/ble/ble_service_bat.h>
-
+#include <class/ble/ble_conn_params.h>
 #include <class/pin.h>
 #include <class/adc.h>
 #include <class/timeout.h>
@@ -76,6 +76,11 @@ int main(void) {
 	// Declare a BAT service object
 	//
 	bleServiceBattery bat(ble);
+
+	//
+	// Add "connection parameters update" negotiation. (optional)
+	//
+	bleConnParams conn(ble);
 
 	//
 	// update advertisement contents

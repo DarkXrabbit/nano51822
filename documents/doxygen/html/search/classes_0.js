@@ -2,6 +2,7 @@ var searchData=
 [
   ['bleadvertising',['bleAdvertising',['../d0/d2c/classble_advertising.html',1,'']]],
   ['blebase',['bleBase',['../d2/dc4/classble_base.html',1,'']]],
+  ['bleconnparams',['bleConnParams',['../d9/d8b/classble_conn_params.html',1,'']]],
   ['bledevice',['bleDevice',['../d6/d49/classble_device.html',1,'']]],
   ['bledevicemanager',['bleDeviceManager',['../d9/d34/classble_device_manager.html',1,'']]],
   ['blegap',['bleGAP',['../dd/d89/classble_g_a_p.html',1,'']]],

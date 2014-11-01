@@ -107,7 +107,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment"> Name        : iBeacon Demo</span></div>
 <div class="line"><span class="comment"> Author      : uCXpresso</span></div>
-<div class="line"><span class="comment"> Version     : v1.0.1</span></div>
+<div class="line"><span class="comment"> Version     : v1.0.2</span></div>
 <div class="line"><span class="comment"> Copyright   : www.ucxpresso.net</span></div>
 <div class="line"><span class="comment"> License     : MIT</span></div>
 <div class="line"><span class="comment"> Description : beacon test</span></div>
@@ -118,6 +118,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line"><span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
 <div class="line"><span class="comment"> 2014/8/2   v1.0.0  First Edition for nano51822                     Leo</span></div>
 <div class="line"><span class="comment"> 2014/10/26 v1.0.1  Add power save solution.                        Jason</span></div>
+<div class="line"><span class="comment"> 2014/11/1  v1.0.2  Decrease the adv. time to 10ms                  Leo</span></div>
 <div class="line"><span class="comment"> ===============================================================================</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"></div>
@@ -210,7 +211,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line">    <span class="comment">// SoftDevice Driver</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a3"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;</div>
-<div class="line">    ble.<a name="a4"></a><a class="code" href="../../d6/d49/classble_device.html#a848c9777b4d9cf195f309853ddd5ae2e">enable</a>();                                       <span class="comment">// enable BLE stack</span></div>
+<div class="line">    ble.<a name="a4"></a><a class="code" href="../../d6/d49/classble_device.html#a951f81783549e5905323a44308525957">enable</a>();                                       <span class="comment">// enable BLE stack</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
 <div class="line">    ble.<a name="a5"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a6"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece">settings</a>(<span class="stringliteral">&quot;nano51822&quot;</span>);                    <span class="comment">// set ble device name</span></div>
@@ -235,7 +236,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line">    dfu.enable();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="comment">// blink LED</span></div>
+<div class="line">    <span class="comment">// LED pin declared</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a17"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
 <div class="line">    led.output();</div>
@@ -254,10 +255,10 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        led = <a name="a19"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
 <div class="line">        ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a20"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();  <span class="comment">// turn on the advertisement</span></div>
-<div class="line">        sleep(50);                  <span class="comment">// turn on with a short time</span></div>
+<div class="line">        sleep(10);                  <span class="comment">// turn on with a short time (10ms)</span></div>
 <div class="line">        led = <a name="a21"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
 <div class="line">        ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a22"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84">stop</a>();   <span class="comment">// turn off the advertisement for save power.</span></div>
-<div class="line">        sleep(950);             <span class="comment">// sleep with a long time</span></div>
+<div class="line">        sleep(990);                 <span class="comment">// sleep with a long time (990ms)</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -265,7 +266,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Oct 31 2014 17:52:56 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Nov 1 2014 23:48:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
