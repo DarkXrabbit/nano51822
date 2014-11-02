@@ -26,6 +26,7 @@
 #endif
 
 // TODO: insert other include files here
+#include <class/power.h>
 #include <class/pin.h>
 
 // TODO: insert other definitions and declarations here
@@ -40,6 +41,13 @@ int main(void) {
 	ser.enable();
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
+#endif
+
+	//
+	// Optional: Enable tickless technology
+	//
+#ifndef DEBUG
+	CPowerSave::tickless(true);
 #endif
 
 	//
