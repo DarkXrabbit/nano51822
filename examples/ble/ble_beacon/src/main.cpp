@@ -153,8 +153,8 @@ int main(void)
     	// Control the on/off interval of Advertisement for save power.
     	//
 		led = LED_ON;
-		sleep(10);					// turn on with a short time (10ms)
+		sleep(20);					// turn on with a short time (10ms)
 		led = LED_OFF;
-    	sleep(990);					// sleep with a long time (990ms)
+    	sleep(980);					// sleep with a long time (990ms)
     }
 }
