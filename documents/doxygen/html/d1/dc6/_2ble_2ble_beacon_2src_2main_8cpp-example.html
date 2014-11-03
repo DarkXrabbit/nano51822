@@ -225,12 +225,14 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Advertisement</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    ble.<a name="a10"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a11"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(20);                     <span class="comment">// set advertising interval = 25ms</span></div>
+<div class="line">    ble.<a name="a10"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a11"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(1000);                   <span class="comment">// set advertising interval = 1000ms</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a12"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ab77f9940edde80f47e935c96e6638d6e">name_type</a>(BLE_ADVDATA_NO_NAME);   <span class="comment">// set beacon name type (No Name)</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a13"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a>(APP_COMPANY_IDENTIFIER);</div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a14"></a><a class="code" href="../../d0/d2c/classble_advertising.html#af1f8b6ffbfa395f75edea27e35210838">manuf_specific_data</a>(m_beacon_info, APP_BEACON_INFO_LENGTH); <span class="comment">// set beacon data</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a15"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940">flags</a>(&amp;flags, <span class="keyword">sizeof</span>(flags));     <span class="comment">// set flags</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a16"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688">update</a>();                         <span class="comment">// update advertising data</span></div>
+<div class="line"></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a17"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// enable DFU service if need.</span></div>
 <div class="line">    dfu.enable();</div>
@@ -238,27 +240,25 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// LED pin declared</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a17"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
+<div class="line">    <a name="_a18"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
 <div class="line">    led.output();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enable Tickless Technology</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="a18"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
+<div class="line">    <a name="a19"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="keywordflow">while</span>(1) {</div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="comment">// Control the on/off interval of Advertisement for save power.</span></div>
+<div class="line">        <span class="comment">// blink led</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        led = <a name="a19"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
-<div class="line">        ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a20"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();  <span class="comment">// turn on the advertisement</span></div>
-<div class="line">        sleep(10);                  <span class="comment">// turn on with a short time (10ms)</span></div>
+<div class="line">        led = <a name="a20"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">        sleep(10);      <span class="comment">// turn on with a short time (10ms)</span></div>
 <div class="line">        led = <a name="a21"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
-<div class="line">        ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a22"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84">stop</a>();   <span class="comment">// turn off the advertisement for save power.</span></div>
-<div class="line">        sleep(990);                 <span class="comment">// sleep with a long time (990ms)</span></div>
+<div class="line">        sleep(990);     <span class="comment">// sleep with a long time (990ms)</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -266,7 +266,7 @@ $(document).ready(function(){initNavTree('d1/dc6/_2ble_2ble_beacon_2src_2main_8c
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Nov 1 2014 23:48:49 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Nov 3 2014 21:24:58 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

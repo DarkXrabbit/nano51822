@@ -25,6 +25,7 @@ var searchData=
   ['bleservicedfu',['bleServiceDFU',['../d6/d2e/classble_service_d_f_u.html',1,'bleServiceDFU'],['../d6/d2e/classble_service_d_f_u.html#a179c0f771e6e016f0c8d87c6bb3052a9',1,'bleServiceDFU::bleServiceDFU()']]],
   ['bleservicehrm',['bleServiceHRM',['../d0/dfc/classble_service_h_r_m.html',1,'bleServiceHRM'],['../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af',1,'bleServiceHRM::bleServiceHRM()']]],
   ['bleservicehtm',['bleServiceHTM',['../d3/d27/classble_service_h_t_m.html',1,'bleServiceHTM'],['../d3/d27/classble_service_h_t_m.html#afcec1b32117676556d63b52916e9d650',1,'bleServiceHTM::bleServiceHTM()']]],
+  ['bleservicetpl',['bleServiceTPL',['../d2/df3/classble_service_t_p_l.html',1,'bleServiceTPL'],['../d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b',1,'bleServiceTPL::bleServiceTPL()']]],
   ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html',1,'bleServiceUART'],['../db/d84/classble_service_u_a_r_t.html#a2a069c5054a7c9072fba7d233418e299',1,'bleServiceUART::bleServiceUART()']]],
   ['blocked',['BLOCKED',['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba376c1b6a3f75d283a2efacf737438d61',1,'thread.h']]],
   ['bluetooth',['Bluetooth',['../df/d6f/group___bluetooth.html',1,'']]]

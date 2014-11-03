@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.8"/>
-<title>uCXpresso.NRF: modules.h Source File</title>
+<title>uCXpresso.NRF: ble_service_tpl.h Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -80,7 +80,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   </div>
 </div>
 <script type="text/javascript">
-$(document).ready(function(){initNavTree('d3/d61/modules_8h_source.html','../../');});
+$(document).ready(function(){initNavTree('d8/d73/ble__service__tpl_8h_source.html','../../');});
 </script>
 <div id="doc-content">
 <!-- window showing the filter options -->
@@ -99,44 +99,61 @@ $(document).ready(function(){initNavTree('d3/d61/modules_8h_source.html','../../
 
 <div class="header">
   <div class="headertitle">
-<div class="title">modules.h</div>  </div>
+<div class="title">ble_service_tpl.h</div>  </div>
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ===============================================================================</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> Name        : modules.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> Name        : Tx Power Level</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> Author      : uCXpresso</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.0</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2014/10/1</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2014/11/3</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> Copyright   : Copyright (C) www.embeda.com.tw</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> Description : Modules and Boards pin define.</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> Description : Tx Power Level Service</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> ===============================================================================</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">                                 History</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> History</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> DATE     | VERSION |   DESCRIPTIONS                             |  By</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> 2014/10/6  v1.0.0  First Edition for nano51822                     Jason</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> 2014/11/3  v1.0.0  First Edition                                   Jason</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> ===============================================================================</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef MODULES_H_</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define MODULES_H_</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef BLE_SERVICE_TPL_H_</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define BLE_SERVICE_TPL_H_</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define BUTTON_DFU              0</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define DEF_RTS_PIN             8   </span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define DEF_TXD_PIN             9   </span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define DEF_CTS_PIN             10  </span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define DEF_RXD_PIN             11  </span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MODULES_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d2/df3/classble_service_t_p_l.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d2/df3/classble_service_t_p_l.html">bleServiceTPL</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <a class="code" href="../../d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b">bleServiceTPL</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble, int8_t initial_tx_power_level=0);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    uint32_t <a class="code" href="../../d2/df3/classble_service_t_p_l.html#a338c9413149246be8439c7d395315c26">send</a>(int8_t tx_power_level);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">   57</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> uint16_t <a class="code" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">uuid</a>() {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> BLE_UUID_TX_POWER_SERVICE;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(xHandle evt) {}</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_TPL_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classble_service_t_p_l_html_a338c9413149246be8439c7d395315c26"><div class="ttname"><a href="../../d2/df3/classble_service_t_p_l.html#a338c9413149246be8439c7d395315c26">bleServiceTPL::send</a></div><div class="ttdeci">uint32_t send(int8_t tx_power_level)</div><div class="ttdoc">Send the device Tx Power Level. </div></div>
+<div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:73</div></div>
+<div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
+<div class="ttc" id="classble_service_t_p_l_html_a4cdbce5f3104912d1f35fc86e29e002b"><div class="ttname"><a href="../../d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b">bleServiceTPL::bleServiceTPL</a></div><div class="ttdeci">bleServiceTPL(bleDevice &amp;ble, int8_t initial_tx_power_level=0)</div><div class="ttdoc">Construct the Tx Power Level class. </div></div>
+<div class="ttc" id="classble_service_t_p_l_html_a4709a903b34b75ef193cdd2bf34c2dc2"><div class="ttname"><a href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">bleServiceTPL::uuid</a></div><div class="ttdeci">virtual uint16_t uuid()</div><div class="ttdoc">the Tx Power Level Service UUID </div><div class="ttdef"><b>Definition:</b> ble_service_tpl.h:57</div></div>
+<div class="ttc" id="classble_service_t_p_l_html"><div class="ttname"><a href="../../d2/df3/classble_service_t_p_l.html">bleServiceTPL</a></div><div class="ttdoc">Tx Power Level Service class. </div><div class="ttdef"><b>Definition:</b> ble_service_tpl.h:35</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><b>modules.h</b></li>
-    <li class="footer">Generated on Sat Nov 1 2014 23:48:49 for uCXpresso.NRF by
+    <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_service_tpl.h</b></li>
+    <li class="footer">Generated on Mon Nov 3 2014 21:24:59 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

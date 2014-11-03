@@ -13,5 +13,6 @@ var searchData=
   ['bleservicedfu',['bleServiceDFU',['../d6/d2e/classble_service_d_f_u.html#a179c0f771e6e016f0c8d87c6bb3052a9',1,'bleServiceDFU']]],
   ['bleservicehrm',['bleServiceHRM',['../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af',1,'bleServiceHRM']]],
   ['bleservicehtm',['bleServiceHTM',['../d3/d27/classble_service_h_t_m.html#afcec1b32117676556d63b52916e9d650',1,'bleServiceHTM']]],
+  ['bleservicetpl',['bleServiceTPL',['../d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b',1,'bleServiceTPL']]],
   ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html#a2a069c5054a7c9072fba7d233418e299',1,'bleServiceUART']]]
 ];

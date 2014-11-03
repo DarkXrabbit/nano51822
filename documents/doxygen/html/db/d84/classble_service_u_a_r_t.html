@@ -139,7 +139,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2a069c5054a7c9072fba7d233418e299"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html" title="BLE UART Service class. ">bleServiceUART</a> constructor  <a href="#a2a069c5054a7c9072fba7d233418e299">More...</a><br /></td></tr>
 <tr class="separator:a2a069c5054a7c9072fba7d233418e299"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae705fcba3d3465a51b56a25c4403cd5b"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">isAvailable</a> ()</td></tr>
-<tr class="memdesc:ae705fcba3d3465a51b56a25c4403cd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service available.  <a href="#ae705fcba3d3465a51b56a25c4403cd5b">More...</a><br /></td></tr>
+<tr class="memdesc:ae705fcba3d3465a51b56a25c4403cd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the TX char. be listened.  <a href="#ae705fcba3d3465a51b56a25c4403cd5b">More...</a><br /></td></tr>
 <tr class="separator:ae705fcba3d3465a51b56a25c4403cd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3188668919976191f0fc3ac52ac87130"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html#a3188668919976191f0fc3ac52ac87130">isConnected</a> ()</td></tr>
 <tr class="separator:a3188668919976191f0fc3ac52ac87130"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -255,7 +255,12 @@ Public Member Functions</h2></td></tr>
 <p><a class="el" href="../../db/d84/classble_service_u_a_r_t.html" title="BLE UART Service class. ">bleServiceUART</a> constructor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ble</td><td>is a <a class="el" href="../../d6/d49/classble_device.html" title="BLE Device Class (SoftDevice). ">bleDevice</a> object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">ble</td><td>is a <a class="el" href="../../d6/d49/classble_device.html" title="BLE Device Class (SoftDevice). ">bleDevice</a> object. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">base_uuid</td><td>Point to a 16 bytes array that contents are the ble_uuid128_t UUID. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_char_uuid</td><td>The uuid of the tx characteristic. (device to App) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_char_uuid</td><td>The uuid of the rx characteristic. (app to device) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tx_fifo_size</td><td>The tx fifo buffer size. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">rx_fifo_size</td><td>The rx fifo buffer size. </td></tr>
   </table>
   </dd>
 </dl>
@@ -334,8 +339,8 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Check the service available. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
+<p>Check the TX char. be listened. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if TX char. be listened by app. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>.</p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a20">/ble/ble_app_uart/src/main.cpp</a>.</dd>
@@ -991,7 +996,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html">bleServiceUART</a></li>
-    <li class="footer">Generated on Sat Nov 1 2014 23:48:49 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Nov 3 2014 21:24:59 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -12,5 +12,6 @@ var searchData=
   ['bleservicedfu',['bleServiceDFU',['../d6/d2e/classble_service_d_f_u.html',1,'']]],
   ['bleservicehrm',['bleServiceHRM',['../d0/dfc/classble_service_h_r_m.html',1,'']]],
   ['bleservicehtm',['bleServiceHTM',['../d3/d27/classble_service_h_t_m.html',1,'']]],
+  ['bleservicetpl',['bleServiceTPL',['../d2/df3/classble_service_t_p_l.html',1,'']]],
   ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html',1,'']]]
 ];

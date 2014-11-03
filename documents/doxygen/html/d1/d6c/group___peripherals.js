@@ -44,7 +44,7 @@ var group___peripherals =
       [ "write", "de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0", null ]
     ] ],
     [ "gpioINT", "d7/d3a/classgpio_i_n_t.html", [
-      [ "gpioINT", "d7/d3a/classgpio_i_n_t.html#a8f7e0dd5de00988e249fa818c235e8a2", null ],
+      [ "gpioINT", "d7/d3a/classgpio_i_n_t.html#a58ea30a0d8b39ecb5fe5bcd7f02f06b2", null ],
       [ "disable", "d7/d3a/classgpio_i_n_t.html#a95ddbe01b70ba89d969e515c94c444ef", null ],
       [ "enable", "d7/d3a/classgpio_i_n_t.html#a1714bd4fa938195b8b9e0493e9b6f441", null ],
       [ "input", "d7/d3a/classgpio_i_n_t.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
