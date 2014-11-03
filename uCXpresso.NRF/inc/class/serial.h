@@ -26,6 +26,10 @@
 #include <class/pin.h>
 #include <class/semaphore.h>
 
+#define DEF_RTS_PIN				8	///< Default RTS PIN (input)  on P0.8
+#define DEF_TXD_PIN				9	///< Default TXD PIN (output) on P0.9
+#define DEF_CTS_PIN				10	///< Default CTS PIN (output) on P0.10
+#define DEF_RXD_PIN				11	///< Default RXD PIN (input)  on P0.11
 
 /**Use the CSerial class to transceiver the serial stream.
  * \class CSerial serial.h "class/serial.h"

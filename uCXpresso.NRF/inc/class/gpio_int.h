@@ -43,7 +43,7 @@ public:
 	 * \param pin to specify a PIN_NAME_T for IRQ.
 	 * \param mode to set the PIN_INPUT_MODE_T.
 	 */
-	gpioINT(uint8_t pin, PIN_INPUT_MODE_T mode=NEITHER);
+	gpioINT(uint8_t pin, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP);
 
 	/**@brief Enable the GPIO interrupt
 	 * @param sense to specify the EDGE_STATE_T to trigger the interrupt.

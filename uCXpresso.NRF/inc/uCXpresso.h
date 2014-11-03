@@ -8,7 +8,6 @@
 #include <stdbool.h>
 #include <stddef.h>
 #include <cr_section_macros.h>
-#include <modules.h>
 
 #ifdef __cplusplus
 extern "C" {

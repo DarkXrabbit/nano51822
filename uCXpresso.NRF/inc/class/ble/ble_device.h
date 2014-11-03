@@ -2,7 +2,7 @@
  ===============================================================================
  Name        : ble_device.h
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.2
  Date		 : 2014/8/1
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE SoftDevice driver (S110) class
@@ -14,6 +14,7 @@
  2014/8/1	v1.0.0	First Edition for nano51822						Jason
  2014/10/22 v1.0.1	Add information() member to provide "Device		Jason
  	 	 	 	 	Information Service".
+ 2014/11/3	v1.0.2	Add address() member to retrieve the BLE addr.	Jason
  ===============================================================================
  */
 
@@ -164,6 +165,10 @@ public:
 								LPCTSTR sw_rev = NULL,
 								ble_dis_sys_id_t *p_sys_id=NULL,
 								ble_dis_pnp_id_t *p_pnp_id=NULL);
+	/**
+	 * @brief 48bits (6 bytes) device address;
+	 */
+	static uint8_t *address();
 
 	/**@brief A device manager member object.
 	 * @ref bleDeviceManager class.
