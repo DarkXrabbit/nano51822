@@ -22,7 +22,7 @@
 #include "class/semaphore.h"
 #include "class/pin.h"
 
-#define MAX_GPIO_INT	4
+#define MAX_GPIO_INT	4	///< Maximum number of interrupt source
 
 /**Interrupt Trigger Enumerations
  * \ingroup Enumerations

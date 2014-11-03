@@ -122,7 +122,7 @@ int main(void)
 	//
 	// Advertisement
 	//
-	ble.m_advertising.interval(1000);						// set advertising interval = 25ms
+	ble.m_advertising.interval(500);						// set advertising interval = 25ms
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
 	ble.m_advertising.manuf_specific_data(m_beacon_info, APP_BEACON_INFO_LENGTH); // set beacon data
@@ -153,8 +153,8 @@ int main(void)
     	// Control the on/off interval of Advertisement for save power.
     	//
 		led = LED_ON;
-		sleep(20);					// turn on with a short time (10ms)
+		sleep(10);					// turn on with a short time (10ms)
 		led = LED_OFF;
-    	sleep(980);					// sleep with a long time (990ms)
+    	sleep(990);					// sleep with a long time (990ms)
     }
 }

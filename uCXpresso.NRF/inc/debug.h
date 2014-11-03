@@ -111,6 +111,6 @@ extern "C" void dbg_printf(LPCTSTR format, ...);
 // show message in Debug Mode with condition, if condition is false,
 // and press any key to continue.
 //
-extern "C" void ASSERT(bool condition, LPCTSTR format, ...);
+extern "C" void dbgASSERT(bool condition, LPCTSTR format, ...);
 
 #endif	// _CDEBUG_H
