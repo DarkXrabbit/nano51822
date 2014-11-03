@@ -46,7 +46,6 @@ typedef enum {
  *
  * @ingroup Bluetooth
  */
-
 class bleServiceHTM: public bleService {
 public:
 	bleServiceHTM(bleDevice &ble, hts_temp_type_t type=HTS_TEMP_TYPE_BODY);

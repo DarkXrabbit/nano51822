@@ -37,7 +37,12 @@ class bleServiceUART: public bleServiceCustomer, public CStream {
 public:
 	/**@brief bleServiceUART constructor
 	 *
-	 * @param ble is a bleDevice object.
+	 * @param[in] ble is a bleDevice object.
+	 * @param[in] base_uuid Point to a 16 bytes array that contents are the @ref ble_uuid128_t UUID.
+	 * @param[in] tx_char_uuid The uuid of the tx characteristic. (device to App)
+	 * @param[in] rx_char_uuid The uuid of the rx characteristic. (app to device)
+	 * @param[in] tx_fifo_size The tx fifo buffer size.
+	 * @param[in] rx_fifo_size The rx fifo buffer size.
 	 *
 	 */
 	bleServiceUART(bleDevice &ble,
@@ -47,7 +52,10 @@ public:
 				   uint16_t rx_char_uuid = BLE_UUID_UART_RX_CHARACTERISTIC,
 				   size_t tx_fifo_size = 64,
 				   size_t rx_fifo_size = 64);
-
+	/**
+	 * @brief Check the TX char. be listened.
+	 * @return true if TX char. be listened by app.
+	 */
 	virtual bool isAvailable();
 
 	virtual inline bool isConnected() {
