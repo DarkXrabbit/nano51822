@@ -108,6 +108,19 @@ var group___bluetooth =
       [ "uuid", "d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9", null ],
       [ "uuid_type", "d5/ded/classble_service_battery.html#a8931a117eb7be5a52455b53459b0df62", null ]
     ] ],
+    [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html", [
+      [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html#aba9a00907aba6c980314e25ae7aa5871", null ],
+      [ "cumulative_wheel_revs", "d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b", null ],
+      [ "is_auto_calibration_in_progress", "d7/d93/classble_service_c_s_c.html#aa236dc019b0d6bce15b956661bcd82e8", null ],
+      [ "isAvailable", "d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f", null ],
+      [ "isThread", "d7/d93/classble_service_c_s_c.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d7/d93/classble_service_c_s_c.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "send", "d7/d93/classble_service_c_s_c.html#a1b474069e50a2e6e3054c0fb723bbcf1", null ],
+      [ "send", "d7/d93/classble_service_c_s_c.html#ad28a9b02731e8fbcb16bd22e97fc9328", null ],
+      [ "send", "d7/d93/classble_service_c_s_c.html#a66bafb8c43f1cb8228df8fa627cbe27b", null ],
+      [ "uuid", "d7/d93/classble_service_c_s_c.html#ac08c4164b2f62f09d462df5ff940a1f8", null ],
+      [ "uuid_type", "d7/d93/classble_service_c_s_c.html#a8931a117eb7be5a52455b53459b0df62", null ]
+    ] ],
     [ "bleServiceCustomer", "de/d51/classble_service_customer.html", [
       [ "bleServiceCustomer", "de/d51/classble_service_customer.html#a8663dee466242f2475a79e0066b2106c", null ],
       [ "isAvailable", "de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1", null ],
@@ -147,6 +160,15 @@ var group___bluetooth =
       [ "send", "d3/d27/classble_service_h_t_m.html#a8e4942f5407c238d34c341794fa85fc8", null ],
       [ "uuid", "d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca", null ],
       [ "uuid_type", "d3/d27/classble_service_h_t_m.html#a8931a117eb7be5a52455b53459b0df62", null ]
+    ] ],
+    [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html", [
+      [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html#a7881093c8c12b3fe83ae2ad5e17f9515", null ],
+      [ "isAvailable", "de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c", null ],
+      [ "isThread", "de/dc0/classble_service_r_s_c.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "de/dc0/classble_service_r_s_c.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "send", "de/dc0/classble_service_r_s_c.html#a751c76f218847beb47ca89fd572057ec", null ],
+      [ "uuid", "de/dc0/classble_service_r_s_c.html#ab16dbfc90ec7ac94d5062ccbaa4d504d", null ],
+      [ "uuid_type", "de/dc0/classble_service_r_s_c.html#a8931a117eb7be5a52455b53459b0df62", null ]
     ] ],
     [ "bleServiceTPL", "d2/df3/classble_service_t_p_l.html", [
       [ "bleServiceTPL", "d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b", null ],

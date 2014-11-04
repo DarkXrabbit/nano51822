@@ -21,6 +21,10 @@
 #include <class/ble/ble_device.h>
 #include <class/semaphore.h>
 
+/**
+ * @brief Heart Rater Sensor location.
+ * @ingroup Enumerations
+ */
 typedef enum  {
 	HRS_BODY_SENSOR_LOCATION_OTHER = 0,
 	HRS_BODY_SENSOR_LOCATION_CHEST,
@@ -34,8 +38,18 @@ typedef enum  {
 /**@brief 	BLE Heart Rate service
  * @class 	bleServiceHRM ble_service_hrm.h "class/ble/ble_service_hrm.h"
  *
- * @details This service exposes heart rate and other data from a
- * Heart Rate Sensor intended for fitness applications.
+ * @details This module implements the Heart Rate Service with the Heart Rate Measurement,
+ *          Body Sensor Location and Heart Rate Control Point characteristics.
+ *          During initialization it adds the Heart Rate Service and Heart Rate Measurement
+ *          characteristic to the BLE stack database. Optionally it also adds the
+ *          Body Sensor Location and Heart Rate Control Point characteristics.
+ *
+ *          If enabled, notification of the Heart Rate Measurement characteristic is performed
+ *          when the application calls send() member function.
+ *
+ *          The Heart Rate Service also provides a set of functions for manipulating the
+ *          various fields in the Heart Rate Measurement characteristic, as well as setting
+ *          the Body Sensor Location characteristic value.
  *
  * @ingroup Bluetooth
  */
@@ -87,7 +101,6 @@ public:
 	//
 	uint16_t cccd_handle();
 	virtual ~bleServiceHRM();
-	bool	m_bNotify;
 protected:
 	xHandle	m_handle;
 	virtual void on_ble_event(xHandle evt);

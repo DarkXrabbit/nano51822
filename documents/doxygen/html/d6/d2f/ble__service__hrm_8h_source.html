@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc4</span>
+   &#160;<span id="projectnumber">v1.0.0 rc5</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -125,67 +125,74 @@ $(document).ready(function(){initNavTree('d6/d2f/ble__service__hrm_8h_source.htm
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;class/semaphore.h&gt;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>  {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    HRS_BODY_SENSOR_LOCATION_OTHER = 0,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    HRS_BODY_SENSOR_LOCATION_CHEST,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    HRS_BODY_SENSOR_LOCATION_WRIST,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    HRS_BODY_SENSOR_LOCATION_FINGER,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    HRS_BODY_SENSOR_LOCATION_HAND,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    HRS_BODY_SENSOR_LOCATION_EAR_LOBE,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    HRS_BODY_SENSOR_LOCATION_FOOT</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}hrm_sensor_loc_t;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d0/dfc/classble_service_h_r_m.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af">bleServiceHRM</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                  hrm_sensor_loc_t sensor_location = HRS_BODY_SENSOR_LOCATION_FINGER,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                  <span class="keywordtype">bool</span> contact_supported=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">isAvailable</a>();</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">virtual</span> uint32_t <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#acc665d3430aa1483d764c2bb63a60c5f">send</a>(uint16_t heart_rate);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a2537574b52864266e9d14d67d8fb1c7c">rr_interval_add</a>(uint16_t interval);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#acf3c3adccb1d2f869eaf66465353e89d">rr_interval_buffer_is_full</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a4de4e07149f8c67134c0b4eaf7f69536">sensor_contact_detected_update</a>(<span class="keywordtype">bool</span> is_sensor_contact_detected);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">   81</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> uint16_t <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">uuid</a>() {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordflow">return</span> BLE_UUID_HEART_RATE_SERVICE;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    uint16_t cccd_handle();</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a>();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">bool</span>    m_bNotify;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    xHandle m_handle;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(xHandle evt);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//@endcond</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a> *gpHRM;    </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">   28</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span>  {</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c">   29</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c">HRS_BODY_SENSOR_LOCATION_OTHER</a> = 0,</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a342e52f84315b22bf0e4dd8fa35c2a58">   30</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a342e52f84315b22bf0e4dd8fa35c2a58">HRS_BODY_SENSOR_LOCATION_CHEST</a>,</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a644d50fb9e5c980edc7c9fe77355d4b6">   31</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a644d50fb9e5c980edc7c9fe77355d4b6">HRS_BODY_SENSOR_LOCATION_WRIST</a>,</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4">   32</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4">HRS_BODY_SENSOR_LOCATION_FINGER</a>,</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a559dec6f1f60fb6f9b4e3601e94aa256">   33</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a559dec6f1f60fb6f9b4e3601e94aa256">HRS_BODY_SENSOR_LOCATION_HAND</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a490729cf310ea1fb9d9a25ced949b9ee">   34</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a490729cf310ea1fb9d9a25ced949b9ee">HRS_BODY_SENSOR_LOCATION_EAR_LOBE</a>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a3bfb0d1dc3603f61de94c17ac7d7edc7">   35</a></span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a3bfb0d1dc3603f61de94c17ac7d7edc7">HRS_BODY_SENSOR_LOCATION_FOOT</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}<a class="code" href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">hrm_sensor_loc_t</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d0/dfc/classble_service_h_r_m.html">   56</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af">bleServiceHRM</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                  <a class="code" href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">hrm_sensor_loc_t</a> sensor_location = <a class="code" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4">HRS_BODY_SENSOR_LOCATION_FINGER</a>,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                  <span class="keywordtype">bool</span> contact_supported=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">isAvailable</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">virtual</span> uint32_t <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#acc665d3430aa1483d764c2bb63a60c5f">send</a>(uint16_t heart_rate);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a2537574b52864266e9d14d67d8fb1c7c">rr_interval_add</a>(uint16_t interval);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#acf3c3adccb1d2f869eaf66465353e89d">rr_interval_buffer_is_full</a>();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a4de4e07149f8c67134c0b4eaf7f69536">sensor_contact_detected_update</a>(<span class="keywordtype">bool</span> is_sensor_contact_detected);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">   95</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> uint16_t <a class="code" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">uuid</a>() {</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> BLE_UUID_HEART_RATE_SERVICE;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_HRM_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    uint16_t cccd_handle();</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a>();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    xHandle m_handle;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(xHandle evt);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//@endcond</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a> *gpHRM;    </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_HRM_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classble_service_h_r_m_html_a4de4e07149f8c67134c0b4eaf7f69536"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#a4de4e07149f8c67134c0b4eaf7f69536">bleServiceHRM::sensor_contact_detected_update</a></div><div class="ttdeci">virtual void sensor_contact_detected_update(bool is_sensor_contact_detected)</div><div class="ttdoc">Function for setting the state of the Sensor Contact Detected bit. </div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81a559dec6f1f60fb6f9b4e3601e94aa256"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a559dec6f1f60fb6f9b4e3601e94aa256">HRS_BODY_SENSOR_LOCATION_HAND</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:33</div></div>
 <div class="ttc" id="classble_service_h_r_m_html_a10cc4a24d389a5f174aa652ecfcaa3af"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af">bleServiceHRM::bleServiceHRM</a></div><div class="ttdeci">bleServiceHRM(bleDevice &amp;ble, hrm_sensor_loc_t sensor_location=HRS_BODY_SENSOR_LOCATION_FINGER, bool contact_supported=false)</div></div>
-<div class="ttc" id="classble_service_h_r_m_html_a5769a45e94d610f6ed3403c4ab8172ee"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM::uuid</a></div><div class="ttdeci">virtual uint16_t uuid()</div><div class="ttdoc">Get the UUID of service. </div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:81</div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4">HRS_BODY_SENSOR_LOCATION_FINGER</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:32</div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81a490729cf310ea1fb9d9a25ced949b9ee"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a490729cf310ea1fb9d9a25ced949b9ee">HRS_BODY_SENSOR_LOCATION_EAR_LOBE</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:34</div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c">HRS_BODY_SENSOR_LOCATION_OTHER</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:29</div></div>
+<div class="ttc" id="classble_service_h_r_m_html_a5769a45e94d610f6ed3403c4ab8172ee"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM::uuid</a></div><div class="ttdeci">virtual uint16_t uuid()</div><div class="ttdoc">Get the UUID of service. </div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:95</div></div>
 <div class="ttc" id="classble_service_h_r_m_html_a2537574b52864266e9d14d67d8fb1c7c"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#a2537574b52864266e9d14d67d8fb1c7c">bleServiceHRM::rr_interval_add</a></div><div class="ttdeci">virtual void rr_interval_add(uint16_t interval)</div><div class="ttdoc">Function for adding a RR Interval measurement to the RR Interval buffer. </div></div>
 <div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:73</div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81a342e52f84315b22bf0e4dd8fa35c2a58"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a342e52f84315b22bf0e4dd8fa35c2a58">HRS_BODY_SENSOR_LOCATION_CHEST</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:30</div></div>
+<div class="ttc" id="group___enumerations_html_ga7f44a6b484328d6dd2d312f908dfea81"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">hrm_sensor_loc_t</a></div><div class="ttdeci">hrm_sensor_loc_t</div><div class="ttdoc">Heart Rater Sensor location. </div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:28</div></div>
 <div class="ttc" id="classble_service_h_r_m_html_acf3c3adccb1d2f869eaf66465353e89d"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#acf3c3adccb1d2f869eaf66465353e89d">bleServiceHRM::rr_interval_buffer_is_full</a></div><div class="ttdeci">virtual bool rr_interval_buffer_is_full()</div><div class="ttdoc">Function for checking if RR Interval buffer is full. </div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81a644d50fb9e5c980edc7c9fe77355d4b6"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a644d50fb9e5c980edc7c9fe77355d4b6">HRS_BODY_SENSOR_LOCATION_WRIST</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:31</div></div>
 <div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
+<div class="ttc" id="group___enumerations_html_gga7f44a6b484328d6dd2d312f908dfea81a3bfb0d1dc3603f61de94c17ac7d7edc7"><div class="ttname"><a href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a3bfb0d1dc3603f61de94c17ac7d7edc7">HRS_BODY_SENSOR_LOCATION_FOOT</a></div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:35</div></div>
 <div class="ttc" id="classble_service_h_r_m_html_acc665d3430aa1483d764c2bb63a60c5f"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#acc665d3430aa1483d764c2bb63a60c5f">bleServiceHRM::send</a></div><div class="ttdeci">virtual uint32_t send(uint16_t heart_rate)</div><div class="ttdoc">Send the heart rate measurement value. </div></div>
 <div class="ttc" id="classble_service_h_r_m_html_abc4fe4fcaabc8b0eacb8a1acd0f08fe3"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM::isAvailable</a></div><div class="ttdeci">virtual bool isAvailable()</div><div class="ttdoc">Check the service available. </div></div>
-<div class="ttc" id="classble_service_h_r_m_html"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a></div><div class="ttdoc">BLE Heart Rate service. </div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:42</div></div>
+<div class="ttc" id="classble_service_h_r_m_html"><div class="ttname"><a href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a></div><div class="ttdoc">BLE Heart Rate service. </div><div class="ttdef"><b>Definition:</b> ble_service_hrm.h:56</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_service_hrm.h</b></li>
-    <li class="footer">Generated on Mon Nov 3 2014 21:24:59 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 4 2014 14:36:00 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

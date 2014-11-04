@@ -24,7 +24,7 @@
  * @brief 	Battery Service Class.
  * @class 	bleServiceBattery ble_service_bat.h "class/ble/ble_service_bat.h"
  *
- * @details This class implements the Battery Service with the Battery Level characteristic.
+ * @details This module implements the Battery Service with the Battery Level characteristic.
  *          During initialization it adds the Battery Service and Battery Level characteristic
  *          to the BLE stack database. Optionally it can also add a Report Reference descriptor
  *          to the Battery Level characteristic (used when including the Battery Service in
@@ -58,7 +58,6 @@ public:
 	///@cond PRIVATE
 	//
 	virtual ~bleServiceBattery();
-	bool m_bNotify;
 protected:
 	xHandle	m_handle;
 	virtual void on_ble_event(xHandle evt);

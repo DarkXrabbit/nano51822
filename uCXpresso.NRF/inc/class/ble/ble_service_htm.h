@@ -87,7 +87,6 @@ public:
 	///@cond
 	//
 	virtual ~bleServiceHTM();
-	bool	m_bIndicate;
 protected:
 	xHandle	m_handle;
 	virtual void on_ble_event(xHandle evt);

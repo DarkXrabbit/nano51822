@@ -38,7 +38,6 @@ typedef enum {
 	PRI_LOW = 0,	///< low priorities is for all normal tasks used.
 	PRI_MEDIUM,		///< medium
 	PRI_HIGH,		///< high
-	PRI_SUPER,		///< super
 	PRI_HARDWARE	///< for hardware interrupt
 }PRIORITIES_T;
 

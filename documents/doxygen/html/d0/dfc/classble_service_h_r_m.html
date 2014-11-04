@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc4</span>
+   &#160;<span id="projectnumber">v1.0.0 rc5</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -132,7 +132,7 @@ Inheritance diagram for bleServiceHRM:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a10cc4a24d389a5f174aa652ecfcaa3af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af">bleServiceHRM</a> (<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble, hrm_sensor_loc_t sensor_location=HRS_BODY_SENSOR_LOCATION_FINGER, bool contact_supported=false)</td></tr>
+<tr class="memitem:a10cc4a24d389a5f174aa652ecfcaa3af"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af">bleServiceHRM</a> (<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble, <a class="el" href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">hrm_sensor_loc_t</a> sensor_location=<a class="el" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4">HRS_BODY_SENSOR_LOCATION_FINGER</a>, bool contact_supported=false)</td></tr>
 <tr class="separator:a10cc4a24d389a5f174aa652ecfcaa3af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc4fe4fcaabc8b0eacb8a1acd0f08fe3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">isAvailable</a> ()</td></tr>
 <tr class="memdesc:abc4fe4fcaabc8b0eacb8a1acd0f08fe3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service available.  <a href="#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">More...</a><br /></td></tr>
@@ -162,7 +162,9 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Heart Rate service. </p>
-<p>This service exposes heart rate and other data from a Heart Rate Sensor intended for fitness applications. </p>
+<p>This module implements the Heart Rate Service with the Heart Rate Measurement, Body Sensor Location and Heart Rate Control Point characteristics. During initialization it adds the Heart Rate Service and Heart Rate Measurement characteristic to the BLE stack database. Optionally it also adds the Body Sensor Location and Heart Rate Control Point characteristics.</p>
+<p>If enabled, notification of the Heart Rate Measurement characteristic is performed when the application calls <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#acc665d3430aa1483d764c2bb63a60c5f" title="Send the heart rate measurement value. ">send()</a> member function.</p>
+<p>The Heart Rate Service also provides a set of functions for manipulating the various fields in the Heart Rate Measurement characteristic, as well as setting the Body Sensor Location characteristic value. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a10">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a10cc4a24d389a5f174aa652ecfcaa3af"></a>
@@ -178,8 +180,8 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">hrm_sensor_loc_t&#160;</td>
-          <td class="paramname"><em>sensor_location</em> = <code>HRS_BODY_SENSOR_LOCATION_FINGER</code>, </td>
+          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">hrm_sensor_loc_t</a>&#160;</td>
+          <td class="paramname"><em>sensor_location</em> = <code><a class="el" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4">HRS_BODY_SENSOR_LOCATION_FINGER</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -465,7 +467,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a></li>
-    <li class="footer">Generated on Mon Nov 3 2014 21:24:59 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 4 2014 14:36:00 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

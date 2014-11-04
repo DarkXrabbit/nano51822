@@ -40,7 +40,7 @@
 #define APP_BEACON_INFO_LENGTH           0x17                              /**< Total length of information advertised by the Beacon. */
 #define APP_ADV_DATA_LENGTH              0x15                              /**< Length of manufacturer specific data in the advertisement. */
 #define APP_DEVICE_TYPE                  0x02                              /**< 0x02 refers to Beacon. */
-#define APP_MEASURED_RSSI                ((uint8_t)-66)                    /**< The Beacon's measured RSSI at 1 meter distance in dBm. */
+#define APP_MEASURED_RSSI                ((uint8_t)-59)                    /**< The Beacon's measured RSSI at 1 meter distance in dBm. */
 #define APP_COMPANY_IDENTIFIER           0x0059                            /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 #define APP_BEACON_UUID                  0x01, 0x12, 0x23, 0x34, \
                                          0x45, 0x56, 0x67, 0x78, \

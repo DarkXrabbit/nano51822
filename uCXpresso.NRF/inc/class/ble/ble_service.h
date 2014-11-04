@@ -37,7 +37,7 @@ public:
 	/** @brief Check the service available.
 	 * @return true if service is available, false otherwise.
 	 */
-	virtual inline bool isAvailable() { return true; }
+	virtual bool isAvailable();
 
 	/**@brief Get the UUID of service
 	 * @return an uint16_t value.

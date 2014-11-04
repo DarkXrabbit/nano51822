@@ -24,7 +24,6 @@
  * @brief Analog reference source.
  * @ingroup Enumerations
  */
-
 typedef enum {
 	AREF_VBG = 0,			///< Use internal 1.2V band gap reference.
 	AREF_1					///< Use AREF1 (P0.6) as analog reference input.

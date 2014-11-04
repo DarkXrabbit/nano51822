@@ -190,7 +190,6 @@ int main(void) {
 	//
 	ledLeft.output();	// set led0 as an output pin
 	ledRight.output();	// set led1 as an output pin
-
 	uint8_t ch= 0;
 
 	//
@@ -206,25 +205,25 @@ int main(void) {
 		// Uart Service
 		//
 		if ( ble.isConnected() ) {
-			ch = nus.read();	// block in the read() to wait a char.
+			// block in the read() to wati a char.
+			// Also, block will save the power when tickless enabled.
+			ch = nus.read();
 			if ( ch ) {
 				cmd.input(ch);
 			}
 
 		} else {
-		//
-		// alternate led when disconnected (idle)
-		//
-			if (ch) {
-				ledRight = LED_ON;
-			} else {
-				ledLeft = LED_ON;
-			}
-			sleep(50);	// blink a short time (50ms)
+			//
+			// alternate led when disconnected (idle)
+			//
+			ch = (ch ? 0 : 1);
+			ledRight = (ch ? LED_ON : LED_OFF);
+			ledLeft = (ch ? LED_OFF : LED_ON);
+			sleep(10);	// blink a short time (10ms)
+
 			ledRight = LED_OFF;
 			ledLeft = LED_OFF;
-			ch = (ch ? 0 : 1);
-			sleep(950);	// save power with a long time (950ms)
+			sleep(990);	// save power with a long time (990ms)
 		}
 	}
 }

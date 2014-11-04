@@ -28,6 +28,9 @@ var searchData=
   ['rising',['RISING',['../db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924ad93abe7aced82e9a4fcac4127a36ece3',1,'gpio_int.h']]],
   ['rr_5finterval_5fadd',['rr_interval_add',['../d0/dfc/classble_service_h_r_m.html#a2537574b52864266e9d14d67d8fb1c7c',1,'bleServiceHRM']]],
   ['rr_5finterval_5fbuffer_5fis_5ffull',['rr_interval_buffer_is_full',['../d0/dfc/classble_service_h_r_m.html#acf3c3adccb1d2f869eaf66465353e89d',1,'bleServiceHRM']]],
+  ['rsc_5frunning',['RSC_RUNNING',['../db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa0aec77c90c048e22b4effd9bf9863bcc',1,'ble_service_rsc.h']]],
+  ['rsc_5fstatus_5ft',['RSC_STATUS_T',['../db/dff/group___enumerations.html#ga3cf86d5824f710be6f3ea37cab97f8da',1,'ble_service_rsc.h']]],
+  ['rsc_5fwalking',['RSC_WALKING',['../db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa59cbf919dfeb3a959fe068663ba5a928',1,'ble_service_rsc.h']]],
   ['rtos',['RTOS',['../d8/dba/group___r_t_o_s.html',1,'']]],
   ['run',['run',['../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f',1,'CShell::run()'],['../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7',1,'CThread::run()'],['../d4/d37/class_c_debug.html#a9a3e40cc8ee5d0c2a41577f658779c71',1,'CDebug::run()']]],
   ['running',['running',['../dc/dd4/class_w_d_t.html#a4758e66d9463ac55d6cb50d329b2ad6a',1,'WDT::running()'],['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1061be6c3fb88d32829cba6f6b2be304',1,'RUNNING():&#160;thread.h']]]

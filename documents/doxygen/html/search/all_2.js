@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['cycling_20speed_20and_20cadence_20service_20feature_20bits',['Cycling Speed and Cadence Service feature bits',['../de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s.html',1,'']]],
   ['cadc',['CAdc',['../d7/d0f/class_c_adc.html',1,'']]],
   ['cbus',['CBus',['../de/d89/class_c_bus.html',1,'CBus'],['../de/d89/class_c_bus.html#a03bb378921772d204c60958d7e8c0702',1,'CBus::CBus()']]],
   ['cdebug',['CDebug',['../d4/d37/class_c_debug.html',1,'CDebug'],['../d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e',1,'CDebug::CDebug()']]],
@@ -33,5 +34,6 @@ var searchData=
   ['cstring',['CString',['../df/d99/class_c_string.html',1,'CString'],['../df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7',1,'CString::CString(int size=DEF_STRBUF_SIZE)'],['../df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f',1,'CString::CString(const CString &amp;str)'],['../df/d99/class_c_string.html#a233297b331dbc4c342745d67ad166b97',1,'CString::CString(LPCTSTR str, int length=0)'],['../df/d99/class_c_string.html#a4cc7726fc9fbaa450876ffd98e3e6ff4',1,'CString::CString(LPTSTR buf)']]],
   ['cthread',['CThread',['../d0/d26/class_c_thread.html',1,'']]],
   ['ctimeout',['CTimeout',['../d5/d5b/class_c_timeout.html',1,'']]],
-  ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'CTimer'],['../db/de1/class_c_timer.html#a32a45397ba76138a08be664e8a87172d',1,'CTimer::CTimer()']]]
+  ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'CTimer'],['../db/de1/class_c_timer.html#a32a45397ba76138a08be664e8a87172d',1,'CTimer::CTimer()']]],
+  ['cumulative_5fwheel_5frevs',['cumulative_wheel_revs',['../d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b',1,'bleServiceCSC']]]
 ];

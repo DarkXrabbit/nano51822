@@ -40,6 +40,15 @@ var group___enumerations =
       [ "BLE_TX_m30dBm", "db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a65e542ae5a3749991b60cce561759055", null ],
       [ "BLE_TX_m40dBm", "db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617abce11dec6ca95fb5b8a96aca44142761", null ]
     ] ],
+    [ "hrm_sensor_loc_t", "db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81", [
+      [ "HRS_BODY_SENSOR_LOCATION_OTHER", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c", null ],
+      [ "HRS_BODY_SENSOR_LOCATION_CHEST", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a342e52f84315b22bf0e4dd8fa35c2a58", null ],
+      [ "HRS_BODY_SENSOR_LOCATION_WRIST", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a644d50fb9e5c980edc7c9fe77355d4b6", null ],
+      [ "HRS_BODY_SENSOR_LOCATION_FINGER", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a9cb2cd3edc71cf055dc472c5f2b5ecb4", null ],
+      [ "HRS_BODY_SENSOR_LOCATION_HAND", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a559dec6f1f60fb6f9b4e3601e94aa256", null ],
+      [ "HRS_BODY_SENSOR_LOCATION_EAR_LOBE", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a490729cf310ea1fb9d9a25ced949b9ee", null ],
+      [ "HRS_BODY_SENSOR_LOCATION_FOOT", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a3bfb0d1dc3603f61de94c17ac7d7edc7", null ]
+    ] ],
     [ "NRF_LFCLKSRC_T", "db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422", [
       [ "NRF_LFCLKSRC_SYNTH_250_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148", null ],
       [ "NRF_LFCLKSRC_XTAL_500_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c", null ],
@@ -77,13 +86,16 @@ var group___enumerations =
       [ "PRI_LOW", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402", null ],
       [ "PRI_MEDIUM", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da79f9a58f2b2fb4dcce4589cd93a5e3f8", null ],
       [ "PRI_HIGH", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b", null ],
-      [ "PRI_SUPER", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae497885a7abaca97e8daf75b84bb67da", null ],
       [ "PRI_HARDWARE", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5", null ]
     ] ],
     [ "PWM_CH_T", "db/dff/group___enumerations.html#ga8b06d2bf1a2f8d7cd5e4bd6e1191ce93", [
       [ "PWM_CH_1", "db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71", null ],
       [ "PWM_CH_2", "db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded", null ],
       [ "PWM_CH_3", "db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db", null ]
+    ] ],
+    [ "RSC_STATUS_T", "db/dff/group___enumerations.html#ga3cf86d5824f710be6f3ea37cab97f8da", [
+      [ "RSC_WALKING", "db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa59cbf919dfeb3a959fe068663ba5a928", null ],
+      [ "RSC_RUNNING", "db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa0aec77c90c048e22b4effd9bf9863bcc", null ]
     ] ],
     [ "SPI_FREQ_T", "db/dff/group___enumerations.html#ga2d645fa61295e3fd670effeb557d117d", [
       [ "SPI_FREQ_125KHZ", "db/dff/group___enumerations.html#gga2d645fa61295e3fd670effeb557d117da18c5f543fd25627d0d61d0dc47ecdd95", null ],

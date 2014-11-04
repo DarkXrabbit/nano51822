@@ -61,7 +61,9 @@ public:
 	//
 	///@cond PRIVATE
 	//
+	virtual ~bleServiceTPL();
 protected:
+	xHandle	m_handle;
 	virtual void on_ble_event(xHandle evt) {}
 	///@endcond
 };
