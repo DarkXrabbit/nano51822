@@ -9,5 +9,8 @@ var searchData=
   ['hrs_5fbody_5fsensor_5flocation_5fhand',['HRS_BODY_SENSOR_LOCATION_HAND',['../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a559dec6f1f60fb6f9b4e3601e94aa256',1,'ble_service_hrm.h']]],
   ['hrs_5fbody_5fsensor_5flocation_5fother',['HRS_BODY_SENSOR_LOCATION_OTHER',['../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c',1,'ble_service_hrm.h']]],
   ['hrs_5fbody_5fsensor_5flocation_5fwrist',['HRS_BODY_SENSOR_LOCATION_WRIST',['../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a644d50fb9e5c980edc7c9fe77355d4b6',1,'ble_service_hrm.h']]],
+  ['hvx_5findication',['HVX_INDICATION',['../db/dff/group___enumerations.html#ggaea1819f50414834e55b0387c666e58e2af35a88a89205978a275a886941f1ffc6',1,'ble_service_customer.h']]],
+  ['hvx_5fnotification',['HVX_NOTIFICATION',['../db/dff/group___enumerations.html#ggaea1819f50414834e55b0387c666e58e2a3a6b0dabe3c71682e51a885a98c2c972',1,'ble_service_customer.h']]],
+  ['hvx_5fwrite_5ft',['HVX_WRITE_T',['../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2',1,'ble_service_customer.h']]],
   ['hwpwm',['hwPWM',['../da/deb/classhw_p_w_m.html',1,'hwPWM'],['../da/deb/classhw_p_w_m.html#abda7b5ebfb96b323ebc19bf529602adc',1,'hwPWM::hwPWM()']]]
 ];

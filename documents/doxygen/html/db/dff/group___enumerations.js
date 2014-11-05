@@ -49,6 +49,10 @@ var group___enumerations =
       [ "HRS_BODY_SENSOR_LOCATION_EAR_LOBE", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a490729cf310ea1fb9d9a25ced949b9ee", null ],
       [ "HRS_BODY_SENSOR_LOCATION_FOOT", "db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a3bfb0d1dc3603f61de94c17ac7d7edc7", null ]
     ] ],
+    [ "HVX_WRITE_T", "db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2", [
+      [ "HVX_NOTIFICATION", "db/dff/group___enumerations.html#ggaea1819f50414834e55b0387c666e58e2a3a6b0dabe3c71682e51a885a98c2c972", null ],
+      [ "HVX_INDICATION", "db/dff/group___enumerations.html#ggaea1819f50414834e55b0387c666e58e2af35a88a89205978a275a886941f1ffc6", null ]
+    ] ],
     [ "NRF_LFCLKSRC_T", "db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422", [
       [ "NRF_LFCLKSRC_SYNTH_250_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148", null ],
       [ "NRF_LFCLKSRC_XTAL_500_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c", null ],

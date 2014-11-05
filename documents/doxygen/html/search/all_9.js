@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['last_5ferror',['last_error',['../de/d51/classble_service_customer.html#aebbab9745ac76182cd7ba0087f7d7f4e',1,'bleServiceCustomer']]],
   ['led_5foff',['LED_OFF',['../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40',1,'pin.h']]],
   ['led_5fon',['LED_ON',['../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d',1,'pin.h']]],
   ['length',['length',['../df/d99/class_c_string.html#a8f131c0e097bea62d809acbc995807b9',1,'CString']]],

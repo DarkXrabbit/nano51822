@@ -24,6 +24,15 @@
 #include <class/ble/nrf51/ble_gattc.h>
 #include <class/ble/nrf51/ble_gatts.h>
 
+/**
+ * @brief GATT Handle Value operations
+ * @ingroup Enumerations
+ */
+enum HVX_WRITE_T {
+	HVX_NOTIFICATION = 0x01,	/**< Handle Value Notification. */
+	HVX_INDICATION	= 0x02  	/**< Handle Value Indication. */
+};
+
 /**@brief 	BLE customer services base class.
  * @class 	bleServiceCustomer ble_service_customer.h "class/ble/ble_service_customer.h"
  *
@@ -40,6 +49,28 @@ public:
 	 */
 	virtual bool isAvailable();
 
+	/**
+	 * @brief Retrieve the uuid of service;
+	 */
+	virtual inline uint16_t uuid() {
+		return m_service_uuid;
+	}
+
+	/**
+	 * @brief Retrieve the uuid type of service
+	 */
+	virtual inline uint8_t uuid_type() {
+		return m_uuid_type;
+	}
+
+	/**
+	 * @brief Check the service valid
+	 */
+	virtual inline uint32_t last_error() {
+		return m_last_err_code;
+	}
+
+protected:
 	/**
 	 * @brief Add a service declaration to the local server ATT table.
 	 *
@@ -84,25 +115,51 @@ public:
 										ble_gatts_attr_t *p_attr_char_value,
 										ble_gatts_char_handles_t *p_handles );
 
-	virtual inline uint16_t uuid() {
-		return m_service_uuid;
-	}
+	/**
+	 * @brief Set the value of a given attribute.
+	 *
+	 * @param[in] char_handle	Characteristic handle.
+	 * @param[in] buffer		Pointer to data buffer.
+	 * @param[in] length	Length in bytes to be written, length in bytes written after successful return.
+	 * @param[in] offset    	Offset in bytes to write from.
+	 *
+	 * @return Number of byte to write, return zero if failed.
+	 */
+	virtual uint16_t gatts_value_set(ble_gatts_char_handles_t &char_handle, uint8_t *buffer, uint16_t length, uint16_t offset = 0);
 
-	virtual inline uint8_t uuid_type() {
-		return m_uuid_type;
-	}
+	/**
+	 * @brief Get the value of a given attribute.
+	 *
+	 * @param[in] char_handle	Characteristic handle.
+	 * @param[in] buffer		Pointer to data buffer.
+	 * @param[in] length	Length in bytes to be written, length in bytes written after successful return.
+	 * @param[in] offset    	Offset in bytes to write from.
+	 *
+	 * @return Number of byte to read, return zero if failed.
+	 */
+	virtual uint16_t gatts_value_get(ble_gatts_char_handles_t &char_handle, uint8_t *buffer, uint16_t length, uint16_t offset = 0);
 
+	/**
+	 *	@breif Check the gatts write buffer available.
+	 *	@warning To check the write buffer available before to write a data to Notify or Indicate an attribute value.
+	 */
+	virtual uint8_t gatts_hvx_writeable();
 
-	virtual inline bool isValid() {
-		return (m_last_err_code==NRF_SUCCESS ? true : false);
-	}
+	/**
+	 * @brief Notify or Indicate an attribute value.
+	 *
+	 * @param[in] char_handle	Characteristic handle.
+	 * @param[in] buffer		Pointer to data buffer.
+	 * @param[in] length		Length in bytes to be written, length in bytes written after successful return.
+	 * @param[in] type    		Indication or Notification, see @ref HVX_WRITE_T.
+	 *
+	 * @return Number of bytes to write, return zero if failed.
+	 */
+	virtual uint16_t gatts_hvx_write(ble_gatts_char_handles_t &char_handle, uint8_t *buffer, uint16_t length, HVX_WRITE_T type);
 
 	//
 	///@cond PRIVATE
 	//
-	virtual ~bleServiceCustomer();
-
-protected:
 	uint16_t		m_conn_handle;
 	ble_uuid128_t	m_p_base_uuid;
 	uint16_t		m_service_uuid;
@@ -114,11 +171,11 @@ protected:
 	// on ble event and event dispatch
 	//
 	virtual void on_ble_event(ble_evt_t * p_ble_evt);
-	virtual void on_connected(ble_evt_t * p_ble_evt);
-	virtual void on_disconnected(ble_evt_t * p_ble_evt);
-	virtual void on_write(ble_evt_t * p_ble_evt);
-	virtual void on_hvc(ble_evt_t * p_ble_evt);
-	virtual void on_send(ble_evt_t * p_ble_evt);
+	virtual void on_connected(ble_evt_t * p_ble_evt);		// on connected
+	virtual void on_disconnected(ble_evt_t * p_ble_evt);	// on disconnect
+	virtual void on_write(ble_evt_t * p_ble_evt);			// on write event
+	virtual void on_hvc(ble_evt_t * p_ble_evt);				// on handle value changed
+	virtual void on_send(ble_evt_t * p_ble_evt);			// on tx buffer empty
 	///@endcond
 };
 

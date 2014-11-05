@@ -1,5 +1,9 @@
 var searchData=
 [
+  ['gatts_5fhvx_5fwrite',['gatts_hvx_write',['../de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e',1,'bleServiceCustomer']]],
+  ['gatts_5fhvx_5fwriteable',['gatts_hvx_writeable',['../de/d51/classble_service_customer.html#a83e665c40946c21f44cdd4d961237d2b',1,'bleServiceCustomer']]],
+  ['gatts_5fvalue_5fget',['gatts_value_get',['../de/d51/classble_service_customer.html#aec037610f5e08981839bc032a4d69c5c',1,'bleServiceCustomer']]],
+  ['gatts_5fvalue_5fset',['gatts_value_set',['../de/d51/classble_service_customer.html#a797d0d03dfc264ca1b5268ee546e858a',1,'bleServiceCustomer']]],
   ['get',['get',['../dd/d60/class_c_event_bit.html#a52b137d375dbb670b2473222c8914081',1,'CEventBit']]],
   ['get_5ftemperature',['get_temperature',['../d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da',1,'bleServiceHTM']]],
   ['getadvdata',['getAdvData',['../d0/d2c/classble_advertising.html#a9f19b8e405a37a95fae0ac1d4a43208c',1,'bleAdvertising']]],

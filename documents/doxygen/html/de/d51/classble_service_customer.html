@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('de/d51/classble_service_customer.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d5/d55/classble_service_customer-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleServiceCustomer Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -138,22 +139,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a37a2eb258d248ad86575e8b7f31deda1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">isAvailable</a> ()</td></tr>
 <tr class="memdesc:a37a2eb258d248ad86575e8b7f31deda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service available.  <a href="#a37a2eb258d248ad86575e8b7f31deda1">More...</a><br /></td></tr>
 <tr class="separator:a37a2eb258d248ad86575e8b7f31deda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63f759c0494bc2affe5a7779ded6a40b"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">uuid</a> ()</td></tr>
+<tr class="memdesc:a63f759c0494bc2affe5a7779ded6a40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the uuid of service;.  <a href="#a63f759c0494bc2affe5a7779ded6a40b">More...</a><br /></td></tr>
+<tr class="separator:a63f759c0494bc2affe5a7779ded6a40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a">uuid_type</a> ()</td></tr>
+<tr class="memdesc:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the uuid type of service.  <a href="#a4119b0d8ce0f1e04bcff8c60fa51885a">More...</a><br /></td></tr>
+<tr class="separator:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebbab9745ac76182cd7ba0087f7d7f4e"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#aebbab9745ac76182cd7ba0087f7d7f4e">last_error</a> ()</td></tr>
+<tr class="memdesc:aebbab9745ac76182cd7ba0087f7d7f4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service valid.  <a href="#aebbab9745ac76182cd7ba0087f7d7f4e">More...</a><br /></td></tr>
+<tr class="separator:aebbab9745ac76182cd7ba0087f7d7f4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
+<tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
+<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8b89488b128d89de00fb94de771afaec"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a8b89488b128d89de00fb94de771afaec">service</a> (const ble_uuid128_t *base_uuid, uint16_t service_uuid)</td></tr>
 <tr class="memdesc:a8b89488b128d89de00fb94de771afaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a service declaration to the local server ATT table.  <a href="#a8b89488b128d89de00fb94de771afaec">More...</a><br /></td></tr>
 <tr class="separator:a8b89488b128d89de00fb94de771afaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2e8deccb86fb41be85b3dc19e227ae9"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#ae2e8deccb86fb41be85b3dc19e227ae9">characteristic_add</a> (uint16_t char_uuid, ble_gatts_char_md_t *p_char_md, ble_gatts_attr_t *p_attr_char_value, ble_gatts_char_handles_t *p_handles)</td></tr>
 <tr class="memdesc:ae2e8deccb86fb41be85b3dc19e227ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a characteristic declaration, a characteristic value declaration and optional characteristic descriptor declarations to the local server ATT table.  <a href="#ae2e8deccb86fb41be85b3dc19e227ae9">More...</a><br /></td></tr>
 <tr class="separator:ae2e8deccb86fb41be85b3dc19e227ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a63f759c0494bc2affe5a7779ded6a40b"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">uuid</a> ()</td></tr>
-<tr class="memdesc:a63f759c0494bc2affe5a7779ded6a40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID of service.  <a href="#a63f759c0494bc2affe5a7779ded6a40b">More...</a><br /></td></tr>
-<tr class="separator:a63f759c0494bc2affe5a7779ded6a40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a">uuid_type</a> ()</td></tr>
-<tr class="memdesc:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID type of service.  <a href="#a4119b0d8ce0f1e04bcff8c60fa51885a">More...</a><br /></td></tr>
-<tr class="separator:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e798bd905b0283cfc0b27d06b24a4ed"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a6e798bd905b0283cfc0b27d06b24a4ed">isValid</a> ()</td></tr>
-<tr class="separator:a6e798bd905b0283cfc0b27d06b24a4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
-<tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a797d0d03dfc264ca1b5268ee546e858a"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a797d0d03dfc264ca1b5268ee546e858a">gatts_value_set</a> (ble_gatts_char_handles_t &amp;char_handle, uint8_t *buffer, uint16_t length, uint16_t offset=0)</td></tr>
+<tr class="memdesc:a797d0d03dfc264ca1b5268ee546e858a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the value of a given attribute.  <a href="#a797d0d03dfc264ca1b5268ee546e858a">More...</a><br /></td></tr>
+<tr class="separator:a797d0d03dfc264ca1b5268ee546e858a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec037610f5e08981839bc032a4d69c5c"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#aec037610f5e08981839bc032a4d69c5c">gatts_value_get</a> (ble_gatts_char_handles_t &amp;char_handle, uint8_t *buffer, uint16_t length, uint16_t offset=0)</td></tr>
+<tr class="memdesc:aec037610f5e08981839bc032a4d69c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a given attribute.  <a href="#aec037610f5e08981839bc032a4d69c5c">More...</a><br /></td></tr>
+<tr class="separator:aec037610f5e08981839bc032a4d69c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83e665c40946c21f44cdd4d961237d2b"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a83e665c40946c21f44cdd4d961237d2b">gatts_hvx_writeable</a> ()</td></tr>
+<tr class="separator:a83e665c40946c21f44cdd4d961237d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e">gatts_hvx_write</a> (ble_gatts_char_handles_t &amp;char_handle, uint8_t *buffer, uint16_t length, <a class="el" href="../../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2">HVX_WRITE_T</a> type)</td></tr>
+<tr class="memdesc:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify or Indicate an attribute value.  <a href="#a5fd45d8d7a9aeafcffea3b863e0c369e">More...</a><br /></td></tr>
+<tr class="separator:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE customer services base class. </p>
@@ -215,7 +233,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -247,6 +265,204 @@ NRF_ERROR_FORBIDDEN Forbidden value supplied, certain UUIDs are reserved for the
 NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd>
 <dd>
 NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restricted by BLE_GATTS_ATTR_LENS_MAX. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5fd45d8d7a9aeafcffea3b863e0c369e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint16_t bleServiceCustomer::gatts_hvx_write </td>
+          <td>(</td>
+          <td class="paramtype">ble_gatts_char_handles_t &amp;&#160;</td>
+          <td class="paramname"><em>char_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2">HVX_WRITE_T</a>&#160;</td>
+          <td class="paramname"><em>type</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Notify or Indicate an attribute value. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char_handle</td><td>Characteristic handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Pointer to data buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length in bytes to be written, length in bytes written after successful return. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">type</td><td>Indication or Notification, see <a class="el" href="../../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2">HVX_WRITE_T</a>.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of bytes to write, return zero if failed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a83e665c40946c21f44cdd4d961237d2b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint8_t bleServiceCustomer::gatts_hvx_writeable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check the gatts write buffer available. </p><dl class="section warning"><dt>Warning</dt><dd>To check the write buffer available before to write a data to Notify or Indicate an attribute value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aec037610f5e08981839bc032a4d69c5c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint16_t bleServiceCustomer::gatts_value_get </td>
+          <td>(</td>
+          <td class="paramtype">ble_gatts_char_handles_t &amp;&#160;</td>
+          <td class="paramname"><em>char_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a given attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char_handle</td><td>Characteristic handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Pointer to data buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length in bytes to be written, length in bytes written after successful return. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset in bytes to write from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of byte to read, return zero if failed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a797d0d03dfc264ca1b5268ee546e858a"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint16_t bleServiceCustomer::gatts_value_set </td>
+          <td>(</td>
+          <td class="paramtype">ble_gatts_char_handles_t &amp;&#160;</td>
+          <td class="paramname"><em>char_handle</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>buffer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Set the value of a given attribute. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">char_handle</td><td>Characteristic handle. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">buffer</td><td>Pointer to data buffer. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">length</td><td>Length in bytes to be written, length in bytes written after successful return. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">offset</td><td>Offset in bytes to write from.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Number of byte to write, return zero if failed. </dd></dl>
 
 </div>
 </div>
@@ -305,7 +521,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 
 </div>
 </div>
-<a class="anchor" id="a6e798bd905b0283cfc0b27d06b24a4ed"></a>
+<a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -313,7 +529,32 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool bleServiceCustomer::isValid </td>
+          <td class="memname">virtual bool CObject::isValid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, <a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">CPin</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aebbab9745ac76182cd7ba0087f7d7f4e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t bleServiceCustomer::last_error </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -326,7 +567,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">CObject</a>.</p>
+<p>Check the service valid. </p>
 
 </div>
 </div>
@@ -357,7 +598,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -404,8 +645,7 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Get the UUID of service. </p>
-<dl class="section return"><dt>Returns</dt><dd>an uint16_t value. </dd></dl>
+<p>Retrieve the uuid of service;. </p>
 
 <p>Reimplemented from <a class="el" href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">bleService</a>.</p>
 
@@ -432,8 +672,7 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Get the UUID type of service. </p>
-<dl class="section return"><dt>Returns</dt><dd>an uint8_t value. </dd></dl>
+<p>Retrieve the uuid type of service. </p>
 
 <p>Reimplemented from <a class="el" href="../../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62">bleService</a>.</p>
 
@@ -445,7 +684,7 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/d51/classble_service_customer.html">bleServiceCustomer</a></li>
-    <li class="footer">Generated on Wed Nov 5 2014 16:05:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 5 2014 20:49:20 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
