@@ -20,6 +20,7 @@
 
 #include <uCXpresso.h>
 #include <class/object.h>
+#include <class/ble/nrf51/ble.h>
 #include <class/ble/nrf51/ble_gap.h>
 #include <class/ble/nrf51/ble_data.h>
 #include <class/ble/nrf51/ble_gatt.h>

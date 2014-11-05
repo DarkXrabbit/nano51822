@@ -138,20 +138,26 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a37a2eb258d248ad86575e8b7f31deda1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">isAvailable</a> ()</td></tr>
 <tr class="memdesc:a37a2eb258d248ad86575e8b7f31deda1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service available.  <a href="#a37a2eb258d248ad86575e8b7f31deda1">More...</a><br /></td></tr>
 <tr class="separator:a37a2eb258d248ad86575e8b7f31deda1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b89488b128d89de00fb94de771afaec"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a8b89488b128d89de00fb94de771afaec">service</a> (const ble_uuid128_t *base_uuid, uint16_t service_uuid)</td></tr>
+<tr class="memdesc:a8b89488b128d89de00fb94de771afaec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a service declaration to the local server ATT table.  <a href="#a8b89488b128d89de00fb94de771afaec">More...</a><br /></td></tr>
+<tr class="separator:a8b89488b128d89de00fb94de771afaec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2e8deccb86fb41be85b3dc19e227ae9"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#ae2e8deccb86fb41be85b3dc19e227ae9">characteristic_add</a> (uint16_t char_uuid, ble_gatts_char_md_t *p_char_md, ble_gatts_attr_t *p_attr_char_value, ble_gatts_char_handles_t *p_handles)</td></tr>
+<tr class="memdesc:ae2e8deccb86fb41be85b3dc19e227ae9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add a characteristic declaration, a characteristic value declaration and optional characteristic descriptor declarations to the local server ATT table.  <a href="#ae2e8deccb86fb41be85b3dc19e227ae9">More...</a><br /></td></tr>
+<tr class="separator:ae2e8deccb86fb41be85b3dc19e227ae9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63f759c0494bc2affe5a7779ded6a40b"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">uuid</a> ()</td></tr>
 <tr class="memdesc:a63f759c0494bc2affe5a7779ded6a40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID of service.  <a href="#a63f759c0494bc2affe5a7779ded6a40b">More...</a><br /></td></tr>
 <tr class="separator:a63f759c0494bc2affe5a7779ded6a40b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a">uuid_type</a> ()</td></tr>
 <tr class="memdesc:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID type of service.  <a href="#a4119b0d8ce0f1e04bcff8c60fa51885a">More...</a><br /></td></tr>
 <tr class="separator:a4119b0d8ce0f1e04bcff8c60fa51885a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e798bd905b0283cfc0b27d06b24a4ed"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a6e798bd905b0283cfc0b27d06b24a4ed">isValid</a> ()</td></tr>
+<tr class="separator:a6e798bd905b0283cfc0b27d06b24a4ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
-<tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE customer services base class. </p>
-<p>This class provides the service event handles for customer's service class. </p>
+<p>This class provides the customize service/characteristics s for customer's BLE service. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8663dee466242f2475a79e0066b2106c"></a>
 <div class="memitem">
@@ -170,6 +176,80 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae2e8deccb86fb41be85b3dc19e227ae9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t bleServiceCustomer::characteristic_add </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>char_uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ble_gatts_char_md_t *&#160;</td>
+          <td class="paramname"><em>p_char_md</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ble_gatts_attr_t *&#160;</td>
+          <td class="paramname"><em>p_attr_char_value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ble_gatts_char_handles_t *&#160;</td>
+          <td class="paramname"><em>p_handles</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a characteristic declaration, a characteristic value declaration and optional characteristic descriptor declarations to the local server ATT table. </p>
+<dl class="section note"><dt>Note</dt><dd>It is currently only possible to add a characteristic to the last added service (i.e. only sequential addition is supported at this time).</dd>
+<dd>
+Several restrictions apply to the parameters, such as matching permissions between the user description descriptor and the writeable auxiliaries bits, readable (no security) and writeable (selectable) CCCDs and SCCDs and valid presentation format values.</dd>
+<dd>
+If no metadata is provided for the optional descriptors, their permissions will be derived from the characteristic permissions.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_char_md</td><td>Characteristic metadata. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_attr_char_value</td><td>Pointer to the attribute structure corresponding to the characteristic value. </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_handles</td><td>Pointer to the structure where the assigned handles will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS Successfully added a characteristic. </dd>
+<dd>
+NRF_ERROR_INVALID_ADDR Invalid pointer supplied. </dd>
+<dd>
+NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied, service handle, Vendor Specific UUIDs, lengths, and permissions need to adhere to the constraints. </dd>
+<dd>
+NRF_ERROR_INVALID_STATE Invalid state to perform operation, a service context is required. </dd>
+<dd>
+NRF_ERROR_FORBIDDEN Forbidden value supplied, certain UUIDs are reserved for the stack. </dd>
+<dd>
+NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd>
+<dd>
+NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restricted by BLE_GATTS_ATTR_LENS_MAX. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a37a2eb258d248ad86575e8b7f31deda1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -192,7 +272,6 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Check the service available. </p>
-<dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257">bleService</a>.</p>
 
@@ -226,7 +305,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a18cf254bf2030ba75735238fc1a31f4d"></a>
+<a class="anchor" id="a6e798bd905b0283cfc0b27d06b24a4ed"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -234,7 +313,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool CObject::isValid </td>
+          <td class="memname">virtual bool bleServiceCustomer::isValid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -242,12 +321,65 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, <a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">CPin</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
+<p>Reimplemented from <a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">CObject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8b89488b128d89de00fb94de771afaec"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t bleServiceCustomer::service </td>
+          <td>(</td>
+          <td class="paramtype">const ble_uuid128_t *&#160;</td>
+          <td class="paramname"><em>base_uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>service_uuid</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add a service declaration to the local server ATT table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">base_uuid</td><td>Pointer to the base of service ble_uuid128_t UUID. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">service_uuid</td><td>Pointer to service UUID.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>Secondary Services are only relevant in the context of the entity that references them, it is therefore forbidden to add a secondary service declaration that is not referenced by another service later in the ATT table.</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS Successfully added a service declaration. </dd>
+<dd>
+NRF_ERROR_INVALID_ADDR Invalid pointer supplied. </dd>
+<dd>
+NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied, Vendor Specific UUIDs need to be present in the table. </dd>
+<dd>
+NRF_ERROR_FORBIDDEN Forbidden value supplied, certain UUIDs are reserved for the stack. </dd>
+<dd>
+NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 
 </div>
 </div>
@@ -313,7 +445,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/d51/classble_service_customer.html">bleServiceCustomer</a></li>
-    <li class="footer">Generated on Tue Nov 4 2014 14:36:00 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 5 2014 16:05:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

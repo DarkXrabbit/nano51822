@@ -80,9 +80,9 @@ protected:
 	virtual void on_data_receive(uint8_t * data, uint16_t length);
 	virtual void on_ble_poll();
 
-	virtual void on_disconnected(xHandle evt);
-	virtual void on_write(xHandle evt);
-	virtual inline void on_send(xHandle evt) { onSend(true); }
+	virtual void on_disconnected(ble_evt_t * p_ble_evt);
+	virtual void on_write(ble_evt_t * p_ble_evt);
+	virtual inline void on_send(ble_evt_t * p_ble_evt) { onSend(true); }
 	///@endcond
 };
 

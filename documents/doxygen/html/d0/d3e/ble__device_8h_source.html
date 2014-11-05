@@ -203,10 +203,10 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a>();</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> on_ble_event(xHandle event);</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <span class="keywordtype">void</span> on_ble_event(ble_evt_t * p_ble_evt);</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <span class="keywordtype">void</span> on_sys_event(uint32_t event);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    xHandle     m_hBleEvent;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    ble_evt_t   *m_p_ble_evt;</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;    uint16_t    m_conn_handle;</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    int8_t      m_rssi;         <span class="comment">// current rssi;</span></div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    ble_gap_evt_auth_status_t m_auth_status;</div>
@@ -228,7 +228,7 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <a class="code" href="../../df/db6/class_c_list.html">CList</a> m_lstService;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;    <span class="keywordtype">void</span> add_service(<a class="code" href="../../da/d80/classble_service.html">bleService</a> *service);</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">void</span> del_service(<a class="code" href="../../da/d80/classble_service.html">bleService</a> *service);</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> services_evt(xHandle evt);</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> services_evt(ble_evt_t * p_ble_evt);</div>
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    <span class="keywordtype">void</span> services_poll();</div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;</div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="comment">//</span></div>
@@ -271,7 +271,7 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422ab546387a555fe466a38e7df7788fe1dc"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ab546387a555fe466a38e7df7788fe1dc">NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:50</div></div>
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422a20f9dfebab100c2f4ef5029f84a071aa"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a20f9dfebab100c2f4ef5029f84a071aa">NRF_LFCLKSRC_RC_250_PPM_500MS_CALIBRATION</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:51</div></div>
 <div class="ttc" id="classble_device_html_a239a91976b72492fe0275e21aa94a0e3"><div class="ttname"><a href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">bleDevice::m_advertising</a></div><div class="ttdeci">bleAdvertising m_advertising</div><div class="ttdoc">An advertising member object. bleAdvertising class. </div><div class="ttdef"><b>Definition:</b> ble_device.h:181</div></div>
-<div class="ttc" id="classble_base_html"><div class="ttname"><a href="../../d2/dc4/classble_base.html">bleBase</a></div><div class="ttdoc">The bleBase class is an empty base class. </div><div class="ttdef"><b>Definition:</b> ble_base.h:41</div></div>
+<div class="ttc" id="classble_base_html"><div class="ttname"><a href="../../d2/dc4/classble_base.html">bleBase</a></div><div class="ttdoc">The bleBase class is an empty base class. </div><div class="ttdef"><b>Definition:</b> ble_base.h:42</div></div>
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422a0781c514bf59deb42d0a2fe61f4b1bc2"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a0781c514bf59deb42d0a2fe61f4b1bc2">NRF_LFCLKSRC_RC_250_PPM_8000MS_CALIBRATION</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:55</div></div>
 <div class="ttc" id="classble_device_manager_html"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></div><div class="ttdoc">BLE Device Management. </div><div class="ttdef"><b>Definition:</b> ble_device_manager.h:19</div></div>
 <div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:73</div></div>
@@ -305,7 +305,7 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_device.h</b></li>
-    <li class="footer">Generated on Tue Nov 4 2014 14:36:00 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 5 2014 16:05:03 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -129,7 +129,7 @@ public:
 
 protected:
 	xHandle m_handle;
-	virtual void on_ble_event(xHandle evt);
+	virtual void on_ble_event(ble_evt_t *p_ble_evt);
 	virtual uint32_t send(uint8_t  flag,
 					  uint32_t cumulative_wheel_revolutions,
 					  uint16_t last_wheel_event_time,

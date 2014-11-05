@@ -95,7 +95,7 @@ public:
 	virtual inline uint16_t uuid() { return 0;}
 protected:
 	CTimeout	m_tmCP;
-	virtual void on_ble_event(xHandle evt);
+	virtual void on_ble_event(ble_evt_t *p_ble_evt);
 	virtual void on_ble_poll();
 	///@endcond
 };

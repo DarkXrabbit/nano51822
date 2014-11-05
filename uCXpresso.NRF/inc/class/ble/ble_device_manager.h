@@ -38,7 +38,7 @@ public:
 	/// @cond
 protected:
 	uint8_t    	 m_app_handle;
-	virtual void on_ble_event(xHandle evt);
+	virtual void on_ble_event(ble_evt_t * p_ble_evt);
 
 friend class bleDevice;
 	/// @endcond

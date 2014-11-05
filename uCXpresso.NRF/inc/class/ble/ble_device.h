@@ -189,10 +189,10 @@ public:
 	/// @cond PRIVATE
 	//
 	virtual ~bleDevice();
-	void on_ble_event(xHandle event);
+	void on_ble_event(ble_evt_t * p_ble_evt);
 	void on_sys_event(uint32_t event);
 
-	xHandle 	m_hBleEvent;
+	ble_evt_t 	*m_p_ble_evt;
 	uint16_t    m_conn_handle;
 	int8_t		m_rssi;			// current rssi;
 	ble_gap_evt_auth_status_t m_auth_status;
@@ -214,7 +214,7 @@ protected:
 	CList m_lstService;
 	void add_service(bleService *service);
 	void del_service(bleService *service);
-	void services_evt(xHandle evt);
+	void services_evt(ble_evt_t * p_ble_evt);
 	void services_poll();
 
 	//
