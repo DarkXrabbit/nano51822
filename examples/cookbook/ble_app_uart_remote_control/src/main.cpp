@@ -1,11 +1,11 @@
 /*
  ===============================================================================
- Name        : main.c
+ Name        : ble_app_uart_remote_control
  Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
  License	 : MIT
- Description : A BLE UAET to Debug Console (Serial I/F) example
+ Description : BLE UART remote control for LED
  ===============================================================================
  History
  ---------+---------+--------------------------------------------+-------------
