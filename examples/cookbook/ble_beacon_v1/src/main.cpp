@@ -96,9 +96,6 @@ static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
 
 int main(void)
 {
-//
-// for Save Power, it have to build with "Release Build" and disable the Debug feature.
-//
 #ifdef DEBUG
 	CSerial ser;
 	ser.enable();
@@ -109,16 +106,19 @@ int main(void)
 	// SoftDevice Driver
 	//
 	bleDevice ble;
-	ble.enable();										// enable BLE stack
+	ble.enable();						// enable BLE stack
 
 	// GAP
-	ble.m_gap.settings("nanoBeacon");					// set ble device name
-	ble.m_gap.tx_power(BLE_TX_0dBm);					// set TX radio power
+	ble.m_gap.settings("nanoBeacon");	// set ble device name
+	ble.m_gap.tx_power(BLE_TX_0dBm);	// set TX radio power
 
 	//
 	// Add BLE DFU Service
 	//
+#ifdef DEBUG
 	bleServiceDFU dfu(ble);
+	dfu.enable();
+#endif
 
 	//
 	// update beacon info
@@ -137,14 +137,11 @@ int main(void)
 	ble.m_advertising.interval(APP_ADV_INTERVAL);		// set advertising interval = 1000ms
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
-	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, sizeof(m_beacon_info)); // set beacon data
+	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, sizeof(BEACON_INFO_T)); // set beacon data
 	ble.m_advertising.flags(&flags, sizeof(flags));		// set flags
 	ble.m_advertising.update();							// update advertising data
 
 	ble.m_advertising.start();
-
-	// enable DFU service if need.
-	dfu.enable();
 
 	//
 	// LED pin declared
@@ -158,6 +155,7 @@ int main(void)
 #ifndef DEBUG
 	CPowerSave::tickless(true);
 #endif
+
 	//
     // Enter main loop.
 	//

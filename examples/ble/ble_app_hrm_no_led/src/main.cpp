@@ -31,6 +31,7 @@
 #include <class/ble/ble_service_htm.h>
 #include <class/power.h>
 #include <class/ble/ble_conn_params.h>
+#include <class/ble/ble_service_dfu.h>
 #include <class/pin.h>
 #include <class/thread.h>
 #include <class/timeout.h>
@@ -73,6 +74,11 @@ int main(void) {
 	//
 	bleServiceHTM htm(ble);
 
+#ifndef DEBUG
+	bleServiceDFU dfu(ble);
+	dfu.enable();
+#endif
+
 	//
 	// Connection Parameters Update negotiation
 	//
@@ -99,11 +105,6 @@ int main(void) {
 	CPowerSave::tickless(true);
 #endif
 
-	//
-	// Use timeout class for HRM interval
-	//
-	CTimeout tmHRM, tmHTM;
-
 	float temp;
 	//
     // Enter main loop.
@@ -122,26 +123,18 @@ int main(void) {
 		// Heart Rate Measurement Service
 		//
 		if ( hrm.isAvailable() ) {
-			// check HRM timer expired (1000ms)
-			if ( tmHRM.isExpired(1000) ) {
-				tmHRM.reset();	// reset timeout count
-				hrm.send(70);	// send Heart Rate Measurement
-			}
+			hrm.send(70);
 		}
 
 		//
 		// Health Thermometer Measurement Service
 		//
 		if ( htm.isAvailable() ) {
-			if ( tmHTM.isExpired(1000)) {
-				tmHTM.reset();
-				// read the temperature from SoC
-				if ( bleServiceHTM::get_temperature(temp) ) {
-					htm.send(temp);	// send temp
-				}
+			if ( bleServiceHTM::get_temperature(temp) ) {
+				htm.send(temp);	// send temp
 			}
 		}
 
-		sleep(500);	// give more idle time for sleep
+		sleep(1000);	// give more idle time for sleep
     }
 }
