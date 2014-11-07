@@ -195,7 +195,9 @@ int main(void) {
 	//
 	// Enable Tickless Technology
 	//
+#ifndef DEBUG
 	CPowerSave::tickless(true);
+#endif
 
 	//
 	// Enter main loop.

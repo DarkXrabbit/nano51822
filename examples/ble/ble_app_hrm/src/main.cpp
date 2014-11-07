@@ -29,7 +29,7 @@
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service_hrm.h>
 #include <class/ble/ble_service_htm.h>
-
+#include <class/power.h>
 #include <class/pin.h>
 #include <class/thread.h>
 #include <class/timeout.h>
@@ -113,6 +113,8 @@ int main(void) {
 	led1.output();
 	led2.output();
 	led3.output();
+
+
 
 	//
 	// Use timeout class for HRM interval

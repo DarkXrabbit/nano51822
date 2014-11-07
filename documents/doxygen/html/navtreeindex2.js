@@ -1,5 +1,6 @@
 var NAVTREEINDEX2 =
 {
+"da/d88/classsw_p_w_m.html":[0,4,12],
 "da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d":[0,4,12,4],
 "da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116":[0,4,12,8],
 "da/d88/classsw_p_w_m.html#a025509145d6cd34e37f5e143606f638b":[0,4,12,12],
@@ -248,6 +249,5 @@ var NAVTREEINDEX2 =
 "de/d89/class_c_bus.html#a4fa0e4c537c237278fe8092f4d8e26fb":[0,4,2,1],
 "de/d89/class_c_bus.html#a55d1c493025b37e0f34801b8ced31068":[0,4,2,8],
 "de/d89/class_c_bus.html#a6c4770377cbd78099726f6cc626a4639":[0,4,2,10],
-"de/d89/class_c_bus.html#a94da38619defc1c41c16c04c4c7991f8":[0,4,2,11],
-"de/d89/class_c_bus.html#a9f639b395906de4549c51deb0a0ad79c":[0,4,2,7]
+"de/d89/class_c_bus.html#a94da38619defc1c41c16c04c4c7991f8":[0,4,2,11]
 };

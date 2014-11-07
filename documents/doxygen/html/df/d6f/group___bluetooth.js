@@ -68,6 +68,7 @@ var group___bluetooth =
       [ "start", "d6/d49/classble_device.html#aacf955d1852e74da1f989251955ee6ec", null ],
       [ "suspend", "d6/d49/classble_device.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
       [ "suspendAll", "d6/d49/classble_device.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
+      [ "wait", "d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9", null ],
       [ "m_advertising", "d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3", null ],
       [ "m_device_manager", "d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9", null ],
       [ "m_gap", "d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9", null ]

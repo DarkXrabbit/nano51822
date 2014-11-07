@@ -7,7 +7,7 @@ uCXpresso.NRF RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Class Manual : http://www.embeda.com.tw/manual/nrf/html/index.html
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 
-v1.0.0 rc5 5th November 2014
+v1.0.0 rc5 7th November 2014
 --------------------------------
 ###Features: 
 	1. Add "Running Speed and Cadence" service.
@@ -15,6 +15,7 @@ v1.0.0 rc5 5th November 2014
 	3. Add "Tx Power Level" service.
 	4. Some warning code updated.
 	5. Update bleServiceCustomer class
+	6. Add wait() member of bleDevice class to wait for connected event.
 
 v1.0.0 rc4 3th November 2014
 --------------------------------

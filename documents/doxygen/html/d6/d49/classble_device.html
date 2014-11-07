@@ -142,6 +142,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a951f81783549e5905323a44308525957"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a951f81783549e5905323a44308525957">enable</a> (uint32_t stack=78)</td></tr>
 <tr class="memdesc:a951f81783549e5905323a44308525957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a951f81783549e5905323a44308525957">More...</a><br /></td></tr>
 <tr class="separator:a951f81783549e5905323a44308525957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa06a3a42710cc86472c92583a6d608e9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:aa06a3a42710cc86472c92583a6d608e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for connected.  <a href="#aa06a3a42710cc86472c92583a6d608e9">More...</a><br /></td></tr>
+<tr class="separator:aa06a3a42710cc86472c92583a6d608e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2587dc8be9c4e01e51b852c82ff07f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1">isConnected</a> ()</td></tr>
 <tr class="memdesc:ad2587dc8be9c4e01e51b852c82ff07f1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check BLE connection.  <a href="#ad2587dc8be9c4e01e51b852c82ff07f1">More...</a><br /></td></tr>
 <tr class="separator:ad2587dc8be9c4e01e51b852c82ff07f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1224,6 +1227,39 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 
 </div>
 </div>
+<a class="anchor" id="aa06a3a42710cc86472c92583a6d608e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool bleDevice::wait </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>MAX_DELAY_TIME</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wait for connected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Optional, to specify a timeout for waiting. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>The waiting member will push the task in to block state to wait the connected event. </dd></dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a class="anchor" id="a239a91976b72492fe0275e21aa94a0e3"></a>
 <div class="memitem">
@@ -1275,7 +1311,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Wed Nov 5 2014 20:49:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Nov 7 2014 09:22:55 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

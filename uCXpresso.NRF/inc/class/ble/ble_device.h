@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_device.h
  Author      : uCXpresso
- Version     : v1.0.2
- Date		 : 2014/8/1
+ Version     : v1.0.3
+ Date		 : 2014/11/7
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE SoftDevice driver (S110) class
  ===============================================================================
@@ -15,6 +15,7 @@
  2014/10/22 v1.0.1	Add information() member to provide "Device		Jason
  	 	 	 	 	Information Service".
  2014/11/3	v1.0.2	Add address() member to retrieve the BLE addr.	Jason
+ 2014/11/7	v1.0.3	Add wait() member to wait for connected.		Jason
  ===============================================================================
  */
 
@@ -94,6 +95,13 @@ public:
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
 	uint32_t enable(uint32_t stack=78);
+
+	/**
+	 * @brief Wait for connected.
+	 * @param timeout Optional, to specify a timeout for waiting.
+	 * @note The waiting member will push the task in to block state to wait the connected event.
+	 */
+	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
 	/**@brief Check BLE connection.
 	 *
@@ -199,6 +207,7 @@ public:
 	ble_gap_sec_params_t	  m_sec_params;
 	CSemaphore	m_semBleEvent;
 protected:
+	CSemaphore	m_semWaitForConnected;
 	bool		m_memory_access_in_progress;
 
 	void system_off_mode_enter();
@@ -237,6 +246,5 @@ extern bleDevice *gpBLE;	///< Point to the global bleDevice object.
  * This is an example of how to use the bleDevice::Init(),
  * More details about this example.
  */
-
 
 #endif /* BLE_DEVICE_H_ */
