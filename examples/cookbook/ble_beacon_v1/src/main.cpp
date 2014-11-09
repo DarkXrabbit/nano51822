@@ -92,8 +92,6 @@ void beacon_info_update(BEACON_INFO_T *p_beacon_info, uint16_t major, uint16_t m
 #define BOARD_LILYPAD
 #include <config/board.h>
 
-static const uint8_t flags = BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED;
-
 int main(void)
 {
 #ifdef DEBUG
@@ -138,7 +136,7 @@ int main(void)
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
 	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, sizeof(BEACON_INFO_T)); // set beacon data
-	ble.m_advertising.flags(&flags, sizeof(flags));		// set flags
+	ble.m_advertising.flag(BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED);		// set flags
 	ble.m_advertising.update();							// update advertising data
 
 	ble.m_advertising.start();
