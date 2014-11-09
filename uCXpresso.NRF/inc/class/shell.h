@@ -65,7 +65,7 @@ public:
 	Console 	m_console;
 	virtual void run();
 	virtual void onDebug();
-	virtual void onClose() {}
+	virtual void onClose() { NOTHING }
 	virtual ~CShell();
 
 protected:

@@ -44,33 +44,39 @@ public:
 	 */
 	bleAdvertising();
 
-	/**@brief Set the advertising interval between 20ms to 10.24s.
-	 *
+	/**
+	 * @brief Set the advertising interval between 20ms to 10.24s.
 	 */
 	void interval(uint16_t ms);
 
-	/**@brief Set advertising timeout between 0x0001 and 0x3FFF in seconds, 0x0000 disables the timeout.
-	 *
+	/**
+	 * @brief Set advertising timeout between 0x0001 and 0x3FFF in seconds, 0x0000 disables the timeout.
 	 */
 	void timeout(uint16_t sec);
 
-	/**@brief Type of the device name.
+	/**
+	 * @brief Type of the device name.
 	 * @ref ble_advdata_name_type_t
 	 */
 	void name_type(ble_advdata_name_type_t type);
 
-	/**@brief Advertising data Flags field.
-	 *
+	/**
+	 * @brief single advertising flag.
+	 */
+	void flag(uint8_t val);
+
+	/**
+	 * @brief multiple advertising flags.
 	 */
 	void flags(const uint8_t *data, uint16_t size);
 
-	/**@brief Set the Company Identifier Code
-	 *
+	/**
+	 * @brief Set the Company Identifier Code
 	 */
 	void commpany_identifier(uint16_t id);
 
-	/**@brief Additional manufacturer specific data.
-	 *
+	/**
+	 * @brief Additional manufacturer specific data.
 	 */
 	void manuf_specific_data(const uint8_t *data, uint16_t size);
 
@@ -136,10 +142,12 @@ protected:
 	ble_advdata_t			 m_adv_data;
 	ble_advdata_manuf_data_t m_manuf_specific_data;
 	ble_advdata_conn_int_t	 m_slave_conn_interval;
-	ble_gap_adv_params_t 	 m_adv_params;
 	int8_t					 m_tx_power_level;
 	ble_uuid_t				*m_uuid_list;
 	uint8_t					 m_uuid_count;
+	uint16_t				 m_adv_interval;
+	uint16_t				 m_adv_timeout;
+	uint8_t					 m_adv_flag;
 friend class bleDevice;
 	///@endcond
 };

@@ -42,7 +42,9 @@ public:
 	/**@brief Get the UUID of service
 	 * @return an uint16_t value.
 	 */
-	virtual uint16_t uuid() = PURE_VIRTUAL_FUNC;
+	virtual inline uint16_t uuid() {
+		return 0;
+	}
 
 	/**@brief Get the UUID type of service.
 	 * @return an uint8_t value.
@@ -55,7 +57,7 @@ public:
 	/// @cond PRIVATE
 	//
 	virtual void on_ble_event(ble_evt_t * p_ble_evt) = PURE_VIRTUAL_FUNC;
-	virtual void on_ble_poll() {}
+	virtual void on_ble_poll() { NOTHING }
 	bleService();
 	~bleService();
 protected:

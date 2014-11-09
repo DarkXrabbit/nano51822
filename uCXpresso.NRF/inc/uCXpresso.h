@@ -20,9 +20,9 @@ extern "C" {
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		0
-#define uCXpresso_VER_RC		5
-#define uCXpresso_VER_BUILD		"2014/11/7"
-#define uCXpresso_VER_STR		"V1.0.0 rc5"
+#define uCXpresso_VER_RC		6
+#define uCXpresso_VER_BUILD		"2014/11/10"
+#define uCXpresso_VER_STR		"V1.0.0 rc6"
 
 //
 //	defined
@@ -109,9 +109,15 @@ typedef union _u64_u
 }u64_u;
 /*! \endcond */
 
-#define null_str			((const char *)0)
-#define PURE_VIRTUAL_FUNC	0
 typedef void* 				xHandle;
+#define null_str			((const char *)0)
+
+//
+// C++
+//
+#define PURE_VIRTUAL_FUNC	0
+#define NO_EFFECT			{}
+#define NOTHING
 
 //
 // Core
@@ -181,7 +187,6 @@ extern void *tryMalloc(size_t size);	// try to malloc a memory with
 
 #define MAX_UINT32			0xffffffff
 #define CRLF				"\r\n"
-#define NO_EFFECT			{}
 
 //#ifndef MSB
 //#define MSB(a) (uint8_t)(((a) & 0xFF00) >> 8)

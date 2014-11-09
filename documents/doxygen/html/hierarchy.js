@@ -16,6 +16,7 @@ var hierarchy =
           [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html", null ],
           [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", null ],
           [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", null ],
+          [ "bleServiceProximity", "df/d3a/classble_service_proximity.html", null ],
           [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html", null ],
           [ "bleServiceTPL", "d2/df3/classble_service_t_p_l.html", null ]
         ] ]

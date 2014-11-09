@@ -5,7 +5,6 @@ var searchData=
   ['bleadvertising',['bleAdvertising',['../d0/d2c/classble_advertising.html#ac3afd0716095c82f34e519b0bc0f403c',1,'bleAdvertising']]],
   ['bleconnparams',['bleConnParams',['../d9/d8b/classble_conn_params.html#a7f05c387b56ff2eea2d2976173adb53d',1,'bleConnParams']]],
   ['bledevice',['bleDevice',['../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688',1,'bleDevice']]],
-  ['bledevicemanager',['bleDeviceManager',['../d9/d34/classble_device_manager.html#a9bccd8c288f56bfe2baeea3304382da9',1,'bleDeviceManager']]],
   ['blegap',['bleGAP',['../dd/d89/classble_g_a_p.html#a2b1aec1291fb6dc68bd7e20877eb6201',1,'bleGAP']]],
   ['bleservice',['bleService',['../da/d80/classble_service.html#aabb34dad2925ff07d84bc4507db2a328',1,'bleService']]],
   ['bleservicebattery',['bleServiceBattery',['../d5/ded/classble_service_battery.html#a17008aba31ec39d56a9a823ee0af3088',1,'bleServiceBattery']]],
@@ -14,6 +13,7 @@ var searchData=
   ['bleservicedfu',['bleServiceDFU',['../d6/d2e/classble_service_d_f_u.html#a179c0f771e6e016f0c8d87c6bb3052a9',1,'bleServiceDFU']]],
   ['bleservicehrm',['bleServiceHRM',['../d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af',1,'bleServiceHRM']]],
   ['bleservicehtm',['bleServiceHTM',['../d3/d27/classble_service_h_t_m.html#afcec1b32117676556d63b52916e9d650',1,'bleServiceHTM']]],
+  ['bleserviceproximity',['bleServiceProximity',['../df/d3a/classble_service_proximity.html#a6e2e7c6fc83306cc86bf09053430983d',1,'bleServiceProximity']]],
   ['bleservicersc',['bleServiceRSC',['../de/dc0/classble_service_r_s_c.html#a7881093c8c12b3fe83ae2ad5e17f9515',1,'bleServiceRSC']]],
   ['bleservicetpl',['bleServiceTPL',['../d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b',1,'bleServiceTPL']]],
   ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html#a2a069c5054a7c9072fba7d233418e299',1,'bleServiceUART']]]

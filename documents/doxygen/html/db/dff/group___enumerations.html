@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc5</span>
+   &#160;<span id="projectnumber">v1.0.0 rc6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -204,6 +204,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga7f44a6b484328d6dd2d312f908dfea81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Heart Rater Sensor location.  <a href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">More...</a><br /></td></tr>
 <tr class="separator:ga7f44a6b484328d6dd2d312f908dfea81"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae5ba0839681e8380309f2a2b8e87b834"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gae5ba0839681e8380309f2a2b8e87b834">ALERT_LEVEL_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834af2958b0b8c69bafeaef608b0de0e66b6">ALERT_LEVEL_NO_ALERT</a> = 0x00, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a3a0b534e48005d5b67357ee2d00bab41">ALERT_LEVEL_MILD_ALERT</a> = 0x01, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a441d457881f1b2ee8c5bdea8284db94a">ALERT_LEVEL_HIGH_ALERT</a> = 0x02
+ }</td></tr>
+<tr class="memdesc:gae5ba0839681e8380309f2a2b8e87b834"><td class="mdescLeft">&#160;</td><td class="mdescRight">Proximity service alert level.  <a href="../../db/dff/group___enumerations.html#gae5ba0839681e8380309f2a2b8e87b834">More...</a><br /></td></tr>
+<tr class="separator:gae5ba0839681e8380309f2a2b8e87b834"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3cf86d5824f710be6f3ea37cab97f8da"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga3cf86d5824f710be6f3ea37cab97f8da">RSC_STATUS_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa59cbf919dfeb3a959fe068663ba5a928">RSC_WALKING</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa0aec77c90c048e22b4effd9bf9863bcc">RSC_RUNNING</a>
  }</td></tr>
@@ -373,6 +379,33 @@ Enumerations</h2></td></tr>
 <p>Use AD5 input on P0.6. </p>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga9f048db78212facfb5363e0b932c6c7ba1730956f3c4fe1a36a483aa7109cabb7"></a>AD_NONE&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gae5ba0839681e8380309f2a2b8e87b834"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gae5ba0839681e8380309f2a2b8e87b834">ALERT_LEVEL_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;ble_service_proximity.h&gt;</code></p>
+
+<p>Proximity service alert level. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggae5ba0839681e8380309f2a2b8e87b834af2958b0b8c69bafeaef608b0de0e66b6"></a>ALERT_LEVEL_NO_ALERT&#160;</td><td class="fielddoc">
+<p>No Alert. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggae5ba0839681e8380309f2a2b8e87b834a3a0b534e48005d5b67357ee2d00bab41"></a>ALERT_LEVEL_MILD_ALERT&#160;</td><td class="fielddoc">
+<p>Mild Alert. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggae5ba0839681e8380309f2a2b8e87b834a441d457881f1b2ee8c5bdea8284db94a"></a>ALERT_LEVEL_HIGH_ALERT&#160;</td><td class="fielddoc">
+<p>High Alert. </p>
 </td></tr>
 </table>
 
@@ -884,7 +917,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Nov 7 2014 09:22:55 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 9 2014 21:54:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

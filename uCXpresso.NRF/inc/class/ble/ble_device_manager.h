@@ -18,11 +18,21 @@
  */
 class bleDeviceManager: public bleBase {
 public:
-	bleDeviceManager();
-
-	uint32_t settings(bool clearAllBoundedCentrals = true,
-					  uint8_t timeout = 30,
-					  uint8_t bond = 1,
+	/**
+	 * @brief Device Manager settings.
+	 *
+	 * @param timoeut			Timeout for SMP transactions or Security Request in seconds.
+	 * @param bond				Perform bonding, default 0, meaning bond can not be estabished.
+	 * @param mitm				MITM protection needed.
+	 * @param ioCapabilities	IO Capabilities
+	 * @param oob				Out Of Band data available.
+	 * @param minKeySize		Minimum encryption key size in octets between 7 and 16.
+	 * @param maxKeySize		Maximum encryption key size in octets between min_key_size and 16.
+	 *
+	 * @return NRF_SUCCESS if register a new device manager successful.
+	 */
+	uint32_t settings( uint8_t timeout = 30,
+					  uint8_t bond = 0,
 					  uint8_t mitm = 0,
 					  uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE,
 					  uint8_t oob = 0,
@@ -30,17 +40,12 @@ public:
 					  uint8_t maxKeySize = 16);
 
 	//
-	// Private
+	///@cond Private
 	//
-	virtual uint32_t onEvent(xHandle handle, xHandle event, uint32_t result);
-
 	~bleDeviceManager();
 	/// @cond
 protected:
 	uint8_t    	 m_app_handle;
-	virtual void on_ble_event(ble_evt_t * p_ble_evt);
-
-friend class bleDevice;
 	/// @endcond
 };
 

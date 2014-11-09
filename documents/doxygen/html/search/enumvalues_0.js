@@ -13,6 +13,9 @@ var searchData=
   ['ain',['AIN',['../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904aca7b0bfd5a22ac80ba063a5d18c1abb5',1,'adc.h']]],
   ['ain_5f1_5f3',['AIN_1_3',['../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904af37d947bcade886ed161d56a008a2d2f',1,'adc.h']]],
   ['ain_5f2_5f3',['AIN_2_3',['../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904ac2cce6445c27f34c4e8886361935bb64',1,'adc.h']]],
+  ['alert_5flevel_5fhigh_5falert',['ALERT_LEVEL_HIGH_ALERT',['../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a441d457881f1b2ee8c5bdea8284db94a',1,'ble_service_proximity.h']]],
+  ['alert_5flevel_5fmild_5falert',['ALERT_LEVEL_MILD_ALERT',['../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a3a0b534e48005d5b67357ee2d00bab41',1,'ble_service_proximity.h']]],
+  ['alert_5flevel_5fno_5falert',['ALERT_LEVEL_NO_ALERT',['../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834af2958b0b8c69bafeaef608b0de0e66b6',1,'ble_service_proximity.h']]],
   ['aref_5f1',['AREF_1',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a29eae4ee54152033dd962f9902b0a9e3',1,'adc.h']]],
   ['aref_5fvbg',['AREF_VBG',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3',1,'adc.h']]]
 ];

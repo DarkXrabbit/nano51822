@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc5</span>
+   &#160;<span id="projectnumber">v1.0.0 rc6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -143,8 +143,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab77f9940edde80f47e935c96e6638d6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#ab77f9940edde80f47e935c96e6638d6e">name_type</a> (ble_advdata_name_type_t type)</td></tr>
 <tr class="memdesc:ab77f9940edde80f47e935c96e6638d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the device name. ble_advdata_name_type_t.  <a href="#ab77f9940edde80f47e935c96e6638d6e">More...</a><br /></td></tr>
 <tr class="separator:ab77f9940edde80f47e935c96e6638d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a726de3a77f43183ece083f815dc278fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa">flag</a> (uint8_t val)</td></tr>
+<tr class="memdesc:a726de3a77f43183ece083f815dc278fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">single advertising flag.  <a href="#a726de3a77f43183ece083f815dc278fa">More...</a><br /></td></tr>
+<tr class="separator:a726de3a77f43183ece083f815dc278fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b50f2576ce4da214ea1b8bdfdeb1940"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940">flags</a> (const uint8_t *data, uint16_t size)</td></tr>
-<tr class="memdesc:a8b50f2576ce4da214ea1b8bdfdeb1940"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising data Flags field.  <a href="#a8b50f2576ce4da214ea1b8bdfdeb1940">More...</a><br /></td></tr>
+<tr class="memdesc:a8b50f2576ce4da214ea1b8bdfdeb1940"><td class="mdescLeft">&#160;</td><td class="mdescRight">multiple advertising flags.  <a href="#a8b50f2576ce4da214ea1b8bdfdeb1940">More...</a><br /></td></tr>
 <tr class="separator:a8b50f2576ce4da214ea1b8bdfdeb1940"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad1102d34f88eb91ec45c3196e2f5be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a> (uint16_t id)</td></tr>
 <tr class="memdesc:afad1102d34f88eb91ec45c3196e2f5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Company Identifier Code.  <a href="#afad1102d34f88eb91ec45c3196e2f5be">More...</a><br /></td></tr>
@@ -276,6 +279,24 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a726de3a77f43183ece083f815dc278fa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleAdvertising::flag </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>val</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>single advertising flag. </p>
+
+</div>
+</div>
 <a class="anchor" id="a8b50f2576ce4da214ea1b8bdfdeb1940"></a>
 <div class="memitem">
 <div class="memproto">
@@ -300,7 +321,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
       </table>
 </div><div class="memdoc">
 
-<p>Advertising data Flags field. </p>
+<p>multiple advertising flags. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a15">/ble/ble_beacon/src/main.cpp</a>.</dd>
 </dl>
 </div>
@@ -629,7 +650,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a></li>
-    <li class="footer">Generated on Fri Nov 7 2014 09:22:55 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 9 2014 21:54:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

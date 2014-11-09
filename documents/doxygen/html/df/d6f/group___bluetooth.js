@@ -5,6 +5,7 @@ var group___bluetooth =
       [ "add_uuid_to_complete_list", "d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9", null ],
       [ "appearance", "d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c", null ],
       [ "commpany_identifier", "d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be", null ],
+      [ "flag", "d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa", null ],
       [ "flags", "d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940", null ],
       [ "getAdvData", "d0/d2c/classble_advertising.html#a9f19b8e405a37a95fae0ac1d4a43208c", null ],
       [ "getManufData", "d0/d2c/classble_advertising.html#a30b7991a827b191cca06e1f7b4e84347", null ],
@@ -39,7 +40,7 @@ var group___bluetooth =
       [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
       [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
       [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
-      [ "enable", "d6/d49/classble_device.html#a951f81783549e5905323a44308525957", null ],
+      [ "enable", "d6/d49/classble_device.html#a0d5a5afebd0891f161c38f7bb6e8ddeb", null ],
       [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
       [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
       [ "getName", "d6/d49/classble_device.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
@@ -74,12 +75,9 @@ var group___bluetooth =
       [ "m_gap", "d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9", null ]
     ] ],
     [ "bleDeviceManager", "d9/d34/classble_device_manager.html", [
-      [ "bleDeviceManager", "d9/d34/classble_device_manager.html#a9bccd8c288f56bfe2baeea3304382da9", null ],
-      [ "~bleDeviceManager", "d9/d34/classble_device_manager.html#a1093eba1d896e1b60197517719922cc4", null ],
       [ "isThread", "d9/d34/classble_device_manager.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d9/d34/classble_device_manager.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
-      [ "onEvent", "d9/d34/classble_device_manager.html#a5886b49b293ced1754a1f53e510bd1b3", null ],
-      [ "settings", "d9/d34/classble_device_manager.html#adfcb388faf56e21e220518672264065e", null ]
+      [ "settings", "d9/d34/classble_device_manager.html#a5c3483f2ff90da8d9f0852d2b3276ab7", null ]
     ] ],
     [ "bleGAP", "dd/d89/classble_g_a_p.html", [
       [ "bleGAP", "dd/d89/classble_g_a_p.html#a2b1aec1291fb6dc68bd7e20877eb6201", null ],
@@ -168,6 +166,19 @@ var group___bluetooth =
       [ "send", "d3/d27/classble_service_h_t_m.html#a8e4942f5407c238d34c341794fa85fc8", null ],
       [ "uuid", "d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca", null ],
       [ "uuid_type", "d3/d27/classble_service_h_t_m.html#a8931a117eb7be5a52455b53459b0df62", null ]
+    ] ],
+    [ "bleServiceProximity", "df/d3a/classble_service_proximity.html", [
+      [ "bleServiceProximity", "df/d3a/classble_service_proximity.html#a6e2e7c6fc83306cc86bf09053430983d", null ],
+      [ "isAvailable", "df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455", null ],
+      [ "isThread", "df/d3a/classble_service_proximity.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "df/d3a/classble_service_proximity.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "on_alert_signal", "df/d3a/classble_service_proximity.html#a0cde5dbc593ccaf3582fca0903cf418f", null ],
+      [ "on_server_disconnected", "df/d3a/classble_service_proximity.html#aacf1a2ea217c6d15875cf4be06e2a1c9", null ],
+      [ "on_server_discovered", "df/d3a/classble_service_proximity.html#a24debdd8bf8058c5c23f51ff7ac3cde3", null ],
+      [ "on_server_not_found", "df/d3a/classble_service_proximity.html#a9ebd3ad86b58ac79fb76fff490b849e1", null ],
+      [ "send", "df/d3a/classble_service_proximity.html#ad3c746f280d0044fc6c96eeeef8d56aa", null ],
+      [ "uuid", "df/d3a/classble_service_proximity.html#ad2abbdb6a3341823b30278e077e323ba", null ],
+      [ "uuid_type", "df/d3a/classble_service_proximity.html#a8931a117eb7be5a52455b53459b0df62", null ]
     ] ],
     [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html", [
       [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html#a7881093c8c12b3fe83ae2ad5e17f9515", null ],

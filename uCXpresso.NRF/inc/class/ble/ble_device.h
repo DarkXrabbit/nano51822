@@ -29,8 +29,8 @@
 #include <class/timeout.h>
 
 #include <class/ble/ble_service.h>
-#include <class/ble/ble_advertising.h>
 #include <class/ble/ble_device_manager.h>
+#include <class/ble/ble_advertising.h>
 #include <class/ble/ble_gap.h>
 #include <class/ble/nrf51/ble_dis.h>
 
@@ -84,7 +84,8 @@ public:
 	 */
 	static void Init(NRF_LFCLKSRC_T lfclksrc=NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION);
 
-	/**@brief BLE softdevice constructor.
+	/**
+	 * @brief BLE softdevice constructor.
 	 */
 	bleDevice();
 
@@ -94,7 +95,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(uint32_t stack=78);
+	uint32_t enable(bool clearAllBoundedCentrals=false, uint32_t stack=78);
 
 	/**
 	 * @brief Wait for connected.
@@ -178,8 +179,8 @@ public:
 	 */
 	static uint8_t *address();
 
-	/**@brief A device manager member object.
-	 * @ref bleDeviceManager class.
+	/**
+	 * @brief device manager
 	 */
 	bleDeviceManager	m_device_manager;
 
@@ -234,7 +235,6 @@ protected:
 // friend class for BLE services
 //
 friend class bleAdvertising;
-friend class bleDeviceManager;
 friend class bleService;
 	/// @endcond
 };

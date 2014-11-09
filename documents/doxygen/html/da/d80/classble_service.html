@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc5</span>
+   &#160;<span id="projectnumber">v1.0.0 rc6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -133,8 +133,9 @@ Inheritance diagram for bleService:</div>
 <area href="../../d6/d2e/classble_service_d_f_u.html" title="BLE DFU service class. " alt="bleServiceDFU" shape="rect" coords="136,392,262,416"/>
 <area href="../../d0/dfc/classble_service_h_r_m.html" title="BLE Heart Rate service. " alt="bleServiceHRM" shape="rect" coords="136,448,262,472"/>
 <area href="../../d3/d27/classble_service_h_t_m.html" title="Health Thermometer Service class. " alt="bleServiceHTM" shape="rect" coords="136,504,262,528"/>
-<area href="../../de/dc0/classble_service_r_s_c.html" title="BLE Running Speed and Cadence Service. " alt="bleServiceRSC" shape="rect" coords="136,560,262,584"/>
-<area href="../../d2/df3/classble_service_t_p_l.html" title="Tx Power Level Service class. " alt="bleServiceTPL" shape="rect" coords="136,616,262,640"/>
+<area href="../../df/d3a/classble_service_proximity.html" title="BLE Service base class. " alt="bleServiceProximity" shape="rect" coords="136,560,262,584"/>
+<area href="../../de/dc0/classble_service_r_s_c.html" title="BLE Running Speed and Cadence Service. " alt="bleServiceRSC" shape="rect" coords="136,616,262,640"/>
+<area href="../../d2/df3/classble_service_t_p_l.html" title="Tx Power Level Service class. " alt="bleServiceTPL" shape="rect" coords="136,672,262,696"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -209,7 +210,7 @@ Public Member Functions</h2></td></tr>
 <p>Check the service available. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
 
 </div>
 </div>
@@ -280,7 +281,7 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -288,7 +289,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the UUID of service. </p>
 <dl class="section return"><dt>Returns</dt><dd>an uint16_t value. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ac08c4164b2f62f09d462df5ff940a1f8">bleServiceCSC</a>, <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ab16dbfc90ec7ac94d5062ccbaa4d504d">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca">bleServiceHTM</a>, <a class="el" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">bleServiceTPL</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">bleServiceCustomer</a>, and <a class="el" href="../../d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9">bleServiceBattery</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ac08c4164b2f62f09d462df5ff940a1f8">bleServiceCSC</a>, <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ab16dbfc90ec7ac94d5062ccbaa4d504d">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#ad2abbdb6a3341823b30278e077e323ba">bleServiceProximity</a>, <a class="el" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">bleServiceTPL</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">bleServiceCustomer</a>, and <a class="el" href="../../d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9">bleServiceBattery</a>.</p>
 
 </div>
 </div>
@@ -326,7 +327,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../da/d80/classble_service.html">bleService</a></li>
-    <li class="footer">Generated on Fri Nov 7 2014 09:22:55 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 9 2014 21:54:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

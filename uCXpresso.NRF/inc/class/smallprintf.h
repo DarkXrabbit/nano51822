@@ -35,8 +35,8 @@ public:
 //	int scanf(LPCTSTR format, va_list args);
 
 protected:
-	virtual void alloc(int bufsize=256) {}
-	virtual void free() {}
+	virtual void alloc(int bufsize=256) { NOTHING }
+	virtual void free() { NOTHING }
 	int		 m_base;
 	/*! \endcond */
 };

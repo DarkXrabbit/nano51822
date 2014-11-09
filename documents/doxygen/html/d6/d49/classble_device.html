@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc5</span>
+   &#160;<span id="projectnumber">v1.0.0 rc6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -139,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf797390297ed590496b35215ad2688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688">bleDevice</a> ()</td></tr>
 <tr class="memdesc:a4bf797390297ed590496b35215ad2688"><td class="mdescLeft">&#160;</td><td class="mdescRight">BLE softdevice constructor.  <a href="#a4bf797390297ed590496b35215ad2688">More...</a><br /></td></tr>
 <tr class="separator:a4bf797390297ed590496b35215ad2688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a951f81783549e5905323a44308525957"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a951f81783549e5905323a44308525957">enable</a> (uint32_t stack=78)</td></tr>
-<tr class="memdesc:a951f81783549e5905323a44308525957"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a951f81783549e5905323a44308525957">More...</a><br /></td></tr>
-<tr class="separator:a951f81783549e5905323a44308525957"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d5a5afebd0891f161c38f7bb6e8ddeb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a0d5a5afebd0891f161c38f7bb6e8ddeb">enable</a> (bool clearAllBoundedCentrals=false, uint32_t stack=78)</td></tr>
+<tr class="memdesc:a0d5a5afebd0891f161c38f7bb6e8ddeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a0d5a5afebd0891f161c38f7bb6e8ddeb">More...</a><br /></td></tr>
+<tr class="separator:a0d5a5afebd0891f161c38f7bb6e8ddeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06a3a42710cc86472c92583a6d608e9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
 <tr class="memdesc:aa06a3a42710cc86472c92583a6d608e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for connected.  <a href="#aa06a3a42710cc86472c92583a6d608e9">More...</a><br /></td></tr>
 <tr class="separator:aa06a3a42710cc86472c92583a6d608e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -221,7 +221,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a481d824043b922f321b653ffd91ffdf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9">m_device_manager</a></td></tr>
-<tr class="memdesc:a481d824043b922f321b653ffd91ffdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A device manager member object. <a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> class.  <a href="#a481d824043b922f321b653ffd91ffdf9">More...</a><br /></td></tr>
+<tr class="memdesc:a481d824043b922f321b653ffd91ffdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">device manager  <a href="#a481d824043b922f321b653ffd91ffdf9">More...</a><br /></td></tr>
 <tr class="separator:a481d824043b922f321b653ffd91ffdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a239a91976b72492fe0275e21aa94a0e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a></td></tr>
 <tr class="memdesc:a239a91976b72492fe0275e21aa94a0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An advertising member object. <a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a> class.  <a href="#a239a91976b72492fe0275e21aa94a0e3">More...</a><br /></td></tr>
@@ -308,16 +308,26 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a951f81783549e5905323a44308525957"></a>
+<a class="anchor" id="a0d5a5afebd0891f161c38f7bb6e8ddeb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">uint32_t bleDevice::enable </td>
           <td>(</td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>stack</em> = <code>78</code></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>clearAllBoundedCentrals</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>stack</em> = <code>78</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1286,7 +1296,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
       </table>
 </div><div class="memdoc">
 
-<p>A device manager member object. <a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> class. </p>
+<p>device manager </p>
 
 </div>
 </div>
@@ -1311,7 +1321,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Fri Nov 7 2014 09:22:55 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 9 2014 21:54:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

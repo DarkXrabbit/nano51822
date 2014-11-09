@@ -1,11 +1,14 @@
 var searchData=
 [
+  ['on_5falert_5fsignal',['on_alert_signal',['../df/d3a/classble_service_proximity.html#a0cde5dbc593ccaf3582fca0903cf418f',1,'bleServiceProximity']]],
+  ['on_5fserver_5fdisconnected',['on_server_disconnected',['../df/d3a/classble_service_proximity.html#aacf1a2ea217c6d15875cf4be06e2a1c9',1,'bleServiceProximity']]],
+  ['on_5fserver_5fdiscovered',['on_server_discovered',['../df/d3a/classble_service_proximity.html#a24debdd8bf8058c5c23f51ff7ac3cde3',1,'bleServiceProximity']]],
+  ['on_5fserver_5fnot_5ffound',['on_server_not_found',['../df/d3a/classble_service_proximity.html#a9ebd3ad86b58ac79fb76fff490b849e1',1,'bleServiceProximity']]],
   ['onclose',['onClose',['../de/dba/class_c_shell.html#a27a37bf5a22eaba1426655409decc188',1,'CShell']]],
   ['onconnected',['onConnected',['../d6/d49/classble_device.html#ab7bb9b2628c7897cb7573505d013972e',1,'bleDevice']]],
   ['ondebug',['onDebug',['../de/dba/class_c_shell.html#a74d294faaebd969b295366f4a861cf02',1,'CShell']]],
   ['ondisconnected',['onDisconnected',['../d6/d49/classble_device.html#a37d884099d9e300a888551ac0325ca18',1,'bleDevice']]],
   ['onerror',['onError',['../d6/d49/classble_device.html#abdd1db8cc91d3b266d84d92acf07b7e8',1,'bleDevice']]],
-  ['onevent',['onEvent',['../d9/d34/classble_device_manager.html#a5886b49b293ced1754a1f53e510bd1b3',1,'bleDeviceManager']]],
   ['onquery',['onQuery',['../de/dba/class_c_shell.html#a16e1dae0dedda35c0be64d1c8f40e6b4',1,'CShell']]],
   ['onrssichanged',['onRssiChanged',['../d6/d49/classble_device.html#a85532ba48f80496895a1e7fe3e012b27',1,'bleDevice']]],
   ['ontimeout',['onTimeout',['../d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa',1,'bleDevice']]],

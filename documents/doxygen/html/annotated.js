@@ -13,6 +13,7 @@ var annotated =
     [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html", "d6/d2e/classble_service_d_f_u" ],
     [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", "d0/dfc/classble_service_h_r_m" ],
     [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", "d3/d27/classble_service_h_t_m" ],
+    [ "bleServiceProximity", "df/d3a/classble_service_proximity.html", "df/d3a/classble_service_proximity" ],
     [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html", "de/dc0/classble_service_r_s_c" ],
     [ "bleServiceTPL", "d2/df3/classble_service_t_p_l.html", "d2/df3/classble_service_t_p_l" ],
     [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", "db/d84/classble_service_u_a_r_t" ],

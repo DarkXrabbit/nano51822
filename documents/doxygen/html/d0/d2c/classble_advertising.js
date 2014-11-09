@@ -4,6 +4,7 @@ var classble_advertising =
     [ "add_uuid_to_complete_list", "d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9", null ],
     [ "appearance", "d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c", null ],
     [ "commpany_identifier", "d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be", null ],
+    [ "flag", "d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa", null ],
     [ "flags", "d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940", null ],
     [ "getAdvData", "d0/d2c/classble_advertising.html#a9f19b8e405a37a95fae0ac1d4a43208c", null ],
     [ "getManufData", "d0/d2c/classble_advertising.html#a30b7991a827b191cca06e1f7b4e84347", null ],

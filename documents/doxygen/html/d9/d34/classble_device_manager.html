@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc5</span>
+   &#160;<span id="projectnumber">v1.0.0 rc6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -131,14 +131,9 @@ Inheritance diagram for bleDeviceManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a9bccd8c288f56bfe2baeea3304382da9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a9bccd8c288f56bfe2baeea3304382da9">bleDeviceManager</a> ()</td></tr>
-<tr class="separator:a9bccd8c288f56bfe2baeea3304382da9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfcb388faf56e21e220518672264065e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#adfcb388faf56e21e220518672264065e">settings</a> (bool clearAllBoundedCentrals=true, uint8_t timeout=30, uint8_t bond=1, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td></tr>
-<tr class="separator:adfcb388faf56e21e220518672264065e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5886b49b293ced1754a1f53e510bd1b3"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a5886b49b293ced1754a1f53e510bd1b3">onEvent</a> (xHandle handle, xHandle event, uint32_t result)</td></tr>
-<tr class="separator:a5886b49b293ced1754a1f53e510bd1b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1093eba1d896e1b60197517719922cc4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a1093eba1d896e1b60197517719922cc4">~bleDeviceManager</a> ()</td></tr>
-<tr class="separator:a1093eba1d896e1b60197517719922cc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c3483f2ff90da8d9f0852d2b3276ab7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a5c3483f2ff90da8d9f0852d2b3276ab7">settings</a> (uint8_t timeout=30, uint8_t bond=0, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td></tr>
+<tr class="memdesc:a5c3483f2ff90da8d9f0852d2b3276ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device Manager settings.  <a href="#a5c3483f2ff90da8d9f0852d2b3276ab7">More...</a><br /></td></tr>
+<tr class="separator:a5c3483f2ff90da8d9f0852d2b3276ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -146,38 +141,7 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Management. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a9bccd8c288f56bfe2baeea3304382da9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bleDeviceManager::bleDeviceManager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a1093eba1d896e1b60197517719922cc4"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bleDeviceManager::~bleDeviceManager </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -229,59 +193,13 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5886b49b293ced1754a1f53e510bd1b3"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual uint32_t bleDeviceManager::onEvent </td>
-          <td>(</td>
-          <td class="paramtype">xHandle&#160;</td>
-          <td class="paramname"><em>handle</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">xHandle&#160;</td>
-          <td class="paramname"><em>event</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>result</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="adfcb388faf56e21e220518672264065e"></a>
+<a class="anchor" id="a5c3483f2ff90da8d9f0852d2b3276ab7"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">uint32_t bleDeviceManager::settings </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>clearAllBoundedCentrals</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">uint8_t&#160;</td>
           <td class="paramname"><em>timeout</em> = <code>30</code>, </td>
         </tr>
@@ -289,7 +207,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>bond</em> = <code>1</code>, </td>
+          <td class="paramname"><em>bond</em> = <code>0</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -329,6 +247,21 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Device Manager settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timoeut</td><td>Timeout for SMP transactions or Security Request in seconds. </td></tr>
+    <tr><td class="paramname">bond</td><td>Perform bonding, default 0, meaning bond can not be estabished. </td></tr>
+    <tr><td class="paramname">mitm</td><td>MITM protection needed. </td></tr>
+    <tr><td class="paramname">ioCapabilities</td><td>IO Capabilities </td></tr>
+    <tr><td class="paramname">oob</td><td>Out Of Band data available. </td></tr>
+    <tr><td class="paramname">minKeySize</td><td>Minimum encryption key size in octets between 7 and 16. </td></tr>
+    <tr><td class="paramname">maxKeySize</td><td>Maximum encryption key size in octets between min_key_size and 16.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if register a new device manager successful. </dd></dl>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -337,7 +270,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></li>
-    <li class="footer">Generated on Fri Nov 7 2014 09:22:55 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 9 2014 21:54:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

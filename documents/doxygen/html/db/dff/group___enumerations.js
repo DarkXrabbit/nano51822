@@ -21,6 +21,11 @@ var group___enumerations =
       [ "AD5", "db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba643049f91d8ecce78006042379d84b76", null ],
       [ "AD_NONE", "db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba1730956f3c4fe1a36a483aa7109cabb7", null ]
     ] ],
+    [ "ALERT_LEVEL_T", "db/dff/group___enumerations.html#gae5ba0839681e8380309f2a2b8e87b834", [
+      [ "ALERT_LEVEL_NO_ALERT", "db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834af2958b0b8c69bafeaef608b0de0e66b6", null ],
+      [ "ALERT_LEVEL_MILD_ALERT", "db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a3a0b534e48005d5b67357ee2d00bab41", null ],
+      [ "ALERT_LEVEL_HIGH_ALERT", "db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a441d457881f1b2ee8c5bdea8284db94a", null ]
+    ] ],
     [ "AREF_T", "db/dff/group___enumerations.html#gae0520f31b1985f1579b0568eaf20a624", [
       [ "AREF_VBG", "db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3", null ],
       [ "AREF_1", "db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a29eae4ee54152033dd962f9902b0a9e3", null ]
