@@ -241,9 +241,13 @@ friend class bleService;
 
 extern bleDevice *gpBLE;	///< Point to the global bleDevice object.
 
-/*
- * @example /rtos/tickless_test/src/setup.cpp
- * This is an example of how to use the bleDevice::Init(),
+/**\example /ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp
+ * This is an example of how to use the bleDevice class.
+ * More details about this example.
+ */
+
+/**\example /ble/ble_app_hrm_htm_bat_lilypad/src/setup.cpp
+ * This is an example of how to use the bleDevice::Init() member.
  * More details about this example.
  */
 
