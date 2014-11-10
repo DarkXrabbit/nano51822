@@ -64,6 +64,9 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
+	// Device Manager (optional)
+	ble.m_device_manager.settings();
+
 	//
 	// Declare a HRM service object
 	//

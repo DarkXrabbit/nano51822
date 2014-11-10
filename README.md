@@ -7,6 +7,12 @@ uCXpresso.NRF RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Class Manual : http://www.embeda.com.tw/manual/nrf/html/index.html
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 
+v1.0.0 rc6 10th November 2014
+--------------------------------
+###Features: 
+	1. Add bleServiceProximity class.
+	2. Update Device Manager module to save heap memory.
+
 v1.0.0 rc5 7th November 2014
 --------------------------------
 ###Features: 

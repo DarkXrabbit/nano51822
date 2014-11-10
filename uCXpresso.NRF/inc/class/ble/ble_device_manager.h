@@ -22,7 +22,7 @@ public:
 	 * @brief Device Manager settings.
 	 *
 	 * @param timoeut			Timeout for SMP transactions or Security Request in seconds.
-	 * @param bond				Perform bonding, default 0, meaning bond can not be estabished.
+	 * @param bond				Perform bonding, default 1, meaning bond should be estabished.
 	 * @param mitm				MITM protection needed.
 	 * @param ioCapabilities	IO Capabilities
 	 * @param oob				Out Of Band data available.
