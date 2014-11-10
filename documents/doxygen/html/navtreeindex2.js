@@ -1,5 +1,7 @@
 var NAVTREEINDEX2 =
 {
+"da/d88/classsw_p_w_m.html":[0,4,12],
+"da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d":[0,4,12,4],
 "da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116":[0,4,12,8],
 "da/d88/classsw_p_w_m.html#a025509145d6cd34e37f5e143606f638b":[0,4,12,12],
 "da/d88/classsw_p_w_m.html#a18cf254bf2030ba75735238fc1a31f4d":[0,4,12,6],
@@ -12,7 +14,7 @@ var NAVTREEINDEX2 =
 "da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84":[0,4,12,1],
 "da/d88/classsw_p_w_m.html#aef5241e8a42850238e784951b93570dd":[0,4,12,10],
 "da/d88/classsw_p_w_m.html#af300cb30894b00317b07261e96931e63":[0,4,12,0],
-"da/dbb/_2peripherals_2timer_2src_2main_8cpp-example.html":[2,9],
+"da/dbb/_2peripherals_2timer_2src_2main_8cpp-example.html":[2,11],
 "da/dc3/classspi_master.html":[0,4,9],
 "da/dc3/classspi_master.html#a065ada61bca032de3aaf0f5b80972259":[0,4,9,1],
 "da/dc3/classspi_master.html#a14ed1edc76b7169efc3650d867ab2a4e":[0,4,9,9],
@@ -207,7 +209,7 @@ var NAVTREEINDEX2 =
 "dc/dd4/class_w_d_t.html#a7fb55c4b7a7a4a5b525983b3f0ee0eed":[0,4,14,0],
 "dc/dd4/class_w_d_t.html#abdc13243bc032fa1ffab53921cac0b77":[0,4,14,2],
 "dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html":[2,0],
-"dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html":[2,11],
+"dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html":[2,13],
 "dd/d60/class_c_event_bit.html":[0,5,0],
 "dd/d60/class_c_event_bit.html#a0b05da65aa8bb0b77dd75f0a84b8fbb0":[0,5,0,5],
 "dd/d60/class_c_event_bit.html#a18cf254bf2030ba75735238fc1a31f4d":[0,5,0,4],
@@ -247,7 +249,5 @@ var NAVTREEINDEX2 =
 "de/d89/class_c_bus.html#a18cf254bf2030ba75735238fc1a31f4d":[0,4,2,4],
 "de/d89/class_c_bus.html#a26a76c241a4d62d2efdac57d2cfe4c0f":[0,4,2,3],
 "de/d89/class_c_bus.html#a3ea59ccbb16b92e2763a00b3baa10fd6":[0,4,2,6],
-"de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0":[0,4,2,13],
-"de/d89/class_c_bus.html#a4fa0e4c537c237278fe8092f4d8e26fb":[0,4,2,1],
-"de/d89/class_c_bus.html#a55d1c493025b37e0f34801b8ced31068":[0,4,2,8]
+"de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0":[0,4,2,13]
 };

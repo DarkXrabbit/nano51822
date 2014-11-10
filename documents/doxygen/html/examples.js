@@ -1,6 +1,8 @@
 var examples =
 [
     [ "/ble/ble_app_hrm_htm_bat/src/main.cpp", "dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html", null ],
+    [ "/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp", "da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html", null ],
+    [ "/ble/ble_app_hrm_htm_bat_lilypad/src/setup.cpp", "d5/d35/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2setup_8cpp-example.html", null ],
     [ "/ble/ble_app_uart/src/main.cpp", "d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_beacon/src/main.cpp", "d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_rssi_measure/src/main.cpp", "d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html", null ],
