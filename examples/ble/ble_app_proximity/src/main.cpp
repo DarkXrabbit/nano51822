@@ -40,7 +40,7 @@
 #include <class/pin.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                          "Proximity"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
@@ -104,8 +104,7 @@ int main(void) {
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	// device manager
-	bleDeviceManager man;
-	man.settings();
+	ble.m_device_manager.settings();
 
 	//
 	// Proximity Service
@@ -187,6 +186,7 @@ int main(void) {
 	CTimeout tmLED, tmBAT;
 	uint16_t value;
 	float percentage;
+	PIN_LEVEL_T pl = HIGH;
 	//
     // Enter main loop.
 	//
@@ -195,8 +195,13 @@ int main(void) {
     	// Proximity immediate alert send.
     	//
     	if ( prox.isAvailable() ) {
-    		if ( btn==LOW ) {
-    			prox.send(ALERT_LEVEL_HIGH_ALERT);
+    		if ( btn!=pl ) {
+				if ( btn==LOW ) {
+					prox.send(ALERT_LEVEL_HIGH_ALERT);
+				} else {
+					prox.send(ALERT_LEVEL_NO_ALERT);
+				}
+				pl = btn;
     		}
     	}
 
@@ -210,5 +215,15 @@ int main(void) {
 				bat.send(percentage);
 			}
     	}
+
+    	//
+    	// Connection Status (LED)
+    	//
+    	if ( ble.isConnected() ) {
+    		if ( tmLED.isExpired(500) ) {
+    			tmLED.reset();
+    			led.toggle();
+    		}
+    	} else led = LED_ON;
     }
 }

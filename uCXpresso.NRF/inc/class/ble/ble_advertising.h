@@ -138,7 +138,6 @@ public:
 	///@cond PRIVATE
 	//
 protected:
-	bleBase	 				*m_p_ble;
 	ble_advdata_t			 m_adv_data;
 	ble_advdata_manuf_data_t m_manuf_specific_data;
 	ble_advdata_conn_int_t	 m_slave_conn_interval;

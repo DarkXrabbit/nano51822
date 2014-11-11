@@ -29,8 +29,8 @@
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service.h>
 #include <class/pin.h>
-
 #include <class/ble/ble_service_uart.h>
+#include <class/ble/ble_conn_params.h>
 #include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
@@ -60,10 +60,16 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
+	// Device Manager
+	ble.m_device_manager.settings();
+
 	//
 	// Add BLE Service
 	//
 	bleServiceUART nus(ble);			// declare a BLE "Nordic UART Service" object
+
+	// Add Connection Parameters Update negotiation
+	bleConnParams conn(ble);
 
 	//
 	// BLE Advertising

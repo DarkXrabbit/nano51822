@@ -54,11 +54,13 @@ public:
 	 * @param[in]	first_update_delay	Time from initiating event to first time connection parameters updated. (in millisecond)
 	 * @param[in]	next_update_delay	Time between each connection parameters updated. (in millisecond)
 	 * @param[in]	max_update_count	Number of attempts before giving up the connection parameter negotiation.
+	 * @param[in] 	disconnect_on_fail	Set to TRUE if a failed connection parameters update shall cause an automatic disconnection, set to FALSE otherwise.
 	 */
 	bleConnParams(bleDevice &ble,
 			      uint16_t first_update_daley 	= FIRST_CONN_PARAMS_UPDATE_DELAY,
 				  uint16_t next_update_delay 	= NEXT_CONN_PARAMS_UPDATE_DELAY,
 				  uint16_t max_update_count 	= MAX_CONN_PARAMS_UPDATE_COUNT,
+				  bool	   disconnect_on_fail	= false,
 				  uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID);
 
 	/**
@@ -87,6 +89,11 @@ public:
 	 * @brief Stop connection parameter update negotiation.
 	 */
 	uint32_t stop();
+
+	/**
+	 * @brief On Connection Parameters update failed event.
+	 */
+	virtual void onUpdateFailed() { NOTHING }
 
 	//
 	///@cond PRIVATE

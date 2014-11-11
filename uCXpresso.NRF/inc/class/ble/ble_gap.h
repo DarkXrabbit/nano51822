@@ -37,13 +37,24 @@ typedef enum {
  */
 class bleGAP: public bleBase {
 public:
-	bleGAP();
-
+	/*
+	 * @brief Set GAP Peripheral Preferred Connection Parameters.
+	 * @param device_name		Pointer to the device name string.
+	 * @param min_conn_interval	Minimum Connection Interval in ms units.
+	 * @param max_conn_interval Maximum Connection Interval in ms units.
+	 * @param slave_latency		Slave Latency in number of connection events.
+	 * @param conn_sup_timeout	Connection Supervision Timeout in ms units.
+	 *
+	 * @return
+	 * @retval NRF_SUCCESS Peripheral Preferred Connection Parameters set successfully.
+	 * @retval NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
+	 * @retval NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied.
+	 */
 	virtual uint32_t settings(LPCTSTR device_name,
-							  uint16_t min_conn_interval = 500,
-							  uint16_t max_conn_interval = 1000,
-							  uint16_t slave_latency 	 = 0,
-							  uint16_t conn_sup_timeout  = 4000
+							  uint16_t min_conn_interval = 500,		// default 500ms
+							  uint16_t max_conn_interval = 1000,	// default 1000ms
+							  uint16_t slave_latency 	 = 0,		//
+							  uint16_t conn_sup_timeout  = 4000		// default connection supervisory timeout 4 seconds.
 							);
 
 	/**@brief Set GAP Appearance value.
@@ -80,10 +91,6 @@ public:
 	 * @return @ref NRF_ERROR_INVALID_STATE Invalid state to perform operation (disconnection is already in progress or not connected at all).
 	 */
 	virtual uint32_t disconnect(GAP_DISCONN_REASON_T reason=BTLE_REMOTE_USER_TERMINATED_CONNECTION);
-
-protected:
-	bleBase	 	*m_p_ble;
-friend class bleDevice;
 };
 
 #endif /* BLE_GAP_H_ */

@@ -91,11 +91,12 @@ public:
 
 	/**@brief Enable the BLE stack (device).
 	 *
+	 * @param clearAllBoundedCentrals Set to true in case the module should clear all persistent data.
 	 * @param stack Set the stack size for the BLE device task.
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(bool clearAllBoundedCentrals=false, uint32_t stack=78);
+	uint32_t enable(bool clearAllBoundedCentrals=true, uint32_t stack=78);
 
 	/**
 	 * @brief Wait for connected.
@@ -212,11 +213,6 @@ protected:
 	bool		m_memory_access_in_progress;
 
 	void system_off_mode_enter();
-
-	//
-	// parameters initiation
-	//
-	virtual void security_params_init();
 
 	//
 	// for services

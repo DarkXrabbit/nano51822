@@ -36,7 +36,7 @@
 #include <class/string.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                          "nanoUART"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     1000                   /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
@@ -159,6 +159,9 @@ int main(void) {
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
+
+	// Device Manager
+	ble.m_device_manager.settings();
 
 	//
 	// Add BLE UART Service

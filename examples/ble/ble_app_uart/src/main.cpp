@@ -61,6 +61,9 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
 
+	// Device Manager
+	ble.m_device_manager.settings();
+
 	//
 	// Add BLE UART Service
 	//

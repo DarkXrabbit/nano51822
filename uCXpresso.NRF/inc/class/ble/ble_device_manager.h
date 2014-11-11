@@ -32,7 +32,7 @@ public:
 	 * @return NRF_SUCCESS if register a new device manager successful.
 	 */
 	uint32_t settings( uint8_t timeout = 30,
-					  uint8_t bond = 0,
+					  uint8_t bond = 1,
 					  uint8_t mitm = 0,
 					  uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE,
 					  uint8_t oob = 0,
