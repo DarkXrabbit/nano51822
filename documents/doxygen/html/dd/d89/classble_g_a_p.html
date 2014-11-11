@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('dd/d89/classble_g_a_p.html','../../');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,8 +108,6 @@ $(document).ready(function(){initNavTree('dd/d89/classble_g_a_p.html','../../');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#friends">Friends</a> &#124;
 <a href="../../d0/da0/classble_g_a_p-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleGAP Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -133,8 +131,6 @@ Inheritance diagram for bleGAP:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2b1aec1291fb6dc68bd7e20877eb6201"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a2b1aec1291fb6dc68bd7e20877eb6201">bleGAP</a> ()</td></tr>
-<tr class="separator:a2b1aec1291fb6dc68bd7e20877eb6201"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af9407af2ca180fafced7d656b6550ece"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece">settings</a> (LPCTSTR device_name, uint16_t min_conn_interval=500, uint16_t max_conn_interval=1000, uint16_t slave_latency=0, uint16_t conn_sup_timeout=4000)</td></tr>
 <tr class="separator:af9407af2ca180fafced7d656b6550ece"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6544041a6c396246102b0e8430b344eb"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a6544041a6c396246102b0e8430b344eb">appearance</a> (uint16_t value)</td></tr>
@@ -150,36 +146,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
 <tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a2bc617ae3e6720678d558d86bc6d8623"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/dc4/classble_base.html">bleBase</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a2bc617ae3e6720678d558d86bc6d8623">m_p_ble</a></td></tr>
-<tr class="separator:a2bc617ae3e6720678d558d86bc6d8623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
-Friends</h2></td></tr>
-<tr class="memitem:a08996a3ed5a47a51072cd37a2936420e"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a08996a3ed5a47a51072cd37a2936420e">bleDevice</a></td></tr>
-<tr class="separator:a08996a3ed5a47a51072cd37a2936420e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE GAP class. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a2b1aec1291fb6dc68bd7e20877eb6201"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bleGAP::bleGAP </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a6544041a6c396246102b0e8430b344eb"></a>
 <div class="memitem">
 <div class="memproto">
@@ -398,55 +368,13 @@ NRF_ERROR_BUSY The stack is busy, process pending events and retry. </dd></dl>
 </dl>
 </div>
 </div>
-<h2 class="groupheader">Friends And Related Function Documentation</h2>
-<a class="anchor" id="a08996a3ed5a47a51072cd37a2936420e"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">friend class <a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="a2bc617ae3e6720678d558d86bc6d8623"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d2/dc4/classble_base.html">bleBase</a>* bleGAP::m_p_ble</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a></li>
-    <li class="footer">Generated on Mon Nov 10 2014 12:34:25 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 11 2014 17:18:07 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

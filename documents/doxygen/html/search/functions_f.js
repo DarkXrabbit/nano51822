@@ -9,7 +9,7 @@ var searchData=
   ['set',['set',['../dd/d60/class_c_event_bit.html#a0b05da65aa8bb0b77dd75f0a84b8fbb0',1,'CEventBit']]],
   ['setat',['setAt',['../df/d99/class_c_string.html#a99eaccef0daa453bf36ec886ae9b42c4',1,'CString']]],
   ['setpriority',['setPriority',['../d0/d26/class_c_thread.html#a6b0703ae0cc085a0c0aaa55b6945575b',1,'CThread']]],
-  ['settings',['settings',['../d9/d34/classble_device_manager.html#a5c3483f2ff90da8d9f0852d2b3276ab7',1,'bleDeviceManager::settings()'],['../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece',1,'bleGAP::settings()']]],
+  ['settings',['settings',['../d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392',1,'bleDeviceManager::settings()'],['../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece',1,'bleGAP::settings()']]],
   ['show_5fclear',['show_clear',['../de/dba/class_c_shell.html#a8cb6ac07d2290e4d51c641af1d152b1f',1,'CShell']]],
   ['show_5fheap',['show_heap',['../de/dba/class_c_shell.html#a99cd1946dd501dd788accc421ffb883c',1,'CShell']]],
   ['show_5fmenu',['show_menu',['../de/dba/class_c_shell.html#ab499caffc2baf478802c3f89d606fc6c',1,'CShell']]],

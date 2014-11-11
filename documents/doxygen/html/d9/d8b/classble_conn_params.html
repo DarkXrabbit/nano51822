@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('d9/d8b/classble_conn_params.html','../
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -132,15 +132,18 @@ Inheritance diagram for bleConnParams:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7f05c387b56ff2eea2d2976173adb53d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/classble_conn_params.html#a7f05c387b56ff2eea2d2976173adb53d">bleConnParams</a> (<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble, uint16_t first_update_daley=FIRST_CONN_PARAMS_UPDATE_DELAY, uint16_t next_update_delay=NEXT_CONN_PARAMS_UPDATE_DELAY, uint16_t max_update_count=MAX_CONN_PARAMS_UPDATE_COUNT, uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID)</td></tr>
-<tr class="memdesc:a7f05c387b56ff2eea2d2976173adb53d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the Connection Parameters module.  <a href="#a7f05c387b56ff2eea2d2976173adb53d">More...</a><br /></td></tr>
-<tr class="separator:a7f05c387b56ff2eea2d2976173adb53d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a251404b93fbbd5e3dc82e19b533df9de"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/classble_conn_params.html#a251404b93fbbd5e3dc82e19b533df9de">bleConnParams</a> (<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble, uint16_t first_update_daley=FIRST_CONN_PARAMS_UPDATE_DELAY, uint16_t next_update_delay=NEXT_CONN_PARAMS_UPDATE_DELAY, uint16_t max_update_count=MAX_CONN_PARAMS_UPDATE_COUNT, bool disconnect_on_fail=false, uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID)</td></tr>
+<tr class="memdesc:a251404b93fbbd5e3dc82e19b533df9de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct the Connection Parameters module.  <a href="#a251404b93fbbd5e3dc82e19b533df9de">More...</a><br /></td></tr>
+<tr class="separator:a251404b93fbbd5e3dc82e19b533df9de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fcb573363b5178e53a9639acdf967c2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2">change</a> (uint16_t min_conn_interval, uint16_t max_conn_interval, uint16_t slave_latency=0, uint16_t conn_sup_timeout=4000)</td></tr>
 <tr class="memdesc:a9fcb573363b5178e53a9639acdf967c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for changing the current connection parameters to a new set.  <a href="#a9fcb573363b5178e53a9639acdf967c2">More...</a><br /></td></tr>
 <tr class="separator:a9fcb573363b5178e53a9639acdf967c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a20e3f9b23f4f7528a0972a3c5898c361"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/classble_conn_params.html#a20e3f9b23f4f7528a0972a3c5898c361">stop</a> ()</td></tr>
 <tr class="memdesc:a20e3f9b23f4f7528a0972a3c5898c361"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop connection parameter update negotiation.  <a href="#a20e3f9b23f4f7528a0972a3c5898c361">More...</a><br /></td></tr>
 <tr class="separator:a20e3f9b23f4f7528a0972a3c5898c361"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acdf581e791c5fa6499934e6e4c74b411"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411">onEvent</a> (BLE_CP_EVENT_T evt)</td></tr>
+<tr class="memdesc:acdf581e791c5fa6499934e6e4c74b411"><td class="mdescLeft">&#160;</td><td class="mdescRight">On Connection Parameters update event.  <a href="#acdf581e791c5fa6499934e6e4c74b411">More...</a><br /></td></tr>
+<tr class="separator:acdf581e791c5fa6499934e6e4c74b411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae5045731a748b41a5153496d8fcb7257"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257">isAvailable</a> ()</td></tr>
 <tr class="memdesc:ae5045731a748b41a5153496d8fcb7257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service available.  <a href="#ae5045731a748b41a5153496d8fcb7257">More...</a><br /></td></tr>
 <tr class="separator:ae5045731a748b41a5153496d8fcb7257"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -158,9 +161,9 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Connection Parameters Class. </p>
 <p>Most use cases require what is referred to as Fast Connection Parameters as soon as a connection is established in order to ensure that service discovery and connection procedures happen quickly. However, continuing with these parameters through out the connection may be unnecessary drain of battery since many applications require a less frequent data exchange. Therefore, it is recommended that the peripheral applications request the master to update connection parameters. The Connection parameters negotiation library of the SDK provides the functionality to do so. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a13">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#_a21">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a11">/ble/ble_app_uart/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a15">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#_a21">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a13">/ble/ble_app_uart/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a7f05c387b56ff2eea2d2976173adb53d"></a>
+<a class="anchor" id="a251404b93fbbd5e3dc82e19b533df9de"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -191,6 +194,12 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>disconnect_on_fail</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">uint16_t&#160;</td>
           <td class="paramname"><em>start_on_notify_cccd_handle</em> = <code>BLE_GATT_HANDLE_INVALID</code>&#160;</td>
         </tr>
@@ -210,6 +219,7 @@ Public Member Functions</h2></td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">first_update_delay</td><td>Time from initiating event to first time connection parameters updated. (in millisecond) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">next_update_delay</td><td>Time between each connection parameters updated. (in millisecond) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">max_update_count</td><td>Number of attempts before giving up the connection parameter negotiation. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">disconnect_on_fail</td><td>Set to TRUE if a failed connection parameters update shall cause an automatic disconnection, set to FALSE otherwise. </td></tr>
   </table>
   </dd>
 </dl>
@@ -346,6 +356,38 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="acdf581e791c5fa6499934e6e4c74b411"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void bleConnParams::onEvent </td>
+          <td>(</td>
+          <td class="paramtype">BLE_CP_EVENT_T&#160;</td>
+          <td class="paramname"><em>evt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>On Connection Parameters update event. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">evt</td><td>Connection Parameters Module event type. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a20e3f9b23f4f7528a0972a3c5898c361"></a>
 <div class="memitem">
 <div class="memproto">
@@ -425,7 +467,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a></li>
-    <li class="footer">Generated on Mon Nov 10 2014 12:34:25 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 11 2014 17:18:07 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

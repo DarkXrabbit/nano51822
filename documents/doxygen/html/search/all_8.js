@@ -20,6 +20,7 @@ var searchData=
   ['isdebugmode',['isDebugMode',['../de/dba/class_c_shell.html#ae0f6cb34ee627c44b1690d16d76d628f',1,'CShell::isDebugMode()'],['../d4/d37/class_c_debug.html#ab90cf9f4b16af5e740ac6a503f612224',1,'CDebug::isDebugMode()']]],
   ['isempty',['isEmpty',['../df/db6/class_c_list.html#ab4db98accd12debb4330ad97b8b1dc37',1,'CList']]],
   ['isexpired',['isExpired',['../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b',1,'CTimeout']]],
+  ['islinksecured',['isLinkSecured',['../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46',1,'bleDeviceManager']]],
   ['issuspend',['isSuspend',['../d0/d26/class_c_thread.html#a51dbe9909ce528b4113d2cc27314e965',1,'CThread']]],
   ['isthread',['isThread',['../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f',1,'CObject::isThread()'],['../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984',1,'CThread::isThread()']]],
   ['istream',['iStream',['../d6/d56/class_console.html#ad4d21815c5cbc33e9015ba5babf5bf09',1,'Console']]],

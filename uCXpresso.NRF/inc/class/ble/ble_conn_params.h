@@ -28,6 +28,13 @@
 #define NEXT_CONN_PARAMS_UPDATE_DELAY   30000 	/**< Time between each call to sd_ble_gap_conn_param_update after the first call (30 seconds). */
 #define MAX_CONN_PARAMS_UPDATE_COUNT    3       /**< Number of attempts before giving up the connection parameter negotiation. */
 
+/**@brief Connection Parameters Module event type. */
+typedef enum
+{
+    CP_EVT_FAILED   ,                                  /**< Negotiation procedure failed. */
+    CP_EVT_SUCCEEDED                                   /**< Negotiation procedure succeeded. */
+} BLE_CP_EVENT_T;
+
 
 /**
  * @brief 	Connection Parameters Class.
@@ -91,9 +98,10 @@ public:
 	uint32_t stop();
 
 	/**
-	 * @brief On Connection Parameters update failed event.
+	 * @brief On Connection Parameters update event.
+	 * @param[in] evt Connection Parameters Module event type.
 	 */
-	virtual void onUpdateFailed() { NOTHING }
+	virtual void onEvent(BLE_CP_EVENT_T evt) { NOTHING }
 
 	//
 	///@cond PRIVATE

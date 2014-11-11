@@ -3,7 +3,7 @@ var classble_device =
     [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
     [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
     [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
-    [ "enable", "d6/d49/classble_device.html#a0d5a5afebd0891f161c38f7bb6e8ddeb", null ],
+    [ "enable", "d6/d49/classble_device.html#af20ecda1c0602a2362c1a843d6074c18", null ],
     [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
     [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
     [ "getName", "d6/d49/classble_device.html#aa291909bc3ff7cc0decf46c885a7a725", null ],

@@ -1,8 +1,18 @@
 /*
- * ble_device_manager.h
- *
- *  Created on: Jul 24, 2014
- *      Author: Jason
+ ===============================================================================
+ Name        : ble_device_manager
+ Author      : uCXpresso
+ Version     : v1.0.0
+ Date		 : 2014/11/11
+ Copyright   : Copyright (C) www.embeda.com.tw
+ Description : BLE Device Manager Module
+ ===============================================================================
+ 	 	 	 	 	 	 	 	 History
+ ---------+---------+--------------------------------------------+-------------
+ DATE     |	VERSION |	DESCRIPTIONS							 |	By
+ ---------+---------+--------------------------------------------+-------------
+ 2014/11/1	v1.0.0	First Edition.									Jason
+ ===============================================================================
  */
 
 #ifndef BLE_DEVICE_MANAGER_H_
@@ -38,15 +48,27 @@ public:
 					  uint8_t oob = 0,
 					  uint8_t minKeySize = 7,
 					  uint8_t maxKeySize = 16);
+	/**
+	 * @brief Indicates that link with the peer is secured.
+	 *
+	 * @detail For bonded devices, subsequent reconnections with bonded peer
+	 * will result only in this event when the link is secured and
+	 * setup procedures will not occur unless the bonding information is either lost or deleted on either or both sides.
+	 *
+	 * @return true if link is secured.
+	 */
+	bool isLinkSecured();
 
 	//
 	///@cond Private
 	//
 	~bleDeviceManager();
-	/// @cond
+	uint32_t	m_flag;
 protected:
-	uint8_t    	 m_app_handle;
+	uint8_t    	m_app_handle;
 	/// @endcond
 };
+
+extern bleDeviceManager *gpDM;
 
 #endif /* BLE_DEVICE_MANAGER_H_ */

@@ -9,6 +9,7 @@ var searchData=
   ['ondebug',['onDebug',['../de/dba/class_c_shell.html#a74d294faaebd969b295366f4a861cf02',1,'CShell']]],
   ['ondisconnected',['onDisconnected',['../d6/d49/classble_device.html#a37d884099d9e300a888551ac0325ca18',1,'bleDevice']]],
   ['onerror',['onError',['../d6/d49/classble_device.html#abdd1db8cc91d3b266d84d92acf07b7e8',1,'bleDevice']]],
+  ['onevent',['onEvent',['../d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411',1,'bleConnParams']]],
   ['onquery',['onQuery',['../de/dba/class_c_shell.html#a16e1dae0dedda35c0be64d1c8f40e6b4',1,'CShell']]],
   ['onrssichanged',['onRssiChanged',['../d6/d49/classble_device.html#a85532ba48f80496895a1e7fe3e012b27',1,'bleDevice']]],
   ['ontimeout',['onTimeout',['../d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa',1,'bleDevice']]],

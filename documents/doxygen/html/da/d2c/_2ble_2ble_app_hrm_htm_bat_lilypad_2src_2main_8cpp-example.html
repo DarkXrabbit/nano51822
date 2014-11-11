@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -195,14 +195,14 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">    <span class="comment">// Declare SoftDevice Object</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a10"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;</div>
-<div class="line">    ble.<a name="a11"></a><a class="code" href="../../d6/d49/classble_device.html#a0d5a5afebd0891f161c38f7bb6e8ddeb">enable</a>();                       <span class="comment">// enable BLE stack</span></div>
+<div class="line">    ble.<a name="a11"></a><a class="code" href="../../d6/d49/classble_device.html#af20ecda1c0602a2362c1a843d6074c18">enable</a>();                       <span class="comment">// enable BLE stack</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
 <div class="line">    ble.<a name="a12"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a13"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece">settings</a>(DEVICE_NAME);    <span class="comment">// set Device Name on GAP</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a14"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19">tx_power</a>(<a name="a15"></a><a class="code" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54">BLE_TX_0dBm</a>);    <span class="comment">// set output radio Power</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Reg. Device Manager.</span></div>
-<div class="line">    ble.<a name="a16"></a><a class="code" href="../../d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9">m_device_manager</a>.<a name="a17"></a><a class="code" href="../../d9/d34/classble_device_manager.html#a5c3483f2ff90da8d9f0852d2b3276ab7">settings</a>();</div>
+<div class="line">    ble.<a name="a16"></a><a class="code" href="../../d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9">m_device_manager</a>.<a name="a17"></a><a class="code" href="../../d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392">settings</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Declare a HRM service object</span></div>
@@ -308,7 +308,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Nov 10 2014 12:34:24 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 11 2014 17:18:06 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

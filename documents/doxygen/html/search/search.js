@@ -13,8 +13,7 @@ var indexSectionsWithContent =
   3: "cm",
   4: "abhnprstu",
   5: "abdfhilmnprstuv",
-  6: "b",
-  7: "bcempr"
+  6: "bcempr"
 };
 
 var indexSectionNames =
@@ -25,8 +24,7 @@ var indexSectionNames =
   3: "variables",
   4: "enums",
   5: "enumvalues",
-  6: "related",
-  7: "groups"
+  6: "groups"
 };
 
 function convertToId(search)

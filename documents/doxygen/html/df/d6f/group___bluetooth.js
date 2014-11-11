@@ -27,11 +27,12 @@ var group___bluetooth =
       [ "isValid", "d2/dc4/classble_base.html#a18cf254bf2030ba75735238fc1a31f4d", null ]
     ] ],
     [ "bleConnParams", "d9/d8b/classble_conn_params.html", [
-      [ "bleConnParams", "d9/d8b/classble_conn_params.html#a7f05c387b56ff2eea2d2976173adb53d", null ],
+      [ "bleConnParams", "d9/d8b/classble_conn_params.html#a251404b93fbbd5e3dc82e19b533df9de", null ],
       [ "change", "d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2", null ],
       [ "isAvailable", "d9/d8b/classble_conn_params.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isThread", "d9/d8b/classble_conn_params.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d9/d8b/classble_conn_params.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "onEvent", "d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411", null ],
       [ "stop", "d9/d8b/classble_conn_params.html#a20e3f9b23f4f7528a0972a3c5898c361", null ],
       [ "uuid", "d9/d8b/classble_conn_params.html#aa34f2ea80269787a549a98e13bddb44f", null ],
       [ "uuid_type", "d9/d8b/classble_conn_params.html#a8931a117eb7be5a52455b53459b0df62", null ]
@@ -40,7 +41,7 @@ var group___bluetooth =
       [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
       [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
       [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
-      [ "enable", "d6/d49/classble_device.html#a0d5a5afebd0891f161c38f7bb6e8ddeb", null ],
+      [ "enable", "d6/d49/classble_device.html#af20ecda1c0602a2362c1a843d6074c18", null ],
       [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
       [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
       [ "getName", "d6/d49/classble_device.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
@@ -75,20 +76,18 @@ var group___bluetooth =
       [ "m_gap", "d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9", null ]
     ] ],
     [ "bleDeviceManager", "d9/d34/classble_device_manager.html", [
+      [ "isLinkSecured", "d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46", null ],
       [ "isThread", "d9/d34/classble_device_manager.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d9/d34/classble_device_manager.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
-      [ "settings", "d9/d34/classble_device_manager.html#a5c3483f2ff90da8d9f0852d2b3276ab7", null ]
+      [ "settings", "d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392", null ]
     ] ],
     [ "bleGAP", "dd/d89/classble_g_a_p.html", [
-      [ "bleGAP", "dd/d89/classble_g_a_p.html#a2b1aec1291fb6dc68bd7e20877eb6201", null ],
       [ "appearance", "dd/d89/classble_g_a_p.html#a6544041a6c396246102b0e8430b344eb", null ],
       [ "disconnect", "dd/d89/classble_g_a_p.html#a8b8ace2af32d9215585956214fc29143", null ],
       [ "isThread", "dd/d89/classble_g_a_p.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "dd/d89/classble_g_a_p.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
       [ "settings", "dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece", null ],
-      [ "tx_power", "dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19", null ],
-      [ "bleDevice", "dd/d89/classble_g_a_p.html#a08996a3ed5a47a51072cd37a2936420e", null ],
-      [ "m_p_ble", "dd/d89/classble_g_a_p.html#a2bc617ae3e6720678d558d86bc6d8623", null ]
+      [ "tx_power", "dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19", null ]
     ] ],
     [ "bleService", "da/d80/classble_service.html", [
       [ "bleService", "da/d80/classble_service.html#aabb34dad2925ff07d84bc4507db2a328", null ],

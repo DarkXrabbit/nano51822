@@ -88,7 +88,7 @@ $(document).ready(function(){initNavTree('db/d5a/ble__conn__params_8h_source.htm
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -128,42 +128,58 @@ $(document).ready(function(){initNavTree('db/d5a/ble__conn__params_8h_source.htm
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define FIRST_CONN_PARAMS_UPDATE_DELAY  5000    </span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define NEXT_CONN_PARAMS_UPDATE_DELAY   30000   </span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define MAX_CONN_PARAMS_UPDATE_COUNT    3       </span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="../../d9/d8b/classble_conn_params.html">   45</a></span>&#160;<span class="preprocessor">class bleConnParams: public bleService {</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                  uint16_t first_update_daley   = FIRST_CONN_PARAMS_UPDATE_DELAY,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                  uint16_t next_update_delay    = NEXT_CONN_PARAMS_UPDATE_DELAY,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                  uint16_t max_update_count     = MAX_CONN_PARAMS_UPDATE_COUNT,</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                  uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    uint32_t change(uint16_t min_conn_interval,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                    uint16_t max_conn_interval,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    uint16_t slave_latency = 0,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    uint16_t conn_sup_timeout = 4000 );</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    uint32_t stop();</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a>();</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> uint16_t uuid() { <span class="keywordflow">return</span> 0;}</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a>    m_tmCP;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(ble_evt_t *p_ble_evt);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_poll();</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;};</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_CONN_PARAMS_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classble_conn_params_html"><div class="ttname"><a href="../../d9/d8b/classble_conn_params.html">bleConnParams</a></div><div class="ttdoc">Connection Parameters Class. </div><div class="ttdef"><b>Definition:</b> ble_conn_params.h:45</div></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">typedef enum</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    CP_EVT_FAILED   ,                                  </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    CP_EVT_SUCCEEDED                                   </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;} BLE_CP_EVENT_T;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d9/d8b/classble_conn_params.html">   52</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="../../d9/d8b/classble_conn_params.html#a251404b93fbbd5e3dc82e19b533df9de">bleConnParams</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                  uint16_t first_update_daley   = FIRST_CONN_PARAMS_UPDATE_DELAY,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                  uint16_t next_update_delay    = NEXT_CONN_PARAMS_UPDATE_DELAY,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                  uint16_t max_update_count     = MAX_CONN_PARAMS_UPDATE_COUNT,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                  <span class="keywordtype">bool</span>     disconnect_on_fail   = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                  uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    uint32_t <a class="code" href="../../d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2">change</a>(uint16_t min_conn_interval,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    uint16_t max_conn_interval,</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    uint16_t slave_latency = 0,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    uint16_t conn_sup_timeout = 4000 );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    uint32_t <a class="code" href="../../d9/d8b/classble_conn_params.html#a20e3f9b23f4f7528a0972a3c5898c361">stop</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="../../d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411">  104</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411">onEvent</a>(BLE_CP_EVENT_T evt) { NOTHING }</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> uint16_t <a class="code" href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">uuid</a>() { <span class="keywordflow">return</span> 0;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a>    m_tmCP;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(ble_evt_t *p_ble_evt);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_poll();</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_CONN_PARAMS_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classble_conn_params_html"><div class="ttname"><a href="../../d9/d8b/classble_conn_params.html">bleConnParams</a></div><div class="ttdoc">Connection Parameters Class. </div><div class="ttdef"><b>Definition:</b> ble_conn_params.h:52</div></div>
+<div class="ttc" id="classble_conn_params_html_a9fcb573363b5178e53a9639acdf967c2"><div class="ttname"><a href="../../d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2">bleConnParams::change</a></div><div class="ttdeci">uint32_t change(uint16_t min_conn_interval, uint16_t max_conn_interval, uint16_t slave_latency=0, uint16_t conn_sup_timeout=4000)</div><div class="ttdoc">Function for changing the current connection parameters to a new set. </div></div>
+<div class="ttc" id="classble_conn_params_html_a20e3f9b23f4f7528a0972a3c5898c361"><div class="ttname"><a href="../../d9/d8b/classble_conn_params.html#a20e3f9b23f4f7528a0972a3c5898c361">bleConnParams::stop</a></div><div class="ttdeci">uint32_t stop()</div><div class="ttdoc">Stop connection parameter update negotiation. </div></div>
+<div class="ttc" id="classble_conn_params_html_acdf581e791c5fa6499934e6e4c74b411"><div class="ttname"><a href="../../d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411">bleConnParams::onEvent</a></div><div class="ttdeci">virtual void onEvent(BLE_CP_EVENT_T evt)</div><div class="ttdoc">On Connection Parameters update event. </div><div class="ttdef"><b>Definition:</b> ble_conn_params.h:104</div></div>
 <div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:74</div></div>
+<div class="ttc" id="classble_service_html_aa34f2ea80269787a549a98e13bddb44f"><div class="ttname"><a href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">bleService::uuid</a></div><div class="ttdeci">virtual uint16_t uuid()</div><div class="ttdoc">Get the UUID of service. </div><div class="ttdef"><b>Definition:</b> ble_service.h:45</div></div>
 <div class="ttc" id="class_c_timeout_html"><div class="ttname"><a href="../../d5/d5b/class_c_timeout.html">CTimeout</a></div><div class="ttdef"><b>Definition:</b> timeout.h:26</div></div>
+<div class="ttc" id="classble_conn_params_html_a251404b93fbbd5e3dc82e19b533df9de"><div class="ttname"><a href="../../d9/d8b/classble_conn_params.html#a251404b93fbbd5e3dc82e19b533df9de">bleConnParams::bleConnParams</a></div><div class="ttdeci">bleConnParams(bleDevice &amp;ble, uint16_t first_update_daley=FIRST_CONN_PARAMS_UPDATE_DELAY, uint16_t next_update_delay=NEXT_CONN_PARAMS_UPDATE_DELAY, uint16_t max_update_count=MAX_CONN_PARAMS_UPDATE_COUNT, bool disconnect_on_fail=false, uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID)</div><div class="ttdoc">Construct the Connection Parameters module. </div></div>
+<div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_conn_params.h</b></li>
-    <li class="footer">Generated on Mon Nov 10 2014 12:34:24 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 11 2014 17:18:07 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

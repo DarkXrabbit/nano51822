@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('d9/d34/classble_device_manager.html','
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -131,9 +131,12 @@ Inheritance diagram for bleDeviceManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5c3483f2ff90da8d9f0852d2b3276ab7"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a5c3483f2ff90da8d9f0852d2b3276ab7">settings</a> (uint8_t timeout=30, uint8_t bond=0, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td></tr>
-<tr class="memdesc:a5c3483f2ff90da8d9f0852d2b3276ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device Manager settings.  <a href="#a5c3483f2ff90da8d9f0852d2b3276ab7">More...</a><br /></td></tr>
-<tr class="separator:a5c3483f2ff90da8d9f0852d2b3276ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34907222be577742c62d08a879258392"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392">settings</a> (uint8_t timeout=30, uint8_t bond=1, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td></tr>
+<tr class="memdesc:a34907222be577742c62d08a879258392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device Manager settings.  <a href="#a34907222be577742c62d08a879258392">More...</a><br /></td></tr>
+<tr class="separator:a34907222be577742c62d08a879258392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46">isLinkSecured</a> ()</td></tr>
+<tr class="memdesc:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that link with the peer is secured.  <a href="#a3cc4d28c35e4aa91c1f19f3f70589b46">More...</a><br /></td></tr>
+<tr class="separator:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -142,6 +145,25 @@ Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Management. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3cc4d28c35e4aa91c1f19f3f70589b46"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool bleDeviceManager::isLinkSecured </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Indicates that link with the peer is secured. </p>
+<p>For bonded devices, subsequent reconnections with bonded peer will result only in this event when the link is secured and setup procedures will not occur unless the bonding information is either lost or deleted on either or both sides.</p>
+<dl class="section return"><dt>Returns</dt><dd>true if link is secured. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -193,7 +215,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a5c3483f2ff90da8d9f0852d2b3276ab7"></a>
+<a class="anchor" id="a34907222be577742c62d08a879258392"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -207,7 +229,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>bond</em> = <code>0</code>, </td>
+          <td class="paramname"><em>bond</em> = <code>1</code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -261,7 +283,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if register a new device manager successful. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a17">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a11">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a17">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a11">/ble/ble_app_uart/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -271,7 +293,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></li>
-    <li class="footer">Generated on Mon Nov 10 2014 12:34:25 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 11 2014 17:18:07 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
