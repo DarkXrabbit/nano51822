@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc6</span>
+   &#160;<span id="projectnumber">v1.0.0-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -179,12 +179,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6525dbabc2e5b4893ef6dc9fb5730b84"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84">stop</a> ()</td></tr>
 <tr class="memdesc:a6525dbabc2e5b4893ef6dc9fb5730b84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the advertising.  <a href="#a6525dbabc2e5b4893ef6dc9fb5730b84">More...</a><br /></td></tr>
 <tr class="separator:a6525dbabc2e5b4893ef6dc9fb5730b84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f19b8e405a37a95fae0ac1d4a43208c"><td class="memItemLeft" align="right" valign="top">ble_advdata_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a9f19b8e405a37a95fae0ac1d4a43208c">getAdvData</a> ()</td></tr>
-<tr class="memdesc:a9f19b8e405a37a95fae0ac1d4a43208c"><td class="mdescLeft">&#160;</td><td class="mdescRight">get adv. data member.  <a href="#a9f19b8e405a37a95fae0ac1d4a43208c">More...</a><br /></td></tr>
-<tr class="separator:a9f19b8e405a37a95fae0ac1d4a43208c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a30b7991a827b191cca06e1f7b4e84347"><td class="memItemLeft" align="right" valign="top">ble_advdata_manuf_data_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a30b7991a827b191cca06e1f7b4e84347">getManufData</a> ()</td></tr>
-<tr class="memdesc:a30b7991a827b191cca06e1f7b4e84347"><td class="mdescLeft">&#160;</td><td class="mdescRight">get manufacturer data.  <a href="#a30b7991a827b191cca06e1f7b4e84347">More...</a><br /></td></tr>
-<tr class="separator:a30b7991a827b191cca06e1f7b4e84347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -323,56 +317,6 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </div><div class="memdoc">
 
 <p>multiple advertising flags. </p>
-
-</div>
-</div>
-<a class="anchor" id="a9f19b8e405a37a95fae0ac1d4a43208c"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ble_advdata_t* bleAdvertising::getAdvData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get adv. data member. </p>
-
-</div>
-</div>
-<a class="anchor" id="a30b7991a827b191cca06e1f7b4e84347"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">ble_advdata_manuf_data_t* bleAdvertising::getManufData </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get manufacturer data. </p>
 
 </div>
 </div>
@@ -650,7 +594,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a></li>
-    <li class="footer">Generated on Wed Nov 12 2014 09:00:10 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 12 2014 15:50:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0 rc6</span>
+   &#160;<span id="projectnumber">v1.0.0-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -169,7 +169,7 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="../../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688">bleDevice</a>();</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    uint32_t <a class="code" href="../../d6/d49/classble_device.html#af20ecda1c0602a2362c1a843d6074c18">enable</a>(<span class="keywordtype">bool</span> clearAllBoundedCentrals=<span class="keyword">true</span>, uint32_t stack=78);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    uint32_t <a class="code" href="../../d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006">enable</a>(<span class="keywordtype">bool</span> clearAllBoundedCentrals=<span class="keyword">true</span>, uint32_t stack=96);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a>(uint32_t timeout=MAX_DELAY_TIME);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
@@ -277,7 +277,6 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div class="ttc" id="classble_device_html_a80b4406fee2c94fb4112f7af91085230"><div class="ttname"><a href="../../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230">bleDevice::information</a></div><div class="ttdeci">static uint32_t information(LPCTSTR manufact_name, LPCTSTR model_number, LPCTSTR serial_number, LPCTSTR hw_rev=NULL, LPCTSTR fw_rev=NULL, LPCTSTR sw_rev=NULL, ble_dis_sys_id_t *p_sys_id=NULL, ble_dis_pnp_id_t *p_pnp_id=NULL)</div><div class="ttdoc">Function for initializing the Device Information Service. </div></div>
 <div class="ttc" id="classble_device_html_a7a13b9797449994a8382603001d7659d"><div class="ttname"><a href="../../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d">bleDevice::Init</a></div><div class="ttdeci">static void Init(NRF_LFCLKSRC_T lfclksrc=NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION)</div><div class="ttdoc">Static function, to initialize the SoftDevice driver. </div></div>
 <div class="ttc" id="classble_g_a_p_html"><div class="ttname"><a href="../../dd/d89/classble_g_a_p.html">bleGAP</a></div><div class="ttdoc">BLE GAP class. </div><div class="ttdef"><b>Definition:</b> ble_gap.h:48</div></div>
-<div class="ttc" id="classble_device_html_af20ecda1c0602a2362c1a843d6074c18"><div class="ttname"><a href="../../d6/d49/classble_device.html#af20ecda1c0602a2362c1a843d6074c18">bleDevice::enable</a></div><div class="ttdeci">uint32_t enable(bool clearAllBoundedCentrals=true, uint32_t stack=78)</div><div class="ttdoc">Enable the BLE stack (device). </div></div>
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422a9484e726bc97ad4865d3435ea62a4035"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a9484e726bc97ad4865d3435ea62a4035">NRF_LFCLKSRC_RC_250_PPM_1000MS_CALIBRATION</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:53</div></div>
 <div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422ac40fbb4b15c19a6bea601c9978d9499b"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ac40fbb4b15c19a6bea601c9978d9499b">NRF_LFCLKSRC_XTAL_50_PPM</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:48</div></div>
@@ -287,13 +286,14 @@ $(document).ready(function(){initNavTree('d0/d3e/ble__device_8h_source.html','..
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422a2933849638e6ee1d5ecec554e120210a"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a2933849638e6ee1d5ecec554e120210a">NRF_LFCLKSRC_RC_250_PPM_TEMP_1000MS_CALIBRATION</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:57</div></div>
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c">NRF_LFCLKSRC_XTAL_500_PPM</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:43</div></div>
 <div class="ttc" id="group___enumerations_html_ggaccda0254b184e8f316acfde187602422aa0426ca890955f38c19238b687f2559b"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aa0426ca890955f38c19238b687f2559b">NRF_LFCLKSRC_XTAL_20_PPM</a></div><div class="ttdef"><b>Definition:</b> ble_device.h:50</div></div>
+<div class="ttc" id="classble_device_html_a2866fd7d015da3ecdecb69efaccea006"><div class="ttname"><a href="../../d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006">bleDevice::enable</a></div><div class="ttdeci">uint32_t enable(bool clearAllBoundedCentrals=true, uint32_t stack=96)</div><div class="ttdoc">Enable the BLE stack (device). </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_device.h</b></li>
-    <li class="footer">Generated on Wed Nov 12 2014 09:00:10 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 12 2014 15:50:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

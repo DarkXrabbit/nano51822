@@ -6,8 +6,6 @@ var classble_advertising =
     [ "commpany_identifier", "d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be", null ],
     [ "flag", "d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa", null ],
     [ "flags", "d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940", null ],
-    [ "getAdvData", "d0/d2c/classble_advertising.html#a9f19b8e405a37a95fae0ac1d4a43208c", null ],
-    [ "getManufData", "d0/d2c/classble_advertising.html#a30b7991a827b191cca06e1f7b4e84347", null ],
     [ "interval", "d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca", null ],
     [ "isThread", "d0/d2c/classble_advertising.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d0/d2c/classble_advertising.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
