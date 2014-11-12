@@ -8,50 +8,12 @@ uCXpresso.NRF RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.0 rc6 11th November 2014
+v1.0.0-released 12th November 2014
 --------------------------------
 ###Features: 
-	1. Add bleServiceProximity class.
-	2. Update Device Manager module to save heap memory.
-	3. Fixed auto disconnection problem when used the "Connection Parameters Update" negotiation.
-
-v1.0.0 rc5 7th November 2014
---------------------------------
-###Features: 
-	1. Add "Running Speed and Cadence" service.
-	2. Add "Cycling Speed and Cadence" service.
-	3. Add "Tx Power Level" service.
-	4. Some warning code updated.
-	5. Update bleServiceCustomer class
-	6. Add wait() member of bleDevice class to wait for connected event.
-
-v1.0.0 rc4 3th November 2014
---------------------------------
-###Features: 
-	1. Fixed bleServiceUART transmiter problem.
-	2. Update tickless features.
-	3. Add bleConnParams class for the "connection parameters" update negotiation.
-	4. Update the templet projects. ("new_project" and "new_project_for_ble")
-
-v1.0.0 rc3 28th October 2014
---------------------------------
-###Features: 
-	1. Add Tickless Technology for low power feaure. (Min. 5uA)
-	2. Updated bleServiceUART TX/RX char. UUID.
-
-v1.0.0 rc2 25th October 2014
---------------------------------
-###Features: 
- 	1. Provide two TIMER (TIMER_1 and TIMER_2)
- 	2. Add hwPWM class to provide six PWM (Hardware PWM)
- 	3. Add CPowerSave class to provide the "system_off" feature.
- 	4. Remove RTC class.
- 	5. Add bleDevice::Init() in the setup.cpp of project.
- 	6. Kernel updated for low power feature.
-
-v1.0.0 rc1 21th October 2014
---------------------------------
-###Features: 
-	1. RTOS update to v8.1.2.
-	2. Free LPCXpresso IDE supported. (for OS/X, Linux and Windows)
-	3. NRF framework preparing ...
+	1. Rich BLE standard service (profile)
+	2. High performance BLE UART service ready. (Use Nordic UART over BLE profile).
+	3. Flexible service objects.
+	4. Multi-Tasking RTOS ready. (v8.1.2)
+	5. Tickless Technology ready. (activity min. @ 6uA)
+	6. Rich Peripherals I/O class library.
