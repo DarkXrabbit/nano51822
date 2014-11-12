@@ -58,11 +58,11 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
-	// Device Manager.
+	// Device Manager for bond device.
 	ble.m_device_manager.settings();
 
 	//
-	// Add BLE Service
+	// TODO: Add BLE Service
 	//
 
 	//
@@ -76,10 +76,10 @@ int main(void) {
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
 
-	// Optional: add standard profile in advertisement
+	// Optional: add standard profile uuid in advertisement.
 //	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertising
 
-	// Optional: Appearance who you are
+	// Optional: add appearance to indicate who you are in advertisement.
 //	ble.m_advertising.appearance(BLE_APPEARANCE_HEART_RATE_SENSOR_HEART_RATE_BELT);
 	ble.m_advertising.update();										// update advertisement data
 
