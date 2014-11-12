@@ -121,26 +121,11 @@ public:
 	 */
 	virtual uint32_t stop();
 
-	/**@brief get adv. data member.
-	 */
-	inline ble_advdata_t* getAdvData() {
-		return &m_adv_data;
-	}
-
-	/**@brief get manufacturer data.
-	 *
-	 */
-	inline ble_advdata_manuf_data_t* getManufData() {
-		return &m_manuf_specific_data;
-	}
-
 	//
 	///@cond PRIVATE
 	//
 protected:
 	ble_advdata_t			 m_adv_data;
-	ble_advdata_manuf_data_t m_manuf_specific_data;
-	ble_advdata_conn_int_t	 m_slave_conn_interval;
 	int8_t					 m_tx_power_level;
 	ble_uuid_t				*m_uuid_list;
 	uint8_t					 m_uuid_count;

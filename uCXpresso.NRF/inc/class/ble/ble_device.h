@@ -96,7 +96,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(bool clearAllBoundedCentrals=true, uint32_t stack=78);
+	uint32_t enable(bool clearAllBoundedCentrals=true, uint32_t stack=96);
 
 	/**
 	 * @brief Wait for connected.
