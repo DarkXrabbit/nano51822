@@ -18,4 +18,4 @@ v1.0.0-released 12th November 2014
 	5. Multi-Tasking RTOS ready. (v8.1.2)
 	6. Tickless Technology ready. (activity @ avg.: 26uA / min.: 6uA)
 	7. Rich Peripherals I/O class library.
-	8. DFU button support on P0.0 (Active Low)
+	8. DFU button support on P0.0 (Active Low, bootloader @ 0x3C000)
