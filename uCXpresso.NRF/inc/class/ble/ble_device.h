@@ -131,11 +131,6 @@ public:
 	 */
 	virtual void onTimeout();
 
-	/**@brief A RSSI changed event
-	 * @param rssi A received signal strength indication.
-	 */
-	virtual void onRssiChanged(int8_t rssi);
-
 	/**
 	 * @brief Get SoftDevice driver version information.
 	 *
@@ -204,7 +199,6 @@ public:
 
 	ble_evt_t 	*m_p_ble_evt;
 	uint16_t    m_conn_handle;
-	int8_t		m_rssi;			// current rssi;
 	ble_gap_evt_auth_status_t m_auth_status;
 	ble_gap_sec_params_t	  m_sec_params;
 	CSemaphore	m_semBleEvent;

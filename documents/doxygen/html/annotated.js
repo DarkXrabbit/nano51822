@@ -6,6 +6,7 @@ var annotated =
     [ "bleDevice", "d6/d49/classble_device.html", "d6/d49/classble_device" ],
     [ "bleDeviceManager", "d9/d34/classble_device_manager.html", "d9/d34/classble_device_manager" ],
     [ "bleGAP", "dd/d89/classble_g_a_p.html", "dd/d89/classble_g_a_p" ],
+    [ "bleRSSI", "d7/d80/classble_r_s_s_i.html", "d7/d80/classble_r_s_s_i" ],
     [ "bleService", "da/d80/classble_service.html", "da/d80/classble_service" ],
     [ "bleServiceBattery", "d5/ded/classble_service_battery.html", "d5/ded/classble_service_battery" ],
     [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html", "d7/d93/classble_service_c_s_c" ],

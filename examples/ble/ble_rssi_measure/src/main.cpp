@@ -28,9 +28,9 @@
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service.h>
 #include <class/pin.h>
-
 #include <class/adc.h>
 #include <class/ble/ble_service_bat.h>
+#include <class/ble/ble_rssi.h>
 #include <class/timeout.h>
 #include <class/kalman.h>
 
@@ -64,6 +64,11 @@ int main(void) {
 	// Add BLE Service
 	//
 	bleServiceBattery bat(ble);
+
+	//
+	// Add RSSI service
+	//
+	bleRSSI rssi(ble);
 
 	//
 	// BLE Advertising
@@ -125,12 +130,11 @@ int main(void) {
     	//
     	// RSSI measure, and show (DBG) with the Klman Filter
     	//
-    	if ( ble.isConnected() ) {
+    	if ( rssi.isAvailable() ) {
     		led0 = LED_ON;
-
     		if ( tmRSSI.isExpired(1000) ) {
     			tmRSSI.reset();
-    			DBG("RSSI=%0.2f\n", k.filter( (float)ble.m_rssi) );
+    			DBG("RSSI=%0.2f\n", k.filter( (float)rssi.read()) );
     		}
 
     	} else

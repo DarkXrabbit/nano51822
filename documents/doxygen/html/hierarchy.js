@@ -8,6 +8,7 @@ var hierarchy =
         [ "bleGAP", "dd/d89/classble_g_a_p.html", null ],
         [ "bleService", "da/d80/classble_service.html", [
           [ "bleConnParams", "d9/d8b/classble_conn_params.html", null ],
+          [ "bleRSSI", "d7/d80/classble_r_s_s_i.html", null ],
           [ "bleServiceBattery", "d5/ded/classble_service_battery.html", null ],
           [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html", null ],
           [ "bleServiceCustomer", "de/d51/classble_service_customer.html", [

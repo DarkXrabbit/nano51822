@@ -6,6 +6,7 @@ var searchData=
   ['bledevice',['bleDevice',['../d6/d49/classble_device.html',1,'']]],
   ['bledevicemanager',['bleDeviceManager',['../d9/d34/classble_device_manager.html',1,'']]],
   ['blegap',['bleGAP',['../dd/d89/classble_g_a_p.html',1,'']]],
+  ['blerssi',['bleRSSI',['../d7/d80/classble_r_s_s_i.html',1,'']]],
   ['bleservice',['bleService',['../da/d80/classble_service.html',1,'']]],
   ['bleservicebattery',['bleServiceBattery',['../d5/ded/classble_service_battery.html',1,'']]],
   ['bleservicecsc',['bleServiceCSC',['../d7/d93/classble_service_c_s_c.html',1,'']]],

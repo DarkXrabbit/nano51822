@@ -21,7 +21,6 @@ var classble_device =
     [ "onConnected", "d6/d49/classble_device.html#ab7bb9b2628c7897cb7573505d013972e", null ],
     [ "onDisconnected", "d6/d49/classble_device.html#a37d884099d9e300a888551ac0325ca18", null ],
     [ "onError", "d6/d49/classble_device.html#abdd1db8cc91d3b266d84d92acf07b7e8", null ],
-    [ "onRssiChanged", "d6/d49/classble_device.html#a85532ba48f80496895a1e7fe3e012b27", null ],
     [ "onTimeout", "d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa", null ],
     [ "resume", "d6/d49/classble_device.html#ac8c53aa8c145fc4ac70fa6d825b95742", null ],
     [ "resumeAll", "d6/d49/classble_device.html#a743d4325b7e7da494283f3292773ff77", null ],

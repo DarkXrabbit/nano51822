@@ -104,7 +104,7 @@ int main(void) {
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	// device manager
-	ble.m_device_manager.settings();
+	ble.m_device_manager.settings(30, 0); // don't bond
 
 	//
 	// Proximity Service
