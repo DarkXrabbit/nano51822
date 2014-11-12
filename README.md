@@ -11,9 +11,10 @@ uCXpresso.NRF RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 v1.0.0-released 12th November 2014
 --------------------------------
 ###Features: 
-	1. Rich BLE standard service (profile)
-	2. High performance BLE UART service ready. (Use Nordic UART over BLE profile).
-	3. Flexible service objects.
-	4. Multi-Tasking RTOS ready. (v8.1.2)
-	5. Tickless Technology ready. (activity min. @ 6uA)
-	6. Rich Peripherals I/O class library.
+	1. SoftDevice 7.1 ready.
+	2. Rich BLE standard service (profile)
+	3. High performance BLE UART service ready. (Use Nordic UART over BLE profile).
+	4. Flexible service objects.
+	5. Multi-Tasking RTOS ready. (v8.1.2)
+	6. Tickless Technology ready. (activity min. @ 6uA)
+	7. Rich Peripherals I/O class library.
