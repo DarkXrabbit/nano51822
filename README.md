@@ -1,6 +1,6 @@
-nano51822
+uCXpresso.NRF
 ===============================
-uCXpresso.NRF RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
+A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 
 ###Web Site: http://www.ucxpresso.net
 ###Getting Started: https://rawgit.com/ucxpresso/nano51822/master/documents/getting_started_with_ucxpresso.nrf.pdf
