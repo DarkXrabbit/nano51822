@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_device_manager
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/11/11
+ Version     : v1.0.1
+ Date		 : 2014/11/13
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE Device Manager Module
  ===============================================================================
@@ -11,14 +11,15 @@
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2014/11/1	v1.0.0	First Edition.									Jason
+ 2014/11/11	v1.0.0	First Edition.									Jason
+ 2014/11/13 v1.0.1	Modify DM to Stand-alone (optional)				Jason
  ===============================================================================
  */
 
 #ifndef BLE_DEVICE_MANAGER_H_
 #define BLE_DEVICE_MANAGER_H_
 
-#include <class/ble/ble_base.h>
+#include <class/ble/ble_device.h>
 #include <class/timeout.h>
 
 /**
@@ -26,7 +27,7 @@
  * @class bleDeviceManager ble_device_manager.h "class/ble/ble_device_manager.h"
  * @ingroup Bluetooth
  */
-class bleDeviceManager: public bleBase {
+class bleDeviceManager: public bleService {
 public:
 	/**
 	 * @brief Device Manager settings.
@@ -41,13 +42,16 @@ public:
 	 *
 	 * @return NRF_SUCCESS if register a new device manager successful.
 	 */
-	uint32_t settings( uint8_t timeout = 30,
+	bleDeviceManager( bleDevice &ble,
+					  bool clearAllBoundedCentrals = false,
+					  uint8_t timeout = 30,
 					  uint8_t bond = 1,
 					  uint8_t mitm = 0,
 					  uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE,
 					  uint8_t oob = 0,
 					  uint8_t minKeySize = 7,
 					  uint8_t maxKeySize = 16);
+
 	/**
 	 * @brief Indicates that link with the peer is secured.
 	 *
@@ -66,8 +70,14 @@ public:
 	uint32_t	m_flag;
 protected:
 	uint8_t    	m_app_handle;
+	void on_ble_event(ble_evt_t * p_ble_evt);
 	/// @endcond
 };
+
+/**\example /ble/ble_app_proximity/src/main.cpp
+ * This is an example of how to use the bleDeviceManager class.
+ * More details about this example.
+ */
 
 extern bleDeviceManager *gpDM;
 

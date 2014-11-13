@@ -8,6 +8,13 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
+v1.0.1 rc1 13th November 2014
+--------------------------------
+###Details: 
+	1. Add type() member in bleAdvertising class to support the nRF-Beacon app.
+	2. Set bleDeviceManager became to optional in application, to save the heap memory.
+	3. Update the all beacon examples.
+
 v1.0.0-released 12th November 2014
 --------------------------------
 ###Features: 

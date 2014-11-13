@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_advertising.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/8/1
+ Version     : v1.0.1
+ Date		 : 2014/11/13
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/8/1	v1.0.0	First Edition for nano51822						Jason
+ 2014/11/13 v1.0.1	Add type() member to indicate the ADV. type.	Jason
  ===============================================================================
  */
 
@@ -26,6 +27,17 @@
 #define DEF_ADV_TIMEOUT				0		// No Adv. timeout  (unit:second)
 #define MAX_ADV_UUID_COMPLETE_LIST	16
 
+/**
+ * @brief GAP Advertising types
+ * @ingroup Enumerations
+ */
+enum ADV_TYPE_T {
+	ADV_TYPE_ADV_IND		= 0x00,			///< Connectable undirected. (Default)
+	ADV_TYPE_ADV_DIRECT_IND = 0x01,			///< Connectable directed.
+	ADV_TYPE_ADV_SCAN_IND   = 0x02,			///< Scannable undirected.
+	ADV_TYPE_ADV_NONCONN_IND= 0x03			///< Non connectable undirected.
+};
+
 /**@brief	BLE Advertising Class.
  *
  * @class 	bleAdvertising ble_advertising.h "class/ble/bleAdvertising.h"
@@ -39,10 +51,10 @@
  */
 class bleAdvertising: public bleBase {
 public:
-	/**@brief bleAdvertising constructor.
-	 *
+	/**
+	 * @brief GAP Advertising types
 	 */
-	bleAdvertising();
+	void type(ADV_TYPE_T adv_type);
 
 	/**
 	 * @brief Set the advertising interval between 20ms to 10.24s.
@@ -124,13 +136,13 @@ public:
 	//
 	///@cond PRIVATE
 	//
+	bleAdvertising();
 protected:
 	ble_advdata_t			 m_adv_data;
 	int8_t					 m_tx_power_level;
 	ble_uuid_t				*m_uuid_list;
 	uint8_t					 m_uuid_count;
-	uint16_t				 m_adv_interval;
-	uint16_t				 m_adv_timeout;
+	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
 friend class bleDevice;
 	///@endcond
@@ -140,6 +152,5 @@ friend class bleDevice;
  * This is an example of how to use the bleAdvertising class to implement the iBeacon application.
  * More details about this example.
  */
-
 
 #endif /* BLE_ADVERTISING_H_ */

@@ -39,8 +39,8 @@
 #define APP_ADV_DATA_LENGTH              0x15                           ///< Length of manufacturer specific data in the advertisement.
 #define APP_DEVICE_TYPE                  0x02                           ///< 0x02 refers to Beacon.
 #define APP_MEASURED_RSSI                ((uint8_t)-59)                 ///< The Beacon's measured RSSI at 1 meter distance in dBm.
-#define APP_COMPANY_IDENTIFIER           0x004C                         ///< Company identifier for Apple Inc. as per www.bluetooth.org.
-//#define APP_COMPANY_IDENTIFIER           0x0059                       ///< Company identifier for Nordic Semi. as per www.bluetooth.org.
+//#define APP_COMPANY_IDENTIFIER           0x004C                         ///< Company identifier for Apple Inc. as per www.bluetooth.org.
+#define APP_COMPANY_IDENTIFIER           0x0059                       ///< Company identifier for Nordic Semi. as per www.bluetooth.org.
 #define USE_ADDR_FOR_MAJ_MIN_VALUES	 	 1								///< Use BLE address for Major and Minor value.
 
 const ble_uuid128_t  NRF_BEACON_UUID = {
@@ -132,6 +132,7 @@ int main(void)
 	//
 	// Advertisement
 	//
+	ble.m_advertising.type(ADV_TYPE_ADV_NONCONN_IND);
 	ble.m_advertising.interval(APP_ADV_INTERVAL);		// set advertising interval = 1000ms
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);

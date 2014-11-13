@@ -54,12 +54,12 @@ int main(void) {
 	bleDevice ble;
 	ble.enable();	// enable BLE SoftDevice task
 
+	// Device Manager for bond device. (Optional, for bond link device only)
+//	bleDeviceManager man(ble);
+
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
-
-	// Device Manager for bond device.
-	ble.m_device_manager.settings();
 
 	//
 	// TODO: Add BLE Service

@@ -29,7 +29,6 @@
 #include <class/timeout.h>
 
 #include <class/ble/ble_service.h>
-#include <class/ble/ble_device_manager.h>
 #include <class/ble/ble_advertising.h>
 #include <class/ble/ble_gap.h>
 #include <class/ble/nrf51/ble_dis.h>
@@ -96,7 +95,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(bool clearAllBoundedCentrals=true, uint32_t stack=96);
+	uint32_t enable(uint32_t stack=96);
 
 	/**
 	 * @brief Wait for connected.
@@ -174,11 +173,6 @@ public:
 	 * @brief 48bits (6 bytes) device address;
 	 */
 	static uint8_t *address();
-
-	/**
-	 * @brief device manager
-	 */
-	bleDeviceManager	m_device_manager;
 
 	/**@brief An advertising member object.
 	 * @ref bleAdvertising class.

@@ -99,12 +99,12 @@ int main(void) {
 	bleDevice ble;
 	ble.enable();	// enable BLE SoftDevice task
 
+	// device manager
+	bleDeviceManager man(ble, true);
+
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
-
-	// device manager
-	ble.m_device_manager.settings();
 
 	//
 	// Proximity Service
