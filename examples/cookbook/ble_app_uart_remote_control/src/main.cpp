@@ -153,7 +153,7 @@ int main(void) {
 	//
 	// SoftDevice
 	//
-	bleDevice ble;	// use internal 32.768KHz for SoftDevice
+	bleDevice ble;
 	ble.enable();	// enable BLE SoftDevice stack
 
 	// GAP
@@ -188,8 +188,8 @@ int main(void) {
 	//
 	// LED output enable
 	//
-	ledLeft.output();	// set led0 as an output pin
-	ledRight.output();	// set led1 as an output pin
+	ledLeft.output();	// set ledLeft as an output pin
+	ledRight.output();	// set ledRight as an output pin
 	uint8_t ch= 0;
 
 	//
@@ -207,8 +207,8 @@ int main(void) {
 		// Uart Service
 		//
 		if ( ble.isConnected() ) {
-			// block in the read() to wati a char.
-			// Also, block will save the power when tickless enabled.
+			// block in the read() to wait a char.
+			// Also, block task will save the power when tickless enabled.
 			ch = nus.read();
 			if ( ch ) {
 				cmd.input(ch);
