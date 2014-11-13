@@ -225,7 +225,7 @@ int main(void) {
 
 			ledRight = LED_OFF;
 			ledLeft = LED_OFF;
-			sleep(990);	// save power with a long time (990ms)
+			sleep(990);	// save power with a long time sleep (990ms)
 		}
 	}
 }
