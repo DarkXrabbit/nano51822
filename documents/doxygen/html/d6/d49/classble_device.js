@@ -3,7 +3,7 @@ var classble_device =
     [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
     [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
     [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
-    [ "enable", "d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006", null ],
+    [ "enable", "d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1", null ],
     [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
     [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
     [ "getName", "d6/d49/classble_device.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
@@ -33,6 +33,5 @@ var classble_device =
     [ "suspendAll", "d6/d49/classble_device.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
     [ "wait", "d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9", null ],
     [ "m_advertising", "d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3", null ],
-    [ "m_device_manager", "d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9", null ],
     [ "m_gap", "d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9", null ]
 ];

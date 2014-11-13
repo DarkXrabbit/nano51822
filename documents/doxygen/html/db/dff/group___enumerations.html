@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0-released</span>
+   &#160;<span id="projectnumber">v1.0.1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -142,6 +142,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga8c6157c51bd905c2070d18ff73073425"><td class="mdescLeft">&#160;</td><td class="mdescRight">Analog resolution.  <a href="../../db/dff/group___enumerations.html#ga8c6157c51bd905c2070d18ff73073425">More...</a><br /></td></tr>
 <tr class="separator:ga8c6157c51bd905c2070d18ff73073425"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf36f4f6c9535228c7563541c4590b499"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gaf36f4f6c9535228c7563541c4590b499">ADV_TYPE_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499a47486dc9c3a939c457e9f1111aa35c77">ADV_TYPE_ADV_IND</a> = 0x00, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499a99c91d67ba30be01babb44ec7ba49962">ADV_TYPE_ADV_DIRECT_IND</a> = 0x01, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499af045bfff3346c52e2e7a2ff565c983c5">ADV_TYPE_ADV_SCAN_IND</a> = 0x02, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499aad594ee5e1ab112250733e0223db6cad">ADV_TYPE_ADV_NONCONN_IND</a> = 0x03
+ }</td></tr>
+<tr class="memdesc:gaf36f4f6c9535228c7563541c4590b499"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP Advertising types.  <a href="../../db/dff/group___enumerations.html#gaf36f4f6c9535228c7563541c4590b499">More...</a><br /></td></tr>
+<tr class="separator:gaf36f4f6c9535228c7563541c4590b499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaccda0254b184e8f316acfde187602422"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422">NRF_LFCLKSRC_T</a> { <br />
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148">NRF_LFCLKSRC_SYNTH_250_PPM</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c">NRF_LFCLKSRC_XTAL_500_PPM</a>, 
@@ -341,6 +348,36 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352"></a>VDD_1_3&#160;</td><td class="fielddoc">
 <p>Internal supply voltage with 1/3 prescaling used as input for the conversion. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gaf36f4f6c9535228c7563541c4590b499"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gaf36f4f6c9535228c7563541c4590b499">ADV_TYPE_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;ble_advertising.h&gt;</code></p>
+
+<p>GAP Advertising types. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggaf36f4f6c9535228c7563541c4590b499a47486dc9c3a939c457e9f1111aa35c77"></a>ADV_TYPE_ADV_IND&#160;</td><td class="fielddoc">
+<p>Connectable undirected. (Default) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaf36f4f6c9535228c7563541c4590b499a99c91d67ba30be01babb44ec7ba49962"></a>ADV_TYPE_ADV_DIRECT_IND&#160;</td><td class="fielddoc">
+<p>Connectable directed. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaf36f4f6c9535228c7563541c4590b499af045bfff3346c52e2e7a2ff565c983c5"></a>ADV_TYPE_ADV_SCAN_IND&#160;</td><td class="fielddoc">
+<p>Scannable undirected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggaf36f4f6c9535228c7563541c4590b499aad594ee5e1ab112250733e0223db6cad"></a>ADV_TYPE_ADV_NONCONN_IND&#160;</td><td class="fielddoc">
+<p>Non connectable undirected. </p>
 </td></tr>
 </table>
 
@@ -917,7 +954,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 12 2014 15:50:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 13 2014 20:45:51 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

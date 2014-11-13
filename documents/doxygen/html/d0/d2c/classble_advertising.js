@@ -1,6 +1,5 @@
 var classble_advertising =
 [
-    [ "bleAdvertising", "d0/d2c/classble_advertising.html#ac3afd0716095c82f34e519b0bc0f403c", null ],
     [ "add_uuid_to_complete_list", "d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9", null ],
     [ "appearance", "d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c", null ],
     [ "commpany_identifier", "d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be", null ],
@@ -17,5 +16,6 @@ var classble_advertising =
     [ "stop", "d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84", null ],
     [ "timeout", "d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf", null ],
     [ "tx_power_level", "d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4", null ],
+    [ "type", "d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815", null ],
     [ "update", "d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688", null ]
 ];

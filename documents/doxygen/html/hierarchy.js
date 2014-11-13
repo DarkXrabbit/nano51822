@@ -4,10 +4,10 @@ var hierarchy =
       [ "bleBase", "d2/dc4/classble_base.html", [
         [ "bleAdvertising", "d0/d2c/classble_advertising.html", null ],
         [ "bleDevice", "d6/d49/classble_device.html", null ],
-        [ "bleDeviceManager", "d9/d34/classble_device_manager.html", null ],
         [ "bleGAP", "dd/d89/classble_g_a_p.html", null ],
         [ "bleService", "da/d80/classble_service.html", [
           [ "bleConnParams", "d9/d8b/classble_conn_params.html", null ],
+          [ "bleDeviceManager", "d9/d34/classble_device_manager.html", null ],
           [ "bleRSSI", "d7/d80/classble_r_s_s_i.html", null ],
           [ "bleServiceBattery", "d5/ded/classble_service_battery.html", null ],
           [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html", null ],

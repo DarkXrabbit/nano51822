@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0-released</span>
+   &#160;<span id="projectnumber">v1.0.1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -159,75 +159,72 @@ $(document).ready(function(){initNavTree('d7/daf/_2ble_2ble_app_uart_2src_2main_
 <div class="line">    <span class="comment">// SoftDevice</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a4"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;  <span class="comment">// use internal 32.768KHz for SoftDevice</span></div>
-<div class="line">    ble.<a name="a5"></a><a class="code" href="../../d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006">enable</a>();   <span class="comment">// enable BLE SoftDevice stack</span></div>
+<div class="line">    ble.<a name="a5"></a><a class="code" href="../../d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1">enable</a>();   <span class="comment">// enable BLE SoftDevice stack</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
 <div class="line">    ble.<a name="a6"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a7"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece">settings</a>(DEVICE_NAME);    <span class="comment">// set Device Name on GAP</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a8"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19">tx_power</a>(<a name="a9"></a><a class="code" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54">BLE_TX_0dBm</a>);    <span class="comment">// set Output power</span></div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// Device Manager</span></div>
-<div class="line">    ble.<a name="a10"></a><a class="code" href="../../d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9">m_device_manager</a>.<a name="a11"></a><a class="code" href="../../d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392">settings</a>();</div>
-<div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Add BLE UART Service</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a12"></a><a class="code" href="../../db/d84/classble_service_u_a_r_t.html">bleServiceUART</a> nus(ble);            <span class="comment">// declare a BLE &quot;Nordic UART Service&quot; (NUS) object</span></div>
+<div class="line">    <a name="_a10"></a><a class="code" href="../../db/d84/classble_service_u_a_r_t.html">bleServiceUART</a> nus(ble);            <span class="comment">// declare a BLE &quot;Nordic UART Service&quot; (NUS) object</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Add &quot;connection parameters update&quot; negotiation. (optional)</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a13"></a><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a> conn(ble);</div>
+<div class="line">    <a name="_a11"></a><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a> conn(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// BLE Advertising</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    ble.<a name="a14"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a15"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(APP_ADV_INTERVAL);                   <span class="comment">// set advertising interval</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a16"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a>(APP_COMPANY_IDENTIFIER);  <span class="comment">// add company identifier</span></div>
+<div class="line">    ble.<a name="a12"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a13"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(APP_ADV_INTERVAL);                   <span class="comment">// set advertising interval</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a14"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a>(APP_COMPANY_IDENTIFIER);  <span class="comment">// add company identifier</span></div>
 <div class="line"></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a17"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688">update</a>();                                     <span class="comment">// update advertising data</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a15"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688">update</a>();                                     <span class="comment">// update advertising data</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Start advertising</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a18"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a16"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Your Application setup code here</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"></div>
-<div class="line">    <a name="_a19"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led0(18);  <span class="comment">// led0 on P0.18</span></div>
+<div class="line">    <a name="_a17"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led0(18);  <span class="comment">// led0 on P0.18</span></div>
 <div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led1(19);  <span class="comment">// led1 on P0.19</span></div>
 <div class="line"></div>
-<div class="line">    led0.<a name="a20"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();  <span class="comment">// set led0 as an output pin</span></div>
+<div class="line">    led0.<a name="a18"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();  <span class="comment">// set led0 as an output pin</span></div>
 <div class="line">    led1.<a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();  <span class="comment">// set led1 as an output pin</span></div>
 <div class="line"></div>
-<div class="line">    <a name="_a21"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a>    tm;</div>
+<div class="line">    <a name="_a19"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a>    tm;</div>
 <div class="line">    uint8_t     ch;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="keywordflow">while</span>(1) {</div>
-<div class="line">        <span class="keywordflow">if</span> ( nus.<a name="a22"></a><a class="code" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">isAvailable</a>() ) {  <span class="comment">// check BLE NUS service</span></div>
-<div class="line">            led1= <a name="a23"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">        <span class="keywordflow">if</span> ( nus.<a name="a20"></a><a class="code" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">isAvailable</a>() ) {  <span class="comment">// check BLE NUS service</span></div>
+<div class="line">            led1= <a name="a21"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> ( nus.<a name="a24"></a><a class="code" href="../../d4/d16/class_c_stream.html#a96328807241e15017868b845b06fd9e4">readable</a>() ) {</div>
-<div class="line">                ch = nus.<a name="a25"></a><a class="code" href="../../d4/d16/class_c_stream.html#a5c5870bec2c7c5f6be1e59c83d555d38">read</a>();</div>
-<div class="line">                dbg.<a name="a26"></a><a class="code" href="../../d4/d37/class_c_debug.html#a24a118274a820299586fd7dcc83087cb">putc</a>(ch);       <span class="comment">// echo to Debug Console</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( nus.<a name="a22"></a><a class="code" href="../../d4/d16/class_c_stream.html#a96328807241e15017868b845b06fd9e4">readable</a>() ) {</div>
+<div class="line">                ch = nus.<a name="a23"></a><a class="code" href="../../d4/d16/class_c_stream.html#a5c5870bec2c7c5f6be1e59c83d555d38">read</a>();</div>
+<div class="line">                dbg.<a name="a24"></a><a class="code" href="../../d4/d37/class_c_debug.html#a24a118274a820299586fd7dcc83087cb">putc</a>(ch);       <span class="comment">// echo to Debug Console</span></div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            <span class="keywordflow">if</span> ( dbg.<a name="a27"></a><a class="code" href="../../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065">available</a>() ) {</div>
-<div class="line">                ch = dbg.<a name="a28"></a><a class="code" href="../../d4/d37/class_c_debug.html#aa40d190a9b54263c662f10a8e5c187ce">read</a>();</div>
-<div class="line">                nus.<a name="a29"></a><a class="code" href="../../d4/d16/class_c_stream.html#ac8d31702e9e03eb0856583ba16764860">write</a>(ch);      <span class="comment">// echo to BLE NUS service</span></div>
+<div class="line">            <span class="keywordflow">if</span> ( dbg.<a name="a25"></a><a class="code" href="../../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065">available</a>() ) {</div>
+<div class="line">                ch = dbg.<a name="a26"></a><a class="code" href="../../d4/d37/class_c_debug.html#aa40d190a9b54263c662f10a8e5c187ce">read</a>();</div>
+<div class="line">                nus.<a name="a27"></a><a class="code" href="../../d4/d16/class_c_stream.html#ac8d31702e9e03eb0856583ba16764860">write</a>(ch);      <span class="comment">// echo to BLE NUS service</span></div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">        } <span class="keywordflow">else</span> {</div>
-<div class="line">            led1 = <a name="a30"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
+<div class="line">            led1 = <a name="a28"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
 <div class="line">        }</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// blink led</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( tm.<a name="a31"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(500) ) {</div>
-<div class="line">            tm.<a name="a32"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
+<div class="line">        <span class="keywordflow">if</span> ( tm.<a name="a29"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(500) ) {</div>
+<div class="line">            tm.<a name="a30"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
 <div class="line">            led0 = !led0;   <span class="comment">// blink led</span></div>
 <div class="line">        }</div>
 <div class="line">    }</div>
@@ -237,7 +234,7 @@ $(document).ready(function(){initNavTree('d7/daf/_2ble_2ble_app_uart_2src_2main_
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 12 2014 15:50:03 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 13 2014 20:45:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

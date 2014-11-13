@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0-released</span>
+   &#160;<span id="projectnumber">v1.0.1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -195,64 +195,61 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">    <span class="comment">// Declare SoftDevice Object</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a10"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;</div>
-<div class="line">    ble.<a name="a11"></a><a class="code" href="../../d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006">enable</a>();                       <span class="comment">// enable BLE stack</span></div>
+<div class="line">    ble.<a name="a11"></a><a class="code" href="../../d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1">enable</a>();                       <span class="comment">// enable BLE stack</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
 <div class="line">    ble.<a name="a12"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a13"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece">settings</a>(DEVICE_NAME);    <span class="comment">// set Device Name on GAP</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a14"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19">tx_power</a>(<a name="a15"></a><a class="code" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54">BLE_TX_0dBm</a>);    <span class="comment">// set output radio Power</span></div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// Reg. Device Manager.</span></div>
-<div class="line">    ble.<a name="a16"></a><a class="code" href="../../d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9">m_device_manager</a>.<a name="a17"></a><a class="code" href="../../d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392">settings</a>();</div>
-<div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Declare a HRM service object</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a18"></a><a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a> hrm(ble);</div>
+<div class="line">    <a name="_a16"></a><a class="code" href="../../d0/dfc/classble_service_h_r_m.html">bleServiceHRM</a> hrm(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Declare a HTM service object</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a19"></a><a class="code" href="../../d3/d27/classble_service_h_t_m.html">bleServiceHTM</a> htm(ble);</div>
+<div class="line">    <a name="_a17"></a><a class="code" href="../../d3/d27/classble_service_h_t_m.html">bleServiceHTM</a> htm(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Declare a BAT service object</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a20"></a><a class="code" href="../../d5/ded/classble_service_battery.html">bleServiceBattery</a> bat(ble);</div>
+<div class="line">    <a name="_a18"></a><a class="code" href="../../d5/ded/classble_service_battery.html">bleServiceBattery</a> bat(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Add &quot;connection parameters update&quot; negotiation. (optional)</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a21"></a><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a> conn(ble);</div>
+<div class="line">    <a name="_a19"></a><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a> conn(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// update advertisement contents</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    ble.<a name="a22"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a23"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(APP_ADV_INTERVAL);                   <span class="comment">// set advertising interval</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a24"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a>(APP_COMPANY_IDENTIFIER);  <span class="comment">// add company identifier</span></div>
+<div class="line">    ble.<a name="a20"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a21"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(APP_ADV_INTERVAL);                   <span class="comment">// set advertising interval</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a22"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a>(APP_COMPANY_IDENTIFIER);  <span class="comment">// add company identifier</span></div>
 <div class="line"></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a25"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(hrm);               <span class="comment">// add hrm object to the uuid list of advertisement</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a23"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(hrm);               <span class="comment">// add hrm object to the uuid list of advertisement</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(htm);               <span class="comment">// add htm object to the uuid_list of advertisement</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(bat);               <span class="comment">// add bat object to the uuid_list of advertisement</span></div>
 <div class="line"></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a26"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a>(BLE_APPEARANCE_GENERIC_HEART_RATE_SENSOR);</div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a27"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688">update</a>();                                     <span class="comment">// update advertisement data</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a24"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a>(BLE_APPEARANCE_GENERIC_HEART_RATE_SENSOR);</div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a25"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688">update</a>();                                     <span class="comment">// update advertisement data</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Start advertising</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a28"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a26"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Tickless Low Power Feature</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#ifndef DEBUG</span></div>
-<div class="line">    <a name="a29"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
+<div class="line">    <a name="a27"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Analog input (for VDD detected)</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="a30"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154">CAdc::init</a>();           <span class="comment">// AREF internal VBG</span></div>
-<div class="line">    <a name="a31"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a>(<a name="a32"></a><a class="code" href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352">VDD_1_3</a>);  <span class="comment">// source from internal: VDD x 1/3</span></div>
-<div class="line">    <a name="a33"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5">CAdc::enable</a>();</div>
+<div class="line">    <a name="a28"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154">CAdc::init</a>();           <span class="comment">// AREF internal VBG</span></div>
+<div class="line">    <a name="a29"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a>(<a name="a30"></a><a class="code" href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352">VDD_1_3</a>);  <span class="comment">// source from internal: VDD x 1/3</span></div>
+<div class="line">    <a name="a31"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5">CAdc::enable</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// LED Task</span></div>
@@ -272,7 +269,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// wait for BLE connected, the task will be blocked until connected.</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        ble.<a name="a34"></a><a class="code" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a>();</div>
+<div class="line">        ble.<a name="a32"></a><a class="code" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a>();</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Heart Rate Measurement Service</span></div>
@@ -285,7 +282,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        <span class="comment">// Health Thermometer Measurement Service</span></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( htm.isAvailable() ) {      <span class="comment">// is service available (when remote app connected to the service)</span></div>
-<div class="line">            <span class="keywordflow">if</span> ( <a name="a35"></a><a class="code" href="../../d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da">bleServiceHTM::get_temperature</a>(temp) ) {</div>
+<div class="line">            <span class="keywordflow">if</span> ( <a name="a33"></a><a class="code" href="../../d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da">bleServiceHTM::get_temperature</a>(temp) ) {</div>
 <div class="line">                htm.send(temp); <span class="comment">// send temp</span></div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -294,7 +291,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        <span class="comment">// Battery Service</span></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( bat.isAvailable() ) {      <span class="comment">// is service available (when remote app connected to the service)</span></div>
-<div class="line">            <span class="keywordflow">if</span> ( <a name="a36"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a>(value) ) {</div>
+<div class="line">            <span class="keywordflow">if</span> ( <a name="a34"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a>(value) ) {</div>
 <div class="line">                percentage = (value / 1024.0f) * 100.0;</div>
 <div class="line">                bat.send(percentage);</div>
 <div class="line">            }</div>
@@ -308,7 +305,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Nov 12 2014 15:50:03 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 13 2014 20:45:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

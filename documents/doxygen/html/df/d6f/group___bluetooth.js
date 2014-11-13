@@ -1,7 +1,6 @@
 var group___bluetooth =
 [
     [ "bleAdvertising", "d0/d2c/classble_advertising.html", [
-      [ "bleAdvertising", "d0/d2c/classble_advertising.html#ac3afd0716095c82f34e519b0bc0f403c", null ],
       [ "add_uuid_to_complete_list", "d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9", null ],
       [ "appearance", "d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c", null ],
       [ "commpany_identifier", "d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be", null ],
@@ -18,6 +17,7 @@ var group___bluetooth =
       [ "stop", "d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84", null ],
       [ "timeout", "d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf", null ],
       [ "tx_power_level", "d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4", null ],
+      [ "type", "d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815", null ],
       [ "update", "d0/d2c/classble_advertising.html#a8095f313522e21383904f067bd1ee688", null ]
     ] ],
     [ "bleBase", "d2/dc4/classble_base.html", [
@@ -39,7 +39,7 @@ var group___bluetooth =
       [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
       [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
       [ "count", "d6/d49/classble_device.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
-      [ "enable", "d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006", null ],
+      [ "enable", "d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1", null ],
       [ "enterCriticalSection", "d6/d49/classble_device.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
       [ "exitCriticalSection", "d6/d49/classble_device.html#aab3a51062666552690be49b8e8027161", null ],
       [ "getName", "d6/d49/classble_device.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
@@ -69,14 +69,16 @@ var group___bluetooth =
       [ "suspendAll", "d6/d49/classble_device.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
       [ "wait", "d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9", null ],
       [ "m_advertising", "d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3", null ],
-      [ "m_device_manager", "d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9", null ],
       [ "m_gap", "d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9", null ]
     ] ],
     [ "bleDeviceManager", "d9/d34/classble_device_manager.html", [
+      [ "bleDeviceManager", "d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87", null ],
+      [ "isAvailable", "d9/d34/classble_device_manager.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isLinkSecured", "d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46", null ],
       [ "isThread", "d9/d34/classble_device_manager.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d9/d34/classble_device_manager.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
-      [ "settings", "d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392", null ]
+      [ "uuid", "d9/d34/classble_device_manager.html#aa34f2ea80269787a549a98e13bddb44f", null ],
+      [ "uuid_type", "d9/d34/classble_device_manager.html#a8931a117eb7be5a52455b53459b0df62", null ]
     ] ],
     [ "bleGAP", "dd/d89/classble_g_a_p.html", [
       [ "appearance", "dd/d89/classble_g_a_p.html#a6544041a6c396246102b0e8430b344eb", null ],

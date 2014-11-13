@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0-released</span>
+   &#160;<span id="projectnumber">v1.0.1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -139,9 +139,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf797390297ed590496b35215ad2688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688">bleDevice</a> ()</td></tr>
 <tr class="memdesc:a4bf797390297ed590496b35215ad2688"><td class="mdescLeft">&#160;</td><td class="mdescRight">BLE softdevice constructor.  <a href="#a4bf797390297ed590496b35215ad2688">More...</a><br /></td></tr>
 <tr class="separator:a4bf797390297ed590496b35215ad2688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2866fd7d015da3ecdecb69efaccea006"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a2866fd7d015da3ecdecb69efaccea006">enable</a> (bool clearAllBoundedCentrals=true, uint32_t stack=96)</td></tr>
-<tr class="memdesc:a2866fd7d015da3ecdecb69efaccea006"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a2866fd7d015da3ecdecb69efaccea006">More...</a><br /></td></tr>
-<tr class="separator:a2866fd7d015da3ecdecb69efaccea006"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00186ee9ef07d7e45525f900e7671bf1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1">enable</a> (uint32_t stack=96)</td></tr>
+<tr class="memdesc:a00186ee9ef07d7e45525f900e7671bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a00186ee9ef07d7e45525f900e7671bf1">More...</a><br /></td></tr>
+<tr class="separator:a00186ee9ef07d7e45525f900e7671bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06a3a42710cc86472c92583a6d608e9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
 <tr class="memdesc:aa06a3a42710cc86472c92583a6d608e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for connected.  <a href="#aa06a3a42710cc86472c92583a6d608e9">More...</a><br /></td></tr>
 <tr class="separator:aa06a3a42710cc86472c92583a6d608e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -217,9 +217,6 @@ Static Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a481d824043b922f321b653ffd91ffdf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a481d824043b922f321b653ffd91ffdf9">m_device_manager</a></td></tr>
-<tr class="memdesc:a481d824043b922f321b653ffd91ffdf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">device manager  <a href="#a481d824043b922f321b653ffd91ffdf9">More...</a><br /></td></tr>
-<tr class="separator:a481d824043b922f321b653ffd91ffdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a239a91976b72492fe0275e21aa94a0e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a></td></tr>
 <tr class="memdesc:a239a91976b72492fe0275e21aa94a0e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">An advertising member object. <a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a> class.  <a href="#a239a91976b72492fe0275e21aa94a0e3">More...</a><br /></td></tr>
 <tr class="separator:a239a91976b72492fe0275e21aa94a0e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,7 +232,7 @@ Protected Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Class (SoftDevice). </p>
 <p>This class manages the all BLE event from the SoftDevice driver, and provides the device-manager, advertising and gap objects. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a4">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#_a10">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a4">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#_a3">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#_a4">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#_a4">/peripherals/i2c_scanner/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a4">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#_a10">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a2">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a4">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#_a3">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#_a4">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#_a4">/peripherals/i2c_scanner/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4bf797390297ed590496b35215ad2688"></a>
 <div class="memitem">
@@ -305,26 +302,16 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a2866fd7d015da3ecdecb69efaccea006"></a>
+<a class="anchor" id="a00186ee9ef07d7e45525f900e7671bf1"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">uint32_t bleDevice::enable </td>
           <td>(</td>
-          <td class="paramtype">bool&#160;</td>
-          <td class="paramname"><em>clearAllBoundedCentrals</em> = <code>true</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>stack</em> = <code>96</code>&#160;</td>
-        </tr>
-        <tr>
+          <td class="paramname"><em>stack</em> = <code>96</code></td><td>)</td>
           <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -338,7 +325,7 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS BLE stack has been enabled successfully </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a5">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a11">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a5">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a4">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a5">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a5">/peripherals/i2c_scanner/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a5">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a11">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a12">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a5">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a4">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a5">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a5">/peripherals/i2c_scanner/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -656,7 +643,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Check BLE connection. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if ble is in connected, false otherwise. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a30">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, and <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a4">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a28">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a4">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a40">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1234,7 +1221,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>The waiting member will push the task in to block state to wait the connected event. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a34">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a32">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1250,22 +1237,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 </div><div class="memdoc">
 
 <p>An advertising member object. <a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a> class. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a16">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a22">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a14">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a10">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a12">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
-</dl>
-</div>
-</div>
-<a class="anchor" id="a481d824043b922f321b653ffd91ffdf9"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> bleDevice::m_device_manager</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>device manager </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a10">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a16">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a10">/ble/ble_app_uart/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a14">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a22">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a12">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a10">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a12">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1280,7 +1252,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 </div><div class="memdoc">
 
 <p>GAP member object. <a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a> class. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a6">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a12">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a6">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a5">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a6">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a6">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a12">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a14">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a6">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a5">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a6">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1290,7 +1262,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Wed Nov 12 2014 15:50:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 13 2014 20:45:51 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

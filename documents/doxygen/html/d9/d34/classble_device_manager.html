@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.0-released</span>
+   &#160;<span id="projectnumber">v1.0.1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -124,6 +124,7 @@ Inheritance diagram for bleDeviceManager:</div>
  <div class="center">
   <img src="../../d9/d34/classble_device_manager.png" usemap="#bleDeviceManager_map" alt=""/>
   <map id="bleDeviceManager_map" name="bleDeviceManager_map">
+<area href="../../da/d80/classble_service.html" title="BLE Service base class. " alt="bleService" shape="rect" coords="0,112,120,136"/>
 <area href="../../d2/dc4/classble_base.html" title="The bleBase class is an empty base class. " alt="bleBase" shape="rect" coords="0,56,120,80"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,120,24"/>
 </map>
@@ -131,12 +132,21 @@ Inheritance diagram for bleDeviceManager:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a34907222be577742c62d08a879258392"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a34907222be577742c62d08a879258392">settings</a> (uint8_t timeout=30, uint8_t bond=1, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td></tr>
-<tr class="memdesc:a34907222be577742c62d08a879258392"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device Manager settings.  <a href="#a34907222be577742c62d08a879258392">More...</a><br /></td></tr>
-<tr class="separator:a34907222be577742c62d08a879258392"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a03a4363ab8efef0e951d155144612d87"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87">bleDeviceManager</a> (<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble, bool clearAllBoundedCentrals=false, uint8_t timeout=30, uint8_t bond=1, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td></tr>
+<tr class="memdesc:a03a4363ab8efef0e951d155144612d87"><td class="mdescLeft">&#160;</td><td class="mdescRight">Device Manager settings.  <a href="#a03a4363ab8efef0e951d155144612d87">More...</a><br /></td></tr>
+<tr class="separator:a03a4363ab8efef0e951d155144612d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46">isLinkSecured</a> ()</td></tr>
 <tr class="memdesc:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that link with the peer is secured.  <a href="#a3cc4d28c35e4aa91c1f19f3f70589b46">More...</a><br /></td></tr>
 <tr class="separator:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5045731a748b41a5153496d8fcb7257"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257">isAvailable</a> ()</td></tr>
+<tr class="memdesc:ae5045731a748b41a5153496d8fcb7257"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the service available.  <a href="#ae5045731a748b41a5153496d8fcb7257">More...</a><br /></td></tr>
+<tr class="separator:ae5045731a748b41a5153496d8fcb7257"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa34f2ea80269787a549a98e13bddb44f"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">uuid</a> ()</td></tr>
+<tr class="memdesc:aa34f2ea80269787a549a98e13bddb44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID of service.  <a href="#aa34f2ea80269787a549a98e13bddb44f">More...</a><br /></td></tr>
+<tr class="separator:aa34f2ea80269787a549a98e13bddb44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8931a117eb7be5a52455b53459b0df62"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62">uuid_type</a> ()</td></tr>
+<tr class="memdesc:a8931a117eb7be5a52455b53459b0df62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID type of service.  <a href="#a8931a117eb7be5a52455b53459b0df62">More...</a><br /></td></tr>
+<tr class="separator:a8931a117eb7be5a52455b53459b0df62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -144,7 +154,120 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Management. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a13">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
+</dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a03a4363ab8efef0e951d155144612d87"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bleDeviceManager::bleDeviceManager </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;&#160;</td>
+          <td class="paramname"><em>ble</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>clearAllBoundedCentrals</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>30</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>bond</em> = <code>1</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>mitm</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>ioCapabilities</em> = <code>BLE_GAP_IO_CAPS_NONE</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>oob</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>minKeySize</em> = <code>7</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>maxKeySize</em> = <code>16</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Device Manager settings. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timoeut</td><td>Timeout for SMP transactions or Security Request in seconds. </td></tr>
+    <tr><td class="paramname">bond</td><td>Perform bonding, default 1, meaning bond should be estabished. </td></tr>
+    <tr><td class="paramname">mitm</td><td>MITM protection needed. </td></tr>
+    <tr><td class="paramname">ioCapabilities</td><td>IO Capabilities </td></tr>
+    <tr><td class="paramname">oob</td><td>Out Of Band data available. </td></tr>
+    <tr><td class="paramname">minKeySize</td><td>Minimum encryption key size in octets between 7 and 16. </td></tr>
+    <tr><td class="paramname">maxKeySize</td><td>Maximum encryption key size in octets between min_key_size and 16.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if register a new device manager successful. </dd></dl>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ae5045731a748b41a5153496d8fcb7257"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool bleService::isAvailable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check the service available. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3cc4d28c35e4aa91c1f19f3f70589b46"></a>
 <div class="memitem">
 <div class="memproto">
@@ -215,76 +338,60 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a34907222be577742c62d08a879258392"></a>
+<a class="anchor" id="aa34f2ea80269787a549a98e13bddb44f"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">uint32_t bleDeviceManager::settings </td>
+          <td class="memname">virtual uint16_t bleService::uuid </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>timeout</em> = <code>30</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>bond</em> = <code>1</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>mitm</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>ioCapabilities</em> = <code>BLE_GAP_IO_CAPS_NONE</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>oob</em> = <code>0</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>minKeySize</em> = <code>7</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>maxKeySize</em> = <code>16</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Device Manager settings. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">timoeut</td><td>Timeout for SMP transactions or Security Request in seconds. </td></tr>
-    <tr><td class="paramname">bond</td><td>Perform bonding, default 1, meaning bond should be estabished. </td></tr>
-    <tr><td class="paramname">mitm</td><td>MITM protection needed. </td></tr>
-    <tr><td class="paramname">ioCapabilities</td><td>IO Capabilities </td></tr>
-    <tr><td class="paramname">oob</td><td>Out Of Band data available. </td></tr>
-    <tr><td class="paramname">minKeySize</td><td>Minimum encryption key size in octets between 7 and 16. </td></tr>
-    <tr><td class="paramname">maxKeySize</td><td>Maximum encryption key size in octets between min_key_size and 16.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if register a new device manager successful. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a11">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a17">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a11">/ble/ble_app_uart/src/main.cpp</a>.</dd>
-</dl>
+<p>Get the UUID of service. </p>
+<dl class="section return"><dt>Returns</dt><dd>an uint16_t value. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ac08c4164b2f62f09d462df5ff940a1f8">bleServiceCSC</a>, <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ab16dbfc90ec7ac94d5062ccbaa4d504d">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#ad2abbdb6a3341823b30278e077e323ba">bleServiceProximity</a>, <a class="el" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">bleServiceTPL</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">bleServiceCustomer</a>, and <a class="el" href="../../d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9">bleServiceBattery</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a8931a117eb7be5a52455b53459b0df62"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint8_t bleService::uuid_type </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the UUID type of service. </p>
+<dl class="section return"><dt>Returns</dt><dd>an uint8_t value. </dd></dl>
+
+<p>Reimplemented in <a class="el" href="../../de/d51/classble_service_customer.html#a4119b0d8ce0f1e04bcff8c60fa51885a">bleServiceCustomer</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#a0c6deb48531bb020934e9a1ffb4e351f">bleServiceDFU</a>.</p>
+
 </div>
 </div>
 </div><!-- contents -->
@@ -293,7 +400,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></li>
-    <li class="footer">Generated on Wed Nov 12 2014 15:50:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 13 2014 20:45:51 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

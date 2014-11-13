@@ -12,6 +12,12 @@ var group___enumerations =
       [ "VDD_2_3", "db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a7b682f08d09434b67ad806be494f6bcc", null ],
       [ "VDD_1_3", "db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352", null ]
     ] ],
+    [ "ADV_TYPE_T", "db/dff/group___enumerations.html#gaf36f4f6c9535228c7563541c4590b499", [
+      [ "ADV_TYPE_ADV_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499a47486dc9c3a939c457e9f1111aa35c77", null ],
+      [ "ADV_TYPE_ADV_DIRECT_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499a99c91d67ba30be01babb44ec7ba49962", null ],
+      [ "ADV_TYPE_ADV_SCAN_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499af045bfff3346c52e2e7a2ff565c983c5", null ],
+      [ "ADV_TYPE_ADV_NONCONN_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499aad594ee5e1ab112250733e0223db6cad", null ]
+    ] ],
     [ "AIN_T", "db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b", [
       [ "AD0", "db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba9a6afaa33efd88ccbd62117ab0555cce", null ],
       [ "AD1", "db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba96f3b3489a6abb6db7d90ad7c0b5ca34", null ],
