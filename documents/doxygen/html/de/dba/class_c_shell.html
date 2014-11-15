@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1</span>
+   &#160;<span id="projectnumber">v1.0.1 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -96,7 +96,7 @@ $(document).ready(function(){initNavTree('de/dba/class_c_shell.html','../../');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -124,7 +124,7 @@ Inheritance diagram for CShell:</div>
  <div class="center">
   <img src="../../de/dba/class_c_shell.png" usemap="#CShell_map" alt=""/>
   <map id="CShell_map" name="CShell_map">
-<area href="../../d0/d26/class_c_thread.html" alt="CThread" shape="rect" coords="0,56,61,80"/>
+<area href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. " alt="CThread" shape="rect" coords="0,56,61,80"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,61,24"/>
 </map>
  </div></div>
@@ -466,7 +466,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>isAlive is to check the thread is in alive (for run-loop) </p><dl class="section return"><dt>Returns</dt><dd>false if the thread is deleted. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a4">/rtos/blink/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html#a3">/peripherals/gpio_sense/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a4">/rtos/blink/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -529,7 +529,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p><a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">isThread()</a>, check the class is inherited from <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> </p>
+<p><a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">isThread()</a>, check the class is inherited from <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> </p>
 
 <p>Reimplemented from <a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">CObject</a>.</p>
 
@@ -556,7 +556,7 @@ Protected Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, <a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">CPin</a>, and <a class="el" href="../../d7/d3a/classgpio_i_n_t.html#a3c0673a6b7a0c5dc857f027e86e36d8b">gpioINT</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, <a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">CPin</a>, <a class="el" href="../../d0/d3c/classgpio_sense.html#a2ae6559724aba3faeda8592dd19cc491">gpioSense</a>, and <a class="el" href="../../dd/d60/class_c_event_bit.html#a78b7aa84b566423a02a119077a70f805">CEventBit</a>.</p>
 
 </div>
 </div>
@@ -802,7 +802,7 @@ Protected Attributes</h2></td></tr>
 <div class="line">            ...</div>
 <div class="line">        }</div>
 </div><!-- fragment --> <dl class="section remark"><dt>Remarks</dt><dd>The <a class="el" href="../../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f">run()</a> is a pure virtual function, must implement by inheritor. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>if end the <a class="el" href="../../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f">run()</a> member function, the <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a> object will be destroyed and collected. </dd></dl>
+<dl class="section note"><dt>Note</dt><dd>if end the <a class="el" href="../../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f">run()</a> member function, the <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> object will be destroyed and collected. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">CThread</a>.</p>
 
@@ -1019,7 +1019,7 @@ Protected Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Call the member function to start the thread. </p><dl class="section note"><dt>Note</dt><dd>the <a class="el" href="../../de/dba/class_c_shell.html#a670f66f552494dfce94ee297ae0f659a">start()</a> is an overload member function of <a class="el" href="../../d0/d26/class_c_thread.html">CThread</a>. </dd></dl>
+<p>Call the member function to start the thread. </p><dl class="section note"><dt>Note</dt><dd>the <a class="el" href="../../de/dba/class_c_shell.html#a670f66f552494dfce94ee297ae0f659a">start()</a> is an overload member function of <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a>. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d0/d26/class_c_thread.html#aacf955d1852e74da1f989251955ee6ec">CThread</a>.</p>
 
@@ -1212,7 +1212,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/dba/class_c_shell.html">CShell</a></li>
-    <li class="footer">Generated on Thu Nov 13 2014 20:45:51 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Nov 15 2014 20:58:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -112,6 +112,11 @@ var group___enumerations =
       [ "RSC_WALKING", "db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa59cbf919dfeb3a959fe068663ba5a928", null ],
       [ "RSC_RUNNING", "db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa0aec77c90c048e22b4effd9bf9863bcc", null ]
     ] ],
+    [ "SENSE_T", "db/dff/group___enumerations.html#ga25e7251025c00833f4f09f073c974f88", [
+      [ "RISING", "db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad93abe7aced82e9a4fcac4127a36ece3", null ],
+      [ "FALLING", "db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66", null ],
+      [ "TOGGLE", "db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7", null ]
+    ] ],
     [ "SPI_FREQ_T", "db/dff/group___enumerations.html#ga2d645fa61295e3fd670effeb557d117d", [
       [ "SPI_FREQ_125KHZ", "db/dff/group___enumerations.html#gga2d645fa61295e3fd670effeb557d117da18c5f543fd25627d0d61d0dc47ecdd95", null ],
       [ "SPI_FREQ_250KHZ", "db/dff/group___enumerations.html#gga2d645fa61295e3fd670effeb557d117da335f564977de273f4c8dbb2bcb49af3a", null ],
@@ -136,10 +141,5 @@ var group___enumerations =
     [ "TIMER_T", "db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3", [
       [ "TIMER_1", "db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5", null ],
       [ "TIMER_2", "db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b", null ]
-    ] ],
-    [ "TRIGGER_T", "db/dff/group___enumerations.html#ga502c1342cfcb1231253628a68ee19924", [
-      [ "RISING", "db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924ad93abe7aced82e9a4fcac4127a36ece3", null ],
-      [ "FALLING", "db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924ad24712a6a30c1d431b927d1ba2f84b66", null ],
-      [ "TOGGLE", "db/dff/group___enumerations.html#gga502c1342cfcb1231253628a68ee19924a4acfde02350139a12fcef53ff7289aa7", null ]
     ] ]
 ];

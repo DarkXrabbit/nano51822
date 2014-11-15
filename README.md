@@ -8,6 +8,14 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
+v1.0.1 rc2 15th November 2014
+--------------------------------
+###Details: 
+    1. Remote gpioINT class.
+    2. Add gpioSense class to provide 30 interrupt.
+    3. Add task_handle in CThread constructor. (optional)
+
+
 v1.0.1 rc1 13th November 2014
 --------------------------------
 ###Details: 

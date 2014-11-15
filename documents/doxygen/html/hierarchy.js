@@ -33,7 +33,7 @@ var hierarchy =
         [ "CAdc", "d7/d0f/class_c_adc.html", null ],
         [ "CBus", "de/d89/class_c_bus.html", null ],
         [ "CPin", "d7/db9/class_c_pin.html", [
-          [ "gpioINT", "d7/d3a/classgpio_i_n_t.html", null ]
+          [ "gpioSense", "d0/d3c/classgpio_sense.html", null ]
         ] ],
         [ "CPowerSave", "d5/d3e/class_c_power_save.html", null ],
         [ "CStorage", "d3/de1/class_c_storage.html", null ],

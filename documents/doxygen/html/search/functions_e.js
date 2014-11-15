@@ -11,7 +11,7 @@ var searchData=
   ['readword',['readWord',['../d0/d5e/class_i2_cdev.html#a40f2c8c0786176fd9de891d8e3c5caca',1,'I2Cdev']]],
   ['readwords',['readWords',['../d0/d5e/class_i2_cdev.html#ac2ef0e775ac955ecbe58df9a812f6b1b',1,'I2Cdev']]],
   ['reference',['reference',['../d7/d0f/class_c_adc.html#a02da72af459ae098de9e76f816eed3d7',1,'CAdc']]],
-  ['release',['release',['../d7/d3a/classgpio_i_n_t.html#a18b8d3a4f9fa6ce0a1c448a6aa6b200a',1,'gpioINT::release()'],['../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1',1,'CSemaphore::release()']]],
+  ['release',['release',['../d0/d3c/classgpio_sense.html#ae0f0ee522de000fb3487bbc351c00972',1,'gpioSense::release()'],['../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1',1,'CSemaphore::release()']]],
   ['removeall',['removeAll',['../df/db6/class_c_list.html#a5ee3e7395c54395c7f603c08a1b9d5cf',1,'CList']]],
   ['removeallt',['removeAllT',['../da/d59/class_c_list_t.html#a33519401fb498e0b5f64e2da041726cc',1,'CListT']]],
   ['removeat',['removeAt',['../df/db6/class_c_list.html#a4baf624e719e27016de00005bbbc0f7b',1,'CList']]],

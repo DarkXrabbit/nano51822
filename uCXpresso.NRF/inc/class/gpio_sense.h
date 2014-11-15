@@ -18,67 +18,79 @@
 #ifndef PININT_H_
 #define PININT_H_
 
-#include "class/object.h"
-#include "class/semaphore.h"
-#include "class/pin.h"
+#include <class/pin.h>
+#include <class/semaphore.h>
 
-#define MAX_GPIO_INT	4	///< Maximum number of interrupt source
-
-/**Interrupt Trigger Enumerations
- * \ingroup Enumerations
+/**
+ * @brief Interrupt sense Enumerations
+ * @ingroup Enumerations
  */
 typedef enum {
 	RISING = 1,			///< Low to High
 	FALLING = 2,		///< High to Low
 	TOGGLE = 3			///< Toggle
-}TRIGGER_T;
+}SENSE_T;
 
-/**@brief GPIO interrupt service
- * @class gpioINT gpio_int.h "class/gpio_int.h"
+/**
+ * @brief GPIO interrupt service
+ * @class gpioSense gpio_sense.h "class/gpio_sense.h"
  * @ingroup Peripherals
  */
-class gpioINT: public CPin {
+class gpioSense: public CPin {
 public:
 	/**@brief construct for EDGE mode
 	 * \param pin to specify a PIN_NAME_T for IRQ.
+	 * @param sense to specify the @ref SENSE_T to trigger the interrupt.
 	 * \param mode to set the PIN_INPUT_MODE_T.
 	 */
-	gpioINT(uint8_t pin, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP);
+	gpioSense(uint8_t pin, SENSE_T sense=FALLING, PIN_INPUT_MODE_T pull=INTERNAL_PULL_UP);
 
-	/**@brief Enable the GPIO interrupt
-	 * @param sense to specify the EDGE_STATE_T to trigger the interrupt.
+	/**
+	 * @brief Enable the GPIO interrupt
 	 */
-	virtual void enable(TRIGGER_T trigger);
+	virtual void enable();
 
-	/**@brief Disable the GPIO interrupt
+	/**
+	 * @brief Disable the GPIO interrupt
 	 */
 	virtual void disable();
 
-	/**@brief Waiting for interrupt active
-	 * \param tm is a waiting timeout and unit in millisecond.
-	 * \return trun if an interrupt occurred.
+	/**
+	 * @brief Waiting for interrupt active
+	 * @param tm is a waiting timeout and unit in millisecond.
+	 * @return trun if the pin is triggered.
 	 */
 	virtual bool wait(uint32_t tm=MAX_DELAY_TIME);
 
-	/**@brief Trigger by software
+	/**
+	 * @brief Trigger by software
 	 */
 	virtual void release();
 
-	/**@brief Check interrupt valid
-	 * @return true if the gpio interrupt is valid, false otherwise.
+	/**
+	 * @brief check the sense pin enabled or not.
 	 */
-	inline bool isValid() {
-		return (m_ch>=0 ? true : false);
-	}
+	virtual bool isValid();
+
+	/**
+	 * @brief Wait for the any GPIO senses.
+	 */
+	static bool waitForAny(uint32_t tm=MAX_DELAY_TIME);
 
 	//
 	///@cond PRIVATE
 	//
-	virtual ~gpioINT();
-	CSemaphore		 m_semIrq;
+	virtual ~gpioSense();
 protected:
-	int				 m_ch;
+	uint8_t	m_sense;
+	uint8_t m_pull;
 	/// @endcond
 };
+
+/**
+ * @example /peripherals/gpio_sense/src/main.cpp
+ * This is an example of how to use the CThread class.
+ * More details about this example.
+ */
 
 #endif /* PININT_H_ */

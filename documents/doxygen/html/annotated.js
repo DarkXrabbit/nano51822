@@ -42,7 +42,7 @@ var annotated =
     [ "CThread", "d0/d26/class_c_thread.html", "d0/d26/class_c_thread" ],
     [ "CTimeout", "d5/d5b/class_c_timeout.html", "d5/d5b/class_c_timeout" ],
     [ "CTimer", "db/de1/class_c_timer.html", "db/de1/class_c_timer" ],
-    [ "gpioINT", "d7/d3a/classgpio_i_n_t.html", "d7/d3a/classgpio_i_n_t" ],
+    [ "gpioSense", "d0/d3c/classgpio_sense.html", "d0/d3c/classgpio_sense" ],
     [ "hwPWM", "da/deb/classhw_p_w_m.html", "da/deb/classhw_p_w_m" ],
     [ "I2Cdev", "d0/d5e/class_i2_cdev.html", "d0/d5e/class_i2_cdev" ],
     [ "spiMaster", "da/dc3/classspi_master.html", "da/dc3/classspi_master" ],

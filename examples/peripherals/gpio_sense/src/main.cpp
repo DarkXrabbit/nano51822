@@ -1,16 +1,16 @@
 /*
 ===============================================================================
- Name        : gpio_init
+ Name        : gpio_sense
  Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
- Description : GPIO Interrupt Demo
+ Description : GPIO sense test
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2014/11/3 v1.0.0	First Edition.									LEO
+ 2014/11/15 v1.0.0	First Edition.									LEO
  ===============================================================================
  */
 
@@ -27,31 +27,34 @@
 // TODO: insert other include files here
 #include <class/power.h>
 #include <class/pin.h>
-#include <class/thread.h>
-#include <class/gpio_int.h>
-#include <class/timeout.h>
+#include <class/gpio_sense.h>
 
-// TODO: insert other definitions and declarations here
+//
+// task parameter structure for demo
+//
+typedef struct {
+	uint8_t sense_pin;
+	uint8_t led_pin;
+}SENSE_PARAM_T;
 
-class tskGPIO: public CThread {
-protected:
-	virtual void run() {
-		// setup led
-		CPin led(19);							// declare a led to connect to P0.19
-		led.output();							// set led as output pin
+//
+// Sense Test Task
+//
+void senseTask(CThread *p_thread, xHandle p_param) {
+	SENSE_PARAM_T *p_sense = (SENSE_PARAM_T *)  p_param;
 
-		// setup gpio interrupt
-		gpioINT btn(17, INTERNAL_PULL_UP);		// delcare a btn to connect to interrupt on P0.17
-		btn.enable(FALLING);					// enable interrupt with FALLING trigger.
+	gpioSense sense(p_sense->sense_pin);
+	sense.enable();
 
-		// interrupt loop code
-		while(1) {
-			// wait for interrupt
-			btn.wait();							// wait interrupt
-			led.toggle();						// do interrupt code here
+	CPin led(p_sense->led_pin);
+	led.output();
+
+	while( p_thread->isAlive() ) {
+		if ( sense.wait() ) {
+			led.toggle();
 		}
 	}
-};
+}
 
 //
 // Main Routine
@@ -74,23 +77,22 @@ int main(void) {
 	//
 	// Your setup code here
 	//
-	tskGPIO t;
-	t.start("gpio", 58, PRI_HARDWARE);	// set interrupt task priority to high
+	static const SENSE_PARAM_T sense_t1 = {16, 18};	// Sense=P0.16, LED=P0.18
+	static const SENSE_PARAM_T sense_t2 = {17, 19};	// Sense=P0.17, LED=P0.19
 
-	CPin led(18);						// declare led to connect to P0.18
-	led.output();
+	CThread t1(senseTask, (xHandle) &sense_t1);
+	t1.start("t1", 64, PRI_HIGH);
 
-	CTimeout tmLED;
+	CThread t2(senseTask, (xHandle) &sense_t2);
+	t2.start("t2", 64, PRI_HIGH);
+
 	//
     // Enter main loop.
 	//
     while(1) {
     	//
-    	// blink led
+    	// Your loop code here
     	//
-    	if ( tmLED.isExpired(500) ) {
-    		tmLED.reset();
-    		led.toggle();
-    	}
+    	NOTHING
     }
 }

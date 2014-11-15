@@ -11,9 +11,10 @@ var indexSectionsWithContent =
   1: "bcghistw",
   2: "abcdefghilmnoprstuw~",
   3: "cm",
-  4: "abhnprstu",
-  5: "abdfhilmnprstuv",
-  6: "bcempr"
+  4: "t",
+  5: "abhnprstu",
+  6: "abdfhilmnprstuv",
+  7: "bcempr"
 };
 
 var indexSectionNames =
@@ -22,9 +23,10 @@ var indexSectionNames =
   1: "classes",
   2: "functions",
   3: "variables",
-  4: "enums",
-  5: "enumvalues",
-  6: "groups"
+  4: "typedefs",
+  5: "enums",
+  6: "enumvalues",
+  7: "groups"
 };
 
 function convertToId(search)

@@ -8,6 +8,7 @@ var examples =
     [ "/ble/ble_beacon/src/main.cpp", "d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_rssi_measure/src/main.cpp", "d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/adc_test/src/main.cpp", "d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html", null ],
+    [ "/peripherals/gpio_sense/src/main.cpp", "d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/hw_pwm/src/main.cpp", "d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/i2c_scanner/src/main.cpp", "d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/spi_loop_test/src/main.cpp", "d5/dae/_2peripherals_2spi_loop_test_2src_2main_8cpp-example.html", null ],

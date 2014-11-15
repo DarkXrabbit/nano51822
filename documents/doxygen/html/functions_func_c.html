@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1</span>
+   &#160;<span id="projectnumber">v1.0.1 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -81,6 +81,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
       <li><a href="functions.html"><span>All</span></a></li>
       <li class="current"><a href="functions_func.html"><span>Functions</span></a></li>
       <li><a href="functions_vars.html"><span>Variables</span></a></li>
+      <li><a href="functions_type.html"><span>Typedefs</span></a></li>
       <li><a href="functions_enum.html"><span>Enumerations</span></a></li>
       <li><a href="functions_eval.html"><span>Enumerator</span></a></li>
     </ul>
@@ -129,7 +130,7 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -147,9 +148,6 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 </li>
 <li>CDebug()
 : <a class="el" href="d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e">CDebug</a>
-</li>
-<li>CEventBit()
-: <a class="el" href="dd/d60/class_c_event_bit.html#afaccf4ea2315ce05229a3a0ae37ba6af">CEventBit</a>
 </li>
 <li>change()
 : <a class="el" href="d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2">bleConnParams</a>
@@ -184,7 +182,7 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 : <a class="el" href="d6/d56/class_console.html#a8374ffffac8edeaa0775bdd1923bdc10">Console</a>
 </li>
 <li>copy()
-: <a class="el" href="df/d99/class_c_string.html#a181b18bf81568cee519617106706963f">CString</a>
+: <a class="el" href="df/d99/class_c_string.html#a98fd9f07225ffd32a683d0ffe3e70bac">CString</a>
 </li>
 <li>count()
 : <a class="el" href="de/d89/class_c_bus.html#a4fa0e4c537c237278fe8092f4d8e26fb">CBus</a>
@@ -215,7 +213,10 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 : <a class="el" href="d4/d16/class_c_stream.html#a147900f253c57d3223ae1220e0336808">CStream</a>
 </li>
 <li>CString()
-: <a class="el" href="df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7">CString</a>
+: <a class="el" href="df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f">CString</a>
+</li>
+<li>CThread()
+: <a class="el" href="d0/d26/class_c_thread.html#a5e280f17da1aac80993f6b35d0089870">CThread</a>
 </li>
 <li>CTimer()
 : <a class="el" href="db/de1/class_c_timer.html#a32a45397ba76138a08be664e8a87172d">CTimer</a>
@@ -229,7 +230,7 @@ $(document).ready(function(){initNavTree('functions_func_c.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 13 2014 20:45:52 for uCXpresso.NRF by
+    <li class="footer">Generated on Sat Nov 15 2014 20:58:04 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

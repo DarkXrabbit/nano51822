@@ -1,14 +1,13 @@
 var group___r_t_o_s =
 [
     [ "CEventBit", "dd/d60/class_c_event_bit.html", [
-      [ "CEventBit", "dd/d60/class_c_event_bit.html#afaccf4ea2315ce05229a3a0ae37ba6af", null ],
       [ "clr", "dd/d60/class_c_event_bit.html#ade8e4420bd49ab351417ca955bb293e3", null ],
-      [ "get", "dd/d60/class_c_event_bit.html#a52b137d375dbb670b2473222c8914081", null ],
+      [ "get", "dd/d60/class_c_event_bit.html#a2e34e1fbeb24bcd22c65f5d4b9b08add", null ],
       [ "isThread", "dd/d60/class_c_event_bit.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
-      [ "isValid", "dd/d60/class_c_event_bit.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "isValid", "dd/d60/class_c_event_bit.html#a78b7aa84b566423a02a119077a70f805", null ],
       [ "set", "dd/d60/class_c_event_bit.html#a0b05da65aa8bb0b77dd75f0a84b8fbb0", null ],
       [ "sync", "dd/d60/class_c_event_bit.html#a4a50fd1376946d508762fa00d01034ce", null ],
-      [ "wait", "dd/d60/class_c_event_bit.html#a4183fe9b9d9cc00cd0ae806c9aaba461", null ]
+      [ "wait", "dd/d60/class_c_event_bit.html#aa9983e9895e13c4f5dc73b5a9ee4a27f", null ]
     ] ],
     [ "CMailBox", "d8/d26/class_c_mail_box.html", [
       [ "CMailBox", "d8/d26/class_c_mail_box.html#a860c64ec622b6bb2641f8e69748ba9e6", null ],
@@ -38,6 +37,8 @@ var group___r_t_o_s =
       [ "waiting", "d0/d06/class_c_semaphore.html#a2302ceb8f2f9e1bef3381f457589177d", null ]
     ] ],
     [ "CThread", "d0/d26/class_c_thread.html", [
+      [ "task_handle_t", "d0/d26/class_c_thread.html#a328fa92e5811527475320d305f266abf", null ],
+      [ "CThread", "d0/d26/class_c_thread.html#a5e280f17da1aac80993f6b35d0089870", null ],
       [ "count", "d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
       [ "enterCriticalSection", "d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
       [ "exitCriticalSection", "d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161", null ],

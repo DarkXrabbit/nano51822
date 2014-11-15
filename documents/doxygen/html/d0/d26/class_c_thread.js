@@ -1,5 +1,7 @@
 var class_c_thread =
 [
+    [ "task_handle_t", "d0/d26/class_c_thread.html#a328fa92e5811527475320d305f266abf", null ],
+    [ "CThread", "d0/d26/class_c_thread.html#a5e280f17da1aac80993f6b35d0089870", null ],
     [ "count", "d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
     [ "enterCriticalSection", "d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
     [ "exitCriticalSection", "d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161", null ],
