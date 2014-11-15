@@ -12,7 +12,7 @@ v1.0.1 rc2 15th November 2014
 --------------------------------
 ###Details: 
     1. Remote gpioINT class.
-    2. Add gpioSense class to provide 30 interrupt.
+    2. Add gpioSense class to provide 30 edge interrupts.
     3. Add task_handle in CThread constructor. (optional)
 
 
