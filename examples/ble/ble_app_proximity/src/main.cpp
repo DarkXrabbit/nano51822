@@ -26,9 +26,9 @@
 #endif
 
 // TODO: insert other include files here
+#include <class/ble/ble_device_manager.h>
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service.h>
-#include <class/ble/ble_device_manager.h>
 #include <class/ble/ble_conn_params.h>
 #include <class/ble/ble_service_proximity.h>
 #include <class/ble/ble_service_tpl.h>

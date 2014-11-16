@@ -19,6 +19,11 @@
 #ifndef BLE_DEVICE_MANAGER_H_
 #define BLE_DEVICE_MANAGER_H_
 
+/**
+ * @brief Redefine the BLE SoftDevice Task stack size for the Device Manager module.
+ */
+#define DEF_BLE_DEVICE_STACK_SIZE 96
+
 #include <class/ble/ble_device.h>
 #include <class/timeout.h>
 

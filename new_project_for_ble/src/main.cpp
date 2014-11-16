@@ -26,6 +26,7 @@
 #endif
 
 // TODO: insert other include files here
+//#include <class/ble/ble_device_manager.h>
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service.h>
 #include <class/ble/ble_conn_params.h>
@@ -55,7 +56,9 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice task
 
 	// Device Manager for bond device. (Optional, for bond link device only)
-//	bleDeviceManager man(ble);
+#ifdef BLE_DEVICE_MANAGER_H_
+	bleDeviceManager man(ble);
+#endif
 
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP

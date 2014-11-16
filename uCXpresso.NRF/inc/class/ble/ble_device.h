@@ -60,6 +60,12 @@ typedef enum
   NRF_LFCLKSRC_RC_250_PPM_TEMP_16000MS_CALIBRATION, /**< LFCLK RC oscillator. Temperature checked every 16000ms, if changed above a threshold, a calibration is done.*/
 }NRF_LFCLKSRC_T;
 
+/**
+ * @brief default the BLE SoftDevice Task stack size
+ */
+#ifndef DEF_BLE_DEVICE_STACK_SIZE
+#define DEF_BLE_DEVICE_STACK_SIZE	72
+#endif
 
 /**
  * @brief 	BLE Device Class (SoftDevice).
@@ -95,7 +101,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(uint32_t stack=96);
+	uint32_t enable(uint32_t stack=DEF_BLE_DEVICE_STACK_SIZE);
 
 	/**
 	 * @brief Wait for connected.
