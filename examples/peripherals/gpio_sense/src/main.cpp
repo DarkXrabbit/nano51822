@@ -34,6 +34,7 @@
 //
 typedef struct {
 	uint8_t sense_pin;
+	SENSE_T trigger;
 	uint8_t led_pin;
 }SENSE_PARAM_T;
 
@@ -43,7 +44,7 @@ typedef struct {
 void senseTask(CThread *p_thread, xHandle p_param) {
 	SENSE_PARAM_T *p_sense = (SENSE_PARAM_T *)  p_param;
 
-	gpioSense sense(p_sense->sense_pin);
+	gpioSense sense(p_sense->sense_pin, p_sense->trigger);
 	sense.enable();
 
 	CPin led(p_sense->led_pin);
@@ -75,16 +76,24 @@ int main(void) {
 #endif
 
 	//
-	// Your setup code here
+	// task 1
 	//
-	static const SENSE_PARAM_T sense_t1 = {16, 18};	// Sense=P0.16, LED=P0.18
-	static const SENSE_PARAM_T sense_t2 = {17, 19};	// Sense=P0.17, LED=P0.19
-
+	static const SENSE_PARAM_T sense_t1 = {16, FALLING, 18};	// task parameters, Sense=P0.16, LED=P0.18
 	CThread t1(senseTask, (xHandle) &sense_t1);
-	t1.start("t1", 64, PRI_HIGH);
+	t1.start("t1", 62, PRI_HARDWARE);
 
+	//
+	// task 2
+	//
+	static const SENSE_PARAM_T sense_t2 = {17, TOGGLE, 19};		// task parameters, Sense=P0.17, LED=P0.19
 	CThread t2(senseTask, (xHandle) &sense_t2);
-	t2.start("t2", 64, PRI_HIGH);
+	t2.start("t2", 62, PRI_HARDWARE);
+
+	//
+	// test pin
+	//
+	CPin test(15);
+	test.output();
 
 	//
     // Enter main loop.
@@ -93,6 +102,6 @@ int main(void) {
     	//
     	// Your loop code here
     	//
-    	NOTHING
+    	test.toggle();	// Use wire to connect the test pin to sense pin for test.
     }
 }

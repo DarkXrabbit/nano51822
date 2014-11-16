@@ -57,10 +57,10 @@ public:
 
 	/**
 	 * @brief Waiting for interrupt active
-	 * @param tm is a waiting timeout and unit in millisecond.
+	 * @param timeout is a waiting timeout and unit in millisecond.
 	 * @return trun if the pin is triggered.
 	 */
-	virtual bool wait(uint32_t tm=MAX_DELAY_TIME);
+	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
 	/**
 	 * @brief Trigger by software
@@ -71,11 +71,6 @@ public:
 	 * @brief check the sense pin enabled or not.
 	 */
 	virtual bool isValid();
-
-	/**
-	 * @brief Wait for the any GPIO senses.
-	 */
-	static bool waitForAny(uint32_t tm=MAX_DELAY_TIME);
 
 	//
 	///@cond PRIVATE

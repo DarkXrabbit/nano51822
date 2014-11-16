@@ -35,7 +35,7 @@
 #include <class/power.h>
 
 // TODO: insert other definitions and declarations here
-#define APP_ADV_INTERVAL				 750							///< the advertising interval in millisecond.
+#define APP_ADV_INTERVAL				 500							///< the advertising interval in millisecond.
 #define APP_ADV_DATA_LENGTH              0x15                           ///< Length of manufacturer specific data in the advertisement.
 #define APP_DEVICE_TYPE                  0x02                           ///< 0x02 refers to Beacon.
 #define APP_MEASURED_RSSI                ((uint8_t)-59)                 ///< The Beacon's measured RSSI at 1 meter distance in dBm.
@@ -113,7 +113,7 @@ int main(void)
 	//
 	// Add BLE DFU Service
 	//
-#ifdef DEBUG
+#ifndef DEBUG
 	bleServiceDFU dfu(ble);
 	dfu.enable();
 #endif
@@ -133,10 +133,10 @@ int main(void)
 	// Advertisement
 	//
 	ble.m_advertising.type(ADV_TYPE_ADV_NONCONN_IND);
-	ble.m_advertising.interval(APP_ADV_INTERVAL);		// set advertising interval = 1000ms
+	ble.m_advertising.interval(APP_ADV_INTERVAL);		// set advertising interval
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
-	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, sizeof(BEACON_INFO_T)); // set beacon data
+	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, APP_ADV_DATA_LENGTH); // set beacon data
 	ble.m_advertising.flag(BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED);		// set flags
 	ble.m_advertising.update();							// update advertising data
 
