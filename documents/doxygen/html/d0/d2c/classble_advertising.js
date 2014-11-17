@@ -6,7 +6,6 @@ var classble_advertising =
     [ "flag", "d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa", null ],
     [ "flags", "d0/d2c/classble_advertising.html#a8b50f2576ce4da214ea1b8bdfdeb1940", null ],
     [ "interval", "d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca", null ],
-    [ "interval_fast", "d0/d2c/classble_advertising.html#a650f9fad0a2d399200fa454f86b4fc54", null ],
     [ "isThread", "d0/d2c/classble_advertising.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d0/d2c/classble_advertising.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
     [ "manuf_specific_data", "d0/d2c/classble_advertising.html#af1f8b6ffbfa395f75edea27e35210838", null ],

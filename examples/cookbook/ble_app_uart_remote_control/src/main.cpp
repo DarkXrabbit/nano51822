@@ -214,8 +214,6 @@ int main(void) {
 				cmd.input(ch);
 			}
 
-			// Negotiate the "Connect Parameters Update"
-			conn.negotiate();
 		} else {
 			//
 			// alternate led when disconnected (idle)
@@ -229,5 +227,8 @@ int main(void) {
 			ledLeft = LED_OFF;
 			sleep(990);	// save power with a long time sleep (990ms)
 		}
+
+		// Negotiate the "Connect Parameters Update"
+		conn.negotiate();
 	}
 }

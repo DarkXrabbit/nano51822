@@ -24,7 +24,6 @@
 #include <class/ble/ble_service.h>
 
 #define DEF_ADV_INTERVAL			1000	// 1000 Milliseconds
-#define DEF_ADV_INTERVAL_FAST		25		// 1000 Milliseconds
 
 #define DEF_ADV_TIMEOUT				0		// No Adv. timeout  (unit:second)
 #define MAX_ADV_UUID_COMPLETE_LIST	16
@@ -46,7 +45,7 @@ enum ADV_TYPE_T {
  */
 enum ADV_MODE_T {
 	ADV_MODE_NORMAL = 0,	// default
-	ADV_MODE_FAST,
+	ADV_MODE_PREV_NORMAL,
 	ADV_MODE_WHITELIST
 };
 
@@ -72,11 +71,6 @@ public:
 	 * @brief Set the advertising interval between 20ms to 10.24s. (for normal mode)
 	 */
 	void interval(uint16_t ms);
-
-	/**
-	 * @brief Set the advertising interval between 20ms to 10.24s. (for fast mode)
-	 */
-	void interval_fast(uint16_t ms);
 
 	/**
 	 * @brief Set advertising timeout between 0x0001 and 0x3FFF in seconds, 0x0000 disables the timeout.
@@ -159,6 +153,7 @@ public:
 	///@cond PRIVATE
 	//
 	bleAdvertising();
+	uint32_t				 m_last_err_code;
 protected:
 	ble_advdata_t			 m_adv_data;
 	int8_t					 m_tx_power_level;
@@ -166,8 +161,6 @@ protected:
 	uint8_t					 m_uuid_count;
 	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
-	uint16_t				 m_adv_interval;
-	uint16_t				 m_adv_interval_fast;
 	ADV_MODE_T				 m_adv_mode;
 	///@endcond
 };
