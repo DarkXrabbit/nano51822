@@ -27,7 +27,7 @@ extern "C" {
 //
 //	defined
 //
-#define DEFAULT_POOL_SIZE	(6300)
+#define DEFAULT_POOL_SIZE	(6000)
 
 #if __GNUC__				// GCC
 	#if __bool_true_false_are_defined==0

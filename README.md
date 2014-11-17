@@ -11,7 +11,7 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 v1.0.1 rc2 17th November 2014
 --------------------------------
 ###Details: 
-    1. Increase the heap memory.
+    1. Reduce the heap memory to 6000 bytes. 
     2. Insert the conn.negotiate() in main-loop to negotiate the "Conn Parameters Update".
     3. Remote gpioINT class.
     4. Add gpioSense class to provide 30 edge interrupts.
