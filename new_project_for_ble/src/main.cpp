@@ -106,6 +106,11 @@ int main(void) {
 	//
     while(1) {
     	//
+    	// Negotiate the "connection parameters update" in main-loop
+    	//
+    	conn.negotiate();
+
+    	//
     	// Your loop code here
     	//
 

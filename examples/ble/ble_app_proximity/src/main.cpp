@@ -99,8 +99,12 @@ int main(void) {
 	bleDevice ble;
 	ble.enable();	// enable BLE SoftDevice task
 
+	// Button
+	CPin btn(17);	// P0.17
+	btn.input();
+
 	// device manager
-	bleDeviceManager man(ble, true);
+	bleDeviceManager man(ble, (btn==LOW ? true : false));
 
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
@@ -163,12 +167,6 @@ int main(void) {
 	CAdc::init();
 	CAdc::source(VDD_1_3);	// to detect the VDD voltage
 	CAdc::enable();
-
-	//
-	// Button
-	//
-	CPin btn(17);	// P0.17
-	btn.input();
 
 	//
 	// LED

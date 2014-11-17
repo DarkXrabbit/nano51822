@@ -57,7 +57,6 @@ public:
 	/// @cond PRIVATE
 	//
 	virtual void on_ble_event(ble_evt_t * p_ble_evt) = PURE_VIRTUAL_FUNC;
-	virtual void on_ble_poll() { NOTHING }
 	bleService();
 	~bleService();
 protected:

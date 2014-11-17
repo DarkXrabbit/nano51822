@@ -173,9 +173,10 @@ protected:
 	virtual void on_ble_event(ble_evt_t * p_ble_evt);
 	virtual void on_connected(ble_evt_t * p_ble_evt);		// on connected
 	virtual void on_disconnected(ble_evt_t * p_ble_evt);	// on disconnect
-	virtual void on_write(ble_evt_t * p_ble_evt);			// on write event
+
+	virtual void on_write(ble_evt_t * p_ble_evt); 			// on write event
 	virtual void on_hvc(ble_evt_t * p_ble_evt);				// on handle value changed
-	virtual void on_send(ble_evt_t * p_ble_evt);			// on tx buffer empty
+	virtual void on_tx_complete(ble_evt_t * p_ble_evt);		// on tx complete
 	///@endcond
 };
 

@@ -35,7 +35,7 @@
 #include <class/power.h>
 
 // TODO: insert other definitions and declarations here
-#define APP_ADV_INTERVAL				 500							///< the advertising interval in millisecond.
+#define APP_ADV_INTERVAL				 1000							///< the advertising interval in millisecond.
 #define APP_ADV_DATA_LENGTH              0x15                           ///< Length of manufacturer specific data in the advertisement.
 #define APP_DEVICE_TYPE                  0x02                           ///< 0x02 refers to Beacon.
 #define APP_MEASURED_RSSI                ((uint8_t)-59)                 ///< The Beacon's measured RSSI at 1 meter distance in dBm.

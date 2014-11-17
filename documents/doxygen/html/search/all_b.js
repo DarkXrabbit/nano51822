@@ -1,6 +1,7 @@
 var searchData=
 [
   ['name_5ftype',['name_type',['../d0/d2c/classble_advertising.html#ab77f9940edde80f47e935c96e6638d6e',1,'bleAdvertising']]],
+  ['negotiate',['negotiate',['../d9/d8b/classble_conn_params.html#a2c5bf9de202f00528c343b5f9e29bfca',1,'bleConnParams']]],
   ['neither',['NEITHER',['../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa013572cb02b52b1022858df73a528a08',1,'pin.h']]],
   ['nrf_5flfclksrc_5frc_5f250_5fppm_5f1000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_1000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a9484e726bc97ad4865d3435ea62a4035',1,'ble_device.h']]],
   ['nrf_5flfclksrc_5frc_5f250_5fppm_5f2000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_2000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a614621ff67763ec5b4c189beedef33bc',1,'ble_device.h']]],

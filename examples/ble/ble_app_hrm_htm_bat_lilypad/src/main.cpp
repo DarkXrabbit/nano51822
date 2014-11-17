@@ -193,6 +193,10 @@ int main(void) {
 			}
     	}
 
-    	sleep(500);	// sleep to make more idle time for tickless.
+    	// Negotiate the "connection parameters update"
+    	conn.negotiate();
+
+    	// sleep to make more idle time for tickless.
+    	sleep(500);
     }
 }

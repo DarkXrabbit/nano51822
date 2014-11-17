@@ -16,7 +16,6 @@ var classgpio_sense =
     [ "read", "d0/d3c/classgpio_sense.html#a02060b0c9bbf0f75dead7bef1c75ce6b", null ],
     [ "release", "d0/d3c/classgpio_sense.html#ae0f0ee522de000fb3487bbc351c00972", null ],
     [ "toggle", "d0/d3c/classgpio_sense.html#a2000134208f704f1bf79082f518ef764", null ],
-    [ "wait", "d0/d3c/classgpio_sense.html#a5e4e43dacda5c8a1957383124f03eee7", null ],
-    [ "waitForAny", "d0/d3c/classgpio_sense.html#ae4b7960c41291a1ae09fd365b2a10dd3", null ],
+    [ "wait", "d0/d3c/classgpio_sense.html#a8dbbe3d0ce3b020c4a3a72a11cb7e06d", null ],
     [ "write", "d0/d3c/classgpio_sense.html#a1fc3486f4afea4de56ae677c20600551", null ]
 ];

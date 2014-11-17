@@ -179,5 +179,7 @@ int main(void) {
     		}
     	}
 
+    	// Negotiate the "connection parameters update"
+    	conn.negotiate();
     }
 }

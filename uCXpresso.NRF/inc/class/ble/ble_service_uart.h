@@ -78,11 +78,11 @@ protected:
 	uint32_t tx_char_add(uint16_t tx_char_uuid);
 
 	virtual void on_data_receive(uint8_t * data, uint16_t length);
-	virtual void on_ble_poll();
+	virtual uint16_t on_data_transmit();
 
 	virtual void on_disconnected(ble_evt_t * p_ble_evt);
 	virtual void on_write(ble_evt_t * p_ble_evt);
-	virtual inline void on_send(ble_evt_t * p_ble_evt) { onSend(true); }
+	virtual inline void on_tx_complete(ble_evt_t * p_ble_evt) { onSend(true); }
 	///@endcond
 };
 

@@ -24,6 +24,8 @@
 #include <class/ble/ble_service.h>
 
 #define DEF_ADV_INTERVAL			1000	// 1000 Milliseconds
+#define DEF_ADV_INTERVAL_FAST		25		// 1000 Milliseconds
+
 #define DEF_ADV_TIMEOUT				0		// No Adv. timeout  (unit:second)
 #define MAX_ADV_UUID_COMPLETE_LIST	16
 
@@ -36,6 +38,16 @@ enum ADV_TYPE_T {
 	ADV_TYPE_ADV_DIRECT_IND = 0x01,			///< Connectable directed.
 	ADV_TYPE_ADV_SCAN_IND   = 0x02,			///< Scannable undirected.
 	ADV_TYPE_ADV_NONCONN_IND= 0x03			///< Non connectable undirected.
+};
+
+/**
+ * @brief Advertising Mode
+ * @ingroup Enumerations
+ */
+enum ADV_MODE_T {
+	ADV_MODE_NORMAL = 0,	// default
+	ADV_MODE_FAST,
+	ADV_MODE_WHITELIST
 };
 
 /**@brief	BLE Advertising Class.
@@ -57,9 +69,14 @@ public:
 	void type(ADV_TYPE_T adv_type);
 
 	/**
-	 * @brief Set the advertising interval between 20ms to 10.24s.
+	 * @brief Set the advertising interval between 20ms to 10.24s. (for normal mode)
 	 */
 	void interval(uint16_t ms);
+
+	/**
+	 * @brief Set the advertising interval between 20ms to 10.24s. (for fast mode)
+	 */
+	void interval_fast(uint16_t ms);
 
 	/**
 	 * @brief Set advertising timeout between 0x0001 and 0x3FFF in seconds, 0x0000 disables the timeout.
@@ -125,6 +142,11 @@ public:
 	 */
 	void reset();
 
+	/**
+	 * @brief Advertising Mode
+	 */
+	void mode(ADV_MODE_T mode);
+
 	/**@brief Start the advertising
 	 */
 	virtual uint32_t start();
@@ -144,7 +166,9 @@ protected:
 	uint8_t					 m_uuid_count;
 	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
-friend class bleDevice;
+	uint16_t				 m_adv_interval;
+	uint16_t				 m_adv_interval_fast;
+	ADV_MODE_T				 m_adv_mode;
 	///@endcond
 };
 

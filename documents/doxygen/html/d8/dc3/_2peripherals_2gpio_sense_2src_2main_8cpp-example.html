@@ -139,6 +139,7 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="keyword">typedef</span> <span class="keyword">struct </span>{</div>
 <div class="line">    uint8_t sense_pin;</div>
+<div class="line">    <a class="code" href="../../db/dff/group___enumerations.html#ga25e7251025c00833f4f09f073c974f88">SENSE_T</a> trigger;</div>
 <div class="line">    uint8_t led_pin;</div>
 <div class="line">}SENSE_PARAM_T;</div>
 <div class="line"></div>
@@ -148,7 +149,7 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line"><span class="keywordtype">void</span> senseTask(<a name="_a0"></a><a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> *p_thread, xHandle p_param) {</div>
 <div class="line">    SENSE_PARAM_T *p_sense = (SENSE_PARAM_T *)  p_param;</div>
 <div class="line"></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d0/d3c/classgpio_sense.html">gpioSense</a> sense(p_sense-&gt;sense_pin);</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d0/d3c/classgpio_sense.html">gpioSense</a> sense(p_sense-&gt;sense_pin, p_sense-&gt;trigger);</div>
 <div class="line">    sense.enable();</div>
 <div class="line"></div>
 <div class="line">    <a name="_a2"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(p_sense-&gt;led_pin);</div>
@@ -180,16 +181,24 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="comment">// Your setup code here</span></div>
+<div class="line">    <span class="comment">// task 1</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t1 = {16, 18}; <span class="comment">// Sense=P0.16, LED=P0.18</span></div>
-<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t2 = {17, 19}; <span class="comment">// Sense=P0.17, LED=P0.19</span></div>
-<div class="line"></div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t1 = {16, <a name="a8"></a><a class="code" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66">FALLING</a>, 18};    <span class="comment">// task parameters, Sense=P0.16, LED=P0.18</span></div>
 <div class="line">    <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> t1(senseTask, (xHandle) &amp;sense_t1);</div>
-<div class="line">    t1.start(<span class="stringliteral">&quot;t1&quot;</span>, 64, <a name="a8"></a><a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b">PRI_HIGH</a>);</div>
+<div class="line">    t1.start(<span class="stringliteral">&quot;t1&quot;</span>, 62, <a name="a9"></a><a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5">PRI_HARDWARE</a>);</div>
 <div class="line"></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// task 2</span></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t2 = {17, <a name="a10"></a><a class="code" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7">TOGGLE</a>, 19};     <span class="comment">// task parameters, Sense=P0.17, LED=P0.19</span></div>
 <div class="line">    <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> t2(senseTask, (xHandle) &amp;sense_t2);</div>
-<div class="line">    t2.start(<span class="stringliteral">&quot;t2&quot;</span>, 64, <a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b">PRI_HIGH</a>);</div>
+<div class="line">    t2.start(<span class="stringliteral">&quot;t2&quot;</span>, 62, <a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5">PRI_HARDWARE</a>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// test pin</span></div>
+<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> test(15);</div>
+<div class="line">    test.output();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
@@ -198,7 +207,7 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Your loop code here</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        NOTHING</div>
+<div class="line">        test.toggle();  <span class="comment">// Use wire to connect the test pin to sense pin for test.</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -206,7 +215,7 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Nov 15 2014 20:58:03 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Nov 17 2014 14:08:09 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -29,6 +29,7 @@
 #include <class/ble/ble_device.h>
 #include <class/ble/ble_service_hrm.h>
 #include <class/ble/ble_service_htm.h>
+#include <class/ble/ble_conn_params.h>
 #include <class/power.h>
 #include <class/pin.h>
 #include <class/thread.h>
@@ -81,6 +82,11 @@ int main(void) {
 	// Declare a HTM service object
 	//
 	bleServiceHTM htm(ble);
+
+	//
+	// Connection Parameters Update negotiation
+	//
+	bleConnParams conn(ble);
 
 	//
 	// update ADVERTISING contents
@@ -158,5 +164,7 @@ int main(void) {
     		}
     	}
 
+    	// Negotiate the "connection parameters update"
+    	conn.negotiate();
     }
 }

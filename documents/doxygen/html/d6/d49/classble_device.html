@@ -110,7 +110,6 @@ $(document).ready(function(){initNavTree('d6/d49/classble_device.html','../../')
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
-<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d5/d61/classble_device-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleDevice Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -128,9 +127,7 @@ Inheritance diagram for bleDevice:</div>
   <img src="../../d6/d49/classble_device.png" usemap="#bleDevice_map" alt=""/>
   <map id="bleDevice_map" name="bleDevice_map">
 <area href="../../d2/dc4/classble_base.html" title="The bleBase class is an empty base class. " alt="bleBase" shape="rect" coords="0,56,69,80"/>
-<area href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. " alt="CThread" shape="rect" coords="79,56,148,80"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,69,24"/>
-<area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="79,0,148,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -139,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4bf797390297ed590496b35215ad2688"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688">bleDevice</a> ()</td></tr>
 <tr class="memdesc:a4bf797390297ed590496b35215ad2688"><td class="mdescLeft">&#160;</td><td class="mdescRight">BLE softdevice constructor.  <a href="#a4bf797390297ed590496b35215ad2688">More...</a><br /></td></tr>
 <tr class="separator:a4bf797390297ed590496b35215ad2688"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00186ee9ef07d7e45525f900e7671bf1"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1">enable</a> (uint32_t stack=96)</td></tr>
-<tr class="memdesc:a00186ee9ef07d7e45525f900e7671bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE stack (device).  <a href="#a00186ee9ef07d7e45525f900e7671bf1">More...</a><br /></td></tr>
-<tr class="separator:a00186ee9ef07d7e45525f900e7671bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f96f5963ce1e317264a2059553b15fb"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a0f96f5963ce1e317264a2059553b15fb">enable</a> (uint32_t stack=DEF_BLE_DEVICE_STACK_SIZE)</td></tr>
+<tr class="memdesc:a0f96f5963ce1e317264a2059553b15fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable the BLE SoftDevice driver.  <a href="#a0f96f5963ce1e317264a2059553b15fb">More...</a><br /></td></tr>
+<tr class="separator:a0f96f5963ce1e317264a2059553b15fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06a3a42710cc86472c92583a6d608e9"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
 <tr class="memdesc:aa06a3a42710cc86472c92583a6d608e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for connected.  <a href="#aa06a3a42710cc86472c92583a6d608e9">More...</a><br /></td></tr>
 <tr class="separator:aa06a3a42710cc86472c92583a6d608e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -164,30 +161,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
 <tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ebabcc071634508511ae2fc7b868ab7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a3ebabcc071634508511ae2fc7b868ab7">start</a> (const char *name, int stack=DEF_THREAD_STACK, <a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a> priority=<a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402">PRI_LOW</a>)</td></tr>
-<tr class="separator:a3ebabcc071634508511ae2fc7b868ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aacf955d1852e74da1f989251955ee6ec"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aacf955d1852e74da1f989251955ee6ec">start</a> ()</td></tr>
-<tr class="separator:aacf955d1852e74da1f989251955ee6ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac8c53aa8c145fc4ac70fa6d825b95742"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#ac8c53aa8c145fc4ac70fa6d825b95742">resume</a> ()</td></tr>
-<tr class="separator:ac8c53aa8c145fc4ac70fa6d825b95742"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a53e71e6db2221cd1c45aec21953d4aad"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a53e71e6db2221cd1c45aec21953d4aad">suspend</a> ()</td></tr>
-<tr class="separator:a53e71e6db2221cd1c45aec21953d4aad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0227eda51725b795a461a768703f588"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#ac0227eda51725b795a461a768703f588">getStackHighWaterMark</a> ()</td></tr>
-<tr class="separator:ac0227eda51725b795a461a768703f588"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51dbe9909ce528b4113d2cc27314e965"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a51dbe9909ce528b4113d2cc27314e965">isSuspend</a> ()</td></tr>
-<tr class="separator:a51dbe9909ce528b4113d2cc27314e965"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e9cce461d8dfb3889cea24f1a703f6f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dff/group___enumerations.html#ga25ee4013cc565a18ac2f4039b4ad441b">TASK_STATE_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a1e9cce461d8dfb3889cea24f1a703f6f">getState</a> ()</td></tr>
-<tr class="separator:a1e9cce461d8dfb3889cea24f1a703f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6b0703ae0cc085a0c0aaa55b6945575b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a6b0703ae0cc085a0c0aaa55b6945575b">setPriority</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a> p)</td></tr>
-<tr class="separator:a6b0703ae0cc085a0c0aaa55b6945575b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac30b0a1f51549a97b88771692319c0e4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#ac30b0a1f51549a97b88771692319c0e4">getPriority</a> ()</td></tr>
-<tr class="separator:ac30b0a1f51549a97b88771692319c0e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa291909bc3ff7cc0decf46c885a7a725"><td class="memItemLeft" align="right" valign="top">LPCTSTR&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aa291909bc3ff7cc0decf46c885a7a725">getName</a> ()</td></tr>
-<tr class="separator:aa291909bc3ff7cc0decf46c885a7a725"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4a0f0727be4714cef1e24150a869d403"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a> ()</td></tr>
-<tr class="separator:a4a0f0727be4714cef1e24150a869d403"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2513fd0fcad30e2e6605609c91f1984"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">isThread</a> ()</td></tr>
-<tr class="separator:ab2513fd0fcad30e2e6605609c91f1984"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -203,17 +176,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a8754a9e9579f2e4e0e1428795c4bf3"><td class="memItemLeft" align="right" valign="top">static uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3">address</a> ()</td></tr>
 <tr class="memdesc:a9a8754a9e9579f2e4e0e1428795c4bf3"><td class="mdescLeft">&#160;</td><td class="mdescRight">48bits (6 bytes) device address;  <a href="#a9a8754a9e9579f2e4e0e1428795c4bf3">More...</a><br /></td></tr>
 <tr class="separator:a9a8754a9e9579f2e4e0e1428795c4bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a743d4325b7e7da494283f3292773ff77"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a743d4325b7e7da494283f3292773ff77">resumeAll</a> ()</td></tr>
-<tr class="separator:a743d4325b7e7da494283f3292773ff77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c09328581bd4e4a3e9e793f3376a92a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a">suspendAll</a> ()</td></tr>
-<tr class="separator:a2c09328581bd4e4a3e9e793f3376a92a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb4cafe42d6cfc41294cf5dedcee8678"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678">enterCriticalSection</a> ()</td></tr>
-<tr class="separator:aeb4cafe42d6cfc41294cf5dedcee8678"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab3a51062666552690be49b8e8027161"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161">exitCriticalSection</a> ()</td></tr>
-<tr class="separator:aab3a51062666552690be49b8e8027161"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb4293936653ccb14dfdfbd17bed88d0"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0">count</a> ()</td></tr>
-<tr class="memdesc:abb4293936653ccb14dfdfbd17bed88d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the number of tasks in processor.  <a href="#abb4293936653ccb14dfdfbd17bed88d0">More...</a><br /></td></tr>
-<tr class="separator:abb4293936653ccb14dfdfbd17bed88d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -223,11 +185,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a622dd38b5243c6204d5adf28dac971b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a></td></tr>
 <tr class="memdesc:a622dd38b5243c6204d5adf28dac971b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP member object. <a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a> class.  <a href="#a622dd38b5243c6204d5adf28dac971b9">More...</a><br /></td></tr>
 <tr class="separator:a622dd38b5243c6204d5adf28dac971b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
-Protected Member Functions</h2></td></tr>
-<tr class="memitem:a071c3d3b3c19a7bd6a01aca073a9b4d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run</a> ()</td></tr>
-<tr class="separator:a071c3d3b3c19a7bd6a01aca073a9b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Class (SoftDevice). </p>
@@ -277,32 +234,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abb4293936653ccb14dfdfbd17bed88d0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static uint16_t CThread::count </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>get the number of tasks in processor. </p>
-
-</div>
-</div>
-<a class="anchor" id="a00186ee9ef07d7e45525f900e7671bf1"></a>
+<a class="anchor" id="a0f96f5963ce1e317264a2059553b15fb"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -310,167 +242,16 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">uint32_t bleDevice::enable </td>
           <td>(</td>
           <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>stack</em> = <code>96</code></td><td>)</td>
+          <td class="paramname"><em>stack</em> = <code>DEF_BLE_DEVICE_STACK_SIZE</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enable the BLE stack (device). </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">clearAllBoundedCentrals</td><td>Set to true in case the module should clear all persistent data. </td></tr>
-    <tr><td class="paramname">stack</td><td>Set the stack size for the BLE device task.</td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Enable the BLE SoftDevice driver. </p>
 <dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS BLE stack has been enabled successfully </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a5">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a11">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a12">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a5">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a4">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a5">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a5">/peripherals/i2c_scanner/src/main.cpp</a>.</dd>
 </dl>
-</div>
-</div>
-<a class="anchor" id="aeb4cafe42d6cfc41294cf5dedcee8678"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CThread::enterCriticalSection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678">CThread::enterCriticalSection()</a> to disable interrupts. </p>
-
-</div>
-</div>
-<a class="anchor" id="aab3a51062666552690be49b8e8027161"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CThread::exitCriticalSection </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161">CThread::exitCriticalSection()</a> to enable interrupts. </p>
-
-</div>
-</div>
-<a class="anchor" id="aa291909bc3ff7cc0decf46c885a7a725"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">LPCTSTR CThread::getName </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to retrieve the task's name. </p>
-
-</div>
-</div>
-<a class="anchor" id="ac30b0a1f51549a97b88771692319c0e4"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual <a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a> CThread::getPriority </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to get the task's priority. </p><dl class="section return"><dt>Returns</dt><dd>PRIORITIES_T </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ac0227eda51725b795a461a768703f588"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">uint32_t CThread::getStackHighWaterMark </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to check the stack high water mark. </p><dl class="section note"><dt>Note</dt><dd>Or use the shell and type 'task' to check all tasks status. </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a1e9cce461d8dfb3889cea24f1a703f6f"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/dff/group___enumerations.html#ga25ee4013cc565a18ac2f4039b4ad441b">TASK_STATE_T</a> CThread::getState </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Retrieve the state of thread object (task) </p>
-
 </div>
 </div>
 <a class="anchor" id="a80b4406fee2c94fb4112f7af91085230"></a>
@@ -595,31 +376,6 @@ Protected Member Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a4a0f0727be4714cef1e24150a869d403"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CThread::isAlive </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>isAlive is to check the thread is in alive (for run-loop) </p><dl class="section return"><dt>Returns</dt><dd>false if the thread is deleted. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html#a3">/peripherals/gpio_sense/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a4">/rtos/blink/src/main.cpp</a>.</dd>
-</dl>
-</div>
-</div>
 <a class="anchor" id="ad2587dc8be9c4e01e51b852c82ff07f1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -647,30 +403,6 @@ Protected Member Functions</h2></td></tr>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a51dbe9909ce528b4113d2cc27314e965"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CThread::isSuspend </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to check the task is in suspended or not. </p><dl class="section return"><dt>Returns</dt><dd>true if task in suspended. otherwise, the task in running. </dd></dl>
-
-</div>
-</div>
 <a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -694,32 +426,6 @@ Protected Member Functions</h2></td></tr>
 <p>Check current object that inherits from <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> class or not. </p><dl class="section note"><dt>Note</dt><dd>The isTherad() will be override by <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">CThread</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="ab2513fd0fcad30e2e6605609c91f1984"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CThread::isThread </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p><a class="el" href="../../d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984">isThread()</a>, check the class is inherited from <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> </p>
-
-<p>Reimplemented from <a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">CObject</a>.</p>
 
 </div>
 </div>
@@ -851,114 +557,6 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ac8c53aa8c145fc4ac70fa6d825b95742"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CThread::resume </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to resume the thread.</p>
-<div class="fragment"><div class="line">Example:</div>
-<div class="line">    <span class="keywordtype">int</span> main() {</div>
-<div class="line">        ...</div>
-<div class="line">        CLedTask ledTask;</div>
-<div class="line">        ledTask.start(<span class="stringliteral">&quot;led&quot;</span>);</div>
-<div class="line">        ...</div>
-<div class="line">        ledTask.suspend();      <span class="comment">// suspend the ledTask</span></div>
-<div class="line">        ...</div>
-<div class="line">        <span class="keywordflow">if</span> ( ledTask.isSuspend() ) {</div>
-<div class="line">            ledTask.resume();   <span class="comment">// resume the ledTask</span></div>
-<div class="line">        }</div>
-<div class="line">        ...</div>
-<div class="line">    }</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="a743d4325b7e7da494283f3292773ff77"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CThread::resumeAll </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#a743d4325b7e7da494283f3292773ff77">CThread::resumeAll()</a> to resume all suspended tasks. </p>
-
-</div>
-</div>
-<a class="anchor" id="a071c3d3b3c19a7bd6a01aca073a9b4d7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CThread::run </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The run member function is the task main procedure, and callback by RTOS when task start.</p>
-<div class="fragment"><div class="line">Example:</div>
-<div class="line">        <span class="keyword">class </span>CLedTask: <span class="keyword">public</span> <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> {</div>
-<div class="line">        <span class="keyword">protected</span>:</div>
-<div class="line">            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run</a>() {</div>
-<div class="line">                <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED2);</div>
-<div class="line">                <span class="keywordflow">while</span>( <a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>() ) {    <span class="comment">// check thread alive</span></div>
-<div class="line">                    led = !led;</div>
-<div class="line">                    sleep(200);</div>
-<div class="line">                }</div>
-<div class="line">            }</div>
-<div class="line">        };</div>
-<div class="line"></div>
-<div class="line">        <span class="keywordtype">int</span> main() {</div>
-<div class="line">            ...</div>
-<div class="line">            CLedTask ledTask;</div>
-<div class="line">            ledTask.start(<span class="stringliteral">&quot;led&quot;</span>);   <span class="comment">// default stack=128, default priority=low</span></div>
-<div class="line">            ...</div>
-<div class="line">        }</div>
-</div><!-- fragment --> <dl class="section remark"><dt>Remarks</dt><dd>The <a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run()</a> is a pure virtual function, must implement by inheritor. </dd></dl>
-<dl class="section note"><dt>Note</dt><dd>if end the <a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run()</a> member function, the <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> object will be destroyed and collected. </dd></dl>
-
-<p>Reimplemented in <a class="el" href="../../d4/d37/class_c_debug.html#a9a3e40cc8ee5d0c2a41577f658779c71">CDebug</a>, and <a class="el" href="../../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f">CShell</a>.</p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a1">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a1">/rtos/blink/src/main.cpp</a>.</dd>
-</dl>
-</div>
-</div>
 <a class="anchor" id="a227676cfdadbc8bd4b3c55c5b82a5dd8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1004,190 +602,6 @@ Protected Member Functions</h2></td></tr>
 NRF_ERROR_INVALID_ADDR Invalid pointer supplied. </dd>
 <dd>
 NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnection procedure). </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a6b0703ae0cc085a0c0aaa55b6945575b"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CThread::setPriority </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a>&#160;</td>
-          <td class="paramname"><em>p</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to change the task's priority. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">p</td><td>is PRIORITIES_T to set a new priority for the task. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a3ebabcc071634508511ae2fc7b868ab7"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CThread::start </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>name</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>stack</em> = <code>DEF_THREAD_STACK</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a>&#160;</td>
-          <td class="paramname"><em>priority</em> = <code><a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402">PRI_LOW</a></code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to start the thread. </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">name</td><td>is a descriptive name for the task. </td></tr>
-    <tr><td class="paramname">stack</td><td>is a integer value to specified as the number of stack can hold-not the number of bytes. </td></tr>
-    <tr><td class="paramname">priority</td><td>at which the task should run. </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>true if successful; otherwise, crate task failed.</dd></dl>
-<div class="fragment"><div class="line">Example:</div>
-<div class="line">        <span class="keyword">class </span>CLedTask: <span class="keyword">public</span> <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> {</div>
-<div class="line">        <span class="keyword">protected</span>:</div>
-<div class="line">            <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run</a>() {</div>
-<div class="line">                <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED2);</div>
-<div class="line">                <span class="keywordflow">while</span>( <a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>() ) {    <span class="comment">// Is thread in alive?  (when thread be kill, the isAlive will return false)</span></div>
-<div class="line">                    led = !led;</div>
-<div class="line">                    sleep(200);</div>
-<div class="line">                }</div>
-<div class="line">            }</div>
-<div class="line">        };</div>
-<div class="line"></div>
-<div class="line">        <span class="keywordtype">int</span> main() {</div>
-<div class="line">            ...</div>
-<div class="line">            CLedTask ledTask;</div>
-<div class="line">            ledTask.start(<span class="stringliteral">&quot;led&quot;</span>);   <span class="comment">// default stack=128, default priority=low</span></div>
-<div class="line">            ...</div>
-<div class="line">        }</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="aacf955d1852e74da1f989251955ee6ec"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual bool CThread::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to start the thread. </p><dl class="section note"><dt>Note</dt><dd>the <a class="el" href="../../d0/d26/class_c_thread.html#aacf955d1852e74da1f989251955ee6ec">start()</a> is an overload member function of <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a>. </dd></dl>
-
-<p>Reimplemented in <a class="el" href="../../de/dba/class_c_shell.html#a670f66f552494dfce94ee297ae0f659a">CShell</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a53e71e6db2221cd1c45aec21953d4aad"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void CThread::suspend </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the member function to suspend the thread.</p>
-<div class="fragment"><div class="line">Example:</div>
-<div class="line">    <span class="keywordtype">int</span> main() {</div>
-<div class="line">        ...</div>
-<div class="line">        CLedTask ledTask;</div>
-<div class="line">        ledTask.start(<span class="stringliteral">&quot;led&quot;</span>);</div>
-<div class="line">        ...</div>
-<div class="line">        ledTask.suspend();      <span class="comment">// suspend the ledTask</span></div>
-<div class="line">        ...</div>
-<div class="line">        <span class="keywordflow">if</span> ( ledTask.isSuspend() ) {</div>
-<div class="line">            ledTask.resume();   <span class="comment">// resume the ledTask</span></div>
-<div class="line">        }</div>
-<div class="line">        ...</div>
-<div class="line">    }</div>
-</div><!-- fragment --> 
-</div>
-</div>
-<a class="anchor" id="a2c09328581bd4e4a3e9e793f3376a92a"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void CThread::suspendAll </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a">CThread::suspendAll()</a> to suspend all running tasks. </p>
 
 </div>
 </div>
@@ -1237,7 +651,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 </div><div class="memdoc">
 
 <p>An advertising member object. <a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a> class. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a14">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a22">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a12">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a10">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a12">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a14">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a23">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a12">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a10">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a12">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1252,7 +666,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 </div><div class="memdoc">
 
 <p>GAP member object. <a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a> class. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a6">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a12">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a14">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a6">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a5">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a6">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a6">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a12">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a15">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a6">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a5">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a6">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1262,7 +676,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Sat Nov 15 2014 20:58:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Nov 17 2014 14:08:10 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

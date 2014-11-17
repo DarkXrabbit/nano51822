@@ -214,6 +214,8 @@ int main(void) {
 				cmd.input(ch);
 			}
 
+			// Negotiate the "Connect Parameters Update"
+			conn.negotiate();
 		} else {
 			//
 			// alternate led when disconnected (idle)

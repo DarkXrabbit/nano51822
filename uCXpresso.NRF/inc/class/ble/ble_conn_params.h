@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_conn_params.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/11/1
+ Version     : v1.0.1
+ Date		 : 2014/11/17
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : Module for initiating and executing a connection parameters
  	 	 	   negotiation procedure.
@@ -13,6 +13,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/11/1	v1.0.0	First Edition									Jason
+ 2014/11/17 v1.0.1	Use negotiate() to replace teh on_ble_poll()	Jason
  ===============================================================================
  */
 
@@ -51,6 +52,7 @@ typedef enum
  */
 class bleConnParams: public bleService {
 public:
+
 	/**@brief Construct the Connection Parameters module.
 	 *
 	 * @note If the negotiation procedure should be triggered when notification/indication of
@@ -69,6 +71,10 @@ public:
 				  uint16_t max_update_count 	= MAX_CONN_PARAMS_UPDATE_COUNT,
 				  bool	   disconnect_on_fail	= false,
 				  uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID);
+	/**
+	 * @brief Negotiate the "Connection Parameters Update" in main loop.
+	 */
+	void negotiate();
 
 	/**
 	 * @brief Function for changing the current connection parameters to a new set.
@@ -111,7 +117,6 @@ public:
 protected:
 	CTimeout	m_tmCP;
 	virtual void on_ble_event(ble_evt_t *p_ble_evt);
-	virtual void on_ble_poll();
 	///@endcond
 };
 

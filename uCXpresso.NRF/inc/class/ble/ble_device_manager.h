@@ -22,7 +22,7 @@
 /**
  * @brief Redefine the BLE SoftDevice Task stack size for the Device Manager module.
  */
-#define DEF_BLE_DEVICE_STACK_SIZE 96
+#define DEF_BLE_DEVICE_STACK_SIZE 300
 
 #include <class/ble/ble_device.h>
 #include <class/timeout.h>
@@ -67,6 +67,11 @@ public:
 	 * @return true if link is secured.
 	 */
 	bool isLinkSecured();
+
+	/**
+	 * @brief Retrieve the bond white-list
+	 */
+	uint32_t whitelist_create(ble_gap_whitelist_t *whitelist);
 
 	//
 	///@cond Private

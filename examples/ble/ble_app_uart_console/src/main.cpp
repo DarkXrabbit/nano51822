@@ -117,5 +117,8 @@ int main(void) {
     		tm.reset();
     		led0 = !led0;	// blink led
     	}
+
+    	// Negotiate the "Connection Parameters Update".
+    	conn.negotiate();
     }
 }

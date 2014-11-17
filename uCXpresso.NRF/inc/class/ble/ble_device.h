@@ -2,7 +2,7 @@
  ===============================================================================
  Name        : ble_device.h
  Author      : uCXpresso
- Version     : v1.0.3
+ Version     : v1.0.4
  Date		 : 2014/11/7
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE SoftDevice driver (S110) class
@@ -16,13 +16,13 @@
  	 	 	 	 	Information Service".
  2014/11/3	v1.0.2	Add address() member to retrieve the BLE addr.	Jason
  2014/11/7	v1.0.3	Add wait() member to wait for connected.		Jason
+ 2014/11/17 v1.0.4  Remote thread feature.							Jason
  ===============================================================================
  */
 
 #ifndef BLE_DEVICE_H_
 #define BLE_DEVICE_H_
 
-#include <class/thread.h>
 #include <class/semaphore.h>
 #include <class/peripheral.h>
 #include <class/list.h>
@@ -76,7 +76,7 @@ typedef enum
  *
  * @ingroup Bluetooth
  */
-class bleDevice : public bleBase, public CThread{
+class bleDevice : public bleBase{
 public:
 	/**
 	 * @brief Static function, to initialize the SoftDevice driver.
@@ -94,10 +94,8 @@ public:
 	 */
 	bleDevice();
 
-	/**@brief Enable the BLE stack (device).
-	 *
-	 * @param clearAllBoundedCentrals Set to true in case the module should clear all persistent data.
-	 * @param stack Set the stack size for the BLE device task.
+	/**
+	 * @brief Enable the BLE SoftDevice driver.
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
@@ -197,7 +195,6 @@ public:
 	void on_ble_event(ble_evt_t * p_ble_evt);
 	void on_sys_event(uint32_t event);
 
-	ble_evt_t 	*m_p_ble_evt;
 	uint16_t    m_conn_handle;
 	ble_gap_evt_auth_status_t m_auth_status;
 	ble_gap_sec_params_t	  m_sec_params;
@@ -215,12 +212,7 @@ protected:
 	void add_service(bleService *service);
 	void del_service(bleService *service);
 	void services_evt(ble_evt_t * p_ble_evt);
-	void services_poll();
 
-	//
-	// Implement CThread::run()
-	//
-	virtual void run();
 //
 // friend class for BLE services
 //

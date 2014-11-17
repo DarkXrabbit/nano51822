@@ -11,6 +11,7 @@ var searchData=
   ['internal_5fpull_5fdown',['INTERNAL_PULL_DOWN',['../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa1d483952a85ba6abceffda2c06623326',1,'pin.h']]],
   ['internal_5fpull_5fup',['INTERNAL_PULL_UP',['../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa781a7f23ae9b0dbdc6edfdcfd3be75df',1,'pin.h']]],
   ['interval',['interval',['../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca',1,'bleAdvertising']]],
+  ['interval_5ffast',['interval_fast',['../d0/d2c/classble_advertising.html#a650f9fad0a2d399200fa454f86b4fc54',1,'bleAdvertising']]],
   ['invert',['invert',['../d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5',1,'CPin']]],
   ['is_5fauto_5fcalibration_5fin_5fprogress',['is_auto_calibration_in_progress',['../d7/d93/classble_service_c_s_c.html#aa236dc019b0d6bce15b956661bcd82e8',1,'bleServiceCSC']]],
   ['isalive',['isAlive',['../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403',1,'CThread']]],

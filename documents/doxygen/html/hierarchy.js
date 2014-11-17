@@ -58,7 +58,6 @@ var hierarchy =
         [ "CSerial", "d8/d1d/class_c_serial.html", null ]
       ] ],
       [ "CThread", "d0/d26/class_c_thread.html", [
-        [ "bleDevice", "d6/d49/classble_device.html", null ],
         [ "CDebug", "d4/d37/class_c_debug.html", null ],
         [ "CShell", "de/dba/class_c_shell.html", null ]
       ] ],

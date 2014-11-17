@@ -135,6 +135,10 @@ int main(void) {
 			}
 		}
 
-		sleep(1000);	// give more idle time for sleep
+		// Negotiate the "Connect Parameters Update"
+		conn.negotiate();
+
+		// give more idle time for sleep
+		sleep(1000);
     }
 }

@@ -31,6 +31,7 @@
 
 #include <class/adc.h>
 #include <class/ble/ble_service_bat.h>
+#include <class/ble/ble_conn_params.h>
 #include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
@@ -73,6 +74,11 @@ int main(void) {
 	// Add BLE Service
 	//
 	bleServiceBattery bat(ble);
+
+	//
+	// Connection Parameters Update negotiation
+	//
+	bleConnParams conn(ble);
 
 	//
 	// BLE Advertising
@@ -125,6 +131,9 @@ int main(void) {
     			}
     		}
     	} else led1 = LED_OFF;
+
+    	// Negotiate the "connection parameters update"
+    	conn.negotiate();
 
     	//
     	// blink LED

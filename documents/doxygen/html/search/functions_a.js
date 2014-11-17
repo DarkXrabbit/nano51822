@@ -6,5 +6,5 @@ var searchData=
   ['manuf_5fspecific_5fdata',['manuf_specific_data',['../d0/d2c/classble_advertising.html#af1f8b6ffbfa395f75edea27e35210838',1,'bleAdvertising']]],
   ['mid',['mid',['../df/d99/class_c_string.html#aae1e4a3db1f724363a300d706eae78b8',1,'CString']]],
   ['millisecond',['millisecond',['../db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df',1,'CTimer']]],
-  ['mode',['mode',['../da/dc3/classspi_master.html#a586ffffb5df2911e9dedd4a2d47052d0',1,'spiMaster::mode()'],['../da/d31/classspi_slave.html#a601df989a52b39c6c39aa48f09423688',1,'spiSlave::mode()']]]
+  ['mode',['mode',['../d0/d2c/classble_advertising.html#a9fa1c06da200b3990c137229a63e97cc',1,'bleAdvertising::mode()'],['../da/dc3/classspi_master.html#a586ffffb5df2911e9dedd4a2d47052d0',1,'spiMaster::mode()'],['../da/d31/classspi_slave.html#a601df989a52b39c6c39aa48f09423688',1,'spiSlave::mode()']]]
 ];

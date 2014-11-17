@@ -195,7 +195,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">    <span class="comment">// Declare SoftDevice Object</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a10"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;</div>
-<div class="line">    ble.<a name="a11"></a><a class="code" href="../../d6/d49/classble_device.html#a00186ee9ef07d7e45525f900e7671bf1">enable</a>();                       <span class="comment">// enable BLE stack</span></div>
+<div class="line">    ble.<a name="a11"></a><a class="code" href="../../d6/d49/classble_device.html#a0f96f5963ce1e317264a2059553b15fb">enable</a>();                       <span class="comment">// enable BLE stack</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
 <div class="line">    ble.<a name="a12"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a13"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece">settings</a>(DEVICE_NAME);    <span class="comment">// set Device Name on GAP</span></div>
@@ -297,7 +297,11 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
-<div class="line">        sleep(500); <span class="comment">// sleep to make more idle time for tickless.</span></div>
+<div class="line">        <span class="comment">// Negotiate the &quot;connection parameters update&quot;</span></div>
+<div class="line">        conn.negotiate();</div>
+<div class="line"></div>
+<div class="line">        <span class="comment">// sleep to make more idle time for tickless.</span></div>
+<div class="line">        sleep(500);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -305,7 +309,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Nov 15 2014 20:58:03 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Nov 17 2014 14:08:09 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
