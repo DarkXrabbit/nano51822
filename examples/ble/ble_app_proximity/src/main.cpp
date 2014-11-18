@@ -164,6 +164,11 @@ int main(void) {
 	CAdc::enable();
 
 	//
+	// Enable Tickless Technology
+	//
+	CPowerSave::tickless(true);
+
+	//
 	// LED
 	//
 	ledLeft.output();
