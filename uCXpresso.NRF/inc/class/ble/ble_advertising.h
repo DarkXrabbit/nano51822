@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_advertising.h
  Author      : uCXpresso
- Version     : v1.0.1
- Date		 : 2014/11/13
+ Version     : v1.0.2
+ Date		 : 2014/11/18
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -13,6 +13,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/8/1	v1.0.0	First Edition for nano51822						Jason
  2014/11/13 v1.0.1	Add type() member to indicate the ADV. type.	Jason
+ 2014/11/18 v1.0.2	Support white-list for Device Manager module.	Jason
  ===============================================================================
  */
 
@@ -40,13 +41,15 @@ enum ADV_TYPE_T {
 };
 
 /**
- * @brief Advertising Mode
+ * @brief Advertising Start Mode
  * @ingroup Enumerations
  */
-enum ADV_MODE_T {
+enum ADV_START_MODE_T {
 	ADV_MODE_NORMAL = 0,	// default
 	ADV_MODE_PREV_NORMAL,
-	ADV_MODE_WHITELIST
+	ADV_MODE_FAST,
+	ADV_MODE_WHITELIST,
+	ADV_MODE_NO_ADV			// for bond connection
 };
 
 /**@brief	BLE Advertising Class.
@@ -89,9 +92,9 @@ public:
 	void flag(uint8_t val);
 
 	/**
-	 * @brief multiple advertising flags.
+	 * masked, replace by flag() member.
 	 */
-	void flags(const uint8_t *data, uint16_t size);
+	//void flags(const uint8_t *data, uint16_t size);
 
 	/**
 	 * @brief Set the Company Identifier Code
@@ -127,33 +130,36 @@ public:
 	 */
 	uint32_t appearance(uint16_t value);
 
-	/**@brief Update the all fields into Advertising
-	 *
+	/**
+	 * @brief Update the all fields into Advertising
+	 * @param flags Set the advertising flags. @ref BLE_GAP_ADV_FLAGS
 	 */
-	uint32_t update();
+	uint32_t update(uint8_t flags=0);
 
 	/**@brief Reset the all fields
 	 */
 	void reset();
 
 	/**
-	 * @brief Advertising Mode
+	 * @brief Set the advertising start mode
+	 * @param mode The start @ref ADV_START_MODE_T.
 	 */
-	void mode(ADV_MODE_T mode);
+	void mode(ADV_START_MODE_T mode);	// set start mode
 
-	/**@brief Start the advertising
+	/**
+	 * @brief Start the advertising
 	 */
 	virtual uint32_t start();
 
-	/**@brief Stop the advertising
+	/**
+	 * @brief Stop the advertising
 	 */
 	virtual uint32_t stop();
 
 	//
-	///@cond PRIVATE
+	///@cond PRIVATE (internal used)
 	//
 	bleAdvertising();
-	uint32_t				 m_last_err_code;
 protected:
 	ble_advdata_t			 m_adv_data;
 	int8_t					 m_tx_power_level;
@@ -161,7 +167,8 @@ protected:
 	uint8_t					 m_uuid_count;
 	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
-	ADV_MODE_T				 m_adv_mode;
+	uint16_t				 m_adv_interval;
+	ADV_START_MODE_T		 m_adv_start_mode;
 	///@endcond
 };
 

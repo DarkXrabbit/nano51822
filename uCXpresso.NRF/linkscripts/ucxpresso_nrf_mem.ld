@@ -1,6 +1,5 @@
 /*
  * GENERATED FILE - DO NOT EDIT
- * (c) Code Red Technologies Ltd, 2008-2014
  * Linker script memory definitions
  * Created from LinkMemoryTemplate
  * By LPCXpresso v7.2.0 [Build 153] [2014-05-19]  on Sun Jul 20 16:58:20 CST 2014)

@@ -1,17 +1,16 @@
 /*
 ===============================================================================
- Name        : main.c
- Author      :
+ Name        : ble_app_proximity
+ Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
- License	 :
- Description :
+ Description : BLE Proximity Service Demo
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
-
+ 2014/11/18 v1.0.0	First Edition.									Leo
  ===============================================================================
  */
 
@@ -45,8 +44,8 @@
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
-#define BOARD_PCA10001
-//#define BOARD_LILYPAD
+//#define BOARD_PCA10001
+#define BOARD_LILYPAD
 #include <config/board.h>
 
 CPin ledLeft(LED_PIN_0);
@@ -69,15 +68,10 @@ public:
 		switch(level) {
 		case ALERT_LEVEL_NO_ALERT:
 			ledLeft = LED_OFF;
-			ledRight = LED_OFF;
 			break;
 		case ALERT_LEVEL_MILD_ALERT:
-			ledLeft = LED_ON;
-			ledRight = LED_OFF;
-			break;
 		case ALERT_LEVEL_HIGH_ALERT:
-			ledLeft = LED_OFF;
-			ledRight = LED_ON;
+			ledLeft = LED_ON;
 			break;
 		}
 	}
@@ -148,10 +142,11 @@ int main(void) {
 
 	// Optional: Appearance who you are
 	ble.m_advertising.appearance(BLE_APPEARANCE_GENERIC_KEYRING);
-//	ble.m_advertising.flag(BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE);
+	ble.m_advertising.flag(BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE);
 	ble.m_advertising.update();										// update advertisement data
 
 	// Start advertising
+	ble.m_advertising.mode(ADV_MODE_NO_ADV);
 	ble.m_advertising.start();
 
 	//
@@ -173,9 +168,6 @@ int main(void) {
 	//
 	ledLeft.output();
 	ledRight.output();
-
-	CPin led(20);
-	led.output();
 
 #ifndef DEBUG
 	CPowerSave::tickless(true);
@@ -215,13 +207,15 @@ int main(void) {
     	}
 
     	//
-    	// Connection Status (LED)
+    	// Blink LED
     	//
+    	ledRight = LED_ON;
+    	sleep(10);
+    	ledRight = LED_OFF;
     	if ( ble.isConnected() ) {
-    		if ( tmLED.isExpired(500) ) {
-    			tmLED.reset();
-    			led.toggle();
-    		}
-    	} else led = LED_ON;
+    		sleep(190);
+    	} else {
+    		sleep(990);
+    	}
     }
 }
