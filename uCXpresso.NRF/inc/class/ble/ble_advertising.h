@@ -24,9 +24,13 @@
 #include <class/ble/nrf51/ble_data.h>
 #include <class/ble/ble_service.h>
 
-#define DEF_ADV_INTERVAL			1000	// 1000 Milliseconds
+#define DEF_ADV_INTERVAL				1000	// 1000 Milliseconds
+#define DEF_ADV_TIMEOUT					0		// No Adv. timeout  (unit:second)
+#define DEF_ADV_FLAG					BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE
+#define DEF_ADV_FAST_INTERVAL			25		// for bond connection, adv. interval = 25ms
+#define DEF_ADV_FAST_TIMEOUT			40		// for bond connection, adv. timeout = 40 sec.
+#define DEF_ADV_FAST_WHITELIST_TIMEOUT	20		// for bond white-list, adv. timeout = 20 sec.
 
-#define DEF_ADV_TIMEOUT				0		// No Adv. timeout  (unit:second)
 #define MAX_ADV_UUID_COMPLETE_LIST	16
 
 /**
@@ -77,6 +81,7 @@ public:
 
 	/**
 	 * @brief Set advertising timeout between 0x0001 and 0x3FFF in seconds, 0x0000 disables the timeout.
+	 * @note Maximum advertising time in limited discoverable mode = 180 seconds.
 	 */
 	void timeout(uint16_t sec);
 
@@ -160,6 +165,9 @@ public:
 	///@cond PRIVATE (internal used)
 	//
 	bleAdvertising();
+	inline ADV_START_MODE_T mode() {
+		return m_adv_start_mode;
+	}
 protected:
 	ble_advdata_t			 m_adv_data;
 	int8_t					 m_tx_power_level;
@@ -168,6 +176,7 @@ protected:
 	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
 	uint16_t				 m_adv_interval;
+	uint16_t				 m_adv_timeout;
 	ADV_START_MODE_T		 m_adv_start_mode;
 	///@endcond
 };

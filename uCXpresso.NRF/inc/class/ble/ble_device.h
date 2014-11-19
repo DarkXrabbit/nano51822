@@ -27,6 +27,7 @@
 #include <class/peripheral.h>
 #include <class/list.h>
 #include <class/timeout.h>
+#include <class/pin.h>
 
 #include <class/ble/ble_service.h>
 #include <class/ble/ble_advertising.h>
@@ -130,9 +131,20 @@ public:
 	 */
 	virtual void onError(uint32_t err_code);
 
-	/**@brief A GAP timeout occurred.
+	/**
+	 * @brief A GAP timeout occurred.
 	 */
 	virtual void onTimeout();
+
+	/**
+	 * @brief Set the weakup pin for system power off mode when ADV. timeout.
+	 * @param pin 	Specify a pin to wake-up the system from power off mode.
+	 * @param pull 	Specify the pin pull mode.
+	 */
+	inline void weakup_pin(uint8_t pin, PIN_INPUT_MODE_T pull=INTERNAL_PULL_UP) {
+		m_weakup_pin_no = pin;
+		m_weakup_pin_pull = pull;
+	}
 
 	/**
 	 * @brief Get SoftDevice driver version information.
@@ -178,32 +190,32 @@ public:
 	 */
 	static uint8_t *address();
 
-	/**@brief An advertising member object.
+	/**
+	 * @brief An advertising member object.
 	 * @ref bleAdvertising class.
 	 */
 	bleAdvertising		m_advertising;
 
-	/**@brief GAP member object.
+	/**
+	 * @brief GAP member object.
 	 * @ref bleGAP class.
 	 */
 	bleGAP				m_gap;
 
 	//
-	/// @cond PRIVATE
+	/// @cond PRIVATE (internal used)
 	//
 	virtual ~bleDevice();
 	void on_ble_event(ble_evt_t * p_ble_evt);
 	void on_sys_event(uint32_t event);
 
-	uint16_t    m_conn_handle;
-	ble_gap_evt_auth_status_t m_auth_status;
-	ble_gap_sec_params_t	  m_sec_params;
-	CSemaphore	m_semBleEvent;
-protected:
-	CSemaphore	m_semWaitForConnected;
+	uint16_t   	m_conn_handle;
 	bool		m_memory_access_in_progress;
 
-	void system_off_mode_enter();
+protected:
+	CSemaphore	m_semWaitForConnected;
+	uint8_t			 m_weakup_pin_no;
+	PIN_INPUT_MODE_T m_weakup_pin_pull;
 
 	//
 	// for services
@@ -221,7 +233,10 @@ friend class bleService;
 	/// @endcond
 };
 
-extern bleDevice *gpBLE;	///< Point to the global bleDevice object.
+/**
+ * @brief Pinter to the bleDevice object.
+ */
+extern bleDevice *gpBLE;
 
 /**\example /ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp
  * This is an example of how to use the bleDevice class.

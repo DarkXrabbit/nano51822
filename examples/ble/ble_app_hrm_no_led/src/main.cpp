@@ -87,15 +87,14 @@ int main(void) {
 	//
 	// update ADVERTISING contents
 	//
-	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
-
 	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertising
 	ble.m_advertising.add_uuid_to_complete_list(htm);				// add htm object to the uuid_list of advertising
-
 	ble.m_advertising.appearance(BLE_APPEARANCE_HEART_RATE_SENSOR_HEART_RATE_BELT);
 	ble.m_advertising.update();										// update advertising data
 
 	// Start advertising
+	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
+//	ble.m_advertising.timeout(30);									// set timeout will cause the system enter to power off mode.
 	ble.m_advertising.start();
 
 #ifdef DEBUG

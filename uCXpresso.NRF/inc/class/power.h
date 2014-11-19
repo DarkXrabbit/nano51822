@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : power.h
  Author      : Jason
- Version     : v1.0.0
- Date		 : 2014/10/26
+ Version     : v1.0.1
+ Date		 : 2014/11/19
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : TODO for tickless feature.
  ===============================================================================
@@ -13,6 +13,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/10/26	v1.0.0	First Edition									Leo
  2014/10/30 v1.0.0	Add tickless enable/disable member.				Jason
+ 2014/11/19 v1.0.1  Add weakup pin pull mode.						Jason
  ===============================================================================
  */
 
@@ -44,10 +45,10 @@ public:
 
 	/**
 	 * @brief Enter system OFF.
-	 * @param wakeup_pin A wakeup source pin, and weak-up with active low level.
+	 * @param wakeup_pin_no A wakeup source pin, and weak-up with active low level.
 	 * @note After wakeup the chip will be reset, and the MCU will run from the main entry.
 	 */
-	static void system_off(int wakeup_pin);
+	static void system_off(uint8_t wakeup_pin_no, PIN_INPUT_MODE_T weakup_pin_mode);
 
 	/**
 	 * @brief Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD.

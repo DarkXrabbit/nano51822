@@ -41,7 +41,8 @@
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "Proximity"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
+#define APP_ADV_INTERVAL                     2000                   /**< The advertising interval (in ms). */
+#define APP_ADV_TIMEOUT						 180				    /**< The advertising timeout (in sec), device will be power off when adv. timeout. */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
 //#define BOARD_PCA10001
@@ -133,7 +134,6 @@ int main(void) {
 	//
 	// BLE Advertising
 	//
-	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
 
 	// Optional: add standard profile in advertisement
@@ -146,6 +146,8 @@ int main(void) {
 	ble.m_advertising.update();										// update advertisement data
 
 	// Start advertising
+	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
+	ble.m_advertising.timeout(APP_ADV_TIMEOUT);
 	ble.m_advertising.mode(ADV_MODE_NO_ADV);
 	ble.m_advertising.start();
 

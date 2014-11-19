@@ -120,17 +120,16 @@ int main(void) {
 	//
 	// update advertisement contents
 	//
-	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
-
 	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertisement
 	ble.m_advertising.add_uuid_to_complete_list(htm);				// add htm object to the uuid_list of advertisement
 	ble.m_advertising.add_uuid_to_complete_list(bat);				// add bat object to the uuid_list of advertisement
-
 	ble.m_advertising.appearance(BLE_APPEARANCE_GENERIC_HEART_RATE_SENSOR);
 	ble.m_advertising.update();										// update advertisement data
 
 	// Start advertising
+	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
+	ble.m_advertising.timeout(30); // timeout>0, the system will be off when adv. timeout.
 	ble.m_advertising.start();
 
 	//
