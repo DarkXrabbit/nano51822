@@ -45,10 +45,10 @@ public:
 
 	/**
 	 * @brief Enter system OFF.
-	 * @param wakeup_pin_no A wakeup source pin, and weak-up with active low level.
+	 * @warning It is necessary to declare a @ref gpioSense pin to weakup the system from the power off mode.
 	 * @note After wakeup the chip will be reset, and the MCU will run from the main entry.
 	 */
-	static void system_off(uint8_t wakeup_pin_no, PIN_INPUT_MODE_T weakup_pin_mode);
+	static void system_off();
 
 	/**
 	 * @brief Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD.

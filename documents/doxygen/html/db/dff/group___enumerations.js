@@ -12,10 +12,12 @@ var group___enumerations =
       [ "VDD_2_3", "db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a7b682f08d09434b67ad806be494f6bcc", null ],
       [ "VDD_1_3", "db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352", null ]
     ] ],
-    [ "ADV_MODE_T", "db/dff/group___enumerations.html#ga287504a20077cb2889e3ecfc8bd05aa8", [
-      [ "ADV_MODE_NORMAL", "db/dff/group___enumerations.html#gga287504a20077cb2889e3ecfc8bd05aa8a27e4e36835941035ecce9ec853024ab7", null ],
-      [ "ADV_MODE_PREV_NORMAL", "db/dff/group___enumerations.html#gga287504a20077cb2889e3ecfc8bd05aa8ad2788bb5b44b4193eab4a3035b033782", null ],
-      [ "ADV_MODE_WHITELIST", "db/dff/group___enumerations.html#gga287504a20077cb2889e3ecfc8bd05aa8a5b97a3c2958ef6fe7cf546a0e94721c5", null ]
+    [ "ADV_START_MODE_T", "db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760", [
+      [ "ADV_MODE_NORMAL", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a27e4e36835941035ecce9ec853024ab7", null ],
+      [ "ADV_MODE_PREV_NORMAL", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782", null ],
+      [ "ADV_MODE_FAST", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d", null ],
+      [ "ADV_MODE_WHITELIST", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5", null ],
+      [ "ADV_MODE_NO_ADV", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02", null ]
     ] ],
     [ "ADV_TYPE_T", "db/dff/group___enumerations.html#gaf36f4f6c9535228c7563541c4590b499", [
       [ "ADV_TYPE_ADV_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499a47486dc9c3a939c457e9f1111aa35c77", null ],

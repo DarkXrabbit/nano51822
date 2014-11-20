@@ -27,7 +27,6 @@
 #include <class/peripheral.h>
 #include <class/list.h>
 #include <class/timeout.h>
-#include <class/pin.h>
 
 #include <class/ble/ble_service.h>
 #include <class/ble/ble_advertising.h>
@@ -137,16 +136,6 @@ public:
 	virtual void onTimeout();
 
 	/**
-	 * @brief Set the weakup pin for system power off mode when ADV. timeout.
-	 * @param pin 	Specify a pin to wake-up the system from power off mode.
-	 * @param pull 	Specify the pin pull mode.
-	 */
-	inline void weakup_pin(uint8_t pin, PIN_INPUT_MODE_T pull=INTERNAL_PULL_UP) {
-		m_weakup_pin_no = pin;
-		m_weakup_pin_pull = pull;
-	}
-
-	/**
 	 * @brief Get SoftDevice driver version information.
 	 *
 	 * @param majorVer[out] Link Layer Version number for BT 4.1 spec is 7
@@ -214,8 +203,6 @@ public:
 
 protected:
 	CSemaphore	m_semWaitForConnected;
-	uint8_t			 m_weakup_pin_no;
-	PIN_INPUT_MODE_T m_weakup_pin_pull;
 
 	//
 	// for services

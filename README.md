@@ -8,23 +8,16 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.1 rc4 19th November 2014
+v1.0.1 released 20th November 2014
 --------------------------------
-###Details: 
-	1. Fixed the problem of the current too hight in power off mode.
-    2. Implement for bond connection. (see example ble_app_proximity)
-    3. Reduce the heap memory to 6000 bytes. 
-    4. Insert the conn.negotiate() in main-loop to negotiate the "Conn Parameters Update".
-    5. Remote gpioINT class.
-    6. Add gpioSense class to provide 30 edge interrupts.
-    7. Add task_handle in CThread constructor. (optional)
-
-v1.0.1 rc1 13th November 2014
---------------------------------
-###Details: 
-	1. Add type() member in bleAdvertising class to support the nRF-Beacon app.
-	2. Set bleDeviceManager became to optional in application, to save the heap memory.
-	3. Update the all beacon examples.
+###Features: 
+	1. Implement for bond connection. (see example ble_app_proximity).
+	2. Add gpioSense class to provide 30 edge interrupts.
+	3. Add task_handle in CThread constructor. (optional)
+	4. Negotiate the "Connection Parameters Update" in main loop.
+	5. Speed up the BLE efficiency.
+	6. Add advertising mode options.
+	7. Enter to system power off mode when Advertising timeout.
 
 v1.0.0-released 12th November 2014
 --------------------------------

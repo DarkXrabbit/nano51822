@@ -129,7 +129,7 @@ int main(void) {
 
 	// Start advertising
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
-	ble.m_advertising.timeout(30); // timeout>0, the system will be off when adv. timeout.
+//	ble.m_advertising.timeout(30); // set timeout, will cause the system to enter to the power off mode.
 	ble.m_advertising.start();
 
 	//

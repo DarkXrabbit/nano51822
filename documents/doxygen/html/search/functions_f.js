@@ -9,7 +9,7 @@ var searchData=
   ['set',['set',['../dd/d60/class_c_event_bit.html#a0b05da65aa8bb0b77dd75f0a84b8fbb0',1,'CEventBit']]],
   ['setat',['setAt',['../df/d99/class_c_string.html#a99eaccef0daa453bf36ec886ae9b42c4',1,'CString']]],
   ['setpriority',['setPriority',['../d0/d26/class_c_thread.html#a6b0703ae0cc085a0c0aaa55b6945575b',1,'CThread']]],
-  ['settings',['settings',['../dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece',1,'bleGAP']]],
+  ['settings',['settings',['../dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852',1,'bleGAP']]],
   ['show_5fclear',['show_clear',['../de/dba/class_c_shell.html#a8cb6ac07d2290e4d51c641af1d152b1f',1,'CShell']]],
   ['show_5fheap',['show_heap',['../de/dba/class_c_shell.html#a99cd1946dd501dd788accc421ffb883c',1,'CShell']]],
   ['show_5fmenu',['show_menu',['../de/dba/class_c_shell.html#ab499caffc2baf478802c3f89d606fc6c',1,'CShell']]],
@@ -29,5 +29,5 @@ var searchData=
   ['suspendall',['suspendAll',['../d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a',1,'CThread']]],
   ['swpwm',['swPWM',['../da/d88/classsw_p_w_m.html#af300cb30894b00317b07261e96931e63',1,'swPWM']]],
   ['sync',['sync',['../dd/d60/class_c_event_bit.html#a4a50fd1376946d508762fa00d01034ce',1,'CEventBit']]],
-  ['system_5foff',['system_off',['../d5/d3e/class_c_power_save.html#aa985158adfeb15c1584fb07b681d3027',1,'CPowerSave']]]
+  ['system_5foff',['system_off',['../d5/d3e/class_c_power_save.html#a5ca4d42330d925fccc91c2a3834ef681',1,'CPowerSave']]]
 ];

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1 rc2</span>
+   &#160;<span id="projectnumber">v1.0.1-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -142,9 +142,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a12a1487e1ca489b32d4f398f8ca05904"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">tickless</a> (bool enable)</td></tr>
 <tr class="memdesc:a12a1487e1ca489b32d4f398f8ca05904"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enable (or disable) the tickless technology.  <a href="#a12a1487e1ca489b32d4f398f8ca05904">More...</a><br /></td></tr>
 <tr class="separator:a12a1487e1ca489b32d4f398f8ca05904"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa985158adfeb15c1584fb07b681d3027"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3e/class_c_power_save.html#aa985158adfeb15c1584fb07b681d3027">system_off</a> (int wakeup_pin)</td></tr>
-<tr class="memdesc:aa985158adfeb15c1584fb07b681d3027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter system OFF.  <a href="#aa985158adfeb15c1584fb07b681d3027">More...</a><br /></td></tr>
-<tr class="separator:aa985158adfeb15c1584fb07b681d3027"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ca4d42330d925fccc91c2a3834ef681"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3e/class_c_power_save.html#a5ca4d42330d925fccc91c2a3834ef681">system_off</a> ()</td></tr>
+<tr class="memdesc:a5ca4d42330d925fccc91c2a3834ef681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enter system OFF.  <a href="#a5ca4d42330d925fccc91c2a3834ef681">More...</a><br /></td></tr>
+<tr class="separator:a5ca4d42330d925fccc91c2a3834ef681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a915b07923779d45c1e262cfb6573de73"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d3e/class_c_power_save.html#a915b07923779d45c1e262cfb6573de73">dcdc</a> (bool enable)</td></tr>
 <tr class="memdesc:a915b07923779d45c1e262cfb6573de73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD. The resulting voltage is then used by an internal LDO that supplies the radio with power.  <a href="#a915b07923779d45c1e262cfb6573de73">More...</a><br /></td></tr>
 <tr class="separator:a915b07923779d45c1e262cfb6573de73"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -235,7 +235,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa985158adfeb15c1584fb07b681d3027"></a>
+<a class="anchor" id="a5ca4d42330d925fccc91c2a3834ef681"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -245,8 +245,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void CPowerSave::system_off </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>wakeup_pin</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -258,12 +257,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Enter system OFF. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">wakeup_pin</td><td>A wakeup source pin, and weak-up with active low level. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section warning"><dt>Warning</dt><dd>It is necessary to declare a <a class="el" href="../../d0/d3c/classgpio_sense.html">gpioSense</a> pin to weakup the system from the power off mode. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>After wakeup the chip will be reset, and the MCU will run from the main entry. </dd></dl>
 
 </div>
@@ -300,7 +294,7 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section note"><dt>Note</dt><dd>The uCXpresso.NRF Tickless Technology stops the periodic main clock (Enter to Deep-Sleep mode) during idle periods (periods when there are no application tasks to be executed), then makes a correcting adjustment to the RTOS tick count value when the main clock is restarted.</dd></dl>
 <dl class="section warning"><dt>Warning</dt><dd>The tickless feature have to use the external 32.768KHz crystal within 20ppm. </dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d" title="Static function, to initialize the SoftDevice driver. ">bleDevice::Init()</a> </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a27">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a30">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a21">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html#a7">/peripherals/gpio_sense/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a27">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a34">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a21">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html#a7">/peripherals/gpio_sense/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -310,7 +304,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d5/d3e/class_c_power_save.html">CPowerSave</a></li>
-    <li class="footer">Generated on Mon Nov 17 2014 20:03:43 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 20 2014 14:25:45 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

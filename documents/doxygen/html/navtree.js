@@ -22,9 +22,9 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d6/d49/classble_device.html#a227676cfdadbc8bd4b3c55c5b82a5dd8",
-"da/d88/classsw_p_w_m.html",
-"de/d89/class_c_bus.html#a12e4d076164971de589cbc5b2f6537e2"
+"d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3",
+"da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d",
+"de/d89/class_c_bus.html#a03bb378921772d204c60958d7e8c0702"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

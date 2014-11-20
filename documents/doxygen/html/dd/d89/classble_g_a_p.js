@@ -4,6 +4,6 @@ var classble_g_a_p =
     [ "disconnect", "dd/d89/classble_g_a_p.html#a8b8ace2af32d9215585956214fc29143", null ],
     [ "isThread", "dd/d89/classble_g_a_p.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "dd/d89/classble_g_a_p.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
-    [ "settings", "dd/d89/classble_g_a_p.html#af9407af2ca180fafced7d656b6550ece", null ],
+    [ "settings", "dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852", null ],
     [ "tx_power", "dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19", null ]
 ];

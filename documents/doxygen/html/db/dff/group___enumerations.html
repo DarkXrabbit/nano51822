@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1 rc2</span>
+   &#160;<span id="projectnumber">v1.0.1-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -149,12 +149,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaf36f4f6c9535228c7563541c4590b499"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP Advertising types.  <a href="../../db/dff/group___enumerations.html#gaf36f4f6c9535228c7563541c4590b499">More...</a><br /></td></tr>
 <tr class="separator:gaf36f4f6c9535228c7563541c4590b499"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga287504a20077cb2889e3ecfc8bd05aa8"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga287504a20077cb2889e3ecfc8bd05aa8">ADV_MODE_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga287504a20077cb2889e3ecfc8bd05aa8a27e4e36835941035ecce9ec853024ab7">ADV_MODE_NORMAL</a> = 0, 
-<a class="el" href="../../db/dff/group___enumerations.html#gga287504a20077cb2889e3ecfc8bd05aa8ad2788bb5b44b4193eab4a3035b033782">ADV_MODE_PREV_NORMAL</a>, 
-<a class="el" href="../../db/dff/group___enumerations.html#gga287504a20077cb2889e3ecfc8bd05aa8a5b97a3c2958ef6fe7cf546a0e94721c5">ADV_MODE_WHITELIST</a>
+<tr class="memitem:gab9a29fe1badaeaf8c8d540d20f986760"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">ADV_START_MODE_T</a> { <br />
+&#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a27e4e36835941035ecce9ec853024ab7">ADV_MODE_NORMAL</a> = 0, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782">ADV_MODE_PREV_NORMAL</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d">ADV_MODE_FAST</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5">ADV_MODE_WHITELIST</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02">ADV_MODE_NO_ADV</a>
+<br />
  }</td></tr>
-<tr class="memdesc:ga287504a20077cb2889e3ecfc8bd05aa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising Mode.  <a href="../../db/dff/group___enumerations.html#ga287504a20077cb2889e3ecfc8bd05aa8">More...</a><br /></td></tr>
-<tr class="separator:ga287504a20077cb2889e3ecfc8bd05aa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:gab9a29fe1badaeaf8c8d540d20f986760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising Start Mode.  <a href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">More...</a><br /></td></tr>
+<tr class="separator:gab9a29fe1badaeaf8c8d540d20f986760"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaccda0254b184e8f316acfde187602422"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422">NRF_LFCLKSRC_T</a> { <br />
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148">NRF_LFCLKSRC_SYNTH_250_PPM</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c">NRF_LFCLKSRC_XTAL_500_PPM</a>, 
@@ -360,25 +365,29 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ga287504a20077cb2889e3ecfc8bd05aa8"></a>
+<a class="anchor" id="gab9a29fe1badaeaf8c8d540d20f986760"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#ga287504a20077cb2889e3ecfc8bd05aa8">ADV_MODE_T</a></td>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">ADV_START_MODE_T</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p><code>#include &lt;ble_advertising.h&gt;</code></p>
 
-<p>Advertising Mode. </p>
+<p>Advertising Start Mode. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga287504a20077cb2889e3ecfc8bd05aa8a27e4e36835941035ecce9ec853024ab7"></a>ADV_MODE_NORMAL&#160;</td><td class="fielddoc">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760a27e4e36835941035ecce9ec853024ab7"></a>ADV_MODE_NORMAL&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga287504a20077cb2889e3ecfc8bd05aa8ad2788bb5b44b4193eab4a3035b033782"></a>ADV_MODE_PREV_NORMAL&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782"></a>ADV_MODE_PREV_NORMAL&#160;</td><td class="fielddoc">
 </td></tr>
-<tr><td class="fieldname"><a class="anchor" id="gga287504a20077cb2889e3ecfc8bd05aa8a5b97a3c2958ef6fe7cf546a0e94721c5"></a>ADV_MODE_WHITELIST&#160;</td><td class="fielddoc">
+<tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d"></a>ADV_MODE_FAST&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5"></a>ADV_MODE_WHITELIST&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02"></a>ADV_MODE_NO_ADV&#160;</td><td class="fielddoc">
 </td></tr>
 </table>
 
@@ -986,7 +995,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Nov 17 2014 20:03:42 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 20 2014 14:25:44 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

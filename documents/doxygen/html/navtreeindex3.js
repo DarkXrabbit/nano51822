@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"de/d89/class_c_bus.html#a03bb378921772d204c60958d7e8c0702":[0,4,2,0],
 "de/d89/class_c_bus.html#a12e4d076164971de589cbc5b2f6537e2":[0,4,2,9],
 "de/d89/class_c_bus.html#a18cf254bf2030ba75735238fc1a31f4d":[0,4,2,4],
 "de/d89/class_c_bus.html#a26a76c241a4d62d2efdac57d2cfe4c0f":[0,4,2,3],

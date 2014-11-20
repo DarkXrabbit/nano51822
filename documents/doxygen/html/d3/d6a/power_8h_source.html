@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1 rc2</span>
+   &#160;<span id="projectnumber">v1.0.1-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -106,8 +106,8 @@ $(document).ready(function(){initNavTree('d3/d6a/power_8h_source.html','../../')
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ===============================================================================</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> Name        : power.h</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> Author      : Jason</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.0</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2014/10/26</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.1</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2014/11/19</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> Copyright   : Copyright (C) www.embeda.com.tw</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> Description : TODO for tickless feature.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> ===============================================================================</span></div>
@@ -117,34 +117,35 @@ $(document).ready(function(){initNavTree('d3/d6a/power_8h_source.html','../../')
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> 2014/10/26 v1.0.0  First Edition                                   Leo</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> 2014/10/30 v1.0.0  Add tickless enable/disable member.             Jason</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> ===============================================================================</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef POWER_H_</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define POWER_H_</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;class/peripheral.h&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="../../d5/d3e/class_c_power_save.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d3e/class_c_power_save.html">CPowerSave</a>: <span class="keyword">public</span> <a class="code" href="../../d9/db6/class_c_peripheral.html">CPeripheral</a> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">tickless</a>(<span class="keywordtype">bool</span> enable);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d3e/class_c_power_save.html#aa985158adfeb15c1584fb07b681d3027">system_off</a>(<span class="keywordtype">int</span> wakeup_pin);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d3e/class_c_power_save.html#a915b07923779d45c1e262cfb6573de73">dcdc</a>(<span class="keywordtype">bool</span> enable);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;};</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment"> * @example /rtos/tickless_test/src/setup.cpp</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * This is an example of how to use the CPowerSave::tickless(),</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * More details about this example.</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* POWER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> 2014/11/19 v1.0.1  Add weakup pin pull mode.                       Jason</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> ===============================================================================</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef POWER_H_</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define POWER_H_</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;class/peripheral.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="../../d5/d3e/class_c_power_save.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d3e/class_c_power_save.html">CPowerSave</a>: <span class="keyword">public</span> <a class="code" href="../../d9/db6/class_c_peripheral.html">CPeripheral</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">tickless</a>(<span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d3e/class_c_power_save.html#a5ca4d42330d925fccc91c2a3834ef681">system_off</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d3e/class_c_power_save.html#a915b07923779d45c1e262cfb6573de73">dcdc</a>(<span class="keywordtype">bool</span> enable);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;};</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"> * @example /rtos/tickless_test/src/setup.cpp</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="comment"> * This is an example of how to use the CPowerSave::tickless(),</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment"> * More details about this example.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* POWER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_c_power_save_html_a915b07923779d45c1e262cfb6573de73"><div class="ttname"><a href="../../d5/d3e/class_c_power_save.html#a915b07923779d45c1e262cfb6573de73">CPowerSave::dcdc</a></div><div class="ttdeci">static void dcdc(bool enable)</div><div class="ttdoc">Selected devices have a Buck type DC/DC converter that steps down the supply voltage VDD...</div></div>
 <div class="ttc" id="class_c_power_save_html_a12a1487e1ca489b32d4f398f8ca05904"><div class="ttname"><a href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a></div><div class="ttdeci">static void tickless(bool enable)</div><div class="ttdoc">Enable (or disable) the tickless technology. </div></div>
-<div class="ttc" id="class_c_power_save_html_aa985158adfeb15c1584fb07b681d3027"><div class="ttname"><a href="../../d5/d3e/class_c_power_save.html#aa985158adfeb15c1584fb07b681d3027">CPowerSave::system_off</a></div><div class="ttdeci">static void system_off(int wakeup_pin)</div><div class="ttdoc">Enter system OFF. </div></div>
-<div class="ttc" id="class_c_power_save_html"><div class="ttname"><a href="../../d5/d3e/class_c_power_save.html">CPowerSave</a></div><div class="ttdoc">CPowerSave stack class. </div><div class="ttdef"><b>Definition:</b> power.h:29</div></div>
+<div class="ttc" id="class_c_power_save_html"><div class="ttname"><a href="../../d5/d3e/class_c_power_save.html">CPowerSave</a></div><div class="ttdoc">CPowerSave stack class. </div><div class="ttdef"><b>Definition:</b> power.h:30</div></div>
+<div class="ttc" id="class_c_power_save_html_a5ca4d42330d925fccc91c2a3834ef681"><div class="ttname"><a href="../../d5/d3e/class_c_power_save.html#a5ca4d42330d925fccc91c2a3834ef681">CPowerSave::system_off</a></div><div class="ttdeci">static void system_off()</div><div class="ttdoc">Enter system OFF. </div></div>
 <div class="ttc" id="class_c_peripheral_html"><div class="ttname"><a href="../../d9/db6/class_c_peripheral.html">CPeripheral</a></div><div class="ttdef"><b>Definition:</b> peripheral.h:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -152,7 +153,7 @@ $(document).ready(function(){initNavTree('d3/d6a/power_8h_source.html','../../')
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>power.h</b></li>
-    <li class="footer">Generated on Mon Nov 17 2014 20:03:42 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 20 2014 14:25:44 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
