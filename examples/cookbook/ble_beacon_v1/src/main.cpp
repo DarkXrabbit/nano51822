@@ -107,7 +107,7 @@ int main(void)
 	ble.enable();						// enable BLE stack
 
 	// GAP
-	ble.m_gap.settings("nanoBeacon");	// set ble device name
+//	ble.m_gap.settings("nanoBeacon");	// set ble device name
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set TX radio power
 
 	//
@@ -133,13 +133,13 @@ int main(void)
 	// Advertisement
 	//
 	ble.m_advertising.type(ADV_TYPE_ADV_NONCONN_IND);
-	ble.m_advertising.interval(APP_ADV_INTERVAL);		// set advertising interval
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
 	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, sizeof(m_beacon_info)); // set beacon data
 	ble.m_advertising.flag(BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED);		// set flags
 	ble.m_advertising.update();							// update advertising data
 
+	ble.m_advertising.interval(APP_ADV_INTERVAL);		// set advertising interval
 	ble.m_advertising.start();
 
 	//

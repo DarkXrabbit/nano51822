@@ -213,6 +213,9 @@ int main(void) {
 			}
     	}
 
+    	// Negotiate the "Connection Parameters Update".
+    	conn.negotiate();
+
     	//
     	// Blink LED
     	//
@@ -224,5 +227,6 @@ int main(void) {
     	} else {
     		sleep(990);
     	}
+
     }
 }
