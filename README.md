@@ -12,7 +12,7 @@ v1.0.2 rc1 24th November 2014
 --------------------------------
 ###Details: 
 	1. Add descriptions in CString class.
-	2. Add find member in String class to handle a command list.
+	2. Add find() member in String class to handle a command list.
 	3. Add app_beacon_v2 example project to explain how to make an "AT Command" application.  
 	4. Add default "connection parameters" in bleConnParams constructor.
 
