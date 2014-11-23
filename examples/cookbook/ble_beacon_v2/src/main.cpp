@@ -213,7 +213,7 @@ void at_command_handle(CStream *p_serial, CString &str) {
 		break;
 	}
 
-	// response to BLE (nRF-UART App)
+	// response to stream
 	p_serial->write(str.getBuffer(), str.length());
 }
 
@@ -288,8 +288,8 @@ int main(void)
 	//
 	// AT Command Parse
 	//
-	atCommand at(nus);
-	at.attachHandle(at_command_handle);
+	atCommand at(nus);					// set the nus stream to atCommand object.
+	at.attachHandle(at_command_handle);	// set the AT command handle function.
 
 	//
 	// Enable Tickless Technology

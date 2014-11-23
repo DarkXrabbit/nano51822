@@ -23,7 +23,7 @@ atCommand::atCommand(CStream &serial) {
 
 void atCommand::parse() {
 	byte ch;
-	if ( m_p_serial->readable() ) {
+	while ( m_p_serial->readable() ) {
 		ch = m_p_serial->read();
 		switch(m_step) {
 		case 0:

@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_conn_params.h
  Author      : uCXpresso
- Version     : v1.0.1
- Date		 : 2014/11/17
+ Version     : v1.0.2
+ Date		 : 2014/11/24
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : Module for initiating and executing a connection parameters
  	 	 	   negotiation procedure.
@@ -14,6 +14,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/11/1	v1.0.0	First Edition									Jason
  2014/11/17 v1.0.1	Use negotiate() to replace teh on_ble_poll()	Jason
+ 2014/11/24	v1.0.2	Add p_conn_params in constructor.				Jason
  ===============================================================================
  */
 
@@ -36,6 +37,11 @@ typedef enum
     CP_EVT_SUCCEEDED                                   /**< Negotiation procedure succeeded. */
 } BLE_CP_EVENT_T;
 
+//
+// default connection parameters
+//
+//
+extern const ble_gap_conn_params_t def_conn_params;
 
 /**
  * @brief 	Connection Parameters Class.
@@ -60,17 +66,19 @@ public:
 	 *       having initialized the services.
 	 *
 	 * @param[in]	ble					Point to the bleDevice object.
+	 * @param[in]	p_conn_params		Pointer to the "Connection Parameters".
 	 * @param[in]	first_update_delay	Time from initiating event to first time connection parameters updated. (in millisecond)
 	 * @param[in]	next_update_delay	Time between each connection parameters updated. (in millisecond)
 	 * @param[in]	max_update_count	Number of attempts before giving up the connection parameter negotiation.
 	 * @param[in] 	disconnect_on_fail	Set to TRUE if a failed connection parameters update shall cause an automatic disconnection, set to FALSE otherwise.
 	 */
 	bleConnParams(bleDevice &ble,
-			      uint16_t first_update_daley 	= FIRST_CONN_PARAMS_UPDATE_DELAY,
-				  uint16_t next_update_delay 	= NEXT_CONN_PARAMS_UPDATE_DELAY,
-				  uint16_t max_update_count 	= MAX_CONN_PARAMS_UPDATE_COUNT,
-				  bool	   disconnect_on_fail	= false,
-				  uint16_t start_on_notify_cccd_handle=BLE_GATT_HANDLE_INVALID);
+				  ble_gap_conn_params_t const *p_conn_params = &def_conn_params,
+			      uint16_t first_update_daley 			= FIRST_CONN_PARAMS_UPDATE_DELAY,
+				  uint16_t next_update_delay 			= NEXT_CONN_PARAMS_UPDATE_DELAY,
+				  uint16_t max_update_count 			= MAX_CONN_PARAMS_UPDATE_COUNT,
+				  bool	   disconnect_on_fail			= false,
+				  uint16_t start_on_notify_cccd_handle	= BLE_GATT_HANDLE_INVALID);
 	/**
 	 * @brief Negotiate the "Connection Parameters Update" in main loop.
 	 */
