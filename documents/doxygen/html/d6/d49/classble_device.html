@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1-released</span>
+   &#160;<span id="projectnumber">v1.0.2 rc1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('d6/d49/classble_device.html','../../')
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="../../d5/d61/classble_device-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleDevice Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -157,6 +158,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab366c4740428313d45ed4a2692a23aaa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa">onTimeout</a> ()</td></tr>
 <tr class="memdesc:ab366c4740428313d45ed4a2692a23aaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">A GAP timeout occurred.  <a href="#ab366c4740428313d45ed4a2692a23aaa">More...</a><br /></td></tr>
 <tr class="separator:ab366c4740428313d45ed4a2692a23aaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa23d445c8eb368c75f6212ca209506e2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2">attachEvent</a> (<a class="el" href="../../d6/d49/classble_device.html#a8d95fc4b850e7979b03cf3a95bb2459e">ble_event_handle_t</a> ble_event_handle)</td></tr>
+<tr class="memdesc:aa23d445c8eb368c75f6212ca209506e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach event handle function.  <a href="#aa23d445c8eb368c75f6212ca209506e2">More...</a><br /></td></tr>
+<tr class="separator:aa23d445c8eb368c75f6212ca209506e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a018a6e38a8397c14d3c328a65d8b8665"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a018a6e38a8397c14d3c328a65d8b8665">detachEvent</a> ()</td></tr>
+<tr class="separator:a018a6e38a8397c14d3c328a65d8b8665"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -168,7 +174,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a7a13b9797449994a8382603001d7659d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static function, to initialize the SoftDevice driver.  <a href="#a7a13b9797449994a8382603001d7659d">More...</a><br /></td></tr>
 <tr class="separator:a7a13b9797449994a8382603001d7659d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a227676cfdadbc8bd4b3c55c5b82a5dd8">sdVersion</a> (uint8_t &amp;majorVer, uint16_t &amp;minorVer)</td></tr>
-<tr class="memdesc:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get SoftDevice driver version information.  <a href="#a227676cfdadbc8bd4b3c55c5b82a5dd8">More...</a><br /></td></tr>
+<tr class="memdesc:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">deattach  <a href="#a227676cfdadbc8bd4b3c55c5b82a5dd8">More...</a><br /></td></tr>
 <tr class="separator:a227676cfdadbc8bd4b3c55c5b82a5dd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a80b4406fee2c94fb4112f7af91085230"><td class="memItemLeft" align="right" valign="top">static uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230">information</a> (LPCTSTR manufact_name, LPCTSTR model_number, LPCTSTR serial_number, LPCTSTR hw_rev=NULL, LPCTSTR fw_rev=NULL, LPCTSTR sw_rev=NULL, ble_dis_sys_id_t *p_sys_id=NULL, ble_dis_pnp_id_t *p_pnp_id=NULL)</td></tr>
 <tr class="memdesc:a80b4406fee2c94fb4112f7af91085230"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for initializing the Device Information Service.  <a href="#a80b4406fee2c94fb4112f7af91085230">More...</a><br /></td></tr>
@@ -185,12 +191,41 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a622dd38b5243c6204d5adf28dac971b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a></td></tr>
 <tr class="memdesc:a622dd38b5243c6204d5adf28dac971b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">GAP member object. <a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a> class.  <a href="#a622dd38b5243c6204d5adf28dac971b9">More...</a><br /></td></tr>
 <tr class="separator:a622dd38b5243c6204d5adf28dac971b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a8d95fc4b850e7979b03cf3a95bb2459e"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d49/classble_device.html#a8d95fc4b850e7979b03cf3a95bb2459e">ble_event_handle_t</a> )(<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> *p_ble, <a class="el" href="../../db/dff/group___enumerations.html#ga823dd1a8d2e6e42d7535cfd7fdff3c1d">BLE_EVENT_T</a> evt)</td></tr>
+<tr class="memdesc:a8d95fc4b850e7979b03cf3a95bb2459e"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d6/d49/classble_device.html" title="BLE Device Class (SoftDevice). ">bleDevice</a> event handler type.  <a href="#a8d95fc4b850e7979b03cf3a95bb2459e">More...</a><br /></td></tr>
+<tr class="separator:a8d95fc4b850e7979b03cf3a95bb2459e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Class (SoftDevice). </p>
 <p>This class manages the all BLE event from the SoftDevice driver, and provides the device-manager, advertising and gap objects. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#_a4">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#_a10">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a2">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#_a4">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#_a3">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#_a4">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#_a4">/peripherals/i2c_scanner/src/main.cpp</a>.</dd>
-</dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a8d95fc4b850e7979b03cf3a95bb2459e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* bleDevice::ble_event_handle_t)(<a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> *p_ble, <a class="el" href="../../db/dff/group___enumerations.html#ga823dd1a8d2e6e42d7535cfd7fdff3c1d">BLE_EVENT_T</a> evt)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d6/d49/classble_device.html" title="BLE Device Class (SoftDevice). ">bleDevice</a> event handler type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a4bf797390297ed590496b35215ad2688"></a>
 <div class="memitem">
 <div class="memproto">
@@ -231,6 +266,55 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>48bits (6 bytes) device address; </p>
+
+</div>
+</div>
+<a class="anchor" id="aa23d445c8eb368c75f6212ca209506e2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleDevice::attachEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d6/d49/classble_device.html#a8d95fc4b850e7979b03cf3a95bb2459e">ble_event_handle_t</a>&#160;</td>
+          <td class="paramname"><em>ble_event_handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attach event handle function. </p>
+
+</div>
+</div>
+<a class="anchor" id="a018a6e38a8397c14d3c328a65d8b8665"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleDevice::detachEvent </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -450,7 +534,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, <a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">CPin</a>, <a class="el" href="../../d0/d3c/classgpio_sense.html#a2ae6559724aba3faeda8592dd19cc491">gpioSense</a>, and <a class="el" href="../../dd/d60/class_c_event_bit.html#a78b7aa84b566423a02a119077a70f805">CEventBit</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore</a>, <a class="el" href="../../d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7">CPin</a>, <a class="el" href="../../d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94">bleDeviceManager</a>, <a class="el" href="../../d0/d3c/classgpio_sense.html#a2ae6559724aba3faeda8592dd19cc491">gpioSense</a>, and <a class="el" href="../../dd/d60/class_c_event_bit.html#a78b7aa84b566423a02a119077a70f805">CEventBit</a>.</p>
 
 </div>
 </div>
@@ -589,7 +673,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get SoftDevice driver version information. </p>
+<p>deattach </p>
+<p>Get SoftDevice driver version information.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">majorVer[out]</td><td>Link Layer Version number for BT 4.1 spec is 7 </td></tr>
@@ -651,7 +736,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 </div><div class="memdoc">
 
 <p>An advertising member object. <a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a> class. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a14">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a23">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a12">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a10">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a12">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a14">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a23">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a12">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a9">/ble/ble_beacon/src/main.cpp</a>, and <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a12">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -676,7 +761,7 @@ NRF_ERROR_BUSY The stack is busy (typically doing a locally-initiated disconnect
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d6/d49/classble_device.html">bleDevice</a></li>
-    <li class="footer">Generated on Thu Nov 20 2014 14:25:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

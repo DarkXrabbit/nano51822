@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : Storage data to flash memory
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/10/18
+ Version     : v1.0.1
+ Date		 : 2014/11/22
  Copyright   : Copyright (C) www.embeda.com.tw
  Description :
  ===============================================================================
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/18	v1.0.0	First Edition for nano51822						Jason
+ 2014/11/22 v1.0.1	Add access_wait static member.					Jason
  ===============================================================================
  */
 
@@ -34,6 +35,7 @@ public:
 
 	static uint32_t total_size();
 	static uint32_t start_addr();
+	static uint32_t access_wait();
 
 	//
 	/// @cond PRIVATE

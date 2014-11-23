@@ -4,7 +4,6 @@ var searchData=
   ['cdebug',['CDebug',['../d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e',1,'CDebug']]],
   ['change',['change',['../d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2',1,'bleConnParams']]],
   ['characteristic_5fadd',['characteristic_add',['../de/d51/classble_service_customer.html#ae2e8deccb86fb41be85b3dc19e227ae9',1,'bleServiceCustomer']]],
-  ['chklength',['chkLength',['../df/d99/class_c_string.html#a5f5361665c7568d502d058992b14c016',1,'CString']]],
   ['ckalman',['CKalman',['../d7/d4b/class_c_kalman.html#aa1485f8eb220b3609804c8852aebe2d2',1,'CKalman']]],
   ['clear',['clear',['../d6/d56/class_console.html#a61f9d57ebeecfd8553f02a84b4939e69',1,'Console::clear()'],['../d3/de1/class_c_storage.html#ada2ebb3aa35b76c0043b274465770027',1,'CStorage::clear()'],['../df/d99/class_c_string.html#a86bdac885b2d28689a62cbb6ae8b9ee4',1,'CString::clear()']]],
   ['clone',['clone',['../df/d99/class_c_string.html#aeebb301ee8968688fd6ea8029a95ce9c',1,'CString']]],
@@ -21,7 +20,7 @@ var searchData=
   ['csmallprintf',['CSmallPrintf',['../de/db4/class_c_small_printf.html#a4d3c439b597dde5df178d189a5eb4024',1,'CSmallPrintf']]],
   ['cstorage',['CStorage',['../d3/de1/class_c_storage.html#a58e55ad86905e5eb9b5c1495f062cc0a',1,'CStorage']]],
   ['cstream',['CStream',['../d4/d16/class_c_stream.html#a147900f253c57d3223ae1220e0336808',1,'CStream']]],
-  ['cstring',['CString',['../df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7',1,'CString::CString(int size=DEF_STRBUF_SIZE)'],['../df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f',1,'CString::CString(const CString &amp;str)'],['../df/d99/class_c_string.html#a233297b331dbc4c342745d67ad166b97',1,'CString::CString(LPCTSTR str, int length=0)'],['../df/d99/class_c_string.html#a4cc7726fc9fbaa450876ffd98e3e6ff4',1,'CString::CString(LPTSTR buf)']]],
+  ['cstring',['CString',['../df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7',1,'CString::CString(int size=DEF_STRBUF_SIZE)'],['../df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f',1,'CString::CString(const CString &amp;str)'],['../df/d99/class_c_string.html#a233297b331dbc4c342745d67ad166b97',1,'CString::CString(LPCTSTR str, int length=0)'],['../df/d99/class_c_string.html#ab0859c28af0a02e422bca9a39fe705e7',1,'CString::CString(LPTSTR str)']]],
   ['cthread',['CThread',['../d0/d26/class_c_thread.html#a5e280f17da1aac80993f6b35d0089870',1,'CThread']]],
   ['ctimer',['CTimer',['../db/de1/class_c_timer.html#a32a45397ba76138a08be664e8a87172d',1,'CTimer']]],
   ['cumulative_5fwheel_5frevs',['cumulative_wheel_revs',['../d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b',1,'bleServiceCSC']]]

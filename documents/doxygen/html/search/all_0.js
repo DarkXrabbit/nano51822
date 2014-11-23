@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['access_5fwait',['access_wait',['../d3/de1/class_c_storage.html#ad6606ffec489224f6a6d1101ad544baf',1,'CStorage']]],
   ['ad0',['AD0',['../db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba9a6afaa33efd88ccbd62117ab0555cce',1,'adc.h']]],
   ['ad1',['AD1',['../db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba96f3b3489a6abb6db7d90ad7c0b5ca34',1,'adc.h']]],
   ['ad2',['AD2',['../db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba5238b98696dae3c909a0499e9a747401',1,'adc.h']]],
@@ -43,5 +44,6 @@ var searchData=
   ['aref_5f1',['AREF_1',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a29eae4ee54152033dd962f9902b0a9e3',1,'adc.h']]],
   ['aref_5ft',['AREF_T',['../db/dff/group___enumerations.html#gae0520f31b1985f1579b0568eaf20a624',1,'adc.h']]],
   ['aref_5fvbg',['AREF_VBG',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3',1,'adc.h']]],
+  ['attachevent',['attachEvent',['../d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2',1,'bleDevice']]],
   ['available',['available',['../d8/d1d/class_c_serial.html#a5c142221c0841e7c961e962c45bd2db7',1,'CSerial::available()'],['../de/dba/class_c_shell.html#a86ec9b3db5d7c467535064ea94e1d9c0',1,'CShell::available()'],['../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae',1,'CStream::available()'],['../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065',1,'CDebug::available()']]]
 ];

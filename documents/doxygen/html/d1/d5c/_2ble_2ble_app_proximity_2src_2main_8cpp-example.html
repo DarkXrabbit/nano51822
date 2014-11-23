@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1-released</span>
+   &#160;<span id="projectnumber">v1.0.2 rc1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -317,6 +317,9 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <div class="line">            }</div>
 <div class="line">        }</div>
 <div class="line"></div>
+<div class="line">        <span class="comment">// Negotiate the &quot;Connection Parameters Update&quot;.</span></div>
+<div class="line">        conn.negotiate();</div>
+<div class="line"></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Blink LED</span></div>
 <div class="line">        <span class="comment">//</span></div>
@@ -328,6 +331,7 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <div class="line">        } <span class="keywordflow">else</span> {</div>
 <div class="line">            sleep(990);</div>
 <div class="line">        }</div>
+<div class="line"></div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -335,7 +339,7 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 20 2014 14:25:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 23 2014 11:36:19 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

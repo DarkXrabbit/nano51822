@@ -37,8 +37,11 @@ var group___bluetooth =
       [ "uuid_type", "d9/d8b/classble_conn_params.html#a8931a117eb7be5a52455b53459b0df62", null ]
     ] ],
     [ "bleDevice", "d6/d49/classble_device.html", [
+      [ "ble_event_handle_t", "d6/d49/classble_device.html#a8d95fc4b850e7979b03cf3a95bb2459e", null ],
       [ "bleDevice", "d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688", null ],
       [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
+      [ "attachEvent", "d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2", null ],
+      [ "detachEvent", "d6/d49/classble_device.html#a018a6e38a8397c14d3c328a65d8b8665", null ],
       [ "enable", "d6/d49/classble_device.html#a0f96f5963ce1e317264a2059553b15fb", null ],
       [ "information", "d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230", null ],
       [ "Init", "d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d", null ],
@@ -59,7 +62,7 @@ var group___bluetooth =
       [ "isAvailable", "d9/d34/classble_device_manager.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isLinkSecured", "d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46", null ],
       [ "isThread", "d9/d34/classble_device_manager.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
-      [ "isValid", "d9/d34/classble_device_manager.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "isValid", "d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94", null ],
       [ "uuid", "d9/d34/classble_device_manager.html#aa34f2ea80269787a549a98e13bddb44f", null ],
       [ "uuid_type", "d9/d34/classble_device_manager.html#a8931a117eb7be5a52455b53459b0df62", null ],
       [ "whitelist_create", "d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e", null ]

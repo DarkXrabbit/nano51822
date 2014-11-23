@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : iBeacon Demo V2
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Copyright	 : www.ucxpresso.net
  License   	 : MIT
  Description : beacon test
@@ -12,10 +12,11 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/11/4	v1.0.0	First Edition for nano51822						Leo
+ 2014/11/22 v1.0.1	Set beacon data structure be a multiple word 	Jason
+ 	 	 	 	 	size. (in 32-bits system)
  ===============================================================================
  */
 
-#include <stdlib.h>
 #include <string.h>
 #include <uCXpresso.h>
 
@@ -41,6 +42,7 @@
 #define APP_MEASURED_RSSI                ((uint8_t)-59)                 ///< The Beacon's measured RSSI at 1 meter distance in dBm.
 //#define APP_COMPANY_IDENTIFIER           0x004C                         ///< Company identifier for Apple Inc. as per www.bluetooth.org.
 #define APP_COMPANY_IDENTIFIER           0x0059                       ///< Company identifier for Nordic Semi. as per www.bluetooth.org.
+#define APP_BEACON_INFO_LENGTH			 0x17
 #define USE_ADDR_FOR_MAJ_MIN_VALUES	 	 1								///< Use BLE address for Major and Minor value.
 
 const ble_uuid128_t  NRF_BEACON_UUID = {
@@ -50,15 +52,15 @@ const ble_uuid128_t  NRF_BEACON_UUID = {
 		0xcd, 0xde, 0xef, 0xf0
 };
 
-struct _beacon_info_ {
+typedef struct __attribute__ ((__packed__)) {
 	uint8_t 		device_type;
 	uint8_t 		data_length;
 	ble_uuid128_t 	uuid;
 	uint16_t		major;
 	uint16_t		minor;
 	int8_t			meas_rssi;
-}__attribute__ ((__packed__));
-typedef struct _beacon_info_ BEACON_INFO_T;
+	uint8_t			reserve;	// should be a multiple word size in 32-bits system.
+}BEACON_INFO_T;
 
 /**
  * @brief Update BEACON information
@@ -135,7 +137,7 @@ int main(void)
 	ble.m_advertising.type(ADV_TYPE_ADV_NONCONN_IND);
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);
-	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, sizeof(m_beacon_info)); // set beacon data
+	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon_info, APP_BEACON_INFO_LENGTH); // set beacon data
 	ble.m_advertising.flag(BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED);		// set flags
 	ble.m_advertising.update();							// update advertising data
 

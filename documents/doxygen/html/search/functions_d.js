@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['parsefloat',['parseFloat',['../de/dba/class_c_shell.html#a5849f8062a856b34cfb2b574d086a86c',1,'CShell::parseFloat()'],['../d4/d16/class_c_stream.html#a9c936febcbe2cd33c2857f37ed04f2f4',1,'CStream::parseFloat()'],['../d4/d37/class_c_debug.html#aefdc613a47e84ca260e6ba9ad14889b1',1,'CDebug::parseFloat()']]],
-  ['parsehex',['parseHex',['../d4/d16/class_c_stream.html#a4dd59862c18090fb2b9256154439feef',1,'CStream']]],
-  ['parseint',['parseInt',['../de/dba/class_c_shell.html#a0d9864ff2c6b6a993caf83cf8b8c91bc',1,'CShell::parseInt()'],['../d4/d16/class_c_stream.html#af60d539c037589ae50b495fe213dda0b',1,'CStream::parseInt()'],['../d4/d37/class_c_debug.html#ae672458ef356e3c208f43397b2dd81d4',1,'CDebug::parseInt()']]],
+  ['parsefloat',['parseFloat',['../de/dba/class_c_shell.html#a5849f8062a856b34cfb2b574d086a86c',1,'CShell::parseFloat()'],['../d4/d16/class_c_stream.html#a9c936febcbe2cd33c2857f37ed04f2f4',1,'CStream::parseFloat()'],['../df/d99/class_c_string.html#ae5a8046d2adb546e6a359b88ced5b380',1,'CString::parseFloat()'],['../d4/d37/class_c_debug.html#aefdc613a47e84ca260e6ba9ad14889b1',1,'CDebug::parseFloat()']]],
+  ['parsehex',['parseHex',['../d4/d16/class_c_stream.html#a4dd59862c18090fb2b9256154439feef',1,'CStream::parseHex()'],['../df/d99/class_c_string.html#a28780145d6ab2fe55f206cef9d4b5b8f',1,'CString::parseHex()']]],
+  ['parseint',['parseInt',['../de/dba/class_c_shell.html#a0d9864ff2c6b6a993caf83cf8b8c91bc',1,'CShell::parseInt()'],['../d4/d16/class_c_stream.html#af60d539c037589ae50b495fe213dda0b',1,'CStream::parseInt()'],['../df/d99/class_c_string.html#ae2a38906f68dcf94b131ead8adf3f5b7',1,'CString::parseInt()'],['../d4/d37/class_c_debug.html#ae672458ef356e3c208f43397b2dd81d4',1,'CDebug::parseInt()']]],
   ['parsestring',['parseString',['../d4/d16/class_c_stream.html#aa314dfe6e8cf3c1da9ad6a6de2d2618e',1,'CStream']]],
   ['peek',['peek',['../d8/d26/class_c_mail_box.html#adc923a33209756bb2ed9e1838b12b68c',1,'CMailBox']]],
   ['period',['period',['../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d',1,'hwPWM::period()'],['../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116',1,'swPWM::period()']]],

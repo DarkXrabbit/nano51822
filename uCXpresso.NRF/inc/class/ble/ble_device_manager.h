@@ -73,6 +73,11 @@ public:
 	 */
 	uint32_t whitelist_create(ble_gap_whitelist_t *whitelist);
 
+	/**
+	 * @brief Check the DM object is valid or not.
+	 */
+	virtual bool isValid();
+
 	//
 	///@cond Private
 	//

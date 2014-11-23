@@ -1,5 +1,8 @@
 var searchData=
 [
+  ['ble_5fon_5fconnected',['BLE_ON_CONNECTED',['../db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1dac029b2f6487a38e69e45f8b8376d412c',1,'ble_device.h']]],
+  ['ble_5fon_5fdisconnected',['BLE_ON_DISCONNECTED',['../db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1da6185dc6d7a9b9717a69b70b5d7d18a51',1,'ble_device.h']]],
+  ['ble_5fon_5ftimeout',['BLE_ON_TIMEOUT',['../db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1da0ed52fc78bf727e77f33ed9e815d7fb8',1,'ble_device.h']]],
   ['ble_5ftx_5f0dbm',['BLE_TX_0dBm',['../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54',1,'ble_gap.h']]],
   ['ble_5ftx_5f4dbm',['BLE_TX_4dBm',['../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617aea899963c6739306b702105fac9c60d1',1,'ble_gap.h']]],
   ['ble_5ftx_5fm12dbm',['BLE_TX_m12dBm',['../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a3bb453927e41ed489d5783eb01a432b6',1,'ble_gap.h']]],

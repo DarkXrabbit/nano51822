@@ -47,6 +47,11 @@ var group___enumerations =
       [ "MSB_FIRST", "db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2a89da3ebae748913c4ea84ed340c20aec", null ],
       [ "LSB_FIRST", "db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2aa7a58f44a10c5b3ff637d315043f1767", null ]
     ] ],
+    [ "BLE_EVENT_T", "db/dff/group___enumerations.html#ga823dd1a8d2e6e42d7535cfd7fdff3c1d", [
+      [ "BLE_ON_CONNECTED", "db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1dac029b2f6487a38e69e45f8b8376d412c", null ],
+      [ "BLE_ON_DISCONNECTED", "db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1da6185dc6d7a9b9717a69b70b5d7d18a51", null ],
+      [ "BLE_ON_TIMEOUT", "db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1da0ed52fc78bf727e77f33ed9e815d7fb8", null ]
+    ] ],
     [ "BLE_TX_POWER_T", "db/dff/group___enumerations.html#ga3b6d6db9e13e93ae21f2a383d9903617", [
       [ "BLE_TX_4dBm", "db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617aea899963c6739306b702105fac9c60d1", null ],
       [ "BLE_TX_0dBm", "db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54", null ],

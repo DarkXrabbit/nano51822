@@ -60,6 +60,15 @@ typedef enum
   NRF_LFCLKSRC_RC_250_PPM_TEMP_16000MS_CALIBRATION, /**< LFCLK RC oscillator. Temperature checked every 16000ms, if changed above a threshold, a calibration is done.*/
 }NRF_LFCLKSRC_T;
 
+/**@brief ble event type for @ref ble_event_handle_t.
+ * @ingroup Enumerations
+*/
+enum BLE_EVENT_T {
+	BLE_ON_CONNECTED,		///< On BLE connected
+	BLE_ON_DISCONNECTED,	///< On BLE disconnected
+	BLE_ON_TIMEOUT			///< On Advertising timeout
+};
+
 /**
  * @brief default the BLE SoftDevice Task stack size
  */
@@ -77,6 +86,8 @@ typedef enum
  * @ingroup Bluetooth
  */
 class bleDevice : public bleBase{
+	/**@brief bleDevice event handler type. */
+	typedef void (*ble_event_handle_t) (bleDevice * p_ble, BLE_EVENT_T evt);
 public:
 	/**
 	 * @brief Static function, to initialize the SoftDevice driver.
@@ -134,6 +145,21 @@ public:
 	 * @brief A GAP timeout occurred.
 	 */
 	virtual void onTimeout();
+
+	/**
+	 * @brief Attach event handle function.
+	 */
+	inline void attachEvent(ble_event_handle_t ble_event_handle) {
+		m_hOnEvent = ble_event_handle;
+	}
+
+	inline void detachEvent() {
+		m_hOnEvent = NULL;
+	}
+
+	/**
+	 * @brief deattach
+	 */
 
 	/**
 	 * @brief Get SoftDevice driver version information.
@@ -199,10 +225,10 @@ public:
 	void on_sys_event(uint32_t event);
 
 	uint16_t   	m_conn_handle;
-	bool		m_memory_access_in_progress;
 
 protected:
 	CSemaphore	m_semWaitForConnected;
+	ble_event_handle_t m_hOnEvent;
 
 	//
 	// for services

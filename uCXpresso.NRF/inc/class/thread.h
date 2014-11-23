@@ -63,7 +63,7 @@ typedef enum
  * @ingroup RTOS
  */
 class CThread: virtual public CObject {
-	/**@brief Health Thermometer Service event handler type. */
+	/**@brief thread task handler type. */
 	typedef void (*task_handle_t) (CThread * p_thread, xHandle p_param);
 
 public:

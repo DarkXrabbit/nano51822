@@ -16,6 +16,11 @@
 #include <cstdarg>
 #include "class/object.h"
 
+/**
+ * @brief Provides a small size of printf library for MCU base.
+ * @class CSmallPrintf smallprintf.h "class/smallprintf.h"
+ * @ingroup Miscellaneous
+ */
 class CSmallPrintf: public CObject {
 public:
 	CSmallPrintf();

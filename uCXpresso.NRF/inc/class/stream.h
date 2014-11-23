@@ -201,8 +201,6 @@ public:
 	 virtual void onSend(bool fromISR) = PURE_VIRTUAL_FUNC;
 
 protected:
-	 long parseInt(char skipChar, uint8_t base, bool echo);
-	 float parseFloat(char skipChar, bool echo);
 
 	 CSemaphore	m_semTx;
 	 CSemaphore	m_semRx;

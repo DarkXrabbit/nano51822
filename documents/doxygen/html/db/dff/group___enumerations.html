@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.1-released</span>
+   &#160;<span id="projectnumber">v1.0.2 rc1</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -189,6 +189,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaccda0254b184e8f316acfde187602422"><td class="mdescLeft">&#160;</td><td class="mdescRight">Possible lfclk oscillator sources.  <a href="../../db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422">More...</a><br /></td></tr>
 <tr class="separator:gaccda0254b184e8f316acfde187602422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga823dd1a8d2e6e42d7535cfd7fdff3c1d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga823dd1a8d2e6e42d7535cfd7fdff3c1d">BLE_EVENT_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1dac029b2f6487a38e69e45f8b8376d412c">BLE_ON_CONNECTED</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1da6185dc6d7a9b9717a69b70b5d7d18a51">BLE_ON_DISCONNECTED</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga823dd1a8d2e6e42d7535cfd7fdff3c1da0ed52fc78bf727e77f33ed9e815d7fb8">BLE_ON_TIMEOUT</a>
+ }</td></tr>
+<tr class="memdesc:ga823dd1a8d2e6e42d7535cfd7fdff3c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ble event type for ble_event_handle_t.  <a href="../../db/dff/group___enumerations.html#ga823dd1a8d2e6e42d7535cfd7fdff3c1d">More...</a><br /></td></tr>
+<tr class="separator:ga823dd1a8d2e6e42d7535cfd7fdff3c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3b6d6db9e13e93ae21f2a383d9903617"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga3b6d6db9e13e93ae21f2a383d9903617">BLE_TX_POWER_T</a> { <br />
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617aea899963c6739306b702105fac9c60d1">BLE_TX_4dBm</a> = 4, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54">BLE_TX_0dBm</a> = 0, 
@@ -531,6 +537,33 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="gga610be6d45973f3f7da6299e97b99f3c2aa7a58f44a10c5b3ff637d315043f1767"></a>LSB_FIRST&#160;</td><td class="fielddoc">
 <p>Least significant bit transmitted out first. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga823dd1a8d2e6e42d7535cfd7fdff3c1d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#ga823dd1a8d2e6e42d7535cfd7fdff3c1d">BLE_EVENT_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;ble_device.h&gt;</code></p>
+
+<p>ble event type for ble_event_handle_t. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga823dd1a8d2e6e42d7535cfd7fdff3c1dac029b2f6487a38e69e45f8b8376d412c"></a>BLE_ON_CONNECTED&#160;</td><td class="fielddoc">
+<p>On BLE connected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga823dd1a8d2e6e42d7535cfd7fdff3c1da6185dc6d7a9b9717a69b70b5d7d18a51"></a>BLE_ON_DISCONNECTED&#160;</td><td class="fielddoc">
+<p>On BLE disconnected. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga823dd1a8d2e6e42d7535cfd7fdff3c1da0ed52fc78bf727e77f33ed9e815d7fb8"></a>BLE_ON_TIMEOUT&#160;</td><td class="fielddoc">
+<p>On Advertising timeout. </p>
 </td></tr>
 </table>
 
@@ -995,7 +1028,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Thu Nov 20 2014 14:25:44 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

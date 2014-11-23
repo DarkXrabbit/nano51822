@@ -19,10 +19,10 @@ extern "C" {
 /*! \cond PRIVATE */
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		0
-#define uCXpresso_VER_REV		1
-#define uCXpresso_VER_RC		RELEASED
-#define uCXpresso_VER_BUILD		"2014/11/20"
-#define uCXpresso_VER_STR		"V1.0.1"
+#define uCXpresso_VER_REV		2
+#define uCXpresso_VER_RC		1
+#define uCXpresso_VER_BUILD		"2014/11/22"
+#define uCXpresso_VER_STR		"V1.0.2"
 
 //
 //	defined
@@ -128,6 +128,8 @@ extern uint32_t MAIN_STACK_SIZE;
 #define USB_MEM_SIZE			0x7FC
 extern void system_reset(void);
 extern size_t heapAvailableSize(void);
+extern void bootloader_start(void);
+#define gotoDFU()	bootloader_start()
 
 //
 // RTOS
