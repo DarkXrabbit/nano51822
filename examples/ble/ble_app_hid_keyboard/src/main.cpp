@@ -72,10 +72,9 @@ static uint8_t m_example_key_scan_codes1[] =  /**< Example scan codes to be sent
     0x0c, /* Key i */
     0x17, /* Key t */
     0x17, /* Key t */
-    0x1c, /* Key o */
+    0x1c, /* Key y */
     0x28  /* Key Return */
 };
-
 
 //
 // key input task
