@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('d9/d34/classble_device_manager.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../dc/d3e/classble_device_manager-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleDeviceManager Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -139,8 +140,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates that link with the peer is secured.  <a href="#a3cc4d28c35e4aa91c1f19f3f70589b46">More...</a><br /></td></tr>
 <tr class="separator:a3cc4d28c35e4aa91c1f19f3f70589b46"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae42dc03b199247bb499514a2167fb82e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">whitelist_create</a> (ble_gap_whitelist_t *whitelist)</td></tr>
-<tr class="memdesc:ae42dc03b199247bb499514a2167fb82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the bond white-list.  <a href="#ae42dc03b199247bb499514a2167fb82e">More...</a><br /></td></tr>
+<tr class="memdesc:ae42dc03b199247bb499514a2167fb82e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member for creating the whitelist.  <a href="#ae42dc03b199247bb499514a2167fb82e">More...</a><br /></td></tr>
 <tr class="separator:ae42dc03b199247bb499514a2167fb82e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abafee9b8b168ded797c8e9e762ba26b0"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#abafee9b8b168ded797c8e9e762ba26b0">peer_addr_get</a> (ble_gap_addr_t *p_peer_address)</td></tr>
+<tr class="memdesc:abafee9b8b168ded797c8e9e762ba26b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Member for getting a peer's device address.  <a href="#abafee9b8b168ded797c8e9e762ba26b0">More...</a><br /></td></tr>
+<tr class="separator:abafee9b8b168ded797c8e9e762ba26b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d3ada8de8be054ffa1beb191d887664"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a2d3ada8de8be054ffa1beb191d887664">connect_directed_mode</a> ()</td></tr>
+<tr class="memdesc:a2d3ada8de8be054ffa1beb191d887664"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set to connect directed mode.  <a href="#a2d3ada8de8be054ffa1beb191d887664">More...</a><br /></td></tr>
+<tr class="separator:a2d3ada8de8be054ffa1beb191d887664"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6956c43041ec56379a2467bc3aa45d94"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94">isValid</a> ()</td></tr>
 <tr class="memdesc:a6956c43041ec56379a2467bc3aa45d94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the DM object is valid or not.  <a href="#a6956c43041ec56379a2467bc3aa45d94">More...</a><br /></td></tr>
 <tr class="separator:a6956c43041ec56379a2467bc3aa45d94"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -155,10 +162,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a8931a117eb7be5a52455b53459b0df62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">gatts_hvx_writeable</a> ()</td></tr>
+<tr class="separator:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Management. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a13">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a15">/ble/ble_app_hid_keyboard/src/main.cpp</a>, and <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a13">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a03a4363ab8efef0e951d155144612d87"></a>
 <div class="memitem">
@@ -244,6 +256,47 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2d3ada8de8be054ffa1beb191d887664"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleDeviceManager::connect_directed_mode </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set to connect directed mode. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0deb640694dfbe4a3bfe67a23dcf3a33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t bleService::gatts_hvx_writeable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check the gatts write buffer available. </p><dl class="section warning"><dt>Warning</dt><dd>To check the write buffer available before to write a data to Notify or Indicate an attribute value. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae5045731a748b41a5153496d8fcb7257"></a>
 <div class="memitem">
 <div class="memproto">
@@ -268,7 +321,7 @@ Public Member Functions</h2></td></tr>
 <p>Check the service available. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, <a class="el" href="../../db/d31/classble_service_h_i_d.html#a1a7d9c5da8c2de4a08d76eb0e29d0ef2">bleServiceHID</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
 
 </div>
 </div>
@@ -344,6 +397,39 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abafee9b8b168ded797c8e9e762ba26b0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t bleDeviceManager::peer_addr_get </td>
+          <td>(</td>
+          <td class="paramtype">ble_gap_addr_t *&#160;</td>
+          <td class="paramname"><em>p_peer_address</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Member for getting a peer's device address. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_addr</td><td>Pointer where address is to be copied. Can not be NULL.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NRF_SUCCESS</td><td>On success, else an error code indicating reason for failure. </td></tr>
+    <tr><td class="paramname">NRF_ERROR_INVALID_STATE</td><td>If the API is called without module initialization and/or application registration. </td></tr>
+    <tr><td class="paramname">NRF_ERROR_NULL</td><td>If p_handle and/or p_addr is NULL. </td></tr>
+    <tr><td class="paramname">NRF_ERROR_NOT_FOUND</td><td>If the peer could not be identified. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="aa34f2ea80269787a549a98e13bddb44f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -368,7 +454,7 @@ Public Member Functions</h2></td></tr>
 <p>Get the UUID of service. </p>
 <dl class="section return"><dt>Returns</dt><dd>an uint16_t value. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ac08c4164b2f62f09d462df5ff940a1f8">bleServiceCSC</a>, <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ab16dbfc90ec7ac94d5062ccbaa4d504d">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#ad2abbdb6a3341823b30278e077e323ba">bleServiceProximity</a>, <a class="el" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">bleServiceTPL</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">bleServiceCustomer</a>, and <a class="el" href="../../d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9">bleServiceBattery</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ac08c4164b2f62f09d462df5ff940a1f8">bleServiceCSC</a>, <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#a5769a45e94d610f6ed3403c4ab8172ee">bleServiceHRM</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ab16dbfc90ec7ac94d5062ccbaa4d504d">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#afe20b7d470cf72d9c0f8f7a805adefca">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#ad2abbdb6a3341823b30278e077e323ba">bleServiceProximity</a>, <a class="el" href="../../d2/df3/classble_service_t_p_l.html#a4709a903b34b75ef193cdd2bf34c2dc2">bleServiceTPL</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#a5ec2640c9bbc5572591ed38be88eebe9">bleServiceBattery</a>, and <a class="el" href="../../db/d31/classble_service_h_i_d.html#a6ef2039be90de7892ccf02294bb00d2a">bleServiceHID</a>.</p>
 
 </div>
 </div>
@@ -414,7 +500,23 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Retrieve the bond white-list. </p>
+<p>Member for creating the whitelist. </p>
+<p>This API allows application to create whitelist based on bonded peer devices in module data base.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">p_whitelist</td><td>Pointer where created whitelist is provided to the application.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd>'addr_count' and 'irk_count' fields of the structure should be populated with the maximum number of devices that the application wishes to request in the whitelist. If the number of bonded devices is less than requested, the fields are updated with that number of devices. If the number of devices are more than requested, the module will populate the list with devices in the order the bond was established with the peer devices. Also, if this routine is called when a connection exists with one or more peer devices, those connected devices are not added to the whitelist.</dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NRF_SUCCESS</td><td>On success, else an error code indicating reason for failure. </td></tr>
+    <tr><td class="paramname">NRF_ERROR_INVALID_STATE</td><td>If the API is called without module initialization and/or application registration. </td></tr>
+    <tr><td class="paramname">NRF_ERROR_NULL</td><td>If p_handle or p_whitelist is NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -424,7 +526,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></li>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

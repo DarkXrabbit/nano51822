@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -157,6 +157,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ac884da959110bd1bad6029f9d57d91da"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da">get_temperature</a> (float &amp;temp)</td></tr>
 <tr class="memdesc:ac884da959110bd1bad6029f9d57d91da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the temperature measured on the nano51822.  <a href="#ac884da959110bd1bad6029f9d57d91da">More...</a><br /></td></tr>
 <tr class="separator:ac884da959110bd1bad6029f9d57d91da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">gatts_hvx_writeable</a> ()</td></tr>
+<tr class="separator:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Health Thermometer Service class. </p>
@@ -190,6 +192,30 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0deb640694dfbe4a3bfe67a23dcf3a33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t bleService::gatts_hvx_writeable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check the gatts write buffer available. </p><dl class="section warning"><dt>Warning</dt><dd>To check the write buffer available before to write a data to Notify or Indicate an attribute value. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ac884da959110bd1bad6029f9d57d91da"></a>
 <div class="memitem">
 <div class="memproto">
@@ -424,7 +450,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d3/d27/classble_service_h_t_m.html">bleServiceHTM</a></li>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

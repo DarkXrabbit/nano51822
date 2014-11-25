@@ -5,7 +5,7 @@ var classble_service_u_a_r_t =
     [ "characteristic_add", "db/d84/classble_service_u_a_r_t.html#ae2e8deccb86fb41be85b3dc19e227ae9", null ],
     [ "flush", "db/d84/classble_service_u_a_r_t.html#a5bd707b33627e01c2069b14bbf10694a", null ],
     [ "gatts_hvx_write", "db/d84/classble_service_u_a_r_t.html#a5fd45d8d7a9aeafcffea3b863e0c369e", null ],
-    [ "gatts_hvx_writeable", "db/d84/classble_service_u_a_r_t.html#a83e665c40946c21f44cdd4d961237d2b", null ],
+    [ "gatts_hvx_writeable", "db/d84/classble_service_u_a_r_t.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "gatts_value_get", "db/d84/classble_service_u_a_r_t.html#aec037610f5e08981839bc032a4d69c5c", null ],
     [ "gatts_value_set", "db/d84/classble_service_u_a_r_t.html#a797d0d03dfc264ca1b5268ee546e858a", null ],
     [ "isAvailable", "db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b", null ],

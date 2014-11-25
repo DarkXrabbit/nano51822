@@ -45,8 +45,8 @@
 #define APP_ADV_TIMEOUT						 180				    /**< The advertising timeout (in sec), device will be power off when adv. timeout. */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
-//#define BOARD_PCA10001
-#define BOARD_LILYPAD
+#define BOARD_PCA10001
+//#define BOARD_LILYPAD
 #include <config/board.h>
 
 CPin ledLeft(LED_PIN_0);
@@ -94,7 +94,7 @@ int main(void) {
 	bleDevice ble;
 	ble.enable();	// enable BLE SoftDevice task
 
-	// Button
+	// Button for clear bond white-list
 	CPin btn(17);	// P0.17
 	btn.input();
 
@@ -142,13 +142,11 @@ int main(void) {
 
 	// Optional: Appearance who you are
 	ble.m_advertising.appearance(BLE_APPEARANCE_GENERIC_KEYRING);
-	ble.m_advertising.flag(BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE);
 	ble.m_advertising.update();										// update advertisement data
 
 	// Start advertising
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.timeout(APP_ADV_TIMEOUT);
-	ble.m_advertising.mode(ADV_MODE_NO_ADV);
 	ble.m_advertising.start();
 
 	//
@@ -184,6 +182,7 @@ int main(void) {
 	uint16_t value;
 	float percentage;
 	PIN_LEVEL_T pl = HIGH;
+
 	//
     // Enter main loop.
 	//
@@ -227,6 +226,5 @@ int main(void) {
     	} else {
     		sleep(990);
     	}
-
     }
 }

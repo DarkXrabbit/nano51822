@@ -43,12 +43,9 @@
 //
 // Board LED define
 //
-#define LILYPAD		1
-
-#if LILYPAD
-#define LED0_PIN		07
-#define LED1_PIN		20
-#endif
+#define BOARD_PCA10001
+//#define BOARD_LILYPAD
+#include <config/board.h>
 
 //
 // Main Routine
@@ -100,8 +97,8 @@ int main(void) {
 	//
 	// LED
 	//
-	CPin led0(LED0_PIN);
-	CPin led1(LED1_PIN);
+	CPin led0(LED_PIN_0);
+	CPin led1(LED_PIN_1);
 	led0.output();
 	led1.output();
 

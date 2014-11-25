@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "bleServiceHID_KB", "d6/dd5/classble_service_h_i_d___k_b.html", null ],
     [ "CObject", "dc/dac/class_c_object.html", [
       [ "bleBase", "d2/dc4/classble_base.html", [
         [ "bleAdvertising", "d0/d2c/classble_advertising.html", null ],
@@ -15,6 +16,9 @@ var hierarchy =
             [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", null ]
           ] ],
           [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html", null ],
+          [ "bleServiceHID", "db/d31/classble_service_h_i_d.html", [
+            [ "bleServiceKB", "d4/da8/classble_service_k_b.html", null ]
+          ] ],
           [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", null ],
           [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", null ],
           [ "bleServiceProximity", "df/d3a/classble_service_proximity.html", null ],
@@ -33,6 +37,7 @@ var hierarchy =
         [ "CAdc", "d7/d0f/class_c_adc.html", null ],
         [ "CBus", "de/d89/class_c_bus.html", null ],
         [ "CPin", "d7/db9/class_c_pin.html", [
+          [ "CButton", "da/dbf/class_c_button.html", null ],
           [ "gpioSense", "d0/d3c/classgpio_sense.html", null ]
         ] ],
         [ "CPowerSave", "d5/d3e/class_c_power_save.html", null ],

@@ -19,12 +19,8 @@
 #ifndef BLE_DEVICE_MANAGER_H_
 #define BLE_DEVICE_MANAGER_H_
 
-/**
- * @brief Redefine the BLE SoftDevice Task stack size for the Device Manager module.
- */
-#define DEF_BLE_DEVICE_STACK_SIZE 300
-
 #include <class/ble/ble_device.h>
+#include <class/ble/nrf51/device_manager.h>
 #include <class/timeout.h>
 
 /**
@@ -69,9 +65,45 @@ public:
 	bool isLinkSecured();
 
 	/**
-	 * @brief Retrieve the bond white-list
+	 * @brief Member for creating the whitelist.
+	 *
+	 * @details This API allows application to create whitelist based on bonded peer devices in module
+	 *          data base.
+	 *
+	 * @param[in,out] p_whitelist Pointer where created whitelist is provided to the application.
+	 *
+	 * @note 'addr_count' and 'irk_count' fields of the structure should be populated with the maximum
+	 *       number of devices that the application wishes to request in the whitelist.
+	 *       If the number of bonded devices is less than requested, the fields are updated with that number of devices.
+	 *       If the number of devices are more than requested, the module will populate the list
+	 *       with devices in the order the bond was established with the peer devices. Also, if this routine is
+	 *       called when a connection exists with one or more peer devices,
+	 *       those connected devices are not added to the whitelist.
+	 *
+	 * @retval NRF_SUCCESS             On success, else an error code indicating reason for failure.
+	 * @retval NRF_ERROR_INVALID_STATE If the API is called without module initialization and/or
+	 *                                 application registration.
+	 * @retval NRF_ERROR_NULL          If p_handle or p_whitelist is NULL.
 	 */
 	uint32_t whitelist_create(ble_gap_whitelist_t *whitelist);
+
+	/**
+	 * @brief Member for getting a peer's device address.
+	 *
+	 * @param[out] p_addr   Pointer where address is to be copied. Can not be NULL.
+	 *
+	 * @retval NRF_SUCCESS             On success, else an error code indicating reason for failure.
+	 * @retval NRF_ERROR_INVALID_STATE If the API is called without module initialization and/or
+	 *                                 application registration.
+	 * @retval NRF_ERROR_NULL          If p_handle and/or p_addr is NULL.
+	 * @retval NRF_ERROR_NOT_FOUND     If the peer could not be identified.
+	 */
+	uint32_t peer_addr_get( ble_gap_addr_t  *p_peer_address);
+
+	/**
+	 * @brief Set to connect directed mode
+	 */
+	void connect_directed_mode();
 
 	/**
 	 * @brief Check the DM object is valid or not.
@@ -83,6 +115,7 @@ public:
 	//
 	~bleDeviceManager();
 	uint32_t	m_flag;
+	dm_handle_t	m_bonded_peer_handle;
 protected:
 	uint8_t    	m_app_handle;
 	void on_ble_event(ble_evt_t * p_ble_evt);

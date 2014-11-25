@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('d2/df3/classble_service_t_p_l.html','.
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d8/dbc/classble_service_t_p_l-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleServiceTPL Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -151,6 +152,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
 <tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">gatts_hvx_writeable</a> ()</td></tr>
+<tr class="separator:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Tx Power Level Service class. </p>
@@ -194,6 +200,30 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a0deb640694dfbe4a3bfe67a23dcf3a33"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static uint8_t bleService::gatts_hvx_writeable </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Check the gatts write buffer available. </p><dl class="section warning"><dt>Warning</dt><dd>To check the write buffer available before to write a data to Notify or Indicate an attribute value. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ae5045731a748b41a5153496d8fcb7257"></a>
 <div class="memitem">
 <div class="memproto">
@@ -218,7 +248,7 @@ Public Member Functions</h2></td></tr>
 <p>Check the service available. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, <a class="el" href="../../db/d31/classble_service_h_i_d.html#a1a7d9c5da8c2de4a08d76eb0e29d0ef2">bleServiceHID</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
 
 </div>
 </div>
@@ -359,7 +389,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d2/df3/classble_service_t_p_l.html">bleServiceTPL</a></li>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

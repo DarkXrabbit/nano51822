@@ -21,9 +21,11 @@ var searchData=
   ['address',['address',['../d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3',1,'bleDevice']]],
   ['addtail',['addTail',['../df/db6/class_c_list.html#a81c34b9127ccce385b6699b9eaa799d1',1,'CList']]],
   ['addtailt',['addTailT',['../da/d59/class_c_list_t.html#a580d6fa5153806358134cda4fdd7810e',1,'CListT']]],
+  ['adv_5fmode_5fdirected',['ADV_MODE_DIRECTED',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a6ec733f78a5c7cb468337427c5767eee',1,'ble_advertising.h']]],
   ['adv_5fmode_5ffast',['ADV_MODE_FAST',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d',1,'ble_advertising.h']]],
   ['adv_5fmode_5fno_5fadv',['ADV_MODE_NO_ADV',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02',1,'ble_advertising.h']]],
   ['adv_5fmode_5fnormal',['ADV_MODE_NORMAL',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a27e4e36835941035ecce9ec853024ab7',1,'ble_advertising.h']]],
+  ['adv_5fmode_5fprev_5fdirected',['ADV_MODE_PREV_DIRECTED',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a8a4c552169582c0c986c93ea25ae88db',1,'ble_advertising.h']]],
   ['adv_5fmode_5fprev_5fnormal',['ADV_MODE_PREV_NORMAL',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782',1,'ble_advertising.h']]],
   ['adv_5fmode_5fwhitelist',['ADV_MODE_WHITELIST',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5',1,'ble_advertising.h']]],
   ['adv_5fstart_5fmode_5ft',['ADV_START_MODE_T',['../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760',1,'ble_advertising.h']]],
@@ -44,6 +46,7 @@ var searchData=
   ['aref_5f1',['AREF_1',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a29eae4ee54152033dd962f9902b0a9e3',1,'adc.h']]],
   ['aref_5ft',['AREF_T',['../db/dff/group___enumerations.html#gae0520f31b1985f1579b0568eaf20a624',1,'adc.h']]],
   ['aref_5fvbg',['AREF_VBG',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3',1,'adc.h']]],
+  ['attach_5fkey_5fled_5fcaps',['attach_key_led_caps',['../d4/da8/classble_service_k_b.html#a2754b8dee3437643f45b89b582811774',1,'bleServiceKB']]],
   ['attachevent',['attachEvent',['../d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2',1,'bleDevice']]],
   ['available',['available',['../d8/d1d/class_c_serial.html#a5c142221c0841e7c961e962c45bd2db7',1,'CSerial::available()'],['../de/dba/class_c_shell.html#a86ec9b3db5d7c467535064ea94e1d9c0',1,'CShell::available()'],['../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae',1,'CStream::available()'],['../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065',1,'CDebug::available()']]]
 ];

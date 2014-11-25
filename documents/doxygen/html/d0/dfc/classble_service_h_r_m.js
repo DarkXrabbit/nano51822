@@ -1,6 +1,7 @@
 var classble_service_h_r_m =
 [
     [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af", null ],
+    [ "gatts_hvx_writeable", "d0/dfc/classble_service_h_r_m.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "isAvailable", "d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3", null ],
     [ "isThread", "d0/dfc/classble_service_h_r_m.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d0/dfc/classble_service_h_r_m.html#a18cf254bf2030ba75735238fc1a31f4d", null ],

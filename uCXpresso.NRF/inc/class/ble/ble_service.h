@@ -62,6 +62,14 @@ public:
 protected:
 	bleBase	*m_p_ble;
 	/// @endcond
+
+	/**
+	 *	@breif Check the gatts write buffer available.
+	 *	@warning To check the write buffer available before to write a data to Notify or Indicate an attribute value.
+	 */
+	static uint8_t gatts_hvx_writeable();
 };
+
+extern "C" void service_error_handler(uint32_t nrf_error);
 
 #endif /* BLE_SERVICE_H_ */

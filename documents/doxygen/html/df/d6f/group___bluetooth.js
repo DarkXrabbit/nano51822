@@ -25,8 +25,9 @@ var group___bluetooth =
       [ "isValid", "d2/dc4/classble_base.html#a18cf254bf2030ba75735238fc1a31f4d", null ]
     ] ],
     [ "bleConnParams", "d9/d8b/classble_conn_params.html", [
-      [ "bleConnParams", "d9/d8b/classble_conn_params.html#a251404b93fbbd5e3dc82e19b533df9de", null ],
+      [ "bleConnParams", "d9/d8b/classble_conn_params.html#a0b781babdb834353c86a86286bd69017", null ],
       [ "change", "d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2", null ],
+      [ "gatts_hvx_writeable", "d9/d8b/classble_conn_params.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d9/d8b/classble_conn_params.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isThread", "d9/d8b/classble_conn_params.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d9/d8b/classble_conn_params.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -42,7 +43,7 @@ var group___bluetooth =
       [ "address", "d6/d49/classble_device.html#a9a8754a9e9579f2e4e0e1428795c4bf3", null ],
       [ "attachEvent", "d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2", null ],
       [ "detachEvent", "d6/d49/classble_device.html#a018a6e38a8397c14d3c328a65d8b8665", null ],
-      [ "enable", "d6/d49/classble_device.html#a0f96f5963ce1e317264a2059553b15fb", null ],
+      [ "enable", "d6/d49/classble_device.html#a32defabfb5157cc02eefbe2d2da1242d", null ],
       [ "information", "d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230", null ],
       [ "Init", "d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d", null ],
       [ "isConnected", "d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1", null ],
@@ -59,10 +60,13 @@ var group___bluetooth =
     ] ],
     [ "bleDeviceManager", "d9/d34/classble_device_manager.html", [
       [ "bleDeviceManager", "d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87", null ],
+      [ "connect_directed_mode", "d9/d34/classble_device_manager.html#a2d3ada8de8be054ffa1beb191d887664", null ],
+      [ "gatts_hvx_writeable", "d9/d34/classble_device_manager.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d9/d34/classble_device_manager.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isLinkSecured", "d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46", null ],
       [ "isThread", "d9/d34/classble_device_manager.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94", null ],
+      [ "peer_addr_get", "d9/d34/classble_device_manager.html#abafee9b8b168ded797c8e9e762ba26b0", null ],
       [ "uuid", "d9/d34/classble_device_manager.html#aa34f2ea80269787a549a98e13bddb44f", null ],
       [ "uuid_type", "d9/d34/classble_device_manager.html#a8931a117eb7be5a52455b53459b0df62", null ],
       [ "whitelist_create", "d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e", null ]
@@ -77,6 +81,7 @@ var group___bluetooth =
     ] ],
     [ "bleRSSI", "d7/d80/classble_r_s_s_i.html", [
       [ "bleRSSI", "d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f", null ],
+      [ "gatts_hvx_writeable", "d7/d80/classble_r_s_s_i.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d", null ],
       [ "isThread", "d7/d80/classble_r_s_s_i.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d7/d80/classble_r_s_s_i.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -88,6 +93,7 @@ var group___bluetooth =
     ] ],
     [ "bleService", "da/d80/classble_service.html", [
       [ "bleService", "da/d80/classble_service.html#aabb34dad2925ff07d84bc4507db2a328", null ],
+      [ "gatts_hvx_writeable", "da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isThread", "da/d80/classble_service.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "da/d80/classble_service.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -96,6 +102,7 @@ var group___bluetooth =
     ] ],
     [ "bleServiceBattery", "d5/ded/classble_service_battery.html", [
       [ "bleServiceBattery", "d5/ded/classble_service_battery.html#a17008aba31ec39d56a9a823ee0af3088", null ],
+      [ "gatts_hvx_writeable", "d5/ded/classble_service_battery.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d", null ],
       [ "isThread", "d5/ded/classble_service_battery.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d5/ded/classble_service_battery.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -106,6 +113,7 @@ var group___bluetooth =
     [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html", [
       [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html#aba9a00907aba6c980314e25ae7aa5871", null ],
       [ "cumulative_wheel_revs", "d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b", null ],
+      [ "gatts_hvx_writeable", "d7/d93/classble_service_c_s_c.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "is_auto_calibration_in_progress", "d7/d93/classble_service_c_s_c.html#aa236dc019b0d6bce15b956661bcd82e8", null ],
       [ "isAvailable", "d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f", null ],
       [ "isThread", "d7/d93/classble_service_c_s_c.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
@@ -120,7 +128,7 @@ var group___bluetooth =
       [ "bleServiceCustomer", "de/d51/classble_service_customer.html#a8663dee466242f2475a79e0066b2106c", null ],
       [ "characteristic_add", "de/d51/classble_service_customer.html#ae2e8deccb86fb41be85b3dc19e227ae9", null ],
       [ "gatts_hvx_write", "de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e", null ],
-      [ "gatts_hvx_writeable", "de/d51/classble_service_customer.html#a83e665c40946c21f44cdd4d961237d2b", null ],
+      [ "gatts_hvx_writeable", "de/d51/classble_service_customer.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "gatts_value_get", "de/d51/classble_service_customer.html#aec037610f5e08981839bc032a4d69c5c", null ],
       [ "gatts_value_set", "de/d51/classble_service_customer.html#a797d0d03dfc264ca1b5268ee546e858a", null ],
       [ "isAvailable", "de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1", null ],
@@ -135,14 +143,26 @@ var group___bluetooth =
       [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html#a179c0f771e6e016f0c8d87c6bb3052a9", null ],
       [ "disable", "d6/d2e/classble_service_d_f_u.html#ad166ec542b74c006b7015c7d92288b0a", null ],
       [ "enable", "d6/d2e/classble_service_d_f_u.html#ae2a099b8303c7e236581922141f36531", null ],
+      [ "gatts_hvx_writeable", "d6/d2e/classble_service_d_f_u.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce", null ],
       [ "isThread", "d6/d2e/classble_service_d_f_u.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d6/d2e/classble_service_d_f_u.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
       [ "uuid", "d6/d2e/classble_service_d_f_u.html#aa34f2ea80269787a549a98e13bddb44f", null ],
       [ "uuid_type", "d6/d2e/classble_service_d_f_u.html#a0c6deb48531bb020934e9a1ffb4e351f", null ]
     ] ],
+    [ "bleServiceHID", "db/d31/classble_service_h_i_d.html", [
+      [ "bleServiceHID", "db/d31/classble_service_h_i_d.html#ac76aa890d15d204efb977b07d07b6b0f", null ],
+      [ "gatts_hvx_writeable", "db/d31/classble_service_h_i_d.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
+      [ "isAvailable", "db/d31/classble_service_h_i_d.html#a1a7d9c5da8c2de4a08d76eb0e29d0ef2", null ],
+      [ "isThread", "db/d31/classble_service_h_i_d.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "db/d31/classble_service_h_i_d.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "uuid", "db/d31/classble_service_h_i_d.html#a6ef2039be90de7892ccf02294bb00d2a", null ],
+      [ "uuid_type", "db/d31/classble_service_h_i_d.html#a8931a117eb7be5a52455b53459b0df62", null ]
+    ] ],
+    [ "bleServiceHID_KB", "d6/dd5/classble_service_h_i_d___k_b.html", null ],
     [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", [
       [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html#a10cc4a24d389a5f174aa652ecfcaa3af", null ],
+      [ "gatts_hvx_writeable", "d0/dfc/classble_service_h_r_m.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3", null ],
       [ "isThread", "d0/dfc/classble_service_h_r_m.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d0/dfc/classble_service_h_r_m.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -155,6 +175,7 @@ var group___bluetooth =
     ] ],
     [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", [
       [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html#afcec1b32117676556d63b52916e9d650", null ],
+      [ "gatts_hvx_writeable", "d3/d27/classble_service_h_t_m.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "get_temperature", "d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da", null ],
       [ "isAvailable", "d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f", null ],
       [ "isThread", "d3/d27/classble_service_h_t_m.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
@@ -165,6 +186,7 @@ var group___bluetooth =
     ] ],
     [ "bleServiceProximity", "df/d3a/classble_service_proximity.html", [
       [ "bleServiceProximity", "df/d3a/classble_service_proximity.html#a6e2e7c6fc83306cc86bf09053430983d", null ],
+      [ "gatts_hvx_writeable", "df/d3a/classble_service_proximity.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455", null ],
       [ "isThread", "df/d3a/classble_service_proximity.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "df/d3a/classble_service_proximity.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -178,6 +200,7 @@ var group___bluetooth =
     ] ],
     [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html", [
       [ "bleServiceRSC", "de/dc0/classble_service_r_s_c.html#a7881093c8c12b3fe83ae2ad5e17f9515", null ],
+      [ "gatts_hvx_writeable", "de/dc0/classble_service_r_s_c.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c", null ],
       [ "isThread", "de/dc0/classble_service_r_s_c.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "de/dc0/classble_service_r_s_c.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -187,6 +210,7 @@ var group___bluetooth =
     ] ],
     [ "bleServiceTPL", "d2/df3/classble_service_t_p_l.html", [
       [ "bleServiceTPL", "d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b", null ],
+      [ "gatts_hvx_writeable", "d2/df3/classble_service_t_p_l.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d2/df3/classble_service_t_p_l.html#ae5045731a748b41a5153496d8fcb7257", null ],
       [ "isThread", "d2/df3/classble_service_t_p_l.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d2/df3/classble_service_t_p_l.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
@@ -200,7 +224,7 @@ var group___bluetooth =
       [ "characteristic_add", "db/d84/classble_service_u_a_r_t.html#ae2e8deccb86fb41be85b3dc19e227ae9", null ],
       [ "flush", "db/d84/classble_service_u_a_r_t.html#a5bd707b33627e01c2069b14bbf10694a", null ],
       [ "gatts_hvx_write", "db/d84/classble_service_u_a_r_t.html#a5fd45d8d7a9aeafcffea3b863e0c369e", null ],
-      [ "gatts_hvx_writeable", "db/d84/classble_service_u_a_r_t.html#a83e665c40946c21f44cdd4d961237d2b", null ],
+      [ "gatts_hvx_writeable", "db/d84/classble_service_u_a_r_t.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "gatts_value_get", "db/d84/classble_service_u_a_r_t.html#aec037610f5e08981839bc032a4d69c5c", null ],
       [ "gatts_value_set", "db/d84/classble_service_u_a_r_t.html#a797d0d03dfc264ca1b5268ee546e858a", null ],
       [ "isAvailable", "db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b", null ],

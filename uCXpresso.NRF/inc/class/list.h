@@ -29,10 +29,11 @@ typedef void* LIST_POS;
  */
 typedef void* ELEM_PTR;
 
-/**CList class provides the data list service.
- * \class CList list.h "class/list.h"
- * \note The CList class will use the CMutex to synchronize the list chain in multi-tasking.
- * \ingroup Miscellaneous
+/**
+ * @brief CList class provides the data list service.
+ * @class CList list.h "class/list.h"
+ * @note The CList class will use the CMutex to synchronize the list chain in multi-tasking.
+ * @ingroup Miscellaneous
  */
 class CList: public CObject {
 public:

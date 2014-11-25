@@ -1,6 +1,7 @@
 var classble_service =
 [
     [ "bleService", "da/d80/classble_service.html#aabb34dad2925ff07d84bc4507db2a328", null ],
+    [ "gatts_hvx_writeable", "da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "isAvailable", "da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257", null ],
     [ "isThread", "da/d80/classble_service.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "da/d80/classble_service.html#a18cf254bf2030ba75735238fc1a31f4d", null ],

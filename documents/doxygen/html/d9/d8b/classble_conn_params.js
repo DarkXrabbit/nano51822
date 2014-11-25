@@ -1,7 +1,8 @@
 var classble_conn_params =
 [
-    [ "bleConnParams", "d9/d8b/classble_conn_params.html#a251404b93fbbd5e3dc82e19b533df9de", null ],
+    [ "bleConnParams", "d9/d8b/classble_conn_params.html#a0b781babdb834353c86a86286bd69017", null ],
     [ "change", "d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2", null ],
+    [ "gatts_hvx_writeable", "d9/d8b/classble_conn_params.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "isAvailable", "d9/d8b/classble_conn_params.html#ae5045731a748b41a5153496d8fcb7257", null ],
     [ "isThread", "d9/d8b/classble_conn_params.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d9/d8b/classble_conn_params.html#a18cf254bf2030ba75735238fc1a31f4d", null ],

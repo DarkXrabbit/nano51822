@@ -20,8 +20,8 @@ extern "C" {
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		2
-#define uCXpresso_VER_RC		1
-#define uCXpresso_VER_BUILD		"2014/11/24"
+#define uCXpresso_VER_RC		2
+#define uCXpresso_VER_BUILD		"2014/11/26"
 #define uCXpresso_VER_STR		"V1.0.2"
 
 //
@@ -123,7 +123,7 @@ typedef void* 				xHandle;
 // Core
 //
 extern uint32_t MAIN_STACK_SIZE;
-#define DEF_MAIN_STACK_SIZE		256
+#define DEF_MAIN_STACK_SIZE		360
 #define USB_MEM_BASE			0x20004000
 #define USB_MEM_SIZE			0x7FC
 extern void system_reset(void);

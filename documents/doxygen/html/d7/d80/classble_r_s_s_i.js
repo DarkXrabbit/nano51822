@@ -1,6 +1,7 @@
 var classble_r_s_s_i =
 [
     [ "bleRSSI", "d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f", null ],
+    [ "gatts_hvx_writeable", "d7/d80/classble_r_s_s_i.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "isAvailable", "d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d", null ],
     [ "isThread", "d7/d80/classble_r_s_s_i.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d7/d80/classble_r_s_s_i.html#a18cf254bf2030ba75735238fc1a31f4d", null ],

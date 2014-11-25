@@ -70,13 +70,6 @@ enum BLE_EVENT_T {
 };
 
 /**
- * @brief default the BLE SoftDevice Task stack size
- */
-#ifndef DEF_BLE_DEVICE_STACK_SIZE
-#define DEF_BLE_DEVICE_STACK_SIZE	72
-#endif
-
-/**
  * @brief 	BLE Device Class (SoftDevice).
  * @class 	bleDevice ble_device.h "class/ble/ble_device.h"
  *
@@ -110,7 +103,7 @@ public:
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable(uint32_t stack=DEF_BLE_DEVICE_STACK_SIZE);
+	uint32_t enable();
 
 	/**
 	 * @brief Wait for connected.

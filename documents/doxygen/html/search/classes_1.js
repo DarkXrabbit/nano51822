@@ -2,6 +2,7 @@ var searchData=
 [
   ['cadc',['CAdc',['../d7/d0f/class_c_adc.html',1,'']]],
   ['cbus',['CBus',['../de/d89/class_c_bus.html',1,'']]],
+  ['cbutton',['CButton',['../da/dbf/class_c_button.html',1,'']]],
   ['cdebug',['CDebug',['../d4/d37/class_c_debug.html',1,'']]],
   ['ceventbit',['CEventBit',['../dd/d60/class_c_event_bit.html',1,'']]],
   ['ckalman',['CKalman',['../d7/d4b/class_c_kalman.html',1,'']]],

@@ -5,6 +5,7 @@ var searchData=
   ['parseint',['parseInt',['../de/dba/class_c_shell.html#a0d9864ff2c6b6a993caf83cf8b8c91bc',1,'CShell::parseInt()'],['../d4/d16/class_c_stream.html#af60d539c037589ae50b495fe213dda0b',1,'CStream::parseInt()'],['../df/d99/class_c_string.html#ae2a38906f68dcf94b131ead8adf3f5b7',1,'CString::parseInt()'],['../d4/d37/class_c_debug.html#ae672458ef356e3c208f43397b2dd81d4',1,'CDebug::parseInt()']]],
   ['parsestring',['parseString',['../d4/d16/class_c_stream.html#aa314dfe6e8cf3c1da9ad6a6de2d2618e',1,'CStream']]],
   ['peek',['peek',['../d8/d26/class_c_mail_box.html#adc923a33209756bb2ed9e1838b12b68c',1,'CMailBox']]],
+  ['peer_5faddr_5fget',['peer_addr_get',['../d9/d34/classble_device_manager.html#abafee9b8b168ded797c8e9e762ba26b0',1,'bleDeviceManager']]],
   ['period',['period',['../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d',1,'hwPWM::period()'],['../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116',1,'swPWM::period()']]],
   ['pin',['pin',['../d7/d0f/class_c_adc.html#a84c5a06a5d4d8ee65d75fcb16b1f2910',1,'CAdc::pin()'],['../de/d89/class_c_bus.html#a94da38619defc1c41c16c04c4c7991f8',1,'CBus::pin()'],['../d7/db9/class_c_pin.html#aff5e5fcd8b9a6de40bc5d262d21a2512',1,'CPin::pin()']]],
   ['post',['post',['../d8/d26/class_c_mail_box.html#a5ab581cd317944e824efbbc6f7f4d14d',1,'CMailBox::post(MESSAGE_T msg, uint32_t timeout=MAX_DELAY_TIME)'],['../d8/d26/class_c_mail_box.html#a96075bbd5308e6b1d0aaf5bd5fa2e645',1,'CMailBox::post(LPCTSTR name, MESSAGE_T msg, uint32_t timeout=0)']]],

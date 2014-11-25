@@ -1,10 +1,24 @@
 var searchData=
 [
-  ['pri_5fhardware',['PRI_HARDWARE',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5',1,'thread.h']]],
-  ['pri_5fhigh',['PRI_HIGH',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b',1,'thread.h']]],
-  ['pri_5flow',['PRI_LOW',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402',1,'thread.h']]],
-  ['pri_5fmedium',['PRI_MEDIUM',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da79f9a58f2b2fb4dcce4589cd93a5e3f8',1,'thread.h']]],
-  ['pwm_5fch_5f1',['PWM_CH_1',['../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71',1,'hw_pwm.h']]],
-  ['pwm_5fch_5f2',['PWM_CH_2',['../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded',1,'hw_pwm.h']]],
-  ['pwm_5fch_5f3',['PWM_CH_3',['../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db',1,'hw_pwm.h']]]
+  ['neither',['NEITHER',['../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa013572cb02b52b1022858df73a528a08',1,'pin.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5f1000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_1000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a9484e726bc97ad4865d3435ea62a4035',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5f2000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_2000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a614621ff67763ec5b4c189beedef33bc',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5f250ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_250MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ab546387a555fe466a38e7df7788fe1dc',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5f4000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_4000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a695054356271e58fe6656e173a64dd00',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5f500ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_500MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a20f9dfebab100c2f4ef5029f84a071aa',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5f8000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_8000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a0781c514bf59deb42d0a2fe61f4b1bc2',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5ftemp_5f1000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_TEMP_1000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a2933849638e6ee1d5ecec554e120210a',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5ftemp_5f16000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_TEMP_16000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422af3639fb5021af790e4d2e281a559bba8',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5ftemp_5f2000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_TEMP_2000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a2145f2a0310e339cfbfd8047c370635d',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5ftemp_5f4000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_TEMP_4000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ac83601888d9e98261111dbf6a0f0582d',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5frc_5f250_5fppm_5ftemp_5f8000ms_5fcalibration',['NRF_LFCLKSRC_RC_250_PPM_TEMP_8000MS_CALIBRATION',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a0aec008a602316c6921ff512d02bf0c0',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fsynth_5f250_5fppm',['NRF_LFCLKSRC_SYNTH_250_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f100_5fppm',['NRF_LFCLKSRC_XTAL_100_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a781e45eaf0ce7ac641eb6c94c93541dc',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f150_5fppm',['NRF_LFCLKSRC_XTAL_150_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ac922340faf8416365611f6b21994da75',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f20_5fppm',['NRF_LFCLKSRC_XTAL_20_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aa0426ca890955f38c19238b687f2559b',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f250_5fppm',['NRF_LFCLKSRC_XTAL_250_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ac095e3efc3184ddb2bfb8c5b50c8ce49',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f30_5fppm',['NRF_LFCLKSRC_XTAL_30_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a863913d10ff975b54e842ef41f2d6d37',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f500_5fppm',['NRF_LFCLKSRC_XTAL_500_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f50_5fppm',['NRF_LFCLKSRC_XTAL_50_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422ac40fbb4b15c19a6bea601c9978d9499b',1,'ble_device.h']]],
+  ['nrf_5flfclksrc_5fxtal_5f75_5fppm',['NRF_LFCLKSRC_XTAL_75_PPM',['../db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a986b68bd5f0e3460ea0119c339cbd430',1,'ble_device.h']]]
 ];

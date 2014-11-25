@@ -30,6 +30,7 @@
 #define DEF_ADV_FAST_INTERVAL			25		// for bond connection, adv. interval = 25ms
 #define DEF_ADV_FAST_TIMEOUT			40		// for bond connection, adv. timeout = 40 sec.
 #define DEF_ADV_FAST_WHITELIST_TIMEOUT	20		// for bond white-list, adv. timeout = 20 sec.
+#define DEF_DIRECTED_ADV_TIMEOUT         5		// number of direct advertisement (each lasting 1.28seconds).
 
 #define MAX_ADV_UUID_COMPLETE_LIST	16
 
@@ -52,6 +53,8 @@ enum ADV_START_MODE_T {
 	ADV_MODE_NORMAL = 0,	// default
 	ADV_MODE_PREV_NORMAL,
 	ADV_MODE_FAST,
+	ADV_MODE_DIRECTED,
+	ADV_MODE_PREV_DIRECTED,
 	ADV_MODE_WHITELIST,
 	ADV_MODE_NO_ADV			// for bond connection
 };
@@ -170,11 +173,12 @@ public:
 	}
 protected:
 	ble_advdata_t			 m_adv_data;
-	int8_t					 m_tx_power_level;
 	ble_uuid_t				*m_uuid_list;
+	int8_t					 m_tx_power_level;
 	uint8_t					 m_uuid_count;
 	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
+	uint8_t					 m_direct_adv_cnt;
 	uint16_t				 m_adv_interval;
 	uint16_t				 m_adv_timeout;
 	ADV_START_MODE_T		 m_adv_start_mode;

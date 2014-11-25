@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -123,55 +123,61 @@ $(document).ready(function(){initNavTree('db/d38/ble__device__manager_8h_source.
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#ifndef BLE_DEVICE_MANAGER_H_</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#define BLE_DEVICE_MANAGER_H_</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define DEF_BLE_DEVICE_STACK_SIZE 300</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;class/timeout.h&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../d9/d34/classble_device_manager.html">   35</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87">bleDeviceManager</a>( <a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                      <span class="keywordtype">bool</span> clearAllBoundedCentrals = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                      uint8_t timeout = 30,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                      uint8_t bond = 1,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                      uint8_t mitm = 0,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                      uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                      uint8_t oob = 0,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                      uint8_t minKeySize = 7,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                      uint8_t maxKeySize = 16);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46">isLinkSecured</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    uint32_t <a class="code" href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">whitelist_create</a>(ble_gap_whitelist_t *whitelist);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94">isValid</a>();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    ~<a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a>();</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    uint32_t    m_flag;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    uint8_t     m_app_handle;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> on_ble_event(ble_evt_t * p_ble_evt);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;};</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> *gpDM;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_DEVICE_MANAGER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;class/ble/nrf51/device_manager.h&gt;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;class/timeout.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d9/d34/classble_device_manager.html">   31</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <a class="code" href="../../d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87">bleDeviceManager</a>( <a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                      <span class="keywordtype">bool</span> clearAllBoundedCentrals = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                      uint8_t timeout = 30,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                      uint8_t bond = 1,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                      uint8_t mitm = 0,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                      uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                      uint8_t oob = 0,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                      uint8_t minKeySize = 7,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                      uint8_t maxKeySize = 16);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46">isLinkSecured</a>();</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    uint32_t <a class="code" href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">whitelist_create</a>(ble_gap_whitelist_t *whitelist);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    uint32_t <a class="code" href="../../d9/d34/classble_device_manager.html#abafee9b8b168ded797c8e9e762ba26b0">peer_addr_get</a>( ble_gap_addr_t  *p_peer_address);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d34/classble_device_manager.html#a2d3ada8de8be054ffa1beb191d887664">connect_directed_mode</a>();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94">isValid</a>();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    ~<a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    uint32_t    m_flag;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    dm_handle_t m_bonded_peer_handle;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    uint8_t     m_app_handle;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> on_ble_event(ble_evt_t * p_ble_evt);</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;};</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;<span class="keyword">extern</span> <a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> *gpDM;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_DEVICE_MANAGER_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classble_device_manager_html_a6956c43041ec56379a2467bc3aa45d94"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94">bleDeviceManager::isValid</a></div><div class="ttdeci">virtual bool isValid()</div><div class="ttdoc">Check the DM object is valid or not. </div></div>
 <div class="ttc" id="classble_device_manager_html_a3cc4d28c35e4aa91c1f19f3f70589b46"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46">bleDeviceManager::isLinkSecured</a></div><div class="ttdeci">bool isLinkSecured()</div><div class="ttdoc">Indicates that link with the peer is secured. </div></div>
-<div class="ttc" id="classble_device_manager_html"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></div><div class="ttdoc">BLE Device Management. </div><div class="ttdef"><b>Definition:</b> ble_device_manager.h:35</div></div>
-<div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:88</div></div>
-<div class="ttc" id="classble_device_manager_html_ae42dc03b199247bb499514a2167fb82e"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">bleDeviceManager::whitelist_create</a></div><div class="ttdeci">uint32_t whitelist_create(ble_gap_whitelist_t *whitelist)</div><div class="ttdoc">Retrieve the bond white-list. </div></div>
+<div class="ttc" id="classble_device_manager_html"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></div><div class="ttdoc">BLE Device Management. </div><div class="ttdef"><b>Definition:</b> ble_device_manager.h:31</div></div>
+<div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:81</div></div>
+<div class="ttc" id="classble_device_manager_html_ae42dc03b199247bb499514a2167fb82e"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">bleDeviceManager::whitelist_create</a></div><div class="ttdeci">uint32_t whitelist_create(ble_gap_whitelist_t *whitelist)</div><div class="ttdoc">Member for creating the whitelist. </div></div>
 <div class="ttc" id="classble_device_manager_html_a03a4363ab8efef0e951d155144612d87"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87">bleDeviceManager::bleDeviceManager</a></div><div class="ttdeci">bleDeviceManager(bleDevice &amp;ble, bool clearAllBoundedCentrals=false, uint8_t timeout=30, uint8_t bond=1, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</div><div class="ttdoc">Device Manager settings. </div></div>
+<div class="ttc" id="classble_device_manager_html_a2d3ada8de8be054ffa1beb191d887664"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#a2d3ada8de8be054ffa1beb191d887664">bleDeviceManager::connect_directed_mode</a></div><div class="ttdeci">void connect_directed_mode()</div><div class="ttdoc">Set to connect directed mode. </div></div>
 <div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
+<div class="ttc" id="classble_device_manager_html_abafee9b8b168ded797c8e9e762ba26b0"><div class="ttname"><a href="../../d9/d34/classble_device_manager.html#abafee9b8b168ded797c8e9e762ba26b0">bleDeviceManager::peer_addr_get</a></div><div class="ttdeci">uint32_t peer_addr_get(ble_gap_addr_t *p_peer_address)</div><div class="ttdoc">Member for getting a peer&#39;s device address. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_device_manager.h</b></li>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:56 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['cbus',['CBus',['../de/d89/class_c_bus.html#a03bb378921772d204c60958d7e8c0702',1,'CBus']]],
+  ['cbutton',['CButton',['../da/dbf/class_c_button.html#a38b604793fabc3d654224250b4446fe8',1,'CButton']]],
   ['cdebug',['CDebug',['../d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e',1,'CDebug']]],
   ['change',['change',['../d9/d8b/classble_conn_params.html#a9fcb573363b5178e53a9639acdf967c2',1,'bleConnParams']]],
   ['characteristic_5fadd',['characteristic_add',['../de/d51/classble_service_customer.html#ae2e8deccb86fb41be85b3dc19e227ae9',1,'bleServiceCustomer']]],
@@ -10,6 +11,7 @@ var searchData=
   ['clr',['clr',['../dd/d60/class_c_event_bit.html#ade8e4420bd49ab351417ca955bb293e3',1,'CEventBit']]],
   ['cmailbox',['CMailBox',['../d8/d26/class_c_mail_box.html#a860c64ec622b6bb2641f8e69748ba9e6',1,'CMailBox']]],
   ['commpany_5fidentifier',['commpany_identifier',['../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be',1,'bleAdvertising']]],
+  ['connect_5fdirected_5fmode',['connect_directed_mode',['../d9/d34/classble_device_manager.html#a2d3ada8de8be054ffa1beb191d887664',1,'bleDeviceManager']]],
   ['console',['Console',['../d6/d56/class_console.html#a8374ffffac8edeaa0775bdd1923bdc10',1,'Console']]],
   ['copy',['copy',['../df/d99/class_c_string.html#a181b18bf81568cee519617106706963f',1,'CString::copy(CString &amp;str)'],['../df/d99/class_c_string.html#a98fd9f07225ffd32a683d0ffe3e70bac',1,'CString::copy(LPCTSTR str, int length)']]],
   ['count',['count',['../de/d89/class_c_bus.html#a4fa0e4c537c237278fe8092f4d8e26fb',1,'CBus::count()'],['../df/db6/class_c_list.html#aba5942fb294f8f3381bef96ffc8f5054',1,'CList::count()'],['../d8/d26/class_c_mail_box.html#a11592da3e55cf9bedc8d2cf36d56e9bd',1,'CMailBox::count()'],['../da/d88/classsw_p_w_m.html#a7dbbba82fb6124980b9392031011f383',1,'swPWM::count()'],['../d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0',1,'CThread::count()']]],

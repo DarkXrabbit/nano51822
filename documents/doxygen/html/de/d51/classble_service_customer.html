@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -108,6 +108,7 @@ $(document).ready(function(){initNavTree('de/d51/classble_service_customer.html'
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="../../d5/d55/classble_service_customer-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -153,6 +154,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
 <tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memItemLeft" align="right" valign="top">static uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">gatts_hvx_writeable</a> ()</td></tr>
+<tr class="separator:a0deb640694dfbe4a3bfe67a23dcf3a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a8b89488b128d89de00fb94de771afaec"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a8b89488b128d89de00fb94de771afaec">service</a> (const ble_uuid128_t *base_uuid, uint16_t service_uuid)</td></tr>
@@ -167,8 +173,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aec037610f5e08981839bc032a4d69c5c"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#aec037610f5e08981839bc032a4d69c5c">gatts_value_get</a> (ble_gatts_char_handles_t &amp;char_handle, uint8_t *buffer, uint16_t length, uint16_t offset=0)</td></tr>
 <tr class="memdesc:aec037610f5e08981839bc032a4d69c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a given attribute.  <a href="#aec037610f5e08981839bc032a4d69c5c">More...</a><br /></td></tr>
 <tr class="separator:aec037610f5e08981839bc032a4d69c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a83e665c40946c21f44cdd4d961237d2b"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a83e665c40946c21f44cdd4d961237d2b">gatts_hvx_writeable</a> ()</td></tr>
-<tr class="separator:a83e665c40946c21f44cdd4d961237d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e">gatts_hvx_write</a> (ble_gatts_char_handles_t &amp;char_handle, uint8_t *buffer, uint16_t length, <a class="el" href="../../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2">HVX_WRITE_T</a> type)</td></tr>
 <tr class="memdesc:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify or Indicate an attribute value.  <a href="#a5fd45d8d7a9aeafcffea3b863e0c369e">More...</a><br /></td></tr>
 <tr class="separator:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -326,7 +330,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 
 </div>
 </div>
-<a class="anchor" id="a83e665c40946c21f44cdd4d961237d2b"></a>
+<a class="anchor" id="a0deb640694dfbe4a3bfe67a23dcf3a33"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -334,7 +338,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual uint8_t bleServiceCustomer::gatts_hvx_writeable </td>
+          <td class="memname">static uint8_t bleService::gatts_hvx_writeable </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -342,7 +346,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -684,7 +688,7 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/d51/classble_service_customer.html">bleServiceCustomer</a></li>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

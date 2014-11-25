@@ -1,6 +1,7 @@
 var classble_service_proximity =
 [
     [ "bleServiceProximity", "df/d3a/classble_service_proximity.html#a6e2e7c6fc83306cc86bf09053430983d", null ],
+    [ "gatts_hvx_writeable", "df/d3a/classble_service_proximity.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "isAvailable", "df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455", null ],
     [ "isThread", "df/d3a/classble_service_proximity.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "df/d3a/classble_service_proximity.html#a18cf254bf2030ba75735238fc1a31f4d", null ],

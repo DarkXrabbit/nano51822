@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -153,9 +153,11 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a27e4e36835941035ecce9ec853024ab7">ADV_MODE_NORMAL</a> = 0, 
 <a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782">ADV_MODE_PREV_NORMAL</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d">ADV_MODE_FAST</a>, 
-<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5">ADV_MODE_WHITELIST</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a6ec733f78a5c7cb468337427c5767eee">ADV_MODE_DIRECTED</a>, 
 <br />
-&#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02">ADV_MODE_NO_ADV</a>
+&#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a8a4c552169582c0c986c93ea25ae88db">ADV_MODE_PREV_DIRECTED</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5">ADV_MODE_WHITELIST</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02">ADV_MODE_NO_ADV</a>
 <br />
  }</td></tr>
 <tr class="memdesc:gab9a29fe1badaeaf8c8d540d20f986760"><td class="mdescLeft">&#160;</td><td class="mdescRight">Advertising Start Mode.  <a href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">More...</a><br /></td></tr>
@@ -215,6 +217,11 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:gaea1819f50414834e55b0387c666e58e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">GATT Handle Value operations.  <a href="../../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2">More...</a><br /></td></tr>
 <tr class="separator:gaea1819f50414834e55b0387c666e58e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae64134ad7082495adc1c8d60eb011040"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gae64134ad7082495adc1c8d60eb011040">KEY_ACTION_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#ggae64134ad7082495adc1c8d60eb011040ac2439afec39a5b43a1fd36a4316379a7">KEY_PRESSED</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggae64134ad7082495adc1c8d60eb011040a207f5f32e6d172c4003ec10fab0cb06d">KEY_RELEASED</a>
+ }</td></tr>
+<tr class="memdesc:gae64134ad7082495adc1c8d60eb011040"><td class="mdescLeft">&#160;</td><td class="mdescRight">HID Key Action.  <a href="../../db/dff/group___enumerations.html#gae64134ad7082495adc1c8d60eb011040">More...</a><br /></td></tr>
+<tr class="separator:gae64134ad7082495adc1c8d60eb011040"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7f44a6b484328d6dd2d312f908dfea81"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga7f44a6b484328d6dd2d312f908dfea81">hrm_sensor_loc_t</a> { <br />
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81ad0ae562035a4e102a09da32d5240587c">HRS_BODY_SENSOR_LOCATION_OTHER</a> = 0, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga7f44a6b484328d6dd2d312f908dfea81a342e52f84315b22bf0e4dd8fa35c2a58">HRS_BODY_SENSOR_LOCATION_CHEST</a>, 
@@ -239,6 +246,17 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga3cf86d5824f710be6f3ea37cab97f8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Running Speed and Cadence status.  <a href="../../db/dff/group___enumerations.html#ga3cf86d5824f710be6f3ea37cab97f8da">More...</a><br /></td></tr>
 <tr class="separator:ga3cf86d5824f710be6f3ea37cab97f8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga548a9714cc99332623a24074be12ca8b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga548a9714cc99332623a24074be12ca8b">BTN_ACTION_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga548a9714cc99332623a24074be12ca8bae8df71dc1ffcafbecb8dbbd5487af0e2">BTN_ACT_LOW</a> = LOW, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga548a9714cc99332623a24074be12ca8ba149387aa5367eef8934711af57931e86">BTN_ACT_HIGH</a> = HIGH
+ }</td></tr>
+<tr class="memdesc:ga548a9714cc99332623a24074be12ca8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button actions.  <a href="../../db/dff/group___enumerations.html#ga548a9714cc99332623a24074be12ca8b">More...</a><br /></td></tr>
+<tr class="separator:ga548a9714cc99332623a24074be12ca8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga136a895c749c06d625761636769357bd"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga136a895c749c06d625761636769357bd">BTN_EVENT_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda0dd3b406a70dc290c45ecba437881199">BTN_NOTHING</a> = 0, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda076cb0f337f54dd9e2e24b0ac35e2914">BTN_PRESSED</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda088f9b16da57669ccab96d2b25c78ad2">BTN_RELEASED</a>
+ }</td></tr>
+<tr class="memdesc:ga136a895c749c06d625761636769357bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Button event.  <a href="../../db/dff/group___enumerations.html#ga136a895c749c06d625761636769357bd">More...</a><br /></td></tr>
+<tr class="separator:ga136a895c749c06d625761636769357bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga25e7251025c00833f4f09f073c974f88"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga25e7251025c00833f4f09f073c974f88">SENSE_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad93abe7aced82e9a4fcac4127a36ece3">RISING</a> = 1, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66">FALLING</a> = 2, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7">TOGGLE</a> = 3
@@ -390,6 +408,10 @@ Enumerations</h2></td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782"></a>ADV_MODE_PREV_NORMAL&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d"></a>ADV_MODE_FAST&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760a6ec733f78a5c7cb468337427c5767eee"></a>ADV_MODE_DIRECTED&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760a8a4c552169582c0c986c93ea25ae88db"></a>ADV_MODE_PREV_DIRECTED&#160;</td><td class="fielddoc">
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5"></a>ADV_MODE_WHITELIST&#160;</td><td class="fielddoc">
 </td></tr>
@@ -613,6 +635,54 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga548a9714cc99332623a24074be12ca8b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#ga548a9714cc99332623a24074be12ca8b">BTN_ACTION_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;button.h&gt;</code></p>
+
+<p>Button actions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga548a9714cc99332623a24074be12ca8bae8df71dc1ffcafbecb8dbbd5487af0e2"></a>BTN_ACT_LOW&#160;</td><td class="fielddoc">
+<p>High to Low. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga548a9714cc99332623a24074be12ca8ba149387aa5367eef8934711af57931e86"></a>BTN_ACT_HIGH&#160;</td><td class="fielddoc">
+<p>Low to High. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="ga136a895c749c06d625761636769357bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#ga136a895c749c06d625761636769357bd">BTN_EVENT_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;button.h&gt;</code></p>
+
+<p>Button event. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga136a895c749c06d625761636769357bda0dd3b406a70dc290c45ecba437881199"></a>BTN_NOTHING&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga136a895c749c06d625761636769357bda076cb0f337f54dd9e2e24b0ac35e2914"></a>BTN_PRESSED&#160;</td><td class="fielddoc">
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga136a895c749c06d625761636769357bda088f9b16da57669ccab96d2b25c78ad2"></a>BTN_RELEASED&#160;</td><td class="fielddoc">
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="ga7f44a6b484328d6dd2d312f908dfea81"></a>
 <div class="memitem">
 <div class="memproto">
@@ -664,6 +734,30 @@ Enumerations</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a class="anchor" id="ggaea1819f50414834e55b0387c666e58e2af35a88a89205978a275a886941f1ffc6"></a>HVX_INDICATION&#160;</td><td class="fielddoc">
 <p>Handle Value Indication. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a class="anchor" id="gae64134ad7082495adc1c8d60eb011040"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gae64134ad7082495adc1c8d60eb011040">KEY_ACTION_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;ble_service_hid.h&gt;</code></p>
+
+<p>HID Key Action. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggae64134ad7082495adc1c8d60eb011040ac2439afec39a5b43a1fd36a4316379a7"></a>KEY_PRESSED&#160;</td><td class="fielddoc">
+<p>key pressed </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggae64134ad7082495adc1c8d60eb011040a207f5f32e6d172c4003ec10fab0cb06d"></a>KEY_RELEASED&#160;</td><td class="fielddoc">
+<p>key released </p>
 </td></tr>
 </table>
 
@@ -1028,7 +1122,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

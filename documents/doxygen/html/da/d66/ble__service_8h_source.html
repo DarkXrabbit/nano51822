@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -145,14 +145,19 @@ $(document).ready(function(){initNavTree('da/d66/ble__service_8h_source.html','.
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    ~<a class="code" href="../../da/d80/classble_service.html">bleService</a>();</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="../../d2/dc4/classble_base.html">bleBase</a> *m_p_ble;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;};</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">static</span> uint8_t <a class="code" href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">gatts_hvx_writeable</a>();</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;};</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">extern</span> <span class="stringliteral">&quot;C&quot;</span> <span class="keywordtype">void</span> service_error_handler(uint32_t nrf_error);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_SERVICE_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="classble_service_html_ae5045731a748b41a5153496d8fcb7257"><div class="ttname"><a href="../../da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257">bleService::isAvailable</a></div><div class="ttdeci">virtual bool isAvailable()</div><div class="ttdoc">Check the service available. </div></div>
 <div class="ttc" id="classble_service_html_a8931a117eb7be5a52455b53459b0df62"><div class="ttname"><a href="../../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62">bleService::uuid_type</a></div><div class="ttdeci">virtual uint8_t uuid_type()</div><div class="ttdoc">Get the UUID type of service. </div><div class="ttdef"><b>Definition:</b> ble_service.h:52</div></div>
 <div class="ttc" id="classble_base_html"><div class="ttname"><a href="../../d2/dc4/classble_base.html">bleBase</a></div><div class="ttdoc">The bleBase class is an empty base class. </div><div class="ttdef"><b>Definition:</b> ble_base.h:42</div></div>
 <div class="ttc" id="classble_service_html_aa34f2ea80269787a549a98e13bddb44f"><div class="ttname"><a href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">bleService::uuid</a></div><div class="ttdeci">virtual uint16_t uuid()</div><div class="ttdoc">Get the UUID of service. </div><div class="ttdef"><b>Definition:</b> ble_service.h:45</div></div>
 <div class="ttc" id="classble_service_html_aabb34dad2925ff07d84bc4507db2a328"><div class="ttname"><a href="../../da/d80/classble_service.html#aabb34dad2925ff07d84bc4507db2a328">bleService::bleService</a></div><div class="ttdeci">bleService(bleBase &amp;ble)</div><div class="ttdoc">bleService constructor. </div></div>
+<div class="ttc" id="classble_service_html_a0deb640694dfbe4a3bfe67a23dcf3a33"><div class="ttname"><a href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">bleService::gatts_hvx_writeable</a></div><div class="ttdeci">static uint8_t gatts_hvx_writeable()</div></div>
 <div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -160,7 +165,7 @@ $(document).ready(function(){initNavTree('da/d66/ble__service_8h_source.html','.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_service.h</b></li>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:56 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

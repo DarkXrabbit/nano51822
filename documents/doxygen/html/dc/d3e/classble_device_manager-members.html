@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc1</span>
+   &#160;<span id="projectnumber">v1.0.2 rc2</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -115,19 +115,22 @@ $(document).ready(function(){initNavTree('d9/d34/classble_device_manager.html','
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87">bleDeviceManager</a>(bleDevice &amp;ble, bool clearAllBoundedCentrals=false, uint8_t timeout=30, uint8_t bond=1, uint8_t mitm=0, uint8_t ioCapabilities=BLE_GAP_IO_CAPS_NONE, uint8_t oob=0, uint8_t minKeySize=7, uint8_t maxKeySize=16)</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="../../da/d80/classble_service.html#aabb34dad2925ff07d84bc4507db2a328">bleService</a>(bleBase &amp;ble)</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#a2d3ada8de8be054ffa1beb191d887664">connect_directed_mode</a>()</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33">gatts_hvx_writeable</a>()</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../da/d80/classble_service.html#ae5045731a748b41a5153496d8fcb7257">isAvailable</a>()</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#a3cc4d28c35e4aa91c1f19f3f70589b46">isLinkSecured</a>()</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a>()</td><td class="entry"><a class="el" href="../../dc/dac/class_c_object.html">CObject</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#a6956c43041ec56379a2467bc3aa45d94">isValid</a>()</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">uuid</a>()</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="../../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62">uuid_type</a>()</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">whitelist_create</a>(ble_gap_whitelist_t *whitelist)</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#abafee9b8b168ded797c8e9e762ba26b0">peer_addr_get</a>(ble_gap_addr_t *p_peer_address)</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">uuid</a>()</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="../../da/d80/classble_service.html#a8931a117eb7be5a52455b53459b0df62">uuid_type</a>()</td><td class="entry"><a class="el" href="../../da/d80/classble_service.html">bleService</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html#ae42dc03b199247bb499514a2167fb82e">whitelist_create</a>(ble_gap_whitelist_t *whitelist)</td><td class="entry"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></td><td class="entry"></td></tr>
 </table></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Nov 23 2014 11:36:20 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

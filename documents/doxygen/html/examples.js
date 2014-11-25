@@ -1,5 +1,6 @@
 var examples =
 [
+    [ "/ble/ble_app_hid_keyboard/src/main.cpp", "d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_app_hrm_htm_bat/src/main.cpp", "dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp", "da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_app_hrm_htm_bat_lilypad/src/setup.cpp", "d5/d35/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2setup_8cpp-example.html", null ],

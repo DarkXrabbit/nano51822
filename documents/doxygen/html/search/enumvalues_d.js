@@ -1,22 +1,6 @@
 var searchData=
 [
-  ['uart_5fbaudrate_5f115200',['UART_BAUDRATE_115200',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a3b349016586b0f5e713093b30f4d19c5',1,'CSerial']]],
-  ['uart_5fbaudrate_5f14400',['UART_BAUDRATE_14400',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a53d08c5e4afe4702786393c7578ba963',1,'CSerial']]],
-  ['uart_5fbaudrate_5f19200',['UART_BAUDRATE_19200',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634aa75786fe5ed650167dbc320df316f3e0',1,'CSerial']]],
-  ['uart_5fbaudrate_5f1m',['UART_BAUDRATE_1M',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634ae5c2ff0ebca4c91e9f73f702fbedc68a',1,'CSerial']]],
-  ['uart_5fbaudrate_5f230400',['UART_BAUDRATE_230400',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a3139dc5d56cd709c4a8685b3c9a0e144',1,'CSerial']]],
-  ['uart_5fbaudrate_5f2400',['UART_BAUDRATE_2400',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a606fdfca8bb82fd3dc74c15bd30f89cd',1,'CSerial']]],
-  ['uart_5fbaudrate_5f250000',['UART_BAUDRATE_250000',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a859adc24b455c6d092b84eb4d7a21ddf',1,'CSerial']]],
-  ['uart_5fbaudrate_5f28800',['UART_BAUDRATE_28800',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634ad95cfa49a4c6d803cfa37a59707ebbd6',1,'CSerial']]],
-  ['uart_5fbaudrate_5f38400',['UART_BAUDRATE_38400',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a3b02a9998c85541c26dcb2ef657a9cb5',1,'CSerial']]],
-  ['uart_5fbaudrate_5f460800',['UART_BAUDRATE_460800',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a022b60a9291297cded48dcc1563310ea',1,'CSerial']]],
-  ['uart_5fbaudrate_5f4800',['UART_BAUDRATE_4800',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634ae05f77edd9cc9abc7943ca9f8960f603',1,'CSerial']]],
-  ['uart_5fbaudrate_5f57600',['UART_BAUDRATE_57600',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a14acd02d5e71beae5d486f269761524d',1,'CSerial']]],
-  ['uart_5fbaudrate_5f76800',['UART_BAUDRATE_76800',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a82935ca2e417dc2a86a523612f9d3544',1,'CSerial']]],
-  ['uart_5fbaudrate_5f921600',['UART_BAUDRATE_921600',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a00196dc368b43fa7a9a1579c5b87d168',1,'CSerial']]],
-  ['uart_5fbaudrate_5f9600',['UART_BAUDRATE_9600',['../d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634a3bd42b8fc7e13dd5e278d9a2cc96d190',1,'CSerial']]],
-  ['uart_5fflow_5fcontrol_5fdisabled',['UART_FLOW_CONTROL_DISABLED',['../d8/d1d/class_c_serial.html#ad22c6735176ae8cd55544e25a2223270a654e05ae30efd29562cff6af13b8c941',1,'CSerial']]],
-  ['uart_5fflow_5fcontrol_5fenabled',['UART_FLOW_CONTROL_ENABLED',['../d8/d1d/class_c_serial.html#ad22c6735176ae8cd55544e25a2223270a4673371717fc87bce508e2dbc6c67332',1,'CSerial']]],
-  ['uart_5fparity_5feven',['UART_PARITY_EVEN',['../d8/d1d/class_c_serial.html#ad38b0926868c6cfabb59e2da94f1cf40a4b7452e8ef848287eca86b7ea4411e65',1,'CSerial']]],
-  ['uart_5fparity_5fnone',['UART_PARITY_NONE',['../d8/d1d/class_c_serial.html#ad38b0926868c6cfabb59e2da94f1cf40a77e567bbd57497e51b0161ed1cd855a4',1,'CSerial']]]
+  ['timer_5f1',['TIMER_1',['../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5',1,'timer.h']]],
+  ['timer_5f2',['TIMER_2',['../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b',1,'timer.h']]],
+  ['toggle',['TOGGLE',['../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7',1,'gpio_sense.h']]]
 ];

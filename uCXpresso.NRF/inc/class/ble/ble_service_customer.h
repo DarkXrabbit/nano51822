@@ -140,12 +140,6 @@ protected:
 	virtual uint16_t gatts_value_get(ble_gatts_char_handles_t &char_handle, uint8_t *buffer, uint16_t length, uint16_t offset = 0);
 
 	/**
-	 *	@breif Check the gatts write buffer available.
-	 *	@warning To check the write buffer available before to write a data to Notify or Indicate an attribute value.
-	 */
-	virtual uint8_t gatts_hvx_writeable();
-
-	/**
 	 * @brief Notify or Indicate an attribute value.
 	 *
 	 * @param[in] char_handle	Characteristic handle.
@@ -174,9 +168,9 @@ protected:
 	virtual void on_connected(ble_evt_t * p_ble_evt);		// on connected
 	virtual void on_disconnected(ble_evt_t * p_ble_evt);	// on disconnect
 
-	virtual void on_write(ble_evt_t * p_ble_evt); 			// on write event
-	virtual void on_hvc(ble_evt_t * p_ble_evt);				// on handle value changed
-	virtual void on_tx_complete(ble_evt_t * p_ble_evt);		// on tx complete
+	virtual void on_write(ble_evt_t * p_ble_evt)		{ NOTHING }		// on write event
+	virtual void on_hvc(ble_evt_t * p_ble_evt)			{ NOTHING }		// on handle value changed
+	virtual void on_tx_complete(ble_evt_t * p_ble_evt)	{ NOTHING }		// on tx complete
 	///@endcond
 };
 

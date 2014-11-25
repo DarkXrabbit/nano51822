@@ -2,6 +2,7 @@ var classble_service_c_s_c =
 [
     [ "bleServiceCSC", "d7/d93/classble_service_c_s_c.html#aba9a00907aba6c980314e25ae7aa5871", null ],
     [ "cumulative_wheel_revs", "d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b", null ],
+    [ "gatts_hvx_writeable", "d7/d93/classble_service_c_s_c.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "is_auto_calibration_in_progress", "d7/d93/classble_service_c_s_c.html#aa236dc019b0d6bce15b956661bcd82e8", null ],
     [ "isAvailable", "d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f", null ],
     [ "isThread", "d7/d93/classble_service_c_s_c.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
