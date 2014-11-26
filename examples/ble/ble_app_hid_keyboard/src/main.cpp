@@ -218,7 +218,7 @@ int main(void) {
 
 	// Start advertising
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
-	ble.m_advertising.timeout(30);									// timeout 30 seconds then enter to system power off.
+	ble.m_advertising.timeout(30);									// Enter system power off when adv. timeout 30sec. (if timeout=0, disable)
 	ble.m_advertising.start();
 
 	//
@@ -232,7 +232,7 @@ int main(void) {
 	// Key Test Task
 	//
 	CThread t(keyTask);
-	t.start("kb", 84);		// start the keyTask
+	t.start("kb", 72);		// start the keyTask
 
 	//
 	// Analog

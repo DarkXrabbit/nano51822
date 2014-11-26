@@ -33,15 +33,15 @@ public:
 	/**
 	 * @brief Device Manager settings.
 	 *
-	 * @param timoeut			Timeout for SMP transactions or Security Request in seconds.
-	 * @param bond				Perform bonding, default 1, meaning bond should be estabished.
-	 * @param mitm				MITM protection needed.
-	 * @param ioCapabilities	IO Capabilities
-	 * @param oob				Out Of Band data available.
-	 * @param minKeySize		Minimum encryption key size in octets between 7 and 16.
-	 * @param maxKeySize		Maximum encryption key size in octets between min_key_size and 16.
+	 * @param clearAllBoundedCentrals 	Set to true in case the module should clear all persistent data.
+	 * @param timoeut					Timeout for SMP transactions or Security Request in seconds.
+	 * @param bond						Perform bonding, default 1, meaning bond should be estabished.
+	 * @param mitm						MITM protection needed.
+	 * @param ioCapabilities			IO Capabilities
+	 * @param oob						Out Of Band data available.
+	 * @param minKeySize				Minimum encryption key size in octets between 7 and 16.
+	 * @param maxKeySize				Maximum encryption key size in octets between min_key_size and 16.
 	 *
-	 * @return NRF_SUCCESS if register a new device manager successful.
 	 */
 	bleDeviceManager( bleDevice &ble,
 					  bool clearAllBoundedCentrals = false,

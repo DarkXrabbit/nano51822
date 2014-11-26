@@ -54,6 +54,7 @@ enum ADV_START_MODE_T {
 	ADV_MODE_PREV_NORMAL,
 	ADV_MODE_FAST,
 	ADV_MODE_DIRECTED,
+	ADV_MODE_PREV_DIRECTED,
 	ADV_MODE_WHITELIST,
 	ADV_MODE_NO_ADV			// for bond connection
 };
@@ -167,6 +168,7 @@ public:
 	///@cond PRIVATE (internal used)
 	//
 	bleAdvertising();
+	bool m_memory_access_in_progress;
 	inline ADV_START_MODE_T mode() {
 		return m_adv_start_mode;
 	}
@@ -179,6 +181,7 @@ protected:
 	uint8_t					 m_adv_flag;
 	uint16_t				 m_adv_interval;
 	uint16_t				 m_adv_timeout;
+	uint8_t					 m_direct_adv_cnt;
 	ADV_START_MODE_T		 m_adv_start_mode;
 	///@endcond
 };
