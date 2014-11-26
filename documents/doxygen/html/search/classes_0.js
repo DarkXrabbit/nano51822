@@ -13,7 +13,6 @@ var searchData=
   ['bleservicecustomer',['bleServiceCustomer',['../de/d51/classble_service_customer.html',1,'']]],
   ['bleservicedfu',['bleServiceDFU',['../d6/d2e/classble_service_d_f_u.html',1,'']]],
   ['bleservicehid',['bleServiceHID',['../db/d31/classble_service_h_i_d.html',1,'']]],
-  ['bleservicehid_5fkb',['bleServiceHID_KB',['../d6/dd5/classble_service_h_i_d___k_b.html',1,'']]],
   ['bleservicehrm',['bleServiceHRM',['../d0/dfc/classble_service_h_r_m.html',1,'']]],
   ['bleservicehtm',['bleServiceHTM',['../d3/d27/classble_service_h_t_m.html',1,'']]],
   ['bleservicekb',['bleServiceKB',['../d4/da8/classble_service_k_b.html',1,'']]],

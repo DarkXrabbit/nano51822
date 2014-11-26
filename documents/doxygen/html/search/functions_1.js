@@ -2,7 +2,7 @@ var searchData=
 [
   ['binary',['binary',['../d0/d06/class_c_semaphore.html#a0fc078dfd286cb3321c6cbaf7bcbb7b2',1,'CSemaphore']]],
   ['bitorder',['bitOrder',['../da/dc3/classspi_master.html#a065ada61bca032de3aaf0f5b80972259',1,'spiMaster::bitOrder()'],['../da/d31/classspi_slave.html#ad730e3de1fa6ca429ced93d75c800519',1,'spiSlave::bitOrder()']]],
-  ['bleconnparams',['bleConnParams',['../d9/d8b/classble_conn_params.html#a0b781babdb834353c86a86286bd69017',1,'bleConnParams']]],
+  ['bleconnparams',['bleConnParams',['../d9/d8b/classble_conn_params.html#ab67b03177e4f1acbf0d4c5acfeb11dd2',1,'bleConnParams']]],
   ['bledevice',['bleDevice',['../d6/d49/classble_device.html#a4bf797390297ed590496b35215ad2688',1,'bleDevice']]],
   ['bledevicemanager',['bleDeviceManager',['../d9/d34/classble_device_manager.html#a03a4363ab8efef0e951d155144612d87',1,'bleDeviceManager']]],
   ['blerssi',['bleRSSI',['../d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f',1,'bleRSSI']]],

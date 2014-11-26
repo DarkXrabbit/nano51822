@@ -89,15 +89,24 @@ enum KEY_ACTION_T {
 };
 
 /**
+ * @brief KB LED
+ * @ingroup Enumerations
+ */
+enum KB_LEDS {
+	KB_LED_CAPS,
+	KB_LED_NUMLOCK
+};
+
+/**
  * @brief BLE human interface device class for keyboard service.
  *
- * @class bleServiceHID_KB ble_service_hid.h "class/ble/ble_service_hid.h"
+ * @class bleServiceKB ble_service_hid.h "class/ble/ble_service_hid.h"
  *
  * @ingroup Bluetooth
  */
 class bleServiceKB: public bleServiceHID {
-	/**@brief thread task handler type. */
-	typedef void (*key_led_handle_t) (bleServiceKB * p_hids, PIN_LEVEL_T value);
+	/**@brief keyboard LED handler type. */
+	typedef void (*key_led_handle_t) (bleServiceKB * p_hids, KB_LEDS led, PIN_LEVEL_T value);
 
 public:
 	/**

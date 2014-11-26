@@ -87,6 +87,10 @@ var group___enumerations =
       [ "HVX_NOTIFICATION", "db/dff/group___enumerations.html#ggaea1819f50414834e55b0387c666e58e2a3a6b0dabe3c71682e51a885a98c2c972", null ],
       [ "HVX_INDICATION", "db/dff/group___enumerations.html#ggaea1819f50414834e55b0387c666e58e2af35a88a89205978a275a886941f1ffc6", null ]
     ] ],
+    [ "KB_LEDS", "db/dff/group___enumerations.html#ga89ed506f30df425b9d7a25bf31f65c02", [
+      [ "KB_LED_CAPS", "db/dff/group___enumerations.html#gga89ed506f30df425b9d7a25bf31f65c02ac5d7223b47c21151c1eb3fd051564672", null ],
+      [ "KB_LED_NUMLOCK", "db/dff/group___enumerations.html#gga89ed506f30df425b9d7a25bf31f65c02ad8423c544a1599be8daa9bb51cbf42c3", null ]
+    ] ],
     [ "KEY_ACTION_T", "db/dff/group___enumerations.html#gae64134ad7082495adc1c8d60eb011040", [
       [ "KEY_PRESSED", "db/dff/group___enumerations.html#ggae64134ad7082495adc1c8d60eb011040ac2439afec39a5b43a1fd36a4316379a7", null ],
       [ "KEY_RELEASED", "db/dff/group___enumerations.html#ggae64134ad7082495adc1c8d60eb011040a207f5f32e6d172c4003ec10fab0cb06d", null ]

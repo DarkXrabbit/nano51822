@@ -1,6 +1,5 @@
 var hierarchy =
 [
-    [ "bleServiceHID_KB", "d6/dd5/classble_service_h_i_d___k_b.html", null ],
     [ "CObject", "dc/dac/class_c_object.html", [
       [ "bleBase", "d2/dc4/classble_base.html", [
         [ "bleAdvertising", "d0/d2c/classble_advertising.html", null ],

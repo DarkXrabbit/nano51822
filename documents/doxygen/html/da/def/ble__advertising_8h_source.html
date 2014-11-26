@@ -194,23 +194,24 @@ $(document).ready(function(){initNavTree('da/def/ble__advertising_8h_source.html
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="comment">//</span></div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <a class="code" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a>();</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">ADV_START_MODE_T</a> <a class="code" href="../../d0/d2c/classble_advertising.html#ac41e1739b89a8313596582742e274031">mode</a>() {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        <span class="keywordflow">return</span> m_adv_start_mode;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    ble_advdata_t            m_adv_data;</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    ble_uuid_t              *m_uuid_list;</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    int8_t                   m_tx_power_level;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    uint8_t                  m_uuid_count;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    ble_gap_adv_params_t     m_adv_params;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    uint8_t                  m_adv_flag;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    uint8_t                  m_direct_adv_cnt;</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">bool</span> m_memory_access_in_progress;</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">ADV_START_MODE_T</a> <a class="code" href="../../d0/d2c/classble_advertising.html#ac41e1739b89a8313596582742e274031">mode</a>() {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keywordflow">return</span> m_adv_start_mode;</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    ble_advdata_t            m_adv_data;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    ble_uuid_t              *m_uuid_list;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    int8_t                   m_tx_power_level;</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    uint8_t                  m_uuid_count;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    ble_gap_adv_params_t     m_adv_params;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    uint8_t                  m_adv_flag;</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    uint16_t                 m_adv_interval;</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    uint16_t                 m_adv_timeout;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">ADV_START_MODE_T</a>         m_adv_start_mode;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;};</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_ADVERTISING_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    uint8_t                  m_direct_adv_cnt;</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;    <a class="code" href="../../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760">ADV_START_MODE_T</a>         m_adv_start_mode;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;};</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_ADVERTISING_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="group___enumerations_html_ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02">ADV_MODE_NO_ADV</a></div><div class="ttdef"><b>Definition:</b> ble_advertising.h:59</div></div>
 <div class="ttc" id="classble_advertising_html_a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9"><div class="ttname"><a href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">bleAdvertising::add_uuid_to_complete_list</a></div><div class="ttdeci">void add_uuid_to_complete_list(bleService &amp;service)</div><div class="ttdoc">Set the list of UUIDs in the &#39;Complete&#39; list. </div></div>
 <div class="ttc" id="group___enumerations_html_ggaf36f4f6c9535228c7563541c4590b499af045bfff3346c52e2e7a2ff565c983c5"><div class="ttname"><a href="../../db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499af045bfff3346c52e2e7a2ff565c983c5">ADV_TYPE_ADV_SCAN_IND</a></div><div class="ttdoc">Scannable undirected. </div><div class="ttdef"><b>Definition:</b> ble_advertising.h:44</div></div>
@@ -249,7 +250,7 @@ $(document).ready(function(){initNavTree('da/def/ble__advertising_8h_source.html
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_advertising.h</b></li>
-    <li class="footer">Generated on Tue Nov 25 2014 23:23:56 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 26 2014 22:49:30 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

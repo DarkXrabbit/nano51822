@@ -170,7 +170,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE Device Management. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a15">/ble/ble_app_hid_keyboard/src/main.cpp</a>, and <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a13">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a16">/ble/ble_app_hid_keyboard/src/main.cpp</a>, and <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a13">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a03a4363ab8efef0e951d155144612d87"></a>
 <div class="memitem">
@@ -241,17 +241,17 @@ Static Public Member Functions</h2></td></tr>
 <p>Device Manager settings. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramname">clearAllBoundedCentrals</td><td>Set to true in case the module should clear all persistent data. </td></tr>
     <tr><td class="paramname">timoeut</td><td>Timeout for SMP transactions or Security Request in seconds. </td></tr>
     <tr><td class="paramname">bond</td><td>Perform bonding, default 1, meaning bond should be estabished. </td></tr>
     <tr><td class="paramname">mitm</td><td>MITM protection needed. </td></tr>
     <tr><td class="paramname">ioCapabilities</td><td>IO Capabilities </td></tr>
     <tr><td class="paramname">oob</td><td>Out Of Band data available. </td></tr>
     <tr><td class="paramname">minKeySize</td><td>Minimum encryption key size in octets between 7 and 16. </td></tr>
-    <tr><td class="paramname">maxKeySize</td><td>Maximum encryption key size in octets between min_key_size and 16.</td></tr>
+    <tr><td class="paramname">maxKeySize</td><td>Maximum encryption key size in octets between min_key_size and 16. </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if register a new device manager successful. </dd></dl>
 
 </div>
 </div>
@@ -526,7 +526,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a></li>
-    <li class="footer">Generated on Tue Nov 25 2014 23:23:57 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Nov 26 2014 22:49:31 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

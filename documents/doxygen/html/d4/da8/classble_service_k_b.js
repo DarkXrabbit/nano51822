@@ -1,6 +1,6 @@
 var classble_service_k_b =
 [
-    [ "key_led_handle_t", "d4/da8/classble_service_k_b.html#a9caf1e5cdbfc521e3d7487b755ba0ae9", null ],
+    [ "key_led_handle_t", "d4/da8/classble_service_k_b.html#a5f481a13dd90a668e72de59130f41de8", null ],
     [ "bleServiceKB", "d4/da8/classble_service_k_b.html#af33018431bc28745d3997606c8ca193e", null ],
     [ "attach_key_led_caps", "d4/da8/classble_service_k_b.html#a2754b8dee3437643f45b89b582811774", null ],
     [ "detach_key_led_caps", "d4/da8/classble_service_k_b.html#a0d79a579aa0377484d3c6715fbb58e37", null ],

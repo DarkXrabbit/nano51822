@@ -13,7 +13,6 @@ var annotated =
     [ "bleServiceCustomer", "de/d51/classble_service_customer.html", "de/d51/classble_service_customer" ],
     [ "bleServiceDFU", "d6/d2e/classble_service_d_f_u.html", "d6/d2e/classble_service_d_f_u" ],
     [ "bleServiceHID", "db/d31/classble_service_h_i_d.html", "db/d31/classble_service_h_i_d" ],
-    [ "bleServiceHID_KB", "d6/dd5/classble_service_h_i_d___k_b.html", null ],
     [ "bleServiceHRM", "d0/dfc/classble_service_h_r_m.html", "d0/dfc/classble_service_h_r_m" ],
     [ "bleServiceHTM", "d3/d27/classble_service_h_t_m.html", "d3/d27/classble_service_h_t_m" ],
     [ "bleServiceKB", "d4/da8/classble_service_k_b.html", "d4/da8/classble_service_k_b" ],
