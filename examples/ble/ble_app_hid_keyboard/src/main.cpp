@@ -174,11 +174,11 @@ int main(void) {
 					);
 
 	//
-	// Button
+	// Button to clear all bounded centrals.
 	//
-	CButton btn(17);
+	CPin btn(17);
 
-	// Device Manager for bond device. (Optional, for bond link device only)
+	// Device Manager for bond device.
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
 	man.connect_directed_mode();		// enable "connect directed mode"
 
