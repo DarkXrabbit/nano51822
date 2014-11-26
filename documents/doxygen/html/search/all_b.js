@@ -17,6 +17,14 @@ var searchData=
   ['mid',['mid',['../df/d99/class_c_string.html#aae1e4a3db1f724363a300d706eae78b8',1,'CString']]],
   ['millisecond',['millisecond',['../db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df',1,'CTimer']]],
   ['miscellaneous',['Miscellaneous',['../d8/d7e/group___miscellaneous.html',1,'']]],
+  ['mk_5fbit_5fl_5falt',['MK_BIT_L_ALT',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#ga597cd748cc4fbb6e9336f1253b1222eb',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fl_5fctrl',['MK_BIT_L_CTRL',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#gade64e10155e1b73cb79d3c04ff169c2c',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fl_5fgui',['MK_BIT_L_GUI',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#ga074cfcc8dba7cd47ee88348c4b6008dd',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fl_5fshift',['MK_BIT_L_SHIFT',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#gaa75697a6e91057ffcabe6788efbc5cbd',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fr_5falt',['MK_BIT_R_ALT',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#ga03d4faf2cc5a510f65d405c498436789',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fr_5fctrl',['MK_BIT_R_CTRL',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#gaeb1e5d6d58c645598753380e2ef68014',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fr_5fgui',['MK_BIT_R_GUI',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#ga142ca41f18867c143d2a81e81064aed1',1,'ble_service_hid.h']]],
+  ['mk_5fbit_5fr_5fshift',['MK_BIT_R_SHIFT',['../da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html#gab00651eda374be8284a59f33df373647',1,'ble_service_hid.h']]],
   ['mode',['mode',['../d0/d2c/classble_advertising.html#ac41e1739b89a8313596582742e274031',1,'bleAdvertising::mode()'],['../da/dc3/classspi_master.html#a586ffffb5df2911e9dedd4a2d47052d0',1,'spiMaster::mode()'],['../da/d31/classspi_slave.html#a601df989a52b39c6c39aa48f09423688',1,'spiSlave::mode()']]],
   ['msb_5ffirst',['MSB_FIRST',['../db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2a89da3ebae748913c4ea84ed340c20aec',1,'spi_master.h']]]
 ];

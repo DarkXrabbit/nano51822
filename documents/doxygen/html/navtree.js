@@ -24,8 +24,8 @@ var NAVTREEINDEX =
 "annotated.html",
 "d5/ded/classble_service_battery.html#a26a76c241a4d62d2efdac57d2cfe4c0f",
 "da/d59/class_c_list_t.html#a54795f456c006f4ab3647d5abfaa806c",
-"db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a0781c514bf59deb42d0a2fe61f4b1bc2",
-"functions_func_b.html"
+"db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5",
+"examples.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

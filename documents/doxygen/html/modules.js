@@ -2,6 +2,8 @@ var modules =
 [
     [ "Bluetooth", "df/d6f/group___bluetooth.html", "df/d6f/group___bluetooth" ],
     [ "Cycling Speed and Cadence Service feature bits", "de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s.html", "de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s" ],
+    [ "HID Keyboard modifier key bits", "da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html", "da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s" ],
+    [ "HID Keyboard LEDs bits", "de/df6/group___h_i_d___k_b___l_e_d_s.html", "de/df6/group___h_i_d___k_b___l_e_d_s" ],
     [ "Enumerations", "db/dff/group___enumerations.html", "db/dff/group___enumerations" ],
     [ "Miscellaneous", "d8/d7e/group___miscellaneous.html", "d8/d7e/group___miscellaneous" ],
     [ "Peripherals", "d1/d6c/group___peripherals.html", "d1/d6c/group___peripherals" ],

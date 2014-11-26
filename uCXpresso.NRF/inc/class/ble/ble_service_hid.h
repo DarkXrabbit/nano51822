@@ -70,6 +70,8 @@ protected:
 #define INPUT_REPORT_KEYS_MAX_LEN		8	/**< Maximum length of the Input Report characteristic. */
 #define MAX_KEYS_IN_ONE_REPORT			6	/**< Maximum number of key presses that can be sent in one Input Report. */
 
+/** @defgroup HID_MODIFIER_KEYS HID Keyboard modifier key bits
+ * @{ */
 #define MK_BIT_L_CTRL					0
 #define MK_BIT_L_SHIFT					1
 #define MK_BIT_L_ALT					2
@@ -78,6 +80,7 @@ protected:
 #define MK_BIT_R_SHIFT					5
 #define MK_BIT_R_ALT					6
 #define MK_BIT_R_GUI					7
+/** @} */
 
 /**
  * @brief HID Key Action.
@@ -88,14 +91,14 @@ enum KEY_ACTION_T {
 	KEY_RELEASED	///< key released
 };
 
-/**
- * @brief KB LED
- * @ingroup Enumerations
- */
-enum KB_LEDS {
-	KB_LED_CAPS,
-	KB_LED_NUMLOCK
-};
+/** @defgroup HID_KB_LEDS HID Keyboard LEDs bits
+ * @{ */
+#define KB_LED_NUM_LOCK					0
+#define KB_LED_CAPS 					1
+#define KB_LED_SCROLL_LOCK				2
+#define KB_LED_COMPOSE					3
+#define KB_LED_KANA						4
+/** @} */
 
 /**
  * @brief BLE human interface device class for keyboard service.
@@ -105,12 +108,16 @@ enum KB_LEDS {
  * @ingroup Bluetooth
  */
 class bleServiceKB: public bleServiceHID {
-	/**@brief keyboard LED handler type. */
-	typedef void (*key_led_handle_t) (bleServiceKB * p_hids, KB_LEDS led, PIN_LEVEL_T value);
+	/**
+	 * @brief keyboard LED handler type.
+	 * @param p_hids	Pointer to the @ref bleServiceKB object
+	 * @param leds		Indicate the @ref HID_KB_LEDS of KB. (bitwise)
+	 * */
+	typedef void (*hid_kb_leds_t) (bleServiceKB * p_hids, uint8_t leds);
 
 public:
 	/**
-	 * @brief bleServiceHID_KB constructor.
+	 * @brief bleServiceKB constructor.
 	 * @param[in] ble 			Pointer to bleDevice object.
 	 * @param[in] report_desc	Pointer to HID report descriptor. If null, will use the internal default descriptor.
 	 * @param[in] desc_length	Indicate the descriptor length.
@@ -123,7 +130,7 @@ public:
 	 * @brief Send the key pressed/released.
 	 * @param[in] code			Key Scan Code.
 	 * @param[in] action		Indicate the key action to @ref KEY_ACTION_T.
-	 * @param[in] modifier_keys	Indicate the modifier key bits. (bitwise)
+	 * @param[in] modifier_keys	Indicate the @ref HID_MODIFIER_KEYS. (bitwise)
 	 *
 	 * @return
 	 * @retval NRF_SUCCESS				Send scan code successful.
@@ -133,25 +140,25 @@ public:
 	virtual uint32_t send(uint8_t code, KEY_ACTION_T action, uint8_t modifier_keys=0);
 
 	/**
-	 * @brief Attach the caps key LED handle
-	 * @param[in] handle Pointer to the @ref key_led_handle_t function.
+	 * @brief Attach the @ref hid_kb_leds_t handle
+	 * @param[in] handle Pointer to the @ref hid_kb_leds_t function.
 	 */
-	inline void attach_key_led_caps(key_led_handle_t handle) {
-		m_h_key_led_caps = handle;
+	inline void attach_kb_leds_handle(hid_kb_leds_t handle) {
+		m_h_kb_leds = handle;
 	}
 
 	/**
-	 * @brief Detach the caps key LED handle.
+	 * @brief Detach the kb leds handle
 	 */
-	inline void detach_key_led_caps() {
-		m_h_key_led_caps = NULL;
+	inline void detach_kb_leds_handle() {
+		m_h_kb_leds = NULL;
 	}
 
 	//
 	///@cond PRIVATE
 	//
 protected:
-	key_led_handle_t m_h_key_led_caps;
+	hid_kb_leds_t m_h_kb_leds;
 	uint8_t m_key_report[INPUT_REPORT_KEYS_MAX_LEN];
 
 	virtual uint32_t on_data_transmit();

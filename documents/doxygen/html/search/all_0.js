@@ -46,7 +46,7 @@ var searchData=
   ['aref_5f1',['AREF_1',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a29eae4ee54152033dd962f9902b0a9e3',1,'adc.h']]],
   ['aref_5ft',['AREF_T',['../db/dff/group___enumerations.html#gae0520f31b1985f1579b0568eaf20a624',1,'adc.h']]],
   ['aref_5fvbg',['AREF_VBG',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3',1,'adc.h']]],
-  ['attach_5fkey_5fled_5fcaps',['attach_key_led_caps',['../d4/da8/classble_service_k_b.html#a2754b8dee3437643f45b89b582811774',1,'bleServiceKB']]],
+  ['attach_5fkb_5fleds_5fhandle',['attach_kb_leds_handle',['../d4/da8/classble_service_k_b.html#a1e7e6f95ef5b343733019958c6121f64',1,'bleServiceKB']]],
   ['attachevent',['attachEvent',['../d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2',1,'bleDevice']]],
   ['available',['available',['../d8/d1d/class_c_serial.html#a5c142221c0841e7c961e962c45bd2db7',1,'CSerial::available()'],['../de/dba/class_c_shell.html#a86ec9b3db5d7c467535064ea94e1d9c0',1,'CShell::available()'],['../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae',1,'CStream::available()'],['../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065',1,'CDebug::available()']]]
 ];
