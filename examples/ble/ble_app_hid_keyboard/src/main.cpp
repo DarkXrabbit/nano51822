@@ -180,10 +180,15 @@ int main(void) {
 
 	// Device Manager for bond device. (Optional, for bond link device only)
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
-//	man.connect_directed_mode();		// enable "connect directed mode"
+	man.connect_directed_mode();		// enable "connect directed mode"
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
+	ble.m_gap.settings( DEVICE_NAME,	// device name
+						8,				// min. connection interval = 8ms
+						30, 			// max. connection interval = 30ms
+						6,				// slave latency = 6
+						300);			// conn. supervisor timeout = 300ms
+
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	//
@@ -213,6 +218,7 @@ int main(void) {
 
 	// Start advertising
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
+	ble.m_advertising.timeout(30);									// timeout 30 seconds then enter to system power off.
 	ble.m_advertising.start();
 
 	//

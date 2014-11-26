@@ -54,7 +54,6 @@ enum ADV_START_MODE_T {
 	ADV_MODE_PREV_NORMAL,
 	ADV_MODE_FAST,
 	ADV_MODE_DIRECTED,
-	ADV_MODE_PREV_DIRECTED,
 	ADV_MODE_WHITELIST,
 	ADV_MODE_NO_ADV			// for bond connection
 };
@@ -178,7 +177,6 @@ protected:
 	uint8_t					 m_uuid_count;
 	ble_gap_adv_params_t 	 m_adv_params;
 	uint8_t					 m_adv_flag;
-	uint8_t					 m_direct_adv_cnt;
 	uint16_t				 m_adv_interval;
 	uint16_t				 m_adv_timeout;
 	ADV_START_MODE_T		 m_adv_start_mode;

@@ -40,7 +40,6 @@ typedef enum
 //
 // default connection parameters
 //
-//
 extern const ble_gap_conn_params_t def_conn_params;
 
 /**
@@ -73,7 +72,7 @@ public:
 	 * @param[in] 	disconnect_on_fail	Set to TRUE if a failed connection parameters update shall cause an automatic disconnection, set to FALSE otherwise.
 	 */
 	bleConnParams(bleDevice &ble,
-				  ble_gap_conn_params_t const *p_conn_params = &def_conn_params,
+				  ble_gap_conn_params_t const *p_conn_params = NULL,
 			      uint16_t first_update_daley 			= FIRST_CONN_PARAMS_UPDATE_DELAY,
 				  uint16_t next_update_delay 			= NEXT_CONN_PARAMS_UPDATE_DELAY,
 				  uint16_t max_update_count 			= MAX_CONN_PARAMS_UPDATE_COUNT,
