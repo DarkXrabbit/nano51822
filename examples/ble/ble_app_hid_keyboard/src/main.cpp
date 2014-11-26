@@ -232,7 +232,7 @@ int main(void) {
 	// Key Test Task
 	//
 	CThread t(keyTask);
-	t.start("kb", 72);		// start the keyTask
+	t.start("kb", 76);		// start the keyTask
 
 	//
 	// Analog
