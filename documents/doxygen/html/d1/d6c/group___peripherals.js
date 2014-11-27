@@ -27,6 +27,16 @@ var group___peripherals =
       [ "reset", "d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02", null ],
       [ "source", "d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc", null ]
     ] ],
+    [ "aesCTR", "d1/d30/classaes_c_t_r.html", [
+      [ "aesCTR", "d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129", null ],
+      [ "crypt", "d1/d30/classaes_c_t_r.html#a1fdb69e568fb4aff9d6b7bd6759d12c2", null ],
+      [ "get_nonce", "d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d", null ],
+      [ "isThread", "d1/d30/classaes_c_t_r.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d1/d30/classaes_c_t_r.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "new_nonce", "d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59", null ],
+      [ "operator=", "d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1", null ],
+      [ "set_nonce", "d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12", null ]
+    ] ],
     [ "CBus", "de/d89/class_c_bus.html", [
       [ "CBus", "de/d89/class_c_bus.html#a03bb378921772d204c60958d7e8c0702", null ],
       [ "count", "de/d89/class_c_bus.html#a4fa0e4c537c237278fe8092f4d8e26fb", null ],
@@ -58,10 +68,7 @@ var group___peripherals =
       [ "pin", "da/dbf/class_c_button.html#aff5e5fcd8b9a6de40bc5d262d21a2512", null ],
       [ "read", "da/dbf/class_c_button.html#a02060b0c9bbf0f75dead7bef1c75ce6b", null ],
       [ "toggle", "da/dbf/class_c_button.html#a2000134208f704f1bf79082f518ef764", null ],
-      [ "write", "da/dbf/class_c_button.html#a1fc3486f4afea4de56ae677c20600551", null ],
-      [ "m_action", "da/dbf/class_c_button.html#ac041fa35966d3f68a41f9db179fc3a41", null ],
-      [ "m_lastState", "da/dbf/class_c_button.html#aa9ee09e5900d6cfdafdfa96639534347", null ],
-      [ "m_tmBounce", "da/dbf/class_c_button.html#a7b0f870cfeb58955c5655aa6317fb410", null ]
+      [ "write", "da/dbf/class_c_button.html#a1fc3486f4afea4de56ae677c20600551", null ]
     ] ],
     [ "gpioSense", "d0/d3c/classgpio_sense.html", [
       [ "gpioSense", "d0/d3c/classgpio_sense.html#aa0d631f576b529ebe16a778ec65ad478", null ],

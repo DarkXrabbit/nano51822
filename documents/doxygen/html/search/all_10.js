@@ -8,6 +8,7 @@ var searchData=
   ['sensor_5fcontact_5fdetected_5fupdate',['sensor_contact_detected_update',['../d0/dfc/classble_service_h_r_m.html#a4de4e07149f8c67134c0b4eaf7f69536',1,'bleServiceHRM']]],
   ['service',['service',['../de/d51/classble_service_customer.html#a8b89488b128d89de00fb94de771afaec',1,'bleServiceCustomer']]],
   ['set',['set',['../dd/d60/class_c_event_bit.html#a0b05da65aa8bb0b77dd75f0a84b8fbb0',1,'CEventBit']]],
+  ['set_5fnonce',['set_nonce',['../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12',1,'aesCTR']]],
   ['setat',['setAt',['../df/d99/class_c_string.html#a99eaccef0daa453bf36ec886ae9b42c4',1,'CString']]],
   ['setpriority',['setPriority',['../d0/d26/class_c_thread.html#a6b0703ae0cc085a0c0aaa55b6945575b',1,'CThread']]],
   ['settings',['settings',['../dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852',1,'bleGAP']]],

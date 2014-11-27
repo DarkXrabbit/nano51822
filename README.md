@@ -8,16 +8,17 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.2 rc2 27th November 2014
+v1.0.2 rc3 28th November 2014
 --------------------------------
 ###Details: 
-	1. Fixed "connect directed mode".
-	2. Add bleServiceHID & bleServiceKB classes.
-	3. Add CButton class.
-	4. Add descriptions in CString class.
-	5. Add find() member in String class to handle a command list.
-	6. Add app_beacon_v2 example project to explain how to make an "AT Command" application.  
-	7. Add default "connection parameters" in bleConnParams constructor.
+	1. Add AES 128 bits encryption/decrytion service class.
+	2. Fixed "connect directed mode".
+	3. Add bleServiceHID & bleServiceKB classes.
+	4. Add CButton class.
+	5. Add descriptions in CString class.
+	6. Add find() member in String class to handle a command list.
+	7. Add app_beacon_v2 example project to explain how to make an "AT Command" application.  
+	8. Add default "connection parameters" in bleConnParams constructor.
 
 v1.0.1 released 20th November 2014
 --------------------------------

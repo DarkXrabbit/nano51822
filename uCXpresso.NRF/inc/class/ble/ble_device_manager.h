@@ -27,6 +27,48 @@
  * @brief BLE Device Management
  * @class bleDeviceManager ble_device_manager.h "class/ble/ble_device_manager.h"
  * @ingroup Bluetooth
+ *
+ * @details The Device Manager module manages Active and Bonded Peers. Management of peer includes
+ *          book keeping of contextual information like the Security Keys, GATT
+ *          configuration and any application specific information.
+ *
+ *          Active Peers are devices which are connected, and may or may not be bonded.
+ *          Bonded Peers are devices which are bonded, and may or may not be Active (Connected).
+ *          Active Bonded Peer refers to a device which is connected and bonded.
+ *
+ *          Paired Devices refers to peer devices that are connected and have necessary context
+ *          establishment/exchange for the current connection session. On disconnect,
+ *          all contextual information is flushed. For example, SMP Information Exchanged during
+ *          pairing and GATT Configuration is not retained on disconnection.
+ *
+ *          Note that this module allows management of contextual information but
+ *          does not provide an interface for connection management. Therefore, entering connectible
+ *          mode, connection establishment, or disconnection of a link with peer is not in scope
+ *          of this module.
+ *
+ *          For bonded peers, the contextual information is required to be retained on disconnection
+ *          and power cycling. Persistent storage of contextual information is handled by the
+ *          module. This module categorizes the contextual information into 3 categories:
+ *             - <b>Bonding Information</b>
+ *               Bond information is the information exchanged between local and peer device to
+ *               establish a bond. It also includes peer identification information,
+ *               like the peer address or the IRK or both. From here on this category of information
+ *               is referred to as Device Context.
+ *             - <b>Service/Protocol Information</b>
+ *               Service/Protocol information is the information retained for the peer to save on one-time
+ *               procedures like the GATT Service Discovery procedures and Service Configurations.
+ *               It allows devices to resume data exchange on subsequent reconnection without having
+ *               to perform initial set-up procedures each time. From here on this category is
+ *               referred to as Service Context.
+ *             - <b>Application Information</b>
+ *               Application information is the context that the application would like to associate with
+ *               each of the bonded device. For example, if the application chooses to rank its peers
+ *               in order to manage them better, the rank information could be treated as
+ *               Application Information. This storage space is provided to save the application from
+ *               maintaining a mapping table with each Device Instance and Application Information.
+ *               However, if the application have no use for this, it is possible to not
+ *               use or employ this at compile time. From here on this category of information is
+ *               referred to as Application Context.
  */
 class bleDeviceManager: public bleService {
 public:

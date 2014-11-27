@@ -74,14 +74,19 @@ public:
 	 * 		break;
 	 * 	case BTN_NOTHING:
 	 * 		break;
-	 * }
+	 * 	}
 	 * @endcode
 	 */
 	virtual BTN_EVENT_T isPressed();
+
+	//
+	///@cond
+	//
 protected:
 	CTimeout 		m_tmBounce;
 	PIN_LEVEL_T 	m_action;
 	PIN_LEVEL_T 	m_lastState;
+	///@endcond
 };
 
 /**\example /ble/ble_app_hid_keyboard/src/main.cpp

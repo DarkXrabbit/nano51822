@@ -14,8 +14,5 @@ var class_c_button =
     [ "pin", "da/dbf/class_c_button.html#aff5e5fcd8b9a6de40bc5d262d21a2512", null ],
     [ "read", "da/dbf/class_c_button.html#a02060b0c9bbf0f75dead7bef1c75ce6b", null ],
     [ "toggle", "da/dbf/class_c_button.html#a2000134208f704f1bf79082f518ef764", null ],
-    [ "write", "da/dbf/class_c_button.html#a1fc3486f4afea4de56ae677c20600551", null ],
-    [ "m_action", "da/dbf/class_c_button.html#ac041fa35966d3f68a41f9db179fc3a41", null ],
-    [ "m_lastState", "da/dbf/class_c_button.html#aa9ee09e5900d6cfdafdfa96639534347", null ],
-    [ "m_tmBounce", "da/dbf/class_c_button.html#a7b0f870cfeb58955c5655aa6317fb410", null ]
+    [ "write", "da/dbf/class_c_button.html#a1fc3486f4afea4de56ae677c20600551", null ]
 ];

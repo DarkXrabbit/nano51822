@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['hwpwm',['hwPWM',['../da/deb/classhw_p_w_m.html',1,'']]]
+  ['gpiosense',['gpioSense',['../d0/d3c/classgpio_sense.html',1,'']]]
 ];

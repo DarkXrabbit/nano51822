@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2 rc2</span>
+   &#160;<span id="projectnumber">v1.0.2 rc3</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -108,7 +108,6 @@ $(document).ready(function(){initNavTree('da/dbf/class_c_button.html','../../');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../dd/d10/class_c_button-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">CButton Class Reference<div class="ingroups"><a class="el" href="../../d1/d6c/group___peripherals.html">Peripherals</a></div></div>  </div>
@@ -165,15 +164,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2000134208f704f1bf79082f518ef764"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a7b0f870cfeb58955c5655aa6317fb410"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d5b/class_c_timeout.html">CTimeout</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbf/class_c_button.html#a7b0f870cfeb58955c5655aa6317fb410">m_tmBounce</a></td></tr>
-<tr class="separator:a7b0f870cfeb58955c5655aa6317fb410"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac041fa35966d3f68a41f9db179fc3a41"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbf/class_c_button.html#ac041fa35966d3f68a41f9db179fc3a41">m_action</a></td></tr>
-<tr class="separator:ac041fa35966d3f68a41f9db179fc3a41"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9ee09e5900d6cfdafdfa96639534347"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/dbf/class_c_button.html#aa9ee09e5900d6cfdafdfa96639534347">m_lastState</a></td></tr>
-<tr class="separator:aa9ee09e5900d6cfdafdfa96639534347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../da/dbf/class_c_button.html" title="CButton class provides a debounce button service. ">CButton</a> class provides a debounce button service. </p>
@@ -324,16 +314,16 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-<div class="fragment"><div class="line">    <a class="code" href="../../da/dbf/class_c_button.html">CButton</a> btn(17);    <span class="comment">// Connect btn object to P0.17</span></div>
-<div class="line">    <span class="keywordflow">switch</span>( btn.isPressed() ) {</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda076cb0f337f54dd9e2e24b0ac35e2914">BTN_PRESSED</a>:</div>
-<div class="line">        led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda088f9b16da57669ccab96d2b25c78ad2">BTN_RELEASED</a>:</div>
-<div class="line">        led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
-<div class="line">    <span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda0dd3b406a70dc290c45ecba437881199">BTN_NOTHING</a>:</div>
-<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="fragment"><div class="line"><a class="code" href="../../da/dbf/class_c_button.html">CButton</a> btn(17);    <span class="comment">// Connect btn object to P0.17</span></div>
+<div class="line"><span class="keywordflow">switch</span>( btn.isPressed() ) {</div>
+<div class="line"><span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda076cb0f337f54dd9e2e24b0ac35e2914">BTN_PRESSED</a>:</div>
+<div class="line">    led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda088f9b16da57669ccab96d2b25c78ad2">BTN_RELEASED</a>:</div>
+<div class="line">    led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
+<div class="line"><span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda0dd3b406a70dc290c45ecba437881199">BTN_NOTHING</a>:</div>
+<div class="line">    <span class="keywordflow">break</span>;</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
 </div>
@@ -624,74 +614,13 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a class="anchor" id="ac041fa35966d3f68a41f9db179fc3a41"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> CButton::m_action</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="aa9ee09e5900d6cfdafdfa96639534347"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> CButton::m_lastState</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="a7b0f870cfeb58955c5655aa6317fb410"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> CButton::m_tmBounce</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../da/dbf/class_c_button.html">CButton</a></li>
-    <li class="footer">Generated on Thu Nov 27 2014 10:38:35 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Nov 28 2014 00:22:59 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
