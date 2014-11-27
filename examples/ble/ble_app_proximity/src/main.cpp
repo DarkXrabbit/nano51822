@@ -36,7 +36,7 @@
 #include <class/adc.h>
 #include <class/timeout.h>
 #include <class/power.h>
-#include <class/pin.h>
+#include <class/button.h>
 
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "Proximity"            /**< Name of device. Will be included in the advertising data. */
@@ -95,8 +95,7 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice task
 
 	// Button for clear bond white-list
-	CPin btn(17);	// P0.17
-	btn.input();
+	CButton btn(17);	// P0.17
 
 	// device manager
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
@@ -181,7 +180,6 @@ int main(void) {
 	CTimeout tmLED, tmBAT;
 	uint16_t value;
 	float percentage;
-	PIN_LEVEL_T pl = HIGH;
 
 	//
     // Enter main loop.
@@ -191,13 +189,15 @@ int main(void) {
     	// Proximity immediate alert send.
     	//
     	if ( prox.isAvailable() ) {
-    		if ( btn!=pl ) {
-				if ( btn==LOW ) {
-					prox.send(ALERT_LEVEL_HIGH_ALERT);
-				} else {
-					prox.send(ALERT_LEVEL_NO_ALERT);
-				}
-				pl = btn;
+    		switch( btn.isPressed() ) {
+    		case BTN_PRESSED:
+    			prox.send(ALERT_LEVEL_HIGH_ALERT);
+				break;
+    		case BTN_RELEASED:
+				prox.send(ALERT_LEVEL_NO_ALERT);
+				break;
+    		case BTN_NOTHING:
+    			break;
     		}
     	}
 
