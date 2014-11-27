@@ -61,7 +61,21 @@ public:
 	 * @return
 	 * @retval BTN_NOTHING	The Button does nothing.
 	 * @retval BTN_PRESSED	The Button pressed.
-	 * #retval BTN_RELEASED	The button released.
+	 * @retval BTN_RELEASED	The button released.
+	 *
+	 * @code
+	 * 	CButton btn(17);	// Connect btn object to P0.17
+	 * 	switch( btn.isPressed() ) {
+	 * 	case BTN_PRESSED:
+	 * 		led = LED_ON;
+	 * 		break;
+	 * 	case BTN_RELEASED:
+	 * 		led = LED_OFF;
+	 * 		break;
+	 * 	case BTN_NOTHING:
+	 * 		break;
+	 * }
+	 * @endcode
 	 */
 	virtual BTN_EVENT_T isPressed();
 protected:

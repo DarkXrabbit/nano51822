@@ -139,6 +139,25 @@ void keyTask(CThread *p_thread, xHandle p_params) {
 }
 
 //
+// KB LED handle
+//
+void kb_leds_handle(bleServiceKB *p_hids, uint8_t leds) {
+	CPin ledNum(20);
+	CPin ledCaps(21);
+
+	ledNum.output();
+	ledCaps.output();
+
+	if ( bit_chk(leds, KB_LED_NUM_LOCK) ) {
+		ledNum = LED_ON;
+	}
+
+	if ( bit_chk(leds, KB_LED_CAPS_LOCK) ) {
+		ledCaps = LED_ON;
+	}
+}
+
+//
 // Main Routine
 //
 int main(void) {
@@ -195,6 +214,7 @@ int main(void) {
 	// HID Keyboard Service
 	//
 	bleServiceKB kbs(ble);
+	kbs.attach_kb_leds_handle(kb_leds_handle);
 
 	//
 	// Battery Level Service

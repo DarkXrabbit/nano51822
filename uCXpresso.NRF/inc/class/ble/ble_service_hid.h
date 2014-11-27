@@ -94,7 +94,7 @@ enum KEY_ACTION_T {
 /** @defgroup HID_KB_LEDS HID Keyboard LEDs bits
  * @{ */
 #define KB_LED_NUM_LOCK					0
-#define KB_LED_CAPS 					1
+#define KB_LED_CAPS_LOCK 				1
 #define KB_LED_SCROLL_LOCK				2
 #define KB_LED_COMPOSE					3
 #define KB_LED_KANA						4
