@@ -178,7 +178,7 @@ Protected Attributes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../da/dbf/class_c_button.html" title="CButton class provides a debounce button service. ">CButton</a> class provides a debounce button service. </p>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="../../da/dbf/class_c_button.html" title="CButton class provides a debounce button service. ">CButton</a> is a static class. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a1">/ble/ble_app_hid_keyboard/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a1">/ble/ble_app_hid_keyboard/src/main.cpp</a>, and <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#_a13">/ble/ble_app_proximity/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a38b604793fabc3d654224250b4446fe8"></a>
 <div class="memitem">
@@ -319,11 +319,23 @@ Protected Attributes</h2></td></tr>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">BTN_NOTHING</td><td>The Button does nothing. </td></tr>
-    <tr><td class="paramname">BTN_PRESSED</td><td>The Button pressed. #retval BTN_RELEASED The button released. </td></tr>
+    <tr><td class="paramname">BTN_PRESSED</td><td>The Button pressed. </td></tr>
+    <tr><td class="paramname">BTN_RELEASED</td><td>The button released.</td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line">    <a class="code" href="../../da/dbf/class_c_button.html">CButton</a> btn(17);    <span class="comment">// Connect btn object to P0.17</span></div>
+<div class="line">    <span class="keywordflow">switch</span>( btn.isPressed() ) {</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda076cb0f337f54dd9e2e24b0ac35e2914">BTN_PRESSED</a>:</div>
+<div class="line">        led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda088f9b16da57669ccab96d2b25c78ad2">BTN_RELEASED</a>:</div>
+<div class="line">        led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">    <span class="keywordflow">case</span> <a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda0dd3b406a70dc290c45ecba437881199">BTN_NOTHING</a>:</div>
+<div class="line">        <span class="keywordflow">break</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a class="anchor" id="a26a76c241a4d62d2efdac57d2cfe4c0f"></a>
@@ -679,7 +691,7 @@ Protected Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../da/dbf/class_c_button.html">CButton</a></li>
-    <li class="footer">Generated on Wed Nov 26 2014 23:51:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Thu Nov 27 2014 10:38:35 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
