@@ -44,10 +44,9 @@ public:
 	 * @param length The size of the data.
 	 * @param p_offset Indicate the start byte position of the data to crypt.
 	 *
-	 * @retval true  If the crypt operation completed.
-	 * @retval false If the crypt operation did not complete.
+	 * @return NRF_SUCCESS if the crypt operation completed.
 	 */
-	virtual bool crypt(uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL);
+	virtual uint32_t crypt(uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL);
 
 	/**
 	 * @brief Generate a new nonce block.
@@ -78,6 +77,7 @@ public:
 
 	//
 	///@cond
+	//
 	virtual ~aesCTR();
 protected:
 	xHandle	 	m_handle;
