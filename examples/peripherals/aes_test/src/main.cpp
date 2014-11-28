@@ -70,6 +70,10 @@ int main(void) {
 
 	uint32_t i;
 
+	// create new random nonce block (public key)
+	// assign the nonce block to decrypt object. it seem to exchange a random public key.
+	decrypt = encrypt.new_nonce();
+
 	//
     // Enter main loop.
 	//
@@ -79,24 +83,20 @@ int main(void) {
     	//
     	if ( dbg.available() && dbg.read()!=0x1B) {
 
-    		// create new random nonce block (public key)
-    		// assign the nonce block to decrypt object. it seem to exchange a random public key.
-    		decrypt = encrypt.new_nonce();
-
     		// encryption
+    		DBG("\n\n encryption:");
     		encrypt.crypt(ciphertext, plaintext, sizeof(plaintext));
     		for (i=0; i<sizeof(plaintext); i++) {
     			DBG("%02X ", ciphertext[i]);	// display the ciphertext contents
     		}
 
     		// decryption
-    		dbg.putc('\n');
+    		DBG("\n decryption:");
     		decrypt.crypt(cleartext, ciphertext, sizeof(plaintext));
     		for (i=0; i<sizeof(plaintext); i++) {
     			DBG("%02X ", cleartext[i]);		// display the cleartext contents
     		}
 
-    		dbg.putc('\n');
     	}
     }
 }

@@ -29,7 +29,7 @@ var group___peripherals =
     ] ],
     [ "aesCTR", "d1/d30/classaes_c_t_r.html", [
       [ "aesCTR", "d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129", null ],
-      [ "crypt", "d1/d30/classaes_c_t_r.html#ab7e35501357eead67733ff6860c79029", null ],
+      [ "crypt", "d1/d30/classaes_c_t_r.html#a63560f379e1307a5393addb060e1ccfe", null ],
       [ "get_nonce", "d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d", null ],
       [ "isThread", "d1/d30/classaes_c_t_r.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d1/d30/classaes_c_t_r.html#a18cf254bf2030ba75735238fc1a31f4d", null ],

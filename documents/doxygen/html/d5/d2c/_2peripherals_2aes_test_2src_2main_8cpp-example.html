@@ -175,6 +175,10 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <div class="line"></div>
 <div class="line">    uint32_t i;</div>
 <div class="line"></div>
+<div class="line">    <span class="comment">// create new random nonce block (public key)</span></div>
+<div class="line">    <span class="comment">// assign the nonce block to decrypt object. it seem to exchange a random public key.</span></div>
+<div class="line">    decrypt = encrypt.new_nonce();</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -184,24 +188,20 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( dbg.available() &amp;&amp; dbg.read()!=0x1B) {</div>
 <div class="line"></div>
-<div class="line">            <span class="comment">// create new random nonce block (public key)</span></div>
-<div class="line">            <span class="comment">// assign the nonce block to decrypt object. it seem to exchange a random public key.</span></div>
-<div class="line">            decrypt = encrypt.new_nonce();</div>
-<div class="line"></div>
 <div class="line">            <span class="comment">// encryption</span></div>
+<div class="line">            DBG(<span class="stringliteral">&quot;\n\n encryption:&quot;</span>);</div>
 <div class="line">            encrypt.crypt(ciphertext, plaintext, <span class="keyword">sizeof</span>(plaintext));</div>
 <div class="line">            <span class="keywordflow">for</span> (i=0; i&lt;<span class="keyword">sizeof</span>(plaintext); i++) {</div>
 <div class="line">                DBG(<span class="stringliteral">&quot;%02X &quot;</span>, ciphertext[i]);    <span class="comment">// display the ciphertext contents</span></div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// decryption</span></div>
-<div class="line">            dbg.putc(<span class="charliteral">&#39;\n&#39;</span>);</div>
+<div class="line">            DBG(<span class="stringliteral">&quot;\n decryption:&quot;</span>);</div>
 <div class="line">            decrypt.crypt(cleartext, ciphertext, <span class="keyword">sizeof</span>(plaintext));</div>
 <div class="line">            <span class="keywordflow">for</span> (i=0; i&lt;<span class="keyword">sizeof</span>(plaintext); i++) {</div>
 <div class="line">                DBG(<span class="stringliteral">&quot;%02X &quot;</span>, cleartext[i]);     <span class="comment">// display the cleartext contents</span></div>
 <div class="line">            }</div>
 <div class="line"></div>
-<div class="line">            dbg.putc(<span class="charliteral">&#39;\n&#39;</span>);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
 <div class="line">}</div>
@@ -210,7 +210,7 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Nov 28 2014 11:15:46 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Nov 28 2014 12:44:32 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -133,9 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c0882fbebcbc3e44a79427257f98129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129">aesCTR</a> (uint8_t const *key)</td></tr>
 <tr class="memdesc:a1c0882fbebcbc3e44a79427257f98129"><td class="mdescLeft">&#160;</td><td class="mdescRight">aesECB constructor  <a href="#a1c0882fbebcbc3e44a79427257f98129">More...</a><br /></td></tr>
 <tr class="separator:a1c0882fbebcbc3e44a79427257f98129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab7e35501357eead67733ff6860c79029"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#ab7e35501357eead67733ff6860c79029">crypt</a> (uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL)</td></tr>
-<tr class="memdesc:ab7e35501357eead67733ff6860c79029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypt/Decrypt data by AES CTR mode.  <a href="#ab7e35501357eead67733ff6860c79029">More...</a><br /></td></tr>
-<tr class="separator:ab7e35501357eead67733ff6860c79029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63560f379e1307a5393addb060e1ccfe"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a63560f379e1307a5393addb060e1ccfe">crypt</a> (uint8_t *output, uint8_t const *input, uint16_t length)</td></tr>
+<tr class="memdesc:a63560f379e1307a5393addb060e1ccfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypt/Decrypt data by AES CTR mode.  <a href="#a63560f379e1307a5393addb060e1ccfe">More...</a><br /></td></tr>
+<tr class="separator:a63560f379e1307a5393addb060e1ccfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad621d2689e055daddef13da9dfaceb59"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59">new_nonce</a> ()</td></tr>
 <tr class="memdesc:ad621d2689e055daddef13da9dfaceb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a new nonce block.  <a href="#ad621d2689e055daddef13da9dfaceb59">More...</a><br /></td></tr>
 <tr class="separator:ad621d2689e055daddef13da9dfaceb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +143,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a4b9075862189e2598f4b6b445686336d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the m_nonce.  <a href="#a4b9075862189e2598f4b6b445686336d">More...</a><br /></td></tr>
 <tr class="separator:a4b9075862189e2598f4b6b445686336d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa5087b8d06f2601d89bffab09256b12"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">set_nonce</a> (uint8_t *p_nonce)</td></tr>
-<tr class="memdesc:afa5087b8d06f2601d89bffab09256b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a nonce block.  <a href="#afa5087b8d06f2601d89bffab09256b12">More...</a><br /></td></tr>
+<tr class="memdesc:afa5087b8d06f2601d89bffab09256b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a nonce block, and reset session.  <a href="#afa5087b8d06f2601d89bffab09256b12">More...</a><br /></td></tr>
 <tr class="separator:afa5087b8d06f2601d89bffab09256b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a935cef23d6957549c899c0360336efb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">operator=</a> (uint8_t *p_nonce)</td></tr>
 <tr class="memdesc:a935cef23d6957549c899c0360336efb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand operator to assign a nonce block.  <a href="#a935cef23d6957549c899c0360336efb1">More...</a><br /></td></tr>
@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ab7e35501357eead67733ff6860c79029"></a>
+<a class="anchor" id="a63560f379e1307a5393addb060e1ccfe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -205,13 +205,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>length</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">uint8_t *&#160;</td>
-          <td class="paramname"><em>p_offset</em> = <code>NULL</code>&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -231,8 +225,7 @@ Public Member Functions</h2></td></tr>
   <table class="params">
     <tr><td class="paramname">output</td><td>Result of encryption/decryption. </td></tr>
     <tr><td class="paramname">input</td><td>Source data to be encrypted/decrypted. </td></tr>
-    <tr><td class="paramname">length</td><td>The size of the data. </td></tr>
-    <tr><td class="paramname">p_offset</td><td>Indicate the start byte position of the data to crypt.</td></tr>
+    <tr><td class="paramname">length</td><td>The size of the data.</td></tr>
   </table>
   </dd>
 </dl>
@@ -382,7 +375,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Assign a nonce block. </p>
+<p>Assign a nonce block, and reset session. </p>
 
 </div>
 </div>
@@ -392,7 +385,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a></li>
-    <li class="footer">Generated on Fri Nov 28 2014 11:15:48 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Nov 28 2014 12:44:34 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
