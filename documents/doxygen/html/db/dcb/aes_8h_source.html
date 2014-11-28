@@ -131,36 +131,37 @@ $(document).ready(function(){initNavTree('db/dcb/aes_8h_source.html','../../');}
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="../../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129">aesCTR</a>(uint8_t <span class="keyword">const</span> *key);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/d30/classaes_c_t_r.html#a1fdb69e568fb4aff9d6b7bd6759d12c2">crypt</a>(uint8_t *output, uint8_t <span class="keyword">const</span> *input, uint16_t length, uint8_t *p_offset=NULL);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    uint8_t* <a class="code" href="../../d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59">new_nonce</a>();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d">   61</a></span>&#160;    <span class="keyword">inline</span> uint8_t* <a class="code" href="../../d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d">get_nonce</a>() {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> m_nonce;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">   68</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">set_nonce</a>(uint8_t *p_nonce) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        memcpy(m_nonce, p_nonce, AES_BLOCK_SIZE);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">   75</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">operator = </a>(uint8_t *p_nonce) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <a class="code" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">set_nonce</a>(p_nonce);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="comment"></span>    <span class="keyword">virtual</span> ~<a class="code" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">virtual</span> uint32_t <a class="code" href="../../d1/d30/classaes_c_t_r.html#ab7e35501357eead67733ff6860c79029">crypt</a>(uint8_t *output, uint8_t <span class="keyword">const</span> *input, uint16_t length, uint8_t *p_offset=NULL);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    uint8_t* <a class="code" href="../../d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59">new_nonce</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d">   60</a></span>&#160;    <span class="keyword">inline</span> uint8_t* <a class="code" href="../../d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d">get_nonce</a>() {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> m_nonce;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">   67</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">set_nonce</a>(uint8_t *p_nonce) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        memcpy(m_nonce, p_nonce, AES_BLOCK_SIZE);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">   74</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">operator = </a>(uint8_t *p_nonce) {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">set_nonce</a>(p_nonce);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a>();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    xHandle     m_handle;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    uint8_t     m_nonce[AES_BLOCK_SIZE];</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;};</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* CLASS_AES_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="classaes_c_t_r_html_a4b9075862189e2598f4b6b445686336d"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d">aesCTR::get_nonce</a></div><div class="ttdeci">uint8_t * get_nonce()</div><div class="ttdoc">Pointer to the m_nonce. </div><div class="ttdef"><b>Definition:</b> aes.h:61</div></div>
-<div class="ttc" id="classaes_c_t_r_html_a935cef23d6957549c899c0360336efb1"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">aesCTR::operator=</a></div><div class="ttdeci">void operator=(uint8_t *p_nonce)</div><div class="ttdoc">Shorthand operator to assign a nonce block. </div><div class="ttdef"><b>Definition:</b> aes.h:75</div></div>
-<div class="ttc" id="classaes_c_t_r_html_afa5087b8d06f2601d89bffab09256b12"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">aesCTR::set_nonce</a></div><div class="ttdeci">void set_nonce(uint8_t *p_nonce)</div><div class="ttdoc">Assign a nonce block. </div><div class="ttdef"><b>Definition:</b> aes.h:68</div></div>
+<div class="ttc" id="classaes_c_t_r_html_a4b9075862189e2598f4b6b445686336d"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d">aesCTR::get_nonce</a></div><div class="ttdeci">uint8_t * get_nonce()</div><div class="ttdoc">Pointer to the m_nonce. </div><div class="ttdef"><b>Definition:</b> aes.h:60</div></div>
+<div class="ttc" id="classaes_c_t_r_html_a935cef23d6957549c899c0360336efb1"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">aesCTR::operator=</a></div><div class="ttdeci">void operator=(uint8_t *p_nonce)</div><div class="ttdoc">Shorthand operator to assign a nonce block. </div><div class="ttdef"><b>Definition:</b> aes.h:74</div></div>
+<div class="ttc" id="classaes_c_t_r_html_afa5087b8d06f2601d89bffab09256b12"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12">aesCTR::set_nonce</a></div><div class="ttdeci">void set_nonce(uint8_t *p_nonce)</div><div class="ttdoc">Assign a nonce block. </div><div class="ttdef"><b>Definition:</b> aes.h:67</div></div>
 <div class="ttc" id="classaes_c_t_r_html_ad621d2689e055daddef13da9dfaceb59"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59">aesCTR::new_nonce</a></div><div class="ttdeci">uint8_t * new_nonce()</div><div class="ttdoc">Generate a new nonce block. </div></div>
+<div class="ttc" id="classaes_c_t_r_html_ab7e35501357eead67733ff6860c79029"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#ab7e35501357eead67733ff6860c79029">aesCTR::crypt</a></div><div class="ttdeci">virtual uint32_t crypt(uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL)</div><div class="ttdoc">Encrypt/Decrypt data by AES CTR mode. </div></div>
 <div class="ttc" id="classaes_c_t_r_html"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html">aesCTR</a></div><div class="ttdoc">AES 128 bits CTR mode encryption/decryption service class. </div><div class="ttdef"><b>Definition:</b> aes.h:31</div></div>
-<div class="ttc" id="classaes_c_t_r_html_a1fdb69e568fb4aff9d6b7bd6759d12c2"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#a1fdb69e568fb4aff9d6b7bd6759d12c2">aesCTR::crypt</a></div><div class="ttdeci">virtual bool crypt(uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL)</div><div class="ttdoc">Encrypt/Decrypt data by AES CTR mode. </div></div>
 <div class="ttc" id="classaes_c_t_r_html_a1c0882fbebcbc3e44a79427257f98129"><div class="ttname"><a href="../../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129">aesCTR::aesCTR</a></div><div class="ttdeci">aesCTR(uint8_t const *key)</div><div class="ttdoc">aesECB constructor </div></div>
 <div class="ttc" id="class_c_object_html"><div class="ttname"><a href="../../dc/dac/class_c_object.html">CObject</a></div><div class="ttdef"><b>Definition:</b> object.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -169,7 +170,7 @@ $(document).ready(function(){initNavTree('db/dcb/aes_8h_source.html','../../');}
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>aes.h</b></li>
-    <li class="footer">Generated on Fri Nov 28 2014 00:22:56 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Nov 28 2014 11:15:46 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

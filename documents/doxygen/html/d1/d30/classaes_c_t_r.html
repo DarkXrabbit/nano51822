@@ -133,9 +133,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1c0882fbebcbc3e44a79427257f98129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129">aesCTR</a> (uint8_t const *key)</td></tr>
 <tr class="memdesc:a1c0882fbebcbc3e44a79427257f98129"><td class="mdescLeft">&#160;</td><td class="mdescRight">aesECB constructor  <a href="#a1c0882fbebcbc3e44a79427257f98129">More...</a><br /></td></tr>
 <tr class="separator:a1c0882fbebcbc3e44a79427257f98129"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1fdb69e568fb4aff9d6b7bd6759d12c2"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a1fdb69e568fb4aff9d6b7bd6759d12c2">crypt</a> (uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL)</td></tr>
-<tr class="memdesc:a1fdb69e568fb4aff9d6b7bd6759d12c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypt/Decrypt data by AES CTR mode.  <a href="#a1fdb69e568fb4aff9d6b7bd6759d12c2">More...</a><br /></td></tr>
-<tr class="separator:a1fdb69e568fb4aff9d6b7bd6759d12c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7e35501357eead67733ff6860c79029"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#ab7e35501357eead67733ff6860c79029">crypt</a> (uint8_t *output, uint8_t const *input, uint16_t length, uint8_t *p_offset=NULL)</td></tr>
+<tr class="memdesc:ab7e35501357eead67733ff6860c79029"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypt/Decrypt data by AES CTR mode.  <a href="#ab7e35501357eead67733ff6860c79029">More...</a><br /></td></tr>
+<tr class="separator:ab7e35501357eead67733ff6860c79029"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad621d2689e055daddef13da9dfaceb59"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59">new_nonce</a> ()</td></tr>
 <tr class="memdesc:ad621d2689e055daddef13da9dfaceb59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate a new nonce block.  <a href="#ad621d2689e055daddef13da9dfaceb59">More...</a><br /></td></tr>
 <tr class="separator:ad621d2689e055daddef13da9dfaceb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -182,7 +182,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a1fdb69e568fb4aff9d6b7bd6759d12c2"></a>
+<a class="anchor" id="ab7e35501357eead67733ff6860c79029"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -190,7 +190,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool aesCTR::crypt </td>
+          <td class="memname">virtual uint32_t aesCTR::crypt </td>
           <td>(</td>
           <td class="paramtype">uint8_t *&#160;</td>
           <td class="paramname"><em>output</em>, </td>
@@ -236,13 +236,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">true</td><td>If the crypt operation completed. </td></tr>
-    <tr><td class="paramname">false</td><td>If the crypt operation did not complete. </td></tr>
-  </table>
-  </dd>
-</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if the crypt operation completed. </dd></dl>
 
 </div>
 </div>
@@ -398,7 +392,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a></li>
-    <li class="footer">Generated on Fri Nov 28 2014 00:22:58 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Nov 28 2014 11:15:48 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
