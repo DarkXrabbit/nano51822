@@ -154,7 +154,6 @@ public:
 	 */
 	virtual bool waitTxEmpty(uint32_t timeout=500);
 
-
 	//
 	// for Arduino User (refer from Arduino.CC)
 	//
@@ -192,8 +191,8 @@ public:
 	 virtual int parseString(LPTSTR buf, size_t size, bool echo=false);
 
 	 //
-	 //
 	 /// @cond
+	 //
 	 CStream();
 	 virtual ~CStream();
 

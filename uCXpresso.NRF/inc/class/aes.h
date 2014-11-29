@@ -75,6 +75,10 @@ public:
 		set_nonce(p_nonce);
 	}
 
+	inline bool isValid() {
+		return (m_handle!=NULL ? true : false);
+	}
+
 	//
 	///@cond PRIVATE
 	//

@@ -34,6 +34,7 @@ typedef enum {
 /**
  * @brief GPIO interrupt service
  * @class gpioSense gpio_sense.h "class/gpio_sense.h"
+ *
  * @ingroup Peripherals
  */
 class gpioSense: public CPin {
@@ -47,6 +48,9 @@ public:
 
 	/**
 	 * @brief Enable the GPIO interrupt
+	 *
+	 * @note When enable the gpioSense, the 16MHz clock will stay running,
+	 * and this will cause >1mA extra current consumption.
 	 */
 	virtual void enable();
 
@@ -58,7 +62,7 @@ public:
 	/**
 	 * @brief Waiting for interrupt active
 	 * @param timeout is a waiting timeout and unit in millisecond.
-	 * @return trun if the pin is triggered.
+	 * @return true if the pin is triggered.
 	 */
 	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
