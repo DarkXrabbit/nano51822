@@ -54,7 +54,7 @@ public:
 	 * @param action 	Specifies the  @ref BTN_ACTION_T of button.
 	 * @param mode		Specifies the pull mode of the pin.
 	 */
-	CButton(uint8_t pin, BTN_ACTION_T action=BTN_ACT_LOW, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP);
+	CButton(uint8_t pin, BTN_ACTION_T action=BTN_ACT_LOW, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP, bool forWeakup=false);
 
 	/**
 	 * @brief Poll the button event.
@@ -79,11 +79,19 @@ public:
 	 */
 	virtual BTN_EVENT_T isPressed();
 
+	/**
+	 * @brief set bounce timeout (default 10ms) in millisecond.
+	 */
+	inline void bounce_timeout(uint16_t ms) {
+		m_bounce_timeout = ms;
+	}
+
 	//
 	///@cond
 	//
 protected:
 	CTimeout 		m_tmBounce;
+	uint32_t		m_bounce_timeout;
 	PIN_LEVEL_T 	m_action;
 	PIN_LEVEL_T 	m_lastState;
 	///@endcond

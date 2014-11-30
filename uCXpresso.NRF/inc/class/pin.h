@@ -62,20 +62,22 @@ public:
 	 */
 	CPin(uint8_t p);
 
-	/**Set the pin as an output pin.
-	 * \code
+	/**
+	 * @brief Set the pin as an output pin.
+	 * @code
 	 * CPin myPin(19);
 	 * myPin.output();		// set the P0.19 as an output pin. (use the default NOT_OPEN and LOW level output)
 	 * myPin = HIGH;		// set P0.19 to HIGH (use the operator '=')
 	 * myPin.write(LOW);	// set P0.19 to LOW  (use the write() member)
-	 * \endcode
-	 * \param mode is a PIN_OUT_MODE_T enumeration to indicate the output mode.
-	 * \param defValue is a PIN_LEVEL_T enumeration to set the default level for the output pin.
+	 * @endcode
+	 * @param mode is a PIN_OUT_MODE_T enumeration to indicate the output mode.
+	 * @param defValue is a PIN_LEVEL_T enumeration to set the default level for the output pin.
 	 */
 	virtual void output(PIN_LEVEL_T defValue=LOW);
 
-	/**Set as an input pin
-	 * \code
+	/**
+	 * @brief Set as an input pin
+	 * @code
 	 * PIN_LEVEL_T level;
 	 * CPin myPin(19);
 	 * myPin.input(); 		// Set the P0.19 as an input pin. (with default INTERNAL_PULL_UP feature)
@@ -84,10 +86,11 @@ public:
 	 * }
 	 * level = myPin;		// Read a pin level from myPin. (use the operator '=')
 	 * level = myPin.read();// Read a pin level from myPin. (use the read() member)
-	 * \endcode
-	 * \param mode is a PIN_INPUT_MODE_T enumeration to indicat the input mode.
+	 * @endcode
+	 * @param mode 		Indicate pin mode to @ref PIN_INPUT_MODE_T.
+	 * @param forWeakup	As a weak-up pin when in system power off mode.
 	 */
-	virtual void input(PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP);
+	virtual void input(PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP, bool forWeakup=false);
 
 	/**Write a Pin Level to the output pin.
 	 * \param val is a PIN_LEVEL_T enumeration to write to the output pin.

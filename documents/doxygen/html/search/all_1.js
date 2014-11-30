@@ -43,6 +43,7 @@ var searchData=
   ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html',1,'bleServiceUART'],['../db/d84/classble_service_u_a_r_t.html#a2a069c5054a7c9072fba7d233418e299',1,'bleServiceUART::bleServiceUART()']]],
   ['blocked',['BLOCKED',['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba376c1b6a3f75d283a2efacf737438d61',1,'thread.h']]],
   ['bluetooth',['Bluetooth',['../df/d6f/group___bluetooth.html',1,'']]],
+  ['bounce_5ftimeout',['bounce_timeout',['../da/dbf/class_c_button.html#a32ed096777f29dbabf9ec66d5096cc78',1,'CButton']]],
   ['btn_5fact_5fhigh',['BTN_ACT_HIGH',['../db/dff/group___enumerations.html#gga548a9714cc99332623a24074be12ca8ba149387aa5367eef8934711af57931e86',1,'button.h']]],
   ['btn_5fact_5flow',['BTN_ACT_LOW',['../db/dff/group___enumerations.html#gga548a9714cc99332623a24074be12ca8bae8df71dc1ffcafbecb8dbbd5487af0e2',1,'button.h']]],
   ['btn_5faction_5ft',['BTN_ACTION_T',['../db/dff/group___enumerations.html#ga548a9714cc99332623a24074be12ca8b',1,'button.h']]],

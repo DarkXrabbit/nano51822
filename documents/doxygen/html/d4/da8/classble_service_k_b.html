@@ -141,6 +141,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a049e07ca5e2eec4456481402efc9f3d3"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da8/classble_service_k_b.html#a049e07ca5e2eec4456481402efc9f3d3">send</a> (uint8_t code, <a class="el" href="../../db/dff/group___enumerations.html#gae64134ad7082495adc1c8d60eb011040">KEY_ACTION_T</a> action, uint8_t modifier_keys=0)</td></tr>
 <tr class="memdesc:a049e07ca5e2eec4456481402efc9f3d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send the key pressed/released.  <a href="#a049e07ca5e2eec4456481402efc9f3d3">More...</a><br /></td></tr>
 <tr class="separator:a049e07ca5e2eec4456481402efc9f3d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb425e209badf673ce00f1217773936e"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da8/classble_service_k_b.html#afb425e209badf673ce00f1217773936e">send</a> (<a class="el" href="../../db/dff/group___enumerations.html#gaa14e46fa0abb150c9a43281c19a454a5">multimedia_keys_t</a> key)</td></tr>
+<tr class="memdesc:afb425e209badf673ce00f1217773936e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Send for multimedia key.  <a href="#afb425e209badf673ce00f1217773936e">More...</a><br /></td></tr>
+<tr class="separator:afb425e209badf673ce00f1217773936e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e7e6f95ef5b343733019958c6121f64"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da8/classble_service_k_b.html#a1e7e6f95ef5b343733019958c6121f64">attach_kb_leds_handle</a> (<a class="el" href="../../d4/da8/classble_service_k_b.html#aa8d8e3dc7ad69b2885fe0fc7f057e066">hid_kb_leds_t</a> handle)</td></tr>
 <tr class="memdesc:a1e7e6f95ef5b343733019958c6121f64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach the <a class="el" href="../../d4/da8/classble_service_k_b.html#aa8d8e3dc7ad69b2885fe0fc7f057e066">hid_kb_leds_t</a> handle.  <a href="#a1e7e6f95ef5b343733019958c6121f64">More...</a><br /></td></tr>
 <tr class="separator:a1e7e6f95ef5b343733019958c6121f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -174,7 +177,7 @@ Private Types</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE human interface device class for keyboard service. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a9">/ble/ble_app_hid_keyboard/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#_a9">/ble/ble_app_hid_keyboard/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#_a16">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a class="anchor" id="aa8d8e3dc7ad69b2885fe0fc7f057e066"></a>
 <div class="memitem">
@@ -468,6 +471,47 @@ Private Types</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="afb425e209badf673ce00f1217773936e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t bleServiceKB::send </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#gaa14e46fa0abb150c9a43281c19a454a5">multimedia_keys_t</a>&#160;</td>
+          <td class="paramname"><em>key</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Send for multimedia key. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>Send the <a class="el" href="../../db/dff/group___enumerations.html#gaa14e46fa0abb150c9a43281c19a454a5">multimedia_keys_t</a> key.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">NRF_SUCCESS</td><td>Send scan code successful. </td></tr>
+    <tr><td class="paramname">NRF_ERROR_BUSY</td><td>Report buffer is full. (Max scan code report buffer = 6 bytes) </td></tr>
+    <tr><td class="paramname">NRF_ERROR_INVALID_PARAM</td><td>Invalid action code. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a6ef2039be90de7892ccf02294bb00d2a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -530,7 +574,7 @@ Private Types</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d4/da8/classble_service_k_b.html">bleServiceKB</a></li>
-    <li class="footer">Generated on Sun Nov 30 2014 11:01:23 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 30 2014 23:53:01 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,7 +1,7 @@
 var class_c_pin =
 [
     [ "CPin", "d7/db9/class_c_pin.html#a18255266b80947630ee79324a6ce446b", null ],
-    [ "input", "d7/db9/class_c_pin.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
+    [ "input", "d7/db9/class_c_pin.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
     [ "invert", "d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5", null ],
     [ "isThread", "d7/db9/class_c_pin.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7", null ],

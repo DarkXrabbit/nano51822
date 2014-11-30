@@ -27,7 +27,7 @@
 #define DEF_ADV_INTERVAL				1000	// 1000 Milliseconds
 #define DEF_ADV_TIMEOUT					0		// No Adv. timeout  (unit:second)
 #define DEF_ADV_FLAG					BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE
-#define DEF_ADV_FAST_INTERVAL			25		// for bond connection, adv. interval = 25ms
+#define DEF_ADV_FAST_INTERVAL			50		// for bond connection, adv. interval = 50ms
 #define DEF_ADV_FAST_TIMEOUT			40		// for bond connection, adv. timeout = 40 sec.
 #define DEF_ADV_FAST_WHITELIST_TIMEOUT	20		// for bond white-list, adv. timeout = 20 sec.
 #define DEF_DIRECTED_ADV_TIMEOUT         5		// number of direct advertisement (each lasting 1.28seconds).

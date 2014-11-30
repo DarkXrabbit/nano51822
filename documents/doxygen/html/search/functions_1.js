@@ -18,5 +18,6 @@ var searchData=
   ['bleserviceproximity',['bleServiceProximity',['../df/d3a/classble_service_proximity.html#a6e2e7c6fc83306cc86bf09053430983d',1,'bleServiceProximity']]],
   ['bleservicersc',['bleServiceRSC',['../de/dc0/classble_service_r_s_c.html#a7881093c8c12b3fe83ae2ad5e17f9515',1,'bleServiceRSC']]],
   ['bleservicetpl',['bleServiceTPL',['../d2/df3/classble_service_t_p_l.html#a4cdbce5f3104912d1f35fc86e29e002b',1,'bleServiceTPL']]],
-  ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html#a2a069c5054a7c9072fba7d233418e299',1,'bleServiceUART']]]
+  ['bleserviceuart',['bleServiceUART',['../db/d84/classble_service_u_a_r_t.html#a2a069c5054a7c9072fba7d233418e299',1,'bleServiceUART']]],
+  ['bounce_5ftimeout',['bounce_timeout',['../da/dbf/class_c_button.html#a32ed096777f29dbabf9ec66d5096cc78',1,'CButton']]]
 ];

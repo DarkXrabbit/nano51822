@@ -151,9 +151,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a2ae6559724aba3faeda8592dd19cc491"><td class="mdescLeft">&#160;</td><td class="mdescRight">check the sense pin enabled or not.  <a href="#a2ae6559724aba3faeda8592dd19cc491">More...</a><br /></td></tr>
 <tr class="separator:a2ae6559724aba3faeda8592dd19cc491"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbf59d18abba5e28a3cbe7cb219330a3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> defValue=<a class="el" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a>)</td></tr>
+<tr class="memdesc:adbf59d18abba5e28a3cbe7cb219330a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the pin as an output pin.  <a href="#adbf59d18abba5e28a3cbe7cb219330a3">More...</a><br /></td></tr>
 <tr class="separator:adbf59d18abba5e28a3cbe7cb219330a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a21aa5b473c1a3637a487c7724f8b9fcf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a21aa5b473c1a3637a487c7724f8b9fcf">input</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga9f8f32709b482732d6e377ff26da36ef">PIN_INPUT_MODE_T</a> mode=<a class="el" href="../../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa781a7f23ae9b0dbdc6edfdcfd3be75df">INTERNAL_PULL_UP</a>)</td></tr>
-<tr class="separator:a21aa5b473c1a3637a487c7724f8b9fcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5b71804822b1aee3ee2e5d0350fcc74"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#ad5b71804822b1aee3ee2e5d0350fcc74">input</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga9f8f32709b482732d6e377ff26da36ef">PIN_INPUT_MODE_T</a> mode=<a class="el" href="../../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa781a7f23ae9b0dbdc6edfdcfd3be75df">INTERNAL_PULL_UP</a>, bool forWeakup=false)</td></tr>
+<tr class="memdesc:ad5b71804822b1aee3ee2e5d0350fcc74"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set as an input pin.  <a href="#ad5b71804822b1aee3ee2e5d0350fcc74">More...</a><br /></td></tr>
+<tr class="separator:ad5b71804822b1aee3ee2e5d0350fcc74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1fc3486f4afea4de56ae677c20600551"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a1fc3486f4afea4de56ae677c20600551">write</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> val)</td></tr>
 <tr class="separator:a1fc3486f4afea4de56ae677c20600551"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02060b0c9bbf0f75dead7bef1c75ce6b"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b">read</a> ()</td></tr>
@@ -273,7 +275,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a21aa5b473c1a3637a487c7724f8b9fcf"></a>
+<a class="anchor" id="ad5b71804822b1aee3ee2e5d0350fcc74"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -284,8 +286,18 @@ Public Member Functions</h2></td></tr>
           <td class="memname">virtual void CPin::input </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga9f8f32709b482732d6e377ff26da36ef">PIN_INPUT_MODE_T</a>&#160;</td>
-          <td class="paramname"><em>mode</em> = <code><a class="el" href="../../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa781a7f23ae9b0dbdc6edfdcfd3be75df">INTERNAL_PULL_UP</a></code></td><td>)</td>
+          <td class="paramname"><em>mode</em> = <code><a class="el" href="../../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa781a7f23ae9b0dbdc6edfdcfd3be75df">INTERNAL_PULL_UP</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>forWeakup</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -294,7 +306,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set as an input pin </p><div class="fragment"><div class="line"><a class="code" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> level;</div>
+
+<p>Set as an input pin. </p>
+<div class="fragment"><div class="line"><a class="code" href="../../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80">PIN_LEVEL_T</a> level;</div>
 <div class="line"><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> myPin(19);</div>
 <div class="line">myPin.input();      <span class="comment">// Set the P0.19 as an input pin. (with default INTERNAL_PULL_UP feature)</span></div>
 <div class="line"><span class="keywordflow">if</span> ( myPin==<a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a0c3a1dacf94061154b3ee354359c5893">HIGH</a> ) {    <span class="comment">// Read a pin level from myPin. (use the operator &#39;==&#39;)</span></div>
@@ -304,7 +318,8 @@ Public Member Functions</h2></td></tr>
 <div class="line">level = myPin.read();<span class="comment">// Read a pin level from myPin. (use the read() member)</span></div>
 </div><!-- fragment --> <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">mode</td><td>is a PIN_INPUT_MODE_T enumeration to indicat the input mode. </td></tr>
+    <tr><td class="paramname">mode</td><td>Indicate pin mode to <a class="el" href="../../db/dff/group___enumerations.html#ga9f8f32709b482732d6e377ff26da36ef">PIN_INPUT_MODE_T</a>. </td></tr>
+    <tr><td class="paramname">forWeakup</td><td>As a weak-up pin when in system power off mode. </td></tr>
   </table>
   </dd>
 </dl>
@@ -511,7 +526,9 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Set the pin as an output pin. </p><div class="fragment"><div class="line"><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> myPin(19);</div>
+
+<p>Set the pin as an output pin. </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> myPin(19);</div>
 <div class="line">myPin.output();     <span class="comment">// set the P0.19 as an output pin. (use the default NOT_OPEN and LOW level output)</span></div>
 <div class="line">myPin = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a0c3a1dacf94061154b3ee354359c5893">HIGH</a>;       <span class="comment">// set P0.19 to HIGH (use the operator &#39;=&#39;)</span></div>
 <div class="line">myPin.write(<a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a>);   <span class="comment">// set P0.19 to LOW  (use the write() member)</span></div>
@@ -522,7 +539,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a26">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a3">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a18">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a22">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a9">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#a14">/peripherals/hw_pwm/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a7">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a3">/peripherals/uart_echo/src/main.cpp</a>, <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#a7">/peripherals/watchdog/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a3">/rtos/blink/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a26">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a3">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a18">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a22">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a5">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>, <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a9">/peripherals/adc_test/src/main.cpp</a>, <a class="el" href="../../d1/dab/_2peripherals_2hw_pwm_2src_2main_8cpp-example.html#a14">/peripherals/hw_pwm/src/main.cpp</a>, <a class="el" href="../../d3/df3/_2peripherals_2i2c_scanner_2src_2main_8cpp-example.html#a7">/peripherals/i2c_scanner/src/main.cpp</a>, <a class="el" href="../../d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html#a3">/peripherals/uart_echo/src/main.cpp</a>, <a class="el" href="../../dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html#a7">/peripherals/watchdog/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a3">/rtos/blink/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -570,7 +587,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Read a Pin Level from the input pin. </p><dl class="section return"><dt>Returns</dt><dd>PIN_LEVEL_T is HIGH (or LOW) enumeration. </dd></dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/db9/class_c_pin.html#a21aa5b473c1a3637a487c7724f8b9fcf">input</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/db9/class_c_pin.html#ad5b71804822b1aee3ee2e5d0350fcc74" title="Set as an input pin. ">input</a> </dd></dl>
 
 </div>
 </div>
@@ -683,7 +700,7 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a> </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3" title="Set the pin as an output pin. ">output</a> </dd></dl>
 
 </div>
 </div>
@@ -693,7 +710,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d3c/classgpio_sense.html">gpioSense</a></li>
-    <li class="footer">Generated on Sun Nov 30 2014 11:01:24 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 30 2014 23:53:03 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

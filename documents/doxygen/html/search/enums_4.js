@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nrf_5flfclksrc_5ft',['NRF_LFCLKSRC_T',['../db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422',1,'ble_device.h']]]
+  ['multimedia_5fkeys_5ft',['multimedia_keys_t',['../db/dff/group___enumerations.html#gaa14e46fa0abb150c9a43281c19a454a5',1,'ble_service_hid.h']]]
 ];

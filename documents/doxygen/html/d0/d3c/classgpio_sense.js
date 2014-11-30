@@ -3,7 +3,7 @@ var classgpio_sense =
     [ "gpioSense", "d0/d3c/classgpio_sense.html#aa0d631f576b529ebe16a778ec65ad478", null ],
     [ "disable", "d0/d3c/classgpio_sense.html#a7cd0b63530617389ad1467a290149ed5", null ],
     [ "enable", "d0/d3c/classgpio_sense.html#a259cb1030dc31d5b0c254a9366913f4a", null ],
-    [ "input", "d0/d3c/classgpio_sense.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
+    [ "input", "d0/d3c/classgpio_sense.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
     [ "invert", "d0/d3c/classgpio_sense.html#a240de24c726724aeda90bfacf1d50cc5", null ],
     [ "isThread", "d0/d3c/classgpio_sense.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d0/d3c/classgpio_sense.html#a2ae6559724aba3faeda8592dd19cc491", null ],

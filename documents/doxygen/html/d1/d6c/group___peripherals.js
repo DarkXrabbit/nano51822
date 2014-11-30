@@ -83,8 +83,9 @@ var group___peripherals =
       [ "write", "de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0", null ]
     ] ],
     [ "CButton", "da/dbf/class_c_button.html", [
-      [ "CButton", "da/dbf/class_c_button.html#a38b604793fabc3d654224250b4446fe8", null ],
-      [ "input", "da/dbf/class_c_button.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
+      [ "CButton", "da/dbf/class_c_button.html#af74f63f4bf97a44f27ef1409ff02136d", null ],
+      [ "bounce_timeout", "da/dbf/class_c_button.html#a32ed096777f29dbabf9ec66d5096cc78", null ],
+      [ "input", "da/dbf/class_c_button.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
       [ "invert", "da/dbf/class_c_button.html#a240de24c726724aeda90bfacf1d50cc5", null ],
       [ "isPressed", "da/dbf/class_c_button.html#a00950efb2bfb7e08420ebfaf9d004d0e", null ],
       [ "isThread", "da/dbf/class_c_button.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
@@ -103,7 +104,7 @@ var group___peripherals =
       [ "gpioSense", "d0/d3c/classgpio_sense.html#aa0d631f576b529ebe16a778ec65ad478", null ],
       [ "disable", "d0/d3c/classgpio_sense.html#a7cd0b63530617389ad1467a290149ed5", null ],
       [ "enable", "d0/d3c/classgpio_sense.html#a259cb1030dc31d5b0c254a9366913f4a", null ],
-      [ "input", "d0/d3c/classgpio_sense.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
+      [ "input", "d0/d3c/classgpio_sense.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
       [ "invert", "d0/d3c/classgpio_sense.html#a240de24c726724aeda90bfacf1d50cc5", null ],
       [ "isThread", "d0/d3c/classgpio_sense.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d0/d3c/classgpio_sense.html#a2ae6559724aba3faeda8592dd19cc491", null ],
@@ -149,7 +150,7 @@ var group___peripherals =
     ] ],
     [ "CPin", "d7/db9/class_c_pin.html", [
       [ "CPin", "d7/db9/class_c_pin.html#a18255266b80947630ee79324a6ce446b", null ],
-      [ "input", "d7/db9/class_c_pin.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
+      [ "input", "d7/db9/class_c_pin.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
       [ "invert", "d7/db9/class_c_pin.html#a240de24c726724aeda90bfacf1d50cc5", null ],
       [ "isThread", "d7/db9/class_c_pin.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "d7/db9/class_c_pin.html#a22332dbadc930db9d796036b408d47f7", null ],

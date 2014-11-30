@@ -8,6 +8,7 @@ var examples =
     [ "/ble/ble_app_uart/src/main.cpp", "d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_beacon/src/main.cpp", "d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html", null ],
     [ "/ble/ble_rssi_measure/src/main.cpp", "d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html", null ],
+    [ "/cookbook/ble_app_hid_camera_shutter/src/main.cpp", "d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/adc_test/src/main.cpp", "d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/aes_test/src/main.cpp", "d5/d2c/_2peripherals_2aes_test_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/gpio_sense/src/main.cpp", "d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html", null ],

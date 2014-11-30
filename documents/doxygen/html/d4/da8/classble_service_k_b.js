@@ -9,6 +9,7 @@ var classble_service_k_b =
     [ "isThread", "d4/da8/classble_service_k_b.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
     [ "isValid", "d4/da8/classble_service_k_b.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
     [ "send", "d4/da8/classble_service_k_b.html#a049e07ca5e2eec4456481402efc9f3d3", null ],
+    [ "send", "d4/da8/classble_service_k_b.html#afb425e209badf673ce00f1217773936e", null ],
     [ "uuid", "d4/da8/classble_service_k_b.html#a6ef2039be90de7892ccf02294bb00d2a", null ],
     [ "uuid_type", "d4/da8/classble_service_k_b.html#a8931a117eb7be5a52455b53459b0df62", null ]
 ];

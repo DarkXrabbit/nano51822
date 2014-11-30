@@ -95,6 +95,17 @@ var group___enumerations =
       [ "KEY_PRESSED", "db/dff/group___enumerations.html#ggae64134ad7082495adc1c8d60eb011040ac2439afec39a5b43a1fd36a4316379a7", null ],
       [ "KEY_RELEASED", "db/dff/group___enumerations.html#ggae64134ad7082495adc1c8d60eb011040a207f5f32e6d172c4003ec10fab0cb06d", null ]
     ] ],
+    [ "multimedia_keys_t", "db/dff/group___enumerations.html#gaa14e46fa0abb150c9a43281c19a454a5", [
+      [ "MM_KEY_RELEASE", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a9fa239e2266b17e2c77b022ec545854e", null ],
+      [ "MM_KEY_PLAY_PAUSE", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a2f6d35863a84a387c6ee8830cef6dc17", null ],
+      [ "MM_KEY_AL_CCC", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a03e45f620d1b5884ab01bf722a2c2dfa", null ],
+      [ "MM_KEY_SCAN_NEXT_TRACK", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5adce95ea824b559776a1dca067c0cdd6e", null ],
+      [ "MM_KEY_SCAN_PREV_TRACK", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5afab3c49851aeddcd2ab9e6d681853c34", null ],
+      [ "MM_KEY_VOL_DOWN", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5ae08d373b0d0b071fad8b8613ddc17707", null ],
+      [ "MM_KEY_VOL_UP", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a76004aa7e0ee47b2f5a3836377214a5c", null ],
+      [ "MM_KEY_AC_FORWARD", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5ab1c2f47db8e1303cbf8388a1cc92ce19", null ],
+      [ "MM_KEY_AC_BACK", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a0f2921ea1bcb0001013c0f13a9d93cdf", null ]
+    ] ],
     [ "NRF_LFCLKSRC_T", "db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422", [
       [ "NRF_LFCLKSRC_SYNTH_250_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148", null ],
       [ "NRF_LFCLKSRC_XTAL_500_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c", null ],

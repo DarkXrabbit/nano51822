@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_service_hid.h
  Author      : Jason
- Version     : v1.0.0
- Date		 : 2014/11/24
+ Version     : v1.0.1
+ Date		 : 2014/11/30
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE human interface device services.
  ===============================================================================
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/11/24	v1.0.0	First Edition									Jason
+ 2014/11/30 v1.0.1	Add multimedia keys input.						Jason
  ===============================================================================
  */
 
@@ -91,6 +92,24 @@ enum KEY_ACTION_T {
 	KEY_RELEASED	///< key released
 };
 
+
+/**
+ * @brief HID Multimedia Keys
+ * @ingroup Enumerations
+ */
+typedef enum
+{
+    MM_KEY_RELEASE =            0x00,	///< Release current multimedia key
+    MM_KEY_PLAY_PAUSE =         0x01,	///< Play & Paus
+    MM_KEY_AL_CCC =             0x02,
+    MM_KEY_SCAN_NEXT_TRACK =    0x04,	///< Next
+    MM_KEY_SCAN_PREV_TRACK =    0x08,	///< Prev
+    MM_KEY_VOL_DOWN =           0x10,	///< Volume Down
+    MM_KEY_VOL_UP =             0x20,	///< Volume Up
+    MM_KEY_AC_FORWARD =         0x40,	///< Forward
+    MM_KEY_AC_BACK =            0x80,	///< Back
+} multimedia_keys_t;
+
 /** @defgroup HID_KB_LEDS HID Keyboard LEDs bits
  * @{ */
 #define KB_LED_NUM_LOCK					0
@@ -140,6 +159,17 @@ public:
 	virtual uint32_t send(uint8_t code, KEY_ACTION_T action, uint8_t modifier_keys=0);
 
 	/**
+	 * @brief Send for multimedia key.
+	 * @param[in] key Send the @ref multimedia_keys_t key.
+	 *
+	 * @return
+	 * @retval NRF_SUCCESS				Send scan code successful.
+	 * @retval NRF_ERROR_BUSY			Report buffer is full. (Max scan code report buffer = 6 bytes)
+	 * @retval NRF_ERROR_INVALID_PARAM	Invalid action code.
+	 */
+	virtual uint32_t send(multimedia_keys_t key);
+
+	/**
 	 * @brief Attach the @ref hid_kb_leds_t handle
 	 * @param[in] handle Pointer to the @ref hid_kb_leds_t function.
 	 */
@@ -170,6 +200,16 @@ protected:
 
 extern bleServiceHID *gpHID;
 #define gpKB	((bleServiceKB *) gpHID)
+
+/**\example /cookbook/ble_app_hid_camera_shutter/src/main.cpp
+ * This is an example of how to use the bleServiceKB class.
+ * More details about this example.
+ */
+
+/**\example /ble/ble_app_hid_keyboard/src/main.cpp
+ * This is an example of how to use the bleServiceKB class.
+ * More details about this example.
+ */
 
 
 #endif /* CLASS_BLE_BLE_SERVICE_HID_H_ */

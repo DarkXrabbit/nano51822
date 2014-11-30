@@ -1,7 +1,8 @@
 var class_c_button =
 [
-    [ "CButton", "da/dbf/class_c_button.html#a38b604793fabc3d654224250b4446fe8", null ],
-    [ "input", "da/dbf/class_c_button.html#a21aa5b473c1a3637a487c7724f8b9fcf", null ],
+    [ "CButton", "da/dbf/class_c_button.html#af74f63f4bf97a44f27ef1409ff02136d", null ],
+    [ "bounce_timeout", "da/dbf/class_c_button.html#a32ed096777f29dbabf9ec66d5096cc78", null ],
+    [ "input", "da/dbf/class_c_button.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
     [ "invert", "da/dbf/class_c_button.html#a240de24c726724aeda90bfacf1d50cc5", null ],
     [ "isPressed", "da/dbf/class_c_button.html#a00950efb2bfb7e08420ebfaf9d004d0e", null ],
     [ "isThread", "da/dbf/class_c_button.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],

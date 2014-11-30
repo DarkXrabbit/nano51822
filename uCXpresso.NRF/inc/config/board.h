@@ -9,6 +9,7 @@
 #include <class/ble/ble_device.h>
 
 #ifdef BOARD_LILYPAD
+#define BUTTON_PIN_0	0		// DFU Button
 #define LED_PIN_0		7
 #define LED_PIN_1		20
 #endif
