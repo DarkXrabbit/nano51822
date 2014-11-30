@@ -27,15 +27,44 @@ var group___peripherals =
       [ "reset", "d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02", null ],
       [ "source", "d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc", null ]
     ] ],
+    [ "AES128", "da/d77/class_a_e_s128.html", [
+      [ "AES128", "da/d77/class_a_e_s128.html#abc74192f556491c10e732711e69dd1ea", null ],
+      [ "ciphertext", "da/d77/class_a_e_s128.html#a8f39df95c1bcefd08f9365d34db6bf1b", null ],
+      [ "cleartext", "da/d77/class_a_e_s128.html#a1a73d92b7f1972d0efeb901cdc520986", null ],
+      [ "encrypt", "da/d77/class_a_e_s128.html#a5c6555739f89f5049f6502ae35edb7dd", null ],
+      [ "isThread", "da/d77/class_a_e_s128.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "da/d77/class_a_e_s128.html#a4d0e9ec4aa4b7a48618a213342d3609e", null ],
+      [ "key", "da/d77/class_a_e_s128.html#a1cf8d615a5698cadf41a5c261d43f6c9", null ]
+    ] ],
     [ "aesCTR", "d1/d30/classaes_c_t_r.html", [
       [ "aesCTR", "d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129", null ],
+      [ "ciphertext", "d1/d30/classaes_c_t_r.html#a8f39df95c1bcefd08f9365d34db6bf1b", null ],
+      [ "cleartext", "d1/d30/classaes_c_t_r.html#a1a73d92b7f1972d0efeb901cdc520986", null ],
       [ "crypt", "d1/d30/classaes_c_t_r.html#a63560f379e1307a5393addb060e1ccfe", null ],
+      [ "encrypt", "d1/d30/classaes_c_t_r.html#a5c6555739f89f5049f6502ae35edb7dd", null ],
       [ "get_nonce", "d1/d30/classaes_c_t_r.html#a4b9075862189e2598f4b6b445686336d", null ],
       [ "isThread", "d1/d30/classaes_c_t_r.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
-      [ "isValid", "d1/d30/classaes_c_t_r.html#a388c0a9a06a1cc075d55d5f46f6175b9", null ],
+      [ "isValid", "d1/d30/classaes_c_t_r.html#a4d0e9ec4aa4b7a48618a213342d3609e", null ],
+      [ "key", "d1/d30/classaes_c_t_r.html#a1cf8d615a5698cadf41a5c261d43f6c9", null ],
       [ "new_nonce", "d1/d30/classaes_c_t_r.html#ad621d2689e055daddef13da9dfaceb59", null ],
       [ "operator=", "d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1", null ],
       [ "set_nonce", "d1/d30/classaes_c_t_r.html#afa5087b8d06f2601d89bffab09256b12", null ]
+    ] ],
+    [ "aesCFB", "d2/d1c/classaes_c_f_b.html", [
+      [ "aesCFB", "d2/d1c/classaes_c_f_b.html#a141da481d90fa9dd86b54bbac1e2bf6e", null ],
+      [ "ciphertext", "d2/d1c/classaes_c_f_b.html#a8f39df95c1bcefd08f9365d34db6bf1b", null ],
+      [ "cleartext", "d2/d1c/classaes_c_f_b.html#a1a73d92b7f1972d0efeb901cdc520986", null ],
+      [ "crypt", "d2/d1c/classaes_c_f_b.html#a9101a63b8c2a964c37283b08eede8740", null ],
+      [ "encrypt", "d2/d1c/classaes_c_f_b.html#a5c6555739f89f5049f6502ae35edb7dd", null ],
+      [ "get_IV", "d2/d1c/classaes_c_f_b.html#a83eb7658f578b3a113eb945ae78bb653", null ],
+      [ "isThread", "d2/d1c/classaes_c_f_b.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
+      [ "isValid", "d2/d1c/classaes_c_f_b.html#a4d0e9ec4aa4b7a48618a213342d3609e", null ],
+      [ "key", "d2/d1c/classaes_c_f_b.html#a1cf8d615a5698cadf41a5c261d43f6c9", null ],
+      [ "new_IV", "d2/d1c/classaes_c_f_b.html#aa4791142da2647b68d4a4e2ca155c5a8", null ],
+      [ "operator=", "d2/d1c/classaes_c_f_b.html#ac10ac5cdc865861bc08c1a6ce70f71fb", null ],
+      [ "set_IV", "d2/d1c/classaes_c_f_b.html#ad41736e454de7500efdce230bdafe523", null ],
+      [ "m_mode", "d2/d1c/classaes_c_f_b.html#a34484aa8bb7de43b93a6b978e7b4cff1", null ],
+      [ "m_offset", "d2/d1c/classaes_c_f_b.html#ae849685d55f39d133dd460120daf8029", null ]
     ] ],
     [ "CBus", "de/d89/class_c_bus.html", [
       [ "CBus", "de/d89/class_c_bus.html#a03bb378921772d204c60958d7e8c0702", null ],

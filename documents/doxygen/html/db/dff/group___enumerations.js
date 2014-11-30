@@ -27,6 +27,10 @@ var group___enumerations =
       [ "ADV_TYPE_ADV_SCAN_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499af045bfff3346c52e2e7a2ff565c983c5", null ],
       [ "ADV_TYPE_ADV_NONCONN_IND", "db/dff/group___enumerations.html#ggaf36f4f6c9535228c7563541c4590b499aad594ee5e1ab112250733e0223db6cad", null ]
     ] ],
+    [ "AES_MODE_T", "db/dff/group___enumerations.html#gaec4f4aa0ca5fc464a7c0575e70dc5e52", [
+      [ "AES_DECRYPT", "db/dff/group___enumerations.html#ggaec4f4aa0ca5fc464a7c0575e70dc5e52a546ff8653f5230bc1faf08bb4f780fe8", null ],
+      [ "AES_ENCRYPT", "db/dff/group___enumerations.html#ggaec4f4aa0ca5fc464a7c0575e70dc5e52a499ec7d0d5de5b6027db02e1bbc95435", null ]
+    ] ],
     [ "AIN_T", "db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b", [
       [ "AD0", "db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba9a6afaa33efd88ccbd62117ab0555cce", null ],
       [ "AD1", "db/dff/group___enumerations.html#gga9f048db78212facfb5363e0b932c6c7ba96f3b3489a6abb6db7d90ad7c0b5ca34", null ],

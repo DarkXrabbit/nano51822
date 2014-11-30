@@ -65,14 +65,20 @@ int main(void) {
 	//
 	// A private key for internal used.
 	// use the same key in encrypt and decrypt objects.
-	aesCTR encrypt(private_key);
-	aesCTR decrypt(private_key);
+	aesCTR encryptCTR(private_key);
+	aesCTR decryptCTR(private_key);
+
+	aesCFB encryptCFB(private_key, AES_ENCRYPT);
+	aesCFB decryptCFB(private_key, AES_DECRYPT);
 
 	uint32_t i;
 
 	// create new random nonce block (public key)
 	// assign the nonce block to decrypt object. it seem to exchange a random public key.
-	decrypt = encrypt.new_nonce();
+	decryptCTR = encryptCTR.new_nonce();
+
+	// create new randmo IV block (public key)
+	decryptCFB = encryptCFB.new_IV();
 
 	//
     // Enter main loop.
@@ -83,20 +89,42 @@ int main(void) {
     	//
     	if ( dbg.available() && dbg.read()!=0x1B) {
 
+    		//
+    		// AES CTR
+    		//
+    		DBG("\n\nAES CTR Mode:\n");
     		// encryption
-    		DBG("\n\n encryption:");
-    		encrypt.crypt(ciphertext, plaintext, sizeof(plaintext));
+    		DBG("encryption:");
+    		encryptCTR.crypt(ciphertext, plaintext, sizeof(plaintext));
     		for (i=0; i<sizeof(plaintext); i++) {
     			DBG("%02X ", ciphertext[i]);	// display the ciphertext contents
     		}
 
     		// decryption
-    		DBG("\n decryption:");
-    		decrypt.crypt(cleartext, ciphertext, sizeof(plaintext));
+    		DBG("\ndecryption:");
+    		decryptCTR.crypt(cleartext, ciphertext, sizeof(plaintext));
     		for (i=0; i<sizeof(plaintext); i++) {
     			DBG("%02X ", cleartext[i]);		// display the cleartext contents
     		}
 
+    		//
+    		// AES CFB
+    		//
+    		DBG("\n\nAES CFB Mode:\n");
+    		// encryption
+    		DBG("encryption:");
+    		encryptCFB.crypt(ciphertext, plaintext, sizeof(plaintext));
+    		for (i=0; i<sizeof(plaintext); i++) {
+    			DBG("%02X ", ciphertext[i]);	// display the ciphertext contents
+    		}
+
+    		// decryption
+    		DBG("\ndecryption:");
+    		decryptCFB.crypt(cleartext, ciphertext, sizeof(plaintext));
+    		for (i=0; i<sizeof(plaintext); i++) {
+    			DBG("%02X ", cleartext[i]);		// display the cleartext contents
+    		}
     	}
+    	sleep(10);	// give idle time for DFU button check.
     }
 }

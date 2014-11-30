@@ -1,5 +1,7 @@
 var annotated =
 [
+    [ "AES128", "da/d77/class_a_e_s128.html", "da/d77/class_a_e_s128" ],
+    [ "aesCFB", "d2/d1c/classaes_c_f_b.html", "d2/d1c/classaes_c_f_b" ],
     [ "aesCTR", "d1/d30/classaes_c_t_r.html", "d1/d30/classaes_c_t_r" ],
     [ "bleAdvertising", "d0/d2c/classble_advertising.html", "d0/d2c/classble_advertising" ],
     [ "bleBase", "d2/dc4/classble_base.html", "d2/dc4/classble_base" ],

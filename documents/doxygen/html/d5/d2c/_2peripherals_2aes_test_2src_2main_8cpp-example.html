@@ -102,7 +102,7 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <div class="title">/peripherals/aes_test/src/main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<p>This is an example of how to use the <a class="el" href="../../d1/d30/classaes_c_t_r.html" title="AES 128 bits CTR mode encryption/decryption service class. ">aesCTR</a> class. More details about this example.</p>
+<p>This is an example of how to use the AES 128 encryption/decryption services. More details about this example.</p>
 <div class="fragment"><div class="line"><span class="comment">/*</span></div>
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment"> Name        : aes_test</span></div>
@@ -170,14 +170,20 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// A private key for internal used.</span></div>
 <div class="line">    <span class="comment">// use the same key in encrypt and decrypt objects.</span></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a> encrypt(private_key);</div>
-<div class="line">    <a class="code" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a> decrypt(private_key);</div>
+<div class="line">    <a name="_a4"></a><a class="code" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a> encryptCTR(private_key);</div>
+<div class="line">    <a class="code" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a> decryptCTR(private_key);</div>
+<div class="line"></div>
+<div class="line">    <a name="_a5"></a><a class="code" href="../../d2/d1c/classaes_c_f_b.html">aesCFB</a> encryptCFB(private_key, <a name="a6"></a><a class="code" href="../../db/dff/group___enumerations.html#ggaec4f4aa0ca5fc464a7c0575e70dc5e52a499ec7d0d5de5b6027db02e1bbc95435">AES_ENCRYPT</a>);</div>
+<div class="line">    <a class="code" href="../../d2/d1c/classaes_c_f_b.html">aesCFB</a> decryptCFB(private_key, <a name="a7"></a><a class="code" href="../../db/dff/group___enumerations.html#ggaec4f4aa0ca5fc464a7c0575e70dc5e52a546ff8653f5230bc1faf08bb4f780fe8">AES_DECRYPT</a>);</div>
 <div class="line"></div>
 <div class="line">    uint32_t i;</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// create new random nonce block (public key)</span></div>
 <div class="line">    <span class="comment">// assign the nonce block to decrypt object. it seem to exchange a random public key.</span></div>
-<div class="line">    decrypt = encrypt.new_nonce();</div>
+<div class="line">    decryptCTR = encryptCTR.new_nonce();</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// create new randmo IV block (public key)</span></div>
+<div class="line">    decryptCFB = encryptCFB.new_IV();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
@@ -188,21 +194,43 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( dbg.available() &amp;&amp; dbg.read()!=0x1B) {</div>
 <div class="line"></div>
+<div class="line">            <span class="comment">//</span></div>
+<div class="line">            <span class="comment">// AES CTR</span></div>
+<div class="line">            <span class="comment">//</span></div>
+<div class="line">            DBG(<span class="stringliteral">&quot;\n\nAES CTR Mode:\n&quot;</span>);</div>
 <div class="line">            <span class="comment">// encryption</span></div>
-<div class="line">            DBG(<span class="stringliteral">&quot;\n\n encryption:&quot;</span>);</div>
-<div class="line">            encrypt.crypt(ciphertext, plaintext, <span class="keyword">sizeof</span>(plaintext));</div>
+<div class="line">            DBG(<span class="stringliteral">&quot;encryption:&quot;</span>);</div>
+<div class="line">            encryptCTR.crypt(ciphertext, plaintext, <span class="keyword">sizeof</span>(plaintext));</div>
 <div class="line">            <span class="keywordflow">for</span> (i=0; i&lt;<span class="keyword">sizeof</span>(plaintext); i++) {</div>
 <div class="line">                DBG(<span class="stringliteral">&quot;%02X &quot;</span>, ciphertext[i]);    <span class="comment">// display the ciphertext contents</span></div>
 <div class="line">            }</div>
 <div class="line"></div>
 <div class="line">            <span class="comment">// decryption</span></div>
-<div class="line">            DBG(<span class="stringliteral">&quot;\n decryption:&quot;</span>);</div>
-<div class="line">            decrypt.crypt(cleartext, ciphertext, <span class="keyword">sizeof</span>(plaintext));</div>
+<div class="line">            DBG(<span class="stringliteral">&quot;\ndecryption:&quot;</span>);</div>
+<div class="line">            decryptCTR.crypt(cleartext, ciphertext, <span class="keyword">sizeof</span>(plaintext));</div>
 <div class="line">            <span class="keywordflow">for</span> (i=0; i&lt;<span class="keyword">sizeof</span>(plaintext); i++) {</div>
 <div class="line">                DBG(<span class="stringliteral">&quot;%02X &quot;</span>, cleartext[i]);     <span class="comment">// display the cleartext contents</span></div>
 <div class="line">            }</div>
 <div class="line"></div>
+<div class="line">            <span class="comment">//</span></div>
+<div class="line">            <span class="comment">// AES CFB</span></div>
+<div class="line">            <span class="comment">//</span></div>
+<div class="line">            DBG(<span class="stringliteral">&quot;\n\nAES CFB Mode:\n&quot;</span>);</div>
+<div class="line">            <span class="comment">// encryption</span></div>
+<div class="line">            DBG(<span class="stringliteral">&quot;encryption:&quot;</span>);</div>
+<div class="line">            encryptCFB.crypt(ciphertext, plaintext, <span class="keyword">sizeof</span>(plaintext));</div>
+<div class="line">            <span class="keywordflow">for</span> (i=0; i&lt;<span class="keyword">sizeof</span>(plaintext); i++) {</div>
+<div class="line">                DBG(<span class="stringliteral">&quot;%02X &quot;</span>, ciphertext[i]);    <span class="comment">// display the ciphertext contents</span></div>
+<div class="line">            }</div>
+<div class="line"></div>
+<div class="line">            <span class="comment">// decryption</span></div>
+<div class="line">            DBG(<span class="stringliteral">&quot;\ndecryption:&quot;</span>);</div>
+<div class="line">            decryptCFB.crypt(cleartext, ciphertext, <span class="keyword">sizeof</span>(plaintext));</div>
+<div class="line">            <span class="keywordflow">for</span> (i=0; i&lt;<span class="keyword">sizeof</span>(plaintext); i++) {</div>
+<div class="line">                DBG(<span class="stringliteral">&quot;%02X &quot;</span>, cleartext[i]);     <span class="comment">// display the cleartext contents</span></div>
+<div class="line">            }</div>
 <div class="line">        }</div>
+<div class="line">        sleep(10);  <span class="comment">// give idle time for DFU button check.</span></div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -210,7 +238,7 @@ $(document).ready(function(){initNavTree('d5/d2c/_2peripherals_2aes_test_2src_2m
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sat Nov 29 2014 11:56:27 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 30 2014 11:01:21 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

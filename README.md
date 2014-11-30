@@ -8,10 +8,10 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.2 rc3 28th November 2014
+v1.0.2 rc3 30th November 2014
 --------------------------------
 ###Details: 
-	1. Add AES 128 bits encryption/decrytion service class.
+	1. Add AES 128 bits CTR and CFB mode encryption/decrytion services class.
 	2. Fixed "connect directed mode".
 	3. Add bleServiceHID & bleServiceKB classes.
 	4. Add CButton class.

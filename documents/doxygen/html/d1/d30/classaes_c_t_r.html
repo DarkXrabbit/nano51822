@@ -114,7 +114,7 @@ $(document).ready(function(){initNavTree('d1/d30/classaes_c_t_r.html','../../');
 </div><!--header-->
 <div class="contents">
 
-<p>AES 128 bits CTR mode encryption/decryption service class.  
+<p>AES 128 counter mode encryption/decryption service class.  
  <a href="../../d1/d30/classaes_c_t_r.html#details">More...</a></p>
 
 <p><code>#include &quot;<a class="el" href="../../db/dcb/aes_8h_source.html">class/aes.h</a>&quot;</code></p>
@@ -124,13 +124,14 @@ Inheritance diagram for aesCTR:</div>
  <div class="center">
   <img src="../../d1/d30/classaes_c_t_r.png" usemap="#aesCTR_map" alt=""/>
   <map id="aesCTR_map" name="aesCTR_map">
+<area href="../../da/d77/class_a_e_s128.html" title="128-bit AES ECB encryption base class. " alt="AES128" shape="rect" coords="0,56,58,80"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="0,0,58,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a1c0882fbebcbc3e44a79427257f98129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129">aesCTR</a> (uint8_t const *key)</td></tr>
+<tr class="memitem:a1c0882fbebcbc3e44a79427257f98129"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129">aesCTR</a> (uint8_t const *<a class="el" href="../../da/d77/class_a_e_s128.html#a1cf8d615a5698cadf41a5c261d43f6c9">key</a>)</td></tr>
 <tr class="memdesc:a1c0882fbebcbc3e44a79427257f98129"><td class="mdescLeft">&#160;</td><td class="mdescRight">aesECB constructor  <a href="#a1c0882fbebcbc3e44a79427257f98129">More...</a><br /></td></tr>
 <tr class="separator:a1c0882fbebcbc3e44a79427257f98129"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63560f379e1307a5393addb060e1ccfe"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a63560f379e1307a5393addb060e1ccfe">crypt</a> (uint8_t *output, uint8_t const *input, uint16_t length)</td></tr>
@@ -146,15 +147,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:afa5087b8d06f2601d89bffab09256b12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign a nonce block, and reset session.  <a href="#afa5087b8d06f2601d89bffab09256b12">More...</a><br /></td></tr>
 <tr class="separator:afa5087b8d06f2601d89bffab09256b12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a935cef23d6957549c899c0360336efb1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a935cef23d6957549c899c0360336efb1">operator=</a> (uint8_t *p_nonce)</td></tr>
-<tr class="memdesc:a935cef23d6957549c899c0360336efb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand operator to assign a nonce block.  <a href="#a935cef23d6957549c899c0360336efb1">More...</a><br /></td></tr>
+<tr class="memdesc:a935cef23d6957549c899c0360336efb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand operator to assign the nonce block of CTR.  <a href="#a935cef23d6957549c899c0360336efb1">More...</a><br /></td></tr>
 <tr class="separator:a935cef23d6957549c899c0360336efb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a388c0a9a06a1cc075d55d5f46f6175b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d30/classaes_c_t_r.html#a388c0a9a06a1cc075d55d5f46f6175b9">isValid</a> ()</td></tr>
-<tr class="separator:a388c0a9a06a1cc075d55d5f46f6175b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c6555739f89f5049f6502ae35edb7dd"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d77/class_a_e_s128.html#a5c6555739f89f5049f6502ae35edb7dd">encrypt</a> (uint8_t *<a class="el" href="../../da/d77/class_a_e_s128.html#a1a73d92b7f1972d0efeb901cdc520986">cleartext</a>)</td></tr>
+<tr class="memdesc:a5c6555739f89f5049f6502ae35edb7dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Encrypts a block according to the specified parameters.  <a href="#a5c6555739f89f5049f6502ae35edb7dd">More...</a><br /></td></tr>
+<tr class="separator:a5c6555739f89f5049f6502ae35edb7dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f39df95c1bcefd08f9365d34db6bf1b"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d77/class_a_e_s128.html#a8f39df95c1bcefd08f9365d34db6bf1b">ciphertext</a> ()</td></tr>
+<tr class="memdesc:a8f39df95c1bcefd08f9365d34db6bf1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the ciphertext contents after encryption.  <a href="#a8f39df95c1bcefd08f9365d34db6bf1b">More...</a><br /></td></tr>
+<tr class="separator:a8f39df95c1bcefd08f9365d34db6bf1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a73d92b7f1972d0efeb901cdc520986"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d77/class_a_e_s128.html#a1a73d92b7f1972d0efeb901cdc520986">cleartext</a> ()</td></tr>
+<tr class="memdesc:a1a73d92b7f1972d0efeb901cdc520986"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the cleartext contents.  <a href="#a1a73d92b7f1972d0efeb901cdc520986">More...</a><br /></td></tr>
+<tr class="separator:a1a73d92b7f1972d0efeb901cdc520986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cf8d615a5698cadf41a5c261d43f6c9"><td class="memItemLeft" align="right" valign="top">uint8_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d77/class_a_e_s128.html#a1cf8d615a5698cadf41a5c261d43f6c9">key</a> ()</td></tr>
+<tr class="memdesc:a1cf8d615a5698cadf41a5c261d43f6c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer to the key of AES.  <a href="#a1cf8d615a5698cadf41a5c261d43f6c9">More...</a><br /></td></tr>
+<tr class="separator:a1cf8d615a5698cadf41a5c261d43f6c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d0e9ec4aa4b7a48618a213342d3609e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d77/class_a_e_s128.html#a4d0e9ec4aa4b7a48618a213342d3609e">isValid</a> ()</td></tr>
+<tr class="separator:a4d0e9ec4aa4b7a48618a213342d3609e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>AES 128 bits CTR mode encryption/decryption service class. </p>
+<div class="textblock"><p>AES 128 counter mode encryption/decryption service class. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d5/d2c/_2peripherals_2aes_test_2src_2main_8cpp-example.html#_a4">/peripherals/aes_test/src/main.cpp</a>.</dd>
 </dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a1c0882fbebcbc3e44a79427257f98129"></a>
@@ -174,7 +187,7 @@ Public Member Functions</h2></td></tr>
 <p>aesECB constructor </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">key</td><td>A 16 bytes key. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">key</td><td>A 128 bits (16 bytes) private KEY. </td></tr>
   </table>
   </dd>
 </dl>
@@ -182,6 +195,56 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a8f39df95c1bcefd08f9365d34db6bf1b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* AES128::ciphertext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the ciphertext contents after encryption. </p>
+
+</div>
+</div>
+<a class="anchor" id="a1a73d92b7f1972d0efeb901cdc520986"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* AES128::cleartext </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the cleartext contents. </p>
+
+</div>
+</div>
 <a class="anchor" id="a63560f379e1307a5393addb060e1ccfe"></a>
 <div class="memitem">
 <div class="memproto">
@@ -230,6 +293,44 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS if the crypt operation completed. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a5c6555739f89f5049f6502ae35edb7dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t AES128::encrypt </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>cleartext</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Encrypts a block according to the specified parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">cleartext</td><td>Pointer to the cleartext contents.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>Return values</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">::NRF_SUCCESS</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -284,7 +385,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a388c0a9a06a1cc075d55d5f46f6175b9"></a>
+<a class="anchor" id="a4d0e9ec4aa4b7a48618a213342d3609e"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -292,7 +393,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool aesCTR::isValid </td>
+          <td class="memname">bool AES128::isValid </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -300,12 +401,37 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span><span class="mlabel">inherited</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">CObject</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1cf8d615a5698cadf41a5c261d43f6c9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint8_t* AES128::key </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inherited</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pointer to the key of AES. </p>
 
 </div>
 </div>
@@ -349,7 +475,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Shorthand operator to assign a nonce block. </p>
+<p>Shorthand operator to assign the nonce block of CTR. </p>
 
 </div>
 </div>
@@ -385,7 +511,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d1/d30/classaes_c_t_r.html">aesCTR</a></li>
-    <li class="footer">Generated on Sat Nov 29 2014 11:56:30 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Nov 30 2014 11:01:22 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
