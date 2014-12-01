@@ -57,7 +57,7 @@
 // key input task
 //
 void keyTask(CThread *p_thread, xHandle p_params) {
-	CButton btn0(BUTTON_PIN_0, BTN_ACT_LOW, INTERNAL_PULL_UP, true);	// set BUTTON_PIN_0 as input pin with weakup sense.
+	CButton btn0(BUTTON_PIN_0);	// set BUTTON_PIN_0 as input pin with weakup sense.
 	CPin led(LED_PIN_1);
 	led.output();
 
@@ -162,8 +162,8 @@ int main(void) {
 
 	// GAP
 	ble.m_gap.settings( DEVICE_NAME,
-			500,		// connection interval min. 500ms
-			1000		// connection interval max. 1000ms
+			100,		// connection interval min. 100ms
+			200		// connection interval max. 200ms
 			);
 
 	ble.m_gap.tx_power(BLE_TX_0dBm);

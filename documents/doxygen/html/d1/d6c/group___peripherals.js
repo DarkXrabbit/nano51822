@@ -83,7 +83,7 @@ var group___peripherals =
       [ "write", "de/d89/class_c_bus.html#a4852669ff7ae53e68cf125aa49a87bd0", null ]
     ] ],
     [ "CButton", "da/dbf/class_c_button.html", [
-      [ "CButton", "da/dbf/class_c_button.html#af74f63f4bf97a44f27ef1409ff02136d", null ],
+      [ "CButton", "da/dbf/class_c_button.html#a872f40cd7ff5260c44abea2deac3ed46", null ],
       [ "bounce_timeout", "da/dbf/class_c_button.html#a32ed096777f29dbabf9ec66d5096cc78", null ],
       [ "input", "da/dbf/class_c_button.html#ad5b71804822b1aee3ee2e5d0350fcc74", null ],
       [ "invert", "da/dbf/class_c_button.html#a240de24c726724aeda90bfacf1d50cc5", null ],

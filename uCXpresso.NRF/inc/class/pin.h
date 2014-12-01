@@ -88,7 +88,7 @@ public:
 	 * level = myPin.read();// Read a pin level from myPin. (use the read() member)
 	 * @endcode
 	 * @param mode 		Indicate pin mode to @ref PIN_INPUT_MODE_T.
-	 * @param forWeakup	As a weak-up pin when in system power off mode.
+	 * @param forWeakup	Set the pin can weakup the system from power off mode.
 	 */
 	virtual void input(PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP, bool forWeakup=false);
 

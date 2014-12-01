@@ -2,9 +2,8 @@
  ===============================================================================
  Name        : button
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/11/14
- License   	 : MIT
+ Version     : v1.0.1
+ Date		 : 2014/12/1
  Description : Implement a button input with bounce detected.
  ===============================================================================
  History
@@ -12,6 +11,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/11/14	v1.0.0	First Edition									Jason
+ 2014/12/1	v1.0.1	Add weakup option in constructor.				Jason
  ===============================================================================
  */
 
@@ -53,8 +53,9 @@ public:
 	 * @param pin 		Indicates the pin number to connect to the CButton object.
 	 * @param action 	Specifies the  @ref BTN_ACTION_T of button.
 	 * @param mode		Specifies the pull mode of the pin.
+	 * @param forWakeup Set the pin can weakup the system from power off mode.
 	 */
-	CButton(uint8_t pin, BTN_ACTION_T action=BTN_ACT_LOW, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP, bool forWeakup=false);
+	CButton(uint8_t pin, BTN_ACTION_T action=BTN_ACT_LOW, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP, bool forWeakup=true);
 
 	/**
 	 * @brief Poll the button event.

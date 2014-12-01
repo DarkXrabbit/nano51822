@@ -125,6 +125,6 @@ int main(void) {
     			DBG("%02X ", cleartext[i]);		// display the cleartext contents
     		}
     	}
-    	sleep(10);	// give idle time for DFU button check.
+    	sleep(100);	// give idle time for DFU button check.
     }
 }
