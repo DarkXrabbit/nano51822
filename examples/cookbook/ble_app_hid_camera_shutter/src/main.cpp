@@ -9,7 +9,7 @@
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2014/11/30 v1.0.0	First Edition.									Jason
+ 2014/12/1 v1.0.0	First Edition.									Jason
  ===============================================================================
  */
 
@@ -151,14 +151,12 @@ int main(void) {
 					&pnp_id
 					);
 
-	//
-	// Button to clear all bounded centrals.
-	//
+	// Pin to clear all center list
 	CPin btn(17);
+	btn.input();
 
 	// Device Manager for bond device.
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
-	man.connect_directed_mode();		// enable "connect directed mode"
 
 	// GAP
 	ble.m_gap.settings( DEVICE_NAME,
