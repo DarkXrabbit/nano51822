@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : ble_app_hid_camera_shutter
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Description : BLE HID keyboard Test
 ===============================================================================
  	 	 	 	 	 	 	 	 History
@@ -49,8 +49,8 @@
 //
 // Board LED define
 //
-//#define BOARD_PCA10001
-#define BOARD_LILYPAD
+#define BOARD_PCA10001
+//#define BOARD_LILYPAD
 #include <config/board.h>
 
 //
@@ -98,25 +98,6 @@ void keyTask(CThread *p_thread, xHandle p_params) {
 }
 
 //
-// KB LED handle
-//
-void kb_leds_handle(bleServiceKB *p_hids, uint8_t leds) {
-	CPin ledNum(20);
-	CPin ledCaps(21);
-
-	ledNum.output();
-	ledCaps.output();
-
-	if ( bit_chk(leds, KB_LED_NUM_LOCK) ) {
-		ledNum = LED_ON;
-	}
-
-	if ( bit_chk(leds, KB_LED_CAPS_LOCK) ) {
-		ledCaps = LED_ON;
-	}
-}
-
-//
 // Main Routine
 //
 int main(void) {
@@ -157,6 +138,7 @@ int main(void) {
 
 	// Device Manager for bond device.
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
+	man.connect_directed_mode();
 
 	// GAP
 	ble.m_gap.settings( DEVICE_NAME,
@@ -170,7 +152,6 @@ int main(void) {
 	// HID Keyboard Service
 	//
 	bleServiceKB kbs(ble);
-	kbs.attach_kb_leds_handle(kb_leds_handle);
 
 	//
 	// Battery Level Service

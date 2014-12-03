@@ -173,11 +173,11 @@ int main(void) {
 	//
 	// BLE Advertising
 	//
-	ble.m_advertising.interval(APP_ADV_INTERVAL);	// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);// add company identifier
 	ble.m_advertising.update();						// update advertising data
 
 	// Start advertising
+	ble.m_advertising.interval(APP_ADV_INTERVAL);	// set advertising interval
 	ble.m_advertising.start();
 
 	//
