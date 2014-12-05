@@ -127,7 +127,7 @@ Inheritance diagram for bleServiceUART:</div>
   <img src="../../db/d84/classble_service_u_a_r_t.png" usemap="#bleServiceUART_map" alt=""/>
   <map id="bleServiceUART_map" name="bleServiceUART_map">
 <area href="../../de/d51/classble_service_customer.html" title="BLE customer services base class. " alt="bleServiceCustomer" shape="rect" coords="0,168,126,192"/>
-<area href="../../d4/d16/class_c_stream.html" alt="CStream" shape="rect" coords="136,168,262,192"/>
+<area href="../../d4/d16/class_c_stream.html" title="An abstract class, to define the serial stream input and output interface. " alt="CStream" shape="rect" coords="136,168,262,192"/>
 <area href="../../da/d80/classble_service.html" title="BLE Service base class. " alt="bleService" shape="rect" coords="0,112,126,136"/>
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="136,112,262,136"/>
 <area href="../../d2/dc4/classble_base.html" title="The bleBase class is an empty base class. " alt="bleBase" shape="rect" coords="0,56,126,80"/>
@@ -144,6 +144,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ae705fcba3d3465a51b56a25c4403cd5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the TX char. be listened.  <a href="#ae705fcba3d3465a51b56a25c4403cd5b">More...</a><br /></td></tr>
 <tr class="separator:ae705fcba3d3465a51b56a25c4403cd5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3188668919976191f0fc3ac52ac87130"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html#a3188668919976191f0fc3ac52ac87130">isConnected</a> ()</td></tr>
+<tr class="memdesc:a3188668919976191f0fc3ac52ac87130"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the current connection is valid or not.  <a href="#a3188668919976191f0fc3ac52ac87130">More...</a><br /></td></tr>
 <tr class="separator:a3188668919976191f0fc3ac52ac87130"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a63f759c0494bc2affe5a7779ded6a40b"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a63f759c0494bc2affe5a7779ded6a40b">uuid</a> ()</td></tr>
 <tr class="memdesc:a63f759c0494bc2affe5a7779ded6a40b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the uuid of service;.  <a href="#a63f759c0494bc2affe5a7779ded6a40b">More...</a><br /></td></tr>
@@ -159,32 +160,46 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
 <tr class="separator:a18cf254bf2030ba75735238fc1a31f4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a96328807241e15017868b845b06fd9e4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a96328807241e15017868b845b06fd9e4">readable</a> ()</td></tr>
+<tr class="memdesc:a96328807241e15017868b845b06fd9e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine how many data bytes are available to read.  <a href="#a96328807241e15017868b845b06fd9e4">More...</a><br /></td></tr>
 <tr class="separator:a96328807241e15017868b845b06fd9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a56ec27ee664f1a4eb9910988b78833d5"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a56ec27ee664f1a4eb9910988b78833d5">writeable</a> ()</td></tr>
+<tr class="memdesc:a56ec27ee664f1a4eb9910988b78833d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine how many data space are available to write.  <a href="#a56ec27ee664f1a4eb9910988b78833d5">More...</a><br /></td></tr>
 <tr class="separator:a56ec27ee664f1a4eb9910988b78833d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c5870bec2c7c5f6be1e59c83d555d38"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a5c5870bec2c7c5f6be1e59c83d555d38">read</a> (void *buf, int len, uint32_t block=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:a5c5870bec2c7c5f6be1e59c83d555d38"><td class="mdescLeft">&#160;</td><td class="mdescRight">To read the stream to buffer.  <a href="#a5c5870bec2c7c5f6be1e59c83d555d38">More...</a><br /></td></tr>
 <tr class="separator:a5c5870bec2c7c5f6be1e59c83d555d38"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af56764abe8954430eede10e253f8994f"><td class="memItemLeft" align="right" valign="top">virtual uint8_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#af56764abe8954430eede10e253f8994f">read</a> ()</td></tr>
+<tr class="memdesc:af56764abe8954430eede10e253f8994f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a byte from stream.  <a href="#af56764abe8954430eede10e253f8994f">More...</a><br /></td></tr>
 <tr class="separator:af56764abe8954430eede10e253f8994f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac8d31702e9e03eb0856583ba16764860"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#ac8d31702e9e03eb0856583ba16764860">write</a> (const void *buf, int len, uint32_t block=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:ac8d31702e9e03eb0856583ba16764860"><td class="mdescLeft">&#160;</td><td class="mdescRight">To write the buffer to stream.  <a href="#ac8d31702e9e03eb0856583ba16764860">More...</a><br /></td></tr>
 <tr class="separator:ac8d31702e9e03eb0856583ba16764860"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48041fea5cad32feaeef543bcaa2d37d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a48041fea5cad32feaeef543bcaa2d37d">write</a> (uint8_t c)</td></tr>
+<tr class="memdesc:a48041fea5cad32feaeef543bcaa2d37d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write a byte to stream.  <a href="#a48041fea5cad32feaeef543bcaa2d37d">More...</a><br /></td></tr>
 <tr class="separator:a48041fea5cad32feaeef543bcaa2d37d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bd707b33627e01c2069b14bbf10694a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a5bd707b33627e01c2069b14bbf10694a">flush</a> ()</td></tr>
+<tr class="memdesc:a5bd707b33627e01c2069b14bbf10694a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flush the stream the both input and output buffer.  <a href="#a5bd707b33627e01c2069b14bbf10694a">More...</a><br /></td></tr>
 <tr class="separator:a5bd707b33627e01c2069b14bbf10694a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c6130bd65b00f278045d8b7b8ea7f84"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/d16/class_c_stream.html">CStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a2c6130bd65b00f278045d8b7b8ea7f84">operator&lt;&lt;</a> (uint8_t c)</td></tr>
+<tr class="memdesc:a2c6130bd65b00f278045d8b7b8ea7f84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator '&lt;&lt;', to output a byte to stream.  <a href="#a2c6130bd65b00f278045d8b7b8ea7f84">More...</a><br /></td></tr>
 <tr class="separator:a2c6130bd65b00f278045d8b7b8ea7f84"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad2f2d74f0924caa2e863d049fe9ada80"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/d16/class_c_stream.html">CStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#ad2f2d74f0924caa2e863d049fe9ada80">operator&lt;&lt;</a> (<a class="el" href="../../d4/d16/class_c_stream.html">CStream</a> &amp;s)</td></tr>
+<tr class="memdesc:ad2f2d74f0924caa2e863d049fe9ada80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read a byte from right stream and send to left stream.  <a href="#ad2f2d74f0924caa2e863d049fe9ada80">More...</a><br /></td></tr>
 <tr class="separator:ad2f2d74f0924caa2e863d049fe9ada80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2bd1778d5f5cfab469e5df615e1c8fc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/d16/class_c_stream.html">CStream</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#af2bd1778d5f5cfab469e5df615e1c8fc">operator&gt;&gt;</a> (uint8_t c)</td></tr>
+<tr class="memdesc:af2bd1778d5f5cfab469e5df615e1c8fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator '&gt;&gt;', to input a byte from stream.  <a href="#af2bd1778d5f5cfab469e5df615e1c8fc">More...</a><br /></td></tr>
 <tr class="separator:af2bd1778d5f5cfab469e5df615e1c8fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbaa22d4608c1a015a20104fde6c8ccf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#acbaa22d4608c1a015a20104fde6c8ccf">operator uint8_t</a> ()</td></tr>
+<tr class="memdesc:acbaa22d4608c1a015a20104fde6c8ccf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator 'uint8_t', to receive a byte from stream.  <a href="#acbaa22d4608c1a015a20104fde6c8ccf">More...</a><br /></td></tr>
 <tr class="separator:acbaa22d4608c1a015a20104fde6c8ccf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc833c2eea18af67b57ba641ec58fea7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#acc833c2eea18af67b57ba641ec58fea7">operator char</a> ()</td></tr>
+<tr class="memdesc:acc833c2eea18af67b57ba641ec58fea7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Operator 'char', to receive a char from stream.  <a href="#acc833c2eea18af67b57ba641ec58fea7">More...</a><br /></td></tr>
 <tr class="separator:acc833c2eea18af67b57ba641ec58fea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6259540dbdf87dffc659b44e2ea80e36"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#a6259540dbdf87dffc659b44e2ea80e36">waitTxEmpty</a> (uint32_t timeout=500)</td></tr>
+<tr class="memdesc:a6259540dbdf87dffc659b44e2ea80e36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for Tx buffer empty.  <a href="#a6259540dbdf87dffc659b44e2ea80e36">More...</a><br /></td></tr>
 <tr class="separator:a6259540dbdf87dffc659b44e2ea80e36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdbf8d786e4aac9b06afe3447427a2ae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae">available</a> ()</td></tr>
+<tr class="memdesc:afdbf8d786e4aac9b06afe3447427a2ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arduino <a class="el" href="../../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae" title="Arduino available() member for serial class. ">available()</a> member for serial class.  <a href="#afdbf8d786e4aac9b06afe3447427a2ae">More...</a><br /></td></tr>
 <tr class="separator:afdbf8d786e4aac9b06afe3447427a2ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af60d539c037589ae50b495fe213dda0b"><td class="memItemLeft" align="right" valign="top">virtual long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#af60d539c037589ae50b495fe213dda0b">parseInt</a> (bool echo=false)</td></tr>
 <tr class="memdesc:af60d539c037589ae50b495fe213dda0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the first valid (long) integer value from the current position. initial characters that are not digits (or the minus sign) are skipped integer is terminated by the first character that is not a digit.  <a href="#af60d539c037589ae50b495fe213dda0b">More...</a><br /></td></tr>
@@ -316,7 +331,8 @@ Protected Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Arduino <a class="el" href="../../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae">available()</a> member for serial class. </p>
+
+<p>Arduino <a class="el" href="../../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae" title="Arduino available() member for serial class. ">available()</a> member for serial class. </p>
 
 </div>
 </div>
@@ -414,7 +430,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Flush the stream the both input and output buffer </p><dl class="section remark"><dt>Remarks</dt><dd>the pure virtual function have to implement by child class. </dd></dl>
+
+<p>Flush the stream the both input and output buffer. </p>
+<dl class="section remark"><dt>Remarks</dt><dd>the pure virtual function have to implement by child class. </dd></dl>
 
 <p>Reimplemented in <a class="el" href="../../d8/d1d/class_c_serial.html#a68aecf6351423ae0e8791870c9e694bf">CSerial</a>.</p>
 
@@ -667,7 +685,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Check the current connection is valid or not. </p><dl class="section return"><dt>Returns</dt><dd>true if current connection is valid. </dd></dl>
+
+<p>Check the current connection is valid or not. </p>
+<dl class="section return"><dt>Returns</dt><dd>true if current connection is valid. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>the pure virtual function have to implement by child class. </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d4/d16/class_c_stream.html#a7a152e6bda8654064634428d81bd81cb">CStream</a>.</p>
@@ -770,7 +790,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Operator 'char', to receive a char from stream. </p><div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
+
+<p>Operator 'char', to receive a char from stream. </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
 <div class="line">uart.<a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>(19200);</div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">char</span> ch;</div>
@@ -798,7 +820,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Operator 'uint8_t', to receive a byte from stream. </p><div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
+
+<p>Operator 'uint8_t', to receive a byte from stream. </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
 <div class="line">uart.<a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>(19200);</div>
 <div class="line"></div>
 <div class="line">uint8_t ch;</div>
@@ -827,7 +851,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Operator '&lt;&lt;', to output a byte to stream. </p><div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
+
+<p>Operator '&lt;&lt;', to output a byte to stream. </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
 <div class="line">uart.<a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>(19200);</div>
 <div class="line"></div>
 <div class="line">uint8_t ch = 0xA5;</div>
@@ -856,6 +882,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
+
 <p>Read a byte from right stream and send to left stream. </p>
 
 </div>
@@ -881,7 +908,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Operator '&gt;&gt;', to input a byte from stream. </p><div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
+
+<p>Operator '&gt;&gt;', to input a byte from stream. </p>
+<div class="fragment"><div class="line"><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> uart;</div>
 <div class="line">uart.<a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>(19200);</div>
 <div class="line"></div>
 <div class="line">uint8_t ch ;</div>
@@ -912,7 +941,6 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 </div><div class="memdoc">
 
 <p>float version of parseInt </p>
-<p>Arduino <a class="el" href="../../d4/d16/class_c_stream.html#a9c936febcbe2cd33c2857f37ed04f2f4" title="float version of parseInt ">parseFloat()</a> member for serial class </p>
 
 </div>
 </div>
@@ -939,7 +967,6 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 </div><div class="memdoc">
 
 <p>return the first valid (hex) integer value from the current position. </p>
-<p>parseHex member for stream class </p>
 
 </div>
 </div>
@@ -966,7 +993,6 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 </div><div class="memdoc">
 
 <p>returns the first valid (long) integer value from the current position. initial characters that are not digits (or the minus sign) are skipped integer is terminated by the first character that is not a digit. </p>
-<p>Arduino <a class="el" href="../../d4/d16/class_c_stream.html#af60d539c037589ae50b495fe213dda0b" title="returns the first valid (long) integer value from the current position. initial characters that are n...">parseInt()</a> member for serial class </p>
 
 </div>
 </div>
@@ -1009,7 +1035,7 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 </div><div class="memdoc">
 
 <p>input a string to specify buffer. </p>
-<p>parseString member for stream class </p><dl class="params"><dt>Parameters</dt><dd>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">buf</td><td>a string buffer. </td></tr>
     <tr><td class="paramname">size</td><td>of the string buffer. </td></tr>
@@ -1058,7 +1084,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>To read the stream to buffer. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>To read the stream to buffer. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">buf</td><td>Destination buffer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of destination buffer. </td></tr>
@@ -1092,7 +1120,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Read a byte from stream </p><dl class="section return"><dt>Returns</dt><dd>uint8_t (8 bits) data from the stream </dd></dl>
+
+<p>Read a byte from stream. </p>
+<dl class="section return"><dt>Returns</dt><dd>uint8_t (8 bits) data from the stream </dd></dl>
 
 </div>
 </div>
@@ -1116,7 +1146,9 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Determine how many data bytes are available to read. </p><dl class="section return"><dt>Returns</dt><dd>A value to indicate how many data byte is available in the input buffer. </dd></dl>
+
+<p>Determine how many data bytes are available to read. </p>
+<dl class="section return"><dt>Returns</dt><dd>A value to indicate how many data byte is available in the input buffer. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>the pure virtual function have to implement by child class. </dd></dl>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a22">/ble/ble_app_uart/src/main.cpp</a>.</dd>
 </dl>
@@ -1250,7 +1282,9 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Wait for Tx buffer empty. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Wait for Tx buffer empty. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">timeout</td><td>set the block timeout in millisecond. </td></tr>
   </table>
@@ -1297,7 +1331,9 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>To write the buffer to stream. </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>To write the buffer to stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[out]</td><td class="paramname">buf</td><td>Source buffer. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">len</td><td>Length of source buffer. </td></tr>
@@ -1332,7 +1368,9 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Write a byte to stream </p><dl class="params"><dt>Parameters</dt><dd>
+
+<p>Write a byte to stream. </p>
+<dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>is a uint8_t data to send to the stream. </td></tr>
   </table>
@@ -1361,7 +1399,9 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Determine how many data space are available to write. </p><dl class="section return"><dt>Returns</dt><dd>A value to indicate how many data space is available in the output buffer. </dd></dl>
+
+<p>Determine how many data space are available to write. </p>
+<dl class="section return"><dt>Returns</dt><dd>A value to indicate how many data space is available in the output buffer. </dd></dl>
 <dl class="section remark"><dt>Remarks</dt><dd>the pure virtual function have to implement by child class. </dd></dl>
 
 </div>
@@ -1372,7 +1412,7 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../db/d84/classble_service_u_a_r_t.html">bleServiceUART</a></li>
-    <li class="footer">Generated on Mon Dec 1 2014 14:07:35 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Dec 5 2014 10:35:28 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

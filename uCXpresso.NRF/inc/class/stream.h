@@ -21,65 +21,79 @@
 #include <class/semaphore.h>
 #include <class/ble/nrf51/app_fifo.h>
 
-/**An abstract class, to define the serial stream input and output interface.
- * \class CStream stream.h "class/stream.h"
- * \ingroup Peripherals
+/**
+ * @brief An abstract class, to define the serial stream input and output interface.
+ * @class CStream stream.h "class/stream.h"
+ * @ingroup Peripherals
  */
 class CStream: virtual public CObject {
 public:
+	/**
+	 * @brief Constructs the stream object.
+	 * @param tx_fifo	Indicate the output fifo buffer size.
+	 * @param rx_fifo	Indicata the input fifo buffer size.
+	 */
 	CStream(size_t tx_fifo_size, size_t rx_fifo_size);
 
-	/**Determine how many data bytes are available to read.
-	 * \return A value to indicate how many data byte is available in the input buffer.
-	 * \remark the pure virtual function have to implement by child class.
+	/**
+	 * @brief Determine how many data bytes are available to read.
+	 * @return A value to indicate how many data byte is available in the input buffer.
+	 * @remark the pure virtual function have to implement by child class.
 	 */
 	virtual int	 readable();
 
-	/**Determine how many data space are available to write.
-	 * \return A value to indicate how many data space is available in the output buffer.
-	 * \remark the pure virtual function have to implement by child class.
+	/**
+	 * @brief Determine how many data space are available to write.
+	 * @return A value to indicate how many data space is available in the output buffer.
+	 * @remark the pure virtual function have to implement by child class.
 	 */
 	virtual int	 writeable();
 
-	/**To read the stream to buffer.
-	 * \param[in] buf Destination buffer.
-	 * \param[in] len Length of destination buffer.
-	 * \param[in] block to block in the read function unit to the indication length (len) be read.
-	 * \return A value to indicate how many data bytes to read.
-	 * \remark the pure virtual function have to implement by child class.
+	/**
+	 * @brief To read the stream to buffer.
+	 * @param[in] buf Destination buffer.
+	 * @param[in] len Length of destination buffer.
+	 * @param[in] block to block in the read function unit to the indication length (len) be read.
+	 * @return A value to indicate how many data bytes to read.
+	 * @remark the pure virtual function have to implement by child class.
 	 */
 	virtual int  read(void *buf, int len, uint32_t block=MAX_DELAY_TIME);
 
-	/**To write the buffer to stream.
-	 * \param[out] buf Source buffer.
-	 * \param[in] len Length of source buffer.
-	 * \param[in] block If true, to block in the write function unit to the indication length (len) be sent.
-	 * \return A value to indicate how many data bytes to write.
-	 * \remark the pure virtual function have to implement by child class.
+	/**
+	 * @brief To write the buffer to stream.
+	 * @param[out] buf Source buffer.
+	 * @param[in] len Length of source buffer.
+	 * @param[in] block If true, to block in the write function unit to the indication length (len) be sent.
+	 * @return A value to indicate how many data bytes to write.
+	 * @remark the pure virtual function have to implement by child class.
 	 */
 	virtual int  write(const void *buf, int len, uint32_t block=MAX_DELAY_TIME);
 
-	/**Check the current connection is valid or not.
-	 * \return true if current connection is valid.
-	 * \remark the pure virtual function have to implement by child class.
+	/**
+	 * @brief Check the current connection is valid or not.
+	 * @return true if current connection is valid.
+	 * @remark the pure virtual function have to implement by child class.
 	 */
 	virtual bool isConnected() = PURE_VIRTUAL_FUNC;
 
-	/**Flush the stream the both input and output buffer
-	 * \remark the pure virtual function have to implement by child class.
+	/**
+	 * @brief Flush the stream the both input and output buffer
+	 * @remark the pure virtual function have to implement by child class.
 	 */
 	virtual void flush();
 
 	//
 	// read/write for a byte
 	//
-	/**Read a byte from stream
-	 * \return uint8_t (8 bits) data from the stream
+	/**
+	 * @brief Read a byte from stream
+	 * @return uint8_t (8 bits) data from the stream
 	 */
 	virtual uint8_t read();
 
-	/**Write a byte to stream
-	 * \param c is a uint8_t data to send to the stream.
+	/**
+	 * @brief Write a byte to stream
+	 * @param c is a uint8_t data to send to the stream.
 	 */
 	virtual void write(uint8_t c);
 
@@ -87,70 +101,76 @@ public:
 	// Operators
 	//
 
-	/**Operator '<<', to output a byte to stream.
-	 * \code
+	/**
+	 * @brief Operator '<<', to output a byte to stream.
+	 * @code
 	 * CSerial uart;
 	 * uart.enable(19200);
 	 *
 	 * uint8_t ch = 0xA5;
 	 * uart << ch;
-	 * \endcode
+	 * @endcode
 	 */
 	virtual inline CStream& operator << (uint8_t c) {
 		write(c);
 		return *this;
 	}
 
-	/**Operator '>>', to input a byte from stream.
-	 * \code
+	/**
+	 * @brief Operator '>>', to input a byte from stream.
+	 * @code
 	 * CSerial uart;
 	 * uart.enable(19200);
 	 *
 	 * uint8_t ch ;
 	 * uart >> ch;
-	 * \endcode
+	 * @endcode
 	 */
 	virtual inline CStream& operator >> (uint8_t c) {
 		c = read();
 		return *this;
 	}
 
-	/**Operator 'uint8_t', to receive a byte from stream.
-	 * \code
+	/**
+	 * @brief Operator 'uint8_t', to receive a byte from stream.
+	 * @code
 	 * CSerial uart;
 	 * uart.enable(19200);
 	 *
 	 * uint8_t ch;
 	 * ch = uart;
-	 * \endcode
+	 * @endcode
 	 */
 	virtual inline operator uint8_t () {
 		return read();
 	}
 
-	/**Operator 'char', to receive a char from stream.
-	 * \code
+	/**
+	 * @brief Operator 'char', to receive a char from stream.
+	 * @code
 	 * CSerial uart;
 	 * uart.enable(19200);
 	 *
 	 * char ch;
 	 * ch = uart;
-	 * \endcode
+	 * @endcode
 	 */
 	virtual inline operator char () {
 		return (char)read();
 	}
 
-	/**Read a byte from right stream and send to left stream.
+	/**
+	 * @brief Read a byte from right stream and send to left stream.
 	 */
 	virtual inline CStream& operator << (CStream &s) {
 		write(s.read());
 		return *this;
 	}
 
-	/**Wait for Tx buffer empty.
-	 * \param timeout	set the block timeout in millisecond.
-	 * \return true, if transmit buffer is empty. false, if timeout.
+	/**
+	 * @brief Wait for Tx buffer empty.
+	 * @param timeout	set the block timeout in millisecond.
+	 * @return true, if transmit buffer is empty. false, if timeout.
 	 */
 	virtual bool waitTxEmpty(uint32_t timeout=500);
 
@@ -158,42 +178,42 @@ public:
 	// for Arduino User (refer from Arduino.CC)
 	//
 
-	/**Arduino available() member for serial class.
+	/**
+	 * @brief Arduino available() member for serial class.
 	 */
 	inline int available() {
 		return readable();
 	}
 
-	/**Arduino parseInt() member for serial class
-	 * \brief returns the first valid (long) integer value from the current position.
+	/**
+	 * @brief returns the first valid (long) integer value from the current position.
 	 * initial characters that are not digits (or the minus sign) are skipped
 	 * integer is terminated by the first character that is not a digit.
 	 */
 	 virtual long parseInt(bool echo=false);
 
-	 /**parseHex member for stream class
-	  *\brief return the first valid (hex) integer value from the current position.
+	 /**
+	  * @brief return the first valid (hex) integer value from the current position.
 	  */
 	 virtual long parseHex(bool echo=false);
 
-	 /**Arduino parseFloat() member for serial class
-	  * \brief float version of parseInt
+	 /**
+	  * @brief float version of parseInt
 	  */
 	 virtual float parseFloat(bool echo=false);
 
-	 /**parseString member for stream class
-	  * \brief input a string to specify buffer.
-	  * \param buf a string buffer.
-	  * \param size of the string buffer.
-	  * \param echo to enable the echo to console.
-	  * \return string length, if zero, no string input.
+	 /**
+	  * @brief input a string to specify buffer.
+	  * @param buf a string buffer.
+	  * @param size of the string buffer.
+	  * @param echo to enable the echo to console.
+	  * @return string length, if zero, no string input.
 	  */
 	 virtual int parseString(LPTSTR buf, size_t size, bool echo=false);
 
 	 //
 	 /// @cond
 	 //
-	 CStream();
 	 virtual ~CStream();
 
 	 CSemaphore *m_semESC;

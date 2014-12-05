@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_advertising.h
  Author      : uCXpresso
- Version     : v1.0.2
- Date		 : 2014/11/18
+ Version     : v1.0.4
+ Date		 : 2014/12/4
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -14,6 +14,7 @@
  2014/8/1	v1.0.0	First Edition for nano51822						Jason
  2014/11/13 v1.0.1	Add type() member to indicate the ADV. type.	Jason
  2014/11/18 v1.0.2	Support white-list for Device Manager module.	Jason
+ 2014/12/4  v1.0.3	Add "Directed Advertising" scheme for BT4.1 	Jason
  ===============================================================================
  */
 
@@ -30,7 +31,10 @@
 #define DEF_ADV_FAST_INTERVAL			50		// for bond connection, adv. interval = 50ms
 #define DEF_ADV_FAST_TIMEOUT			40		// for bond connection, adv. timeout = 40 sec.
 #define DEF_ADV_FAST_WHITELIST_TIMEOUT	20		// for bond white-list, adv. timeout = 20 sec.
-#define DEF_DIRECTED_ADV_TIMEOUT         5		// number of direct advertisement (each lasting 1.28seconds).
+
+// for BT4.1 specifications
+#define DEF_ADV_DIRECT_INTERVAL			1280	// for directed advertising interval 1.28sec
+#define DEF_ADV_DIRECTED_TIMEOUT        10		// for directed advertising timeout 10sec
 
 #define MAX_ADV_UUID_COMPLETE_LIST	16
 
@@ -54,7 +58,6 @@ enum ADV_START_MODE_T {
 	ADV_MODE_PREV_NORMAL,
 	ADV_MODE_FAST,
 	ADV_MODE_DIRECTED,
-	ADV_MODE_PREV_DIRECTED,
 	ADV_MODE_WHITELIST,
 	ADV_MODE_NO_ADV			// for bond connection
 };
@@ -181,7 +184,6 @@ protected:
 	uint8_t					 m_adv_flag;
 	uint16_t				 m_adv_interval;
 	uint16_t				 m_adv_timeout;
-	uint8_t					 m_direct_adv_cnt;
 	ADV_START_MODE_T		 m_adv_start_mode;
 	///@endcond
 };

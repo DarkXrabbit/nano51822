@@ -1,6 +1,5 @@
 var NAVTREEINDEX4 =
 {
-"df/d99/class_c_string.html#a6aee7112647fd18a9161497494418e16":[0,5,6,36],
 "df/d99/class_c_string.html#a776672751c58502039234d6c78832a9b":[0,5,6,29],
 "df/d99/class_c_string.html#a7a027f50c1bede9a37d12ec9d2cc6616":[0,5,6,20],
 "df/d99/class_c_string.html#a80701bf9d780b7cfa78930de18a54e5e":[0,5,6,25],
@@ -60,8 +59,8 @@ var NAVTREEINDEX4 =
 "functions_enum.html":[1,3,4],
 "functions_eval.html":[1,3,5],
 "functions_f.html":[1,3,0,5],
-"functions_func.html":[1,3,1,0],
 "functions_func.html":[1,3,1],
+"functions_func.html":[1,3,1,0],
 "functions_func_b.html":[1,3,1,1],
 "functions_func_c.html":[1,3,1,2],
 "functions_func_d.html":[1,3,1,3],

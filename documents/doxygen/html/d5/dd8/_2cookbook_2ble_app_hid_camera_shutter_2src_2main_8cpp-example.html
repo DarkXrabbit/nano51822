@@ -107,14 +107,14 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment"> Name        : ble_app_hid_camera_shutter</span></div>
 <div class="line"><span class="comment"> Author      : uCXpresso</span></div>
-<div class="line"><span class="comment"> Version     : v1.0.0</span></div>
+<div class="line"><span class="comment"> Version     : v1.0.1</span></div>
 <div class="line"><span class="comment"> Description : BLE HID keyboard Test</span></div>
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment">                                 History</span></div>
 <div class="line"><span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
 <div class="line"><span class="comment"> DATE     | VERSION |   DESCRIPTIONS                             |  By</span></div>
 <div class="line"><span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
-<div class="line"><span class="comment"> 2014/11/30 v1.0.0  First Edition.                                  Jason</span></div>
+<div class="line"><span class="comment"> 2014/12/1 v1.0.0   First Edition.                                  Jason</span></div>
 <div class="line"><span class="comment"> ===============================================================================</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"></div>
@@ -201,39 +201,20 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="comment">// KB LED handle</span></div>
-<div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="keywordtype">void</span> kb_leds_handle(<a name="_a14"></a><a class="code" href="../../d4/da8/classble_service_k_b.html">bleServiceKB</a> *p_hids, uint8_t leds) {</div>
-<div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> ledNum(20);</div>
-<div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> ledCaps(21);</div>
-<div class="line"></div>
-<div class="line">    ledNum.output();</div>
-<div class="line">    ledCaps.output();</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">if</span> ( bit_chk(leds, <a name="a15"></a><a class="code" href="../../de/df6/group___h_i_d___k_b___l_e_d_s.html#gac4e3c27d1b99e14f82464db666eb9996">KB_LED_NUM_LOCK</a>) ) {</div>
-<div class="line">        ledNum = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
-<div class="line">    }</div>
-<div class="line"></div>
-<div class="line">    <span class="keywordflow">if</span> ( bit_chk(leds, <a name="a16"></a><a class="code" href="../../de/df6/group___h_i_d___k_b___l_e_d_s.html#ga18a03981eeb2049a25017ff984667b1a">KB_LED_CAPS_LOCK</a>) ) {</div>
-<div class="line">        ledCaps = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
-<div class="line">    }</div>
-<div class="line">}</div>
-<div class="line"></div>
-<div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Main Routine</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
 <div class="line"><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line">    <a name="_a17"></a><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> ser;        <span class="comment">// declare a UART object</span></div>
-<div class="line">    ser.<a name="a18"></a><a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>();</div>
-<div class="line">    <a name="_a19"></a><a class="code" href="../../d4/d37/class_c_debug.html">CDebug</a> dbg(ser);    <span class="comment">// Debug stream use the UART object</span></div>
+<div class="line">    <a name="_a14"></a><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> ser;        <span class="comment">// declare a UART object</span></div>
+<div class="line">    ser.<a name="a15"></a><a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>();</div>
+<div class="line">    <a name="_a16"></a><a class="code" href="../../d4/d37/class_c_debug.html">CDebug</a> dbg(ser);    <span class="comment">// Debug stream use the UART object</span></div>
 <div class="line">    dbg.start();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// SoftDevice</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a20"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;</div>
-<div class="line">    ble.<a name="a21"></a><a class="code" href="../../d6/d49/classble_device.html#a32defabfb5157cc02eefbe2d2da1242d">enable</a>();   <span class="comment">// enable BLE SoftDevice task</span></div>
+<div class="line">    <a name="_a17"></a><a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> ble;</div>
+<div class="line">    ble.<a name="a18"></a><a class="code" href="../../d6/d49/classble_device.html#a32defabfb5157cc02eefbe2d2da1242d">enable</a>();   <span class="comment">// enable BLE SoftDevice task</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// update device information</span></div>
@@ -244,7 +225,7 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">    pnp_id.product_id       = PNP_ID_PRODUCT_ID;</div>
 <div class="line">    pnp_id.product_version  = PNP_ID_PRODUCT_VERSION;</div>
 <div class="line"></div>
-<div class="line">    ble.<a name="a22"></a><a class="code" href="../../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230">information</a>(<span class="stringliteral">&quot;uCXpresso&quot;</span>,</div>
+<div class="line">    ble.<a name="a19"></a><a class="code" href="../../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230">information</a>(<span class="stringliteral">&quot;uCXpresso&quot;</span>,</div>
 <div class="line">                    <span class="stringliteral">&quot;shutter&quot;</span>,</div>
 <div class="line">                    <span class="stringliteral">&quot;1234&quot;</span>,</div>
 <div class="line">                    NULL,</div>
@@ -254,59 +235,56 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">                    &amp;pnp_id</div>
 <div class="line">                    );</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="comment">// Button to clear all bounded centrals.</span></div>
-<div class="line">    <span class="comment">//</span></div>
+<div class="line">    <span class="comment">// Pin to clear all center list</span></div>
 <div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> btn(17);</div>
+<div class="line">    btn.input();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Device Manager for bond device.</span></div>
-<div class="line">    <a name="_a23"></a><a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> man(ble, (btn==<a name="a24"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a> ? <span class="keyword">true</span> : <span class="keyword">false</span>));</div>
-<div class="line">    man.connect_directed_mode();        <span class="comment">// enable &quot;connect directed mode&quot;</span></div>
+<div class="line">    <a name="_a20"></a><a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> man(ble, (btn==<a name="a21"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a> ? <span class="keyword">true</span> : <span class="keyword">false</span>));</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
-<div class="line">    ble.<a name="a25"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a26"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852">settings</a>( DEVICE_NAME,</div>
+<div class="line">    ble.<a name="a22"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a23"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852">settings</a>( DEVICE_NAME,</div>
 <div class="line">            100,        <span class="comment">// connection interval min. 100ms</span></div>
 <div class="line">            200     <span class="comment">// connection interval max. 200ms</span></div>
 <div class="line">            );</div>
 <div class="line"></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a27"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19">tx_power</a>(<a name="a28"></a><a class="code" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54">BLE_TX_0dBm</a>);</div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a24"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19">tx_power</a>(<a name="a25"></a><a class="code" href="../../db/dff/group___enumerations.html#gga3b6d6db9e13e93ae21f2a383d9903617a657bee3a9a945c511d573971038ccd54">BLE_TX_0dBm</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// HID Keyboard Service</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a class="code" href="../../d4/da8/classble_service_k_b.html">bleServiceKB</a> kbs(ble);</div>
-<div class="line">    kbs.attach_kb_leds_handle(kb_leds_handle);</div>
+<div class="line">    <a name="_a26"></a><a class="code" href="../../d4/da8/classble_service_k_b.html">bleServiceKB</a> kbs(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Battery Level Service</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a29"></a><a class="code" href="../../d5/ded/classble_service_battery.html">bleServiceBattery</a> bat(ble);</div>
+<div class="line">    <a name="_a27"></a><a class="code" href="../../d5/ded/classble_service_battery.html">bleServiceBattery</a> bat(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Optional: Add &quot;Connection Parameters Update&quot; negotiation.</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="_a30"></a><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a> conn(ble);</div>
+<div class="line">    <a name="_a28"></a><a class="code" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a> conn(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// BLE Advertising</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    ble.<a name="a31"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a32"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(bat);               <span class="comment">// add bat object to the uuid list of advertising</span></div>
+<div class="line">    ble.<a name="a29"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a30"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(bat);               <span class="comment">// add bat object to the uuid list of advertising</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(kbs);               <span class="comment">// add kbs object to the uuid list of advertising</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Optional: add appearance to indicate who you are in advertisement.</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a33"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a>(BLE_APPEARANCE_HID_KEYBOARD);</div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a34"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2">update</a>();                                     <span class="comment">// update advertisement data</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a31"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a>(BLE_APPEARANCE_HID_KEYBOARD);</div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a32"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2">update</a>();                                     <span class="comment">// update advertisement data</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Start advertising</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a35"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(APP_ADV_INTERVAL);                   <span class="comment">// set advertising interval</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a36"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf">timeout</a>(30);                                  <span class="comment">// Enter system power off mode when adv. timeout. (disable system off if timeout=0)</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a37"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a33"></a><a class="code" href="../../d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca">interval</a>(APP_ADV_INTERVAL);                   <span class="comment">// set advertising interval</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a34"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf">timeout</a>(30);                                  <span class="comment">// Enter system power off mode when adv. timeout. (disable system off if timeout=0)</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a35"></a><a class="code" href="../../d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9">start</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Optional: Enable tickless technology</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#ifndef DEBUG</span></div>
-<div class="line">    <a name="a38"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
+<div class="line">    <a name="a36"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -318,9 +296,9 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Analog</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a name="a39"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154">CAdc::init</a>();</div>
-<div class="line">    <a name="a40"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a>(<a name="a41"></a><a class="code" href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352">VDD_1_3</a>);  <span class="comment">// to detect the VDD voltage</span></div>
-<div class="line">    <a name="a42"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5">CAdc::enable</a>();</div>
+<div class="line">    <a name="a37"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154">CAdc::init</a>();</div>
+<div class="line">    <a name="a38"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc">CAdc::source</a>(<a name="a39"></a><a class="code" href="../../db/dff/group___enumerations.html#gga0c833a85d4bb66b56409631327ebe904a9c0a9409a43ee48dc6102ace34b98352">VDD_1_3</a>);  <span class="comment">// to detect the VDD voltage</span></div>
+<div class="line">    <a name="a40"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5">CAdc::enable</a>();</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// LED</span></div>
@@ -328,7 +306,7 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">    <a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
 <div class="line">    led.output();</div>
 <div class="line"></div>
-<div class="line">    <a name="_a43"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> tmBAT, tmLED;</div>
+<div class="line">    <a name="_a41"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> tmBAT, tmLED;</div>
 <div class="line">    uint16_t value;</div>
 <div class="line">    <span class="keywordtype">float</span>    percentage;</div>
 <div class="line"></div>
@@ -341,9 +319,9 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">        <span class="comment">// BLE Battery Service</span></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( bat.isAvailable() ) {</div>
-<div class="line">            <span class="keywordflow">if</span> ( tmBAT.<a name="a44"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(1000) ) {</div>
-<div class="line">                tmBAT.<a name="a45"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
-<div class="line">                <span class="keywordflow">if</span> ( <a name="a46"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a>(value) ) {</div>
+<div class="line">            <span class="keywordflow">if</span> ( tmBAT.<a name="a42"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(1000) ) {</div>
+<div class="line">                tmBAT.<a name="a43"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
+<div class="line">                <span class="keywordflow">if</span> ( <a name="a44"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a>(value) ) {</div>
 <div class="line">                    percentage = (value / 1024.0f) * 100;</div>
 <div class="line">                    bat.send(percentage);</div>
 <div class="line">                }</div>
@@ -356,7 +334,7 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <div class="line">        led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
 <div class="line">        sleep(10);</div>
 <div class="line">        led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
-<div class="line">        <span class="keywordflow">if</span> ( ble.<a name="a47"></a><a class="code" href="../../d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1">isConnected</a>() ) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( ble.<a name="a45"></a><a class="code" href="../../d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1">isConnected</a>() ) {</div>
 <div class="line">            sleep(290);</div>
 <div class="line">        } <span class="keywordflow">else</span> {</div>
 <div class="line">            sleep(1990);</div>
@@ -371,7 +349,7 @@ $(document).ready(function(){initNavTree('d5/dd8/_2cookbook_2ble_app_hid_camera_
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Mon Dec 1 2014 14:07:34 for uCXpresso.NRF by
+    <li class="footer">Generated on Fri Dec 5 2014 10:35:27 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
