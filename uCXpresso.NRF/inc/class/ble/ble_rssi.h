@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_rssi
  Author      : Jason
- Version     : v1.0.0
- Date		 : 2014/11/12
+ Version     : v1.0.1
+ Date		 : 2014/12/5
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : To measure current connection RSSI value.
  ===============================================================================
@@ -12,6 +12,8 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/11/12	v1.0.0	First Edition									Jason
+ 2014/12/5	v1.0.1	Add attach/detach event handle member 			Jason
+ 	 	 	 	 	functions.
  ===============================================================================
  */
 
@@ -30,6 +32,8 @@
  * @ingroup Bluetooth
  */
 class bleRSSI: public bleService {
+	/**@brief thread task handler type. */
+	typedef void (*rssi_handle_t) (bleRSSI * p_rssi, int8_t rssi);
 public:
 	/**
 	 * @brief bleRSSI constructor
@@ -57,6 +61,20 @@ public:
 		return read();
 	}
 
+	/**
+	 * @brief Attach the rssi event handle
+	 */
+	inline void attach(rssi_handle_t handle) {
+		m_rssi_handle = handle;
+	}
+
+	/**
+	 * @brief Detach the rssi event handle
+	 */
+	inline void detach() {
+		m_rssi_handle = NULL;
+	}
+
 protected:
 	/**
 	 * @brief On rssi changed event.
@@ -70,8 +88,9 @@ protected:
 public:
 	virtual ~bleRSSI();
 protected:
-	int8_t		m_rssi;
-	uint16_t    m_conn_handle;
+	int8_t			m_rssi;
+	uint16_t    	m_conn_handle;
+	rssi_handle_t	m_rssi_handle;
 	virtual void on_ble_event(ble_evt_t * p_ble_evt);
 	///@endcond
 };

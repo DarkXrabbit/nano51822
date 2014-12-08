@@ -138,6 +138,7 @@ int main(void) {
 
 	// Device Manager for bond device.
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
+	man.connect_directed_mode();	// enable "connect directed" mode to fast connected. (BT 4.1 spec.)
 
 	// GAP
 	ble.m_gap.settings( DEVICE_NAME,

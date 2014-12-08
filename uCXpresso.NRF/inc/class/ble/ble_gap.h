@@ -66,6 +66,15 @@ public:
 							  uint16_t slave_latency 	 = 0,		//
 							  uint16_t conn_sup_timeout  = 4000		// default connection supervisory timeout 4 seconds.
 							);
+	/**
+	 * @brief Get GAP Peripheral Preferred Connection Parameters.
+	 *
+	 * @param[out] p_conn_params Pointer to a @ref ble_gap_conn_params_t structure where the parameters will be stored.
+	 *
+	 * @return @ref NRF_SUCCESS Peripheral Preferred Connection Parameters retrieved successfully.
+	 * @return @ref NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
+	 */
+	uint32_t preferred_conn_params(ble_gap_conn_params_t *p_conn_params);
 
 	/**@brief Set GAP Appearance value.
 	 *

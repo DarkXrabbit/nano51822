@@ -65,7 +65,7 @@ public:
 	 *       having initialized the services.
 	 *
 	 * @param[in]	ble					Point to the bleDevice object.
-	 * @param[in]	p_conn_params		Pointer to the "Connection Parameters".
+	 * @param[in]	p_conn_params		Pointer to the "Connection Parameters". If this parameter is set to NULL, the connection parameters will be fetched from host.
 	 * @param[in]	first_update_delay	Time from initiating event to first time connection parameters updated. (in millisecond)
 	 * @param[in]	next_update_delay	Time between each connection parameters updated. (in millisecond)
 	 * @param[in]	max_update_count	Number of attempts before giving up the connection parameter negotiation.

@@ -32,11 +32,7 @@
 #define DEF_ADV_FAST_TIMEOUT			40		// for bond connection, adv. timeout = 40 sec.
 #define DEF_ADV_FAST_WHITELIST_TIMEOUT	20		// for bond white-list, adv. timeout = 20 sec.
 
-// for BT4.1 specifications
-#define DEF_ADV_DIRECT_INTERVAL			1280	// for directed advertising interval 1.28sec
-#define DEF_ADV_DIRECTED_TIMEOUT        10		// for directed advertising timeout 10sec
-
-#define MAX_ADV_UUID_COMPLETE_LIST	16
+#define MAX_ADV_UUID_COMPLETE_LIST		16
 
 /**
  * @brief GAP Advertising types
