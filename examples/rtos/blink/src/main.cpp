@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : blink
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Copyright   : www.ucxpresso.net
  Description : A LED blink example with RTOS
 ===============================================================================
@@ -11,6 +11,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/18 v1.0.0	First Edition.									LEO
+ 2014/12/8	v1.0.1	Use task handle instead of the run() member.	LEO
  ===============================================================================
  */
 
@@ -29,21 +30,21 @@
 #include <class/thread.h>
 
 // TODO: insert other definitions and declarations here
+#define BOARD_PCA10001
+//#define BOARD_LILYPAD
+#include <config/board.h>
 
 /*
  * A task class to blink the led1
  */
-class tskBlink : public CThread {
-protected:
-	virtual void run() {
-		CPin led1(19);			// declare led1 on P0.19
-		led1.output();			// set led1 as output pin.
-		while( isAlive() ) {
-			led1.toggle();		// toggle the led1
-			sleep(100);
-		}
+void tskBlink(CThread *p_thread, xHandle p_param) {
+	CPin led1(LED_PIN_1);					// declare led1 on P0.19
+	led1.output();					// set led1 as output pin.
+	while( p_thread->isAlive() ) {	// check task alive
+		led1.toggle();				// toggle the led1
+		sleep(100);
 	}
-};
+}
 
 //
 // Main Routine
@@ -59,10 +60,10 @@ int main(void) {
 	//
 	// Your setup code here
 	//
-	tskBlink t;
+	CThread t(tskBlink);
 	t.start("blink");	// start the blink task
 
-	CPin led0(18);		// declare led0 on p0.18
+	CPin led0(LED_PIN_0);		// declare led0 on p0.18
 	led0.output();
 
 	//
