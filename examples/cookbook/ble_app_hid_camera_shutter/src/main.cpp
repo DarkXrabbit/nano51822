@@ -92,7 +92,7 @@ void keyTask(CThread *p_thread, xHandle p_params) {
     		case BTN_NOTHING:
     			break;
     		}
-    		sleep(200);
+    		sleep(100);
     	}
 	}
 }
@@ -142,9 +142,9 @@ int main(void) {
 
 	// GAP
 	ble.m_gap.settings( DEVICE_NAME,
-			100,		// connection interval min. 100ms
-			200		// connection interval max. 200ms
-			);
+			 	 	 	20,		// connection interval min. 10ms
+						100,	// connection interval max. 100ms
+						12);	// slave latency
 
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
