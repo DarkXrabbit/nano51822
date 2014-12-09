@@ -168,7 +168,7 @@ int main(void) {
 	//
 	// Add "connection parameters update" negotiation. (optional)
 	//
-	bleConnParams conn(ble);
+	bleConnParams conn(ble, &def_conn_params);
 
 	//
 	// BLE Advertising

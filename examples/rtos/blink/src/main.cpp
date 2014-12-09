@@ -30,8 +30,8 @@
 #include <class/thread.h>
 
 // TODO: insert other definitions and declarations here
-#define BOARD_PCA10001
-//#define BOARD_LILYPAD
+//#define BOARD_PCA10001
+#define BOARD_LILYPAD
 #include <config/board.h>
 
 /*
