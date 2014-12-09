@@ -142,9 +142,9 @@ int main(void) {
 
 	// GAP
 	ble.m_gap.settings( DEVICE_NAME,
-			 	 	 	20,		// connection interval min. 10ms
-						100,	// connection interval max. 100ms
-						12);	// slave latency
+			 	 	 	20,		// min. connection interval in millisecond
+						100,	// max. connection interval in millisecond
+						12);	// slave latency (save power)
 
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
