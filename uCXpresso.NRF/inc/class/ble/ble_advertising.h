@@ -54,6 +54,7 @@ enum ADV_START_MODE_T {
 	ADV_MODE_PREV_NORMAL,
 	ADV_MODE_FAST,
 	ADV_MODE_DIRECTED,
+	ADV_MODE_PREV_DIRECT,
 	ADV_MODE_WHITELIST,
 	ADV_MODE_NO_ADV			// for bond connection
 };
@@ -174,12 +175,14 @@ public:
 protected:
 	ble_advdata_t			 m_adv_data;
 	ble_uuid_t				*m_uuid_list;
-	int8_t					 m_tx_power_level;
-	uint8_t					 m_uuid_count;
 	ble_gap_adv_params_t 	 m_adv_params;
+	uint8_t					 m_uuid_count;
+	int8_t					 m_tx_power_level;
 	uint8_t					 m_adv_flag;
+	uint8_t					 m_adv_direct_cnt;
 	uint16_t				 m_adv_interval;
 	uint16_t				 m_adv_timeout;
+
 	ADV_START_MODE_T		 m_adv_start_mode;
 	///@endcond
 };
