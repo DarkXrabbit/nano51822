@@ -8,10 +8,11 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.3 rc1 8th December 2014
+v1.0.3 rc3 13th December 2014
 --------------------------------
 ###Details: 
 	1. Fixed "Connect Directed" mode for bond connection. (BT 4.1 spec.)
+	2. Fixed "Connection Parameters Update" negotiation bug.
 
 v1.0.2 released 1th December 2014
 --------------------------------

@@ -37,11 +37,6 @@ typedef enum
     CP_EVT_SUCCEEDED                                   /**< Negotiation procedure succeeded. */
 } BLE_CP_EVENT_T;
 
-//
-// default connection parameters
-//
-extern const ble_gap_conn_params_t def_conn_params;
-
 /**
  * @brief 	Connection Parameters Class.
  * @class 	bleConnParams ble_conn_params.h "class/ble/ble_conn_params.h"

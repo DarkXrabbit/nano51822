@@ -46,36 +46,30 @@
 //
 // Board Define
 //
-#ifdef DEBUG
-#define BOARD_PCA10001
-#else
+//#define BOARD_PCA10001
 #define BOARD_LILYPAD
-#endif
 #include <config/board.h>
 
 //
 // Status LED task
 //
-class tskLED : public CThread {
-protected:
-	virtual void run() {
-		CPin led(LED_PIN_0);
-		led.output();
-		while(1) {
-			if ( gpBLE->isConnected() ) {
-				led = LED_ON;
-				sleep(50);		// ON with 50ms when connected
-				led = LED_OFF;
-				sleep(950);
-			} else {
-				led = LED_ON;
-				sleep(5);		// ON with 5ms when disconnected.
-				led = LED_OFF;
-				sleep(995);
-			}
+void tskLED (CThread *p_thread, xHandle p_param) {
+	CPin led(LED_PIN_0);
+	led.output();
+	while( p_thread->isAlive() ) {
+		if ( gpBLE->isConnected() ) {
+			led = LED_ON;
+			sleep(50);		// ON with 50ms when connected
+			led = LED_OFF;
+			sleep(950);
+		} else {
+			led = LED_ON;
+			sleep(5);		// ON with 5ms when disconnected.
+			led = LED_OFF;
+			sleep(995);
 		}
 	}
-};
+}
 
 //
 // main routine
@@ -115,7 +109,7 @@ int main(void) {
 	//
 	// Add "connection parameters update" negotiation. (optional)
 	//
-	bleConnParams conn(ble, &def_conn_params);
+	bleConnParams conn(ble);
 
 	//
 	// update advertisement contents
@@ -149,7 +143,7 @@ int main(void) {
 	//
 	// LED Task
 	//
-	tskLED t;
+	CThread t(tskLED);
 	t.start("LED", 45);	// stack size=45 DWORD
 
 	//
@@ -196,6 +190,6 @@ int main(void) {
     	conn.negotiate();
 
     	// sleep to make more idle time for tickless.
-    	sleep(500);
+    	sleep(200);
     }
 }
