@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2-released</span>
+   &#160;<span id="projectnumber">v1.0.3-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -106,8 +106,8 @@ $(document).ready(function(){initNavTree('d7/d3e/ble__rssi_8h_source.html','../.
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ===============================================================================</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> Name        : ble_rssi</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> Author      : Jason</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.0</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2014/11/12</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.1</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2014/12/5</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> Copyright   : Copyright (C) www.embeda.com.tw</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> Description : To measure current connection RSSI value.</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> ===============================================================================</span></div>
@@ -116,50 +116,65 @@ $(document).ready(function(){initNavTree('d7/d3e/ble__rssi_8h_source.html','../.
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> DATE     | VERSION |   DESCRIPTIONS                             |  By</span></div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> 2014/11/12 v1.0.0  First Edition                                   Jason</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> ===============================================================================</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef BLE_RSSI_H_</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#define BLE_RSSI_H_</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> 2014/12/5  v1.0.1  Add attach/detach event handle member           Jason</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">                    functions.</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> ===============================================================================</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef BLE_RSSI_H_</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define BLE_RSSI_H_</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define RSSI_INVALID_VALUE  127</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;class/ble/ble_device.h&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f">bleRSSI</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">isAvailable</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">   49</a></span>&#160;    <span class="keyword">inline</span> int8_t <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">read</a>() {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> m_rssi;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a9f8ca9ddb72ced07bd96b3c1c678acca">   56</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">operator</span> int8_t () {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">read</a>();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a7896313f7b3b8ffce5f127bcb8d54355">onEvent</a>(int8_t rssi);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a>();</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    int8_t      m_rssi;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    uint16_t    m_conn_handle;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(ble_evt_t * p_ble_evt);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;};</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_RSSI_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#define RSSI_INVALID_VALUE  127</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html">   34</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a>: <span class="keyword">public</span> <a class="code" href="../../da/d80/classble_service.html">bleService</a> {</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">   36</a></span>&#160;    <span class="keyword">typedef</span> void (*<a class="code" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">rssi_handle_t</a>) (<a class="code" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a> * p_rssi, int8_t rssi);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f">bleRSSI</a>(<a class="code" href="../../d6/d49/classble_device.html">bleDevice</a> &amp;ble);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">isAvailable</a>();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">   53</a></span>&#160;    <span class="keyword">inline</span> int8_t <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">read</a>() {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> m_rssi;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a9f8ca9ddb72ced07bd96b3c1c678acca">   60</a></span>&#160;    <span class="keyword">inline</span> <span class="keyword">operator</span> int8_t () {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">read</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001">   67</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001">attach</a>(<a class="code" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">rssi_handle_t</a> handle) {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        m_rssi_handle = handle;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="../../d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349">   74</a></span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349">detach</a>() {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        m_rssi_handle = NULL;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a7896313f7b3b8ffce5f127bcb8d54355">onEvent</a>(int8_t rssi);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    int8_t          m_rssi;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    uint16_t        m_conn_handle;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">rssi_handle_t</a>   m_rssi_handle;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> on_ble_event(ble_evt_t * p_ble_evt);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;};</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BLE_RSSI_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="classble_r_s_s_i_html_a0d6b3a14e2bd7074971afc79f383fed5"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">bleRSSI::rssi_handle_t</a></div><div class="ttdeci">void(* rssi_handle_t)(bleRSSI *p_rssi, int8_t rssi)</div><div class="ttdoc">thread task handler type. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:36</div></div>
 <div class="ttc" id="classble_r_s_s_i_html_a389931e06cd4f8ebdb4e39212a5ec72f"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f">bleRSSI::bleRSSI</a></div><div class="ttdeci">bleRSSI(bleDevice &amp;ble)</div><div class="ttdoc">bleRSSI constructor </div></div>
 <div class="ttc" id="classble_r_s_s_i_html_a4bf82a29354e4c59a3b1f997bb0f2b8d"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI::isAvailable</a></div><div class="ttdeci">virtual bool isAvailable()</div><div class="ttdoc">Check bleRSSI available. </div></div>
-<div class="ttc" id="classble_r_s_s_i_html"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a></div><div class="ttdoc">BLE RSSI service class. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:32</div></div>
+<div class="ttc" id="classble_r_s_s_i_html"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a></div><div class="ttdoc">BLE RSSI service class. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:34</div></div>
 <div class="ttc" id="classble_device_html"><div class="ttname"><a href="../../d6/d49/classble_device.html">bleDevice</a></div><div class="ttdoc">BLE Device Class (SoftDevice). </div><div class="ttdef"><b>Definition:</b> ble_device.h:81</div></div>
+<div class="ttc" id="classble_r_s_s_i_html_a928c38bb78ae33967fbc73529314e349"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349">bleRSSI::detach</a></div><div class="ttdeci">void detach()</div><div class="ttdoc">Detach the rssi event handle. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:74</div></div>
 <div class="ttc" id="classble_service_html"><div class="ttname"><a href="../../da/d80/classble_service.html">bleService</a></div><div class="ttdoc">BLE Service base class. </div><div class="ttdef"><b>Definition:</b> ble_service.h:30</div></div>
-<div class="ttc" id="classble_r_s_s_i_html_a4f8e43c8669ec0b6136f2d12befaa85c"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">bleRSSI::read</a></div><div class="ttdeci">int8_t read()</div><div class="ttdoc">Retrieve current connection RSSI value. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:49</div></div>
+<div class="ttc" id="classble_r_s_s_i_html_a4f8e43c8669ec0b6136f2d12befaa85c"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a4f8e43c8669ec0b6136f2d12befaa85c">bleRSSI::read</a></div><div class="ttdeci">int8_t read()</div><div class="ttdoc">Retrieve current connection RSSI value. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:53</div></div>
+<div class="ttc" id="classble_r_s_s_i_html_a17c488127d8f78a48541a0f06207d001"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001">bleRSSI::attach</a></div><div class="ttdeci">void attach(rssi_handle_t handle)</div><div class="ttdoc">Attach the rssi event handle. </div><div class="ttdef"><b>Definition:</b> ble_rssi.h:67</div></div>
 <div class="ttc" id="classble_r_s_s_i_html_a7896313f7b3b8ffce5f127bcb8d54355"><div class="ttname"><a href="../../d7/d80/classble_r_s_s_i.html#a7896313f7b3b8ffce5f127bcb8d54355">bleRSSI::onEvent</a></div><div class="ttdeci">virtual void onEvent(int8_t rssi)</div><div class="ttdoc">On rssi changed event. </div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
@@ -167,7 +182,7 @@ $(document).ready(function(){initNavTree('d7/d3e/ble__rssi_8h_source.html','../.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><a class="el" href="../../dir_b3718ce7e95604b04530facabab2b8c5.html">ble</a></li><li class="navelem"><b>ble_rssi.h</b></li>
-    <li class="footer">Generated on Fri Dec 5 2014 10:35:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Dec 16 2014 09:12:17 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -12,6 +12,7 @@ var searchData=
   ['pin_5finput_5fmode_5ft',['PIN_INPUT_MODE_T',['../db/dff/group___enumerations.html#ga9f8f32709b482732d6e377ff26da36ef',1,'pin.h']]],
   ['pin_5flevel_5ft',['PIN_LEVEL_T',['../db/dff/group___enumerations.html#ga6f24594071a026b31238ab8cb80d6a80',1,'pin.h']]],
   ['post',['post',['../d8/d26/class_c_mail_box.html#a5ab581cd317944e824efbbc6f7f4d14d',1,'CMailBox::post(MESSAGE_T msg, uint32_t timeout=MAX_DELAY_TIME)'],['../d8/d26/class_c_mail_box.html#a96075bbd5308e6b1d0aaf5bd5fa2e645',1,'CMailBox::post(LPCTSTR name, MESSAGE_T msg, uint32_t timeout=0)']]],
+  ['preferred_5fconn_5fparams',['preferred_conn_params',['../dd/d89/classble_g_a_p.html#a66578e3585db68a27545958a1e4383cf',1,'bleGAP']]],
   ['pri_5fhardware',['PRI_HARDWARE',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5',1,'thread.h']]],
   ['pri_5fhigh',['PRI_HIGH',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b',1,'thread.h']]],
   ['pri_5flow',['PRI_LOW',['../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402',1,'thread.h']]],

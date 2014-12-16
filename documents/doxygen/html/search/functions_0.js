@@ -13,6 +13,7 @@ var searchData=
   ['aescfb',['aesCFB',['../d2/d1c/classaes_c_f_b.html#a141da481d90fa9dd86b54bbac1e2bf6e',1,'aesCFB']]],
   ['aesctr',['aesCTR',['../d1/d30/classaes_c_t_r.html#a1c0882fbebcbc3e44a79427257f98129',1,'aesCTR']]],
   ['appearance',['appearance',['../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c',1,'bleAdvertising::appearance()'],['../dd/d89/classble_g_a_p.html#a6544041a6c396246102b0e8430b344eb',1,'bleGAP::appearance()']]],
+  ['attach',['attach',['../d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001',1,'bleRSSI']]],
   ['attach_5fkb_5fleds_5fhandle',['attach_kb_leds_handle',['../d4/da8/classble_service_k_b.html#a1e7e6f95ef5b343733019958c6121f64',1,'bleServiceKB']]],
   ['attachevent',['attachEvent',['../d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2',1,'bleDevice']]],
   ['available',['available',['../d8/d1d/class_c_serial.html#a5c142221c0841e7c961e962c45bd2db7',1,'CSerial::available()'],['../de/dba/class_c_shell.html#a86ec9b3db5d7c467535064ea94e1d9c0',1,'CShell::available()'],['../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae',1,'CStream::available()'],['../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065',1,'CDebug::available()']]]

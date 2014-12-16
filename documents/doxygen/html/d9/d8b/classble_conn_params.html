@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2-released</span>
+   &#160;<span id="projectnumber">v1.0.3-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -231,7 +231,7 @@ Static Public Member Functions</h2></td></tr>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">ble</td><td>Point to the <a class="el" href="../../d6/d49/classble_device.html" title="BLE Device Class (SoftDevice). ">bleDevice</a> object. </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">p_conn_params</td><td>Pointer to the "Connection Parameters". </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_conn_params</td><td>Pointer to the "Connection Parameters". If this parameter is set to NULL, the connection parameters will be fetched from host. </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">first_update_delay</td><td>Time from initiating event to first time connection parameters updated. (in millisecond) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">next_update_delay</td><td>Time between each connection parameters updated. (in millisecond) </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">max_update_count</td><td>Number of attempts before giving up the connection parameter negotiation. </td></tr>
@@ -341,7 +341,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Check the service available. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if service is available, false otherwise. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../db/d31/classble_service_h_i_d.html#a1a7d9c5da8c2de4a08d76eb0e29d0ef2">bleServiceHID</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/dfc/classble_service_h_r_m.html#abc4fe4fcaabc8b0eacb8a1acd0f08fe3">bleServiceHRM</a>, <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#ae705fcba3d3465a51b56a25c4403cd5b">bleServiceUART</a>, <a class="el" href="../../de/dc0/classble_service_r_s_c.html#ace605f7441aadb02d8e423f20d837b3c">bleServiceRSC</a>, <a class="el" href="../../d3/d27/classble_service_h_t_m.html#ae1f193cd26aa0f06be8f84aa38ae469f">bleServiceHTM</a>, <a class="el" href="../../df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455">bleServiceProximity</a>, <a class="el" href="../../d7/d93/classble_service_c_s_c.html#ad459798cc6fb7d042d02f3eac4eebb6f">bleServiceCSC</a>, <a class="el" href="../../de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1">bleServiceCustomer</a>, <a class="el" href="../../d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d">bleRSSI</a>, <a class="el" href="../../d5/ded/classble_service_battery.html#af6d49da258e3e357a32f47d3d538bf6d">bleServiceBattery</a>, <a class="el" href="../../db/d31/classble_service_h_i_d.html#a1a7d9c5da8c2de4a08d76eb0e29d0ef2">bleServiceHID</a>, and <a class="el" href="../../d6/d2e/classble_service_d_f_u.html#ac7ccea312a5bf3de95fef800362a5bce">bleServiceDFU</a>.</p>
 
 </div>
 </div>
@@ -525,7 +525,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d8b/classble_conn_params.html">bleConnParams</a></li>
-    <li class="footer">Generated on Fri Dec 5 2014 10:35:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Dec 16 2014 09:12:17 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

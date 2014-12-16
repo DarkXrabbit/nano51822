@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2-released</span>
+   &#160;<span id="projectnumber">v1.0.3-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -133,6 +133,9 @@ Inheritance diagram for bleGAP:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a63eacee42cbfef3d86983bb122c31852"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852">settings</a> (LPCTSTR device_name, uint16_t min_conn_interval=100, uint16_t max_conn_interval=500, uint16_t slave_latency=0, uint16_t conn_sup_timeout=4000)</td></tr>
 <tr class="separator:a63eacee42cbfef3d86983bb122c31852"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a66578e3585db68a27545958a1e4383cf"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a66578e3585db68a27545958a1e4383cf">preferred_conn_params</a> (ble_gap_conn_params_t *p_conn_params)</td></tr>
+<tr class="memdesc:a66578e3585db68a27545958a1e4383cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get GAP Peripheral Preferred Connection Parameters.  <a href="#a66578e3585db68a27545958a1e4383cf">More...</a><br /></td></tr>
+<tr class="separator:a66578e3585db68a27545958a1e4383cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6544041a6c396246102b0e8430b344eb"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/classble_g_a_p.html#a6544041a6c396246102b0e8430b344eb">appearance</a> (uint16_t value)</td></tr>
 <tr class="memdesc:a6544041a6c396246102b0e8430b344eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set GAP Appearance value.  <a href="#a6544041a6c396246102b0e8430b344eb">More...</a><br /></td></tr>
 <tr class="separator:a6544041a6c396246102b0e8430b344eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -276,6 +279,33 @@ NRF_ERROR_INVALID_STATE Invalid state to perform operation (disconnection is alr
 
 </div>
 </div>
+<a class="anchor" id="a66578e3585db68a27545958a1e4383cf"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t bleGAP::preferred_conn_params </td>
+          <td>(</td>
+          <td class="paramtype">ble_gap_conn_params_t *&#160;</td>
+          <td class="paramname"><em>p_conn_params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get GAP Peripheral Preferred Connection Parameters. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[out]</td><td class="paramname">p_conn_params</td><td>Pointer to a ble_gap_conn_params_t structure where the parameters will be stored.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS Peripheral Preferred Connection Parameters retrieved successfully. </dd>
+<dd>
+NRF_ERROR_INVALID_ADDR Invalid pointer supplied. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a63eacee42cbfef3d86983bb122c31852"></a>
 <div class="memitem">
 <div class="memproto">
@@ -374,7 +404,7 @@ NRF_ERROR_BUSY The stack is busy, process pending events and retry. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dd/d89/classble_g_a_p.html">bleGAP</a></li>
-    <li class="footer">Generated on Fri Dec 5 2014 10:35:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Dec 16 2014 09:12:17 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

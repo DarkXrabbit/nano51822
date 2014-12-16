@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['task_5fhandle_5ft',['task_handle_t',['../d0/d26/class_c_thread.html#a328fa92e5811527475320d305f266abf',1,'CThread']]]
+  ['rssi_5fhandle_5ft',['rssi_handle_t',['../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5',1,'bleRSSI']]]
 ];

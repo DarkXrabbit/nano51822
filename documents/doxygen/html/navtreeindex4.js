@@ -1,5 +1,10 @@
 var NAVTREEINDEX4 =
 {
+"df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f":[0,5,6,1],
+"df/d99/class_c_string.html#a6213c847987bc1cf18b980619ca49db7":[0,5,6,41],
+"df/d99/class_c_string.html#a651d3546ffbbe986fbbbf4bb1043bb7b":[0,5,6,42],
+"df/d99/class_c_string.html#a68736847dab1a820326697c0321bce63":[0,5,6,33],
+"df/d99/class_c_string.html#a6aee7112647fd18a9161497494418e16":[0,5,6,36],
 "df/d99/class_c_string.html#a776672751c58502039234d6c78832a9b":[0,5,6,29],
 "df/d99/class_c_string.html#a7a027f50c1bede9a37d12ec9d2cc6616":[0,5,6,20],
 "df/d99/class_c_string.html#a80701bf9d780b7cfa78930de18a54e5e":[0,5,6,25],

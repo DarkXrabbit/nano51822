@@ -1,6 +1,9 @@
 var classble_r_s_s_i =
 [
+    [ "rssi_handle_t", "d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5", null ],
     [ "bleRSSI", "d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f", null ],
+    [ "attach", "d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001", null ],
+    [ "detach", "d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349", null ],
     [ "gatts_hvx_writeable", "d7/d80/classble_r_s_s_i.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
     [ "isAvailable", "d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d", null ],
     [ "isThread", "d7/d80/classble_r_s_s_i.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],

@@ -17,6 +17,7 @@ var group___enumerations =
       [ "ADV_MODE_PREV_NORMAL", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782", null ],
       [ "ADV_MODE_FAST", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d", null ],
       [ "ADV_MODE_DIRECTED", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a6ec733f78a5c7cb468337427c5767eee", null ],
+      [ "ADV_MODE_PREV_DIRECT", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aba1e021b3cf1cb288b32fd986f155be5", null ],
       [ "ADV_MODE_WHITELIST", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5", null ],
       [ "ADV_MODE_NO_ADV", "db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02", null ]
     ] ],

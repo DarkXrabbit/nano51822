@@ -25,6 +25,7 @@ var searchData=
   ['adv_5fmode_5ffast',['ADV_MODE_FAST',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aab206788d4487e14284c8a641fe31a8d',1,'ble_advertising.h']]],
   ['adv_5fmode_5fno_5fadv',['ADV_MODE_NO_ADV',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5afb6cc8bb197bf331e6c53e6f61ec02',1,'ble_advertising.h']]],
   ['adv_5fmode_5fnormal',['ADV_MODE_NORMAL',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a27e4e36835941035ecce9ec853024ab7',1,'ble_advertising.h']]],
+  ['adv_5fmode_5fprev_5fdirect',['ADV_MODE_PREV_DIRECT',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760aba1e021b3cf1cb288b32fd986f155be5',1,'ble_advertising.h']]],
   ['adv_5fmode_5fprev_5fnormal',['ADV_MODE_PREV_NORMAL',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760ad2788bb5b44b4193eab4a3035b033782',1,'ble_advertising.h']]],
   ['adv_5fmode_5fwhitelist',['ADV_MODE_WHITELIST',['../db/dff/group___enumerations.html#ggab9a29fe1badaeaf8c8d540d20f986760a5b97a3c2958ef6fe7cf546a0e94721c5',1,'ble_advertising.h']]],
   ['adv_5fstart_5fmode_5ft',['ADV_START_MODE_T',['../db/dff/group___enumerations.html#gab9a29fe1badaeaf8c8d540d20f986760',1,'ble_advertising.h']]],
@@ -51,6 +52,7 @@ var searchData=
   ['aref_5f1',['AREF_1',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a29eae4ee54152033dd962f9902b0a9e3',1,'adc.h']]],
   ['aref_5ft',['AREF_T',['../db/dff/group___enumerations.html#gae0520f31b1985f1579b0568eaf20a624',1,'adc.h']]],
   ['aref_5fvbg',['AREF_VBG',['../db/dff/group___enumerations.html#ggae0520f31b1985f1579b0568eaf20a624a3065170f56e287f81b7d0f3b371835e3',1,'adc.h']]],
+  ['attach',['attach',['../d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001',1,'bleRSSI']]],
   ['attach_5fkb_5fleds_5fhandle',['attach_kb_leds_handle',['../d4/da8/classble_service_k_b.html#a1e7e6f95ef5b343733019958c6121f64',1,'bleServiceKB']]],
   ['attachevent',['attachEvent',['../d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2',1,'bleDevice']]],
   ['available',['available',['../d8/d1d/class_c_serial.html#a5c142221c0841e7c961e962c45bd2db7',1,'CSerial::available()'],['../de/dba/class_c_shell.html#a86ec9b3db5d7c467535064ea94e1d9c0',1,'CShell::available()'],['../d4/d16/class_c_stream.html#afdbf8d786e4aac9b06afe3447427a2ae',1,'CStream::available()'],['../d4/d37/class_c_debug.html#a494ace9d46f8353fa6980ca0ff1e5065',1,'CDebug::available()']]]

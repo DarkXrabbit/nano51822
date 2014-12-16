@@ -76,11 +76,15 @@ var group___bluetooth =
       [ "disconnect", "dd/d89/classble_g_a_p.html#a8b8ace2af32d9215585956214fc29143", null ],
       [ "isThread", "dd/d89/classble_g_a_p.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
       [ "isValid", "dd/d89/classble_g_a_p.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "preferred_conn_params", "dd/d89/classble_g_a_p.html#a66578e3585db68a27545958a1e4383cf", null ],
       [ "settings", "dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852", null ],
       [ "tx_power", "dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19", null ]
     ] ],
     [ "bleRSSI", "d7/d80/classble_r_s_s_i.html", [
+      [ "rssi_handle_t", "d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5", null ],
       [ "bleRSSI", "d7/d80/classble_r_s_s_i.html#a389931e06cd4f8ebdb4e39212a5ec72f", null ],
+      [ "attach", "d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001", null ],
+      [ "detach", "d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349", null ],
       [ "gatts_hvx_writeable", "d7/d80/classble_r_s_s_i.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
       [ "isAvailable", "d7/d80/classble_r_s_s_i.html#a4bf82a29354e4c59a3b1f997bb0f2b8d", null ],
       [ "isThread", "d7/d80/classble_r_s_s_i.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],

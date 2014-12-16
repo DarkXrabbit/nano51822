@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2-released</span>
+   &#160;<span id="projectnumber">v1.0.3-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -150,36 +150,30 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line"><span class="preprocessor">//</span></div>
 <div class="line"><span class="comment">// Board Define</span></div>
 <div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line"><span class="preprocessor">#define BOARD_PCA10001</span></div>
-<div class="line"><span class="preprocessor">#else</span></div>
+<div class="line"><span class="comment">//#define BOARD_PCA10001</span></div>
 <div class="line"><span class="preprocessor">#define BOARD_LILYPAD</span></div>
-<div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"><span class="preprocessor">#include &lt;config/board.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Status LED task</span></div>
 <div class="line"><span class="comment">//</span></div>
-<div class="line"><span class="keyword">class </span>tskLED : <span class="keyword">public</span> <a name="_a0"></a><a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> {</div>
-<div class="line"><span class="keyword">protected</span>:</div>
-<div class="line">    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a name="a1"></a><a class="code" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run</a>() {</div>
-<div class="line">        <a name="_a2"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
-<div class="line">        led.<a name="a3"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();</div>
-<div class="line">        <span class="keywordflow">while</span>(1) {</div>
-<div class="line">            <span class="keywordflow">if</span> ( gpBLE-&gt;<a name="a4"></a><a class="code" href="../../d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1">isConnected</a>() ) {</div>
-<div class="line">                led = <a name="a5"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
-<div class="line">                sleep(50);      <span class="comment">// ON with 50ms when connected</span></div>
-<div class="line">                led = <a name="a6"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
-<div class="line">                sleep(950);</div>
-<div class="line">            } <span class="keywordflow">else</span> {</div>
-<div class="line">                led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
-<div class="line">                sleep(5);       <span class="comment">// ON with 5ms when disconnected.</span></div>
-<div class="line">                led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
-<div class="line">                sleep(995);</div>
-<div class="line">            }</div>
+<div class="line"><span class="keywordtype">void</span> tskLED (<a name="_a0"></a><a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> *p_thread, xHandle p_param) {</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
+<div class="line">    led.<a name="a2"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();</div>
+<div class="line">    <span class="keywordflow">while</span>( p_thread-&gt;<a name="a3"></a><a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>() ) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( gpBLE-&gt;<a name="a4"></a><a class="code" href="../../d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1">isConnected</a>() ) {</div>
+<div class="line">            led = <a name="a5"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">            sleep(50);      <span class="comment">// ON with 50ms when connected</span></div>
+<div class="line">            led = <a name="a6"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
+<div class="line">            sleep(950);</div>
+<div class="line">        } <span class="keywordflow">else</span> {</div>
+<div class="line">            led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">            sleep(5);       <span class="comment">// ON with 5ms when disconnected.</span></div>
+<div class="line">            led = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
+<div class="line">            sleep(995);</div>
 <div class="line">        }</div>
 <div class="line">    }</div>
-<div class="line">};</div>
+<div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// main routine</span></div>
@@ -253,7 +247,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// LED Task</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    tskLED t;</div>
+<div class="line">    <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> t(tskLED);</div>
 <div class="line">    t.start(<span class="stringliteral">&quot;LED&quot;</span>, 45); <span class="comment">// stack size=45 DWORD</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -300,7 +294,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        conn.negotiate();</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">// sleep to make more idle time for tickless.</span></div>
-<div class="line">        sleep(500);</div>
+<div class="line">        sleep(200);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --> </div><!-- contents -->
@@ -308,7 +302,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Fri Dec 5 2014 10:35:27 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Dec 16 2014 09:12:16 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

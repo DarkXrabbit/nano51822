@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.2-released</span>
+   &#160;<span id="projectnumber">v1.0.3-released</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -110,6 +110,7 @@ $(document).ready(function(){initNavTree('d7/d80/classble_r_s_s_i.html','../../'
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="../../db/d12/classble_r_s_s_i-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">bleRSSI Class Reference<div class="ingroups"><a class="el" href="../../df/d6f/group___bluetooth.html">Bluetooth</a></div></div>  </div>
@@ -146,6 +147,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a9f8ca9ddb72ced07bd96b3c1c678acca"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/classble_r_s_s_i.html#a9f8ca9ddb72ced07bd96b3c1c678acca">operator int8_t</a> ()</td></tr>
 <tr class="memdesc:a9f8ca9ddb72ced07bd96b3c1c678acca"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shorthand read rssi.  <a href="#a9f8ca9ddb72ced07bd96b3c1c678acca">More...</a><br /></td></tr>
 <tr class="separator:a9f8ca9ddb72ced07bd96b3c1c678acca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17c488127d8f78a48541a0f06207d001"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/classble_r_s_s_i.html#a17c488127d8f78a48541a0f06207d001">attach</a> (<a class="el" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">rssi_handle_t</a> handle)</td></tr>
+<tr class="memdesc:a17c488127d8f78a48541a0f06207d001"><td class="mdescLeft">&#160;</td><td class="mdescRight">Attach the rssi event handle.  <a href="#a17c488127d8f78a48541a0f06207d001">More...</a><br /></td></tr>
+<tr class="separator:a17c488127d8f78a48541a0f06207d001"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a928c38bb78ae33967fbc73529314e349"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349">detach</a> ()</td></tr>
+<tr class="memdesc:a928c38bb78ae33967fbc73529314e349"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detach the rssi event handle.  <a href="#a928c38bb78ae33967fbc73529314e349">More...</a><br /></td></tr>
+<tr class="separator:a928c38bb78ae33967fbc73529314e349"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa34f2ea80269787a549a98e13bddb44f"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d80/classble_service.html#aa34f2ea80269787a549a98e13bddb44f">uuid</a> ()</td></tr>
 <tr class="memdesc:aa34f2ea80269787a549a98e13bddb44f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the UUID of service.  <a href="#aa34f2ea80269787a549a98e13bddb44f">More...</a><br /></td></tr>
 <tr class="separator:aa34f2ea80269787a549a98e13bddb44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -167,11 +174,40 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a7896313f7b3b8ffce5f127bcb8d54355"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/classble_r_s_s_i.html#a7896313f7b3b8ffce5f127bcb8d54355">onEvent</a> (int8_t rssi)</td></tr>
 <tr class="memdesc:a7896313f7b3b8ffce5f127bcb8d54355"><td class="mdescLeft">&#160;</td><td class="mdescRight">On rssi changed event.  <a href="#a7896313f7b3b8ffce5f127bcb8d54355">More...</a><br /></td></tr>
 <tr class="separator:a7896313f7b3b8ffce5f127bcb8d54355"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a0d6b3a14e2bd7074971afc79f383fed5"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">rssi_handle_t</a> )(<a class="el" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a> *p_rssi, int8_t rssi)</td></tr>
+<tr class="memdesc:a0d6b3a14e2bd7074971afc79f383fed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">thread task handler type.  <a href="#a0d6b3a14e2bd7074971afc79f383fed5">More...</a><br /></td></tr>
+<tr class="separator:a0d6b3a14e2bd7074971afc79f383fed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE RSSI service class. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#_a11">/ble/ble_rssi_measure/src/main.cpp</a>.</dd>
-</dl></div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</dl></div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a0d6b3a14e2bd7074971afc79f383fed5"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* bleRSSI::rssi_handle_t)(<a class="el" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a> *p_rssi, int8_t rssi)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>thread task handler type. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a389931e06cd4f8ebdb4e39212a5ec72f"></a>
 <div class="memitem">
 <div class="memproto">
@@ -197,6 +233,57 @@ Protected Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a17c488127d8f78a48541a0f06207d001"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleRSSI::attach </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5">rssi_handle_t</a>&#160;</td>
+          <td class="paramname"><em>handle</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Attach the rssi event handle. </p>
+
+</div>
+</div>
+<a class="anchor" id="a928c38bb78ae33967fbc73529314e349"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleRSSI::detach </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Detach the rssi event handle. </p>
+
+</div>
+</div>
 <a class="anchor" id="a0deb640694dfbe4a3bfe67a23dcf3a33"></a>
 <div class="memitem">
 <div class="memproto">
@@ -446,7 +533,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/d80/classble_r_s_s_i.html">bleRSSI</a></li>
-    <li class="footer">Generated on Fri Dec 5 2014 10:35:28 for uCXpresso.NRF by
+    <li class="footer">Generated on Tue Dec 16 2014 09:12:17 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
