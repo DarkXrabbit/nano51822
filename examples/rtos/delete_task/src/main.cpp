@@ -37,7 +37,6 @@
 //
 // TODO: insert other definitions and declarations here
 //
-
 class ledTask: public CThread {
 public:
 	virtual void run() {
