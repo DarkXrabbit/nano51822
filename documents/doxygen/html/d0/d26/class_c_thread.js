@@ -20,5 +20,6 @@ var class_c_thread =
     [ "start", "d0/d26/class_c_thread.html#a3ebabcc071634508511ae2fc7b868ab7", null ],
     [ "start", "d0/d26/class_c_thread.html#aacf955d1852e74da1f989251955ee6ec", null ],
     [ "suspend", "d0/d26/class_c_thread.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
-    [ "suspendAll", "d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a", null ]
+    [ "suspendAll", "d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
+    [ "suspendCurrentTask", "d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358", null ]
 ];

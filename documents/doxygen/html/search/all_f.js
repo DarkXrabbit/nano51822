@@ -33,6 +33,6 @@ var searchData=
   ['rsc_5fwalking',['RSC_WALKING',['../db/dff/group___enumerations.html#gga3cf86d5824f710be6f3ea37cab97f8daa59cbf919dfeb3a959fe068663ba5a928',1,'ble_service_rsc.h']]],
   ['rssi_5fhandle_5ft',['rssi_handle_t',['../d7/d80/classble_r_s_s_i.html#a0d6b3a14e2bd7074971afc79f383fed5',1,'bleRSSI']]],
   ['rtos',['RTOS',['../d8/dba/group___r_t_o_s.html',1,'']]],
-  ['run',['run',['../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f',1,'CShell::run()'],['../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7',1,'CThread::run()'],['../d4/d37/class_c_debug.html#a9a3e40cc8ee5d0c2a41577f658779c71',1,'CDebug::run()']]],
+  ['run',['run',['../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f',1,'CShell::run()'],['../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7',1,'CThread::run()']]],
   ['running',['running',['../dc/dd4/class_w_d_t.html#a4758e66d9463ac55d6cb50d329b2ad6a',1,'WDT::running()'],['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1061be6c3fb88d32829cba6f6b2be304',1,'RUNNING():&#160;thread.h']]]
 ];

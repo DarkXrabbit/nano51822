@@ -20,9 +20,11 @@
 #ifdef DEBUG
 #include <debug.h>
 #include <class/serial.h>
-#define DBG dbg_printf
+#define DBG 	dbg_printf
+#define ASSERT	dbg_assert
 #else
 #define DBG(...)
+#define ASSERT(...)
 #endif
 
 // TODO: insert other include files here

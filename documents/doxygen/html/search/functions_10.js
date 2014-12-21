@@ -29,6 +29,7 @@ var searchData=
   ['stop',['stop',['../d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84',1,'bleAdvertising::stop()'],['../d9/d8b/classble_conn_params.html#a20e3f9b23f4f7528a0972a3c5898c361',1,'bleConnParams::stop()']]],
   ['suspend',['suspend',['../d0/d26/class_c_thread.html#a53e71e6db2221cd1c45aec21953d4aad',1,'CThread']]],
   ['suspendall',['suspendAll',['../d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a',1,'CThread']]],
+  ['suspendcurrenttask',['suspendCurrentTask',['../d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358',1,'CThread']]],
   ['swpwm',['swPWM',['../da/d88/classsw_p_w_m.html#af300cb30894b00317b07261e96931e63',1,'swPWM']]],
   ['sync',['sync',['../dd/d60/class_c_event_bit.html#a4a50fd1376946d508762fa00d01034ce',1,'CEventBit']]],
   ['system_5foff',['system_off',['../d5/d3e/class_c_power_save.html#a5ca4d42330d925fccc91c2a3834ef681',1,'CPowerSave']]]

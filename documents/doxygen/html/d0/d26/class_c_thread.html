@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.3-released</span>
+   &#160;<span id="projectnumber">v1.0.4</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -128,7 +128,7 @@ Inheritance diagram for CThread:</div>
   <img src="../../d0/d26/class_c_thread.png" usemap="#CThread_map" alt=""/>
   <map id="CThread_map" name="CThread_map">
 <area href="../../dc/dac/class_c_object.html" alt="CObject" shape="rect" coords="35,0,96,24"/>
-<area href="../../d4/d37/class_c_debug.html" alt="CDebug" shape="rect" coords="0,112,61,136"/>
+<area href="../../d4/d37/class_c_debug.html" title="CDebug class provide the shell terminal and debug message services. " alt="CDebug" shape="rect" coords="0,112,61,136"/>
 <area href="../../de/dba/class_c_shell.html" alt="CShell" shape="rect" coords="71,112,132,136"/>
 </map>
  </div></div>
@@ -175,6 +175,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aeb4cafe42d6cfc41294cf5dedcee8678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aab3a51062666552690be49b8e8027161"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161">exitCriticalSection</a> ()</td></tr>
 <tr class="separator:aab3a51062666552690be49b8e8027161"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:addc1c069ea8a8c981c746828c5c68358"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358">suspendCurrentTask</a> ()</td></tr>
+<tr class="separator:addc1c069ea8a8c981c746828c5c68358"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb4293936653ccb14dfdfbd17bed88d0"><td class="memItemLeft" align="right" valign="top">static uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#abb4293936653ccb14dfdfbd17bed88d0">count</a> ()</td></tr>
 <tr class="memdesc:abb4293936653ccb14dfdfbd17bed88d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">get the number of tasks in processor.  <a href="#abb4293936653ccb14dfdfbd17bed88d0">More...</a><br /></td></tr>
 <tr class="separator:abb4293936653ccb14dfdfbd17bed88d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -603,7 +605,7 @@ Private Types</h2></td></tr>
 </div><!-- fragment --> <dl class="section remark"><dt>Remarks</dt><dd>The <a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run()</a> is a pure virtual function, must implement by inheritor. </dd></dl>
 <dl class="section note"><dt>Note</dt><dd>if end the <a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run()</a> member function, the <a class="el" href="../../d0/d26/class_c_thread.html" title="The CThread class provide the multi-tasking services. ">CThread</a> object will be destroyed and collected. </dd></dl>
 
-<p>Reimplemented in <a class="el" href="../../d4/d37/class_c_debug.html#a9a3e40cc8ee5d0c2a41577f658779c71">CDebug</a>, and <a class="el" href="../../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f">CShell</a>.</p>
+<p>Reimplemented in <a class="el" href="../../de/dba/class_c_shell.html#a1565a93fad9a1e35e05a597889ad130f">CShell</a>.</p>
 
 </div>
 </div>
@@ -791,13 +793,37 @@ Private Types</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="addc1c069ea8a8c981c746828c5c68358"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void CThread::suspendCurrentTask </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358">CThread::suspendCurrentTask</a> to suspend current task. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d26/class_c_thread.html">CThread</a></li>
-    <li class="footer">Generated on Tue Dec 16 2014 09:12:17 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Dec 21 2014 20:28:51 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

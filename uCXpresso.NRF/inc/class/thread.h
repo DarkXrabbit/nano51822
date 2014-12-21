@@ -205,6 +205,10 @@ public:
 	 */
 	static void exitCriticalSection();
 
+	/**Call the CThread::suspendCurrentTask to suspend current task.
+	 */
+	static void suspendCurrentTask();
+
 	/**
 	 * @brief get the number of tasks in processor.
 	 */

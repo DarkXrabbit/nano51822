@@ -2,7 +2,7 @@ var searchData=
 [
   ['i2cdev',['I2Cdev',['../d0/d5e/class_i2_cdev.html',1,'I2Cdev'],['../d0/d5e/class_i2_cdev.html#ad7af9d60db60000f70dd5b0b112cba83',1,'I2Cdev::I2Cdev()']]],
   ['information',['information',['../d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230',1,'bleDevice']]],
-  ['init',['init',['../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154',1,'CAdc::init()'],['../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d',1,'bleDevice::Init()']]],
+  ['init',['Init',['../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d',1,'bleDevice::Init()'],['../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154',1,'CAdc::init()']]],
   ['input',['input',['../de/d89/class_c_bus.html#ad45a06493f12aef3d096ac3ed86a3b8f',1,'CBus::input()'],['../d7/db9/class_c_pin.html#ad5b71804822b1aee3ee2e5d0350fcc74',1,'CPin::input()']]],
   ['insertafter',['insertAfter',['../df/db6/class_c_list.html#ac30a5a1368438fbcf58b13bf4f2f44ad',1,'CList']]],
   ['insertaftert',['insertAfterT',['../da/d59/class_c_list_t.html#abcd6ee703a0256c5ecd6f04fd7c83e6b',1,'CListT']]],
