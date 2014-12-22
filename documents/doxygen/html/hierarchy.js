@@ -67,7 +67,8 @@ var hierarchy =
       ] ],
       [ "CThread", "d0/d26/class_c_thread.html", [
         [ "CDebug", "d4/d37/class_c_debug.html", null ],
-        [ "CShell", "de/dba/class_c_shell.html", null ]
+        [ "CShell", "de/dba/class_c_shell.html", null ],
+        [ "osTimer", "d0/d03/classos_timer.html", null ]
       ] ],
       [ "CTimeout", "d5/d5b/class_c_timeout.html", null ]
     ] ]

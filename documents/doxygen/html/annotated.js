@@ -51,6 +51,7 @@ var annotated =
     [ "gpioSense", "d0/d3c/classgpio_sense.html", "d0/d3c/classgpio_sense" ],
     [ "hwPWM", "da/deb/classhw_p_w_m.html", "da/deb/classhw_p_w_m" ],
     [ "I2Cdev", "d0/d5e/class_i2_cdev.html", "d0/d5e/class_i2_cdev" ],
+    [ "osTimer", "d0/d03/classos_timer.html", "d0/d03/classos_timer" ],
     [ "spiMaster", "da/dc3/classspi_master.html", "da/dc3/classspi_master" ],
     [ "spiSlave", "da/d31/classspi_slave.html", "da/d31/classspi_slave" ],
     [ "swPWM", "da/d88/classsw_p_w_m.html", "da/d88/classsw_p_w_m" ],

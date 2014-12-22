@@ -12,6 +12,7 @@ var searchData=
   ['onevent',['onEvent',['../d9/d8b/classble_conn_params.html#acdf581e791c5fa6499934e6e4c74b411',1,'bleConnParams::onEvent()'],['../d7/d80/classble_r_s_s_i.html#a7896313f7b3b8ffce5f127bcb8d54355',1,'bleRSSI::onEvent()']]],
   ['onquery',['onQuery',['../de/dba/class_c_shell.html#a16e1dae0dedda35c0be64d1c8f40e6b4',1,'CShell']]],
   ['ontimeout',['onTimeout',['../d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa',1,'bleDevice']]],
+  ['ontimer',['onTimer',['../d0/d03/classos_timer.html#ac9090eb06ee0fd372ae90391a215c09e',1,'osTimer']]],
   ['ontransactioncompleted',['onTransactionCompleted',['../da/d31/classspi_slave.html#a6268b685c20ad68d55e427940e129382',1,'spiSlave']]],
   ['operator_20bool',['operator bool',['../d4/d37/class_c_debug.html#a5a1359725fca8337c5967a3c1811c460',1,'CDebug']]],
   ['operator_20char',['operator char',['../d4/d16/class_c_stream.html#acc833c2eea18af67b57ba641ec58fea7',1,'CStream']]],
@@ -31,6 +32,7 @@ var searchData=
   ['operator_3e_3e',['operator&gt;&gt;',['../d6/d56/class_console.html#ae80d540e36c5522b8653359e1e4d6839',1,'Console::operator&gt;&gt;(char &amp;ch)'],['../d6/d56/class_console.html#a33c9beff5456efdd13209b8321df1a74',1,'Console::operator&gt;&gt;(uint8_t &amp;b)'],['../d4/d16/class_c_stream.html#af2bd1778d5f5cfab469e5df615e1c8fc',1,'CStream::operator&gt;&gt;()']]],
   ['operator_5b_5d',['operator[]',['../de/d89/class_c_bus.html#a12e4d076164971de589cbc5b2f6537e2',1,'CBus::operator[]()'],['../df/db6/class_c_list.html#aab328a02021b5988496f2dbb631bd71c',1,'CList::operator[]()'],['../df/d99/class_c_string.html#a198badb5e4ffe29258ae2476836e274a',1,'CString::operator[]()']]],
   ['orc_5ftx_5fcharacter',['orc_tx_character',['../da/d31/classspi_slave.html#aa6fd95af7bbe2cc9acf91e0cc99f86d2',1,'spiSlave']]],
+  ['ostimer',['osTimer',['../d0/d03/classos_timer.html#a2dda8e92199a1207b0ceff78a928b681',1,'osTimer']]],
   ['ostream',['oStream',['../d6/d56/class_console.html#af6941f3b8ce87a9e53f58c5a74936d49',1,'Console']]],
   ['output',['output',['../de/d89/class_c_bus.html#a6c4770377cbd78099726f6cc626a4639',1,'CBus::output()'],['../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3',1,'CPin::output()']]]
 ];

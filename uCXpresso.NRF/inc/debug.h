@@ -125,7 +125,7 @@ public:
 		return m_shell.parseInt();
 	}
 
-	/**@brief Input a floating value from the inut stream.
+	/**@brief Input a floating value from the input stream.
 	 */
 	inline float parseFloat() {
 		return m_shell.parseFloat();
