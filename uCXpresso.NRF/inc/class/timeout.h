@@ -37,7 +37,7 @@ public:
 	/**Call the wait() member to wait the timeout count expired.
 	 * \param sec is a floating value to indicate the waiting time in second.
 	 */
-	virtual inline void wait(float sec){ 	// 0.1=100ms 0.02=20ms...
+	virtual inline void second(float sec){ 	// 0.1=100ms 0.02=20ms...
 		wait((uint32_t)(sec * 1000));
 	}
 

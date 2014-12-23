@@ -85,4 +85,10 @@ private:
 	///@endcond
 };
 
+/**
+ * @example /rtos/rtos_timer/src/main.cpp
+ * This is an example of how to use the osTimer class.
+ * More details about this example.
+ */
+
 #endif /* TIMER_H_ */

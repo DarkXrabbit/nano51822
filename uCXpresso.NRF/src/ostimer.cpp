@@ -1,15 +1,3 @@
-/*
- ===============================================================================
- Name        : timer.cpp
- Author      : USER
- Version     :
- Date		 : 2012/5/16
- Copyright   : Copyright (C) www.embeda.com.tw
- Description : 
-
- History     :
- ===============================================================================
- */
 
 #include <class/ostimer.h>
 
@@ -43,13 +31,14 @@ bool osTimer::isActive() {
 }
 
 void osTimer::run() {
+	m_timer.reset();
 	while( isAlive() ) {
 		m_timer.wait(m_period);
+		m_timer.reset();
 		if ( m_handle ) {
 			 m_handle(this, m_param);
 		} else {
 			onTimer();
 		}
-		m_timer.reset();
 	}
 }
