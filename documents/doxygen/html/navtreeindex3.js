@@ -1,5 +1,6 @@
 var NAVTREEINDEX3 =
 {
+"db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5":[0,4,27,0],
 "db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b":[0,4,27,1],
 "db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7":[0,4,23,2],
 "db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66":[0,4,23,1],
@@ -122,14 +123,14 @@ var NAVTREEINDEX3 =
 "dc/dac/class_c_object.html":[0,5,4],
 "dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d":[0,5,4,1],
 "dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f":[0,5,4,0],
-"dc/dd4/class_w_d_t.html":[0,6,18],
-"dc/dd4/class_w_d_t.html#a18cf254bf2030ba75735238fc1a31f4d":[0,6,18,4],
-"dc/dd4/class_w_d_t.html#a24e0267b64ea84c69a2a4f0fff9ae996":[0,6,18,1],
-"dc/dd4/class_w_d_t.html#a26a76c241a4d62d2efdac57d2cfe4c0f":[0,6,18,3],
-"dc/dd4/class_w_d_t.html#a4758e66d9463ac55d6cb50d329b2ad6a":[0,6,18,5],
-"dc/dd4/class_w_d_t.html#a7f0293dcc057fa36c55eaba80e56bcaf":[0,6,18,6],
-"dc/dd4/class_w_d_t.html#a7fb55c4b7a7a4a5b525983b3f0ee0eed":[0,6,18,0],
-"dc/dd4/class_w_d_t.html#abdc13243bc032fa1ffab53921cac0b77":[0,6,18,2],
+"dc/dd4/class_w_d_t.html":[0,6,19],
+"dc/dd4/class_w_d_t.html#a18cf254bf2030ba75735238fc1a31f4d":[0,6,19,4],
+"dc/dd4/class_w_d_t.html#a24e0267b64ea84c69a2a4f0fff9ae996":[0,6,19,1],
+"dc/dd4/class_w_d_t.html#a26a76c241a4d62d2efdac57d2cfe4c0f":[0,6,19,3],
+"dc/dd4/class_w_d_t.html#a4758e66d9463ac55d6cb50d329b2ad6a":[0,6,19,5],
+"dc/dd4/class_w_d_t.html#a7f0293dcc057fa36c55eaba80e56bcaf":[0,6,19,6],
+"dc/dd4/class_w_d_t.html#a7fb55c4b7a7a4a5b525983b3f0ee0eed":[0,6,19,0],
+"dc/dd4/class_w_d_t.html#abdc13243bc032fa1ffab53921cac0b77":[0,6,19,2],
 "dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html":[2,1],
 "dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html":[2,18],
 "dd/d60/class_c_event_bit.html":[0,7,0],
@@ -248,6 +249,5 @@ var NAVTREEINDEX3 =
 "de/df6/group___h_i_d___k_b___l_e_d_s.html#gaf72b5e2f5f4edf002e413af87e41f912":[0,3,1],
 "df/d3a/classble_service_proximity.html":[0,0,16],
 "df/d3a/classble_service_proximity.html#a0cde5dbc593ccaf3582fca0903cf418f":[0,0,16,5],
-"df/d3a/classble_service_proximity.html#a0deb640694dfbe4a3bfe67a23dcf3a33":[0,0,16,1],
-"df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455":[0,0,16,2]
+"df/d3a/classble_service_proximity.html#a0deb640694dfbe4a3bfe67a23dcf3a33":[0,0,16,1]
 };

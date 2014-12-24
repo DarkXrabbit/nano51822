@@ -20,5 +20,6 @@ var examples =
     [ "/peripherals/uart_echo/src/main.cpp", "d5/d60/_2peripherals_2uart_echo_2src_2main_8cpp-example.html", null ],
     [ "/peripherals/watchdog/src/main.cpp", "dd/d5c/_2peripherals_2watchdog_2src_2main_8cpp-example.html", null ],
     [ "/rtos/blink/src/main.cpp", "d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html", null ],
-    [ "/rtos/debug/src/main.cpp", "da/d9e/_2rtos_2debug_2src_2main_8cpp-example.html", null ]
+    [ "/rtos/debug/src/main.cpp", "da/d9e/_2rtos_2debug_2src_2main_8cpp-example.html", null ],
+    [ "/rtos/rtos_timer/src/main.cpp", "d2/d46/_2rtos_2rtos_timer_2src_2main_8cpp-example.html", null ]
 ];

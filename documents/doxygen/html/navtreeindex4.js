@@ -1,5 +1,6 @@
 var NAVTREEINDEX4 =
 {
+"df/d3a/classble_service_proximity.html#a14f8119fc1b1a4c5fe6c5ed8212d2455":[0,0,16,2],
 "df/d3a/classble_service_proximity.html#a18cf254bf2030ba75735238fc1a31f4d":[0,0,16,4],
 "df/d3a/classble_service_proximity.html#a24debdd8bf8058c5c23f51ff7ac3cde3":[0,0,16,7],
 "df/d3a/classble_service_proximity.html#a26a76c241a4d62d2efdac57d2cfe4c0f":[0,0,16,3],
@@ -84,8 +85,8 @@ var NAVTREEINDEX4 =
 "df/db6/class_c_list.html#adc7cb308e77a9e0550eecce9333b071b":[0,5,2,21],
 "df/db6/class_c_list.html#af77b9f95976788ad6b74e825fad12e94":[0,5,2,0],
 "examples.html":[2],
-"functions.html":[1,3,0,0],
 "functions.html":[1,3,0],
+"functions.html":[1,3,0,0],
 "functions_b.html":[1,3,0,1],
 "functions_c.html":[1,3,0,2],
 "functions_d.html":[1,3,0,3],
