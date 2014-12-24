@@ -38,10 +38,9 @@
  * A task class to blink the led1
  */
 void tskBlink(CThread *p_thread, xHandle p_param) {
-	CPin led1(LED_PIN_1);					// declare led1 on P0.19
-	led1.output();					// set led1 as output pin.
+	CPin *led = (CPin *) p_param;
 	while( p_thread->isAlive() ) {	// check task alive
-		led1.toggle();				// toggle the led1
+		led->toggle();				// toggle the led1
 		sleep(100);
 	}
 }
@@ -60,11 +59,15 @@ int main(void) {
 	//
 	// Your setup code here
 	//
-	CThread t(tskBlink);
-	t.start("blink");	// start the blink task
-
 	CPin led0(LED_PIN_0);		// declare led0 on p0.18
 	led0.output();
+
+	CPin led1(LED_PIN_1);		// declare led1 on P0.19
+	led1.output();
+
+	// create a task with attached handle (tskBlink)
+	CThread t(tskBlink, &led1);
+	t.start("blink");	// start the blink task
 
 	//
     // Enter main loop.

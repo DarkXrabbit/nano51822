@@ -99,6 +99,7 @@ int main(void) {
 
 	// device manager
 	bleDeviceManager man(ble, (btn==LOW ? true : false));
+	man.connect_directed_mode();	// enable "connect directed" mode to fast connected. (BT 4.1 spec.)
 
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
@@ -107,7 +108,7 @@ int main(void) {
 	//
 	// Proximity Service
 	//
-	myProximity prox(ble);
+	myProximity prx(ble);
 
 	//
 	// Tx Power Service
@@ -137,7 +138,7 @@ int main(void) {
 
 	// Optional: add standard profile in advertisement
 	ble.m_advertising.add_uuid_to_complete_list(tpl);
-	ble.m_advertising.add_uuid_to_complete_list(prox);				// add prox object to the uuid list of advertisement.
+	ble.m_advertising.add_uuid_to_complete_list(prx);				// add prox object to the uuid list of advertisement.
 
 	// Optional: Appearance who you are
 	ble.m_advertising.appearance(BLE_APPEARANCE_GENERIC_KEYRING);
@@ -184,13 +185,15 @@ int main(void) {
     	//
     	// Proximity immediate alert send.
     	//
-    	if ( prox.isAvailable() ) {
+    	if ( prx.isAvailable() ) {
     		switch( btn.isPressed() ) {
     		case BTN_PRESSED:
-    			prox.send(ALERT_LEVEL_HIGH_ALERT);
+    			ledLeft = LED_ON;
+    			prx.send(ALERT_LEVEL_HIGH_ALERT);
 				break;
     		case BTN_RELEASED:
-				prox.send(ALERT_LEVEL_NO_ALERT);
+    			ledLeft = LED_OFF;
+				prx.send(ALERT_LEVEL_NO_ALERT);
 				break;
     		case BTN_NOTHING:
     			break;
