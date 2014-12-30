@@ -8,7 +8,7 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.4 rc0 22th December 2014
+v1.0.4 released 30th December 2014
 --------------------------------
 ###Details: 
 	1. New ASSERT scheme for debug.
