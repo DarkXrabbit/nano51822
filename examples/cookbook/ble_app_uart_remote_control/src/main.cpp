@@ -209,7 +209,7 @@ int main(void) {
 		if ( ble.isConnected() ) {
 			// block in the read() to wait a char.
 			// Also, block task will save the power when tickless enabled.
-			if ( nus.readable() ) {
+			while ( nus.readable() ) {
 				ch = nus.read();
 				if ( ch ) {
 					cmd.input(ch);
