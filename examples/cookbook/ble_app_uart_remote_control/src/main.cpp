@@ -157,8 +157,8 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice stack
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
-	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
+	ble.m_gap.settings(DEVICE_NAME, 10, 50);	// set Device Name on GAP, conn. interval min=10ms, max=50ms
+	ble.m_gap.tx_power(BLE_TX_0dBm);			// set Output power
 
 	//
 	// Add BLE UART Service
@@ -209,11 +209,12 @@ int main(void) {
 		if ( ble.isConnected() ) {
 			// block in the read() to wait a char.
 			// Also, block task will save the power when tickless enabled.
-			ch = nus.read();
-			if ( ch ) {
-				cmd.input(ch);
+			if ( nus.readable() ) {
+				ch = nus.read();
+				if ( ch ) {
+					cmd.input(ch);
+				}
 			}
-
 		} else {
 			//
 			// alternate led when disconnected (idle)

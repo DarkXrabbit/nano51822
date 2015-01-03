@@ -21,7 +21,7 @@ extern "C" {
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		4
 #define uCXpresso_VER_RC		RELEASED
-#define uCXpresso_VER_BUILD		"2014/12/30"
+#define uCXpresso_VER_BUILD		"2014/1/2"
 #define uCXpresso_VER_STR		"V1.0.4"
 
 //
@@ -221,5 +221,28 @@ extern const unsigned char _zero_[];
 //
 #define map(value, fromLow, fromHigh, toLow, toHigh)	((value-fromLow) * (toHigh-toLow) / (fromHigh-fromLow) + toLow)
 #define constrain(x, a, b) 								((x<a) ? a : (x>b) ? b : x)
+
+static void inline delay_us(uint32_t volatile number_of_us)
+{
+    do
+    {
+    __asm volatile (
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+        "NOP\n\t"
+    );
+    } while (--number_of_us);
+}
 
 #endif // NANO_H

@@ -186,8 +186,8 @@ public:
 	 * @return      NRF_SUCCESS on successful initialization of service.
 	 */
 	static uint32_t information(LPCTSTR manufact_name,
-								LPCTSTR model_number,
-								LPCTSTR serial_number,
+								LPCTSTR model_number = NULL,
+								LPCTSTR serial_number = NULL,
 								LPCTSTR hw_rev = NULL,
 								LPCTSTR fw_rev = NULL,
 								LPCTSTR sw_rev = NULL,
