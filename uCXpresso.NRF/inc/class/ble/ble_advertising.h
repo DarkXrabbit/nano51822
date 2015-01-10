@@ -3,7 +3,7 @@
  Name        : ble_advertising.h
  Author      : uCXpresso
  Version     : v1.0.4
- Date		 : 2014/12/4
+ Date		 : 2014/1/10
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -15,6 +15,7 @@
  2014/11/13 v1.0.1	Add type() member to indicate the ADV. type.	Jason
  2014/11/18 v1.0.2	Support white-list for Device Manager module.	Jason
  2014/12/4  v1.0.3	Add "Directed Advertising" scheme for BT4.1 	Jason
+ 2014/1/10  v1.0.4	Add isActive member function.					Jason
  ===============================================================================
  */
 
@@ -164,14 +165,21 @@ public:
 	 */
 	virtual uint32_t stop();
 
+	/**
+	 * @brief Check advertising started
+	 */
+	virtual bool isActive();
+
 	//
 	///@cond PRIVATE (internal used)
 	//
 	bleAdvertising();
-	bool m_memory_access_in_progress;
+	bool is_memory_access_in_progress();
+
 	inline ADV_START_MODE_T mode() {
 		return m_adv_start_mode;
 	}
+	uint32_t				 m_flag;
 protected:
 	ble_advdata_t			 m_adv_data;
 	ble_uuid_t				*m_uuid_list;

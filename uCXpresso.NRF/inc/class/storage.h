@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : Storage data to flash memory
  Author      : uCXpresso
- Version     : v1.0.1
- Date		 : 2014/11/22
+ Version     : v1.0.2
+ Date		 : 2015/1/2
  Copyright   : Copyright (C) www.embeda.com.tw
  Description :
  ===============================================================================
@@ -13,6 +13,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/10/18	v1.0.0	First Edition for nano51822						Jason
  2014/11/22 v1.0.1	Add access_wait static member.					Jason
+ 2015/1/2	v1.0.2	Update constructor.								Jason
  ===============================================================================
  */
 
@@ -32,10 +33,10 @@ class CStorage: public CPeripheral {
 public:
 	/**
 	 * @brief Constructs the storage object.
-	 * @param size Number of bytes handle by the storage object.
-	 * @param addr Indicate the memory address. If addr is zero, assign the address automatically.
+	 * @param size 	Size of block for the module.
+	 * @param count Number of block requested by application.
 	 */
-	CStorage(uint16_t size, uint32_t addr=0);
+	CStorage(uint16_t size, uint16_t count=1);
 
 	/**
 	 * @brief Write data to storage.
@@ -118,7 +119,6 @@ public:
 	/// @cond PRIVATE
 	//
 	virtual ~CStorage();
-	virtual void onEvent(uint8_t op_code, uint32_t result, uint8_t * p_data, uint32_t data_len) { NOTHING }
 protected:
 	uint16_t   	m_size;
 	xHandle 	m_handle;

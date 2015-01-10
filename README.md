@@ -8,6 +8,12 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
+v1.0.5 rc0 10th January 2015
+--------------------------------
+###Details: 
+	1. Support nano51822-AC RAM 32KB version.
+	2. Add isActive member function of bleAdvertising class.
+
 v1.0.4 released 30th December 2014
 --------------------------------
 ###Details: 

@@ -41,6 +41,15 @@ typedef enum {
 	LED_ON = HIGH	///< LED_ON
 }PIN_LEVEL_T;
 
+/**Pin out drive mode
+ * \ingroup Enumerations
+ */
+typedef enum {
+	OUT_DRIVE_DISCONNECT,	///< 1 = Disconnect (floating)
+	OUT_DRIVE_STANDARD,		///< 1 = 0.5mA drive output (Default)
+	OUT_DRIVE_HIGH			///< 1 = 5mA drive output
+}PIN_OUT_DRIVE_T;
+
 /**Pin define class
  * 	\class CPin pin.h "class/pin.h"
  *	\ingroup Peripherals
@@ -70,10 +79,10 @@ public:
 	 * myPin = HIGH;		// set P0.19 to HIGH (use the operator '=')
 	 * myPin.write(LOW);	// set P0.19 to LOW  (use the write() member)
 	 * @endcode
-	 * @param mode is a PIN_OUT_MODE_T enumeration to indicate the output mode.
 	 * @param defValue is a PIN_LEVEL_T enumeration to set the default level for the output pin.
+	 * @param mode is a PIN_OUT_MODE_T enumeration to indicate the output mode.
 	 */
-	virtual void output(PIN_LEVEL_T defValue=LOW);
+	virtual void output(PIN_LEVEL_T defValue=LOW, PIN_OUT_DRIVE_T mode=OUT_DRIVE_STANDARD);
 
 	/**
 	 * @brief Set as an input pin
