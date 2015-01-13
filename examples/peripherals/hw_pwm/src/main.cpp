@@ -48,8 +48,8 @@ int main(void) {
 	// PWM (Using Timer1)
 	//
 	hwPWM pwm1(TIMER_1, 5, 6, 7);	// set pwm1 pins on P0.5 (CH1), P0.6 (CH2) and P0.7 (CH3)
-	pwm1.period(0.0002);			// period time = 200us
-	pwm1.enable();					// enable PWM module
+	pwm1.period(0.001);			// period time = 200us
+	pwm1.enable();					// enable PWM1 module
 
 	// update pwm2 channels duty-cycle (can be updated in any-time)
 	pwm1.dutycycle(PWM_CH_1, 0.8f);	// CH1 duty-cycle = 80%
@@ -59,13 +59,14 @@ int main(void) {
 	//
 	// PWM (Using Timer2)
 	//
-	hwPWM pwm2(TIMER_2, LED_PIN_1, LED_PIN_2);		// set pwm2 pins on LED1 (CH1) and LED2
+	hwPWM pwm2(TIMER_2, LED_PIN_1, LED_PIN_2, LED_PIN_3);		// set pwm2 pins on LED1 (CH1), LED2 (CH2) and LED3 (CH3)
 	pwm2.period(0.0005);			// period time = 500us
-	pwm2.enable();					// enable PWM module
+	pwm2.enable();					// enable PWM2 module
 
 	// update pwm2 channels duty-cycle (can be updated in any-time)
 	pwm2.dutycycle(PWM_CH_1, 0.8f);	// CH1 duty-cycle = 80%
-	pwm2.dutycycle(PWM_CH_2, 0.1f);	// CH2 duty-cycle = 10%
+	pwm2.dutycycle(PWM_CH_2, 0.5f);	// CH2 duty-cycle = 10%
+	pwm2.dutycycle(PWM_CH_3, 0.1f);	// CH2 duty-cycle = 10%
 
 	//
 	// LED
@@ -79,7 +80,7 @@ int main(void) {
 	//
     while(1) {
     	//
-    	// FireFly loop
+    	// LED blink (alive check)
     	//
     	if ( tmLED.isExpired(500) ) {
     		tmLED.reset();
