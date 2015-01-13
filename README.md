@@ -3,7 +3,7 @@ uCXpresso.NRF
 A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 
 ###Web Site: http://www.ucxpresso.net
-###Getting Started: https://rawgit.com/ucxpresso/nano51822/master/documents/getting_started_with_ucxpresso.nrf.pdf
+###Getting Started: http://www.embeda.com.tw/manual/nrf/getting_started_with_ucxpresso.nrf.pdf
 ###Class Manual : http://www.embeda.com.tw/manual/nrf/html/index.html
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
