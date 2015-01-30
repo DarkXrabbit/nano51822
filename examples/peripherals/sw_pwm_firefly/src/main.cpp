@@ -50,7 +50,7 @@ int main(void) {
 	//
 	// Your setup code here
 	//
-	swPWM pwm;
+	swPWM pwm(TIMER_1);
 	pwm.period(0.01);		// set the period time of PWM to 10ms.
 	pwm.add_channel(LED0);	// add PWM channel with LED0
 	pwm.add_channel(LED1);	// add PWM channel with LED1
