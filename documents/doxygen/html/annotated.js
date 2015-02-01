@@ -54,6 +54,7 @@ var annotated =
     [ "osTimer", "d0/d03/classos_timer.html", "d0/d03/classos_timer" ],
     [ "spiMaster", "da/dc3/classspi_master.html", "da/dc3/classspi_master" ],
     [ "spiSlave", "da/d31/classspi_slave.html", "da/d31/classspi_slave" ],
+    [ "SStream", "d9/d97/class_s_stream.html", "d9/d97/class_s_stream" ],
     [ "swPWM", "da/d88/classsw_p_w_m.html", "da/d88/classsw_p_w_m" ],
     [ "twiMaster", "d9/da7/classtwi_master.html", "d9/da7/classtwi_master" ],
     [ "WDT", "dc/dd4/class_w_d_t.html", "dc/dd4/class_w_d_t" ]

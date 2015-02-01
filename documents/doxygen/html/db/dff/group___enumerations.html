@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.4</span>
+   &#160;<span id="projectnumber">v1.0.6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -301,6 +301,11 @@ Enumerations</h2></td></tr>
 <a class="el" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a> = HIGH
  }</td></tr>
 <tr class="separator:ga6f24594071a026b31238ab8cb80d6a80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga81bc18605f18a609d7468e1e03598f9d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga81bc18605f18a609d7468e1e03598f9d">PIN_OUT_DRIVE_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9dad80b8fa9c1957177c4ea049ac9bfa9ff">OUT_DRIVE_DISCONNECT</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9da11bbdfb4112d2ac4f5b7764025756848">OUT_DRIVE_STANDARD</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9dad7b64d950905fedca6a2b84222a2c686">OUT_DRIVE_HIGH</a>
+ }</td></tr>
+<tr class="separator:ga81bc18605f18a609d7468e1e03598f9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga610be6d45973f3f7da6299e97b99f3c2"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga610be6d45973f3f7da6299e97b99f3c2">BIT_ORDER_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2a89da3ebae748913c4ea84ed340c20aec">MSB_FIRST</a> = 0, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2aa7a58f44a10c5b3ff637d315043f1767">LSB_FIRST</a> = 1
  }</td></tr>
@@ -985,6 +990,32 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga81bc18605f18a609d7468e1e03598f9d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#ga81bc18605f18a609d7468e1e03598f9d">PIN_OUT_DRIVE_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;pin.h&gt;</code></p>
+<p>Pin out drive mode </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga81bc18605f18a609d7468e1e03598f9dad80b8fa9c1957177c4ea049ac9bfa9ff"></a>OUT_DRIVE_DISCONNECT&#160;</td><td class="fielddoc">
+<p>1 = Disconnect (floating) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga81bc18605f18a609d7468e1e03598f9da11bbdfb4112d2ac4f5b7764025756848"></a>OUT_DRIVE_STANDARD&#160;</td><td class="fielddoc">
+<p>1 = 0.5mA drive output (Default) </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="gga81bc18605f18a609d7468e1e03598f9dad7b64d950905fedca6a2b84222a2c686"></a>OUT_DRIVE_HIGH&#160;</td><td class="fielddoc">
+<p>1 = 5mA drive output </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="ga51e24e4c0498282f564e92975e020c1d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1211,7 +1242,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Dec 24 2014 15:16:07 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Feb 1 2015 09:12:01 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -1,6 +1,6 @@
 var class_c_storage =
 [
-    [ "CStorage", "d3/de1/class_c_storage.html#a58e55ad86905e5eb9b5c1495f062cc0a", null ],
+    [ "CStorage", "d3/de1/class_c_storage.html#a8fe8f8de3568688b726914698985e562", null ],
     [ "access_wait", "d3/de1/class_c_storage.html#ad6606ffec489224f6a6d1101ad544baf", null ],
     [ "addr", "d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a", null ],
     [ "clear", "d3/de1/class_c_storage.html#ada2ebb3aa35b76c0043b274465770027", null ],

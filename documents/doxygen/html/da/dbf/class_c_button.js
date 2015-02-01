@@ -11,7 +11,7 @@ var class_c_button =
     [ "operator!", "da/dbf/class_c_button.html#a5ec08fca85a5f9472e82588a6a895b8f", null ],
     [ "operator!=", "da/dbf/class_c_button.html#aae98a7d34d72ccc58b6d799f7ad2e12e", null ],
     [ "operator==", "da/dbf/class_c_button.html#ae9f57493334eeb6e69a77a0cf4e50f95", null ],
-    [ "output", "da/dbf/class_c_button.html#adbf59d18abba5e28a3cbe7cb219330a3", null ],
+    [ "output", "da/dbf/class_c_button.html#a8b2877ab0e5d941d5dc686b29bc9db16", null ],
     [ "pin", "da/dbf/class_c_button.html#aff5e5fcd8b9a6de40bc5d262d21a2512", null ],
     [ "read", "da/dbf/class_c_button.html#a02060b0c9bbf0f75dead7bef1c75ce6b", null ],
     [ "toggle", "da/dbf/class_c_button.html#a2000134208f704f1bf79082f518ef764", null ],

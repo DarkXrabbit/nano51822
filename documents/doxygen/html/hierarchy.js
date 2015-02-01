@@ -63,12 +63,14 @@ var hierarchy =
       ] ],
       [ "CStream", "d4/d16/class_c_stream.html", [
         [ "bleServiceUART", "db/d84/classble_service_u_a_r_t.html", null ],
-        [ "CSerial", "d8/d1d/class_c_serial.html", null ]
+        [ "CSerial", "d8/d1d/class_c_serial.html", null ],
+        [ "SStream", "d9/d97/class_s_stream.html", null ]
       ] ],
       [ "CThread", "d0/d26/class_c_thread.html", [
         [ "CDebug", "d4/d37/class_c_debug.html", null ],
         [ "CShell", "de/dba/class_c_shell.html", null ],
-        [ "osTimer", "d0/d03/classos_timer.html", null ]
+        [ "osTimer", "d0/d03/classos_timer.html", null ],
+        [ "SStream", "d9/d97/class_s_stream.html", null ]
       ] ],
       [ "CTimeout", "d5/d5b/class_c_timeout.html", null ]
     ] ]

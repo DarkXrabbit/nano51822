@@ -11,7 +11,7 @@ var class_c_pin =
     [ "operator=", "d7/db9/class_c_pin.html#a7d125bef83689d0f1db13b3f1acbd05e", null ],
     [ "operator=", "d7/db9/class_c_pin.html#a01428eca1b98e2e194bd0848b3eb8904", null ],
     [ "operator==", "d7/db9/class_c_pin.html#ae9f57493334eeb6e69a77a0cf4e50f95", null ],
-    [ "output", "d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3", null ],
+    [ "output", "d7/db9/class_c_pin.html#a8b2877ab0e5d941d5dc686b29bc9db16", null ],
     [ "pin", "d7/db9/class_c_pin.html#aff5e5fcd8b9a6de40bc5d262d21a2512", null ],
     [ "read", "d7/db9/class_c_pin.html#a02060b0c9bbf0f75dead7bef1c75ce6b", null ],
     [ "toggle", "d7/db9/class_c_pin.html#a2000134208f704f1bf79082f518ef764", null ],

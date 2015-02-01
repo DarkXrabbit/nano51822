@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.4</span>
+   &#160;<span id="projectnumber">v1.0.6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -203,6 +203,7 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <div class="line"></div>
 <div class="line">    <span class="comment">// device manager</span></div>
 <div class="line">    <a name="_a14"></a><a class="code" href="../../d9/d34/classble_device_manager.html">bleDeviceManager</a> man(ble, (btn==<a name="a15"></a><a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80a6a226f4143ca3b18999551694cdb72a8">LOW</a> ? <span class="keyword">true</span> : <span class="keyword">false</span>));</div>
+<div class="line">    man.connect_directed_mode();    <span class="comment">// enable &quot;connect directed&quot; mode to fast connected. (BT 4.1 spec.)</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// GAP</span></div>
 <div class="line">    ble.<a name="a16"></a><a class="code" href="../../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9">m_gap</a>.<a name="a17"></a><a class="code" href="../../dd/d89/classble_g_a_p.html#a63eacee42cbfef3d86983bb122c31852">settings</a>(DEVICE_NAME);    <span class="comment">// set Device Name on GAP</span></div>
@@ -211,7 +212,7 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Proximity Service</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    myProximity prox(ble);</div>
+<div class="line">    myProximity prx(ble);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Tx Power Service</span></div>
@@ -241,7 +242,7 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <div class="line"></div>
 <div class="line">    <span class="comment">// Optional: add standard profile in advertisement</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a26"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(tpl);</div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(prox);              <span class="comment">// add prox object to the uuid list of advertisement.</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(prx);               <span class="comment">// add prox object to the uuid list of advertisement.</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Optional: Appearance who you are</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a27"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a>(BLE_APPEARANCE_GENERIC_KEYRING);</div>
@@ -288,13 +289,15 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Proximity immediate alert send.</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( prox.isAvailable() ) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( prx.isAvailable() ) {</div>
 <div class="line">            <span class="keywordflow">switch</span>( btn.isPressed() ) {</div>
 <div class="line">            <span class="keywordflow">case</span> <a name="a37"></a><a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda076cb0f337f54dd9e2e24b0ac35e2914">BTN_PRESSED</a>:</div>
-<div class="line">                prox.send(<a class="code" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a441d457881f1b2ee8c5bdea8284db94a">ALERT_LEVEL_HIGH_ALERT</a>);</div>
+<div class="line">                ledLeft = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d">LED_ON</a>;</div>
+<div class="line">                prx.send(<a class="code" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834a441d457881f1b2ee8c5bdea8284db94a">ALERT_LEVEL_HIGH_ALERT</a>);</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a name="a38"></a><a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda088f9b16da57669ccab96d2b25c78ad2">BTN_RELEASED</a>:</div>
-<div class="line">                prox.send(<a class="code" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834af2958b0b8c69bafeaef608b0de0e66b6">ALERT_LEVEL_NO_ALERT</a>);</div>
+<div class="line">                ledLeft = <a class="code" href="../../db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40">LED_OFF</a>;</div>
+<div class="line">                prx.send(<a class="code" href="../../db/dff/group___enumerations.html#ggae5ba0839681e8380309f2a2b8e87b834af2958b0b8c69bafeaef608b0de0e66b6">ALERT_LEVEL_NO_ALERT</a>);</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
 <div class="line">            <span class="keywordflow">case</span> <a name="a39"></a><a class="code" href="../../db/dff/group___enumerations.html#gga136a895c749c06d625761636769357bda0dd3b406a70dc290c45ecba437881199">BTN_NOTHING</a>:</div>
 <div class="line">                <span class="keywordflow">break</span>;</div>
@@ -333,7 +336,7 @@ $(document).ready(function(){initNavTree('d1/d5c/_2ble_2ble_app_proximity_2src_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Dec 24 2014 15:16:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Feb 1 2015 09:12:01 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

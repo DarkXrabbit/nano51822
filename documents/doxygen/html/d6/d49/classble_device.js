@@ -6,7 +6,7 @@ var classble_device =
     [ "attachEvent", "d6/d49/classble_device.html#aa23d445c8eb368c75f6212ca209506e2", null ],
     [ "detachEvent", "d6/d49/classble_device.html#a018a6e38a8397c14d3c328a65d8b8665", null ],
     [ "enable", "d6/d49/classble_device.html#a32defabfb5157cc02eefbe2d2da1242d", null ],
-    [ "information", "d6/d49/classble_device.html#a80b4406fee2c94fb4112f7af91085230", null ],
+    [ "information", "d6/d49/classble_device.html#aa16837de69e5c9a0f7eeedc57ed88c31", null ],
     [ "Init", "d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d", null ],
     [ "isConnected", "d6/d49/classble_device.html#ad2587dc8be9c4e01e51b852c82ff07f1", null ],
     [ "isThread", "d6/d49/classble_device.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],

@@ -34,7 +34,7 @@ var searchData=
   ['cserial',['CSerial',['../d8/d1d/class_c_serial.html',1,'CSerial'],['../d8/d1d/class_c_serial.html#acdc794de44b9459333f3d5224408f0e2',1,'CSerial::CSerial()']]],
   ['cshell',['CShell',['../de/dba/class_c_shell.html',1,'CShell'],['../de/dba/class_c_shell.html#a66915a194065db1d82873d79ee6ec8c6',1,'CShell::CShell()']]],
   ['csmallprintf',['CSmallPrintf',['../de/db4/class_c_small_printf.html',1,'CSmallPrintf'],['../de/db4/class_c_small_printf.html#a4d3c439b597dde5df178d189a5eb4024',1,'CSmallPrintf::CSmallPrintf()']]],
-  ['cstorage',['CStorage',['../d3/de1/class_c_storage.html',1,'CStorage'],['../d3/de1/class_c_storage.html#a58e55ad86905e5eb9b5c1495f062cc0a',1,'CStorage::CStorage()']]],
+  ['cstorage',['CStorage',['../d3/de1/class_c_storage.html',1,'CStorage'],['../d3/de1/class_c_storage.html#a8fe8f8de3568688b726914698985e562',1,'CStorage::CStorage()']]],
   ['cstream',['CStream',['../d4/d16/class_c_stream.html',1,'CStream'],['../d4/d16/class_c_stream.html#a147900f253c57d3223ae1220e0336808',1,'CStream::CStream()']]],
   ['cstring',['CString',['../df/d99/class_c_string.html',1,'CString'],['../df/d99/class_c_string.html#a3cb66b8f688676f29cdb51c914a15cf7',1,'CString::CString(int size=DEF_STRBUF_SIZE)'],['../df/d99/class_c_string.html#a4866844f29a912ee7eb7afcb641ffb8f',1,'CString::CString(const CString &amp;str)'],['../df/d99/class_c_string.html#a233297b331dbc4c342745d67ad166b97',1,'CString::CString(LPCTSTR str, int length=0)'],['../df/d99/class_c_string.html#ab0859c28af0a02e422bca9a39fe705e7',1,'CString::CString(LPTSTR str)']]],
   ['cthread',['CThread',['../d0/d26/class_c_thread.html',1,'CThread'],['../d0/d26/class_c_thread.html#a5e280f17da1aac80993f6b35d0089870',1,'CThread::CThread()']]],

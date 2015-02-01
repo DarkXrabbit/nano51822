@@ -139,6 +139,11 @@ var group___enumerations =
       [ "LED_OFF", "db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80afc0ca8cc6cbe215fd3f1ae6d40255b40", null ],
       [ "LED_ON", "db/dff/group___enumerations.html#gga6f24594071a026b31238ab8cb80d6a80add01b80eb93658fb4cf7eb9aceb89a1d", null ]
     ] ],
+    [ "PIN_OUT_DRIVE_T", "db/dff/group___enumerations.html#ga81bc18605f18a609d7468e1e03598f9d", [
+      [ "OUT_DRIVE_DISCONNECT", "db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9dad80b8fa9c1957177c4ea049ac9bfa9ff", null ],
+      [ "OUT_DRIVE_STANDARD", "db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9da11bbdfb4112d2ac4f5b7764025756848", null ],
+      [ "OUT_DRIVE_HIGH", "db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9dad7b64d950905fedca6a2b84222a2c686", null ]
+    ] ],
     [ "PRIORITIES_T", "db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d", [
       [ "PRI_LOW", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402", null ],
       [ "PRI_MEDIUM", "db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da79f9a58f2b2fb4dcce4589cd93a5e3f8", null ],

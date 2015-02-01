@@ -77,7 +77,7 @@ int main(void) {
 	// assign the nonce block to decrypt object. it seem to exchange a random public key.
 	decryptCTR = encryptCTR.new_nonce();
 
-	// create new randmo IV block (public key)
+	// create new random IV block (public key)
 	decryptCFB = encryptCFB.new_IV();
 
 	//

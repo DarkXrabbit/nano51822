@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.4</span>
+   &#160;<span id="projectnumber">v1.0.6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -132,9 +132,9 @@ Inheritance diagram for CStorage:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a58e55ad86905e5eb9b5c1495f062cc0a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#a58e55ad86905e5eb9b5c1495f062cc0a">CStorage</a> (uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint32_t <a class="el" href="../../d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a">addr</a>=0)</td></tr>
-<tr class="memdesc:a58e55ad86905e5eb9b5c1495f062cc0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the storage object.  <a href="#a58e55ad86905e5eb9b5c1495f062cc0a">More...</a><br /></td></tr>
-<tr class="separator:a58e55ad86905e5eb9b5c1495f062cc0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8fe8f8de3568688b726914698985e562"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#a8fe8f8de3568688b726914698985e562">CStorage</a> (uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t count=1)</td></tr>
+<tr class="memdesc:a8fe8f8de3568688b726914698985e562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the storage object.  <a href="#a8fe8f8de3568688b726914698985e562">More...</a><br /></td></tr>
+<tr class="separator:a8fe8f8de3568688b726914698985e562"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973bd3f8889dcb99b571fecdce77353e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#a973bd3f8889dcb99b571fecdce77353e">write</a> (const void *buf, uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t offset=0)</td></tr>
 <tr class="memdesc:a973bd3f8889dcb99b571fecdce77353e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to storage.  <a href="#a973bd3f8889dcb99b571fecdce77353e">More...</a><br /></td></tr>
 <tr class="separator:a973bd3f8889dcb99b571fecdce77353e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -170,7 +170,7 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="../../d3/de1/class_c_storage.html" title="CStorage class provides the flash memory access service. ">CStorage</a> class provides the flash memory access service. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a58e55ad86905e5eb9b5c1495f062cc0a"></a>
+<a class="anchor" id="a8fe8f8de3568688b726914698985e562"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -183,8 +183,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">uint32_t&#160;</td>
-          <td class="paramname"><em>addr</em> = <code>0</code>&#160;</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>count</em> = <code>1</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -197,8 +197,8 @@ Static Public Member Functions</h2></td></tr>
 <p>Constructs the storage object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">size</td><td>Number of bytes handle by the storage object. </td></tr>
-    <tr><td class="paramname">addr</td><td>Indicate the memory address. If addr is zero, assign the address automatically. </td></tr>
+    <tr><td class="paramname">size</td><td>Size of block for the module. </td></tr>
+    <tr><td class="paramname">count</td><td>Number of block requested by application. </td></tr>
   </table>
   </dd>
 </dl>
@@ -510,7 +510,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d3/de1/class_c_storage.html">CStorage</a></li>
-    <li class="footer">Generated on Wed Dec 24 2014 15:16:09 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Feb 1 2015 09:12:02 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="../../upnp.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">uCXpresso.NRF
-   &#160;<span id="projectnumber">v1.0.4</span>
+   &#160;<span id="projectnumber">v1.0.6</span>
    </div>
    <div id="projectbrief">RTOS C/C++ Framework for nano51822</div>
   </td>
@@ -153,8 +153,8 @@ $(document).ready(function(){initNavTree('d1/dab/_2peripherals_2hw_pwm_2src_2mai
 <div class="line">    <span class="comment">// PWM (Using Timer1)</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a4"></a><a class="code" href="../../da/deb/classhw_p_w_m.html">hwPWM</a> pwm1(<a name="a5"></a><a class="code" href="../../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5">TIMER_1</a>, 5, 6, 7);   <span class="comment">// set pwm1 pins on P0.5 (CH1), P0.6 (CH2) and P0.7 (CH3)</span></div>
-<div class="line">    pwm1.<a name="a6"></a><a class="code" href="../../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d">period</a>(0.0002);            <span class="comment">// period time = 200us</span></div>
-<div class="line">    pwm1.<a name="a7"></a><a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();                  <span class="comment">// enable PWM module</span></div>
+<div class="line">    pwm1.<a name="a6"></a><a class="code" href="../../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d">period</a>(0.001);         <span class="comment">// period time = 200us</span></div>
+<div class="line">    pwm1.<a name="a7"></a><a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();                  <span class="comment">// enable PWM1 module</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// update pwm2 channels duty-cycle (can be updated in any-time)</span></div>
 <div class="line">    pwm1.<a name="a8"></a><a class="code" href="../../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2">dutycycle</a>(<a name="a9"></a><a class="code" href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71">PWM_CH_1</a>, 0.8f); <span class="comment">// CH1 duty-cycle = 80%</span></div>
@@ -164,19 +164,20 @@ $(document).ready(function(){initNavTree('d1/dab/_2peripherals_2hw_pwm_2src_2mai
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// PWM (Using Timer2)</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <a class="code" href="../../da/deb/classhw_p_w_m.html">hwPWM</a> pwm2(<a name="a12"></a><a class="code" href="../../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b">TIMER_2</a>, LED_PIN_1, LED_PIN_2);      <span class="comment">// set pwm2 pins on LED1 (CH1) and LED2</span></div>
+<div class="line">    <a class="code" href="../../da/deb/classhw_p_w_m.html">hwPWM</a> pwm2(<a name="a12"></a><a class="code" href="../../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b">TIMER_2</a>, LED_PIN_1, LED_PIN_2, LED_PIN_3);       <span class="comment">// set pwm2 pins on LED1 (CH1), LED2 (CH2) and LED3 (CH3)</span></div>
 <div class="line">    pwm2.<a class="code" href="../../da/deb/classhw_p_w_m.html#a2e2ace996637d1569594803d4be9ce7d">period</a>(0.0005);            <span class="comment">// period time = 500us</span></div>
-<div class="line">    pwm2.<a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();                  <span class="comment">// enable PWM module</span></div>
+<div class="line">    pwm2.<a class="code" href="../../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc">enable</a>();                  <span class="comment">// enable PWM2 module</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// update pwm2 channels duty-cycle (can be updated in any-time)</span></div>
 <div class="line">    pwm2.<a class="code" href="../../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2">dutycycle</a>(<a class="code" href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93a6300613564a56414ac0eec80a6ce4e71">PWM_CH_1</a>, 0.8f); <span class="comment">// CH1 duty-cycle = 80%</span></div>
-<div class="line">    pwm2.<a class="code" href="../../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2">dutycycle</a>(<a class="code" href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded">PWM_CH_2</a>, 0.1f); <span class="comment">// CH2 duty-cycle = 10%</span></div>
+<div class="line">    pwm2.<a class="code" href="../../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2">dutycycle</a>(<a class="code" href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93af6884c8a61b8619059be65933bdecded">PWM_CH_2</a>, 0.5f); <span class="comment">// CH2 duty-cycle = 10%</span></div>
+<div class="line">    pwm2.<a class="code" href="../../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2">dutycycle</a>(<a class="code" href="../../db/dff/group___enumerations.html#gga8b06d2bf1a2f8d7cd5e4bd6e1191ce93ab42018afa904659c002b91ecb2b0b7db">PWM_CH_3</a>, 0.1f); <span class="comment">// CH2 duty-cycle = 10%</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// LED</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a13"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(LED_PIN_0);</div>
-<div class="line">    led.<a name="a14"></a><a class="code" href="../../d7/db9/class_c_pin.html#adbf59d18abba5e28a3cbe7cb219330a3">output</a>();</div>
+<div class="line">    led.<a name="a14"></a><a class="code" href="../../d7/db9/class_c_pin.html#a8b2877ab0e5d941d5dc686b29bc9db16">output</a>();</div>
 <div class="line"></div>
 <div class="line">    <a name="_a15"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> tmLED;</div>
 <div class="line">    <span class="comment">//</span></div>
@@ -184,7 +185,7 @@ $(document).ready(function(){initNavTree('d1/dab/_2peripherals_2hw_pwm_2src_2mai
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="keywordflow">while</span>(1) {</div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="comment">// FireFly loop</span></div>
+<div class="line">        <span class="comment">// LED blink (alive check)</span></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( tmLED.<a name="a16"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(500) ) {</div>
 <div class="line">            tmLED.<a name="a17"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
@@ -198,7 +199,7 @@ $(document).ready(function(){initNavTree('d1/dab/_2peripherals_2hw_pwm_2src_2mai
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Dec 24 2014 15:16:04 for uCXpresso.NRF by
+    <li class="footer">Generated on Sun Feb 1 2015 09:12:01 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
