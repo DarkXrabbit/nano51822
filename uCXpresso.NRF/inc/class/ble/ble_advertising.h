@@ -143,7 +143,25 @@ public:
 	 * @brief Update the all fields into Advertising
 	 * @param flags Set the advertising flags. @ref BLE_GAP_ADV_FLAGS
 	 */
-	uint32_t update(uint8_t flags=0);
+	uint32_t update(uint8_t flags=0, ble_advdata_t *scan=NULL);
+
+	/**
+	 * @brief Set, clear or update advertisement and scan response raw data.
+	 * @note The format of the advertisement data will be checked by this call to ensure interoperability.
+	 *       Limitations imposed by this API call to the data provided include having a flags data type in the scan response data and
+	 *       duplicating the local name in the advertisement data and scan response data.
+	 *
+	 * @note: To clear the advertisement data and set it to a 0-length packet, simply provide a valid pointer (p_data/p_sr_data) with its corresponding
+	 *        length (dlen/srdlen) set to 0.
+	 *
+	 * @note: The call will fail if p_data and p_sr_data are both NULL since this would have no effect.
+	 *
+	 * @param[in] adv_data	Raw data to be placed in advertisement packet. If NULL, no changes are made to the current advertisement packet data.
+	 * @param[in] adv_len	Data length for adv_data. Max size: @ref BLE_GAP_ADV_MAX_SIZE octets. Should be 0 if p_data is NULL, can be 0 if adv_data is not NULL.
+	 * @param[in] scn_data	Raw data to be placed in scan response packet. If NULL, no changes are made to the current scan response packet data.
+	 * @param[in] scn_len	Data length for scn_data. Max size: @ref BLE_GAP_ADV_MAX_SIZE octets. Should be 0 if scn_data is NULL, can be 0 if p_data is not NULL.
+	 */
+	uint32_t update(uint8_t *adv_data, uint8_t adv_len, uint8_t *scn_data, uint8_t scn_len);
 
 	/**@brief Reset the all fields
 	 */
