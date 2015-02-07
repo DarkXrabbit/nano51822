@@ -182,15 +182,22 @@ int main(void) {
 	// Enter main loop.
 	//
 	while (1) {
-		//
-		// Negotiate the "connection parameters update" in main-loop
-		//
-		conn.negotiate();
+		if ( config_mode ) {
+			//
+			// Negotiate the "connection parameters update" in main-loop
+			//
+			conn.negotiate();
 
-		//
-		// Your loop code here
-		//
-		led.toggle();
-		sleep(1000);
+			led = LED_ON;
+			sleep(500);
+			led = LED_OFF;
+			sleep(500);
+
+		} else {
+			led = LED_ON;
+			sleep(50);
+			led = LED_OFF;
+			sleep(950);
+		}
 	}
 }
