@@ -143,6 +143,7 @@ int main(void) {
 	while( tmBTN.isExpired(3000)==false ) {		// check button within 3 seconds
 		if ( btn.isPressed()==BTN_PRESSED ) {
 			config_mode = true;
+			break;
 		}
 		if ( tmLED.isExpired(100) ) {			// indicate with fast led blink
 			tmLED.reset();
