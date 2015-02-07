@@ -8,10 +8,11 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.6 rc0 20th January 2015
+v1.0.6 rc1 20th January 2015
 --------------------------------
 ###Details: 
 	1. Add the SStream class to provide the 128 bits AES of secure stream.
+	2. Update bleAdvertising class.
 
 v1.0.5 released 20th January 2015
 --------------------------------
