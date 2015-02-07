@@ -3,15 +3,14 @@
  Name        : ble_uri.h
  Author      : Jason
  Version     : v1.0.0
- Date		 : 2015年2月7日
- Copyright   : Copyright (C) www.embeda.com.tw
- Description : TODO
+ Date		 : 2015/2/7
+ Description : Uri Beacon Service
  ===============================================================================
  History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2015年2月7日	v1.0.0	First Edition									Jason
+ 2015/2/7	v1.0.0	First Edition									Jason
  ===============================================================================
  */
 
