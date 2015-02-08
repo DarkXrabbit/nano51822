@@ -17,7 +17,7 @@
 #include <ble_uri.h>
 #include <string.h>
 
-#if 1
+#if 0
 #include <debug.h>
 #define DBG		dbg_printf
 #define ASSERT	dbg_assert
@@ -78,6 +78,8 @@ bleServiceUriBeacon::bleServiceUriBeacon(bleDevice &ble) :
 
 	err_code = size_char_add();
 	ASSERT(err_code==NRF_SUCCESS, "size_char_add failed:%02X\n", err_code);
+
+	(void) err_code;
 }
 
 bleServiceUriBeacon::~bleServiceUriBeacon() {
