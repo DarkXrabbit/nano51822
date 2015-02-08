@@ -11,7 +11,7 @@
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2015/2/7	v1.0.0	First Edition.									Jason
+ 2015/2/8	v1.0.0	First Edition.									Jason
  ===============================================================================
  */
 
@@ -153,7 +153,6 @@ int main(void) {
 	//
 	//
 	//
-
 	CPin led(LED_PIN_0);
 	led.output();
 
@@ -197,9 +196,9 @@ int main(void) {
 			conn.negotiate();
 
 			led = LED_ON;
-			sleep(500);
+			sleep(80);
 			led = LED_OFF;
-			sleep(500);
+			sleep(120);
 
 		} else {
 			led = LED_ON;
