@@ -34,8 +34,6 @@
 #include <class/ble/ble_conn_params.h>
 #include <class/power.h>
 #include <class/pin.h>
-#include <class/button.h>
-#include <class/timeout.h>
 
 #include <ble_uri.h>
 #include <string.h>
@@ -60,7 +58,8 @@ static uint8_t adv_flags[ADV_FLAGS_LEN] = {0x02, 0x01, 0x04};
 // Normal: send configured ADV packet
 // Config: enable GATT characteristic configuration
 typedef enum {
-	beacon_mode_config, beacon_mode_normal
+	beacon_mode_config,
+	beacon_mode_normal
 } beacon_mode_t;
 
 /**@brief Function for initializing the Advertising functionality.
@@ -85,12 +84,19 @@ static void advertising_init(beacon_mode_t mode) {
 
 	} else 	if (mode == beacon_mode_config) {
 		ble_uuid_t adv_uuids[] = {{URI_UUID_BEACON_SERVICE, gpUriBeacon->uuid_type()}};
-
+		ble_advdata_t advdata;
 		ble_advdata_t scanrsp;
+		uint8_t       flags = BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE;
+
+	    memset(&advdata, 0, sizeof(advdata));
+	    advdata.include_appearance      = true;
+	    advdata.flags.size              = sizeof(flags);
+	    advdata.flags.p_data            = &flags;
+
 	    memset(&scanrsp, 0, sizeof(scanrsp));
 	    scanrsp.uuids_complete.uuid_cnt = sizeof(adv_uuids) / sizeof(adv_uuids[0]);
 	    scanrsp.uuids_complete.p_uuids  = adv_uuids;
-		gpBLE->m_advertising.update(BLE_GAP_ADV_FLAGS_LE_ONLY_LIMITED_DISC_MODE, &scanrsp);
+		gpBLE->m_advertising.update(&advdata, &scanrsp);
 
 		gpBLE->m_advertising.type(ADV_TYPE_ADV_IND);
 		gpBLE->m_advertising.interval(APP_ADV_INTERVAL);
@@ -115,6 +121,9 @@ int main(void) {
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
 #endif
+
+	beacon_mode_t beacon_mode = beacon_mode_normal;
+
 	//
 	// SoftDevice
 	//
@@ -125,44 +134,11 @@ int main(void) {
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
-	bleServiceUriBeacon beacon(ble);
+	bleServiceUriBeacon beacon(ble);	// add uri beacon service
 
 	bleConnParams conn(ble);
 
-	//
-	// Check Configure Button
-	//
-	bool config_mode = false;
-
-	CPin led(LED_PIN_0);
-	led.output();
-
-	CButton btn(BUTTON_PIN_0);
-	CTimeout tmBTN, tmLED;
-
-	while( tmBTN.isExpired(3000)==false ) {		// check button within 3 seconds
-		if ( btn.isPressed()==BTN_PRESSED ) {
-			config_mode = true;
-			break;
-		}
-		if ( tmLED.isExpired(100) ) {			// indicate with fast led blink
-			tmLED.reset();
-			led.toggle();
-		}
-	}
-	led = LED_OFF;
-
-	//
-	// Start BLE
-	//
-	if ( config_mode ) {
-
-		advertising_init(beacon_mode_config);
-
-	} else {
-		advertising_init(beacon_mode_normal);
-	}
-
+	advertising_init(beacon_mode);
 
 	// Start advertising
 	ble.m_advertising.start();
@@ -175,14 +151,46 @@ int main(void) {
 #endif
 
 	//
-	// Your Application setup code here
 	//
+	//
+
+	CPin led(LED_PIN_0);
+	led.output();
+
+	CPin btn(BUTTON_PIN_0);
+	btn.input();
 
 	//
 	// Enter main loop.
 	//
 	while (1) {
-		if ( config_mode ) {
+		//
+		// check button
+		//
+		if ( btn==LOW ) {
+
+			// stop advertising
+			ble.m_advertising.stop();
+
+			// change beacon mode
+			if ( beacon_mode==beacon_mode_config ) {
+				beacon_mode = beacon_mode_normal;
+			} else {
+				beacon_mode = beacon_mode_config;
+			}
+
+			// update mode and re-start the advertising
+			advertising_init(beacon_mode);
+			ble.m_advertising.start();
+
+			// waiting for btn released
+			while(btn==LOW);
+		}
+
+		//
+		// LED Status
+		//
+		if ( beacon_mode==beacon_mode_config  ) {
 			//
 			// Negotiate the "connection parameters update" in main-loop
 			//

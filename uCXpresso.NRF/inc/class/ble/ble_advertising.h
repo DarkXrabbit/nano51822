@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_advertising.h
  Author      : uCXpresso
- Version     : v1.0.4
- Date		 : 2014/1/10
+ Version     : v1.0.5
+ Date		 : 2014/2/6
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -16,6 +16,7 @@
  2014/11/18 v1.0.2	Support white-list for Device Manager module.	Jason
  2014/12/4  v1.0.3	Add "Directed Advertising" scheme for BT4.1 	Jason
  2014/1/10  v1.0.4	Add isActive member function.					Jason
+ 2014/2/6	v1.0.5	Add update overload member functions.			Jason
  ===============================================================================
  */
 
@@ -143,7 +144,33 @@ public:
 	 * @brief Update the all fields into Advertising
 	 * @param flags Set the advertising flags. @ref BLE_GAP_ADV_FLAGS
 	 */
-	uint32_t update(uint8_t flags=0, ble_advdata_t *scan=NULL);
+	uint32_t update(uint8_t flags=0);
+
+
+	/**@brief Function for encoding and setting the advertising data and/or scan response data.
+	 *
+	 * @details This function encodes advertising data and/or scan response data based on the selections
+	 *          in the supplied structures, and passes the encoded data to the stack.
+	 *
+	 * @param[in]   p_adv_data  Structure for specifying the content of the advertising data.
+	 *                          Set to NULL if advertising data is not to be set.
+	 * @param[in]   p_scn_data	Structure for specifying the content of the scan response data.
+	 *                          Set to NULL if scan response data is not to be set.
+	 *
+	 * @return      NRF_SUCCESS on success, NRF_ERROR_DATA_SIZE if not all the requested data could fit
+	 *              into the advertising packet. The maximum size of the advertisement packet is @ref
+	 *              BLE_GAP_ADV_MAX_SIZE.
+	 *
+	 * @warning This API may override application's request to use the long name and use a short name
+	 * instead. This truncation will occur in case the long name does not fit advertisement data size.
+	 * Application is permitted to specify a preferred short name length in case truncation is required.
+	 * For example, if the complete device name is ABCD_HRMonitor, application can specify short name
+	 * length to 8 such that short device name appears as ABCD_HRM instead of ABCD_HRMo or ABCD_HRMoni
+	 * etc if available size for short name is 9 or 12 respectively to have more apporpriate short name.
+	 * However, it should be noted that this is just a preference that application can specify and
+	 * if the preference too large to fit in Advertisement Data, this can be further truncated.
+	 */
+	uint32_t update(ble_advdata_t *p_adv_data, ble_advdata_t *p_scan_data);
 
 	/**
 	 * @brief Set, clear or update advertisement and scan response raw data.
