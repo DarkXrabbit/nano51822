@@ -4,7 +4,7 @@
  Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
- License	 : MIT
+ License	 : Free
  Description : Implement Google URI Beacon
  ===============================================================================
  History
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2015/2/8	v1.0.0	First Edition.									Jason
+ 2015/2/13	v1.0.1	Add onBleEvent function.						Jason
  ===============================================================================
  */
 
@@ -45,7 +46,6 @@
 
 #define APP_ADV_INTERVAL                  	1000                   /**< The advertising interval (in ms). */
 #define NON_CONNECTABLE_ADV_INTERVAL		1000
-#define APP_CFG_NON_CONN_ADV_TIMEOUT		0
 #define APP_ADV_TIMEOUT_IN_SECONDS      	30                     /**< The advertising timeout (in units of seconds). */
 
 
@@ -78,7 +78,7 @@ static void advertising_init(beacon_mode_t mode) {
 		if ((adv_data_len > 0) && (adv_data_len <= APP_ADV_DATA_MAX_LEN)) {
 			gpBLE->m_advertising.update(adv_data, adv_data_len + ADV_FLAGS_LEN, NULL, 0); // adv. raw data updated
 			gpBLE->m_advertising.type(ADV_TYPE_ADV_NONCONN_IND);
-			gpBLE->m_advertising.timeout(APP_CFG_NON_CONN_ADV_TIMEOUT);
+			gpBLE->m_advertising.timeout(0);
 			gpBLE->m_advertising.interval(NON_CONNECTABLE_ADV_INTERVAL);
 		}
 
@@ -90,6 +90,7 @@ static void advertising_init(beacon_mode_t mode) {
 
 	    memset(&advdata, 0, sizeof(advdata));
 	    advdata.include_appearance      = true;
+	    advdata.name_type				= BLE_ADVDATA_FULL_NAME;
 	    advdata.flags.size              = sizeof(flags);
 	    advdata.flags.p_data            = &flags;
 
@@ -101,6 +102,23 @@ static void advertising_init(beacon_mode_t mode) {
 		gpBLE->m_advertising.type(ADV_TYPE_ADV_IND);
 		gpBLE->m_advertising.interval(APP_ADV_INTERVAL);
 		gpBLE->m_advertising.timeout(APP_ADV_TIMEOUT_IN_SECONDS);
+	}
+}
+
+//
+// parse BLE events
+//
+void onBleEvent(bleDevice * p_ble, BLE_EVENT_T evt) {
+	switch(evt) {
+	case BLE_ON_CONNECTED:
+		p_ble->onConnected();
+		break;
+	case BLE_ON_DISCONNECTED:
+		p_ble->onDisconnected();
+		break;
+	case BLE_ON_TIMEOUT:
+		system_reset();		// In configure mode, reset when adv. timeout
+		break;
 	}
 }
 
@@ -128,6 +146,7 @@ int main(void) {
 	// SoftDevice
 	//
 	bleDevice ble;
+	ble.attachEvent(onBleEvent);
 	ble.enable();	// enable BLE SoftDevice task
 
 	// GAP
