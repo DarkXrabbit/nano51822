@@ -31,7 +31,7 @@ Steps for nRF Master:
 
 After loading the firmware file, the tag will be in a normal mode and will not transmit advertisement packets until it is configured.
 
-1. Press DFU-button about 1 seconds on the tag to enter `CONFIG MODE.`, The LED1 will fast blink when in 'CONFIG MODE.'.
+1. Press DFU-button about 1 seconds on the tag to enter `CONFIG MODE.`, the LED1 will fast blink when in 'CONFIG MODE.'.
 2. Using the [UriBeacon Developer Tools](https://github.com/google/uribeacon/releases) Android App, input the desired Uri.
 
 ##LilyPad-nano51822 UriBeacon Source code
