@@ -42,7 +42,7 @@ typedef struct
 {
 	uint8_t  		size;                      // indicates new or onfigured tags
 	BEACON_LOCK_T	lock_state;							// 1=lock, 0=unlock
-	uint8_t  		lock[APP_LOCK_KEY_MAX_LEN];			// Lock Data
+	uint8_t  		key[APP_LOCK_KEY_MAX_LEN];			// Lock Data
 	uint8_t  		uri_data[APP_URI_DATA_MAX_LEN];  	//
 	uint8_t  		uri_data_len;
 	uint8_t  		uri_flags;

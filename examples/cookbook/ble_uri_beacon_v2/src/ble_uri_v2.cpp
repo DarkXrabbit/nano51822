@@ -375,21 +375,10 @@ void bleServiceUriBeacon::on_write(ble_evt_t * p_ble_evt) {
 	bool bUpdate = false;
 
 	//
-	// Lock
-	//
-	if ( p_evt_write->handle==m_lock_char_handles.value_handle ) {
-		if ( m_beacon_db.data.lock_state==BEACON_CFG_UNLOCK ) {
-			m_beacon_db.data.lock_state = BEACON_CFG_LOCK;
-			memcpy(m_beacon_db.data.lock, p_evt_write->data, p_evt_write->len);
-			bUpdate = true;
-		}
-	} else
-
-	//
 	// Unlock
 	//
 	if ( p_evt_write->handle==m_unlock_char_handles.value_handle ) {
-		if ( memcmp(m_beacon_db.data.lock, p_evt_write->data, APP_LOCK_KEY_MAX_LEN)==0 ) {
+		if ( memcmp(m_beacon_db.data.key, p_evt_write->data, APP_LOCK_KEY_MAX_LEN)==0 ) {
 			m_beacon_db.data.lock_state = BEACON_CFG_UNLOCK;
 			bUpdate = true;
 		} else {
@@ -398,6 +387,15 @@ void bleServiceUriBeacon::on_write(ble_evt_t * p_ble_evt) {
 	}
 
 	if ( m_beacon_db.data.lock_state == BEACON_CFG_UNLOCK) {
+		//
+		// Lock
+		//
+		if ( p_evt_write->handle==m_lock_char_handles.value_handle ) {
+			m_beacon_db.data.lock_state = BEACON_CFG_LOCK;						// set lock state
+			memcpy(m_beacon_db.data.key, p_evt_write->data, p_evt_write->len);	// update new key
+			bUpdate = true;
+		} else
+
 		//
 		// URI Data
 		//
@@ -473,5 +471,5 @@ void bleServiceUriBeacon::reset() {
 	m_beacon_db.data.tx_power_mode = TX_POWER_MODE_MEDIUM;
 	m_beacon_db.data.beacon_period = 1000;
 
-	memset(m_beacon_db.data.lock, 0, APP_LOCK_KEY_MAX_LEN);
+	memset(m_beacon_db.data.key, 0, APP_LOCK_KEY_MAX_LEN);
 }
