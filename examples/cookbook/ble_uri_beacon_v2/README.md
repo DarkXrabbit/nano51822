@@ -37,3 +37,6 @@ After loading the firmware file, the tag will be in a normal mode and will not t
 ##LilyPad-nano51822 UriBeacon Source code
 
 Source code and project setup instructions can be found in the folder ble_uri_beacon_v2.
+
+##About the uCXpresso.NRF RTOS C/C++ Framework:
+The nano51822 are working on the uCXpresso.NRF framework, you may need to study the [Getting Started](http://www.embeda.com.tw/ucxpresso/?article=getting-started-2) first.
