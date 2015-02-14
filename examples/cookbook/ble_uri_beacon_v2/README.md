@@ -1,4 +1,4 @@
-# LilyPad-nano51822 UriBeacon
+# LilyPad-nano51822 for UriBeacon
 
 ![Smaller icon](http://www.embeda.com.tw/tw/wp-content/uploads/2014/10/LilyPad-4-NANO51822-01s.jpg "LilyPad-nano51822")
 
