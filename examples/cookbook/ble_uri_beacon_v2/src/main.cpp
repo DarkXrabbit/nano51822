@@ -5,14 +5,13 @@
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
  License	 : Free
- Description : Implement Google URI Beacon
+ Description : Implement Google URI Beacon V2
  ===============================================================================
  History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2015/2/8	v1.0.0	First Edition.									Jason
- 2015/2/13	v1.0.1	Add onBleEvent function.						Jason
+ 2015/2/14	v1.0.0	First Edition.									Jason
  ===============================================================================
  */
 
@@ -36,22 +35,22 @@
 #include <class/power.h>
 #include <class/pin.h>
 
-#include <ble_uri.h>
+#include <ble_uri_v2.h>
 #include <string.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                        	"URI Beacon CFG"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                        	"URI Beacon CFG (V2)"  /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                  	"uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_COMPANY_IDENTIFIER          	0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
 #define APP_ADV_INTERVAL                  	1000                   /**< The advertising interval (in ms). */
-#define NON_CONNECTABLE_ADV_INTERVAL		1000
 #define APP_ADV_TIMEOUT_IN_SECONDS      	30                     /**< The advertising timeout (in units of seconds). */
 
 
 #define MIN_CONN_INTERVAL					500
 #define MAX_CONN_INTERVAL					1000
 
+#define APP_ADV_DATA_MAX_LEN				28
 #define ADV_FLAGS_LEN                 		3
 static uint8_t adv_flags[ADV_FLAGS_LEN] = {0x02, 0x01, 0x04};
 
@@ -62,6 +61,30 @@ typedef enum {
 	beacon_mode_normal
 } beacon_mode_t;
 
+//
+// Adv. Data
+//
+uint8_t adv_data_update(uint8_t *p_data) {
+
+	if ( gpUriBeacon->get().uri_data_len<=APP_URI_DATA_MAX_LEN ) {
+		p_data[0] = 0x03;	// AD Length
+		p_data[1] = 0x03;	// Complete List of 16-Bit Service
+		p_data[2] = 0xD8;	// URI Beacon ID (LOW)
+		p_data[3] = 0xFE;	// URI Beacon ID (HIGH)
+
+		p_data[4] = 0x05 + gpUriBeacon->get().uri_data_len;
+		p_data[5] = 0x16;	// Service Data
+		p_data[6] = 0xD8;	// Service ID (LOW)
+		p_data[7] = 0xFE;	// Service ID (HIGH)
+		p_data[8] = gpUriBeacon->get().uri_flags;
+		p_data[9] = gpUriBeacon->get().adv_tx_power_level[gpUriBeacon->get().tx_power_mode];
+		memcpy(p_data+10, gpUriBeacon->get().uri_data, gpUriBeacon->get().uri_data_len);
+
+		return (gpUriBeacon->get().uri_data_len+10);
+	}
+	return 0;
+}
+
 /**@brief Function for initializing the Advertising functionality.
  *
  * @details Encodes the required advertising data and passes it to the stack.
@@ -69,17 +92,17 @@ typedef enum {
  */
 static void advertising_init(beacon_mode_t mode) {
 	if (mode == beacon_mode_normal) {
-		uint8_t adv_data[ADV_FLAGS_LEN + APP_ADV_DATA_MAX_LEN];
+		uint8_t adv_data[ADV_FLAGS_LEN+APP_ADV_DATA_MAX_LEN];
 		uint8_t adv_data_len;
 
 		memcpy(adv_data, adv_flags, ADV_FLAGS_LEN);
-		adv_data_len = gpUriBeacon->get_adv_data(adv_data+ADV_FLAGS_LEN);
+		adv_data_len = adv_data_update(adv_data+ADV_FLAGS_LEN);
 
-		if ((adv_data_len > 0) && (adv_data_len <= APP_ADV_DATA_MAX_LEN)) {
+		if ( adv_data_len > 0 ) {
 			gpBLE->m_advertising.update(adv_data, adv_data_len + ADV_FLAGS_LEN, NULL, 0); // adv. raw data updated
 			gpBLE->m_advertising.type(ADV_TYPE_ADV_NONCONN_IND);
-			gpBLE->m_advertising.timeout(0);
-			gpBLE->m_advertising.interval(NON_CONNECTABLE_ADV_INTERVAL);
+			gpBLE->m_advertising.interval(gpUriBeacon->get().beacon_period);
+			gpBLE->m_advertising.timeout(0); // never end
 		}
 
 	} else 	if (mode == beacon_mode_config) {
@@ -117,7 +140,7 @@ void onBleEvent(bleDevice * p_ble, BLE_EVENT_T evt) {
 		p_ble->onDisconnected();
 		break;
 	case BLE_ON_TIMEOUT:
-		system_reset();		// In configure mode, reset when adv. timeout
+		system_reset();
 		break;
 	}
 }
@@ -151,9 +174,23 @@ int main(void) {
 
 	// GAP
 	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
-	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	bleServiceUriBeacon beacon(ble);	// add uri beacon service
+
+	switch ( beacon.get().tx_power_mode ) {
+	case TX_POWER_MODE_LOWSET:
+		ble.m_gap.tx_power(BLE_TX_m8dBm);
+		break;
+	case TX_POWER_MODE_LOW:
+		ble.m_gap.tx_power(BLE_TX_m4dBm);
+		break;
+	case TX_POWER_MODE_MEDIUM:
+		ble.m_gap.tx_power(BLE_TX_0dBm);
+		break;
+	case TX_POWER_MODE_HIGH:
+		ble.m_gap.tx_power(BLE_TX_4dBm);
+		break;
+	}
 
 	bleConnParams conn(ble);
 
