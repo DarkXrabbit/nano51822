@@ -2,7 +2,7 @@
 
 ![Smaller icon](http://www.embeda.com.tw/tw/wp-content/uploads/2014/10/LilyPad-4-NANO51822-01s.jpg "LilyPad-nano51822")
 
-**This document provides instructions for over-the-air device firmware update (DFU) of the nRF51822-BEACON to UriBeacon firmware and how to change the UriBeacon mode.**
+**This document provides instructions for over-the-air device firmware update (DFU) of the LilyPad-nano51822 to UriBeacon firmware and how to change the UriBeacon mode.**
 
 
 ## Getting Started
@@ -31,7 +31,7 @@ Steps for nRF Master:
 
 After loading the firmware file, the tag will be in a normal mode and will not transmit advertisement packets until it is configured.
 
-1. Press DFU-button on the tag to enter `CONFIG MODE.`
+1. Press DFU-button about 1 seconds on the tag to enter `CONFIG MODE.`, The LED1 will fast blink when in 'CONFIG MODE.'.
 2. Using the [UriBeacon Developer Tools](https://github.com/google/uribeacon/releases) Android App, input the desired Uri.
 
 ##LilyPad-nano51822 UriBeacon Source code
