@@ -6,7 +6,7 @@
 
 
 ## Getting Started
-1. Purchase the [LilyPad-nano51822 on AMAZON](http://www.amazon.com/uCXpresso-LilyPad-nano51822-Arduino-iBeacon/dp/B00RE6CL4G/ref=sr_1_1?s=pc&ie=UTF8&qid=1423904848&sr=1-1) (P/N: LilyPad-nano51822)
+1. Purchase the [LilyPad-nano51822 on AMAZON](http://www.amazon.com/uCXpresso-LilyPad-nano51822-Arduino-iBeacon/dp/B00RE6CL4G/ref=sr_1_1?s=pc&ie=UTF8&qid=1423904848&sr=1-1) (P/N: LilyPad-nano51822-AA 16KB)
 2. Install one of the Nordic Android apps that support DFU: [nRF Master Control Panel (BLE)](https://play.google.com/store/apps/details?id=no.nordicsemi.android.mcp) or [nRF Toolbox for BLE](https://play.google.com/store/apps/details?id=no.nordicsemi.android.nrftoolbox)
 3. Copy the [ble_uri_beacon_v2](https://www.dropbox.com/s/cfwc8g5m12wrj7u/ble_uri_beacon_v2.hex?dl=0) to your phone using  [Google Drive](https://play.google.com/store/apps/details?id=com.google.android.apps.docs) for Android or another method.
 
