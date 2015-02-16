@@ -1,9 +1,9 @@
 /*
 ===============================================================================
- Name        : MPU6050 Example
+ Name        : BMP180 Sensor
  Author      : uCXpresso
  Version     : v1.0.0
- Description : Exmple MPU6050 for I2CDev Class
+ Description : I2Cdev library collection - BMP180 basic example sketch
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
@@ -28,11 +28,12 @@
 // TODO: insert other include files here
 #include <class/power.h>
 #include <class/pin.h>
-#include <MPU6050.h>
+#include <class/timeout.h>
+#include <BMP085.h>
 
 // TODO: insert other definitions and declarations here
-//#define BOARD_PCA10001
-#define BOARD_LILYPAD
+#define BOARD_PCA10001
+//#define BOARD_LILYPAD
 #include <config/board.h>
 
 //
@@ -59,54 +60,56 @@ int main(void) {
 	CPin led0(LED_PIN_0);
 	led0.output();
 
-	CPin led1(LED_PIN_1);
-	led1.output();
-
-	I2Cdev	i2c(23, 24);	// SDA=P0.23, SCL=P0.24, default CLK=100KHz
+	I2Cdev i2c(23, 24);	// SDA=P0.23, SCL=P0.24
 	i2c.enable();
 
-	// class default I2C address is 0x68
+	// class default I2C address is 0x77 (default)
 	// specific I2C addresses may be passed as a parameter here
-	// AD0 low = 0x68 (default for InvenSense evaluation board)
-	// AD0 high = 0x69
-	MPU6050 accelgyro(i2c);
+	// (though the BMP085 supports only one address)
+	BMP085 barometer(i2c);
+	barometer.initialize();
 
-	// initialize device
-	accelgyro.initialize();
+	float temperature;
+	float pressure;
+	float altitude;
 
-	// check device
-	if ( accelgyro.testConnection() ) {
-		led0 = LED_ON;
-	}
-
-	int16_t ax, ay, az;
-	int16_t gx, gy, gz;
+	CTimeout tm;
 
 	//
     // Enter main loop.
 	//
     while(1) {
     	//
-    	// Show Gyroscope & Accelerometer values
+    	// Your loop code here
     	//
-
     	if ( dbg.isDebugMode() ) {
-			//
-			// read raw accel/gyro measurements from device
-			//
-			accelgyro.getMotion6(&ax, &ay, &az, &gx, &gy, &gz);
-			DBG("ax=%d, ay=%d, az=%d, gx=%d, gy=%d, gz=%d\n",
-					ax,
-					ay,
-					az,
-					gx,
-					gy,
-					gz);
 
-			sleep(100);
+    	    // request temperature
+    	    barometer.setControl(BMP085_MODE_TEMPERATURE);
+    		tm.reset();
+     	    while ( tm.isExpired(barometer.getMeasureDelayMilliseconds())==false );
+
+    	    // read calibrated temperature value in degrees Celsius
+    	    temperature = barometer.getTemperatureC();
+
+    	    // request pressure (3x oversampling mode, high detail, 23.5ms delay)
+    	    barometer.setControl(BMP085_MODE_PRESSURE_3);
+    	    tm.reset();
+    	    while ( tm.isExpired(barometer.getMeasureDelayMilliseconds())==false );
+
+    	    // read calibrated pressure value in Pascals (Pa)
+    	    pressure = barometer.getPressure();
+
+    	    // calculate absolute altitude in meters based on known pressure
+    	    // (may pass a second "sea level pressure" parameter here,
+    	    // otherwise uses the standard value of 101325 Pa)
+    	    altitude = barometer.getAltitude(pressure);
+
+    		DBG("T:%0.1f\t P:%0.2f\t A:%0.2f\n", temperature, pressure, altitude);
+    		tm.wait(100);
 
     	} else {
-    		led1.toggle();
+    		led0.toggle();
     		sleep(500);
     	}
     }

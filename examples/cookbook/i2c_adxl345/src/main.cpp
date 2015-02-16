@@ -85,7 +85,7 @@ int main(void) {
     		// read raw accel measurements from device
     		accel.getAcceleration(&ax, &ay, &az);
     		DBG("ax=%d, ay=%d, az=%d\n", ax, ay, az);
-
+    		sleep(100);
     	} else {
     		led0.toggle();
     		sleep(500);
