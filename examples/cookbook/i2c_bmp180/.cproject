@@ -32,8 +32,9 @@
 								<option id="gnu.cpp.compiler.option.other.other.1033585142" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -std=c++11" valueType="string"/>
 								<option id="com.crt.advproject.cpp.hdrlib.409581593" name="Library headers" superClass="com.crt.advproject.cpp.hdrlib" value="com.crt.advproject.cpp.hdrlib.newlib" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1972362958" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 								</option>
 								<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.1778575132" name="Optimization Level" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
 								<option id="com.crt.advproject.cpp.exe.debug.option.debugging.level.1809018907" name="Debug Level" superClass="com.crt.advproject.cpp.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
@@ -52,6 +53,7 @@
 								</option>
 								<option id="gnu.c.compiler.option.misc.other.101664036" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -std=c++11" valueType="string"/>
 								<option id="gnu.c.compiler.option.include.paths.1084759295" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 								</option>
@@ -65,7 +67,7 @@
 								<option id="com.crt.advproject.gas.arch.57331763" name="Architecture" superClass="com.crt.advproject.gas.arch" value="com.crt.advproject.gas.target.cm0" valueType="enumerated"/>
 								<option id="com.crt.advproject.gas.thumb.251426076" name="Thumb mode" superClass="com.crt.advproject.gas.thumb" value="true" valueType="boolean"/>
 								<option id="gnu.both.asm.option.flags.crt.271498532" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -D__NEWLIB__ -DDEBUG -D__CODE_RED" valueType="string"/>
-								<option id="gnu.both.asm.option.include.paths.160561577" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths"/>
+								<option id="gnu.both.asm.option.include.paths.160561577" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.129873545" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.crt.advproject.assembler.input.812876733" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
 							</tool>
@@ -136,8 +138,9 @@
 								<option id="gnu.cpp.compiler.option.other.other.1765546938" name="Other flags" superClass="gnu.cpp.compiler.option.other.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -fno-rtti -fno-exceptions -std=c++11" valueType="string"/>
 								<option id="com.crt.advproject.cpp.hdrlib.1695405878" name="Library headers" superClass="com.crt.advproject.cpp.hdrlib" value="com.crt.advproject.cpp.hdrlib.newlib" valueType="enumerated"/>
 								<option id="gnu.cpp.compiler.option.include.paths.1853215416" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
-									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc}&quot;"/>
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 								</option>
 								<option id="com.crt.advproject.cpp.exe.debug.option.optimization.level.883134577" name="Optimization Level" superClass="com.crt.advproject.cpp.exe.debug.option.optimization.level" value="gnu.cpp.compiler.optimization.level.more" valueType="enumerated"/>
 								<option id="com.crt.advproject.cpp.exe.debug.option.debugging.level.926772200" name="Debug Level" superClass="com.crt.advproject.cpp.exe.debug.option.debugging.level" value="gnu.cpp.compiler.debugging.level.none" valueType="enumerated"/>
@@ -155,6 +158,7 @@
 								</option>
 								<option id="gnu.c.compiler.option.misc.other.46330850" name="Other flags" superClass="gnu.c.compiler.option.misc.other" value="-c -fmessage-length=0 -fno-builtin -ffunction-sections -fdata-sections -std=c++11" valueType="string"/>
 								<option id="gnu.c.compiler.option.include.paths.2003797802" name="Include paths (-I)" superClass="gnu.c.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc/core}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/uCXpresso.NRF/inc}&quot;"/>
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/src}&quot;"/>
 								</option>
@@ -168,7 +172,7 @@
 								<option id="com.crt.advproject.gas.arch.1113062854" name="Architecture" superClass="com.crt.advproject.gas.arch" value="com.crt.advproject.gas.target.cm0" valueType="enumerated"/>
 								<option id="com.crt.advproject.gas.thumb.1543532318" name="Thumb mode" superClass="com.crt.advproject.gas.thumb" value="true" valueType="boolean"/>
 								<option id="gnu.both.asm.option.flags.crt.902004733" name="Assembler flags" superClass="gnu.both.asm.option.flags.crt" value="-c -x assembler-with-cpp -D__NEWLIB__ -DDEBUG -D__CODE_RED" valueType="string"/>
-								<option id="gnu.both.asm.option.include.paths.804187926" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths"/>
+								<option id="gnu.both.asm.option.include.paths.804187926" name="Include paths (-I)" superClass="gnu.both.asm.option.include.paths" valueType="includePath"/>
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1234066537" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 								<inputType id="com.crt.advproject.assembler.input.1115822788" name="Additional Assembly Source Files" superClass="com.crt.advproject.assembler.input"/>
 							</tool>
