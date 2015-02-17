@@ -7,10 +7,11 @@
  Description : Uri Beacon Configure Service V2
  ===============================================================================
  History
- ---------+---------+--------------------------------------------+-------------
- DATE     |	VERSION |	DESCRIPTIONS							 |	By
- ---------+---------+--------------------------------------------+-------------
- 2015/2/14	v1.0.0	First Edition									Jason
+ ---------+---------+-------------------------------------------+---------------
+ DATE     |	VERSION |	DESCRIPTIONS							|	By
+ ---------+---------+-------------------------------------------+---------------
+ 2015/2/14	v1.0.0	First Edition								Jason
+ 2015/2/17	v1.0.1	Fixed KEY length to 128 bits.				Jason
  ===============================================================================
  */
 
@@ -22,7 +23,7 @@
 
 #define URI_UUID_BEACON_SERVICE		0x2080
 
-#define APP_LOCK_KEY_MAX_LEN		8
+#define APP_LOCK_KEY_MAX_LEN		16
 #define APP_URI_DATA_MAX_LEN		18
 
 typedef enum {
