@@ -1,16 +1,5 @@
 var modules =
 [
-    [ "Basic Math Functions", "da/de5/group__group_math.html", null ],
-    [ "Fast Math Functions", "d0/d39/group__group_fast_math.html", "d0/d39/group__group_fast_math" ],
-    [ "Complex Math Functions", "d4/d81/group__group_cmplx_math.html", null ],
-    [ "Filtering Functions", "d2/dab/group__group_filters.html", null ],
-    [ "Matrix Functions", "dd/d0e/group__group_matrix.html", null ],
-    [ "Transform Functions", "d1/dd4/group__group_transforms.html", null ],
-    [ "Controller Functions", "d1/d78/group__group_controller.html", "d1/d78/group__group_controller" ],
-    [ "Statistics Functions", "d4/d50/group__group_stats.html", null ],
-    [ "Support Functions", "d7/d01/group__group_support.html", null ],
-    [ "Interpolation Functions", "de/d4e/group__group_interpolation.html", "de/d4e/group__group_interpolation" ],
-    [ "Examples", "d0/ddf/group__group_examples.html", null ],
     [ "Bluetooth", "df/d6f/group___bluetooth.html", "df/d6f/group___bluetooth" ],
     [ "Cycling Speed and Cadence Service feature bits", "de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s.html", "de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s" ],
     [ "HID Keyboard modifier key bits", "da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html", "da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s" ],

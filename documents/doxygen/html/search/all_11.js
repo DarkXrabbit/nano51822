@@ -11,7 +11,6 @@ var searchData=
   ['readword',['readWord',['../d0/d5e/class_i2_cdev.html#a40f2c8c0786176fd9de891d8e3c5caca',1,'I2Cdev']]],
   ['readwords',['readWords',['../d0/d5e/class_i2_cdev.html#ac2ef0e775ac955ecbe58df9a812f6b1b',1,'I2Cdev']]],
   ['ready',['READY',['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba6564f2f3e15be06b670547bbcaaf0798',1,'thread.h']]],
-  ['reciptable',['recipTable',['../da/d0e/structarm__lms__norm__instance__q31.html#a85836d0907077b9ac660f7bbbaa9d694',1,'arm_lms_norm_instance_q31::recipTable()'],['../d2/dc7/structarm__lms__norm__instance__q15.html#a9aabb0e4c79f3db807e7a441fa36f5f8',1,'arm_lms_norm_instance_q15::recipTable()']]],
   ['reference',['reference',['../d7/d0f/class_c_adc.html#a02da72af459ae098de9e76f816eed3d7',1,'CAdc']]],
   ['release',['release',['../d0/d3c/classgpio_sense.html#ae0f0ee522de000fb3487bbc351c00972',1,'gpioSense::release()'],['../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1',1,'CSemaphore::release()']]],
   ['removeall',['removeAll',['../df/db6/class_c_list.html#a5ee3e7395c54395c7f603c08a1b9d5cf',1,'CList']]],

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['l',['L',['../da/db9/structarm__fir__interpolate__instance__q15.html#a5431bdc079e72a973b51d359f7f13603',1,'arm_fir_interpolate_instance_q15::L()'],['../d2/dcd/structarm__fir__interpolate__instance__q31.html#a5cdf0a631cb74e0e9588c388abe5235c',1,'arm_fir_interpolate_instance_q31::L()'],['../da/d4f/structarm__fir__interpolate__instance__f32.html#ae6f94dcc0ccd8aa4bc699b20985d9df5',1,'arm_fir_interpolate_instance_f32::L()']]],
-  ['load',['LOAD',['../dc/d4f/struct_sys_tick___type.html#ae7bc9d3eac1147f3bba8d73a8395644f',1,'SysTick_Type']]]
+  ['n',['N',['../d3/d6d/union_a_p_s_r___type.html#a7e7bbba9b00b0bb3283dc07f1abe37e0',1,'APSR_Type::N()'],['../db/d0a/unionx_p_s_r___type.html#a2db9a52f6d42809627d1a7a607c5dbc5',1,'xPSR_Type::N()']]],
+  ['npriv',['nPRIV',['../d8/d2a/union_c_o_n_t_r_o_l___type.html#a35c1732cf153b7b5c4bd321cf1de9605',1,'CONTROL_Type']]]
 ];

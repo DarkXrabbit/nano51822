@@ -1,14 +1,11 @@
 var searchData=
 [
-  ['interpolation_20functions',['Interpolation Functions',['../de/d4e/group__group_interpolation.html',1,'']]],
   ['i2cdev',['I2Cdev',['../d0/d5e/class_i2_cdev.html',1,'I2Cdev'],['../d0/d5e/class_i2_cdev.html#ad7af9d60db60000f70dd5b0b112cba83',1,'I2Cdev::I2Cdev()']]],
   ['icer',['ICER',['../de/d43/struct_n_v_i_c___type.html#a1d18c89c94cf0f7ece8db0d5351aced9',1,'NVIC_Type']]],
   ['icpr',['ICPR',['../de/d43/struct_n_v_i_c___type.html#a0dccb8954db63a673212815f56031625',1,'NVIC_Type']]],
   ['icsr',['ICSR',['../d4/dae/struct_s_c_b___type.html#a3e66570ab689d28aebefa7e84e85dc4a',1,'SCB_Type']]],
-  ['ifftflag',['ifftFlag',['../d3/d11/structarm__cfft__radix4__instance__q15.html#a2ecff6ea735cb4d22e922d0fd5736655',1,'arm_cfft_radix4_instance_q15::ifftFlag()'],['../d1/d53/structarm__cfft__radix4__instance__q31.html#adc0a62ba669ad2282ecbe43d5d96abab',1,'arm_cfft_radix4_instance_q31::ifftFlag()'],['../de/db7/structarm__cfft__radix4__instance__f32.html#a25d1da64dd6487c291f04d226f9acc66',1,'arm_cfft_radix4_instance_f32::ifftFlag()'],['../d4/d6e/structarm__cfft__radix2__instance__q15.html#ab5c073286bdd2f6e2bf783ced36bf1de',1,'arm_cfft_radix2_instance_q15::ifftFlag()'],['../d0/df2/structarm__cfft__radix2__instance__q31.html#a2607378ce64be16698bb8a3b1af8d3c8',1,'arm_cfft_radix2_instance_q31::ifftFlag()'],['../de/d85/structarm__cfft__radix2__instance__f32.html#a8dbe98d2c924e35e0a3fed2fe948176f',1,'arm_cfft_radix2_instance_f32::ifftFlag()']]],
-  ['ifftflagr',['ifftFlagR',['../d2/d2f/structarm__rfft__instance__q15.html#a8051ffe268c147e431e1bea7bb4c4258',1,'arm_rfft_instance_q15::ifftFlagR()'],['../da/d3d/structarm__rfft__instance__q31.html#af5c2615e6cde15524df38fa57ea32d94',1,'arm_rfft_instance_q31::ifftFlagR()'],['../d9/d06/structarm__rfft__instance__f32.html#a5ee6d10a934ab4b666e0bb286c3d633f',1,'arm_rfft_instance_f32::ifftFlagR()']]],
   ['information',['information',['../d6/d49/classble_device.html#aa16837de69e5c9a0f7eeedc57ed88c31',1,'bleDevice']]],
-  ['init',['Init',['../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d',1,'bleDevice::Init()'],['../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154',1,'CAdc::init()']]],
+  ['init',['init',['../d7/d0f/class_c_adc.html#a6ad11cb0593e31c74d37e76b6039e154',1,'CAdc::init()'],['../d6/d49/classble_device.html#a7a13b9797449994a8382603001d7659d',1,'bleDevice::Init()']]],
   ['input',['input',['../de/d89/class_c_bus.html#ad45a06493f12aef3d096ac3ed86a3b8f',1,'CBus::input()'],['../d7/db9/class_c_pin.html#ad5b71804822b1aee3ee2e5d0350fcc74',1,'CPin::input()']]],
   ['insertafter',['insertAfter',['../df/db6/class_c_list.html#ac30a5a1368438fbcf58b13bf4f2f44ad',1,'CList']]],
   ['insertaftert',['insertAfterT',['../da/d59/class_c_list_t.html#abcd6ee703a0256c5ecd6f04fd7c83e6b',1,'CListT']]],

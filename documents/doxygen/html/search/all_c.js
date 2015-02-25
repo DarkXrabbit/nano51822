@@ -1,8 +1,6 @@
 var searchData=
 [
   ['misra_2dc_3a2004_20compliance_20exceptions',['MISRA-C:2004 Compliance Exceptions',['../d1/d5b/_c_m_s_i_s__m_i_s_r_a__exceptions.html',1,'']]],
-  ['matrix_20functions',['Matrix Functions',['../dd/d0e/group__group_matrix.html',1,'']]],
-  ['m',['M',['../d4/dfd/structarm__fir__decimate__instance__q15.html#aad9320284218b3aa378527ea518cf093',1,'arm_fir_decimate_instance_q15::M()'],['../d4/ddf/structarm__fir__decimate__instance__q31.html#ad3d6936c36303b30dd38f1eddf248ae5',1,'arm_fir_decimate_instance_q31::M()'],['../d9/dd0/structarm__fir__decimate__instance__f32.html#a76a8b2161731638eb3d67f277919f95d',1,'arm_fir_decimate_instance_f32::M()']]],
   ['m_5fadvertising',['m_advertising',['../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3',1,'bleDevice']]],
   ['m_5fconsole',['m_console',['../de/dba/class_c_shell.html#ac555f42f70f60653dbd5e0c8ec9c4dcf',1,'CShell']]],
   ['m_5fgap',['m_gap',['../d6/d49/classble_device.html#a622dd38b5243c6204d5adf28dac971b9',1,'bleDevice']]],
@@ -13,7 +11,6 @@ var searchData=
   ['makereverse',['makeReverse',['../df/d99/class_c_string.html#a0b2512a4d0efb8c0317ef7a969268f07',1,'CString']]],
   ['makeupper',['makeUpper',['../df/d99/class_c_string.html#a7a027f50c1bede9a37d12ec9d2cc6616',1,'CString']]],
   ['manuf_5fspecific_5fdata',['manuf_specific_data',['../d0/d2c/classble_advertising.html#af1f8b6ffbfa395f75edea27e35210838',1,'bleAdvertising']]],
-  ['maxdelay',['maxDelay',['../d9/d15/structarm__fir__sparse__instance__f32.html#af8b8c775f4084c36774f06c082b4c078',1,'arm_fir_sparse_instance_f32::maxDelay()'],['../d1/d36/structarm__fir__sparse__instance__q31.html#afdd3a1dc72132c854dc379154b68b674',1,'arm_fir_sparse_instance_q31::maxDelay()'],['../d5/da7/structarm__fir__sparse__instance__q15.html#ad14cc1070eecf7e1926d8f67a8273182',1,'arm_fir_sparse_instance_q15::maxDelay()'],['../da/d3f/structarm__fir__sparse__instance__q7.html#af74dacc1d34c078283e50f2530eb91df',1,'arm_fir_sparse_instance_q7::maxDelay()']]],
   ['mid',['mid',['../df/d99/class_c_string.html#aae1e4a3db1f724363a300d706eae78b8',1,'CString']]],
   ['millisecond',['millisecond',['../db/de1/class_c_timer.html#a80328fea91b61d9ffb154671b5cae6df',1,'CTimer']]],
   ['miscellaneous',['Miscellaneous',['../d8/d7e/group___miscellaneous.html',1,'']]],
@@ -36,6 +33,5 @@ var searchData=
   ['mm_5fkey_5fvol_5fup',['MM_KEY_VOL_UP',['../db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a76004aa7e0ee47b2f5a3836377214a5c',1,'ble_service_hid.h']]],
   ['mode',['mode',['../d0/d2c/classble_advertising.html#ac41e1739b89a8313596582742e274031',1,'bleAdvertising::mode()'],['../da/dc3/classspi_master.html#a586ffffb5df2911e9dedd4a2d47052d0',1,'spiMaster::mode()'],['../da/d31/classspi_slave.html#a601df989a52b39c6c39aa48f09423688',1,'spiSlave::mode()']]],
   ['msb_5ffirst',['MSB_FIRST',['../db/dff/group___enumerations.html#gga610be6d45973f3f7da6299e97b99f3c2a89da3ebae748913c4ea84ed340c20aec',1,'spi_master.h']]],
-  ['mu',['mu',['../d1/d97/structarm__lms__instance__f32.html#ae2af43d74c93dba16b876e10c97a5b99',1,'arm_lms_instance_f32::mu()'],['../d1/d3e/structarm__lms__instance__q15.html#aae46129d7cfd7f1c162cc502ed0a9d49',1,'arm_lms_instance_q15::mu()'],['../d6/d76/structarm__lms__instance__q31.html#acb6ca9996b3c5f740d5d6c8e9f4f1d46',1,'arm_lms_instance_q31::mu()'],['../d0/d8f/structarm__lms__norm__instance__f32.html#a84401d3cfc6c40f69c08223cf341b886',1,'arm_lms_norm_instance_f32::mu()'],['../da/d0e/structarm__lms__norm__instance__q31.html#ad3dd2a2406e02fdaa7782ba6c3940a64',1,'arm_lms_norm_instance_q31::mu()'],['../d2/dc7/structarm__lms__norm__instance__q15.html#a7ce00f21d11cfda6d963240641deea8c',1,'arm_lms_norm_instance_q15::mu()']]],
   ['multimedia_5fkeys_5ft',['multimedia_keys_t',['../db/dff/group___enumerations.html#gaa14e46fa0abb150c9a43281c19a454a5',1,'ble_service_hid.h']]]
 ];

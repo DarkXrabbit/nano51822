@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['nvic_20functions',['NVIC Functions',['../dc/d25/group___c_m_s_i_s___core___n_v_i_c_functions.html',1,'']]],
-  ['nested_20vectored_20interrupt_20controller_20_28nvic_29',['Nested Vectored Interrupt Controller (NVIC)',['../dd/d10/group___c_m_s_i_s___n_v_i_c.html',1,'']]]
+  ['rtos',['RTOS',['../d8/dba/group___r_t_o_s.html',1,'']]]
 ];

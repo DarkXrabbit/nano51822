@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['interpolation_20functions',['Interpolation Functions',['../de/d4e/group__group_interpolation.html',1,'']]]
+  ['miscellaneous',['Miscellaneous',['../d8/d7e/group___miscellaneous.html',1,'']]]
 ];

@@ -51,8 +51,5 @@ var searchData=
   ['ctimeout',['CTimeout',['../d5/d5b/class_c_timeout.html',1,'']]],
   ['ctimer',['CTimer',['../db/de1/class_c_timer.html',1,'CTimer'],['../db/de1/class_c_timer.html#a32a45397ba76138a08be664e8a87172d',1,'CTimer::CTimer()']]],
   ['ctrl',['CTRL',['../dc/d4f/struct_sys_tick___type.html#af2ad94ac83e5d40fc6e34884bc1bec5f',1,'SysTick_Type']]],
-  ['cumulative_5fwheel_5frevs',['cumulative_wheel_revs',['../d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b',1,'bleServiceCSC']]],
-  ['complex_20math_20functions',['Complex Math Functions',['../d4/d81/group__group_cmplx_math.html',1,'']]],
-  ['controller_20functions',['Controller Functions',['../d1/d78/group__group_controller.html',1,'']]],
-  ['cmsis_20dsp_20software_20library',['CMSIS DSP Software Library',['../index.html',1,'']]]
+  ['cumulative_5fwheel_5frevs',['cumulative_wheel_revs',['../d7/d93/classble_service_c_s_c.html#ad9f8fa94ac30a20e3d1497af019a6a2b',1,'bleServiceCSC']]]
 ];
