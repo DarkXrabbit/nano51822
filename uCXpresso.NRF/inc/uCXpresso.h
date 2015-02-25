@@ -20,8 +20,8 @@ extern "C" {
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		6
-#define uCXpresso_VER_RC		2
-#define uCXpresso_VER_BUILD		"2014/2/16"
+#define uCXpresso_VER_RC		3
+#define uCXpresso_VER_BUILD		"2014/2/25"
 #define uCXpresso_VER_STR		"V1.0.6"
 
 //

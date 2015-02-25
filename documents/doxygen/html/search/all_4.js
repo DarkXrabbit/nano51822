@@ -1,10 +1,13 @@
 var searchData=
 [
-  ['echo',['echo',['../d6/d56/class_console.html#a78bb22aa6e31673a5675986c9c5e3529',1,'Console']]],
-  ['elapsed',['elapsed',['../d5/d5b/class_c_timeout.html#a1858ddcad4e18f8056441072616a457f',1,'CTimeout']]],
-  ['enable',['enable',['../d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5',1,'CAdc::enable()'],['../d6/d49/classble_device.html#a32defabfb5157cc02eefbe2d2da1242d',1,'bleDevice::enable()'],['../d6/d2e/classble_service_d_f_u.html#ae2a099b8303c7e236581922141f36531',1,'bleServiceDFU::enable()'],['../d0/d3c/classgpio_sense.html#a259cb1030dc31d5b0c254a9366913f4a',1,'gpioSense::enable()'],['../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e',1,'CSerial::enable()'],['../da/dc3/classspi_master.html#a87f32a75a15675ba8f6c59d1426f68f9',1,'spiMaster::enable()'],['../da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d',1,'swPWM::enable()'],['../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc',1,'CTimer::enable()'],['../d9/da7/classtwi_master.html#a8b82c1ff67ef314e06c0cf3bb495f9ee',1,'twiMaster::enable()'],['../dc/dd4/class_w_d_t.html#a24e0267b64ea84c69a2a4f0fff9ae996',1,'WDT::enable()']]],
-  ['encrypt',['encrypt',['../da/d77/class_a_e_s128.html#a5c6555739f89f5049f6502ae35edb7dd',1,'AES128']]],
-  ['entercriticalsection',['enterCriticalSection',['../d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678',1,'CThread']]],
-  ['enumerations',['Enumerations',['../db/dff/group___enumerations.html',1,'']]],
-  ['exitcriticalsection',['exitCriticalSection',['../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161',1,'CThread']]]
+  ['defines_20and_20type_20definitions',['Defines and Type Definitions',['../d8/dcb/group___c_m_s_i_s__core__register.html',1,'']]],
+  ['dcdc',['dcdc',['../d5/d3e/class_c_power_save.html#a915b07923779d45c1e262cfb6573de73',1,'CPowerSave']]],
+  ['def_5ftx_5fcharacter',['def_tx_character',['../da/d31/classspi_slave.html#a4b0c751d5d66351672211ca6321d9e64',1,'spiSlave']]],
+  ['deleted',['DELETED',['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441baae88752b9379248f07e2c3fdc064d998',1,'thread.h']]],
+  ['detach',['detach',['../d7/d80/classble_r_s_s_i.html#a928c38bb78ae33967fbc73529314e349',1,'bleRSSI']]],
+  ['detach_5fkb_5fleds_5fhandle',['detach_kb_leds_handle',['../d4/da8/classble_service_k_b.html#abc222282d3506c3bd038cd13460f2f6b',1,'bleServiceKB']]],
+  ['detachevent',['detachEvent',['../d6/d49/classble_device.html#a018a6e38a8397c14d3c328a65d8b8665',1,'bleDevice']]],
+  ['disable',['disable',['../d7/d0f/class_c_adc.html#a25185986d1818185fc6b1e6a0bd249e7',1,'CAdc::disable()'],['../d6/d2e/classble_service_d_f_u.html#ad166ec542b74c006b7015c7d92288b0a',1,'bleServiceDFU::disable()'],['../d0/d3c/classgpio_sense.html#a7cd0b63530617389ad1467a290149ed5',1,'gpioSense::disable()'],['../d8/d1d/class_c_serial.html#a9cbc9e290a0112caa9fece0bc659525c',1,'CSerial::disable()'],['../da/dc3/classspi_master.html#aff8235f0324204584488286bece7520a',1,'spiMaster::disable()'],['../da/d88/classsw_p_w_m.html#a34a742636ca24b1a349cd534c4b25caa',1,'swPWM::disable()'],['../db/de1/class_c_timer.html#a2cf88a86b8cf746048d0e99ee277b96e',1,'CTimer::disable()'],['../d9/da7/classtwi_master.html#a84c3cf2e1fa29e0931d715a1706fda81',1,'twiMaster::disable()'],['../dc/dd4/class_w_d_t.html#a7fb55c4b7a7a4a5b525983b3f0ee0eed',1,'WDT::disable()']]],
+  ['disconnect',['disconnect',['../dd/d89/classble_g_a_p.html#a8b8ace2af32d9215585956214fc29143',1,'bleGAP']]],
+  ['dutycycle',['dutycycle',['../da/deb/classhw_p_w_m.html#ac93cd4ea79326c2ed6c5330bd71af9e2',1,'hwPWM']]]
 ];

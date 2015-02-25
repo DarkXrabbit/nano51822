@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../examples.html"><span>Examples</span></a></li>
@@ -88,7 +89,7 @@ $(document).ready(function(){initNavTree('db/dff/group___enumerations.html','../
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -335,6 +336,7 @@ Enumerations</h2></td></tr>
 <a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b">PRI_HIGH</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5">PRI_HARDWARE</a>
  }</td></tr>
+<tr class="memdesc:ga51e24e4c0498282f564e92975e020c1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task priorities define.  <a href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">More...</a><br /></td></tr>
 <tr class="separator:ga51e24e4c0498282f564e92975e020c1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga25ee4013cc565a18ac2f4039b4ad441b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga25ee4013cc565a18ac2f4039b4ad441b">TASK_STATE_T</a> { <br />
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1061be6c3fb88d32829cba6f6b2be304">RUNNING</a> = 0, 
@@ -345,7 +347,19 @@ Enumerations</h2></td></tr>
 &#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441baae88752b9379248f07e2c3fdc064d998">DELETED</a>
 <br />
  }</td></tr>
+<tr class="memdesc:ga25ee4013cc565a18ac2f4039b4ad441b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task states returned by eTaskStateGet.  <a href="../../db/dff/group___enumerations.html#ga25ee4013cc565a18ac2f4039b4ad441b">More...</a><br /></td></tr>
 <tr class="separator:ga25ee4013cc565a18ac2f4039b4ad441b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gacf50d4208326a5e6b7216cbb8eb2e996"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gacf50d4208326a5e6b7216cbb8eb2e996">NotifyAction_T</a> { <br />
+&#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a09cf179b29484cf4e59a85b7161a468b">NA_NoAction</a> = 0, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a269a375dafde64554fb314a9d9b10591">NA_SetBits</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996ad36473e18f0677a48b9f969914ad1b82">NA_Increment</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a4cb127cde1beb7dcbaa2e16ccf318348">NA_SetValueWithOverwrite</a>, 
+<br />
+&#160;&#160;<a class="el" href="../../db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a977dfcee652fb4326ce379f60134dafa">NA_SetValueWithoutOverwrite</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gacf50d4208326a5e6b7216cbb8eb2e996"><td class="mdescLeft">&#160;</td><td class="mdescRight">Task notify actions.  <a href="../../db/dff/group___enumerations.html#gacf50d4208326a5e6b7216cbb8eb2e996">More...</a><br /></td></tr>
+<tr class="separator:gacf50d4208326a5e6b7216cbb8eb2e996"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga17f00bfa542197547c31260bf04f9ab3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga17f00bfa542197547c31260bf04f9ab3">TIMER_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5">TIMER_1</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a86f5987be452599d06a5d8f47a454d2b">TIMER_2</a>
  }</td></tr>
@@ -857,6 +871,39 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gacf50d4208326a5e6b7216cbb8eb2e996"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gacf50d4208326a5e6b7216cbb8eb2e996">NotifyAction_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;thread.h&gt;</code></p>
+
+<p>Task notify actions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggacf50d4208326a5e6b7216cbb8eb2e996a09cf179b29484cf4e59a85b7161a468b"></a>NA_NoAction&#160;</td><td class="fielddoc">
+<p>Notify the task without updating its notify value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacf50d4208326a5e6b7216cbb8eb2e996a269a375dafde64554fb314a9d9b10591"></a>NA_SetBits&#160;</td><td class="fielddoc">
+<p>Set bits in the task's notification value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacf50d4208326a5e6b7216cbb8eb2e996ad36473e18f0677a48b9f969914ad1b82"></a>NA_Increment&#160;</td><td class="fielddoc">
+<p>Increment the task's notification value. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacf50d4208326a5e6b7216cbb8eb2e996a4cb127cde1beb7dcbaa2e16ccf318348"></a>NA_SetValueWithOverwrite&#160;</td><td class="fielddoc">
+<p>Set the task's notification value to a specific value even if the previous value has not yet been read by the task. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggacf50d4208326a5e6b7216cbb8eb2e996a977dfcee652fb4326ce379f60134dafa"></a>NA_SetValueWithoutOverwrite&#160;</td><td class="fielddoc">
+<p>Set the task's notification value if the previous value has been read by the task. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="gaccda0254b184e8f316acfde187602422"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1027,7 +1074,8 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p><code>#include &lt;thread.h&gt;</code></p>
-<p>Task priorities define </p>
+
+<p>Task priorities define. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402"></a>PRI_LOW&#160;</td><td class="fielddoc">
 <p>low priorities is for all normal tasks used. </p>
@@ -1192,6 +1240,7 @@ Enumerations</h2></td></tr>
 </div><div class="memdoc">
 
 <p><code>#include &lt;thread.h&gt;</code></p>
+
 <p>Task states returned by eTaskStateGet. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="gga25ee4013cc565a18ac2f4039b4ad441ba1061be6c3fb88d32829cba6f6b2be304"></a>RUNNING&#160;</td><td class="fielddoc">
@@ -1242,7 +1291,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 1 2015 09:12:01 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Feb 25 2015 21:05:11 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

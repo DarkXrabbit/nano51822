@@ -106,6 +106,13 @@ var group___enumerations =
       [ "MM_KEY_AC_FORWARD", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5ab1c2f47db8e1303cbf8388a1cc92ce19", null ],
       [ "MM_KEY_AC_BACK", "db/dff/group___enumerations.html#ggaa14e46fa0abb150c9a43281c19a454a5a0f2921ea1bcb0001013c0f13a9d93cdf", null ]
     ] ],
+    [ "NotifyAction_T", "db/dff/group___enumerations.html#gacf50d4208326a5e6b7216cbb8eb2e996", [
+      [ "NA_NoAction", "db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a09cf179b29484cf4e59a85b7161a468b", null ],
+      [ "NA_SetBits", "db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a269a375dafde64554fb314a9d9b10591", null ],
+      [ "NA_Increment", "db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996ad36473e18f0677a48b9f969914ad1b82", null ],
+      [ "NA_SetValueWithOverwrite", "db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a4cb127cde1beb7dcbaa2e16ccf318348", null ],
+      [ "NA_SetValueWithoutOverwrite", "db/dff/group___enumerations.html#ggacf50d4208326a5e6b7216cbb8eb2e996a977dfcee652fb4326ce379f60134dafa", null ]
+    ] ],
     [ "NRF_LFCLKSRC_T", "db/dff/group___enumerations.html#gaccda0254b184e8f316acfde187602422", [
       [ "NRF_LFCLKSRC_SYNTH_250_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422a03ae838fb47167f968876d050ba30148", null ],
       [ "NRF_LFCLKSRC_XTAL_500_PPM", "db/dff/group___enumerations.html#ggaccda0254b184e8f316acfde187602422aec021a8392f59afa27da712f6c83973c", null ],

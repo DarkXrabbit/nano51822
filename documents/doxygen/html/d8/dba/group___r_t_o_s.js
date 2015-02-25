@@ -42,6 +42,7 @@ var group___r_t_o_s =
       [ "isSuspend", "d0/d03/classos_timer.html#a51dbe9909ce528b4113d2cc27314e965", null ],
       [ "isThread", "d0/d03/classos_timer.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
       [ "isValid", "d0/d03/classos_timer.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "notify", "d0/d03/classos_timer.html#ad21ec573dd86ed62729f3d7d35ec3965", null ],
       [ "onTimer", "d0/d03/classos_timer.html#ac9090eb06ee0fd372ae90391a215c09e", null ],
       [ "reset", "d0/d03/classos_timer.html#a30b7b86344dab370404b1c7dd57ac1ac", null ],
       [ "resume", "d0/d03/classos_timer.html#ac8c53aa8c145fc4ac70fa6d825b95742", null ],
@@ -54,7 +55,9 @@ var group___r_t_o_s =
       [ "stop", "d0/d03/classos_timer.html#a56bfe395843e3c1d74a08a636fc73b1d", null ],
       [ "suspend", "d0/d03/classos_timer.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
       [ "suspendAll", "d0/d03/classos_timer.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
-      [ "suspendCurrentTask", "d0/d03/classos_timer.html#addc1c069ea8a8c981c746828c5c68358", null ]
+      [ "suspendCurrentTask", "d0/d03/classos_timer.html#addc1c069ea8a8c981c746828c5c68358", null ],
+      [ "wait", "d0/d03/classos_timer.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
+      [ "wait", "d0/d03/classos_timer.html#ab4b40e0be451be4c25808319ecd68d07", null ]
     ] ],
     [ "CSemaphore", "d0/d06/class_c_semaphore.html", [
       [ "binary", "d0/d06/class_c_semaphore.html#a0fc078dfd286cb3321c6cbaf7bcbb7b2", null ],
@@ -79,6 +82,7 @@ var group___r_t_o_s =
       [ "isSuspend", "d0/d26/class_c_thread.html#a51dbe9909ce528b4113d2cc27314e965", null ],
       [ "isThread", "d0/d26/class_c_thread.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
       [ "isValid", "d0/d26/class_c_thread.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "notify", "d0/d26/class_c_thread.html#ad21ec573dd86ed62729f3d7d35ec3965", null ],
       [ "resume", "d0/d26/class_c_thread.html#ac8c53aa8c145fc4ac70fa6d825b95742", null ],
       [ "resumeAll", "d0/d26/class_c_thread.html#a743d4325b7e7da494283f3292773ff77", null ],
       [ "run", "d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7", null ],
@@ -87,7 +91,9 @@ var group___r_t_o_s =
       [ "start", "d0/d26/class_c_thread.html#aacf955d1852e74da1f989251955ee6ec", null ],
       [ "suspend", "d0/d26/class_c_thread.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
       [ "suspendAll", "d0/d26/class_c_thread.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
-      [ "suspendCurrentTask", "d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358", null ]
+      [ "suspendCurrentTask", "d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358", null ],
+      [ "wait", "d0/d26/class_c_thread.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
+      [ "wait", "d0/d26/class_c_thread.html#ab4b40e0be451be4c25808319ecd68d07", null ]
     ] ],
     [ "CDebug", "d4/d37/class_c_debug.html", [
       [ "CDebug", "d4/d37/class_c_debug.html#a5e5390068e9a979029fc6df202ad8b6e", null ],
@@ -104,6 +110,7 @@ var group___r_t_o_s =
       [ "isSuspend", "d4/d37/class_c_debug.html#a51dbe9909ce528b4113d2cc27314e965", null ],
       [ "isThread", "d4/d37/class_c_debug.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
       [ "isValid", "d4/d37/class_c_debug.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+      [ "notify", "d4/d37/class_c_debug.html#ad21ec573dd86ed62729f3d7d35ec3965", null ],
       [ "operator bool", "d4/d37/class_c_debug.html#a5a1359725fca8337c5967a3c1811c460", null ],
       [ "parseFloat", "d4/d37/class_c_debug.html#aefdc613a47e84ca260e6ba9ad14889b1", null ],
       [ "parseInt", "d4/d37/class_c_debug.html#ae672458ef356e3c208f43397b2dd81d4", null ],
@@ -127,6 +134,8 @@ var group___r_t_o_s =
       [ "suspendAll", "d4/d37/class_c_debug.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
       [ "suspendCurrentTask", "d4/d37/class_c_debug.html#addc1c069ea8a8c981c746828c5c68358", null ],
       [ "wait", "d4/d37/class_c_debug.html#a827154464e68d9073884d7eee2325ce7", null ],
+      [ "wait", "d4/d37/class_c_debug.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
+      [ "wait", "d4/d37/class_c_debug.html#ab4b40e0be451be4c25808319ecd68d07", null ],
       [ "waitToDebugMode", "d4/d37/class_c_debug.html#a525c9b7e5f56eca7017ee8a519f86a3e", null ]
     ] ]
 ];

@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="pages.html"><span>Related&#160;Pages</span></a></li>
       <li class="current"><a href="modules.html"><span>Modules</span></a></li>
       <li><a href="annotated.html"><span>Classes</span></a></li>
       <li><a href="examples.html"><span>Examples</span></a></li>
@@ -88,7 +89,7 @@ $(document).ready(function(){initNavTree('modules.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,15 +104,47 @@ $(document).ready(function(){initNavTree('modules.html','');});
 </div><!--header-->
 <div class="contents">
 <div class="textblock">Here is a list of all modules:</div><div class="directory">
-<table class="directory">
-<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="df/d6f/group___bluetooth.html" target="_self">Bluetooth</a></td><td class="desc"></td></tr>
-<tr id="row_1_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s.html" target="_self">Cycling Speed and Cadence Service feature bits</a></td><td class="desc"></td></tr>
-<tr id="row_2_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html" target="_self">HID Keyboard modifier key bits</a></td><td class="desc"></td></tr>
-<tr id="row_3_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="de/df6/group___h_i_d___k_b___l_e_d_s.html" target="_self">HID Keyboard LEDs bits</a></td><td class="desc"></td></tr>
-<tr id="row_4_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="db/dff/group___enumerations.html" target="_self">Enumerations</a></td><td class="desc"></td></tr>
-<tr id="row_5_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d8/d7e/group___miscellaneous.html" target="_self">Miscellaneous</a></td><td class="desc"></td></tr>
-<tr id="row_6_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d1/d6c/group___peripherals.html" target="_self">Peripherals</a></td><td class="desc"></td></tr>
-<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d8/dba/group___r_t_o_s.html" target="_self">RTOS</a></td><td class="desc"></td></tr>
+<div class="levels">[detail level <span onclick="javascript:toggleLevel(1);">1</span><span onclick="javascript:toggleLevel(2);">2</span>]</div><table class="directory">
+<tr id="row_0_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="da/de5/group__group_math.html" target="_self">Basic Math Functions</a></td><td class="desc"></td></tr>
+<tr id="row_1_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_1_" class="arrow" onclick="toggleFolder('1_')">&#9660;</span><a class="el" href="d0/d39/group__group_fast_math.html" target="_self">Fast Math Functions</a></td><td class="desc"></td></tr>
+<tr id="row_1_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="dc/df3/group___s_q_r_t.html" target="_self">Square Root</a></td><td class="desc"></td></tr>
+<tr id="row_2_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d4/d81/group__group_cmplx_math.html" target="_self">Complex Math Functions</a></td><td class="desc"></td></tr>
+<tr id="row_3_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d2/dab/group__group_filters.html" target="_self">Filtering Functions</a></td><td class="desc"></td></tr>
+<tr id="row_4_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="dd/d0e/group__group_matrix.html" target="_self">Matrix Functions</a></td><td class="desc"></td></tr>
+<tr id="row_5_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d1/dd4/group__group_transforms.html" target="_self">Transform Functions</a></td><td class="desc"></td></tr>
+<tr id="row_6_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_6_" class="arrow" onclick="toggleFolder('6_')">&#9660;</span><a class="el" href="d1/d78/group__group_controller.html" target="_self">Controller Functions</a></td><td class="desc"></td></tr>
+<tr id="row_6_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d4/de3/group___p_i_d.html" target="_self">PID Motor Control</a></td><td class="desc"></td></tr>
+<tr id="row_6_1_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d3/d53/group__clarke.html" target="_self">Vector Clarke Transform</a></td><td class="desc"></td></tr>
+<tr id="row_6_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="de/d35/group__inv__clarke.html" target="_self">Vector Inverse Clarke Transform</a></td><td class="desc"></td></tr>
+<tr id="row_6_3_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d3/d52/group__park.html" target="_self">Vector Park Transform</a></td><td class="desc"></td></tr>
+<tr id="row_6_4_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d4/da4/group__inv__park.html" target="_self">Vector Inverse Park transform</a></td><td class="desc"></td></tr>
+<tr id="row_7_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d4/d50/group__group_stats.html" target="_self">Statistics Functions</a></td><td class="desc"></td></tr>
+<tr id="row_8_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d7/d01/group__group_support.html" target="_self">Support Functions</a></td><td class="desc"></td></tr>
+<tr id="row_9_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_9_" class="arrow" onclick="toggleFolder('9_')">&#9660;</span><a class="el" href="de/d4e/group__group_interpolation.html" target="_self">Interpolation Functions</a></td><td class="desc"></td></tr>
+<tr id="row_9_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d4/d9b/group___linear_interpolate.html" target="_self">Linear Interpolation</a></td><td class="desc"></td></tr>
+<tr id="row_9_1_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="df/dae/group___bilinear_interpolate.html" target="_self">Bilinear Interpolation</a></td><td class="desc"></td></tr>
+<tr id="row_10_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d0/ddf/group__group_examples.html" target="_self">Examples</a></td><td class="desc"></td></tr>
+<tr id="row_11_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="df/d6f/group___bluetooth.html" target="_self">Bluetooth</a></td><td class="desc"></td></tr>
+<tr id="row_12_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="de/db0/group___b_l_e___c_s_c_s___f_e_a_t_u_r_e_s.html" target="_self">Cycling Speed and Cadence Service feature bits</a></td><td class="desc"></td></tr>
+<tr id="row_13_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="da/d9d/group___h_i_d___m_o_d_i_f_i_e_r___k_e_y_s.html" target="_self">HID Keyboard modifier key bits</a></td><td class="desc"></td></tr>
+<tr id="row_14_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="de/df6/group___h_i_d___k_b___l_e_d_s.html" target="_self">HID Keyboard LEDs bits</a></td><td class="desc"></td></tr>
+<tr id="row_15_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="db/dff/group___enumerations.html" target="_self">Enumerations</a></td><td class="desc"></td></tr>
+<tr id="row_16_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d8/d7e/group___miscellaneous.html" target="_self">Miscellaneous</a></td><td class="desc"></td></tr>
+<tr id="row_17_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d1/d6c/group___peripherals.html" target="_self">Peripherals</a></td><td class="desc"></td></tr>
+<tr id="row_18_" class="even"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d8/dba/group___r_t_o_s.html" target="_self">RTOS</a></td><td class="desc">The RTOS group is power by FreeRTOS </td></tr>
+<tr id="row_19_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d6/d7e/group___c_m_s_i_s__glob__defs.html" target="_self">CMSIS Global Defines</a></td><td class="desc"></td></tr>
+<tr id="row_20_" class="even"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_20_" class="arrow" onclick="toggleFolder('20_')">&#9660;</span><a class="el" href="d8/dcb/group___c_m_s_i_s__core__register.html" target="_self">Defines and Type Definitions</a></td><td class="desc">Type definitions and defines for Cortex-M processor based devices </td></tr>
+<tr id="row_20_0_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="db/d15/group___c_m_s_i_s___c_o_r_e.html" target="_self">Status and Control Registers</a></td><td class="desc">Core Register type definitions </td></tr>
+<tr id="row_20_1_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="dd/d10/group___c_m_s_i_s___n_v_i_c.html" target="_self">Nested Vectored Interrupt Controller (NVIC)</a></td><td class="desc">Type definitions for the NVIC Registers </td></tr>
+<tr id="row_20_2_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="dc/d49/group___c_m_s_i_s___s_c_b.html" target="_self">System Control Block (SCB)</a></td><td class="desc">Type definitions for the System Control Block Registers </td></tr>
+<tr id="row_20_3_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d1/de6/group___c_m_s_i_s___sys_tick.html" target="_self">System Tick Timer (SysTick)</a></td><td class="desc">Type definitions for the System Timer Registers </td></tr>
+<tr id="row_20_4_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d0/d1e/group___c_m_s_i_s___core_debug.html" target="_self">Core Debug Registers (CoreDebug)</a></td><td class="desc">Cortex-M0 Core Debug Registers (DCB registers, SHCSR, and DFSR) are only accessible over DAP and not via processor. Therefore they are not covered by the Cortex-M0 header file </td></tr>
+<tr id="row_20_5_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d5/d84/group___c_m_s_i_s__core__base.html" target="_self">Core Definitions</a></td><td class="desc">Definitions for base addresses, unions, and structures </td></tr>
+<tr id="row_21_"><td class="entry"><span style="width:0px;display:inline-block;">&#160;</span><span id="arr_21_" class="arrow" onclick="toggleFolder('21_')">&#9660;</span><a class="el" href="da/db5/group___c_m_s_i_s___core___function_interface.html" target="_self">Functions and Instructions Reference</a></td><td class="desc"></td></tr>
+<tr id="row_21_0_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="dc/d25/group___c_m_s_i_s___core___n_v_i_c_functions.html" target="_self">NVIC Functions</a></td><td class="desc">Functions that manage interrupts and exceptions via the NVIC </td></tr>
+<tr id="row_21_1_"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d7/dc2/group___c_m_s_i_s___core___sys_tick_functions.html" target="_self">SysTick Functions</a></td><td class="desc">Functions that configure the System </td></tr>
+<tr id="row_21_2_" class="even"><td class="entry"><span style="width:32px;display:inline-block;">&#160;</span><a class="el" href="d1/dce/group___c_m_s_i_s___core___reg_acc_functions.html" target="_self">CMSIS Core Register Access Functions</a></td><td class="desc"></td></tr>
+<tr id="row_22_"><td class="entry"><span style="width:16px;display:inline-block;">&#160;</span><a class="el" href="d5/d02/group___c_m_s_i_s___core___instruction_interface.html" target="_self">CMSIS Core Instruction Interface</a></td><td class="desc"></td></tr>
 </table>
 </div><!-- directory -->
 </div><!-- contents -->
@@ -119,7 +152,7 @@ $(document).ready(function(){initNavTree('modules.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 1 2015 09:12:02 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Feb 25 2015 21:05:12 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

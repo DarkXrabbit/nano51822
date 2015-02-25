@@ -18,5 +18,7 @@ var classble_advertising =
     [ "timeout", "d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf", null ],
     [ "tx_power_level", "d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4", null ],
     [ "type", "d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815", null ],
-    [ "update", "d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2", null ]
+    [ "update", "d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2", null ],
+    [ "update", "d0/d2c/classble_advertising.html#a55a6be6da52d2794ab84d7f69ae11a62", null ],
+    [ "update", "d0/d2c/classble_advertising.html#ac492571528473fc23dec53c0d8ea1013", null ]
 ];

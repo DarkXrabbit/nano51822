@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : thread.h
  Author      : uCXpresso
- Version     : 1.1.0
- Date		 : 2014/11/15
+ Version     : 1.2.0
+ Date		 : 2015/2/25
  Copyright   : Copyright (C) www.embeda.com.tw
  Description :
  ===============================================================================
@@ -20,6 +20,7 @@
  2013/07/05	v1.0.6	override the isThread() from CObject		 	 Jason
  2014/1/5	v1.0.7	reduce PRI_HARDWARE value to 4					 Jason
  2014/11/15	v1.1.0	Add task_handle to replace the run()			 Jason
+ 2015/2/25	v1.2.0	Add notify/wait member functions.				 Jason
   ===============================================================================
  */
 
@@ -28,11 +29,13 @@
 
 #include "class/object.h"
 
-/**The RTOS group is power by FreeRTOS
+/**
+ * @brief The RTOS group is power by FreeRTOS
  * \defgroup RTOS
  */
 
-/**Task priorities define
+/**
+ * @brief Task priorities define
  * \ingroup Enumerations
  */
 typedef enum {
@@ -42,7 +45,8 @@ typedef enum {
 	PRI_HARDWARE	///< for hardware interrupt
 }PRIORITIES_T;
 
-/**Task states returned by eTaskStateGet.
+/**
+ * @brief Task states returned by eTaskStateGet.
  * \ingroup Enumerations
  */
 typedef enum
@@ -53,6 +57,18 @@ typedef enum
 	SUSPENDED,		///< The task being queried is in the Suspended state, or is in the Blocked state with an infinite time out.
 	DELETED			///< The task being queried has been deleted, but its TCB has not yet been freed.
 }TASK_STATE_T;
+
+/**
+ * @brief Task notify actions.
+ * \ingroup Enumerations
+ */
+typedef enum {
+	NA_NoAction = 0,			///< Notify the task without updating its notify value.
+	NA_SetBits,					///< Set bits in the task's notification value.
+	NA_Increment,				///< Increment the task's notification value.
+	NA_SetValueWithOverwrite,	///< Set the task's notification value to a specific value even if the previous value has not yet been read by the task.
+	NA_SetValueWithoutOverwrite	///< Set the task's notification value if the previous value has been read by the task.
+}NotifyAction_T;;
 
 #define DEF_THREAD_STACK	72
 
@@ -76,7 +92,8 @@ public:
 	 */
 	CThread(task_handle_t task_handle=NULL, xHandle p_param=NULL);
 
-	/**Call the member function to start the thread.
+	/**
+	 * @brief Call the member function to start the thread.
 	 * \param name is a descriptive name for the task.
 	 * \param stack is a integer value to specified as the number of stack can hold-not the number of bytes.
 	 * \param priority at which the task should run.
@@ -110,7 +127,8 @@ public:
 	 */
 	virtual bool start();
 
-	/**Call the member function to resume the thread.
+	/**
+	 * @brief Call the member function to resume the thread.
 	 *
 	 * \code
 	 * Example:
@@ -130,7 +148,8 @@ public:
 	 */
 	virtual void resume();
 
-	/**Call the member function to suspend the thread.
+	/**
+	 * @brief Call the member function to suspend the thread.
 	 *
 	 * \code
 	 * Example:
@@ -150,62 +169,82 @@ public:
 	 */
 	virtual void suspend();
 
-	/**Call the member function to check the stack high water mark.
+	/**
+	 * @brief Notify a value to unblock the task.
+	 * @param ulValue	Used to update the notifycation value of the subject task.
+	 * @param Action	@ref NotifyAction_T value to indicate the notify action.
+	 * @param fromISR	internal used.
+	 */
+	int notify(uint32_t ulValue=0, NotifyAction_T Action=NA_Increment, bool fromISR=false);
+
+	/**
+	 * @brief Call the member function to check the stack high water mark.
 	 * \note Or use the shell and type 'task' to check all tasks status.
 	 */
 	uint32_t getStackHighWaterMark();
 
-	/**Call the member function to check the task is in suspended or not.
+	/**
+	 * @brief Call the member function to check the task is in suspended or not.
 	 * \return true if task in suspended. otherwise, the task in running.
 	 */
 	virtual bool isSuspend();
 
-	/**Retrieve the state of thread object (task)
+	/**
+	 * @brief Retrieve the state of thread object (task)
 	 */
 	TASK_STATE_T getState();
 
-	/**Call the member function to change the task's priority.
+	/**
+	 * @brief Call the member function to change the task's priority.
 	 * \param p is PRIORITIES_T to set a new priority for the task.
 	 */
 	virtual void setPriority(PRIORITIES_T p);
 
-	/**Call the member function to get the task's priority.
+	/**
+	 * @brief Call the member function to get the task's priority.
 	 * \return PRIORITIES_T
 	 */
 	virtual PRIORITIES_T  getPriority();
 
-	/**Call the member function to retrieve the task's name.
+	/**
+	 * @brief Call the member function to retrieve the task's name.
 	 */
 	LPCTSTR getName();
 
-	/**isAlive is to check the thread is in alive (for run-loop)
+	/**
+	 * @brief isAlive is to check the thread is in alive (for run-loop)
 	 * \return false if the thread is deleted.
 	 */
 	virtual bool isAlive();
 
-	/**isThread(), check the class is inherited from CThread
+	/**
+	 * @brief isThread(), check the class is inherited from CThread
 	 */
 	virtual inline bool isThread() { return true; }
 
 	// global static functions
 public:
-	/**Call the CThread::resumeAll() to resume all suspended tasks.
+	/**
+	 * @brief Call the CThread::resumeAll() to resume all suspended tasks.
 	 */
 	static void resumeAll();
 
-	/**Call the CThread::suspendAll() to suspend all running tasks.
+	/**
+	 * @brief Call the CThread::suspendAll() to suspend all running tasks.
 	 */
 	static void suspendAll();
 
-	/**Call the CThread::enterCriticalSection() to disable interrupts.
+	/**
+	 * @brief Call the CThread::enterCriticalSection() to disable interrupts.
 	 */
 	static void enterCriticalSection();
 
-	/**Call the CThread::exitCriticalSection() to enable interrupts.
+	/**
+	 * @brief Call the CThread::exitCriticalSection() to enable interrupts.
 	 */
 	static void exitCriticalSection();
 
-	/**Call the CThread::suspendCurrentTask to suspend current task.
+	/**@brief Call the CThread::suspendCurrentTask to suspend current task.
 	 */
 	static void suspendCurrentTask();
 
@@ -215,6 +254,25 @@ public:
 	static uint16_t count();
 
 protected:
+	/**
+	 * @brief Waiting for a value notification.
+	 * @param clearValue	The value of notification will be cleared on exit, if the clearValue set to true.
+	 * @param timeout		The maximum time to wait in the blocked state for a notification to be received.
+	 * @return The value of the task's notification value before it is decremented or cleared.
+	 */
+	uint32_t wait(bool clearValue=true, uint32_t timeout=MAX_DELAY_TIME);
+
+	/**
+	 * @brief Waiting for a bits notification.
+	 * @param clearOnEntry	The bits of notification will be cleard on entry, if the clearOnEntry set to true.
+	 * @param clearOnExit	The value of notification will be cleared on exit, if the clearValue set to true.
+	 * @param timeout		The maximum time to wait in the blocked state for a notification to be received.
+	 * @return
+	 * @retval	true	if a notification was received, or a notification was already pending when wait() was called.
+	 * @retval	false	if the call to wait() timedout before a notification was received.
+	 */
+	bool wait(bool clearOnEntry, bool clearOnExit, uint32_t *pNotifyValue, uint32_t timeout=MAX_DELAY_TIME);
+
 	/**The run member function is the task main procedure, and callback by RTOS when task start.
 	 *
 	 * \code

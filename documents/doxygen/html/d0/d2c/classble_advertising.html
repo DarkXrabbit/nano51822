@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li class="current"><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../examples.html"><span>Examples</span></a></li>
@@ -96,7 +97,7 @@ $(document).ready(function(){initNavTree('d0/d2c/classble_advertising.html','../
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -167,6 +168,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2">update</a> (uint8_t flags=0)</td></tr>
 <tr class="memdesc:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the all fields into Advertising.  <a href="#afaa6e9992e0cb4c50782223df8a6e3e2">More...</a><br /></td></tr>
 <tr class="separator:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55a6be6da52d2794ab84d7f69ae11a62"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a55a6be6da52d2794ab84d7f69ae11a62">update</a> (ble_advdata_t *p_adv_data, ble_advdata_t *p_scan_data)</td></tr>
+<tr class="memdesc:a55a6be6da52d2794ab84d7f69ae11a62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for encoding and setting the advertising data and/or scan response data.  <a href="#a55a6be6da52d2794ab84d7f69ae11a62">More...</a><br /></td></tr>
+<tr class="separator:a55a6be6da52d2794ab84d7f69ae11a62"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac492571528473fc23dec53c0d8ea1013"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#ac492571528473fc23dec53c0d8ea1013">update</a> (uint8_t *adv_data, uint8_t adv_len, uint8_t *scn_data, uint8_t scn_len)</td></tr>
+<tr class="memdesc:ac492571528473fc23dec53c0d8ea1013"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set, clear or update advertisement and scan response raw data.  <a href="#ac492571528473fc23dec53c0d8ea1013">More...</a><br /></td></tr>
+<tr class="separator:ac492571528473fc23dec53c0d8ea1013"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a799f35c749a1c31a37422aa274ab0921"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a799f35c749a1c31a37422aa274ab0921">reset</a> ()</td></tr>
 <tr class="memdesc:a799f35c749a1c31a37422aa274ab0921"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the all fields.  <a href="#a799f35c749a1c31a37422aa274ab0921">More...</a><br /></td></tr>
 <tr class="separator:a799f35c749a1c31a37422aa274ab0921"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -623,13 +630,105 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </dl>
 </div>
 </div>
+<a class="anchor" id="a55a6be6da52d2794ab84d7f69ae11a62"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t bleAdvertising::update </td>
+          <td>(</td>
+          <td class="paramtype">ble_advdata_t *&#160;</td>
+          <td class="paramname"><em>p_adv_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ble_advdata_t *&#160;</td>
+          <td class="paramname"><em>p_scan_data</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function for encoding and setting the advertising data and/or scan response data. </p>
+<p>This function encodes advertising data and/or scan response data based on the selections in the supplied structures, and passes the encoded data to the stack.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_adv_data</td><td>Structure for specifying the content of the advertising data. Set to NULL if advertising data is not to be set. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_scn_data</td><td>Structure for specifying the content of the scan response data. Set to NULL if scan response data is not to be set.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS on success, NRF_ERROR_DATA_SIZE if not all the requested data could fit into the advertising packet. The maximum size of the advertisement packet is BLE_GAP_ADV_MAX_SIZE.</dd></dl>
+<dl class="section warning"><dt>Warning</dt><dd>This API may override application's request to use the long name and use a short name instead. This truncation will occur in case the long name does not fit advertisement data size. Application is permitted to specify a preferred short name length in case truncation is required. For example, if the complete device name is ABCD_HRMonitor, application can specify short name length to 8 such that short device name appears as ABCD_HRM instead of ABCD_HRMo or ABCD_HRMoni etc if available size for short name is 9 or 12 respectively to have more apporpriate short name. However, it should be noted that this is just a preference that application can specify and if the preference too large to fit in Advertisement Data, this can be further truncated. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ac492571528473fc23dec53c0d8ea1013"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">uint32_t bleAdvertising::update </td>
+          <td>(</td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>adv_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>adv_len</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t *&#160;</td>
+          <td class="paramname"><em>scn_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>scn_len</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set, clear or update advertisement and scan response raw data. </p>
+<dl class="section note"><dt>Note</dt><dd>The format of the advertisement data will be checked by this call to ensure interoperability. Limitations imposed by this API call to the data provided include having a flags data type in the scan response data and duplicating the local name in the advertisement data and scan response data.</dd>
+<dd>
+: To clear the advertisement data and set it to a 0-length packet, simply provide a valid pointer (p_data/p_sr_data) with its corresponding length (dlen/srdlen) set to 0.</dd>
+<dd>
+: The call will fail if p_data and p_sr_data are both NULL since this would have no effect.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">adv_data</td><td>Raw data to be placed in advertisement packet. If NULL, no changes are made to the current advertisement packet data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">adv_len</td><td>Data length for adv_data. Max size: BLE_GAP_ADV_MAX_SIZE octets. Should be 0 if p_data is NULL, can be 0 if adv_data is not NULL. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scn_data</td><td>Raw data to be placed in scan response packet. If NULL, no changes are made to the current scan response packet data. </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">scn_len</td><td>Data length for scn_data. Max size: BLE_GAP_ADV_MAX_SIZE octets. Should be 0 if scn_data is NULL, can be 0 if p_data is not NULL. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a></li>
-    <li class="footer">Generated on Sun Feb 1 2015 09:12:01 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Feb 25 2015 21:05:11 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

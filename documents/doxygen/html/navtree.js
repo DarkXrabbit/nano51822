@@ -1,6 +1,8 @@
 var NAVTREE =
 [
   [ "uCXpresso.NRF", "index.html", [
+    [ "CMSIS DSP Software Library", "index.html", null ],
+    [ "MISRA-C:2004 Compliance Exceptions", "d1/d5b/_c_m_s_i_s__m_i_s_r_a__exceptions.html", null ],
     [ "Modules", "modules.html", "modules" ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
@@ -9,7 +11,7 @@ var NAVTREE =
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", "functions_dup" ],
         [ "Functions", "functions_func.html", "functions_func" ],
-        [ "Variables", "functions_vars.html", null ],
+        [ "Variables", "functions_vars.html", "functions_vars" ],
         [ "Typedefs", "functions_type.html", null ],
         [ "Enumerations", "functions_enum.html", null ],
         [ "Enumerator", "functions_eval.html", null ]
@@ -22,10 +24,13 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"d4/d37/class_c_debug.html#a69b3be339e7fe9c991b39ef0f0e452c6",
-"d8/dba/group___r_t_o_s.html",
-"db/de1/class_c_timer.html#a26a76c241a4d62d2efdac57d2cfe4c0f",
-"de/dba/class_c_shell.html#a4a0f0727be4714cef1e24150a869d403"
+"d1/de6/group___c_m_s_i_s___sys_tick.html#gaf1e68865c5aece2ad58971225bd3e95e",
+"d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688",
+"d8/d1d/class_c_serial.html#a2902cfc19452c7a0cee0e0b660d20634ad95cfa49a4c6d803cfa37a59707ebbd6",
+"da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33",
+"db/dff/group___enumerations.html#gga81bc18605f18a609d7468e1e03598f9dad7b64d950905fedca6a2b84222a2c686",
+"de/d89/class_c_bus.html#ae5c9d649c6f6b22a93fb29e0152a57c1",
+"functions_x.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

@@ -15,6 +15,7 @@ var class_c_shell =
     [ "isSuspend", "de/dba/class_c_shell.html#a51dbe9909ce528b4113d2cc27314e965", null ],
     [ "isThread", "de/dba/class_c_shell.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
     [ "isValid", "de/dba/class_c_shell.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+    [ "notify", "de/dba/class_c_shell.html#ad21ec573dd86ed62729f3d7d35ec3965", null ],
     [ "onClose", "de/dba/class_c_shell.html#a27a37bf5a22eaba1426655409decc188", null ],
     [ "onDebug", "de/dba/class_c_shell.html#a74d294faaebd969b295366f4a861cf02", null ],
     [ "onQuery", "de/dba/class_c_shell.html#a16e1dae0dedda35c0be64d1c8f40e6b4", null ],
@@ -37,6 +38,8 @@ var class_c_shell =
     [ "suspend", "de/dba/class_c_shell.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
     [ "suspendAll", "de/dba/class_c_shell.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
     [ "suspendCurrentTask", "de/dba/class_c_shell.html#addc1c069ea8a8c981c746828c5c68358", null ],
+    [ "wait", "de/dba/class_c_shell.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
+    [ "wait", "de/dba/class_c_shell.html#ab4b40e0be451be4c25808319ecd68d07", null ],
     [ "cmd", "de/dba/class_c_shell.html#aa5ef2d56e802b9925cf0ae7d36741bda", null ],
     [ "m_console", "de/dba/class_c_shell.html#ac555f42f70f60653dbd5e0c8ec9c4dcf", null ],
     [ "m_sock", "de/dba/class_c_shell.html#ab0eaa18213db8965c68f978538050162", null ]

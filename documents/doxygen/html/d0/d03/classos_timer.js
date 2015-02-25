@@ -14,6 +14,7 @@ var classos_timer =
     [ "isSuspend", "d0/d03/classos_timer.html#a51dbe9909ce528b4113d2cc27314e965", null ],
     [ "isThread", "d0/d03/classos_timer.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
     [ "isValid", "d0/d03/classos_timer.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+    [ "notify", "d0/d03/classos_timer.html#ad21ec573dd86ed62729f3d7d35ec3965", null ],
     [ "onTimer", "d0/d03/classos_timer.html#ac9090eb06ee0fd372ae90391a215c09e", null ],
     [ "reset", "d0/d03/classos_timer.html#a30b7b86344dab370404b1c7dd57ac1ac", null ],
     [ "resume", "d0/d03/classos_timer.html#ac8c53aa8c145fc4ac70fa6d825b95742", null ],
@@ -26,5 +27,7 @@ var classos_timer =
     [ "stop", "d0/d03/classos_timer.html#a56bfe395843e3c1d74a08a636fc73b1d", null ],
     [ "suspend", "d0/d03/classos_timer.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
     [ "suspendAll", "d0/d03/classos_timer.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
-    [ "suspendCurrentTask", "d0/d03/classos_timer.html#addc1c069ea8a8c981c746828c5c68358", null ]
+    [ "suspendCurrentTask", "d0/d03/classos_timer.html#addc1c069ea8a8c981c746828c5c68358", null ],
+    [ "wait", "d0/d03/classos_timer.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
+    [ "wait", "d0/d03/classos_timer.html#ab4b40e0be451be4c25808319ecd68d07", null ]
 ];

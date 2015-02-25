@@ -14,6 +14,7 @@ var class_c_debug =
     [ "isSuspend", "d4/d37/class_c_debug.html#a51dbe9909ce528b4113d2cc27314e965", null ],
     [ "isThread", "d4/d37/class_c_debug.html#ab2513fd0fcad30e2e6605609c91f1984", null ],
     [ "isValid", "d4/d37/class_c_debug.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
+    [ "notify", "d4/d37/class_c_debug.html#ad21ec573dd86ed62729f3d7d35ec3965", null ],
     [ "operator bool", "d4/d37/class_c_debug.html#a5a1359725fca8337c5967a3c1811c460", null ],
     [ "parseFloat", "d4/d37/class_c_debug.html#aefdc613a47e84ca260e6ba9ad14889b1", null ],
     [ "parseInt", "d4/d37/class_c_debug.html#ae672458ef356e3c208f43397b2dd81d4", null ],
@@ -37,5 +38,7 @@ var class_c_debug =
     [ "suspendAll", "d4/d37/class_c_debug.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
     [ "suspendCurrentTask", "d4/d37/class_c_debug.html#addc1c069ea8a8c981c746828c5c68358", null ],
     [ "wait", "d4/d37/class_c_debug.html#a827154464e68d9073884d7eee2325ce7", null ],
+    [ "wait", "d4/d37/class_c_debug.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
+    [ "wait", "d4/d37/class_c_debug.html#ab4b40e0be451be4c25808319ecd68d07", null ],
     [ "waitToDebugMode", "d4/d37/class_c_debug.html#a525c9b7e5f56eca7017ee8a519f86a3e", null ]
 ];

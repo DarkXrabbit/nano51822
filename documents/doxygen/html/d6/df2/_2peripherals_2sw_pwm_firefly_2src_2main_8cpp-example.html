@@ -47,6 +47,7 @@ var searchBox = new SearchBox("searchBox", "../../search",false,'Search');
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="../../index.html"><span>Main&#160;Page</span></a></li>
+      <li><a href="../../pages.html"><span>Related&#160;Pages</span></a></li>
       <li><a href="../../modules.html"><span>Modules</span></a></li>
       <li><a href="../../annotated.html"><span>Classes</span></a></li>
       <li><a href="../../examples.html"><span>Examples</span></a></li>
@@ -88,7 +89,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Modules</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,7 +108,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line"><span class="comment">===============================================================================</span></div>
 <div class="line"><span class="comment"> Name        : FireFly</span></div>
 <div class="line"><span class="comment"> Author      : uCXpresso</span></div>
-<div class="line"><span class="comment"> Version     : v1.0.0</span></div>
+<div class="line"><span class="comment"> Version     : v1.0.1</span></div>
 <div class="line"><span class="comment"> Copyright   : www.ucxpresso.net</span></div>
 <div class="line"><span class="comment"> Description : A software PWM demo</span></div>
 <div class="line"><span class="comment">===============================================================================</span></div>
@@ -116,6 +117,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line"><span class="comment"> DATE     | VERSION |   DESCRIPTIONS                             |  By</span></div>
 <div class="line"><span class="comment"> ---------+---------+--------------------------------------------+-------------</span></div>
 <div class="line"><span class="comment"> 2014/10/18 v1.0.0  First Edition.                                  LEO</span></div>
+<div class="line"><span class="comment"> 2015/2/16  v1.0.1  Use CMSIS DSP Library. (uCXpresso.NRF 1.0.6)    LEO</span></div>
 <div class="line"><span class="comment"> ===============================================================================</span></div>
 <div class="line"><span class="comment"> */</span></div>
 <div class="line"></div>
@@ -132,14 +134,11 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line"><span class="comment">// TODO: insert other include files here</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/pin.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/sw_pwm.h&gt;</span></div>
-<div class="line"><span class="preprocessor">#include &lt;math.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;arm_math.h&gt;</span>       <span class="comment">// CMSIS DSP Library</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// TODO: insert other definitions and declarations here</span></div>
-<div class="line"><span class="preprocessor">#define LED0    18      // LED0 on P0.18</span></div>
-<div class="line"><span class="preprocessor">#define LED1    19      // LED1 on P0.19</span></div>
-<div class="line"><span class="preprocessor">#define LED2    20      // LED2 on P0.20</span></div>
-<div class="line"><span class="preprocessor">#define LED3    21      // LED3 on P0.21</span></div>
-<div class="line"><span class="preprocessor">#define LED4    22      // LED4 on P0.22</span></div>
+<div class="line"><span class="preprocessor">#define BOARD_PCA10001</span></div>
+<div class="line"><span class="preprocessor">#include &lt;config/board.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Main Routine</span></div>
@@ -157,11 +156,11 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <a name="_a4"></a><a class="code" href="../../da/d88/classsw_p_w_m.html">swPWM</a> pwm(<a name="a5"></a><a class="code" href="../../db/dff/group___enumerations.html#gga17f00bfa542197547c31260bf04f9ab3a0be6ca9f568d9237d83970c13199f4b5">TIMER_1</a>);</div>
 <div class="line">    pwm.<a name="a6"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a01d23b67c52c3415a887222c0256c116">period</a>(0.01);       <span class="comment">// set the period time of PWM to 10ms.</span></div>
-<div class="line">    pwm.<a name="a7"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED0);  <span class="comment">// add PWM channel with LED0</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED1);  <span class="comment">// add PWM channel with LED1</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED2);  <span class="comment">// add PWM channel with LED2</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED3);  <span class="comment">// add PWM channel with LED3</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED4);  <span class="comment">// add PWM channel with LED4</span></div>
+<div class="line">    pwm.<a name="a7"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_0); <span class="comment">// add PWM channel with LED0</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_1); <span class="comment">// add PWM channel with LED1</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_2); <span class="comment">// add PWM channel with LED2</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_3); <span class="comment">// add PWM channel with LED3</span></div>
+<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_4); <span class="comment">// add PWM channel with LED4</span></div>
 <div class="line">    pwm.<a name="a8"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d">enable</a>();           <span class="comment">// start the pwm</span></div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">float</span> y;</div>
@@ -176,7 +175,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; 5; ch++) {</div>
 <div class="line">            x[ch] = (x[ch] + 2) % 360;                          <span class="comment">// degree 0~360, step by 2</span></div>
-<div class="line">            y = sin((x[ch] * M_PI) / 180.0);                    <span class="comment">// y = sine @x</span></div>
+<div class="line">            y = arm_sin_f32((x[ch] * M_PI) / 180.0f);            <span class="comment">// y = sine @x</span></div>
 <div class="line">            pwm.<a name="a9"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a4cc413c4128483bd463f5530dbddea18">update</a>(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f));    <span class="comment">// update the duty-cycle of channel</span></div>
 <div class="line">        }</div>
 <div class="line">        sleep(10);    <span class="comment">// speed</span></div>
@@ -187,7 +186,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Sun Feb 1 2015 09:12:01 for uCXpresso.NRF by
+    <li class="footer">Generated on Wed Feb 25 2015 21:05:10 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

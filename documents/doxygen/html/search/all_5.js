@@ -1,11 +1,12 @@
 var searchData=
 [
-  ['falling',['FALLING',['../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66',1,'gpio_sense.h']]],
-  ['feed',['feed',['../dc/dd4/class_w_d_t.html#abdc13243bc032fa1ffab53921cac0b77',1,'WDT']]],
-  ['filter',['filter',['../d7/d4b/class_c_kalman.html#aa0af19adeaee9c0bb1d43bc9f8db6bb4',1,'CKalman']]],
-  ['find',['find',['../df/db6/class_c_list.html#ac10ff6ad96cb1a7aebb866d2a1cf62bf',1,'CList::find()'],['../df/d99/class_c_string.html#a34ca981fe4599b24ed4312ee95a7f008',1,'CString::find(LPCTSTR str, int start=0)'],['../df/d99/class_c_string.html#a225a9d464e22c27b750749426906c308',1,'CString::find(TCHAR ch, int start=0)'],['../df/d99/class_c_string.html#ac543c0c9513f9469fab7049220e64867',1,'CString::find(LPCTSTR const strs[], int count, int start=0)']]],
-  ['findic',['findIC',['../df/d99/class_c_string.html#a0d1d84239f8a01f8dd4e012fddc63cbe',1,'CString']]],
-  ['flag',['flag',['../d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa',1,'bleAdvertising']]],
-  ['flush',['flush',['../d8/d1d/class_c_serial.html#a68aecf6351423ae0e8791870c9e694bf',1,'CSerial::flush()'],['../d4/d16/class_c_stream.html#a5bd707b33627e01c2069b14bbf10694a',1,'CStream::flush()']]],
-  ['frequency',['frequency',['../da/deb/classhw_p_w_m.html#ae3b6408c0bf4539bf3a21fbd7102f862',1,'hwPWM::frequency()'],['../da/dc3/classspi_master.html#aad106e401d4a40251e2d3672cb06cdcb',1,'spiMaster::frequency()']]]
+  ['echo',['echo',['../d6/d56/class_console.html#a78bb22aa6e31673a5675986c9c5e3529',1,'Console']]],
+  ['elapsed',['elapsed',['../d5/d5b/class_c_timeout.html#a1858ddcad4e18f8056441072616a457f',1,'CTimeout']]],
+  ['enable',['enable',['../d7/d0f/class_c_adc.html#a6df9850b21de95ee6fa71c15f19665a5',1,'CAdc::enable()'],['../d6/d49/classble_device.html#a32defabfb5157cc02eefbe2d2da1242d',1,'bleDevice::enable()'],['../d6/d2e/classble_service_d_f_u.html#ae2a099b8303c7e236581922141f36531',1,'bleServiceDFU::enable()'],['../d0/d3c/classgpio_sense.html#a259cb1030dc31d5b0c254a9366913f4a',1,'gpioSense::enable()'],['../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e',1,'CSerial::enable()'],['../da/dc3/classspi_master.html#a87f32a75a15675ba8f6c59d1426f68f9',1,'spiMaster::enable()'],['../da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d',1,'swPWM::enable()'],['../db/de1/class_c_timer.html#ac71a056d71982f1c4e64dc21ef4f7dfc',1,'CTimer::enable()'],['../d9/da7/classtwi_master.html#a8b82c1ff67ef314e06c0cf3bb495f9ee',1,'twiMaster::enable()'],['../dc/dd4/class_w_d_t.html#a24e0267b64ea84c69a2a4f0fff9ae996',1,'WDT::enable()']]],
+  ['encrypt',['encrypt',['../da/d77/class_a_e_s128.html#a5c6555739f89f5049f6502ae35edb7dd',1,'AES128']]],
+  ['energy',['energy',['../d0/d8f/structarm__lms__norm__instance__f32.html#a6a4119e4f39447bbee31b066deafa16f',1,'arm_lms_norm_instance_f32::energy()'],['../da/d0e/structarm__lms__norm__instance__q31.html#a3c0ae42869afec8555dc8e3a7ef9b386',1,'arm_lms_norm_instance_q31::energy()'],['../d2/dc7/structarm__lms__norm__instance__q15.html#a1c81ded399919d8181026bc1c8602e7b',1,'arm_lms_norm_instance_q15::energy()']]],
+  ['entercriticalsection',['enterCriticalSection',['../d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678',1,'CThread']]],
+  ['enumerations',['Enumerations',['../db/dff/group___enumerations.html',1,'']]],
+  ['exitcriticalsection',['exitCriticalSection',['../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161',1,'CThread']]],
+  ['examples',['Examples',['../d0/ddf/group__group_examples.html',1,'']]]
 ];

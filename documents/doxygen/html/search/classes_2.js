@@ -12,6 +12,7 @@ var searchData=
   ['cmutex',['CMutex',['../d3/d0d/class_c_mutex.html',1,'']]],
   ['cobject',['CObject',['../dc/dac/class_c_object.html',1,'']]],
   ['console',['Console',['../d6/d56/class_console.html',1,'']]],
+  ['control_5ftype',['CONTROL_Type',['../d8/d2a/union_c_o_n_t_r_o_l___type.html',1,'']]],
   ['cperipheral',['CPeripheral',['../d9/db6/class_c_peripheral.html',1,'']]],
   ['cpin',['CPin',['../d7/db9/class_c_pin.html',1,'']]],
   ['cpowersave',['CPowerSave',['../d5/d3e/class_c_power_save.html',1,'']]],
