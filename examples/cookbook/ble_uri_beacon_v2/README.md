@@ -13,7 +13,7 @@
 ## Flashing UriBeacon
 1. Put the hardware in DFU (Device Firmware Update) mode by pressing DFU-Button over 5 seconds. Hint: use a tool for pressing the small buttons, like a pen tip.
 2. Use nRF Master (or nRF Toolbox) to upload the firmware file.
-![LilyPad-nano51822 DFU-Button](http://www.embeda.com.tw/ucxpresso/wp-content/uploads/2015/02/LilyPad-4-NANO51822-01ss.png "LilyPad-nano51822 Button")
+![LilyPad-nano51822 DFU-Button](http://www.embeda.com.tw/ucxpresso/wp-content/uploads/2015/02/LilyPad-4-NANO51822-01ss-1.png "LilyPad-nano51822 Button")
 
 Steps for nRF Master:
 
