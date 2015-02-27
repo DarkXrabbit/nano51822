@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_service_customer.h
  Author      : uCXpresso
- Version     : v1.0.1
- Date		 : 2014/11/5
+ Version     : v1.0.2
+ Date		 : 2015/2/28
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE Customer Service base class
  ===============================================================================
@@ -13,6 +13,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/10/12	v1.0.0	First Edition for nano51822						Jason
  2014/11/5	v1.0.1	Add characteristic_add member for customize.	Jason
+ 2015/2/27	v1.0.2	Add gatts_rw_authorize_reply member function.	Jason
  ===============================================================================
  */
 
@@ -151,6 +152,22 @@ protected:
 	 */
 	virtual uint16_t gatts_hvx_write(ble_gatts_char_handles_t &char_handle, uint8_t *buffer, uint16_t length, HVX_WRITE_T type);
 
+
+	/**@brief Respond to a Read/Write authorization request.
+	 *
+	 * @note This call should only be used as a response to a @ref BLE_GATTS_EVT_RW_AUTHORIZE_REQUEST event issued to the application.
+	 *
+	 * @param[in] p_rw_authorize_reply_params Pointer to a structure with the attribute provided by the application.
+	 *
+	 * @return @ref NRF_SUCCESS               Successfully queued a response to the peer, and in the case of a write operation, ATT table updated.
+	 * @return @ref BLE_ERROR_INVALID_CONN_HANDLE Invalid Connection Handle.
+	 * @return @ref NRF_ERROR_INVALID_STATE   No authorization request pending.
+	 * @return @ref NRF_ERROR_INVALID_PARAM   Authorization op invalid,
+	 *                                         or for Read Authorization reply: requested handles not replied with,
+	 *                                         or for Write Authorization reply: handle supplied does not match requested handle.
+	 */
+	virtual uint32_t gatts_rw_authorize_reply(ble_gatts_rw_authorize_reply_params_t const*const p_rw_authorize_reply_params);
+
 	//
 	///@cond PRIVATE
 	//
@@ -168,9 +185,10 @@ protected:
 	virtual void on_connected(ble_evt_t * p_ble_evt);		// on connected
 	virtual void on_disconnected(ble_evt_t * p_ble_evt);	// on disconnect
 
-	virtual void on_write(ble_evt_t * p_ble_evt)		{ NOTHING }		// on write event
-	virtual void on_hvc(ble_evt_t * p_ble_evt)			{ NOTHING }		// on handle value changed
-	virtual void on_tx_complete(ble_evt_t * p_ble_evt)	{ NOTHING }		// on tx complete
+	virtual void on_rw_auth_request(ble_evt_t *p_ble_evt)	{ NOTHING }		// on r/w authorization request
+	virtual void on_write(ble_evt_t * p_ble_evt)			{ NOTHING }		// on write event
+	virtual void on_hvc(ble_evt_t * p_ble_evt)				{ NOTHING }		// on handle value changed
+	virtual void on_tx_complete(ble_evt_t * p_ble_evt)		{ NOTHING }		// on tx complete
 	///@endcond
 };
 

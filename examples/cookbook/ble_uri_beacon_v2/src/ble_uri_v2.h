@@ -101,7 +101,7 @@ protected:
 
 	// Implement the virtual functions of bleServiceCustomer.
 	virtual void on_disconnected(ble_evt_t * p_ble_evt);
-	virtual void on_write(ble_evt_t * p_ble_evt);			// on write event
+	virtual void on_rw_auth_request(ble_evt_t *p_ble_evt);
 	///@endcond
 };
 

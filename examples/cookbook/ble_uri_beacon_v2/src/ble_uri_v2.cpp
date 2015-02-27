@@ -42,6 +42,12 @@ const ble_uuid128_t URI_UUID_BASE = { 0xd8, 0x81, 0xc9, 0x1a, 0xb9, 0x99, 0x96,	
 #define URI_UUID_RESET_CHAR				0x2089
 #define URI_UUID_RESERVED_CHAR			0x2090
 
+#define URI_RESULT_SUCCESS				0x00
+#define URI_RESULT_WRITE_NOT_PERMITTED	0x03
+#define URI_RESULT_INSUFFICIENT			0x08
+#define URI_RESULT_INVALID_LENGTH		0x0D
+
+
 #define DEF_URI_DOMAIN	"ucxpresso"
 
 bleServiceUriBeacon::bleServiceUriBeacon(bleDevice &ble) :
@@ -149,6 +155,7 @@ uint32_t bleServiceUriBeacon::lock_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -176,6 +183,7 @@ uint32_t bleServiceUriBeacon::unlock_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -205,6 +213,7 @@ uint32_t bleServiceUriBeacon::uri_data_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -235,6 +244,7 @@ uint32_t bleServiceUriBeacon::uri_flags_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -265,6 +275,7 @@ uint32_t bleServiceUriBeacon::adv_tx_power_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -295,6 +306,7 @@ uint32_t bleServiceUriBeacon::tx_power_mode_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -325,6 +337,7 @@ uint32_t bleServiceUriBeacon::beacon_period_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -353,6 +366,7 @@ uint32_t bleServiceUriBeacon::reset_char_add() {
 
 	attr_md.vloc = BLE_GATTS_VLOC_STACK;
 	attr_md.vlen = 1;
+	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -370,83 +384,134 @@ void bleServiceUriBeacon::on_disconnected(ble_evt_t * p_ble_evt) {
 	system_reset();
 }
 
-void bleServiceUriBeacon::on_write(ble_evt_t * p_ble_evt) {
-	ble_gatts_evt_write_t * p_evt_write = &p_ble_evt->evt.gatts_evt.params.write;
+void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
+	ble_gatts_evt_rw_authorize_request_t * p_authorize_request;
+	p_authorize_request = &(p_ble_evt->evt.gatts_evt.params.authorize_request);
 	bool bUpdate = false;
 
-	//
-	// Unlock
-	//
-	if ( p_evt_write->handle==m_unlock_char_handles.value_handle ) {
-		if ( memcmp(m_beacon_db.data.key, p_evt_write->data, APP_LOCK_KEY_MAX_LEN)==0 ) {
-			m_beacon_db.data.lock_state = BEACON_CFG_UNLOCK;
-			bUpdate = true;
-		} else {
-			// TODO: reject to try the unlock
+	if ( p_authorize_request->type == BLE_GATTS_AUTHORIZE_TYPE_WRITE ) {
+		ble_gatts_evt_write_t * p_evt_write = &p_authorize_request->request.write;
+		ble_gatts_rw_authorize_reply_params_t write_authorize_reply;
+
+		memset(&write_authorize_reply, 0, sizeof(ble_gatts_rw_authorize_reply_params_t));
+		write_authorize_reply.type = BLE_GATTS_AUTHORIZE_TYPE_WRITE;
+		write_authorize_reply.params.write.gatt_status = URI_RESULT_SUCCESS;
+
+		//
+		// Unlock
+		//
+		if ( p_evt_write->handle==m_unlock_char_handles.value_handle ) {
+			if ( p_evt_write->len == APP_LOCK_KEY_MAX_LEN) {
+				if ( memcmp(m_beacon_db.data.key, p_evt_write->data, APP_LOCK_KEY_MAX_LEN)==0 ) {
+					m_beacon_db.data.lock_state = BEACON_CFG_UNLOCK;
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INSUFFICIENT;
+				}
+			} else {
+				write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+			}
 		}
+
+		if ( m_beacon_db.data.lock_state == BEACON_CFG_UNLOCK) {	// in unlock state
+			//
+			// Lock
+			//
+			if ( p_evt_write->handle==m_lock_char_handles.value_handle ) {
+				if ( p_evt_write->len==APP_LOCK_KEY_MAX_LEN ) {
+					m_beacon_db.data.lock_state = BEACON_CFG_LOCK;						// set lock state
+					memcpy(m_beacon_db.data.key, p_evt_write->data, p_evt_write->len);	// update new key
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			} else
+
+			//
+			// URI Data
+			//
+			if ( p_evt_write->handle==m_uri_data_char_handles.value_handle ) {
+				if ( p_evt_write->len<=APP_URI_DATA_MAX_LEN ) {
+					memcpy(m_beacon_db.data.uri_data,  p_evt_write->data, p_evt_write->len);
+					m_beacon_db.data.uri_data_len = p_evt_write->len;
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			} else
+
+			//
+			// URI Flags
+			//
+			if ( p_evt_write->handle==m_uri_flags_char_handles.value_handle ) {
+				if ( p_evt_write->len==sizeof(m_beacon_db.data.uri_flags) ) {
+					m_beacon_db.data.uri_flags = p_evt_write->data[0];
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			} else
+
+			//
+			// ADV. Tx Power Level
+			//
+			if ( p_evt_write->handle==m_adv_tx_power_char_handles.value_handle ) {
+				if ( p_evt_write->len==sizeof(m_beacon_db.data.adv_tx_power_level) ) {
+					memcpy(m_beacon_db.data.adv_tx_power_level, p_evt_write->data, 4);
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			} else
+
+			//
+			// TX Power Mode
+			//
+			if ( p_evt_write->handle==m_tx_power_mode_char_handles.value_handle ) {
+				if ( p_evt_write->len==sizeof(uint8_t) ) {
+					if ( p_evt_write->data[0]>=TX_POWER_MODE_LOWSET && p_evt_write->data[0]<=TX_POWER_MODE_HIGH) {
+						m_beacon_db.data.tx_power_mode = (TX_POWER_MODE_T) p_evt_write->data[0];
+						bUpdate = true;
+					} else {
+						write_authorize_reply.params.write.gatt_status = URI_RESULT_WRITE_NOT_PERMITTED;
+					}
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			} else
+
+			//
+			// Beacon Period
+			//
+			if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
+				if ( p_evt_write->len==sizeof(m_beacon_db.data.beacon_period) ) {
+					m_beacon_db.data.beacon_period = p_evt_write->data[0] + p_evt_write->data[1]*256;
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			} else
+
+			//
+			// Reset
+			//
+			if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
+				if ( p_evt_write->len==1 ) {
+					reset();
+					bUpdate = true;
+				} else {
+					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				}
+			}
+
+		} else { // in lock state
+			write_authorize_reply.params.write.gatt_status = URI_RESULT_INSUFFICIENT;
+		}
+
+		gatts_rw_authorize_reply(&write_authorize_reply);
+
+		if ( bUpdate ) flash_update();
 	}
-
-	if ( m_beacon_db.data.lock_state == BEACON_CFG_UNLOCK) {
-		//
-		// Lock
-		//
-		if ( p_evt_write->handle==m_lock_char_handles.value_handle ) {
-			m_beacon_db.data.lock_state = BEACON_CFG_LOCK;						// set lock state
-			memcpy(m_beacon_db.data.key, p_evt_write->data, p_evt_write->len);	// update new key
-			bUpdate = true;
-		} else
-
-		//
-		// URI Data
-		//
-		if ( p_evt_write->handle==m_uri_data_char_handles.value_handle ) {
-			memcpy(m_beacon_db.data.uri_data,  p_evt_write->data, p_evt_write->len);
-			m_beacon_db.data.uri_data_len = p_evt_write->len;
-			bUpdate = true;
-		} else
-
-		//
-		// URI Flags
-		//
-		if ( p_evt_write->handle==m_uri_flags_char_handles.value_handle ) {
-			m_beacon_db.data.uri_flags = p_evt_write->data[0];
-			bUpdate = true;
-		} else
-
-		//
-		// ADV. Tx Power Level
-		//
-		if ( p_evt_write->handle==m_adv_tx_power_char_handles.value_handle ) {
-			memcpy(m_beacon_db.data.adv_tx_power_level, p_evt_write->data, 4);
-			bUpdate = true;
-		} else
-
-		//
-		// TX Power Mode
-		//
-		if ( p_evt_write->handle==m_tx_power_mode_char_handles.value_handle ) {
-			m_beacon_db.data.tx_power_mode = (TX_POWER_MODE_T) p_evt_write->data[0];
-			bUpdate = true;
-		} else
-
-		//
-		// Beacon Period
-		//
-		if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
-			m_beacon_db.data.beacon_period = p_evt_write->data[0];
-			bUpdate = true;
-		} else
-
-		//
-		// Reset
-		//
-		if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
-			reset();
-			bUpdate = true;
-		}
-	} // UNLOCK
-
-	if ( bUpdate ) flash_update();
 }
 
 void bleServiceUriBeacon::flash_update() {
