@@ -260,7 +260,7 @@ int main(void) {
 			led = LED_ON;
 			sleep(5);
 			led = LED_OFF;
-			sleep(995);
+			sleep(beacon.get().beacon_period-5);
 		}
 	}
 }

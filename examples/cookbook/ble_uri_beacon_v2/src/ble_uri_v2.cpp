@@ -44,11 +44,10 @@ const ble_uuid128_t URI_UUID_BASE = { 0xd8, 0x81, 0xc9, 0x1a, 0xb9, 0x99, 0x96,	
 #define URI_UUID_RESET_CHAR				0x2089
 #define URI_UUID_RESERVED_CHAR			0x2090
 
-#define URI_RESULT_SUCCESS				0x00
-#define URI_RESULT_WRITE_NOT_PERMITTED	0x03
-#define URI_RESULT_INSUFFICIENT			0x08
-#define URI_RESULT_INVALID_LENGTH		0x0D
-
+//#define URI_RESULT_SUCCESS				0x00
+//#define URI_RESULT_WRITE_NOT_PERMITTED	0x03
+//#define URI_RESULT_INSUFFICIENT			0x08
+//#define URI_RESULT_INVALID_LENGTH			0x0D
 
 #define DEF_URI_DOMAIN	"ucxpresso"
 
@@ -397,7 +396,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 
 		memset(&write_authorize_reply, 0, sizeof(ble_gatts_rw_authorize_reply_params_t));
 		write_authorize_reply.type = BLE_GATTS_AUTHORIZE_TYPE_WRITE;
-		write_authorize_reply.params.write.gatt_status = URI_RESULT_SUCCESS;
+		write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_SUCCESS;
 
 		//
 		// Unlock
@@ -408,10 +407,10 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					m_beacon_db.data.lock_state = BEACON_CFG_UNLOCK;
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INSUFFICIENT;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INSUF_AUTHORIZATION;
 				}
 			} else {
-				write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+				write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 			}
 		}
 
@@ -425,7 +424,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					memcpy(m_beacon_db.data.key, p_evt_write->data, p_evt_write->len);	// update new key
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			} else
 
@@ -438,7 +437,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					m_beacon_db.data.uri_data_len = p_evt_write->len;
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			} else
 
@@ -450,7 +449,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					m_beacon_db.data.uri_flags = p_evt_write->data[0];
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			} else
 
@@ -462,7 +461,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					memcpy(m_beacon_db.data.adv_tx_power_level, p_evt_write->data, 4);
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			} else
 
@@ -475,10 +474,10 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 						m_beacon_db.data.tx_power_mode = (TX_POWER_MODE_T) p_evt_write->data[0];
 						bUpdate = true;
 					} else {
-						write_authorize_reply.params.write.gatt_status = URI_RESULT_WRITE_NOT_PERMITTED;
+						write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_WRITE_NOT_PERMITTED;
 					}
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			} else
 
@@ -490,7 +489,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					m_beacon_db.data.beacon_period = p_evt_write->data[0] + p_evt_write->data[1]*256;
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			} else
 
@@ -502,12 +501,12 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 					reset();
 					bUpdate = true;
 				} else {
-					write_authorize_reply.params.write.gatt_status = URI_RESULT_INVALID_LENGTH;
+					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
 			}
 
 		} else { // in lock state
-			write_authorize_reply.params.write.gatt_status = URI_RESULT_INSUFFICIENT;
+			write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INSUF_AUTHORIZATION;
 		}
 
 		gatts_rw_authorize_reply(&write_authorize_reply);
