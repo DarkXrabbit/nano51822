@@ -2,15 +2,17 @@
  ===============================================================================
  Name        : ble_uri.cpp
  Author      : Jason
- Version     : v1.0.0
- Date		 : 2015/2/14
+ Version     : v1.0.2
+ Date		 : 2015/2/28
  Description : Uri Beacon Configure Service V2
  ===============================================================================
  History
- ---------+---------+--------------------------------------------+-------------
- DATE     |	VERSION |	DESCRIPTIONS							 |	By
- ---------+---------+--------------------------------------------+-------------
- 2015/2/14	v1.0.0	First Edition									Jason
+ ---------+---------+-------------------------------------------+---------------
+ DATE     |	VERSION |	DESCRIPTIONS							|	By
+ ---------+---------+-------------------------------------------+---------------
+ 2015/2/14	v1.0.0	First Edition								Jason
+ 2015/2/17	v1.0.1	Fixed KEY length to 128 bits.				Jason
+ 2015/2/28	v1.0.2	Update for "Return Code".					Jason
  ===============================================================================
  */
 
@@ -160,7 +162,7 @@ uint32_t bleServiceUriBeacon::lock_char_add() {
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
 	attr_char_value.p_attr_md = &attr_md;
-	attr_char_value.init_len = 1;
+	attr_char_value.init_len = 0;
 	attr_char_value.init_offs = 0;
 	attr_char_value.max_len = APP_LOCK_KEY_MAX_LEN;
 
@@ -188,7 +190,7 @@ uint32_t bleServiceUriBeacon::unlock_char_add() {
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
 	attr_char_value.p_attr_md = &attr_md;
-	attr_char_value.init_len = 1;
+	attr_char_value.init_len = 0;
 	attr_char_value.init_offs = 0;
 	attr_char_value.max_len = APP_LOCK_KEY_MAX_LEN;
 
@@ -249,9 +251,9 @@ uint32_t bleServiceUriBeacon::uri_flags_char_add() {
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
 	attr_char_value.p_attr_md = &attr_md;
-	attr_char_value.init_len = sizeof(uint8_t);
+	attr_char_value.init_len = 1;
 	attr_char_value.init_offs = 0;
-	attr_char_value.max_len = sizeof(uint8_t);
+	attr_char_value.max_len = 1;
 	attr_char_value.p_value = &m_beacon_db.data.uri_flags;
 
 	return characteristic_add(URI_UUID_URI_FLAGS_CHAR, &char_md,
