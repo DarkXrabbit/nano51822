@@ -211,8 +211,16 @@ public:
 	  */
 	 virtual int parseString(LPTSTR buf, size_t size, bool echo=false);
 
+	 /**
+	  * @brief Waitting for connected.
+	  * @param timeout	Set the timeout (ms) to blocked task.
+	  */
+	 virtual inline bool wait(uint32_t timeout=MAX_DELAY_TIME) {
+		 return true;
+	 }
+
 	 //
-	 /// @cond
+	 /// @cond	PRIVATE
 	 //
 	 virtual ~CStream();
 

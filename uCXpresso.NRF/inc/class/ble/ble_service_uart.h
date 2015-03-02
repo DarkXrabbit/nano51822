@@ -62,13 +62,18 @@ public:
 		return isAvailable();
 	}
 
+	/**
+	 * @brief Override the CStream::wait member function.
+	 */
+	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
+
 	//
 	///@cond PRIVATE
 	//
 	virtual ~bleServiceUART();
 	virtual void onSend(bool fromISR);
 protected:
-
+	CSemaphore m_semWait;
     ble_gatts_char_handles_t m_tx_handles;              /**< Handles related to the TX characteristic. (as provided by the S110 SoftDevice)*/
     ble_gatts_char_handles_t m_rx_handles;              /**< Handles related to the RX characteristic. (as provided by the S110 SoftDevice)*/
     uint32_t m_flag;

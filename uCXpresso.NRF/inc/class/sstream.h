@@ -47,6 +47,11 @@ public:
 	}
 
 	/**
+	 * @brief Override the @ref CStream::wait member function.
+	 */
+	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
+
+	/**
 	 * @brief Start the Secure Stream component.
 	 */
 	virtual bool start(int stack=132);
@@ -57,9 +62,10 @@ public:
 	virtual ~SStream();
 	virtual void onSend(bool fromISR);
 protected:
-	aesCFB	m_txCFB;
-	aesCFB	m_rxCFB;
-	CStream *m_stream;
+	CSemaphore 	m_semWaitForConnected;
+	aesCFB		m_txCFB;
+	aesCFB		m_rxCFB;
+	CStream 	*m_stream;
 	virtual void run();
 	///@endcond
 };
