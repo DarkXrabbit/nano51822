@@ -1,17 +1,17 @@
 /*
 ===============================================================================
  Name        : main.c
- Author      :
+ Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
- License	 :
- Description :
+ License	 : free
+ Description : A G+A (MPU6050) sensor demo wtih BLE UART (nRF UART)
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
-
+ 2015/3/2	v1.0.0	First Edition.									LEO
  ===============================================================================
  */
 
@@ -44,8 +44,8 @@
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
-#define BOARD_PCA10001
-//#define BOARD_LILYPAD
+//#define BOARD_PCA10001
+#define BOARD_LILYPAD
 #include <config/board.h>
 
 //
