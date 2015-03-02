@@ -101,6 +101,7 @@ int main(void) {
 
 	//
 	// Console output to BLE UART
+	// Note: In order, to format the output string, We use the Console class.
 	//
 	Console con(nus);	// assign the nus (BLE-UART) stream to console.
 
