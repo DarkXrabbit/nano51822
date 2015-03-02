@@ -3,7 +3,7 @@
  Name        : ble_advertising.h
  Author      : uCXpresso
  Version     : v1.0.5
- Date		 : 2014/2/6
+ Date		 : 2015/3/2
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -17,6 +17,7 @@
  2014/12/4  v1.0.3	Add "Directed Advertising" scheme for BT4.1 	Jason
  2014/1/10  v1.0.4	Add isActive member function.					Jason
  2014/2/6	v1.0.5	Add update overload member functions.			Jason
+ 2015/3/2	v1.0.6	Add add_uuid_to_complete_list overload member.	Jason
  ===============================================================================
  */
 
@@ -116,10 +117,17 @@ public:
 	 */
 	void manuf_specific_data(const uint8_t *data, uint16_t size);
 
-	/**@brief Set the list of UUIDs in the 'Complete' list.
-	 *
+	/**
+	 * @brief Add the uuid of service in the 'Complete' list of Adv.
 	 */
-	void add_uuid_to_complete_list(bleService &service);
+	void add_uuid_to_complete_list(uint16_t uuid, uint8_t type=BLE_UUID_TYPE_BLE);
+
+	/**
+	 * @brief Overload the add_uuid_to_complete_list member function.
+	 */
+	inline void add_uuid_to_complete_list(bleService &service) {
+		add_uuid_to_complete_list(service.uuid(), service.uuid_type());
+	}
 
 	/**@brief Set the Slave Connection Interval Range.
 	 *
