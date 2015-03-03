@@ -35,8 +35,14 @@ After loading the firmware file, the tag will be in a normal mode and will not t
 2. Using the [Blesh Physical Web](https://play.google.com/store/apps/details?id=com.blesh.physicalweb) or [UriBeacon Developer Tools](https://github.com/google/uribeacon/releases) Android App, input the desired Uri.
 
 ##LilyPad-nano51822 UriBeacon Source code
-
 Source code and project setup instructions can be found in the folder ble_uri_beacon_v2.
+
+##Tickless Low Power Technology
+The uCXpresso.NRF framework provides the Tickless technology, power consuming avg. 26uA with a LED blink.
+For example, set advertising interval 1000ms and work with a CR2032 battery, the LilyPad will work one year approximately.
+
+The CR2032 Battery Holder is on the back side. (optional)
+![CR2032 Battery Holder](http://www.embeda.com.tw/ucxpresso/wp-content/uploads/2015/03/LilyPad-4-NANO51822-02ss.jpg)
 
 ##About the uCXpresso.NRF RTOS C/C++ Framework:
 The nano51822 are working on the uCXpresso.NRF framework, you may need to study the [Getting Started](http://www.embeda.com.tw/ucxpresso/?article=getting-started-2) first.
