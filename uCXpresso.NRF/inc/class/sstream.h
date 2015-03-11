@@ -5,13 +5,14 @@
  Version     : v1.0.0
  Date		 : 2015/2/1
  Copyright   : Copyright (C) www.embeda.com.tw
- Description : Secure Stream
+ Description : Secure Stream (AES 128 CFB)
  ===============================================================================
  History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2015/2/1	v1.0.0	First Edition									Jason
+ 2015/3/11	v1.0.1	Add event handle.								Jason
  ===============================================================================
  */
 
@@ -23,11 +24,22 @@
 #include <class/aes.h>
 
 /**
+ * @brief SStream events
+ * @ingroup Enumerations
+*/
+typedef enum {
+	SS_TIMEOUT,			///< IV block timeout
+	SS_CONNECTED,		///< SStream ready for communication.
+	SS_DISCONNECTED		///< SStream disconnected
+}SS_EVENT_T;
+
+/**
  * @brief A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream.
  * @class SStream sstream.h "class/sstream.h"
  * @ingroup Peripherals
  */
 class SStream: public CThread, public CStream {
+	typedef void (*ss_event_handle_t) (SStream *p_ss, SS_EVENT_T event);
 public:
 	/**
 	 * @brief SStream constructor
@@ -54,7 +66,14 @@ public:
 	/**
 	 * @brief Start the Secure Stream component.
 	 */
-	virtual bool start(int stack=132);
+	virtual bool start(int stack=68);
+
+	/**
+	 * Set SStream Events Handle
+	 */
+	inline void event(ss_event_handle_t func) {
+		m_on_event = func;
+	}
 
 	//
 	///@cond PRIVATE
@@ -62,6 +81,7 @@ public:
 	virtual ~SStream();
 	virtual void onSend(bool fromISR);
 protected:
+	ss_event_handle_t	m_on_event;
 	CSemaphore 	m_semWaitForConnected;
 	aesCFB		m_txCFB;
 	aesCFB		m_rxCFB;
