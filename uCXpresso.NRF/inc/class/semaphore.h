@@ -91,7 +91,6 @@ public:
 
 	/**Call the member function to release a semaphore.
 	 * \param fromISR is a boolean to specified the release occur from interrupt routine. (internal used)
-	 * \return a integer value to identify the context switch wake. (internal used)
 	 *
 	 * \code
 	 * Example:
@@ -131,7 +130,7 @@ public:
 	 * 		}
 	 * \endcode
 	 */
-	virtual int  release(bool fromISR=false);
+	virtual void  release(bool fromISR=false);
 
 	/**Number of task in waiting
 	 */
