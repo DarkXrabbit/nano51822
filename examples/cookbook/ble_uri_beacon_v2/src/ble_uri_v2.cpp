@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_uri.cpp
  Author      : Jason
- Version     : v1.0.2
- Date		 : 2015/2/28
+ Version     : v1.0.3
+ Date		 : 2015/3/16
  Description : Uri Beacon Configure Service V2
  ===============================================================================
  History
@@ -13,6 +13,7 @@
  2015/2/14	v1.0.0	First Edition								Jason
  2015/2/17	v1.0.1	Fixed KEY length to 128 bits.				Jason
  2015/2/28	v1.0.2	Update for "Return Code".					Jason
+ 2015/3/16	v1.0.3	Update for "Spece UriBeacon Tests"			Jason
  ===============================================================================
  */
 
@@ -125,8 +126,8 @@ uint32_t bleServiceUriBeacon::lock_state_char_add() {
 
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
 
-	attr_md.vloc = BLE_GATTS_VLOC_STACK;
-//	attr_md.vlen = 1;
+	attr_md.vloc = BLE_GATTS_VLOC_USER;
+	attr_md.vlen = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
@@ -243,16 +244,16 @@ uint32_t bleServiceUriBeacon::uri_flags_char_add() {
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
 
-	attr_md.vloc = BLE_GATTS_VLOC_STACK;
+	attr_md.vloc = BLE_GATTS_VLOC_USER;
 	attr_md.vlen = 1;
 	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
 	attr_char_value.p_attr_md = &attr_md;
-	attr_char_value.init_len = 1;
+	attr_char_value.init_len = sizeof(m_beacon_db.data.uri_flags);
 	attr_char_value.init_offs = 0;
-	attr_char_value.max_len = 1;
+	attr_char_value.max_len = sizeof(m_beacon_db.data.uri_flags);
 	attr_char_value.p_value = &m_beacon_db.data.uri_flags;
 
 	return characteristic_add(URI_UUID_URI_FLAGS_CHAR, &char_md,
@@ -274,16 +275,16 @@ uint32_t bleServiceUriBeacon::adv_tx_power_char_add() {
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
 
-	attr_md.vloc = BLE_GATTS_VLOC_STACK;
+	attr_md.vloc = BLE_GATTS_VLOC_USER;
 	attr_md.vlen = 1;
 	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
 	attr_char_value.p_attr_md = &attr_md;
-	attr_char_value.init_len = 4;
+	attr_char_value.init_len = sizeof(m_beacon_db.data.adv_tx_power_level);
 	attr_char_value.init_offs = 0;
-	attr_char_value.max_len = 4;
+	attr_char_value.max_len = sizeof(m_beacon_db.data.adv_tx_power_level);
 	attr_char_value.p_value = (uint8_t *) m_beacon_db.data.adv_tx_power_level;
 
 	return characteristic_add(URI_UUID_ADV_TX_POWER_CHAR, &char_md,
@@ -305,7 +306,7 @@ uint32_t bleServiceUriBeacon::tx_power_mode_char_add() {
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
 
-	attr_md.vloc = BLE_GATTS_VLOC_STACK;
+	attr_md.vloc = BLE_GATTS_VLOC_USER;
 	attr_md.vlen = 1;
 	attr_md.wr_auth = 1;
 
@@ -336,16 +337,16 @@ uint32_t bleServiceUriBeacon::beacon_period_char_add() {
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.read_perm);
 	BLE_GAP_CONN_SEC_MODE_SET_OPEN(&attr_md.write_perm);
 
-	attr_md.vloc = BLE_GATTS_VLOC_STACK;
+	attr_md.vloc = BLE_GATTS_VLOC_USER;
 	attr_md.vlen = 1;
 	attr_md.wr_auth = 1;
 
 	memset(&attr_char_value, 0, sizeof(attr_char_value));
 
 	attr_char_value.p_attr_md = &attr_md;
-	attr_char_value.init_len = 2;
+	attr_char_value.init_len = sizeof(m_beacon_db.data.beacon_period);
 	attr_char_value.init_offs = 0;
-	attr_char_value.max_len = 2;
+	attr_char_value.max_len = sizeof(m_beacon_db.data.beacon_period);;
 	attr_char_value.p_value = (uint8_t *)&m_beacon_db.data.beacon_period;
 
 	return characteristic_add(URI_UUID_BEACON_PERIOD_CHAR, &char_md,
@@ -390,6 +391,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 	p_authorize_request = &(p_ble_evt->evt.gatts_evt.params.authorize_request);
 	bool bUpdate = false;
 
+
 	if ( p_authorize_request->type == BLE_GATTS_AUTHORIZE_TYPE_WRITE ) {
 		ble_gatts_evt_write_t * p_evt_write = &p_authorize_request->request.write;
 		ble_gatts_rw_authorize_reply_params_t write_authorize_reply;
@@ -412,7 +414,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			} else {
 				write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 			}
-		}
+		} else
 
 		if ( m_beacon_db.data.lock_state == BEACON_CFG_UNLOCK) {	// in unlock state
 			//
@@ -446,7 +448,6 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			if ( p_evt_write->handle==m_uri_flags_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(m_beacon_db.data.uri_flags) ) {
-					m_beacon_db.data.uri_flags = p_evt_write->data[0];
 					bUpdate = true;
 				} else {
 					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
@@ -458,7 +459,6 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			if ( p_evt_write->handle==m_adv_tx_power_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(m_beacon_db.data.adv_tx_power_level) ) {
-					memcpy(m_beacon_db.data.adv_tx_power_level, p_evt_write->data, 4);
 					bUpdate = true;
 				} else {
 					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
@@ -471,7 +471,6 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			if ( p_evt_write->handle==m_tx_power_mode_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(uint8_t) ) {
 					if ( p_evt_write->data[0]>=TX_POWER_MODE_LOWSET && p_evt_write->data[0]<=TX_POWER_MODE_HIGH) {
-						m_beacon_db.data.tx_power_mode = (TX_POWER_MODE_T) p_evt_write->data[0];
 						bUpdate = true;
 					} else {
 						write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_WRITE_NOT_PERMITTED;
@@ -486,7 +485,11 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(m_beacon_db.data.beacon_period) ) {
-					m_beacon_db.data.beacon_period = p_evt_write->data[0] + p_evt_write->data[1]*256;
+					uint16_t value = p_evt_write->data[0] + p_evt_write->data[1]*256;
+					if ( value>0 && value<100 ) {
+						// TODO: set the period to 100ms when value is between 1~100
+						m_beacon_db.data.beacon_period = 100;
+					}
 					bUpdate = true;
 				} else {
 					write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
@@ -496,8 +499,8 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			// Reset
 			//
-			if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
-				if ( p_evt_write->len==1 ) {
+			if ( p_evt_write->handle==m_reset_char_handles.value_handle ) {
+				if ( p_evt_write->len==1 && p_evt_write->data[0]!=0 ) {
 					reset();
 					bUpdate = true;
 				} else {
@@ -505,13 +508,17 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 				}
 			}
 
-		} else { // in lock state
+		//
+		// in lock state
+		//
+		} else  {
 			write_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INSUF_AUTHORIZATION;
 		}
 
 		gatts_rw_authorize_reply(&write_authorize_reply);
 
 		if ( bUpdate ) flash_update();
+
 	}
 }
 

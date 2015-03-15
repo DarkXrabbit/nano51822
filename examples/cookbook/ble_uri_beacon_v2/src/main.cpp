@@ -105,6 +105,8 @@ static void advertising_init(beacon_mode_t mode) {
 			gpBLE->m_advertising.timeout(0); // never end
 		}
 
+		if ( gpUriBeacon->get().beacon_period>0 ) gpBLE->m_advertising.start();
+
 	} else 	if (mode == beacon_mode_config) {
 		ble_uuid_t adv_uuids[] = {{URI_UUID_BEACON_SERVICE, gpUriBeacon->uuid_type()}};
 		ble_advdata_t advdata;
@@ -125,6 +127,8 @@ static void advertising_init(beacon_mode_t mode) {
 		gpBLE->m_advertising.type(ADV_TYPE_ADV_IND);
 		gpBLE->m_advertising.interval(APP_ADV_INTERVAL);
 		gpBLE->m_advertising.timeout(APP_ADV_TIMEOUT_IN_SECONDS);
+
+		gpBLE->m_advertising.start();
 	}
 }
 
@@ -196,9 +200,6 @@ int main(void) {
 
 	advertising_init(beacon_mode);
 
-	// Start advertising
-	ble.m_advertising.start();
-
 	//
 	// Optional: Enable tickless technology
 	//
@@ -236,7 +237,6 @@ int main(void) {
 
 			// update mode and re-start the advertising
 			advertising_init(beacon_mode);
-			ble.m_advertising.start();
 
 			// waiting for btn released
 			while(btn==LOW);

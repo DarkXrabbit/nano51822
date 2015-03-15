@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_uri_v2.h
  Author      : Jason
- Version     : v1.0.2
- Date		 : 2015/2/28
+ Version     : v1.0.3
+ Date		 : 2015/3/16
  Description : Uri Beacon Configure Service V2
  ===============================================================================
  History
@@ -13,6 +13,7 @@
  2015/2/14	v1.0.0	First Edition								Jason
  2015/2/17	v1.0.1	Fixed KEY length to 128 bits.				Jason
  2015/2/28	v1.0.2	Update for "Return Code".					Jason
+ 2015/3/16	v1.0.3	Update for "Spece UriBeacon Tests"			Jason
  ===============================================================================
  */
 
