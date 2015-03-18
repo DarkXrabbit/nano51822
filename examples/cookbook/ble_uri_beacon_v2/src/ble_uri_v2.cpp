@@ -4,6 +4,7 @@
  Author      : Jason
  Version     : v1.0.4
  Date		 : 2015/3/17
+ License	 : MIT
  Description : Uri Beacon Configure Service V2
  ===============================================================================
  History
