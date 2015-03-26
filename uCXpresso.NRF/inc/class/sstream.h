@@ -66,7 +66,7 @@ public:
 	/**
 	 * @brief Start the Secure Stream component.
 	 */
-	virtual bool start(int stack=70);
+	virtual bool start(int stack=86);
 
 	/**
 	 * Set SStream Events Handle
