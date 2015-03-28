@@ -273,8 +273,7 @@ int main(void)
 	ble.m_advertising.name_type(BLE_ADVDATA_NO_NAME);	// set beacon name type (No Name)
 	ble.m_advertising.commpany_identifier(m_beacon.company_id);
 	ble.m_advertising.manuf_specific_data((uint8_t *)&m_beacon.data, APP_BEACON_INFO_LENGTH); // set beacon data
-	ble.m_advertising.flag(BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED);		// set flags
-	ble.m_advertising.update();							// update advertising data
+	ble.m_advertising.update(BLE_GAP_ADV_FLAG_BR_EDR_NOT_SUPPORTED);							// update advertising data
 
 	ble.m_advertising.interval(m_beacon.interval);		// set advertising interval
 	ble.m_advertising.start();

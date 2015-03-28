@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_advertising.h
  Author      : uCXpresso
- Version     : v1.0.5
- Date		 : 2015/3/2
+ Version     : v1.0.7
+ Date		 : 2015/3/27
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -18,6 +18,7 @@
  2014/1/10  v1.0.4	Add isActive member function.					Jason
  2014/2/6	v1.0.5	Add update overload member functions.			Jason
  2015/3/2	v1.0.6	Add add_uuid_to_complete_list overload member.	Jason
+ 2015/3/27	v1.0.7	Reduce RAM used.								Jason
  ===============================================================================
  */
 
@@ -30,7 +31,6 @@
 
 #define DEF_ADV_INTERVAL				1000	// 1000 Milliseconds
 #define DEF_ADV_TIMEOUT					0		// No Adv. timeout  (unit:second)
-#define DEF_ADV_FLAG					BLE_GAP_ADV_FLAGS_LE_ONLY_GENERAL_DISC_MODE
 #define DEF_ADV_FAST_INTERVAL			50		// for bond connection, adv. interval = 50ms
 #define DEF_ADV_FAST_TIMEOUT			40		// for bond connection, adv. timeout = 40 sec.
 #define DEF_ADV_FAST_WHITELIST_TIMEOUT	20		// for bond white-list, adv. timeout = 20 sec.
@@ -98,9 +98,9 @@ public:
 	void name_type(ble_advdata_name_type_t type);
 
 	/**
-	 * @brief single advertising flag.
+	 * @brief set advertising flags.
 	 */
-	void flag(uint8_t val);
+	void flags(const uint8_t *flags, uint8_t size=1);
 
 	/**
 	 * masked, replace by flag() member.
@@ -137,7 +137,7 @@ public:
 	/**@brief Set the TX Power Level field.
 	 *
 	 */
-	void tx_power_level(int8_t value);
+	void tx_power_level(int8_t const *dBm);
 
 	/**@brief Set GAP Appearance value.
 	 *
@@ -235,11 +235,7 @@ public:
 	uint32_t				 m_flag;
 protected:
 	ble_advdata_t			 m_adv_data;
-	ble_uuid_t				*m_uuid_list;
 	ble_gap_adv_params_t 	 m_adv_params;
-	uint8_t					 m_uuid_count;
-	int8_t					 m_tx_power_level;
-	uint8_t					 m_adv_flag;
 	uint8_t					 m_adv_direct_cnt;
 	uint16_t				 m_adv_interval;
 	uint16_t				 m_adv_timeout;
