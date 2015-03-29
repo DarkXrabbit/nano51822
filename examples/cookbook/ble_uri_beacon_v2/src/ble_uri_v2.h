@@ -92,6 +92,7 @@ protected:
 
 	flash_db_t	m_beacon_db;
 	CStorage	m_flash;
+	bool		m_bUpdate;
 
 	uint32_t lock_state_char_add();
 	uint32_t lock_char_add();

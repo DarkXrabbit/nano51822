@@ -2,7 +2,7 @@
  ===============================================================================
  Name        : uri beacon
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Copyright   : www.ucxpresso.net
  License	 : Free
  Description : Implement Google URI Beacon V2
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2015/2/14	v1.0.0	First Edition.									Jason
+ 2015/3/30	v1.0.1	Update flash data on foreground task.			Jason
  ===============================================================================
  */
 
@@ -132,6 +133,8 @@ static void advertising_init(beacon_mode_t mode) {
 	}
 }
 
+beacon_mode_t beacon_mode = beacon_mode_normal;
+
 //
 // parse BLE events
 //
@@ -140,9 +143,13 @@ void onBleEvent(bleDevice * p_ble, BLE_EVENT_T evt) {
 	case BLE_ON_CONNECTED:
 		p_ble->onConnected();
 		break;
+
 	case BLE_ON_DISCONNECTED:
 		p_ble->onDisconnected();
+		beacon_mode = beacon_mode_normal;
+		advertising_init(beacon_mode);
 		break;
+
 	case BLE_ON_TIMEOUT:
 		system_reset();
 		break;
@@ -166,8 +173,6 @@ int main(void) {
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
 #endif
-
-	beacon_mode_t beacon_mode = beacon_mode_normal;
 
 	//
 	// SoftDevice
@@ -210,8 +215,11 @@ int main(void) {
 	//
 	//
 	//
-	CPin led(LED_PIN_0);
-	led.output();
+	CPin led0(LED_PIN_0);
+	led0.output();
+
+	CPin led1(LED_PIN_1);
+	led1.output();
 
 	CPin btn(BUTTON_PIN_0);
 	btn.input();
@@ -224,6 +232,8 @@ int main(void) {
 		// check button
 		//
 		if ( btn==LOW ) {
+
+			led1 = LED_ON;
 
 			// stop advertising
 			ble.m_advertising.stop();
@@ -240,6 +250,8 @@ int main(void) {
 
 			// waiting for btn released
 			while(btn==LOW);
+
+			led1 = LED_OFF;
 		}
 
 		//
@@ -251,15 +263,15 @@ int main(void) {
 			//
 			conn.negotiate();
 
-			led = LED_ON;
+			led0 = LED_ON;
 			sleep(50);
-			led = LED_OFF;
+			led0 = LED_OFF;
 			sleep(150);
 
 		} else {
-			led = LED_ON;
+			led0 = LED_ON;
 			sleep(5);
-			led = LED_OFF;
+			led0 = LED_OFF;
 			sleep(beacon.get().beacon_period-5);
 		}
 	}

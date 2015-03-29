@@ -61,6 +61,7 @@ bleServiceUriBeacon::bleServiceUriBeacon(bleDevice &ble) :
 	uint32_t err_code;
 
 	gpUriBeacon = this;
+	m_bUpdate = false;
 
 	//
 	// storage init
@@ -385,13 +386,14 @@ uint32_t bleServiceUriBeacon::reset_char_add() {
 
 void bleServiceUriBeacon::on_disconnected(ble_evt_t * p_ble_evt) {
 	bleServiceCustomer::on_disconnected(p_ble_evt);
-	system_reset();
+	if ( m_bUpdate ) {
+		flash_update();
+	}
 }
 
 void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 	ble_gatts_evt_rw_authorize_request_t * p_authorize_request;
 	p_authorize_request = &(p_ble_evt->evt.gatts_evt.params.authorize_request);
-	bool bUpdate = false;
 
 	ble_gatts_rw_authorize_reply_params_t rw_authorize_reply;
 	memset(&rw_authorize_reply, 0, sizeof(ble_gatts_rw_authorize_reply_params_t));
@@ -411,7 +413,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			if ( p_evt_write->len == APP_LOCK_KEY_MAX_LEN) {
 				if ( memcmp(m_beacon_db.data.key, p_evt_write->data, APP_LOCK_KEY_MAX_LEN)==0 ) {
 					m_beacon_db.data.lock_state = BEACON_CFG_UNLOCK;
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INSUF_AUTHORIZATION;
 				}
@@ -428,7 +430,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 				if ( p_evt_write->len==APP_LOCK_KEY_MAX_LEN ) {
 					m_beacon_db.data.lock_state = BEACON_CFG_LOCK;						// set lock state
 					memcpy(m_beacon_db.data.key, p_evt_write->data, p_evt_write->len);	// update new key
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -441,7 +443,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 				if ( p_evt_write->len<=APP_URI_DATA_MAX_LEN ) {
 					memcpy(m_beacon_db.data.uri_data,  p_evt_write->data, p_evt_write->len);
 					m_beacon_db.data.uri_data_len = p_evt_write->len;
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -452,7 +454,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			if ( p_evt_write->handle==m_uri_flags_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(m_beacon_db.data.uri_flags) ) {
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -463,7 +465,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			if ( p_evt_write->handle==m_adv_tx_power_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(m_beacon_db.data.adv_tx_power_level) ) {
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -475,7 +477,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			if ( p_evt_write->handle==m_tx_power_mode_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(uint8_t) ) {
 					if ( p_evt_write->data[0]>=TX_POWER_MODE_LOWSET && p_evt_write->data[0]<=TX_POWER_MODE_HIGH) {
-						bUpdate = true;
+						m_bUpdate = true;
 					} else {
 						rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_WRITE_NOT_PERMITTED;
 					}
@@ -489,7 +491,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			//
 			if ( p_evt_write->handle==m_beacon_period_char_handles.value_handle ) {
 				if ( p_evt_write->len==sizeof(m_beacon_db.data.beacon_period) ) {
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -501,7 +503,7 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			if ( p_evt_write->handle==m_reset_char_handles.value_handle ) {
 				if ( p_evt_write->len==1 && p_evt_write->data[0]!=0 ) {
 					reset();
-					bUpdate = true;
+					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -513,21 +515,21 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 		} else  {
 			rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INSUF_AUTHORIZATION;
 		}
-	}
 
-	gatts_rw_authorize_reply(&rw_authorize_reply);
-	if ( bUpdate ) flash_update();
+		// reply return code
+		gatts_rw_authorize_reply(&rw_authorize_reply);
+
+		// update beacon_period
+		if ( m_beacon_db.data.beacon_period>0 && m_beacon_db.data.beacon_period<100 ) {
+			m_beacon_db.data.beacon_period = 100;
+			gatts_value_set(m_beacon_period_char_handles, (uint8_t *)&m_beacon_db.data.beacon_period, sizeof(m_beacon_db.data.beacon_period));
+		}
+	}
 }
 
 void bleServiceUriBeacon::flash_update() {
 	m_beacon_db.data.size = sizeof(beacon_cfg_v2_t);
-
-	if ( m_beacon_db.data.beacon_period>0 && m_beacon_db.data.beacon_period<100 ) {
-		m_beacon_db.data.beacon_period = 100;
-		gatts_value_set(m_beacon_period_char_handles, (uint8_t *)&m_beacon_db.data.beacon_period, sizeof(m_beacon_db.data.beacon_period));
-	}
-
-	m_flash.write(&m_beacon_db, sizeof(m_beacon_db));
+	m_flash.write(&m_beacon_db, sizeof(m_beacon_db), 0, true);	// fromISR=true, mean to write flash on BLE events.
 }
 
 void bleServiceUriBeacon::reset() {
