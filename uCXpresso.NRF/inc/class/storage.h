@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : Storage data to flash memory
  Author      : uCXpresso
- Version     : v1.0.2
- Date		 : 2015/1/2
+ Version     : v1.0.3
+ Date		 : 2015/3/30
  Copyright   : Copyright (C) www.embeda.com.tw
  Description :
  ===============================================================================
@@ -14,6 +14,7 @@
  2014/10/18	v1.0.0	First Edition for nano51822						Jason
  2014/11/22 v1.0.1	Add access_wait static member.					Jason
  2015/1/2	v1.0.2	Update constructor.								Jason
+ 2015/3/30	v1.0.3	Add param "fromISR" in write member function.	Jason
  ===============================================================================
  */
 
@@ -43,6 +44,8 @@ public:
 	 * @param buf 		Pointer to the data buffer for write.
 	 * @param size		Number of byte to write.
 	 * @param offset	Offset to the address from the storage began.
+	 * @param fromISR	Call the write member function from ISR or BLE routine.
+	 *
 	 * @return
 	 * @retval NRF_SUCCESS             on success, else an error code indicating reason for failure.
 	 * @retval NRF_ERROR_INVALID_STATE is returned is API is called without module initialization.
@@ -56,7 +59,7 @@ public:
 	 *			is complete. End of this procedure is notified to the application using the
 	 *			notification callback registered by the application.
 	 */
-	uint32_t write(const void *buf, uint16_t size, uint16_t offset=0);
+	uint32_t write(const void *buf, uint16_t size, uint16_t offset=0, bool fromISR=false);
 
 	/**
 	 * @brief Read data from storage.
