@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : ble_service_uart.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/10/12
+ Version     : v1.0.3
+ Date		 : 2015/03/31
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE UART Service class
  ===============================================================================
@@ -13,6 +13,7 @@
  ---------+---------+--------------------------------------------+-------------
  2014/10/12	v1.0.0	First Edition for nano51822						Jason
  2014/10/27 v1.0.1	Update characteristic uuid.						Jason
+ 2015/03/31	v1.0.2	More safe transmit for large data.				Jason
  ===============================================================================
  */
 
@@ -77,6 +78,8 @@ protected:
     ble_gatts_char_handles_t m_tx_handles;              /**< Handles related to the TX characteristic. (as provided by the S110 SoftDevice)*/
     ble_gatts_char_handles_t m_rx_handles;              /**< Handles related to the RX characteristic. (as provided by the S110 SoftDevice)*/
     uint32_t m_flag;
+
+    uint16_t m_unsend_length;
     uint8_t	 *m_p_send_buf;
 
 	uint32_t rx_char_add(uint16_t rx_char_uuid);
