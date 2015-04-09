@@ -24,4 +24,13 @@
 #define LED_PIN_4		22
 #endif
 
+#ifdef BOARD_NANO51822_UDK
+#define BUTTON_PIN_0	0
+#define BUTTON_PIN_1	30
+#define LED_PIN_0		18
+#define LED_PIN_1		19
+#define LED_PIN_2		20
+#define LED_PIN_3		21
+#endif
+
 #endif /* BOARD_H_ */

@@ -31,7 +31,8 @@
 #include <arm_math.h>		// CMSIS DSP Library
 
 // TODO: insert other definitions and declarations here
-#define BOARD_PCA10001
+//#define BOARD_PCA10001
+#define BOARD_NANO51822_UDK
 #include <config/board.h>
 
 //
@@ -54,11 +55,10 @@ int main(void) {
 	pwm.add_channel(LED_PIN_1);	// add PWM channel with LED1
 	pwm.add_channel(LED_PIN_2);	// add PWM channel with LED2
 	pwm.add_channel(LED_PIN_3);	// add PWM channel with LED3
-	pwm.add_channel(LED_PIN_4);	// add PWM channel with LED4
 	pwm.enable();			// start the pwm
 
 	float y;
-	int x[5] = { 0, 9, 18, 27, 36 };        // initialize all channels x degree
+	int x[4] = { 0, 10, 20, 30 };        // initialize all channels x degree
 
 	//
     // Enter main loop.
@@ -67,8 +67,8 @@ int main(void) {
     	//
     	// FireFly loop
     	//
-		for (int ch = 0; ch < 5; ch++) {
-			x[ch] = (x[ch] + 2) % 360;							// degree 0~360, step by 2
+		for (int ch = 0; ch < 4; ch++) {
+			x[ch] = (x[ch] + 10) % 360;							// degree 0~360, step by 2
 			y = arm_sin_f32((x[ch] * M_PI) / 180.0f);            // y = sine @x
 			pwm.update(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); 	// update the duty-cycle of channel
 		}
