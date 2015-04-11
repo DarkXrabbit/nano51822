@@ -138,9 +138,9 @@ public:
 	 * @return
 	 * @retval true If analog convert completed within timeout.
 	 */
-	inline bool read(AIN_T ain, uint16_t &value, uint32_t timeout=MAX_DELAY_TIME) {
-		pin(ain);
-		return read(value);
+	inline static bool read(AIN_T ain, uint16_t &value, uint32_t timeout=MAX_DELAY_TIME) {
+		CAdc::pin(ain);
+		return CAdc::read(value);
 	}
 
 	/**

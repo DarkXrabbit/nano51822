@@ -67,11 +67,6 @@ public:
 	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
 	/**
-	 * @brief Trigger by software
-	 */
-	virtual void release();
-
-	/**
 	 * @brief check the sense pin enabled or not.
 	 */
 	virtual bool isValid();
