@@ -168,16 +168,14 @@ int main(void) {
     	//
     	// Battery Service
     	//
-    	if ( bat.isAvailable() ) {		// is service available (when remote app connected to the service)
-    		if ( tmBAT.isExpired(1000) ) {
-    			tmBAT.reset();
-    			if ( CAdc::read(value) ) {
-    				percentage = (value / 1024.0f) * 100.0;
-    				bat.send(percentage);
-    				led3.toggle();
-    			}
-    		}
-    	}
+		if ( tmBAT.isExpired(1000) ) {
+			tmBAT.reset();
+			if ( CAdc::read(value) ) {
+				percentage = (value / 1024.0f) * 100.0;
+				bat.send(percentage);
+				led3.toggle();
+			}
+		}
 
     	// Negotiate the "connection parameters update"
     	conn.negotiate();

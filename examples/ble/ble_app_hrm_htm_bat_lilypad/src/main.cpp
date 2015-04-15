@@ -36,6 +36,7 @@
 #include <class/timeout.h>
 #include <class/thread.h>
 #include <class/power.h>
+#include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                         "nano51822"         /**< Name of device. Will be included in the advertising data. */
@@ -150,6 +151,8 @@ int main(void) {
 	uint16_t value;
 	float 	 temp, percentage;
 
+	CTimeout tmBAT;
+
 	//
     // Enter main loop.
 	//
@@ -179,7 +182,8 @@ int main(void) {
     	//
     	// Battery Service
     	//
-    	if ( bat.isAvailable() ) {		// is service available (when remote app connected to the service)
+    	if ( tmBAT.isExpired(1000) ) {		// is service available (when remote app connected to the service)
+    		tmBAT.reset();
 			if ( CAdc::read(value) ) {
 				percentage = (value / 1024.0f) * 100.0;
 				bat.send(percentage);
