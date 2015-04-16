@@ -503,7 +503,6 @@ void bleServiceUriBeacon::on_rw_auth_request(ble_evt_t * p_ble_evt) {
 			if ( p_evt_write->handle==m_reset_char_handles.value_handle ) {
 				if ( p_evt_write->len==1 && p_evt_write->data[0]!=0 ) {
 					reset();
-					m_bUpdate = true;
 				} else {
 					rw_authorize_reply.params.write.gatt_status = BLE_GATT_STATUS_ATTERR_INVALID_ATT_VAL_LENGTH;
 				}
@@ -550,4 +549,5 @@ void bleServiceUriBeacon::reset() {
 	m_beacon_db.data.beacon_period = 1000;
 
 	memset(m_beacon_db.data.key, 0, APP_LOCK_KEY_MAX_LEN);
+	flash_update();
 }
