@@ -265,6 +265,7 @@ protected:
 	virtual void free();
 	virtual int putc(int ch);
 	virtual int getc(){return 0;}
+	virtual void restart();
 	inline virtual LPCTSTR gets() {
 		return (LPCTSTR) getBuffer();
 	}

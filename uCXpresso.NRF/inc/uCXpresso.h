@@ -21,7 +21,7 @@ extern "C" {
 #define uCXpresso_VER_MINOR		0
 #define uCXpresso_VER_REV		6
 #define uCXpresso_VER_RC		4
-#define uCXpresso_VER_BUILD		"2014/4/11"
+#define uCXpresso_VER_BUILD		"2014/4/16"
 #define uCXpresso_VER_STR		"V1.0.6"
 
 //
@@ -138,6 +138,7 @@ extern void bootloader_start(void);
 #define MAX_DELAY_TIME	0xffffffff
 extern void sleep(int ms);
 extern void sysReboot(void);
+extern uint32_t kernel_code_level();
 
 //
 // Bit Control

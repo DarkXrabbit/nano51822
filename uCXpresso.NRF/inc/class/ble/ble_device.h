@@ -2,7 +2,7 @@
  ===============================================================================
  Name        : ble_device.h
  Author      : uCXpresso
- Version     : v1.0.4
+ Version     : v1.0.5
  Date		 : 2014/11/7
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE SoftDevice driver (S110) class
@@ -17,6 +17,7 @@
  2014/11/3	v1.0.2	Add address() member to retrieve the BLE addr.	Jason
  2014/11/7	v1.0.3	Add wait() member to wait for connected.		Jason
  2014/11/17 v1.0.4  Remote thread feature.							Jason
+ 2015/04/15	v1.0.5	Add peer_addr() member function.				Jason
  ===============================================================================
  */
 
@@ -146,13 +147,19 @@ public:
 		m_hOnEvent = ble_event_handle;
 	}
 
+	/**
+	 * @brief Detach event handle function.
+	 */
 	inline void detachEvent() {
 		m_hOnEvent = NULL;
 	}
 
 	/**
-	 * @brief deattach
+	 * @brief Retrieve the connected peer (host) mac address.
 	 */
+	inline ble_gap_addr_t *peer_addr() {
+		return &m_peer_addr;
+	}
 
 	/**
 	 * @brief Get SoftDevice driver version information.
@@ -221,7 +228,8 @@ public:
 
 protected:
 	CSemaphore	m_semWaitForConnected;
-	ble_event_handle_t m_hOnEvent;
+	ble_event_handle_t	m_hOnEvent;
+	ble_gap_addr_t		m_peer_addr;
 
 	//
 	// for services

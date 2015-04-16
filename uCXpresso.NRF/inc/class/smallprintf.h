@@ -42,6 +42,7 @@ public:
 protected:
 //	virtual void alloc(int bufsize=256) { NOTHING }
 //	virtual void free() { NOTHING }
+	virtual void restart() { NOTHING }
 	int		 m_base;
 	/*! \endcond */
 };
