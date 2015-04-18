@@ -2,7 +2,7 @@
 ===============================================================================
  Name        : adc_touch_key
  Author      : uCXpresso
- Version     : v1.0.0
+ Version     : v1.0.1
  Copyright   : www.ucxpresso.net
  Description : Make Touch Key/Switch by ADC
 ===============================================================================
@@ -11,6 +11,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2015/4/11 v1.0.0	First Edition.									LEO
+ 2015/4/18 v1.0.1	Add "Auto Tuning".								Jason
  ===============================================================================
  */
 
@@ -49,12 +50,31 @@ void senseTask(CThread *p_thread, xHandle p_param) {
 	led.output();
 
 	CTimeout tmBounce;
-	uint16_t value;
+	uint16_t avg=0, max, min, value;
 
+	//
+	// auto tuning
+	//
+	for (int i=0; i<10; i++) {
+		if ( CAdc::read(AD0, value) ) {
+			avg += value;
+		}
+		sleep(100);
+	}
+	avg = avg / 10;
+	max = avg * 1.1f;
+	min = avg * 0.9f;
+
+#ifdef DEBUG
+//	gpDBG->waitToDebugMode();
+//	DBG("avg=%d, max=%d, min=%d\n", avg, max, min);
+#endif
+
+	// touch key task loop
 	uint16_t flag = 0;
 	while( p_thread->isAlive() ) {
 		if ( CAdc::read(AD0, value) ) {
-			if ( value>600 || value<400 ) {
+			if ( value>max || value<min ) {
 				//
 				// Touch
 				//
@@ -106,8 +126,11 @@ int main(void) {
 	// task 1
 	//
 	CThread t1(senseTask);
-	t1.start("t1", 68);
-
+#ifdef DEBUG
+	t1.start("t1", 128);	// more stack size for DBG
+#else
+	t1.start("t1", 72);
+#endif
 
 	//
     // Enter main loop.
