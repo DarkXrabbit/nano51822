@@ -1,9 +1,10 @@
 var classble_advertising =
 [
+    [ "add_uuid_to_complete_list", "d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035", null ],
     [ "add_uuid_to_complete_list", "d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9", null ],
     [ "appearance", "d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c", null ],
     [ "commpany_identifier", "d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be", null ],
-    [ "flag", "d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa", null ],
+    [ "flags", "d0/d2c/classble_advertising.html#a40ba33313fb25ed0d3c6643d82e31a7e", null ],
     [ "interval", "d0/d2c/classble_advertising.html#aab40eab6c4644bee02c67c483c7804ca", null ],
     [ "isActive", "d0/d2c/classble_advertising.html#a2b40aa338a9f627753f254928ef820fe", null ],
     [ "isThread", "d0/d2c/classble_advertising.html#a26a76c241a4d62d2efdac57d2cfe4c0f", null ],
@@ -16,7 +17,7 @@ var classble_advertising =
     [ "start", "d0/d2c/classble_advertising.html#ac014a2cd27a666dc909d09783b4b4ae9", null ],
     [ "stop", "d0/d2c/classble_advertising.html#a6525dbabc2e5b4893ef6dc9fb5730b84", null ],
     [ "timeout", "d0/d2c/classble_advertising.html#a669dbc0a699f2e3fbe31cfdbebb09edf", null ],
-    [ "tx_power_level", "d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4", null ],
+    [ "tx_power_level", "d0/d2c/classble_advertising.html#ae66e61b3d00ded2210e8469db671b0f8", null ],
     [ "type", "d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815", null ],
     [ "update", "d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2", null ],
     [ "update", "d0/d2c/classble_advertising.html#a55a6be6da52d2794ab84d7f69ae11a62", null ],

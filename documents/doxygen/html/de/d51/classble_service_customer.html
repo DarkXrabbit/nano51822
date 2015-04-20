@@ -177,6 +177,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="memItemLeft" align="right" valign="top">virtual uint16_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e">gatts_hvx_write</a> (ble_gatts_char_handles_t &amp;char_handle, uint8_t *buffer, uint16_t length, <a class="el" href="../../db/dff/group___enumerations.html#gaea1819f50414834e55b0387c666e58e2">HVX_WRITE_T</a> type)</td></tr>
 <tr class="memdesc:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Notify or Indicate an attribute value.  <a href="#a5fd45d8d7a9aeafcffea3b863e0c369e">More...</a><br /></td></tr>
 <tr class="separator:a5fd45d8d7a9aeafcffea3b863e0c369e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a141403d32fcfbe01cd5f4038035f51ad"><td class="memItemLeft" align="right" valign="top">virtual uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d51/classble_service_customer.html#a141403d32fcfbe01cd5f4038035f51ad">gatts_rw_authorize_reply</a> (ble_gatts_rw_authorize_reply_params_t const *const p_rw_authorize_reply_params)</td></tr>
+<tr class="memdesc:a141403d32fcfbe01cd5f4038035f51ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Respond to a Read/Write authorization request.  <a href="#a141403d32fcfbe01cd5f4038035f51ad">More...</a><br /></td></tr>
+<tr class="separator:a141403d32fcfbe01cd5f4038035f51ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>BLE customer services base class. </p>
@@ -352,6 +355,46 @@ NRF_ERROR_DATA_SIZE Invalid data size(s) supplied, attribute lengths are restric
 </table>
 </div><div class="memdoc">
 <p>Check the gatts write buffer available. </p><dl class="section warning"><dt>Warning</dt><dd>To check the write buffer available before to write a data to Notify or Indicate an attribute value. </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a141403d32fcfbe01cd5f4038035f51ad"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual uint32_t bleServiceCustomer::gatts_rw_authorize_reply </td>
+          <td>(</td>
+          <td class="paramtype">ble_gatts_rw_authorize_reply_params_t const *const&#160;</td>
+          <td class="paramname"><em>p_rw_authorize_reply_params</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Respond to a Read/Write authorization request. </p>
+<dl class="section note"><dt>Note</dt><dd>This call should only be used as a response to a BLE_GATTS_EVT_RW_AUTHORIZE_REQUEST event issued to the application.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">p_rw_authorize_reply_params</td><td>Pointer to a structure with the attribute provided by the application.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>NRF_SUCCESS Successfully queued a response to the peer, and in the case of a write operation, ATT table updated. </dd>
+<dd>
+BLE_ERROR_INVALID_CONN_HANDLE Invalid Connection Handle. </dd>
+<dd>
+NRF_ERROR_INVALID_STATE No authorization request pending. </dd>
+<dd>
+NRF_ERROR_INVALID_PARAM Authorization op invalid, or for Read Authorization reply: requested handles not replied with, or for Write Authorization reply: handle supplied does not match requested handle. </dd></dl>
 
 </div>
 </div>
@@ -689,7 +732,7 @@ NRF_ERROR_NO_MEM Not enough memory to complete operation. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../de/d51/classble_service_customer.html">bleServiceCustomer</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

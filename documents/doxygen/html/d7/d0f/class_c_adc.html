@@ -133,9 +133,6 @@ Inheritance diagram for CAdc:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a5c28e5d19bfd310dcadac067e9cb3398"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0f/class_c_adc.html#a5c28e5d19bfd310dcadac067e9cb3398">read</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b">AIN_T</a> ain, uint16_t &amp;value, uint32_t timeout=MAX_DELAY_TIME)</td></tr>
-<tr class="memdesc:a5c28e5d19bfd310dcadac067e9cb3398"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline function to read an analog value from an AIN (AD0~AD5) pin.  <a href="#a5c28e5d19bfd310dcadac067e9cb3398">More...</a><br /></td></tr>
-<tr class="separator:a5c28e5d19bfd310dcadac067e9cb3398"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -164,6 +161,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a83c787a93563538400e5004750dc72ee"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">read</a> (uint16_t &amp;value, uint32_t timeout=MAX_DELAY_TIME)</td></tr>
 <tr class="memdesc:a83c787a93563538400e5004750dc72ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read analog convert value.  <a href="#a83c787a93563538400e5004750dc72ee">More...</a><br /></td></tr>
 <tr class="separator:a83c787a93563538400e5004750dc72ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83db1bfa106939efd5dba96f76638083"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0f/class_c_adc.html#a83db1bfa106939efd5dba96f76638083">read</a> (<a class="el" href="../../db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b">AIN_T</a> ain, uint16_t &amp;value, uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:a83db1bfa106939efd5dba96f76638083"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inline function to read an analog value from an AIN (AD0~AD5) pin.  <a href="#a83db1bfa106939efd5dba96f76638083">More...</a><br /></td></tr>
+<tr class="separator:a83db1bfa106939efd5dba96f76638083"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e94132f08c87cfc397a8f35dac6c532"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d0f/class_c_adc.html#a0e94132f08c87cfc397a8f35dac6c532">isBusy</a> ()</td></tr>
 <tr class="memdesc:a0e94132f08c87cfc397a8f35dac6c532"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check analog module busy.  <a href="#a0e94132f08c87cfc397a8f35dac6c532">More...</a><br /></td></tr>
 <tr class="separator:a0e94132f08c87cfc397a8f35dac6c532"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -423,11 +423,11 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a43">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a39">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a34">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a42">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a28">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a44">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>, and <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a13">/peripherals/adc_test/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a43">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a38">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a37">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a42">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a28">/ble/ble_rssi_measure/src/main.cpp</a>, <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a44">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>, and <a class="el" href="../../d7/dfe/_2peripherals_2adc_test_2src_2main_8cpp-example.html#a13">/peripherals/adc_test/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a5c28e5d19bfd310dcadac067e9cb3398"></a>
+<a class="anchor" id="a83db1bfa106939efd5dba96f76638083"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -435,7 +435,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool CAdc::read </td>
+          <td class="memname">static bool CAdc::read </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../db/dff/group___enumerations.html#ga9f048db78212facfb5363e0b932c6c7b">AIN_T</a>&#160;</td>
           <td class="paramname"><em>ain</em>, </td>
@@ -460,7 +460,7 @@ Static Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -580,7 +580,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d7/d0f/class_c_adc.html">CAdc</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:15 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

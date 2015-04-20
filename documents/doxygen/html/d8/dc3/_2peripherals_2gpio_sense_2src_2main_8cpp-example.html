@@ -150,13 +150,13 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line"><span class="keywordtype">void</span> senseTask(<a name="_a0"></a><a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> *p_thread, xHandle p_param) {</div>
 <div class="line">    SENSE_PARAM_T *p_sense = (SENSE_PARAM_T *)  p_param;</div>
 <div class="line"></div>
-<div class="line">    <a name="_a1"></a><a class="code" href="../../d0/d3c/classgpio_sense.html">gpioSense</a> sense(p_sense-&gt;sense_pin, p_sense-&gt;trigger);</div>
+<div class="line">    <a name="_a1"></a><a class="code" href="../../d0/d3c/classgpio_sense.html">gpioSense</a> sense(p_sense-&gt;sense_pin, p_sense-&gt;trigger, <a name="a2"></a><a class="code" href="../../db/dff/group___enumerations.html#gga9f8f32709b482732d6e377ff26da36efa013572cb02b52b1022858df73a528a08">NEITHER</a>);</div>
 <div class="line">    sense.enable();</div>
 <div class="line"></div>
-<div class="line">    <a name="_a2"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(p_sense-&gt;led_pin);</div>
+<div class="line">    <a name="_a3"></a><a class="code" href="../../d7/db9/class_c_pin.html">CPin</a> led(p_sense-&gt;led_pin);</div>
 <div class="line">    led.output();</div>
 <div class="line"></div>
-<div class="line">    <span class="keywordflow">while</span>( p_thread-&gt;<a name="a3"></a><a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>() ) {</div>
+<div class="line">    <span class="keywordflow">while</span>( p_thread-&gt;<a name="a4"></a><a class="code" href="../../d0/d26/class_c_thread.html#a4a0f0727be4714cef1e24150a869d403">isAlive</a>() ) {</div>
 <div class="line">        <span class="keywordflow">if</span> ( sense.wait() ) {</div>
 <div class="line">            led.toggle();</div>
 <div class="line">        }</div>
@@ -164,13 +164,21 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line">}</div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">// Hardware</span></div>
+<div class="line"><span class="comment">//</span></div>
+<div class="line"><span class="comment">//#define BOARD_LILYPAD</span></div>
+<div class="line"><span class="comment">//#define BOARD_PCA10001</span></div>
+<div class="line"><span class="preprocessor">#define BOARD_NANO51822_UDK</span></div>
+<div class="line"><span class="preprocessor">#include &lt;config/board.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="comment">// Main Routine</span></div>
 <div class="line"><span class="comment">//</span></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">void</span>) {</div>
 <div class="line"><span class="preprocessor">#ifdef DEBUG</span></div>
-<div class="line">    <a name="_a4"></a><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> ser;        <span class="comment">// declare a UART object</span></div>
-<div class="line">    ser.<a name="a5"></a><a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>();</div>
-<div class="line">    <a name="_a6"></a><a class="code" href="../../d4/d37/class_c_debug.html">CDebug</a> dbg(ser);    <span class="comment">// Debug stream use the UART object</span></div>
+<div class="line">    <a name="_a5"></a><a class="code" href="../../d8/d1d/class_c_serial.html">CSerial</a> ser;        <span class="comment">// declare a UART object</span></div>
+<div class="line">    ser.<a name="a6"></a><a class="code" href="../../d8/d1d/class_c_serial.html#a71fb5e952034c0f2d195351f99afa13e">enable</a>();</div>
+<div class="line">    <a name="_a7"></a><a class="code" href="../../d4/d37/class_c_debug.html">CDebug</a> dbg(ser);    <span class="comment">// Debug stream use the UART object</span></div>
 <div class="line">    dbg.start();</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
@@ -178,20 +186,20 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <div class="line">    <span class="comment">// Optional: Enable tickless technology</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line"><span class="preprocessor">#ifndef DEBUG</span></div>
-<div class="line">    <a name="a7"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
+<div class="line">    <a name="a8"></a><a class="code" href="../../d5/d3e/class_c_power_save.html#a12a1487e1ca489b32d4f398f8ca05904">CPowerSave::tickless</a>(<span class="keyword">true</span>);</div>
 <div class="line"><span class="preprocessor">#endif</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// task 1</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t1 = {16, <a name="a8"></a><a class="code" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66">FALLING</a>, 18};    <span class="comment">// task parameters, Sense=P0.16, LED=P0.18</span></div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t1 = {16, <a name="a9"></a><a class="code" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88ad24712a6a30c1d431b927d1ba2f84b66">FALLING</a>, LED_PIN_0}; <span class="comment">// task parameters, Sense=P0.16, LED=LED0</span></div>
 <div class="line">    <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> t1(senseTask, (xHandle) &amp;sense_t1);</div>
-<div class="line">    t1.start(<span class="stringliteral">&quot;t1&quot;</span>, 62, <a name="a9"></a><a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5">PRI_HARDWARE</a>);</div>
+<div class="line">    t1.start(<span class="stringliteral">&quot;t1&quot;</span>, 62, <a name="a10"></a><a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5">PRI_HARDWARE</a>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// task 2</span></div>
 <div class="line">    <span class="comment">//</span></div>
-<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t2 = {17, <a name="a10"></a><a class="code" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7">TOGGLE</a>, 19};     <span class="comment">// task parameters, Sense=P0.17, LED=P0.19</span></div>
+<div class="line">    <span class="keyword">static</span> <span class="keyword">const</span> SENSE_PARAM_T sense_t2 = {17, <a name="a11"></a><a class="code" href="../../db/dff/group___enumerations.html#gga25e7251025c00833f4f09f073c974f88a4acfde02350139a12fcef53ff7289aa7">TOGGLE</a>, LED_PIN_1};  <span class="comment">// task parameters, Sense=P0.17, LED=LED1</span></div>
 <div class="line">    <a class="code" href="../../d0/d26/class_c_thread.html">CThread</a> t2(senseTask, (xHandle) &amp;sense_t2);</div>
 <div class="line">    t2.start(<span class="stringliteral">&quot;t2&quot;</span>, 62, <a class="code" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da47d8cd9e6c142378614cf48f5ecd78e5">PRI_HARDWARE</a>);</div>
 <div class="line"></div>
@@ -216,7 +224,7 @@ $(document).ready(function(){initNavTree('d8/dc3/_2peripherals_2gpio_sense_2src_
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

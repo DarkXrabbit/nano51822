@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['task_5fhandle_5ft',['task_handle_t',['../d0/d26/class_c_thread.html#a328fa92e5811527475320d305f266abf',1,'CThread']]],
-  ['timer_5fhandle_5ft',['timer_handle_t',['../d0/d03/classos_timer.html#a660eaa6a2cd1faeb98a279a9cfd32d72',1,'osTimer']]]
+  ['ss_5fevent_5fhandle_5ft',['ss_event_handle_t',['../d9/d97/class_s_stream.html#a0765526a0981155845eb32fcd3acaf92',1,'SStream']]]
 ];

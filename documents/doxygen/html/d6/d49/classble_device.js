@@ -15,6 +15,7 @@ var classble_device =
     [ "onDisconnected", "d6/d49/classble_device.html#a37d884099d9e300a888551ac0325ca18", null ],
     [ "onError", "d6/d49/classble_device.html#abdd1db8cc91d3b266d84d92acf07b7e8", null ],
     [ "onTimeout", "d6/d49/classble_device.html#ab366c4740428313d45ed4a2692a23aaa", null ],
+    [ "peer_addr", "d6/d49/classble_device.html#a3e9b9b9d0928eb6763382400efce5f3f", null ],
     [ "sdVersion", "d6/d49/classble_device.html#a227676cfdadbc8bd4b3c55c5b82a5dd8", null ],
     [ "wait", "d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9", null ],
     [ "m_advertising", "d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3", null ],

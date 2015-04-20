@@ -22,7 +22,7 @@ var group___peripherals =
       [ "isValid", "d7/d0f/class_c_adc.html#a18cf254bf2030ba75735238fc1a31f4d", null ],
       [ "pin", "d7/d0f/class_c_adc.html#a84c5a06a5d4d8ee65d75fcb16b1f2910", null ],
       [ "read", "d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee", null ],
-      [ "read", "d7/d0f/class_c_adc.html#a5c28e5d19bfd310dcadac067e9cb3398", null ],
+      [ "read", "d7/d0f/class_c_adc.html#a83db1bfa106939efd5dba96f76638083", null ],
       [ "reference", "d7/d0f/class_c_adc.html#a02da72af459ae098de9e76f816eed3d7", null ],
       [ "reset", "d7/d0f/class_c_adc.html#a43e9ed6fcc4ff33c9e86f1a6741eda02", null ],
       [ "source", "d7/d0f/class_c_adc.html#a06c3d33be67fff2546c0fe8d945cd1bc", null ]
@@ -115,7 +115,6 @@ var group___peripherals =
       [ "output", "d0/d3c/classgpio_sense.html#a8b2877ab0e5d941d5dc686b29bc9db16", null ],
       [ "pin", "d0/d3c/classgpio_sense.html#aff5e5fcd8b9a6de40bc5d262d21a2512", null ],
       [ "read", "d0/d3c/classgpio_sense.html#a02060b0c9bbf0f75dead7bef1c75ce6b", null ],
-      [ "release", "d0/d3c/classgpio_sense.html#ae0f0ee522de000fb3487bbc351c00972", null ],
       [ "toggle", "d0/d3c/classgpio_sense.html#a2000134208f704f1bf79082f518ef764", null ],
       [ "wait", "d0/d3c/classgpio_sense.html#a8dbbe3d0ce3b020c4a3a72a11cb7e06d", null ],
       [ "write", "d0/d3c/classgpio_sense.html#a1fc3486f4afea4de56ae677c20600551", null ]
@@ -219,6 +218,7 @@ var group___peripherals =
       [ "read", "d8/d1d/class_c_serial.html#a5c5870bec2c7c5f6be1e59c83d555d38", null ],
       [ "read", "d8/d1d/class_c_serial.html#af56764abe8954430eede10e253f8994f", null ],
       [ "readable", "d8/d1d/class_c_serial.html#a96328807241e15017868b845b06fd9e4", null ],
+      [ "wait", "d8/d1d/class_c_serial.html#ac4d97f92b6e5517dad3f10707e84abdc", null ],
       [ "waitTxEmpty", "d8/d1d/class_c_serial.html#a6259540dbdf87dffc659b44e2ea80e36", null ],
       [ "write", "d8/d1d/class_c_serial.html#ac8d31702e9e03eb0856583ba16764860", null ],
       [ "write", "d8/d1d/class_c_serial.html#a48041fea5cad32feaeef543bcaa2d37d", null ],
@@ -249,10 +249,12 @@ var group___peripherals =
       [ "wait", "da/d31/classspi_slave.html#ad205b5fc70a705c7dd1ff093ff87a587", null ]
     ] ],
     [ "SStream", "d9/d97/class_s_stream.html", [
+      [ "ss_event_handle_t", "d9/d97/class_s_stream.html#a0765526a0981155845eb32fcd3acaf92", null ],
       [ "SStream", "d9/d97/class_s_stream.html#a8fc77890db63fd952d5d60f67a1274a8", null ],
       [ "available", "d9/d97/class_s_stream.html#afdbf8d786e4aac9b06afe3447427a2ae", null ],
       [ "count", "d9/d97/class_s_stream.html#abb4293936653ccb14dfdfbd17bed88d0", null ],
       [ "enterCriticalSection", "d9/d97/class_s_stream.html#aeb4cafe42d6cfc41294cf5dedcee8678", null ],
+      [ "event", "d9/d97/class_s_stream.html#a50d60c06c1b9df7ccec284f891140e3b", null ],
       [ "exitCriticalSection", "d9/d97/class_s_stream.html#aab3a51062666552690be49b8e8027161", null ],
       [ "flush", "d9/d97/class_s_stream.html#a5bd707b33627e01c2069b14bbf10694a", null ],
       [ "getName", "d9/d97/class_s_stream.html#aa291909bc3ff7cc0decf46c885a7a725", null ],
@@ -281,12 +283,13 @@ var group___peripherals =
       [ "resumeAll", "d9/d97/class_s_stream.html#a743d4325b7e7da494283f3292773ff77", null ],
       [ "run", "d9/d97/class_s_stream.html#a071c3d3b3c19a7bd6a01aca073a9b4d7", null ],
       [ "setPriority", "d9/d97/class_s_stream.html#a6b0703ae0cc085a0c0aaa55b6945575b", null ],
-      [ "start", "d9/d97/class_s_stream.html#a8a9ef2373a1abf07c5c4b7e067c617e5", null ],
+      [ "start", "d9/d97/class_s_stream.html#a7953cc1f857c5dc6b75ef7df4d7c9a33", null ],
       [ "start", "d9/d97/class_s_stream.html#a3ebabcc071634508511ae2fc7b868ab7", null ],
       [ "start", "d9/d97/class_s_stream.html#aacf955d1852e74da1f989251955ee6ec", null ],
       [ "suspend", "d9/d97/class_s_stream.html#a53e71e6db2221cd1c45aec21953d4aad", null ],
       [ "suspendAll", "d9/d97/class_s_stream.html#a2c09328581bd4e4a3e9e793f3376a92a", null ],
       [ "suspendCurrentTask", "d9/d97/class_s_stream.html#addc1c069ea8a8c981c746828c5c68358", null ],
+      [ "wait", "d9/d97/class_s_stream.html#a83595344896200f7729e1de6aaa45c92", null ],
       [ "wait", "d9/d97/class_s_stream.html#aeef2934f3e97c509dfa50b2cb6e3bf23", null ],
       [ "wait", "d9/d97/class_s_stream.html#ab4b40e0be451be4c25808319ecd68d07", null ],
       [ "waitTxEmpty", "d9/d97/class_s_stream.html#a6259540dbdf87dffc659b44e2ea80e36", null ],
@@ -305,7 +308,7 @@ var group___peripherals =
       [ "size", "d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d", null ],
       [ "start_addr", "d3/de1/class_c_storage.html#ad028d86ff72b1f56a6fb5763bff7eeed", null ],
       [ "total_size", "d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d", null ],
-      [ "write", "d3/de1/class_c_storage.html#a973bd3f8889dcb99b571fecdce77353e", null ]
+      [ "write", "d3/de1/class_c_storage.html#acd9fab689ea524e415b379a5fbd8ac33", null ]
     ] ],
     [ "CStream", "d4/d16/class_c_stream.html", [
       [ "CStream", "d4/d16/class_c_stream.html#a147900f253c57d3223ae1220e0336808", null ],
@@ -326,6 +329,7 @@ var group___peripherals =
       [ "read", "d4/d16/class_c_stream.html#a5c5870bec2c7c5f6be1e59c83d555d38", null ],
       [ "read", "d4/d16/class_c_stream.html#af56764abe8954430eede10e253f8994f", null ],
       [ "readable", "d4/d16/class_c_stream.html#a96328807241e15017868b845b06fd9e4", null ],
+      [ "wait", "d4/d16/class_c_stream.html#ac4d97f92b6e5517dad3f10707e84abdc", null ],
       [ "waitTxEmpty", "d4/d16/class_c_stream.html#a6259540dbdf87dffc659b44e2ea80e36", null ],
       [ "write", "d4/d16/class_c_stream.html#ac8d31702e9e03eb0856583ba16764860", null ],
       [ "write", "d4/d16/class_c_stream.html#a48041fea5cad32feaeef543bcaa2d37d", null ],

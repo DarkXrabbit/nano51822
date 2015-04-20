@@ -2,7 +2,7 @@ var searchData=
 [
   ['access_5fwait',['access_wait',['../d3/de1/class_c_storage.html#ad6606ffec489224f6a6d1101ad544baf',1,'CStorage']]],
   ['add_5fchannel',['add_channel',['../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84',1,'swPWM']]],
-  ['add_5fuuid_5fto_5fcomplete_5flist',['add_uuid_to_complete_list',['../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9',1,'bleAdvertising']]],
+  ['add_5fuuid_5fto_5fcomplete_5flist',['add_uuid_to_complete_list',['../d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035',1,'bleAdvertising::add_uuid_to_complete_list(uint16_t uuid, uint8_t type=BLE_UUID_TYPE_BLE)'],['../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9',1,'bleAdvertising::add_uuid_to_complete_list(bleService &amp;service)']]],
   ['addhead',['addHead',['../df/db6/class_c_list.html#af77b9f95976788ad6b74e825fad12e94',1,'CList']]],
   ['addheadt',['addHeadT',['../da/d59/class_c_list_t.html#a1135a93b349ac4ae024e45b8fbdc2842',1,'CListT']]],
   ['addr',['addr',['../d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a',1,'CStorage']]],

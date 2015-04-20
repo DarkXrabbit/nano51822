@@ -111,6 +111,7 @@ $(document).ready(function(){initNavTree('d9/d97/class_s_stream.html','../../');
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pri-types">Private Types</a> &#124;
 <a href="../../de/d6b/class_s_stream-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SStream Class Reference<div class="ingroups"><a class="el" href="../../d1/d6c/group___peripherals.html">Peripherals</a></div></div>  </div>
@@ -142,9 +143,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8918ac940aeb1bf942b5bfe24065f181"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/class_s_stream.html#a8918ac940aeb1bf942b5bfe24065f181">isConnected</a> ()</td></tr>
 <tr class="memdesc:a8918ac940aeb1bf942b5bfe24065f181"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check the stream connection.  <a href="#a8918ac940aeb1bf942b5bfe24065f181">More...</a><br /></td></tr>
 <tr class="separator:a8918ac940aeb1bf942b5bfe24065f181"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a9ef2373a1abf07c5c4b7e067c617e5"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/class_s_stream.html#a8a9ef2373a1abf07c5c4b7e067c617e5">start</a> (int stack=132)</td></tr>
-<tr class="memdesc:a8a9ef2373a1abf07c5c4b7e067c617e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the Secure Stream component.  <a href="#a8a9ef2373a1abf07c5c4b7e067c617e5">More...</a><br /></td></tr>
-<tr class="separator:a8a9ef2373a1abf07c5c4b7e067c617e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a83595344896200f7729e1de6aaa45c92"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/class_s_stream.html#a83595344896200f7729e1de6aaa45c92">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:a83595344896200f7729e1de6aaa45c92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the <a class="el" href="../../d4/d16/class_c_stream.html#ac4d97f92b6e5517dad3f10707e84abdc">CStream::wait</a> member function.  <a href="#a83595344896200f7729e1de6aaa45c92">More...</a><br /></td></tr>
+<tr class="separator:a83595344896200f7729e1de6aaa45c92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7953cc1f857c5dc6b75ef7df4d7c9a33"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/class_s_stream.html#a7953cc1f857c5dc6b75ef7df4d7c9a33">start</a> (int stack=88)</td></tr>
+<tr class="memdesc:a7953cc1f857c5dc6b75ef7df4d7c9a33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start the Secure Stream component.  <a href="#a7953cc1f857c5dc6b75ef7df4d7c9a33">More...</a><br /></td></tr>
+<tr class="separator:a7953cc1f857c5dc6b75ef7df4d7c9a33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50d60c06c1b9df7ccec284f891140e3b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/class_s_stream.html#a50d60c06c1b9df7ccec284f891140e3b">event</a> (<a class="el" href="../../d9/d97/class_s_stream.html#a0765526a0981155845eb32fcd3acaf92">ss_event_handle_t</a> func)</td></tr>
+<tr class="separator:a50d60c06c1b9df7ccec284f891140e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ebabcc071634508511ae2fc7b868ab7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a3ebabcc071634508511ae2fc7b868ab7">start</a> (const char *name, int stack=DEF_THREAD_STACK, <a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a> priority=<a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402">PRI_LOW</a>)</td></tr>
 <tr class="memdesc:a3ebabcc071634508511ae2fc7b868ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call the member function to start the thread.  <a href="#a3ebabcc071634508511ae2fc7b868ab7">More...</a><br /></td></tr>
 <tr class="separator:a3ebabcc071634508511ae2fc7b868ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,10 +277,36 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ab4b40e0be451be4c25808319ecd68d07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a071c3d3b3c19a7bd6a01aca073a9b4d7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d26/class_c_thread.html#a071c3d3b3c19a7bd6a01aca073a9b4d7">run</a> ()</td></tr>
 <tr class="separator:a071c3d3b3c19a7bd6a01aca073a9b4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
+Private Types</h2></td></tr>
+<tr class="memitem:a0765526a0981155845eb32fcd3acaf92"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d97/class_s_stream.html#a0765526a0981155845eb32fcd3acaf92">ss_event_handle_t</a> )(<a class="el" href="../../d9/d97/class_s_stream.html">SStream</a> *p_ss, <a class="el" href="../../db/dff/group___enumerations.html#gabf3533595eadc9a1332683723ca3670b">SS_EVENT_T</a> <a class="el" href="../../d9/d97/class_s_stream.html#a50d60c06c1b9df7ccec284f891140e3b">event</a>)</td></tr>
+<tr class="separator:a0765526a0981155845eb32fcd3acaf92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a0765526a0981155845eb32fcd3acaf92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* SStream::ss_event_handle_t)(<a class="el" href="../../d9/d97/class_s_stream.html">SStream</a> *p_ss, <a class="el" href="../../db/dff/group___enumerations.html#gabf3533595eadc9a1332683723ca3670b">SS_EVENT_T</a> <a class="el" href="../../d9/d97/class_s_stream.html#a50d60c06c1b9df7ccec284f891140e3b">event</a>)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a8fc77890db63fd952d5d60f67a1274a8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -404,6 +436,31 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678" title="Call the CThread::enterCriticalSection() to disable interrupts. ">CThread::enterCriticalSection()</a> to disable interrupts. </p>
+
+</div>
+</div>
+<a class="anchor" id="a50d60c06c1b9df7ccec284f891140e3b"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SStream::event </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d97/class_s_stream.html#a0765526a0981155845eb32fcd3acaf92">ss_event_handle_t</a>&#160;</td>
+          <td class="paramname"><em>func</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set <a class="el" href="../../d9/d97/class_s_stream.html" title="A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream...">SStream</a> Events Handle </p>
 
 </div>
 </div>
@@ -585,7 +642,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>isAlive is to check the thread is in alive (for run-loop) </p>
 <dl class="section return"><dt>Returns</dt><dd>false if the thread is deleted. </dd></dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a2">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a3">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a4">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>, <a class="el" href="../../d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html#a3">/peripherals/gpio_sense/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a2">/rtos/blink/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a2">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a3">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a4">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>, <a class="el" href="../../d8/dc3/_2peripherals_2gpio_sense_2src_2main_8cpp-example.html#a4">/peripherals/gpio_sense/src/main.cpp</a>, and <a class="el" href="../../d1/d42/_2rtos_2blink_2src_2main_8cpp-example.html#a2">/rtos/blink/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -1269,7 +1326,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a8a9ef2373a1abf07c5c4b7e067c617e5"></a>
+<a class="anchor" id="a7953cc1f857c5dc6b75ef7df4d7c9a33"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -1280,7 +1337,7 @@ Protected Member Functions</h2></td></tr>
           <td class="memname">virtual bool SStream::start </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>stack</em> = <code>132</code></td><td>)</td>
+          <td class="paramname"><em>stack</em> = <code>88</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1475,6 +1532,34 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Call the <a class="el" href="../../d0/d26/class_c_thread.html#addc1c069ea8a8c981c746828c5c68358" title="Call the CThread::suspendCurrentTask to suspend current task. ">CThread::suspendCurrentTask</a> to suspend current task. </p>
+
+</div>
+</div>
+<a class="anchor" id="a83595344896200f7729e1de6aaa45c92"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool SStream::wait </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>MAX_DELAY_TIME</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Override the <a class="el" href="../../d4/d16/class_c_stream.html#ac4d97f92b6e5517dad3f10707e84abdc">CStream::wait</a> member function. </p>
+
+<p>Reimplemented from <a class="el" href="../../d4/d16/class_c_stream.html#ac4d97f92b6e5517dad3f10707e84abdc">CStream</a>.</p>
 
 </div>
 </div>
@@ -1737,7 +1822,7 @@ Protected Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d9/d97/class_s_stream.html">SStream</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:15 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:51 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

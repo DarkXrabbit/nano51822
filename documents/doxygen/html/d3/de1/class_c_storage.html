@@ -136,9 +136,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fe8f8de3568688b726914698985e562"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#a8fe8f8de3568688b726914698985e562">CStorage</a> (uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t count=1)</td></tr>
 <tr class="memdesc:a8fe8f8de3568688b726914698985e562"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs the storage object.  <a href="#a8fe8f8de3568688b726914698985e562">More...</a><br /></td></tr>
 <tr class="separator:a8fe8f8de3568688b726914698985e562"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a973bd3f8889dcb99b571fecdce77353e"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#a973bd3f8889dcb99b571fecdce77353e">write</a> (const void *buf, uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t offset=0)</td></tr>
-<tr class="memdesc:a973bd3f8889dcb99b571fecdce77353e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to storage.  <a href="#a973bd3f8889dcb99b571fecdce77353e">More...</a><br /></td></tr>
-<tr class="separator:a973bd3f8889dcb99b571fecdce77353e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd9fab689ea524e415b379a5fbd8ac33"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#acd9fab689ea524e415b379a5fbd8ac33">write</a> (const void *buf, uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t offset=0, bool fromISR=false)</td></tr>
+<tr class="memdesc:acd9fab689ea524e415b379a5fbd8ac33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Write data to storage.  <a href="#acd9fab689ea524e415b379a5fbd8ac33">More...</a><br /></td></tr>
+<tr class="separator:acd9fab689ea524e415b379a5fbd8ac33"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e2cf86a4d0704eb7a5665e0234a1e48"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/de1/class_c_storage.html#a3e2cf86a4d0704eb7a5665e0234a1e48">read</a> (void *buf, uint16_t <a class="el" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t offset=0)</td></tr>
 <tr class="memdesc:a3e2cf86a4d0704eb7a5665e0234a1e48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read data from storage.  <a href="#a3e2cf86a4d0704eb7a5665e0234a1e48">More...</a><br /></td></tr>
 <tr class="separator:a3e2cf86a4d0704eb7a5665e0234a1e48"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -450,7 +450,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a973bd3f8889dcb99b571fecdce77353e"></a>
+<a class="anchor" id="acd9fab689ea524e415b379a5fbd8ac33"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -470,7 +470,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">uint16_t&#160;</td>
-          <td class="paramname"><em>offset</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>offset</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>fromISR</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -486,6 +492,7 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">buf</td><td>Pointer to the data buffer for write. </td></tr>
     <tr><td class="paramname">size</td><td>Number of byte to write. </td></tr>
     <tr><td class="paramname">offset</td><td>Offset to the address from the storage began. </td></tr>
+    <tr><td class="paramname">fromISR</td><td>Call the write member function from ISR or BLE routine.</td></tr>
   </table>
   </dd>
 </dl>
@@ -511,7 +518,7 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d3/de1/class_c_storage.html">CStorage</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:15 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

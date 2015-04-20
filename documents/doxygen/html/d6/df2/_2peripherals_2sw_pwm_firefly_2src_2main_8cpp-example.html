@@ -137,7 +137,8 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line"><span class="preprocessor">#include &lt;arm_math.h&gt;</span>       <span class="comment">// CMSIS DSP Library</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// TODO: insert other definitions and declarations here</span></div>
-<div class="line"><span class="preprocessor">#define BOARD_PCA10001</span></div>
+<div class="line"><span class="comment">//#define BOARD_PCA10001</span></div>
+<div class="line"><span class="preprocessor">#define BOARD_NANO51822_UDK</span></div>
 <div class="line"><span class="preprocessor">#include &lt;config/board.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">//</span></div>
@@ -160,11 +161,10 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_1); <span class="comment">// add PWM channel with LED1</span></div>
 <div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_2); <span class="comment">// add PWM channel with LED2</span></div>
 <div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_3); <span class="comment">// add PWM channel with LED3</span></div>
-<div class="line">    pwm.<a class="code" href="../../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84">add_channel</a>(LED_PIN_4); <span class="comment">// add PWM channel with LED4</span></div>
 <div class="line">    pwm.<a name="a8"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a005a0c83da0e46aa1534ed23a02bcf3d">enable</a>();           <span class="comment">// start the pwm</span></div>
 <div class="line"></div>
 <div class="line">    <span class="keywordtype">float</span> y;</div>
-<div class="line">    <span class="keywordtype">int</span> x[5] = { 0, 9, 18, 27, 36 };        <span class="comment">// initialize all channels x degree</span></div>
+<div class="line">    <span class="keywordtype">int</span> x[4] = { 0, 10, 20, 30 };        <span class="comment">// initialize all channels x degree</span></div>
 <div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
@@ -173,8 +173,8 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// FireFly loop</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; 5; ch++) {</div>
-<div class="line">            x[ch] = (x[ch] + 2) % 360;                          <span class="comment">// degree 0~360, step by 2</span></div>
+<div class="line">        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> ch = 0; ch &lt; 4; ch++) {</div>
+<div class="line">            x[ch] = (x[ch] + 10) % 360;                         <span class="comment">// degree 0~360, step by 2</span></div>
 <div class="line">            y = arm_sin_f32((x[ch] * M_PI) / 180.0f);            <span class="comment">// y = sine @x</span></div>
 <div class="line">            pwm.<a name="a9"></a><a class="code" href="../../da/d88/classsw_p_w_m.html#a4cc413c4128483bd463f5530dbddea18">update</a>(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f));    <span class="comment">// update the duty-cycle of channel</span></div>
 <div class="line">        }</div>
@@ -186,7 +186,7 @@ $(document).ready(function(){initNavTree('d6/df2/_2peripherals_2sw_pwm_firefly_2
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

@@ -6,5 +6,6 @@ var searchData=
   ['encrypt',['encrypt',['../da/d77/class_a_e_s128.html#a5c6555739f89f5049f6502ae35edb7dd',1,'AES128']]],
   ['entercriticalsection',['enterCriticalSection',['../d0/d26/class_c_thread.html#aeb4cafe42d6cfc41294cf5dedcee8678',1,'CThread']]],
   ['enumerations',['Enumerations',['../db/dff/group___enumerations.html',1,'']]],
+  ['event',['event',['../d9/d97/class_s_stream.html#a50d60c06c1b9df7ccec284f891140e3b',1,'SStream']]],
   ['exitcriticalsection',['exitCriticalSection',['../d0/d26/class_c_thread.html#aab3a51062666552690be49b8e8027161',1,'CThread']]]
 ];

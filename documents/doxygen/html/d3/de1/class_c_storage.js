@@ -10,5 +10,5 @@ var class_c_storage =
     [ "size", "d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d", null ],
     [ "start_addr", "d3/de1/class_c_storage.html#ad028d86ff72b1f56a6fb5763bff7eeed", null ],
     [ "total_size", "d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d", null ],
-    [ "write", "d3/de1/class_c_storage.html#a973bd3f8889dcb99b571fecdce77353e", null ]
+    [ "write", "d3/de1/class_c_storage.html#acd9fab689ea524e415b379a5fbd8ac33", null ]
 ];

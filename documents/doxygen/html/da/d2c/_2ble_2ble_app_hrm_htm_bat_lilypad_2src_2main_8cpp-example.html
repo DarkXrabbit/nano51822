@@ -142,6 +142,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line"><span class="preprocessor">#include &lt;class/timeout.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/thread.h&gt;</span></div>
 <div class="line"><span class="preprocessor">#include &lt;class/power.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#include &lt;class/timeout.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="comment">// TODO: insert other definitions and declarations here</span></div>
 <div class="line"><span class="preprocessor">#define DEVICE_NAME                         &quot;nano51822&quot;         </span></div>
@@ -220,9 +221,9 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">    <span class="comment">// update advertisement contents</span></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    ble.<a name="a20"></a><a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a21"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a>(APP_COMPANY_IDENTIFIER);  <span class="comment">// add company identifier</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a22"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(hrm);               <span class="comment">// add hrm object to the uuid list of advertisement</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(htm);               <span class="comment">// add htm object to the uuid_list of advertisement</span></div>
-<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a>(bat);               <span class="comment">// add bat object to the uuid_list of advertisement</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a22"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035">add_uuid_to_complete_list</a>(hrm);               <span class="comment">// add hrm object to the uuid list of advertisement</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035">add_uuid_to_complete_list</a>(htm);               <span class="comment">// add htm object to the uuid_list of advertisement</span></div>
+<div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a class="code" href="../../d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035">add_uuid_to_complete_list</a>(bat);               <span class="comment">// add bat object to the uuid_list of advertisement</span></div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a23"></a><a class="code" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a>(BLE_APPEARANCE_GENERIC_HEART_RATE_SENSOR);</div>
 <div class="line">    ble.<a class="code" href="../../d6/d49/classble_device.html#a239a91976b72492fe0275e21aa94a0e3">m_advertising</a>.<a name="a24"></a><a class="code" href="../../d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2">update</a>();                                     <span class="comment">// update advertisement data</span></div>
 <div class="line"></div>
@@ -255,6 +256,8 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">    uint16_t value;</div>
 <div class="line">    <span class="keywordtype">float</span>    temp, percentage;</div>
 <div class="line"></div>
+<div class="line">    <a name="_a32"></a><a class="code" href="../../d5/d5b/class_c_timeout.html">CTimeout</a> tmBAT;</div>
+<div class="line"></div>
 <div class="line">    <span class="comment">//</span></div>
 <div class="line">    <span class="comment">// Enter main loop.</span></div>
 <div class="line">    <span class="comment">//</span></div>
@@ -263,7 +266,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// wait for BLE connected, the task will be blocked until connected.</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        ble.<a name="a32"></a><a class="code" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a>();</div>
+<div class="line">        ble.<a name="a33"></a><a class="code" href="../../d6/d49/classble_device.html#aa06a3a42710cc86472c92583a6d608e9">wait</a>();</div>
 <div class="line"></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Heart Rate Measurement Service</span></div>
@@ -276,7 +279,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        <span class="comment">// Health Thermometer Measurement Service</span></div>
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="keywordflow">if</span> ( htm.isAvailable() ) {      <span class="comment">// is service available (when remote app connected to the service)</span></div>
-<div class="line">            <span class="keywordflow">if</span> ( <a name="a33"></a><a class="code" href="../../d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da">bleServiceHTM::get_temperature</a>(temp) ) {</div>
+<div class="line">            <span class="keywordflow">if</span> ( <a name="a34"></a><a class="code" href="../../d3/d27/classble_service_h_t_m.html#ac884da959110bd1bad6029f9d57d91da">bleServiceHTM::get_temperature</a>(temp) ) {</div>
 <div class="line">                htm.send(temp); <span class="comment">// send temp</span></div>
 <div class="line">            }</div>
 <div class="line">        }</div>
@@ -284,8 +287,9 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <div class="line">        <span class="comment">//</span></div>
 <div class="line">        <span class="comment">// Battery Service</span></div>
 <div class="line">        <span class="comment">//</span></div>
-<div class="line">        <span class="keywordflow">if</span> ( bat.isAvailable() ) {      <span class="comment">// is service available (when remote app connected to the service)</span></div>
-<div class="line">            <span class="keywordflow">if</span> ( <a name="a34"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a>(value) ) {</div>
+<div class="line">        <span class="keywordflow">if</span> ( tmBAT.<a name="a35"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a3841c7c53689d2ef8559a6c5e402aa5b">isExpired</a>(1000) ) {      <span class="comment">// is service available (when remote app connected to the service)</span></div>
+<div class="line">            tmBAT.<a name="a36"></a><a class="code" href="../../d5/d5b/class_c_timeout.html#a663a09bb51c1de8f8d83bd62fdc1a688">reset</a>();</div>
+<div class="line">            <span class="keywordflow">if</span> ( <a name="a37"></a><a class="code" href="../../d7/d0f/class_c_adc.html#a83c787a93563538400e5004750dc72ee">CAdc::read</a>(value) ) {</div>
 <div class="line">                percentage = (value / 1024.0f) * 100.0;</div>
 <div class="line">                bat.send(percentage);</div>
 <div class="line">            }</div>
@@ -303,7 +307,7 @@ $(document).ready(function(){initNavTree('da/d2c/_2ble_2ble_app_hrm_htm_bat_lily
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:48 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

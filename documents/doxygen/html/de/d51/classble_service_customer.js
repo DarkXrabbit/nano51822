@@ -4,6 +4,7 @@ var classble_service_customer =
     [ "characteristic_add", "de/d51/classble_service_customer.html#ae2e8deccb86fb41be85b3dc19e227ae9", null ],
     [ "gatts_hvx_write", "de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e", null ],
     [ "gatts_hvx_writeable", "de/d51/classble_service_customer.html#a0deb640694dfbe4a3bfe67a23dcf3a33", null ],
+    [ "gatts_rw_authorize_reply", "de/d51/classble_service_customer.html#a141403d32fcfbe01cd5f4038035f51ad", null ],
     [ "gatts_value_get", "de/d51/classble_service_customer.html#aec037610f5e08981839bc032a4d69c5c", null ],
     [ "gatts_value_set", "de/d51/classble_service_customer.html#a797d0d03dfc264ca1b5268ee546e858a", null ],
     [ "isAvailable", "de/d51/classble_service_customer.html#a37a2eb258d248ad86575e8b7f31deda1", null ],

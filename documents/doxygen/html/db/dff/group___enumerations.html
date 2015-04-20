@@ -331,6 +331,12 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:ga2d645fa61295e3fd670effeb557d117d"><td class="mdescLeft">&#160;</td><td class="mdescRight">SPI master frequency.  <a href="../../db/dff/group___enumerations.html#ga2d645fa61295e3fd670effeb557d117d">More...</a><br /></td></tr>
 <tr class="separator:ga2d645fa61295e3fd670effeb557d117d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabf3533595eadc9a1332683723ca3670b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#gabf3533595eadc9a1332683723ca3670b">SS_EVENT_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba57d7a0c6aa65f5124900ab8e86992c19">SS_TIMEOUT</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba097f95adc87c47e70cd008b417fbac57">SS_CONNECTED</a>, 
+<a class="el" href="../../db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba8a8116fdeb7b8d229bde012af7029966">SS_DISCONNECTED</a>
+ }</td></tr>
+<tr class="memdesc:gabf3533595eadc9a1332683723ca3670b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="d9/d97/class_s_stream.html" title="A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream...">SStream</a> events.  <a href="../../db/dff/group___enumerations.html#gabf3533595eadc9a1332683723ca3670b">More...</a><br /></td></tr>
+<tr class="separator:gabf3533595eadc9a1332683723ca3670b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga51e24e4c0498282f564e92975e020c1d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dff/group___enumerations.html#ga51e24e4c0498282f564e92975e020c1d">PRIORITIES_T</a> { <a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1daf8a2513dc9a78bb09c0520af65a3f402">PRI_LOW</a> = 0, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1da79f9a58f2b2fb4dcce4589cd93a5e3f8">PRI_MEDIUM</a>, 
 <a class="el" href="../../db/dff/group___enumerations.html#gga51e24e4c0498282f564e92975e020c1dae366c91784dd520e388c90d0e3770b2b">PRI_HIGH</a>, 
@@ -1229,6 +1235,33 @@ Enumerations</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="gabf3533595eadc9a1332683723ca3670b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../db/dff/group___enumerations.html#gabf3533595eadc9a1332683723ca3670b">SS_EVENT_T</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><code>#include &lt;sstream.h&gt;</code></p>
+
+<p><a class="el" href="../../d9/d97/class_s_stream.html" title="A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream...">SStream</a> events. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a class="anchor" id="ggabf3533595eadc9a1332683723ca3670ba57d7a0c6aa65f5124900ab8e86992c19"></a>SS_TIMEOUT&#160;</td><td class="fielddoc">
+<p>IV block timeout. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabf3533595eadc9a1332683723ca3670ba097f95adc87c47e70cd008b417fbac57"></a>SS_CONNECTED&#160;</td><td class="fielddoc">
+<p><a class="el" href="../../d9/d97/class_s_stream.html" title="A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream...">SStream</a> ready for communication. </p>
+</td></tr>
+<tr><td class="fieldname"><a class="anchor" id="ggabf3533595eadc9a1332683723ca3670ba8a8116fdeb7b8d229bde012af7029966"></a>SS_DISCONNECTED&#160;</td><td class="fielddoc">
+<p><a class="el" href="../../d9/d97/class_s_stream.html" title="A secure stream provides the 128bits AES encryption/descryption for the tx stream and rx stream...">SStream</a> disconnected. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 <a class="anchor" id="ga25ee4013cc565a18ac2f4039b4ad441b"></a>
 <div class="memitem">
 <div class="memproto">
@@ -1291,7 +1324,7 @@ Enumerations</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

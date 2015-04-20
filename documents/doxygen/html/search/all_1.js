@@ -14,7 +14,7 @@ var searchData=
   ['adc_5fresolution_5ft',['ADC_RESOLUTION_T',['../db/dff/group___enumerations.html#ga8c6157c51bd905c2070d18ff73073425',1,'adc.h']]],
   ['adc_5fsource_5ft',['ADC_SOURCE_T',['../db/dff/group___enumerations.html#ga0c833a85d4bb66b56409631327ebe904',1,'adc.h']]],
   ['add_5fchannel',['add_channel',['../da/d88/classsw_p_w_m.html#a80988c5f5bd4559cf1fa8eea8f500a84',1,'swPWM']]],
-  ['add_5fuuid_5fto_5fcomplete_5flist',['add_uuid_to_complete_list',['../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9',1,'bleAdvertising']]],
+  ['add_5fuuid_5fto_5fcomplete_5flist',['add_uuid_to_complete_list',['../d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035',1,'bleAdvertising::add_uuid_to_complete_list(uint16_t uuid, uint8_t type=BLE_UUID_TYPE_BLE)'],['../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9',1,'bleAdvertising::add_uuid_to_complete_list(bleService &amp;service)']]],
   ['addhead',['addHead',['../df/db6/class_c_list.html#af77b9f95976788ad6b74e825fad12e94',1,'CList']]],
   ['addheadt',['addHeadT',['../da/d59/class_c_list_t.html#a1135a93b349ac4ae024e45b8fbdc2842',1,'CListT']]],
   ['addr',['addr',['../d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a',1,'CStorage']]],

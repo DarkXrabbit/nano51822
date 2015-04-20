@@ -185,6 +185,11 @@ var group___enumerations =
       [ "SPI_MODE2", "db/dff/group___enumerations.html#gga296b79fb83e48fbffa9ee5978d200873a2607e91fc0c8ae3334284808d7f94cf5", null ],
       [ "SPI_MODE3", "db/dff/group___enumerations.html#gga296b79fb83e48fbffa9ee5978d200873ad9636eac0759655110aa77dd6c22da6c", null ]
     ] ],
+    [ "SS_EVENT_T", "db/dff/group___enumerations.html#gabf3533595eadc9a1332683723ca3670b", [
+      [ "SS_TIMEOUT", "db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba57d7a0c6aa65f5124900ab8e86992c19", null ],
+      [ "SS_CONNECTED", "db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba097f95adc87c47e70cd008b417fbac57", null ],
+      [ "SS_DISCONNECTED", "db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba8a8116fdeb7b8d229bde012af7029966", null ]
+    ] ],
     [ "TASK_STATE_T", "db/dff/group___enumerations.html#ga25ee4013cc565a18ac2f4039b4ad441b", [
       [ "RUNNING", "db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1061be6c3fb88d32829cba6f6b2be304", null ],
       [ "READY", "db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba6564f2f3e15be06b670547bbcaaf0798", null ],

@@ -134,8 +134,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a0fc078dfd286cb3321c6cbaf7bcbb7b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abad6f22e40a0d911e38ade968f4d801a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d06/class_c_semaphore.html#abad6f22e40a0d911e38ade968f4d801a">wait</a> (int timeout=MAX_DELAY_TIME)</td></tr>
 <tr class="separator:abad6f22e40a0d911e38ade968f4d801a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1a25ff1be26f8dfdd0f008aeabec8b1"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1">release</a> (bool fromISR=false)</td></tr>
-<tr class="separator:aa1a25ff1be26f8dfdd0f008aeabec8b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6b36ea595da21a3095a27c199f11d2a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d06/class_c_semaphore.html#ae6b36ea595da21a3095a27c199f11d2a">release</a> (bool fromISR=false)</td></tr>
+<tr class="separator:ae6b36ea595da21a3095a27c199f11d2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2302ceb8f2f9e1bef3381f457589177d"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d06/class_c_semaphore.html#a2302ceb8f2f9e1bef3381f457589177d">waiting</a> ()</td></tr>
 <tr class="separator:a2302ceb8f2f9e1bef3381f457589177d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a280bfac302a7d3064569cd802596327a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">isValid</a> ()</td></tr>
@@ -267,7 +267,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa1a25ff1be26f8dfdd0f008aeabec8b1"></a>
+<a class="anchor" id="ae6b36ea595da21a3095a27c199f11d2a"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -275,7 +275,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int CSemaphore::release </td>
+          <td class="memname">virtual void CSemaphore::release </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>fromISR</em> = <code>false</code></td><td>)</td>
@@ -290,11 +290,10 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Call the member function to release a semaphore. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">fromISR</td><td>is a boolean to specified the release occur from interrupt routine. (internal used) </td></tr>
+    <tr><td class="paramname">fromISR</td><td>is a boolean to specified the release occur from interrupt routine. (internal used)</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>a integer value to identify the context switch wake. (internal used)</dd></dl>
 <div class="fragment"><div class="line">Example:</div>
 <div class="line">        <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a> semLED;</div>
 <div class="line"></div>
@@ -308,7 +307,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">            <span class="keyword">virtual</span> <span class="keywordtype">void</span> run() {</div>
 <div class="line">                <span class="keywordflow">while</span>(1) {</div>
 <div class="line">                    index = rand() % 4;     <span class="comment">// get a random value in 0~3.</span></div>
-<div class="line">                    semLED.<a class="code" href="../../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1">release</a>();       <span class="comment">// release resource.</span></div>
+<div class="line">                    semLED.<a class="code" href="../../d0/d06/class_c_semaphore.html#ae6b36ea595da21a3095a27c199f11d2a">release</a>();       <span class="comment">// release resource.</span></div>
 <div class="line">                    sleep(500);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
@@ -374,7 +373,7 @@ Public Member Functions</h2></td></tr>
 <div class="line">            <span class="keyword">virtual</span> <span class="keywordtype">void</span> run() {</div>
 <div class="line">                <span class="keywordflow">while</span>(1) {</div>
 <div class="line">                    index = rand() % 4;     <span class="comment">// get a random value in 0~3.</span></div>
-<div class="line">                    semLED.<a class="code" href="../../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1">release</a>();       <span class="comment">// release resource.</span></div>
+<div class="line">                    semLED.<a class="code" href="../../d0/d06/class_c_semaphore.html#ae6b36ea595da21a3095a27c199f11d2a">release</a>();       <span class="comment">// release resource.</span></div>
 <div class="line">                    sleep(500);</div>
 <div class="line">                }</div>
 <div class="line">            }</div>
@@ -429,7 +428,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:15 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

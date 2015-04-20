@@ -252,13 +252,14 @@ $(document).ready(function(){initNavTree('da/d66/string_8h_source.html','../../'
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> free();</div>
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> putc(<span class="keywordtype">int</span> ch);</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> getc(){<span class="keywordflow">return</span> 0;}</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> LPCTSTR gets() {</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keywordflow">return</span> (LPCTSTR) <a class="code" href="../../df/d99/class_c_string.html#ac7b886c37095673cc287d24100a9f3fd">getBuffer</a>();</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;    }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordtype">void</span> moveL(<span class="keywordtype">int</span> first, <span class="keywordtype">int</span> count);</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> moveR(<span class="keywordtype">int</span> first, <span class="keywordtype">int</span> count);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;};</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STRING_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> restart();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    <span class="keyword">inline</span> <span class="keyword">virtual</span> LPCTSTR gets() {</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keywordflow">return</span> (LPCTSTR) <a class="code" href="../../df/d99/class_c_string.html#ac7b886c37095673cc287d24100a9f3fd">getBuffer</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keywordtype">void</span> moveL(<span class="keywordtype">int</span> first, <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keywordtype">void</span> moveR(<span class="keywordtype">int</span> first, <span class="keywordtype">int</span> count);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;};</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* STRING_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_c_string_html_ae5a8046d2adb546e6a359b88ced5b380"><div class="ttname"><a href="../../df/d99/class_c_string.html#ae5a8046d2adb546e6a359b88ced5b380">CString::parseFloat</a></div><div class="ttdeci">virtual float parseFloat(int start=0)</div><div class="ttdoc">Converts the hex string to integer value. </div></div>
 <div class="ttc" id="class_c_string_html_a2330b9d10792cbf3dec9ccd747c67da1"><div class="ttname"><a href="../../df/d99/class_c_string.html#a2330b9d10792cbf3dec9ccd747c67da1">CString::replace</a></div><div class="ttdeci">virtual int replace(LPCTSTR oldstr, LPCTSTR newstr)</div><div class="ttdoc">Uses a new string to replace an old string in th CString object. </div></div>
 <div class="ttc" id="class_c_string_html_aab798ff84e78c0bce521dad477bcdfa6"><div class="ttname"><a href="../../df/d99/class_c_string.html#aab798ff84e78c0bce521dad477bcdfa6">CString::operator*</a></div><div class="ttdeci">virtual LPCTSTR operator*()</div><div class="ttdef"><b>Definition:</b> string.h:243</div></div>
@@ -294,7 +295,7 @@ $(document).ready(function(){initNavTree('da/d66/string_8h_source.html','../../'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>string.h</b></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

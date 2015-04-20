@@ -194,6 +194,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa314dfe6e8cf3c1da9ad6a6de2d2618e"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#aa314dfe6e8cf3c1da9ad6a6de2d2618e">parseString</a> (LPTSTR buf, size_t size, bool echo=false)</td></tr>
 <tr class="memdesc:aa314dfe6e8cf3c1da9ad6a6de2d2618e"><td class="mdescLeft">&#160;</td><td class="mdescRight">input a string to specify buffer.  <a href="#aa314dfe6e8cf3c1da9ad6a6de2d2618e">More...</a><br /></td></tr>
 <tr class="separator:aa314dfe6e8cf3c1da9ad6a6de2d2618e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac4d97f92b6e5517dad3f10707e84abdc"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d16/class_c_stream.html#ac4d97f92b6e5517dad3f10707e84abdc">wait</a> (uint32_t timeout=MAX_DELAY_TIME)</td></tr>
+<tr class="memdesc:ac4d97f92b6e5517dad3f10707e84abdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Waitting for connected.  <a href="#ac4d97f92b6e5517dad3f10707e84abdc">More...</a><br /></td></tr>
+<tr class="separator:ac4d97f92b6e5517dad3f10707e84abdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a26a76c241a4d62d2efdac57d2cfe4c0f">isThread</a> ()</td></tr>
 <tr class="separator:a26a76c241a4d62d2efdac57d2cfe4c0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18cf254bf2030ba75735238fc1a31f4d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dac/class_c_object.html#a18cf254bf2030ba75735238fc1a31f4d">isValid</a> ()</td></tr>
@@ -755,6 +758,40 @@ Public Member Functions</h2></td></tr>
 </dl>
 </div>
 </div>
+<a class="anchor" id="ac4d97f92b6e5517dad3f10707e84abdc"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool CStream::wait </td>
+          <td>(</td>
+          <td class="paramtype">uint32_t&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>MAX_DELAY_TIME</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Waitting for connected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">timeout</td><td>Set the timeout (ms) to blocked task. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="../../db/d84/classble_service_u_a_r_t.html#a50131006f7d0674aad1d90d441a4b7cb">bleServiceUART</a>, and <a class="el" href="../../d9/d97/class_s_stream.html#a83595344896200f7729e1de6aaa45c92">SStream</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a6259540dbdf87dffc659b44e2ea80e36"></a>
 <div class="memitem">
 <div class="memproto">
@@ -906,7 +943,7 @@ Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d4/d16/class_c_stream.html">CStream</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:15 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

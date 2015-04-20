@@ -9,6 +9,6 @@ var searchData=
   ['trylock',['tryLock',['../d3/d0d/class_c_mutex.html#adb89cb4258a492458db9fb614c1681a9',1,'CMutex']]],
   ['twimaster',['twiMaster',['../d9/da7/classtwi_master.html#ad2c7154c7f1f9ec688618c087fcbca50',1,'twiMaster']]],
   ['tx_5fpower',['tx_power',['../dd/d89/classble_g_a_p.html#acbedef73879cf71600a6eab5d872cb19',1,'bleGAP']]],
-  ['tx_5fpower_5flevel',['tx_power_level',['../d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4',1,'bleAdvertising']]],
+  ['tx_5fpower_5flevel',['tx_power_level',['../d0/d2c/classble_advertising.html#ae66e61b3d00ded2210e8469db671b0f8',1,'bleAdvertising']]],
   ['type',['type',['../d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815',1,'bleAdvertising']]]
 ];

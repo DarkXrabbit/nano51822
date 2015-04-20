@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('d8/d6b/storage_8h_source.html','../../
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> ===============================================================================</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> Name        : Storage data to flash memory</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> Author      : uCXpresso</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.2</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2015/1/2</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> Version     : v1.0.3</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> Date        : 2015/3/30</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> Copyright   : Copyright (C) www.embeda.com.tw</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> Description :</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> ===============================================================================</span></div>
@@ -119,51 +119,52 @@ $(document).ready(function(){initNavTree('d8/d6b/storage_8h_source.html','../../
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> 2014/10/18 v1.0.0  First Edition for nano51822                     Jason</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> 2014/11/22 v1.0.1  Add access_wait static member.                  Jason</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> 2015/1/2   v1.0.2  Update constructor.                             Jason</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> ===============================================================================</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#ifndef FLASH_H_</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#define FLASH_H_</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;class/peripheral.h&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;class/semaphore.h&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;class/ble/nrf51/nrf_error.h&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d3/de1/class_c_storage.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/de1/class_c_storage.html">CStorage</a>: <span class="keyword">public</span> <a class="code" href="../../d9/db6/class_c_peripheral.html">CPeripheral</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <a class="code" href="../../d3/de1/class_c_storage.html#a8fe8f8de3568688b726914698985e562">CStorage</a>(uint16_t <a class="code" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t count=1);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a973bd3f8889dcb99b571fecdce77353e">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *buf, uint16_t size, uint16_t offset=0);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a3e2cf86a4d0704eb7a5665e0234a1e48">read</a>(<span class="keywordtype">void</span> *buf, uint16_t size, uint16_t offset=0);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#ada2ebb3aa35b76c0043b274465770027">clear</a>();</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    uint16_t <a class="code" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a">addr</a>();</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d">total_size</a>();</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#ad028d86ff72b1f56a6fb5763bff7eeed">start_addr</a>();</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#ad6606ffec489224f6a6d1101ad544baf">access_wait</a>();</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d3/de1/class_c_storage.html">CStorage</a>();</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    uint16_t    m_size;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    xHandle     m_handle;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FLASH_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="class_c_storage_html_a973bd3f8889dcb99b571fecdce77353e"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#a973bd3f8889dcb99b571fecdce77353e">CStorage::write</a></div><div class="ttdeci">uint32_t write(const void *buf, uint16_t size, uint16_t offset=0)</div><div class="ttdoc">Write data to storage. </div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> 2015/3/30  v1.0.3  Add param &quot;fromISR&quot; in write member function.   Jason</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> ===============================================================================</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef FLASH_H_</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define FLASH_H_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;class/peripheral.h&gt;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;class/semaphore.h&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;class/ble/nrf51/nrf_error.h&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../d3/de1/class_c_storage.html">   33</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d3/de1/class_c_storage.html">CStorage</a>: <span class="keyword">public</span> <a class="code" href="../../d9/db6/class_c_peripheral.html">CPeripheral</a> {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <a class="code" href="../../d3/de1/class_c_storage.html#a8fe8f8de3568688b726914698985e562">CStorage</a>(uint16_t <a class="code" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>, uint16_t count=1);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#acd9fab689ea524e415b379a5fbd8ac33">write</a>(<span class="keyword">const</span> <span class="keywordtype">void</span> *buf, uint16_t size, uint16_t offset=0, <span class="keywordtype">bool</span> fromISR=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a3e2cf86a4d0704eb7a5665e0234a1e48">read</a>(<span class="keywordtype">void</span> *buf, uint16_t size, uint16_t offset=0);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#ada2ebb3aa35b76c0043b274465770027">clear</a>();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    uint16_t <a class="code" href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">size</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a">addr</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d">total_size</a>();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#ad028d86ff72b1f56a6fb5763bff7eeed">start_addr</a>();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="../../d3/de1/class_c_storage.html#ad6606ffec489224f6a6d1101ad544baf">access_wait</a>();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="comment">//</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="comment"></span>    <span class="comment">//</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d3/de1/class_c_storage.html">CStorage</a>();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    uint16_t    m_size;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    xHandle     m_handle;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;};</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* FLASH_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_c_storage_html_a972b010e9d5c2fadf1088d3ae0f58a4a"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#a972b010e9d5c2fadf1088d3ae0f58a4a">CStorage::addr</a></div><div class="ttdeci">uint32_t addr()</div><div class="ttdoc">Retrieve the start address of the storage object. </div></div>
-<div class="ttc" id="class_c_storage_html"><div class="ttname"><a href="../../d3/de1/class_c_storage.html">CStorage</a></div><div class="ttdoc">CStorage class provides the flash memory access service. </div><div class="ttdef"><b>Definition:</b> storage.h:32</div></div>
+<div class="ttc" id="class_c_storage_html"><div class="ttname"><a href="../../d3/de1/class_c_storage.html">CStorage</a></div><div class="ttdoc">CStorage class provides the flash memory access service. </div><div class="ttdef"><b>Definition:</b> storage.h:33</div></div>
 <div class="ttc" id="class_c_storage_html_ad6606ffec489224f6a6d1101ad544baf"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#ad6606ffec489224f6a6d1101ad544baf">CStorage::access_wait</a></div><div class="ttdeci">static uint32_t access_wait()</div><div class="ttdoc">Waiting for storage access operators finish. </div></div>
 <div class="ttc" id="class_c_storage_html_ada2ebb3aa35b76c0043b274465770027"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#ada2ebb3aa35b76c0043b274465770027">CStorage::clear</a></div><div class="ttdeci">uint32_t clear()</div><div class="ttdoc">To clear the all data in storage memory. </div></div>
 <div class="ttc" id="class_c_storage_html_a1a2b965b8048e7dc8a457c80c85f7e9d"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#a1a2b965b8048e7dc8a457c80c85f7e9d">CStorage::size</a></div><div class="ttdeci">uint16_t size()</div><div class="ttdoc">Retrieve the size of the storage object. </div></div>
+<div class="ttc" id="class_c_storage_html_acd9fab689ea524e415b379a5fbd8ac33"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#acd9fab689ea524e415b379a5fbd8ac33">CStorage::write</a></div><div class="ttdeci">uint32_t write(const void *buf, uint16_t size, uint16_t offset=0, bool fromISR=false)</div><div class="ttdoc">Write data to storage. </div></div>
 <div class="ttc" id="class_c_storage_html_a26c07f5c151cdd5951bb42cac799841d"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#a26c07f5c151cdd5951bb42cac799841d">CStorage::total_size</a></div><div class="ttdeci">static uint32_t total_size()</div><div class="ttdoc">Retrieve the total size of the flash memory for user&#39;s data. </div></div>
 <div class="ttc" id="class_c_storage_html_ad028d86ff72b1f56a6fb5763bff7eeed"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#ad028d86ff72b1f56a6fb5763bff7eeed">CStorage::start_addr</a></div><div class="ttdeci">static uint32_t start_addr()</div><div class="ttdoc">Retrieve the start address ot the flash memory for user&#39;s data. </div></div>
 <div class="ttc" id="class_c_storage_html_a3e2cf86a4d0704eb7a5665e0234a1e48"><div class="ttname"><a href="../../d3/de1/class_c_storage.html#a3e2cf86a4d0704eb7a5665e0234a1e48">CStorage::read</a></div><div class="ttdeci">uint32_t read(void *buf, uint16_t size, uint16_t offset=0)</div><div class="ttdoc">Read data from storage. </div></div>
@@ -175,7 +176,7 @@ $(document).ready(function(){initNavTree('d8/d6b/storage_8h_source.html','../../
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>storage.h</b></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

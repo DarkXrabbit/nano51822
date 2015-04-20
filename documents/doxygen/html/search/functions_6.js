@@ -2,6 +2,7 @@ var searchData=
 [
   ['gatts_5fhvx_5fwrite',['gatts_hvx_write',['../de/d51/classble_service_customer.html#a5fd45d8d7a9aeafcffea3b863e0c369e',1,'bleServiceCustomer']]],
   ['gatts_5fhvx_5fwriteable',['gatts_hvx_writeable',['../da/d80/classble_service.html#a0deb640694dfbe4a3bfe67a23dcf3a33',1,'bleService']]],
+  ['gatts_5frw_5fauthorize_5freply',['gatts_rw_authorize_reply',['../de/d51/classble_service_customer.html#a141403d32fcfbe01cd5f4038035f51ad',1,'bleServiceCustomer']]],
   ['gatts_5fvalue_5fget',['gatts_value_get',['../de/d51/classble_service_customer.html#aec037610f5e08981839bc032a4d69c5c',1,'bleServiceCustomer']]],
   ['gatts_5fvalue_5fset',['gatts_value_set',['../de/d51/classble_service_customer.html#a797d0d03dfc264ca1b5268ee546e858a',1,'bleServiceCustomer']]],
   ['get',['get',['../dd/d60/class_c_event_bit.html#a2e34e1fbeb24bcd22c65f5d4b9b08add',1,'CEventBit']]],

@@ -10,5 +10,8 @@ var searchData=
   ['spi_5fmode1',['SPI_MODE1',['../db/dff/group___enumerations.html#gga296b79fb83e48fbffa9ee5978d200873abd92ab028fcac05cf2ed27b4838d1590',1,'spi_master.h']]],
   ['spi_5fmode2',['SPI_MODE2',['../db/dff/group___enumerations.html#gga296b79fb83e48fbffa9ee5978d200873a2607e91fc0c8ae3334284808d7f94cf5',1,'spi_master.h']]],
   ['spi_5fmode3',['SPI_MODE3',['../db/dff/group___enumerations.html#gga296b79fb83e48fbffa9ee5978d200873ad9636eac0759655110aa77dd6c22da6c',1,'spi_master.h']]],
+  ['ss_5fconnected',['SS_CONNECTED',['../db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba097f95adc87c47e70cd008b417fbac57',1,'sstream.h']]],
+  ['ss_5fdisconnected',['SS_DISCONNECTED',['../db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba8a8116fdeb7b8d229bde012af7029966',1,'sstream.h']]],
+  ['ss_5ftimeout',['SS_TIMEOUT',['../db/dff/group___enumerations.html#ggabf3533595eadc9a1332683723ca3670ba57d7a0c6aa65f5124900ab8e86992c19',1,'sstream.h']]],
   ['suspended',['SUSPENDED',['../db/dff/group___enumerations.html#gga25ee4013cc565a18ac2f4039b4ad441ba1c2114335a42993ac5cc5dbf65f83d41',1,'thread.h']]]
 ];

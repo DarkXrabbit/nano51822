@@ -138,30 +138,30 @@ $(document).ready(function(){initNavTree('d6/dc6/semaphore_8h_source.html','../.
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/d06/class_c_semaphore.html#abad6f22e40a0d911e38ade968f4d801a">wait</a>(<span class="keywordtype">int</span> timeout=MAX_DELAY_TIME);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span>  <a class="code" href="../../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1">release</a>(<span class="keywordtype">bool</span> fromISR=<span class="keyword">false</span>);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d06/class_c_semaphore.html#a2302ceb8f2f9e1bef3381f457589177d">waiting</a>();</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;</div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">  143</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">isValid</a>() {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        <span class="keywordflow">return</span> (m_xHandle ? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a>();</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a>();</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    xHandle m_xHandle;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="keywordtype">int</span>     m_waiting;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;};</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SEMAPHORE_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span>  <a class="code" href="../../d0/d06/class_c_semaphore.html#ae6b36ea595da21a3095a27c199f11d2a">release</a>(<span class="keywordtype">bool</span> fromISR=<span class="keyword">false</span>);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d06/class_c_semaphore.html#a2302ceb8f2f9e1bef3381f457589177d">waiting</a>();</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
+<div class="line"><a name="l00142"></a><span class="lineno"><a class="line" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">  142</a></span>&#160;    <span class="keyword">virtual</span> <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">isValid</a>() {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        <span class="keywordflow">return</span> (m_xHandle ? <span class="keyword">true</span> : <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a>();</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d0/d06/class_c_semaphore.html">CSemaphore</a>();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    xHandle m_xHandle;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="keywordtype">int</span>     m_waiting;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;};</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* SEMAPHORE_H_ */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="class_c_semaphore_html"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html">CSemaphore</a></div><div class="ttdef"><b>Definition:</b> semaphore.h:33</div></div>
-<div class="ttc" id="class_c_semaphore_html_a280bfac302a7d3064569cd802596327a"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore::isValid</a></div><div class="ttdeci">virtual bool isValid()</div><div class="ttdoc">Check object valid. </div><div class="ttdef"><b>Definition:</b> semaphore.h:143</div></div>
+<div class="ttc" id="class_c_semaphore_html_a280bfac302a7d3064569cd802596327a"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#a280bfac302a7d3064569cd802596327a">CSemaphore::isValid</a></div><div class="ttdeci">virtual bool isValid()</div><div class="ttdoc">Check object valid. </div><div class="ttdef"><b>Definition:</b> semaphore.h:142</div></div>
 <div class="ttc" id="class_c_semaphore_html_abad6f22e40a0d911e38ade968f4d801a"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#abad6f22e40a0d911e38ade968f4d801a">CSemaphore::wait</a></div><div class="ttdeci">virtual bool wait(int timeout=MAX_DELAY_TIME)</div></div>
 <div class="ttc" id="class_c_semaphore_html_af4e913cd2861355f8be2211ae21753ba"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#af4e913cd2861355f8be2211ae21753ba">CSemaphore::counting</a></div><div class="ttdeci">virtual bool counting(int count, int init=0)</div></div>
 <div class="ttc" id="class_c_semaphore_html_a2302ceb8f2f9e1bef3381f457589177d"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#a2302ceb8f2f9e1bef3381f457589177d">CSemaphore::waiting</a></div><div class="ttdeci">virtual int waiting()</div></div>
-<div class="ttc" id="class_c_semaphore_html_aa1a25ff1be26f8dfdd0f008aeabec8b1"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#aa1a25ff1be26f8dfdd0f008aeabec8b1">CSemaphore::release</a></div><div class="ttdeci">virtual int release(bool fromISR=false)</div></div>
+<div class="ttc" id="class_c_semaphore_html_ae6b36ea595da21a3095a27c199f11d2a"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#ae6b36ea595da21a3095a27c199f11d2a">CSemaphore::release</a></div><div class="ttdeci">virtual void release(bool fromISR=false)</div></div>
 <div class="ttc" id="class_c_semaphore_html_a0fc078dfd286cb3321c6cbaf7bcbb7b2"><div class="ttname"><a href="../../d0/d06/class_c_semaphore.html#a0fc078dfd286cb3321c6cbaf7bcbb7b2">CSemaphore::binary</a></div><div class="ttdeci">virtual bool binary()</div></div>
 <div class="ttc" id="class_c_object_html"><div class="ttname"><a href="../../dc/dac/class_c_object.html">CObject</a></div><div class="ttdef"><b>Definition:</b> object.h:37</div></div>
 </div><!-- fragment --></div><!-- contents -->
@@ -170,7 +170,7 @@ $(document).ready(function(){initNavTree('d6/dc6/semaphore_8h_source.html','../.
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d9ab3e09413249e340719d1c246acc66.html">Jason Project</a></li><li class="navelem"><a class="el" href="../../dir_e60b0d0338763df7a227cbecf5ac6106.html">Firmware</a></li><li class="navelem"><a class="el" href="../../dir_c8ef7bdfc8622ceb56fdbfff8f44a6b4.html">lpcxpresso</a></li><li class="navelem"><a class="el" href="../../dir_bdd32ce6160f479030b0ea4f28dc11d5.html">nRF51</a></li><li class="navelem"><a class="el" href="../../dir_75b0a0f0214b97305c81c6738e26cd0c.html">uCXpresso.NRF</a></li><li class="navelem"><a class="el" href="../../dir_a6ea001bd74dfca65d8762c09923a98d.html">inc</a></li><li class="navelem"><a class="el" href="../../dir_aa8722baa6aa444a7918d279f687ab70.html">class</a></li><li class="navelem"><b>semaphore.h</b></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:49 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

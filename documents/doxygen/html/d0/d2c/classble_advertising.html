@@ -144,28 +144,31 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab77f9940edde80f47e935c96e6638d6e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#ab77f9940edde80f47e935c96e6638d6e">name_type</a> (ble_advdata_name_type_t <a class="el" href="../../d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815">type</a>)</td></tr>
 <tr class="memdesc:ab77f9940edde80f47e935c96e6638d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type of the device name. ble_advdata_name_type_t.  <a href="#ab77f9940edde80f47e935c96e6638d6e">More...</a><br /></td></tr>
 <tr class="separator:ab77f9940edde80f47e935c96e6638d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726de3a77f43183ece083f815dc278fa"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa">flag</a> (uint8_t val)</td></tr>
-<tr class="memdesc:a726de3a77f43183ece083f815dc278fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">single advertising flag.  <a href="#a726de3a77f43183ece083f815dc278fa">More...</a><br /></td></tr>
-<tr class="separator:a726de3a77f43183ece083f815dc278fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a40ba33313fb25ed0d3c6643d82e31a7e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a40ba33313fb25ed0d3c6643d82e31a7e">flags</a> (const uint8_t *flags, uint8_t size=1)</td></tr>
+<tr class="memdesc:a40ba33313fb25ed0d3c6643d82e31a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">set advertising flags.  <a href="#a40ba33313fb25ed0d3c6643d82e31a7e">More...</a><br /></td></tr>
+<tr class="separator:a40ba33313fb25ed0d3c6643d82e31a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afad1102d34f88eb91ec45c3196e2f5be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#afad1102d34f88eb91ec45c3196e2f5be">commpany_identifier</a> (uint16_t id)</td></tr>
 <tr class="memdesc:afad1102d34f88eb91ec45c3196e2f5be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Company Identifier Code.  <a href="#afad1102d34f88eb91ec45c3196e2f5be">More...</a><br /></td></tr>
 <tr class="separator:afad1102d34f88eb91ec45c3196e2f5be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af1f8b6ffbfa395f75edea27e35210838"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#af1f8b6ffbfa395f75edea27e35210838">manuf_specific_data</a> (const uint8_t *data, uint16_t size)</td></tr>
 <tr class="memdesc:af1f8b6ffbfa395f75edea27e35210838"><td class="mdescLeft">&#160;</td><td class="mdescRight">Additional manufacturer specific data.  <a href="#af1f8b6ffbfa395f75edea27e35210838">More...</a><br /></td></tr>
 <tr class="separator:af1f8b6ffbfa395f75edea27e35210838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13bbe9365759452c9335a4a11c3a6035"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a13bbe9365759452c9335a4a11c3a6035">add_uuid_to_complete_list</a> (uint16_t uuid, uint8_t <a class="el" href="../../d0/d2c/classble_advertising.html#ab376e9408af09dfca1ddcba71da0d815">type</a>=BLE_UUID_TYPE_BLE)</td></tr>
+<tr class="memdesc:a13bbe9365759452c9335a4a11c3a6035"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add the uuid of service in the 'Complete' list of Adv.  <a href="#a13bbe9365759452c9335a4a11c3a6035">More...</a><br /></td></tr>
+<tr class="separator:a13bbe9365759452c9335a4a11c3a6035"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">add_uuid_to_complete_list</a> (<a class="el" href="../../da/d80/classble_service.html">bleService</a> &amp;service)</td></tr>
-<tr class="memdesc:a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the list of UUIDs in the 'Complete' list.  <a href="#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">More...</a><br /></td></tr>
+<tr class="memdesc:a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload the add_uuid_to_complete_list member function.  <a href="#a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9">More...</a><br /></td></tr>
 <tr class="separator:a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accfe691f481f8ebf954991c2f38708ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#accfe691f481f8ebf954991c2f38708ae">slave_connection_interval</a> (uint16_t max, uint16_t min)</td></tr>
 <tr class="memdesc:accfe691f481f8ebf954991c2f38708ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Slave Connection Interval Range.  <a href="#accfe691f481f8ebf954991c2f38708ae">More...</a><br /></td></tr>
 <tr class="separator:accfe691f481f8ebf954991c2f38708ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0197c4363452fee34322109178ad3bc4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a0197c4363452fee34322109178ad3bc4">tx_power_level</a> (int8_t value)</td></tr>
-<tr class="memdesc:a0197c4363452fee34322109178ad3bc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the TX Power Level field.  <a href="#a0197c4363452fee34322109178ad3bc4">More...</a><br /></td></tr>
-<tr class="separator:a0197c4363452fee34322109178ad3bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae66e61b3d00ded2210e8469db671b0f8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#ae66e61b3d00ded2210e8469db671b0f8">tx_power_level</a> (int8_t const *dBm)</td></tr>
+<tr class="memdesc:ae66e61b3d00ded2210e8469db671b0f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the TX Power Level field.  <a href="#ae66e61b3d00ded2210e8469db671b0f8">More...</a><br /></td></tr>
+<tr class="separator:ae66e61b3d00ded2210e8469db671b0f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1c438ca0a207c8dae7a4c414281e9e4c"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a1c438ca0a207c8dae7a4c414281e9e4c">appearance</a> (uint16_t value)</td></tr>
 <tr class="memdesc:a1c438ca0a207c8dae7a4c414281e9e4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set GAP Appearance value.  <a href="#a1c438ca0a207c8dae7a4c414281e9e4c">More...</a><br /></td></tr>
 <tr class="separator:a1c438ca0a207c8dae7a4c414281e9e4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2">update</a> (uint8_t flags=0)</td></tr>
+<tr class="memitem:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#afaa6e9992e0cb4c50782223df8a6e3e2">update</a> (uint8_t <a class="el" href="../../d0/d2c/classble_advertising.html#a40ba33313fb25ed0d3c6643d82e31a7e">flags</a>=0)</td></tr>
 <tr class="memdesc:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the all fields into Advertising.  <a href="#afaa6e9992e0cb4c50782223df8a6e3e2">More...</a><br /></td></tr>
 <tr class="separator:afaa6e9992e0cb4c50782223df8a6e3e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55a6be6da52d2794ab84d7f69ae11a62"><td class="memItemLeft" align="right" valign="top">uint32_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d2c/classble_advertising.html#a55a6be6da52d2794ab84d7f69ae11a62">update</a> (ble_advdata_t *p_adv_data, ble_advdata_t *p_scan_data)</td></tr>
@@ -199,9 +202,41 @@ Public Member Functions</h2></td></tr>
 <p>The <a class="el" href="../../d0/d2c/classble_advertising.html" title="BLE Advertising Class. ">bleAdvertising</a> class for encoding the advertising data and/or scan response data, and passing them to the stack.</p>
 <dl class="section note"><dt>Note</dt><dd>The <a class="el" href="../../d0/d2c/classble_advertising.html" title="BLE Advertising Class. ">bleAdvertising</a> object provides in the <a class="el" href="../../d6/d49/classble_device.html">bleDevice</a> class. </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a13bbe9365759452c9335a4a11c3a6035"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void bleAdvertising::add_uuid_to_complete_list </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>uuid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>type</em> = <code>BLE_UUID_TYPE_BLE</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Add the uuid of service in the 'Complete' list of Adv. </p>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a29">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a17">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a22">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a26">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a14">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a30">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
+</dl>
+</div>
+</div>
 <a class="anchor" id="a4b9a4dbf9bb9abcf9d5aac8d3ccd07e9"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void bleAdvertising::add_uuid_to_complete_list </td>
@@ -211,11 +246,15 @@ Public Member Functions</h2></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Set the list of UUIDs in the 'Complete' list. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a29">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a17">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a22">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a26">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a14">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a30">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
-</dl>
+<p>Overload the add_uuid_to_complete_list member function. </p>
+
 </div>
 </div>
 <a class="anchor" id="a1c438ca0a207c8dae7a4c414281e9e4c"></a>
@@ -261,28 +300,37 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </div><div class="memdoc">
 
 <p>Set the Company Identifier Code. </p>
-<p>masked, replace by <a class="el" href="../../d0/d2c/classble_advertising.html#a726de3a77f43183ece083f815dc278fa" title="single advertising flag. ">flag()</a> member. </p>
+<p>masked, replace by flag() member. </p>
 <dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a16">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a21">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a25">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a14">/ble/ble_app_uart/src/main.cpp</a>, and <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a13">/ble/ble_beacon/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a726de3a77f43183ece083f815dc278fa"></a>
+<a class="anchor" id="a40ba33313fb25ed0d3c6643d82e31a7e"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void bleAdvertising::flag </td>
+          <td class="memname">void bleAdvertising::flags </td>
           <td>(</td>
-          <td class="paramtype">uint8_t&#160;</td>
-          <td class="paramname"><em>val</em></td><td>)</td>
+          <td class="paramtype">const uint8_t *&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">uint8_t&#160;</td>
+          <td class="paramname"><em>size</em> = <code>1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>single advertising flag. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a15">/ble/ble_beacon/src/main.cpp</a>.</dd>
-</dl>
+<p>set advertising flags. </p>
+
 </div>
 </div>
 <a class="anchor" id="aab40eab6c4644bee02c67c483c7804ca"></a>
@@ -300,7 +348,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </div><div class="memdoc">
 
 <p>Set the advertising interval between 20ms to 10.24s. (for normal mode) </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a32">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a15">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a25">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a29">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a13">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a17">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a13">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a33">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a32">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a15">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a25">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a29">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a13">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a16">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a13">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a33">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -519,7 +567,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </div><div class="memdoc">
 
 <p>Start the advertising. </p>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a34">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a26">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a30">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a16">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a18">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a16">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a35">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a34">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a20">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a26">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a30">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a16">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a17">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a16">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a35">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -568,15 +616,15 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 </dl>
 </div>
 </div>
-<a class="anchor" id="a0197c4363452fee34322109178ad3bc4"></a>
+<a class="anchor" id="ae66e61b3d00ded2210e8469db671b0f8"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void bleAdvertising::tx_power_level </td>
           <td>(</td>
-          <td class="paramtype">int8_t&#160;</td>
-          <td class="paramname"><em>value</em></td><td>)</td>
+          <td class="paramtype">int8_t const *&#160;</td>
+          <td class="paramname"><em>dBm</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -626,7 +674,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
   </table>
   </dd>
 </dl>
-<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a31">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a19">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a24">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a28">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a15">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a16">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a15">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a32">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="../../d2/d68/_2ble_2ble_app_hid_keyboard_2src_2main_8cpp-example.html#a31">/ble/ble_app_hid_keyboard/src/main.cpp</a>, <a class="el" href="../../dd/d00/_2ble_2ble_app_hrm_htm_bat_2src_2main_8cpp-example.html#a19">/ble/ble_app_hrm_htm_bat/src/main.cpp</a>, <a class="el" href="../../da/d2c/_2ble_2ble_app_hrm_htm_bat_lilypad_2src_2main_8cpp-example.html#a24">/ble/ble_app_hrm_htm_bat_lilypad/src/main.cpp</a>, <a class="el" href="../../d1/d5c/_2ble_2ble_app_proximity_2src_2main_8cpp-example.html#a28">/ble/ble_app_proximity/src/main.cpp</a>, <a class="el" href="../../d7/daf/_2ble_2ble_app_uart_2src_2main_8cpp-example.html#a15">/ble/ble_app_uart/src/main.cpp</a>, <a class="el" href="../../d1/dc6/_2ble_2ble_beacon_2src_2main_8cpp-example.html#a15">/ble/ble_beacon/src/main.cpp</a>, <a class="el" href="../../d9/df2/_2ble_2ble_rssi_measure_2src_2main_8cpp-example.html#a15">/ble/ble_rssi_measure/src/main.cpp</a>, and <a class="el" href="../../d5/dd8/_2cookbook_2ble_app_hid_camera_shutter_2src_2main_8cpp-example.html#a32">/cookbook/ble_app_hid_camera_shutter/src/main.cpp</a>.</dd>
 </dl>
 </div>
 </div>
@@ -728,7 +776,7 @@ NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied. </dd></dl>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../d0/d2c/classble_advertising.html">bleAdvertising</a></li>
-    <li class="footer">Generated on Wed Feb 25 2015 22:45:14 for uCXpresso.NRF by
+    <li class="footer">Generated on Mon Apr 20 2015 15:37:50 for uCXpresso.NRF by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
