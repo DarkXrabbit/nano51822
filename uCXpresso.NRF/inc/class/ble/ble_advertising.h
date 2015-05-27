@@ -19,6 +19,8 @@
  2014/2/6	v1.0.5	Add update overload member functions.			Jason
  2015/3/2	v1.0.6	Add add_uuid_to_complete_list overload member.	Jason
  2015/3/27	v1.0.7	Reduce RAM used.								Jason
+ 2015/5/27	v1.0.8	Add manuf_specific_data() for RAW data.			Jason
+ 	 	 	 	 	Add add_uuid_to_complete_list() for RAW data.
  ===============================================================================
  */
 
@@ -83,7 +85,7 @@ public:
 	/**
 	 * @brief Set the advertising interval between 20ms to 10.24s. (for normal mode)
 	 */
-	void interval(uint16_t ms);
+	void interval(float ms);
 
 	/**
 	 * @brief Set advertising timeout between 0x0001 and 0x3FFF in seconds, 0x0000 disables the timeout.
@@ -118,6 +120,12 @@ public:
 	void manuf_specific_data(const uint8_t *data, uint16_t size);
 
 	/**
+	 * @brief Additional manufacturer specific data.
+	 * @param pdata Point to the raw of the @ref ble_advdata_manuf_data_t data.
+	 */
+	void manuf_specific_data(ble_advdata_manuf_data_t *pdata);
+
+	/**
 	 * @brief Add the uuid of service in the 'Complete' list of Adv.
 	 */
 	void add_uuid_to_complete_list(uint16_t uuid, uint8_t type=BLE_UUID_TYPE_BLE);
@@ -129,10 +137,18 @@ public:
 		add_uuid_to_complete_list(service.uuid(), service.uuid_type());
 	}
 
-	/**@brief Set the Slave Connection Interval Range.
-	 *
+	/**
+	 * @brief Additional manufacturer specific data.
+	 * @param uuids Array point to the raw of the @ref ble_uuid_t list.
+	 * @param count Indicate the number of uuid in the list.
 	 */
-	void slave_connection_interval(uint16_t max, uint16_t min);
+	void add_uuid_to_complete_list(ble_uuid_t const *uuids, uint16_t count);
+
+	/**@brief Set the Slave Connection Interval Range.
+	 * @param max	Max. connection interval (unit ms).
+	 * @param min	Min. connection interval (uint ms).
+	 */
+	void slave_connection_interval(float max, float min);
 
 	/**@brief Set the TX Power Level field.
 	 *
@@ -234,13 +250,15 @@ public:
 	}
 	uint32_t				 m_flag;
 protected:
-	ble_advdata_t			 m_adv_data;
-	ble_gap_adv_params_t 	 m_adv_params;
-	uint8_t					 m_adv_direct_cnt;
-	uint16_t				 m_adv_interval;
-	uint16_t				 m_adv_timeout;
+	ble_advdata_t 			m_adv_data;
+	ble_gap_adv_params_t 	m_adv_params;
+	ble_advdata_uuid_list_t m_uuids_complete;
 
-	ADV_START_MODE_T		 m_adv_start_mode;
+	uint8_t					m_adv_direct_cnt;
+	float					m_adv_interval;
+	uint16_t				m_adv_timeout;
+
+	ADV_START_MODE_T		m_adv_start_mode;
 	///@endcond
 };
 

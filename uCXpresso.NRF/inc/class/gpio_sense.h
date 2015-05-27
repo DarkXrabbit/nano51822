@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : gpio_int.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/10/1
+ Version     : v1.0.1
+ Date		 : 2015/5/16
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : GPIO Interrupt class
  ===============================================================================
@@ -12,6 +12,8 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/5	v1.0.0	First Edition for nano51822						Jason
+ 2015/5/16	v1.0.1	Change the enable,disable and wait to 			Jason
+ 	 	 	 	 	static member functions.
  ===============================================================================
  */
 
@@ -47,29 +49,36 @@ public:
 	gpioSense(uint8_t pin, SENSE_T sense=FALLING, PIN_INPUT_MODE_T pull=INTERNAL_PULL_UP);
 
 	/**
-	 * @brief Enable the GPIO interrupt
-	 *
-	 * @note When enable the gpioSense, the 16MHz clock will stay running,
-	 * and this will cause >1mA extra current consumption.
-	 */
-	virtual void enable();
-
-	/**
-	 * @brief Disable the GPIO interrupt
-	 */
-	virtual void disable();
-
-	/**
 	 * @brief Waiting for interrupt active
 	 * @param timeout is a waiting timeout and unit in millisecond.
 	 * @return true if the pin is triggered.
 	 */
-	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
+	virtual bool isActived();
 
 	/**
 	 * @brief check the sense pin enabled or not.
 	 */
 	virtual bool isValid();
+
+	/**
+	 * @brief Enable the GPIO interrupt
+	 *
+	 * @note When enable the gpioSense, the 16MHz clock will stay running,
+	 * and this will cause >1mA extra current consumption.
+	 */
+	static void enable();
+
+	/**
+	 * @brief Disable the GPIO interrupt
+	 */
+	static void disable();
+
+ 	/**
+	 * @brief Waitting for interrupt active for all pins.
+	 * @param timeout is a waiting timeout and unit in millisecond.
+	 * @return true if the pin is triggered.
+	 */
+	static bool wait(uint32_t timeout=MAX_DELAY_TIME);
 
 	//
 	///@cond PRIVATE

@@ -44,15 +44,17 @@ typedef struct {
 void senseTask(CThread *p_thread, xHandle p_param) {
 	SENSE_PARAM_T *p_sense = (SENSE_PARAM_T *)  p_param;
 
-	gpioSense sense(p_sense->sense_pin, p_sense->trigger, NEITHER);
-	sense.enable();
+	gpioSense sense(p_sense->sense_pin, p_sense->trigger);
+	gpioSense::enable();
 
 	CPin led(p_sense->led_pin);
 	led.output();
 
 	while( p_thread->isAlive() ) {
-		if ( sense.wait() ) {
-			led.toggle();
+		if ( gpioSense::wait() ) {
+			if ( sense.isActived() ) {
+				led.toggle();
+			}
 		}
 	}
 }
@@ -86,14 +88,14 @@ int main(void) {
 	//
 	// task 1
 	//
-	static const SENSE_PARAM_T sense_t1 = {16, FALLING, LED_PIN_0};	// task parameters, Sense=P0.16, LED=LED0
+	static const SENSE_PARAM_T sense_t1 = {BUTTON_PIN_0, FALLING, LED_PIN_0};	// task parameters, Sense=P0.16, LED=LED0
 	CThread t1(senseTask, (xHandle) &sense_t1);
 	t1.start("t1", 62, PRI_HARDWARE);
 
 	//
 	// task 2
 	//
-	static const SENSE_PARAM_T sense_t2 = {17, TOGGLE, LED_PIN_1};	// task parameters, Sense=P0.17, LED=LED1
+	static const SENSE_PARAM_T sense_t2 = {BUTTON_PIN_1, TOGGLE, LED_PIN_1};	// task parameters, Sense=P0.17, LED=LED1
 	CThread t2(senseTask, (xHandle) &sense_t2);
 	t2.start("t2", 62, PRI_HARDWARE);
 
