@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : spi_master.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/10/16
+ Version     : v1.0.1
+ Date		 : 2015/6/4
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : SPI master class
  ===============================================================================
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/16	v1.0.0	First Edition for nano51822						Jason
+ 2015/6/4	v1.0.1	Change default pin assigned for UDK board.		Jason
  ===============================================================================
  */
 
@@ -21,10 +22,10 @@
 #include <class/peripheral.h>
 #include <class/semaphore.h>
 
-#define DEF_SPI_MASTER_PIN_MOSI		21
-#define DEF_SPI_MASTER_PIN_MISO		22
-#define DEF_SPI_MASTER_PIN_SSL		23
-#define DEF_SPI_MASTER_PIN_SCK		24
+#define DEF_SPI_MASTER_PIN_MOSI		23
+#define DEF_SPI_MASTER_PIN_MISO		24
+#define DEF_SPI_MASTER_PIN_SSL		22
+#define DEF_SPI_MASTER_PIN_SCK		25
 
 /**
  * @brief Serial bit order

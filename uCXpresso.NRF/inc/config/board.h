@@ -31,6 +31,13 @@
 #define LED_PIN_1		19
 #define LED_PIN_2		20
 #define LED_PIN_3		21
+
+#define LED1			LED_PIN_0
+#define LED2			LED_PIN_1
+#define LED3			LED_PIN_2
+#define LED4			LED_PIN_3
+#define BTN1			BUTTON_PIN_0
+#define	BTN2			BUTTON_PIN_1
 #endif
 
 #endif /* BOARD_H_ */

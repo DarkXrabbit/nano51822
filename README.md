@@ -8,10 +8,11 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
-v1.0.7 rc1 25th May 2015
+v1.0.7 rc1 4th June 2015
 --------------------------------
 ###Details: 
 	1. Fixed advertising data out of range problem. (Error Code 12)
+	2. Add nano51822-UDK board pin defined.
 
 v1.0.6 released 20th April 2015
 --------------------------------
