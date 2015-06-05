@@ -3,7 +3,7 @@
  Name        : ble_advertising.h
  Author      : uCXpresso
  Version     : v1.0.7
- Date		 : 2015/3/27
+ Date		 : 2015/6/5
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : BLE advertising
  ===============================================================================
@@ -19,8 +19,7 @@
  2014/2/6	v1.0.5	Add update overload member functions.			Jason
  2015/3/2	v1.0.6	Add add_uuid_to_complete_list overload member.	Jason
  2015/3/27	v1.0.7	Reduce RAM used.								Jason
- 2015/5/27	v1.0.8	Add manuf_specific_data() for RAW data.			Jason
- 	 	 	 	 	Add add_uuid_to_complete_list() for RAW data.
+ 2015/6/5	v1.0.8	Add manuf_specific_data() for RAW data.			Jason
  ===============================================================================
  */
 
@@ -136,13 +135,6 @@ public:
 	inline void add_uuid_to_complete_list(bleService &service) {
 		add_uuid_to_complete_list(service.uuid(), service.uuid_type());
 	}
-
-	/**
-	 * @brief Additional manufacturer specific data.
-	 * @param uuids Array point to the raw of the @ref ble_uuid_t list.
-	 * @param count Indicate the number of uuid in the list.
-	 */
-	void add_uuid_to_complete_list(ble_uuid_t const *uuids, uint16_t count);
 
 	/**@brief Set the Slave Connection Interval Range.
 	 * @param max	Max. connection interval (unit ms).
