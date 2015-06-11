@@ -90,13 +90,13 @@ public:
 	 *       If the given parameters does not match the current connection's parameters
 	 *       this function initiates a new negotiation.
 	 *
-	 * @param[in]   min_conn_interval	Minimum Connection Interval in millisecond units. (min. 8ms)
+	 * @param[in]   min_conn_interval	Minimum Connection Interval in millisecond units. (min. 7.5ms)
 	 * @param[in]	max_conn_interval	Maximum Connection Interval in millisecond units.
 	 * @param[in]	slave_latency		Slave Latency in number of connection events.
 	 * @param[in]	conn_sup_timeout	Connection Supervision Timeout in millisecond units.
 	 */
-	uint32_t change(uint16_t min_conn_interval,
-	  	  	  	    uint16_t max_conn_interval,
+	uint32_t change(float min_conn_interval,
+	  	  	  	    float max_conn_interval,
 	  	  	  	    uint16_t slave_latency = 0,
 	  	  	  	    uint16_t conn_sup_timeout = 4000 );
 

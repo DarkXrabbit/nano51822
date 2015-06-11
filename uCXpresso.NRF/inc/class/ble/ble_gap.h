@@ -61,8 +61,8 @@ public:
 	 * @retval NRF_ERROR_INVALID_PARAM Invalid parameter(s) supplied.
 	 */
 	virtual uint32_t settings(LPCTSTR device_name,
-							  uint16_t min_conn_interval = 100,		// default 500ms
-							  uint16_t max_conn_interval = 500,		// default 1000ms
+							  float min_conn_interval = 50,		// default 50ms
+							  float max_conn_interval = 500,		// default 500ms
 							  uint16_t slave_latency 	 = 0,		//
 							  uint16_t conn_sup_timeout  = 4000		// default connection supervisory timeout 4 seconds.
 							);
