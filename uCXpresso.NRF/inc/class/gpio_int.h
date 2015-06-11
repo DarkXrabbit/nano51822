@@ -62,6 +62,11 @@ public:
 	 */
 	void disable();
 
+	/**
+	 * @brief Interrupt event, callback when m_handle is null.
+	 */
+	virtual void onEvent() { NOTHING }
+
 	//
 	///@cond PRIVATE
 	//
