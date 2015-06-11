@@ -12,6 +12,7 @@ v1.0.7 rc3 11th June 2015
 --------------------------------
 ###Details: 
 	1. Add nano51822-UDK board pin defined.
+	2. Add fast external interrupts service. (gpioINT class)
 
 v1.0.6 released 20th April 2015
 --------------------------------

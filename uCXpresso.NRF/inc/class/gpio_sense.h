@@ -17,8 +17,8 @@
  ===============================================================================
  */
 
-#ifndef PININT_H_
-#define PININT_H_
+#ifndef GPIO_SENSE_H_
+#define GPIO_SENSE_H_
 
 #include <class/pin.h>
 #include <class/semaphore.h>
@@ -46,7 +46,7 @@ public:
 	 * @param sense to specify the @ref SENSE_T to trigger the interrupt.
 	 * \param mode to set the PIN_INPUT_MODE_T.
 	 */
-	gpioSense(uint8_t pin, SENSE_T sense=FALLING, PIN_INPUT_MODE_T pull=INTERNAL_PULL_UP);
+	gpioSense(uint8_t pin, SENSE_T sense=FALLING, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP);
 
 	/**
 	 * @brief Waiting for interrupt active
@@ -86,7 +86,7 @@ public:
 	virtual ~gpioSense();
 protected:
 	uint8_t	m_sense;
-	uint8_t m_pull;
+	uint8_t m_mode;
 	/// @endcond
 };
 
