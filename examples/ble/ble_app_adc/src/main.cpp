@@ -45,8 +45,8 @@
 // Board LED define
 //
 //#define BOARD_PCA10001
-//#define BOARD_LILYPAD
-#define BOARD_NANO51822_UDK
+#define BOARD_LILYPAD
+//#define BOARD_NANO51822_UDK
 #include <config/board.h>
 
 //

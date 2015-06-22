@@ -34,12 +34,6 @@
 #define P20				23
 #define P24				24
 #define P25				25
-#define AD0				1
-#define AD1				2
-#define AD2				3
-#define AD3				4
-#define AD4				5
-#define AD5				6
 #define P30				30
 #define SCL				28
 #define SDA				29
@@ -49,6 +43,8 @@
 #define BUTTON_PIN_0	0		// DFU Button
 #define LED_PIN_0		7
 #define LED_PIN_1		20
+#define LED1			LED_PIN_0
+#define LED2			LED_PIN_1
 #endif
 
 #ifdef BOARD_PCA10001
