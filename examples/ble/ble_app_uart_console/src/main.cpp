@@ -39,6 +39,9 @@
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x004C                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
+#define BOARD_NANO51822_UDK
+#include <config/board.h>
+
 //
 // Main Routine
 //
@@ -83,12 +86,12 @@ int main(void) {
 	// Your Application setup code here
 	//
 
-	CPin led0(18);	// led0 on P0.18
-	CPin led1(19);	// led1 on P0.19
-	led0.output();	// set led0 as an output pin
+	CPin led1(LED1);
+	CPin led2(LED2);
 	led1.output();
+	led2.output();
 
-	CPin btn(16);	// button on P0.16
+	CPin btn(BTN1);
 	btn.input();
 
 #ifdef DEBUG
@@ -105,9 +108,9 @@ int main(void) {
     	// NUS indicate LED
     	//
     	if ( nus.isAvailable() ) {
-    		led1 = LED_ON;
+    		led2 = LED_ON;
     	} else {
-    		led1 = LED_OFF;
+    		led2 = LED_OFF;
     	}
 
     	//
@@ -115,7 +118,7 @@ int main(void) {
     	//
     	if ( tm.isExpired(500) ) {
     		tm.reset();
-    		led0 = !led0;	// blink led
+    		led1 = !led1;	// blink led
     	}
 
     	// Negotiate the "Connection Parameters Update".
