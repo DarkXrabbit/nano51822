@@ -69,7 +69,7 @@ int main(void) {
     	//
 		for (int ch = 0; ch < 4; ch++) {
 			x[ch] = (x[ch] + 10) % 360;							// degree 0~360, step by 2
-			y = arm_sin_f32((x[ch] * M_PI) / 180.0f);            // y = sine @x
+			y = arm_sin_f32((x[ch] * M_PI) / 180.0f);           // y = sine @x
 			pwm.update(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); 	// update the duty-cycle of channel
 		}
 		sleep(10);    // speed

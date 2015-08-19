@@ -95,6 +95,7 @@ void senseTask(CThread *p_thread, xHandle p_param) {
 					}
 				} else tmBounce.reset();
 			}
+			DBG("max=%d, min=%d, value=%d", max, min, value);
 		}
 	}
 }
@@ -118,8 +119,8 @@ int main(void) {
 	CPowerSave::tickless(true);
 #endif
 
-	CAdc::init();			// AREF internal VBG
-	CAdc::source(AIN);	// source from internal: VDD x 1/3
+	CAdc::init();		// AREF internal VBG
+	CAdc::source(AIN);	// source from AD0~AD5
 	CAdc::enable();
 
 	//
