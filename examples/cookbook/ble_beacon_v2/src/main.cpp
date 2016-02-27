@@ -37,7 +37,7 @@
 #include "at_command.h"
 
 // TODO: insert other definitions and declarations here
-#define APP_ADV_INTERVAL				 1000							///< the advertising interval in millisecond.
+#define APP_ADV_INTERVAL				 500							///< the advertising interval in millisecond.
 #define APP_COMPANY_IDENTIFIER         0x004C                         ///< Company identifier for Apple Inc. as per www.bluetooth.org.
 //#define APP_COMPANY_IDENTIFIER           0x0059                       	///< Company identifier for Nordic Semi. as per www.bluetooth.org.
 #define APP_ADV_DATA_LENGTH              0x15                           /**< Length of manufacturer specific data in the advertisement. */

@@ -37,8 +37,12 @@
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
+#define APP_ADV_INTERVAL                     50                    	/**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059					/**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
+
+#define BLE_ECHO	1
+#define BOARD_NANO51822_UDK
+#include <config/board.h>
 
 //
 // Main Routine
@@ -58,7 +62,7 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice stack
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
+	ble.m_gap.settings(DEVICE_NAME, 50, 50, 0, 3000);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
 
 	//
@@ -74,8 +78,12 @@ int main(void) {
 	//
 	// BLE Advertising
 	//
+	int8_t const txPowerLevel = -55;
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
+	ble.m_advertising.tx_power_level(&txPowerLevel);
+	ble.m_advertising.add_uuid_to_complete_list(BLE_UUID_DEVICE_INFORMATION_SERVICE);
+//	ble.m_advertising.add_uuid_to_complete_list(bat);
 
 	ble.m_advertising.update();										// update advertising data
 
@@ -86,25 +94,31 @@ int main(void) {
 	// Your Application setup code here
 	//
 
-	CPin led0(18);	// led0 on P0.18
-	CPin led1(19);	// led1 on P0.19
+	CPin led1(LED1);	// led0 on P0.18
+	CPin led2(LED2);	// led1 on P0.19
 
-	led0.output();	// set led0 as an output pin
-	led1.output();	// set led1 as an output pin
+	led1.output();	// set led0 as an output pin
+	led2.output();	// set led1 as an output pin
 
 	CTimeout	tm;
-	uint8_t		ch;
+	uint8_t		ch, len, buffer[64];
 
 	//
     // Enter main loop.
 	//
     while(1) {
     	if ( nus.isAvailable() ) {	// check BLE NUS service
-    		led1= LED_ON;
-
     		if ( nus.readable() ) {
-    			ch = nus.read();
-    			dbg.putc(ch);		// echo to Debug Console
+    			led2.invert();
+    			len = nus.read(buffer, nus.available());
+#if BLE_ECHO
+    			nus.write(buffer, len);
+    			for (ch=0; ch<len; ch++) {
+    				dbg.putc(buffer[ch]);
+    			}
+#else
+    			dbg.write(buffer, len);		// echo to Debug Console
+#endif
     		}
 
     		if ( dbg.available() ) {
@@ -113,7 +127,7 @@ int main(void) {
     		}
 
     	} else {
-    		led1 = LED_OFF;
+    		led2 = LED_OFF;
     	}
 
     	//
@@ -121,7 +135,7 @@ int main(void) {
     	//
     	if ( tm.isExpired(500) ) {
     		tm.reset();
-    		led0 = !led0;	// blink led
+    		led1 = !led1;	// blink led
     	}
 
     	// Negotiate the "Connect Parameters Update"
