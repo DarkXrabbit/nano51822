@@ -171,7 +171,7 @@ int main(void) {
 	// SoftDevice
 	//
 	bleDevice ble;
-	ble.enable();	// enable BLE SoftDevice task
+	ble.enable("nanoKB", "1234");	// enable BLE SoftDevice task
 
 	//
 	// update device information
@@ -182,15 +182,16 @@ int main(void) {
     pnp_id.product_id       = PNP_ID_PRODUCT_ID;
     pnp_id.product_version  = PNP_ID_PRODUCT_VERSION;
 
-	ble.information("uCXpresso",
-					"nanoKB",
-					"1234",
-					NULL,
-					NULL,
-					NULL,
-					NULL,
-					&pnp_id
-					);
+// remove from v1.1.0+, and move to ble.enable(...)
+//	ble.information("uCXpresso",
+//					"nanoKB",
+//					"1234",
+//					NULL,
+//					NULL,
+//					NULL,
+//					NULL,
+//					&pnp_id
+//					);
 
 	//
 	// Button to clear all bounded centrals.
