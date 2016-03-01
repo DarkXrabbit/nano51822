@@ -18,11 +18,11 @@ extern "C" {
 
 /*! \cond PRIVATE */
 #define uCXpresso_VER_MAJOR		1
-#define uCXpresso_VER_MINOR		0
-#define uCXpresso_VER_REV		8
+#define uCXpresso_VER_MINOR		1
+#define uCXpresso_VER_REV		0
 #define uCXpresso_VER_RC		RELEASED
-#define uCXpresso_VER_BUILD		"2016/2/26"
-#define uCXpresso_VER_STR		"V1.0.8"
+#define uCXpresso_VER_BUILD		"2016/3/1"
+#define uCXpresso_VER_STR		"V1.1.0"
 
 //
 //	defined

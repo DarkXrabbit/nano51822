@@ -100,11 +100,23 @@ public:
 	bleDevice();
 
 	/**
-	 * @brief Enable the BLE SoftDevice driver.
+	 * @brief Enable the BLE SoftDevice driver with device information (2016)
+	 *
+	 * @param[in]	product_number	Product Number String.
+	 * @param[in]	hw_rev			Hardware Reversion String.
+	 * @param[in]	fw_rev			Firmware Reversion String.
+	 * @param[in]	sw_rev			Software Reversion String.
+	 * @param[in]	p_sys_id		Point to the ble_dis_sys_id_t.
+	 * @param[in]	p_pnp_id		Point to the ble_dis_pnp_id_t.
 	 *
 	 * @return @ref NRF_SUCCESS BLE stack has been enabled successfully
 	 */
-	uint32_t enable();
+	uint32_t enable(LPCTSTR product_number = NULL,
+					LPCTSTR hw_rev = NULL,
+					LPCTSTR fw_rev = NULL,
+					LPCTSTR sw_rev = NULL,
+					ble_dis_sys_id_t *p_sys_id=NULL,
+					ble_dis_pnp_id_t *p_pnp_id=NULL);
 
 	/**
 	 * @brief Wait for connected.
@@ -174,16 +186,14 @@ public:
 	static uint32_t sdVersion(uint8_t &majorVer, uint16_t &minorVer);
 
 	/**
-	 * @brief Function for initializing the Device Information Service.
+	 * @brief (2016, Removed) Function for initializing the Device Information Service.
 	 *
 	 * @details This call allows the application to initialize the device information service.
 	 *          It adds the DIS service and DIS characteristics to the database, using the initial
 	 *          values supplied through the p_dis_init parameter. Characteristics which are not to be
 	 *          added, shall be set to NULL in p_dis_init.
 	 *
-	 * @param[in]   manufact_name	Manufacturer Name String.
-	 * @param[in]	model_number	Model Number String.
-	 * @param[in]	serial_number	Serial Number String.
+	 * @param[in]	product_number	Product Number String.
 	 * @param[in]	hw_rev			Hardware Reversion String.
 	 * @param[in]	fw_rev			Firmware Reversion String.
 	 * @param[in]	sw_rev			Software Reversion String.
@@ -192,14 +202,12 @@ public:
 	 *
 	 * @return      NRF_SUCCESS on successful initialization of service.
 	 */
-	static uint32_t information(LPCTSTR manufact_name,
-								LPCTSTR model_number = NULL,
-								LPCTSTR serial_number = NULL,
-								LPCTSTR hw_rev = NULL,
-								LPCTSTR fw_rev = NULL,
-								LPCTSTR sw_rev = NULL,
-								ble_dis_sys_id_t *p_sys_id=NULL,
-								ble_dis_pnp_id_t *p_pnp_id=NULL);
+//	static uint32_t information(LPCTSTR product_number = NULL,
+//								LPCTSTR hw_rev = NULL,
+//								LPCTSTR fw_rev = NULL,
+//								LPCTSTR sw_rev = NULL,
+//								ble_dis_sys_id_t *p_sys_id=NULL,
+//								ble_dis_pnp_id_t *p_pnp_id=NULL);
 	/**
 	 * @brief 48bits (6 bytes) device address;
 	 */
