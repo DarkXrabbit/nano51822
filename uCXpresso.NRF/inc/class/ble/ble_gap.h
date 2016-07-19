@@ -110,6 +110,12 @@ public:
 	 * @return @ref NRF_ERROR_INVALID_STATE Invalid state to perform operation (disconnection is already in progress or not connected at all).
 	 */
 	virtual uint32_t disconnect(GAP_DISCONN_REASON_T reason=BTLE_REMOTE_USER_TERMINATED_CONNECTION);
+
+	//
+	/// @cond PRIVATE (internal used)
+	//
+	bleBase *m_p_ble;
+	/// @endcond
 };
 
 #endif /* BLE_GAP_H_ */

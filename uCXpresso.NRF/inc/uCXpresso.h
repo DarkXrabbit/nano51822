@@ -4,6 +4,8 @@
 #ifndef UCXPRESSO_H
 #define UCXPRESSO_H
 
+#define UCXPRESSO
+
 #include <stdint.h>
 #include <stdbool.h>
 #include <stddef.h>
@@ -19,10 +21,10 @@ extern "C" {
 /*! \cond PRIVATE */
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		1
-#define uCXpresso_VER_REV		0
-#define uCXpresso_VER_RC		RELEASED
-#define uCXpresso_VER_BUILD		"2016/3/1"
-#define uCXpresso_VER_STR		"V1.1.0"
+#define uCXpresso_VER_REV		2
+#define uCXpresso_VER_RC		1
+#define uCXpresso_VER_BUILD		"2016/7/20"
+#define uCXpresso_VER_STR		"V1.1.2"
 
 //
 //	defined
@@ -135,10 +137,12 @@ extern void bootloader_start(void);
 //
 // RTOS
 //
-#define MAX_DELAY_TIME	0xffffffff
+#define MAX_DELAY_TIME		0xffffffff
+#define WAIT_FOR_ANY_BYTE	(MAX_DELAY_TIME-1)
 extern void sleep(int ms);
 extern void sysReboot(void);
 extern uint32_t kernel_code_level();
+extern uint32_t GetSystemTickCount();
 
 //
 // Bit Control

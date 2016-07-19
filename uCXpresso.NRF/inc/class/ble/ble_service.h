@@ -50,7 +50,7 @@ public:
 	 * @return an uint8_t value.
 	 */
 	virtual inline uint8_t uuid_type() {
-		return BLE_UUID_TYPE_BLE;
+		return 0;
 	}
 
 	//

@@ -8,6 +8,13 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 
+v1.1.2 rc1 20th July 2016
+--------------------------------
+###Details: 
+	1. Add nanopb to support the Google Science Journal project.
+	2. Updates the BLE stack to support the customer UUID in advertisement.
+
+
 v1.0.7 released 6th July 2015
 --------------------------------
 ###Details: 

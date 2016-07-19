@@ -55,6 +55,9 @@ typedef enum {
 	AD_NONE= 0
 }AIN_T;
 
+// int pin to analog pin
+const AIN_T analog_pin[] = {AD_NONE, AD0, AD1, AD2, AD3, AD4, AD5};
+
 /**
  * @brief Analog resolution.
  * @ingroup Enumerations

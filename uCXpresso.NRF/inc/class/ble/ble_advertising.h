@@ -249,6 +249,7 @@ protected:
 	uint8_t					m_adv_direct_cnt;
 	float					m_adv_interval;
 	uint16_t				m_adv_timeout;
+	bool					m_bVS;
 
 	ADV_START_MODE_T		m_adv_start_mode;
 	///@endcond
