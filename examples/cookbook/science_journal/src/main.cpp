@@ -1,6 +1,6 @@
 /*
 ===============================================================================
- Name        : main.c
+ Name        : Science Journal
  Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
@@ -11,7 +11,7 @@
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2014/10/14 v1.0.0	First Edition.									LEO
+ 2016/7/20 v1.0.0	First Edition.									Jason
  ===============================================================================
  */
 
@@ -35,12 +35,12 @@
 #include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "地震電訊號"            /**< Name of device. Will be included in the advertising data. */
-#define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     50                    	/**< The advertising interval (in ms). */
-#define APP_COMPANY_IDENTIFIER           	 0x0059					/**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
+#define DEVICE_NAME                          "科學期刊"            /**< Name of device. Will be included in the advertising data. */
+#define MANUFACTURER_NAME                    "uCXpresso.NRF"     /**< Manufacturer. Will be passed to Device Information Service. */
+#define APP_ADV_INTERVAL                     50                  /**< The advertising interval (in ms). */
+#define APP_COMPANY_IDENTIFIER           	 0x0059				 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
-#define BLE_ECHO	1
+//#define BOARD_LILYPAD
 #define BOARD_NANO51822_UDK
 #include <config/board.h>
 
@@ -62,9 +62,10 @@ const ble_uuid128_t science_base_uuid = {
 // Main Routine
 //
 int main(void) {
-#ifdef DEBUG
 	CSerial ser;		// declare a Serial object
 	ser.enable();
+
+#ifdef DEBUG
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
 //	dbg.waitToDebugMode();
@@ -77,7 +78,7 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice stack
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME, 50, 50, 0, 3000);	// set Device Name on GAP
+	ble.m_gap.settings(DEVICE_NAME, 20, 50);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
 
 	//
@@ -117,15 +118,17 @@ int main(void) {
 
 	CPin led1(LED1);	// led0 on P0.18
 	CPin led2(LED2);	// led1 on P0.19
-	CPin led3(LED3);
 
 	led1.output();	// set led0 as an output pin
 	led2.output();	// set led1 as an output pin
-	led3.output();
 
+	//
+	// Initialize & enable the ADC core
+	//
 	CAdc::init();
 	CAdc::enable();
 
+	//
 	CTimeout	tm, period;
 	uint8_t		buffer[64];
 	uint16_t 	size, value;
@@ -135,8 +138,6 @@ int main(void) {
 	//
     while(1) {
     	if ( bleScience.isAvailable() ) {	// check BLE NUS service
-    		led2 = LED_ON;
-
     		// receive configrations
     		size = bleScience.readable();
     		if ( size > 0 ) {
@@ -144,14 +145,14 @@ int main(void) {
     			handle(buffer, size);
     		}
 
-    		// send data at every 200ms
-    		if ( period.isExpired(200) ) {
+    		// send data at every 100ms
+    		if ( period.isExpired(100) ) {
     			period.reset();
 				if ( pin_type == ANALOG ) {
 					if ( pin <= 5) { // AD0 - AD5
 						CAdc::pin(analog_pin[pin+1]);
 						CAdc::read(value);
-						sensorValue = (value * 3.52f); 	// 1bit = 1mV
+						sensorValue = (value * 3.52f); 	// mV = (value x 3.6V / 1024) x 1000
 						DBG("analog[%d] = %d\n", pin, sensorValue);
 					}
 				} else {
@@ -159,12 +160,12 @@ int main(void) {
 					di.input();
 					sensorValue = di.read();
 				}
+				// send to BLE
 				send_data(bleScience, GetSystemTickCount(), sensorValue);
-				led3.invert();
+				led2.invert();
     		}
     	} else {
     		led2 = LED_OFF;
-    		led3 = LED_OFF;
     	}
 
     	//
