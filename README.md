@@ -8,8 +8,8 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 ###Approval Sheet: https://rawgit.com/ucxpresso/nano51822/master/documents/nano51822_approval_sheet.pdf
 ###License: http://www.embeda.com.tw/ucxpresso/?article=ucxpresso-nrf-license
 ###Online Shop: 
-	[Japan /Switch Sciencehttps](http://international.switch-science.com/catalog/2158) <br />
-	[UK & Europe / Vurt BLE] (http://vurt.blue/products/lilypad-for-nano51822?variant=1095070781) <br />
+[Japan /Switch Sciencehttps](http://international.switch-science.com/catalog/2158) <br />
+[UK & Europe / Vurt BLE](http://vurt.blue/products/lilypad-for-nano51822?variant=1095070781) <br />
 
 
 v1.1.2 rc1 20th July 2016
