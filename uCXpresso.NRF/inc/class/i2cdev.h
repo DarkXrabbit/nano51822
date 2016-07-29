@@ -2,8 +2,8 @@
  ===============================================================================
  Name        : i2cdev.h
  Author      : uCXpresso
- Version     : v1.0.0
- Date		 : 2014/10/15
+ Version     : v1.0.1
+ Date		 : 2016/7/20
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : I2CDev class provide the I2C master interface
  ===============================================================================
@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2014/10/15	v1.0.0	First Edition for nano51822						Jason
+ 2016/07/20 v1.0.1	Update pins for nano51822-UDK board.			Jason
  ===============================================================================
  */
 
@@ -22,8 +23,8 @@
 
 #define I2C_READ_BIT	1
 
-#define DEF_I2C_DAT_PIN	28
-#define DEF_I2C_CLK_PIN	29
+#define DEF_I2C_SDA_PIN	29
+#define DEF_I2C_SCL_PIN	28
 
 /**
  * @brief The I2Cdev class provides the i2c interface and compatibility of i2cdevlib/i2cdev class.
@@ -34,7 +35,7 @@
  */
 class I2Cdev: public twiMaster {
 public:
-	I2Cdev(int dat_pin=DEF_I2C_DAT_PIN, int clk_pin=DEF_I2C_CLK_PIN, TWI_FREQ_T freq=TWI_FREQ_100KHZ);
+	I2Cdev(int dat_pin=DEF_I2C_SDA_PIN, int clk_pin=DEF_I2C_SCL_PIN, TWI_FREQ_T freq=TWI_FREQ_100KHZ);
 
 	/**
 	 * @brief Read a single bit from an 8-bit device register.

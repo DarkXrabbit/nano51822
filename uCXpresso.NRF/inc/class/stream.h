@@ -226,7 +226,7 @@ public:
 
 	 CSemaphore *m_semESC;
 	 virtual void onSend(bool fromISR) = PURE_VIRTUAL_FUNC;
-
+	 virtual bool isTxBusy() = PURE_VIRTUAL_FUNC;
 protected:
 
 	 CSemaphore	m_semTx;

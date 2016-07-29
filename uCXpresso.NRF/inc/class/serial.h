@@ -112,6 +112,7 @@ public:
 	virtual ~CSerial();
 	virtual void onSend(bool fromISR);
 	virtual void onRecv(bool fromISR, uint8_t data);
+	virtual bool isTxBusy();
 private:
 	uint16_t	m_handle;
 	uint32_t 	m_flag;

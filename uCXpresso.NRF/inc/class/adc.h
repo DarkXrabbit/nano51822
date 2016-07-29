@@ -143,7 +143,7 @@ public:
 	 */
 	inline static bool read(AIN_T ain, uint16_t &value, uint32_t timeout=MAX_DELAY_TIME) {
 		CAdc::pin(ain);
-		return CAdc::read(value);
+		return CAdc::read(value, timeout);
 	}
 
 	/**

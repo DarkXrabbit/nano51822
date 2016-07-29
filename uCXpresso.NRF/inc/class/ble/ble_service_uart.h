@@ -77,6 +77,7 @@ public:
 	//
 	virtual ~bleServiceUART();
 	virtual void onSend(bool fromISR);
+	virtual bool isTxBusy();
 protected:
 	CSemaphore m_semWait;
     ble_gatts_char_handles_t m_tx_handles;              /**< Handles related to the TX characteristic. (as provided by the S110 SoftDevice)*/
