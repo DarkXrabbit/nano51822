@@ -49,7 +49,7 @@ void wait_for_serial(void) {
 }
 #endif
 
-goosci_SensorData sd  = goosci_SensorData_init_zero;
+//goosci_SensorData sd  = goosci_SensorData_init_zero;
 const int BUFFER_LEN=256;
 uint8_t buffer[BUFFER_LEN];
 pb_ostream_t stream;
@@ -65,6 +65,7 @@ void send_data(BLECharacteristic& characteristic, unsigned long timestamp_key, i
 {
   stream = pb_ostream_from_buffer(buffer, BUFFER_LEN);
 
+  ALIGN4 goosci_SensorData sd  = goosci_SensorData_init_zero;
   sd.timestamp_key = timestamp_key; // timestamp
   sd.which_result = (pb_size_t)goosci_SensorData_data_tag;
   sd.result.data.pin = goosci_Pin();
@@ -120,7 +121,7 @@ void send_data(BLECharacteristic& characteristic, unsigned long timestamp_key, i
 }
 
 bool encode_pin(pb_ostream_t *stream, const pb_field_t *field, void * const *arg) {
-  goosci_Pin sp = goosci_Pin_init_zero;
+  ALIGN4 goosci_Pin sp = goosci_Pin_init_zero;
   sp.pin.analog_pin.pin = 0;
   if (!pb_encode_tag_for_field(stream, field))
     return false;
