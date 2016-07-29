@@ -1,17 +1,17 @@
 /*
 ===============================================================================
- Name        : 地震電訊號
+ Name        : Quake Science
  Author      : uCXpresso
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
  License	 : MIT
- Description : A BLE UART to Debug Console (Serial I/F) example
+ Description : A BLE UART to Google Science Journal example
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
- 2016/7/20 v1.0.0	First Edition.									Jason
+ 2016/7/28 v1.0.0	First Edition.									Jason
  ===============================================================================
  */
 
@@ -35,7 +35,6 @@
 #include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "地震電訊號"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     50                    	/**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059					/**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
@@ -182,8 +181,9 @@ int main(void) {
     while(1) {
 
     	WDT::feed();
-
+    	//
 		// read analog
+    	//
 		if ( pin_type == ANALOG ) {
 
 			switch(pin) {
@@ -213,19 +213,22 @@ int main(void) {
 				}
 			}
 			offset = fabs(last - sensorValue);
-
+		//
 		// read digital data
+		//
 		} else {
 			CPin di(pin);
 			di.input();
 			sensorValue = di.read();
 		}
 
-		// bleScience connected
+		//
+		// Science Journal App connected
+		//
     	if ( bleScience.isAvailable() ) {	// check BLE NUS service
     		led2 = LED_ON;
 
-    		// receive configrations
+    		// receive configurations
     		size = bleScience.readable();
     		if ( size > 0 ) {
     			bleScience.read(buffer, size);
@@ -244,7 +247,9 @@ int main(void) {
 				sendForFirst = false;
 			}
 
+		//
 		// Disconnected
+		//
     	} else {
     		led2 = LED_OFF;
     		// Serial Data
@@ -267,7 +272,9 @@ int main(void) {
     		led1 = !led1;	// blink led
     	}
 
+    	//
     	// Negotiate the "Connect Parameters Update"
+    	//
     	conn.negotiate();
     }
 }
