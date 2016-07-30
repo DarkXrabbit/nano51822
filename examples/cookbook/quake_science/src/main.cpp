@@ -191,7 +191,7 @@ int main(void) {
 			case 0:
 				CAdc::read(AD1, value1);
 				CAdc::read(AD3, value2);
-				sensorValue = (value1 - value2 + 1024) * 3600.0f / 1024;
+				sensorValue = (value1 - value2) * 3600.0f / 1024;
 				minOffset = 100;
 				break;
 			case 1:
@@ -241,7 +241,11 @@ int main(void) {
 			if ( period.isExpired(60000) || (offset >= minOffset && period.isExpired(50)) || sendForFirst ) {
 				led3 = LED_ON;
 				period.reset();
-				send_data(bleScience, GetSystemTickCount(), sensorValue);
+				if (pin==0) {
+					send_data(bleScience, GetSystemTickCount(), sensorValue + 3600.0);	// with shift
+				} else {
+					send_data(bleScience, GetSystemTickCount(), sensorValue);
+				}
 				last = sensorValue;
 				led3 = LED_OFF;
 				sendForFirst = false;
