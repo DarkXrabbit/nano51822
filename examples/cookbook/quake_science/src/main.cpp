@@ -261,7 +261,7 @@ int main(void) {
 				if ( period.isExpired(1000) || (offset >= minOffset && period.isExpired(10)) ) {
 					led3 = LED_ON;
 					period.reset();
-					con.printf("%d,%d\n",  GetSystemTickCount(), sensorValue);
+					con.printf("%d,%0.2f\n",  GetSystemTickCount(), sensorValue);
 					last = sensorValue;
 					led3 = LED_OFF;
 				}
