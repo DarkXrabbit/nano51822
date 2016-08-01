@@ -201,7 +201,7 @@ int main(void) {
 			case 5:
 				CAdc::read(analog_pin[pin+1], value1);
 				sensorValue = (value1 * 3600.0f / 1024);
-				minOffset = 50;
+				minOffset = 100;
 				break;
 
 			// measure I2C device
@@ -238,9 +238,10 @@ int main(void) {
     		}
 
 			// send data
-			if ( period.isExpired(60000) || (offset >= minOffset && bleScience.isTxBusy() == false) || sendForFirst ) {
+			if ( period.isExpired(60000) || offset >= minOffset || sendForFirst ) {
 				led3 = LED_ON;
 				period.reset();
+				bleScience.waitTxEmpty();	// Separates BLE data package
 				if (pin==0) {
 					send_data(bleScience, GetSystemTickCount(), sensorValue + 3600.0);	// with shift
 				} else {
