@@ -238,7 +238,7 @@ int main(void) {
     		}
 
 			// send data
-			if ( period.isExpired(60000) || (offset >= minOffset && period.isExpired(50)) || sendForFirst ) {
+			if ( period.isExpired(60000) || (offset >= minOffset && bleScience.isTxBusy() == false) || sendForFirst ) {
 				led3 = LED_ON;
 				period.reset();
 				if (pin==0) {
