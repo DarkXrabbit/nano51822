@@ -145,8 +145,8 @@ int main(void) {
     			handle(buffer, size);
     		}
 
-    		// send data at every 100ms
-    		if ( period.isExpired(100) ) {
+    		// send data at every second
+    		if ( period.isExpired(1000) ) {
     			period.reset();
 				if ( pin_type == ANALOG ) {
 					if ( pin <= 5) { // AD0 - AD5
@@ -161,6 +161,7 @@ int main(void) {
 					sensorValue = di.read();
 				}
 				// send to BLE
+				bleScience.waitTxEmpty();	// Separates BLE data package
 				send_data(bleScience, GetSystemTickCount(), sensorValue);
 				led2.invert();
     		}
