@@ -36,26 +36,25 @@
 
 void wait_for_serial(void) {
 #if defined(__AVR_ATmega32U4__) || defined(__ARDUINO_ARC__)
-  // Wait for 5 seconds to see if the USB Serial connects
-  // We don't need to call Serial.begin because the 32u4 auto detects
-  // a serial connection and baud rate for us.
-  delay(5000);
+	// Wait for 5 seconds to see if the USB Serial connects
+	// We don't need to call Serial.begin because the 32u4 auto detects
+	// a serial connection and baud rate for us.
+	delay(5000);
 #else
-  Serial.begin(115200);
+	Serial.begin(115200);
 #endif
 #if defined(__ARDUINO_ARC__)
-  Serial.begin(115200);
+	Serial.begin(115200);
 #endif
 }
 #endif
 
 //goosci_SensorData sd  = goosci_SensorData_init_zero;
-const int BUFFER_LEN=256;
-uint8_t buffer[BUFFER_LEN];
+const int BUFFER_LEN = 256;
+uint8_t *buffer = NULL;
 pb_ostream_t stream;
 
 int packets = 0;
-uint8_t packet[BTLE_BUFFER_SIZE];
 
 #ifdef UCXPRESSO
 void send_data(CStream &uart, unsigned long timestamp_key, uint16_t value)
@@ -63,69 +62,80 @@ void send_data(CStream &uart, unsigned long timestamp_key, uint16_t value)
 void send_data(BLECharacteristic& characteristic, unsigned long timestamp_key, int value)
 #endif
 {
-  stream = pb_ostream_from_buffer(buffer, BUFFER_LEN);
+	if ( buffer == NULL ) {
+		buffer = (uint8_t *) malloc(BUFFER_LEN);
+	}
+	stream = pb_ostream_from_buffer(buffer, BUFFER_LEN);
 
-  ALIGN4 goosci_SensorData sd  = goosci_SensorData_init_zero;
-  sd.timestamp_key = timestamp_key; // timestamp
-  sd.which_result = (pb_size_t)goosci_SensorData_data_tag;
-  sd.result.data.pin = goosci_Pin();
-  sd.result.data.pin.which_pin = goosci_Pin_analog_pin_tag;
-  sd.result.data.pin.pin.analog_pin.pin = 0;
-  sd.result.data.which_value = goosci_Data_analog_value_tag;
-  sd.result.data.value.analog_value.value = value;
+	goosci_SensorData sd = goosci_SensorData_init_zero;
+	;
+	sd.timestamp_key = timestamp_key; // timestamp
+	sd.which_result = (pb_size_t) goosci_SensorData_data_tag;
+	sd.result.data.pin = goosci_Pin();
+	sd.result.data.pin.which_pin = goosci_Pin_analog_pin_tag;
+	sd.result.data.pin.pin.analog_pin.pin = 0;
+	sd.result.data.which_value = goosci_Data_analog_value_tag;
+	sd.result.data.value.analog_value.value = value;
 
+	if (!pb_encode(&stream, goosci_SensorData_fields, &sd)) {
+		DEBUG_PRINT("Encoding failed: %s\n", PB_GET_ERROR(&stream));
+	} else {
+		/*
+		 DEBUG_PRINT(F("send_data timestamp: "));
+		 DEBUG_PRINTLN(sd.timestamp_key);
+		 DEBUG_PRINT(F("send_data value: "));
+		 DEBUG_PRINTLN(value);
+		 DEBUG_PRINT(F("size: "));
+		 DEBUG_PRINT(stream.bytes_written);
+		 DEBUG_PRINTLN(F(" bytes."));
+		 String s;
+		 for (unsigned int i = 0; i < stream.bytes_written; ++i) {
+		 s += String(buffer[i], HEX);
+		 if ((i-1) % 2 == 0) s += " ";
+		 }
+		 DEBUG_PRINTLN(s.c_str());
+		 */
+		uint8_t size = stream.bytes_written;
+		const uint8_t max_packet_size = BTLE_BUFFER_SIZE - 2;
+		/* Force size/max_packet_size to round up */
+		uint8_t num_packets = (size + max_packet_size - 1) / max_packet_size;
 
-  if (!pb_encode(&stream, goosci_SensorData_fields, &sd)) {
-    DEBUG_PRINT("Encoding failed: %s\n", PB_GET_ERROR(&stream));
-  } else {
-    /*
-    DEBUG_PRINT(F("send_data timestamp: "));
-    DEBUG_PRINTLN(sd.timestamp_key);
-    DEBUG_PRINT(F("send_data value: "));
-    DEBUG_PRINTLN(value);
-    DEBUG_PRINT(F("size: "));
-    DEBUG_PRINT(stream.bytes_written);
-    DEBUG_PRINTLN(F(" bytes."));
-    String s;
-    for (unsigned int i = 0; i < stream.bytes_written; ++i) {
-      s += String(buffer[i], HEX);
-      if ((i-1) % 2 == 0) s += " ";
-    }
-    DEBUG_PRINTLN(s.c_str());
-    */
-    uint8_t size = stream.bytes_written;
-    const uint8_t max_packet_size = BTLE_BUFFER_SIZE - 2;
-    /* Force size/max_packet_size to round up */
-    uint8_t num_packets = (size + max_packet_size - 1) / max_packet_size;
-    
+		for (uint8_t ii = 0; ii < num_packets; ii++) {
+			bool is_last_packet = ((num_packets - 1) == ii);
+			/* There are 3 possibilities for current_packet_size
+			 1) It is the last packet and the remaining data is smaller than our allocated buffer (size % max_packet_size)
+			 2) It is the last packet and the remaining data is equal to our allocated buffer (max_packet_size)
+			 3) It is not the last packet (max_packet_size)
+			 */
+			uint8_t current_packet_size =
+					(is_last_packet ?
+							((size % max_packet_size == 0) ?
+									max_packet_size : (size % max_packet_size)) :
+							max_packet_size);
 
-    for (uint8_t ii = 0; ii < num_packets; ii++) {
-      bool is_last_packet = ((num_packets - 1) == ii);
-      /* There are 3 possibilities for current_packet_size
-         1) It is the last packet and the remaining data is smaller than our allocated buffer (size % max_packet_size)
-         2) It is the last packet and the remaining data is equal to our allocated buffer (max_packet_size)
-         3) It is not the last packet (max_packet_size)
-      */
-      uint8_t current_packet_size = (is_last_packet ? ((size % max_packet_size == 0) ? max_packet_size : (size % max_packet_size)) : max_packet_size);
-      packet[0] = current_packet_size;
-      packet[1] = is_last_packet;
-      memcpy((void*)(packet + 2), buffer + ii * max_packet_size, current_packet_size);
-      
-      /* If send fails then we give up */
-      if ( uart.write(packet, current_packet_size+2) < current_packet_size+2 ) {
-        DEBUG_PRINT("Send of packet failed.\n");
-        break;
-      }
-    }        
-  }
+			uint8_t packet[BTLE_BUFFER_SIZE];
+			packet[0] = current_packet_size;
+			packet[1] = is_last_packet;
+			memcpy((void*) (packet + 2), buffer + ii * max_packet_size,
+					current_packet_size);
+
+			/* If send fails then we give up */
+			if (uart.write(packet, current_packet_size + 2)
+					< current_packet_size + 2) {
+				DEBUG_PRINT("Send of packet failed.\n");
+				break;
+			}
+		}
+	}
 }
 
-bool encode_pin(pb_ostream_t *stream, const pb_field_t *field, void * const *arg) {
-  ALIGN4 goosci_Pin sp = goosci_Pin_init_zero;
-  sp.pin.analog_pin.pin = 0;
-  if (!pb_encode_tag_for_field(stream, field))
-    return false;
-  if (!pb_encode_submessage(stream, goosci_Pin_fields, &sp))
-    return false;
-  return true;
+bool encode_pin(pb_ostream_t *stream, const pb_field_t *field,
+		void * const *arg) {
+	goosci_Pin sp = goosci_Pin_init_zero;
+	sp.pin.analog_pin.pin = 0;
+	if (!pb_encode_tag_for_field(stream, field))
+		return false;
+	if (!pb_encode_submessage(stream, goosci_Pin_fields, &sp))
+		return false;
+	return true;
 }

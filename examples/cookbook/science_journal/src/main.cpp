@@ -5,7 +5,7 @@
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
  License	 : MIT
- Description : A BLE UAET to Debug Console (Serial I/F) example
+ Description : A BLE UART to Google Science Journal
 ===============================================================================
  	 	 	 	 	 	 	 	 History
  ---------+---------+--------------------------------------------+-------------
@@ -35,7 +35,7 @@
 #include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "科學期刊"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                          "Science"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"     /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     50                  /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059				 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */

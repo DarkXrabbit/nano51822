@@ -192,7 +192,7 @@ int main(void) {
 				CAdc::read(AD1, value1);
 				CAdc::read(AD3, value2);
 				sensorValue = (value1 - value2) * 3600.0f / 1024;
-				minOffset = 100;
+				minOffset = 200;
 				break;
 			case 1:
 			case 2:
@@ -237,8 +237,8 @@ int main(void) {
     			DBG("Google Pin:%d\n", pin);
     		}
 
-			// send data
-			if ( period.isExpired(60000) || offset >= minOffset || sendForFirst ) {
+			// send data every 10 seconds
+			if ( period.isExpired(10000) || offset >= minOffset || sendForFirst ) {
 				led3 = LED_ON;
 				period.reset();
 				bleScience.waitTxEmpty();	// Separates BLE data package

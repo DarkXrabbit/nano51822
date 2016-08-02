@@ -14,7 +14,6 @@
  *  limitations under the License.
  */
 //#include <Arduino.h>
-
 #include <uCXpresso.h>
 #include <stdlib.h>
 #include "config_change.h"
@@ -34,38 +33,38 @@
 PinType pin_type = ANALOG;
 int pin = 0;
 
-static uint8_t sensorConfig[SENSOR_CONFIG_SIZE];
 
 bool decode_pin(pb_istream_t *stream, const pb_field_t *field, void * *arg) {
-  goosci_Pin sp = goosci_Pin_init_zero;
-  if (!pb_decode(stream, goosci_Pin_fields, &sp))
-    return false;
+	goosci_Pin sp = goosci_Pin_init_zero;
+	if (!pb_decode(stream, goosci_Pin_fields, &sp))
+		return false;
 
-  if (sp.which_pin == goosci_Pin_analog_pin_tag) {
-    pin_type = ANALOG;
-    pin = sp.pin.analog_pin.pin;
+	if (sp.which_pin == goosci_Pin_analog_pin_tag) {
+		pin_type = ANALOG;
+		pin = sp.pin.analog_pin.pin;
 
-  } else if (sp.which_pin == goosci_Pin_digital_pin_tag) {
-    pin_type = DIGITAL;
-    pin = sp.pin.digital_pin.pin;
+	} else if (sp.which_pin == goosci_Pin_digital_pin_tag) {
+		pin_type = DIGITAL;
+		pin = sp.pin.digital_pin.pin;
 
-  } else {
-    pin_type = VIRTUAL;
-  }
-  return true;
+	} else {
+		pin_type = VIRTUAL;
+	}
+	return true;
 }
 
 void handle(uint8_t* data, int8_t length) {
-  int8_t size = data[0];
-  bool last = data[1] == 1;
-  if (last) {
-	memcpy(sensorConfig, data + 2, size);
-    pb_istream_t stream = pb_istream_from_buffer(sensorConfig,size);
-    goosci_SensorDataRequest sdr = goosci_SensorDataRequest_init_zero;
-    sdr.pin.funcs.decode = &decode_pin;
-    if (!pb_decode(&stream, goosci_SensorDataRequest_fields, &sdr)) {
-      DEBUG_PRINT("Failed parse of string.");
-    }
-  }
+	int8_t size = data[0];
+	bool last = data[1] == 1;
+	if (last) {
+		uint8_t sensorConfig[SENSOR_CONFIG_SIZE];
+		memcpy(sensorConfig, data + 2, size);
+		pb_istream_t stream = pb_istream_from_buffer(sensorConfig, size);
+		goosci_SensorDataRequest sdr = goosci_SensorDataRequest_init_zero;
+		sdr.pin.funcs.decode = &decode_pin;
+		if (!pb_decode(&stream, goosci_SensorDataRequest_fields, &sdr)) {
+			DEBUG_PRINT("Failed parse of string.");
+		}
+	}
 
 }
