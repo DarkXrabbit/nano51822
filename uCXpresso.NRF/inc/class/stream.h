@@ -235,6 +235,7 @@ protected:
 	 app_fifo_t	m_rx_fifo;
 	 uint8_t	*m_p_tx_buf;
 	 uint8_t	*m_p_rx_buf;
+	 uint32_t	m_numOfByteToSend;
 	 /// @endcond
 };
 
