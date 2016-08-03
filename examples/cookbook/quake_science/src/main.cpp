@@ -237,8 +237,8 @@ int main(void) {
     			DBG("Google Pin:%d\n", pin);
     		}
 
-			// send data every 10 seconds
-			if ( period.isExpired(10000) || offset >= minOffset || sendForFirst ) {
+			// send data every 30 seconds
+			if ( period.isExpired(30000) || offset >= minOffset || sendForFirst ) {
 				led3 = LED_ON;
 				period.reset();
 				bleScience.waitTxEmpty();	// Separates BLE data package
