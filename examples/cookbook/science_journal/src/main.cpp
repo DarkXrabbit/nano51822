@@ -62,10 +62,10 @@ const ble_uuid128_t science_base_uuid = {
 // Main Routine
 //
 int main(void) {
-	CSerial ser;		// declare a Serial object
-	ser.enable();
 
 #ifdef DEBUG
+	CSerial ser;		// declare a Serial object
+	ser.enable();
 	CDebug dbg(ser);	// Debug stream use the UART object
 	dbg.start();
 //	dbg.waitToDebugMode();
@@ -78,8 +78,10 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice stack
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME, 20, 50);	// set Device Name on GAP
+	char *device_name = spn_malloc(17, "Science-%02X", ble.address()[0]);
+	ble.m_gap.settings(device_name, 20, 50);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
+	free(device_name);
 
 	//
 	// Add BLE UART Service
@@ -100,10 +102,7 @@ int main(void) {
 	//
 	// BLE Advertising
 	//
-//	int8_t const txPowerLevel = -55;
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
-//	ble.m_advertising.tx_power_level(&txPowerLevel);
-	ble.m_advertising.add_uuid_to_complete_list(BLE_UUID_DEVICE_INFORMATION_SERVICE);
 	ble.m_advertising.add_uuid_to_complete_list(bleScience);
 
 	ble.m_advertising.update();										// update advertising data
