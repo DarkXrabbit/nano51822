@@ -12,11 +12,12 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 [UK & Europe / Vurt BLE](http://vurt.blue/products/lilypad-for-nano51822?variant=1095070781) <br />
 
 
-v1.1.2 rc1 20th July 2016
+v1.1.2 released 3th August 2016
 --------------------------------
 ###Details: 
 	1. Add nanopb to support the Google Science Journal project.
 	2. Updates the BLE stack to support the customer UUID in advertisement.
+	3. Fixed stream buffer bug.
 
 
 v1.0.7 released 6th July 2015
