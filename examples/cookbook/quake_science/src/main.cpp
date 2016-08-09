@@ -12,6 +12,7 @@
  DATE     |	VERSION |	DESCRIPTIONS							 |	By
  ---------+---------+--------------------------------------------+-------------
  2016/7/28 v1.0.0	First Edition.									Jason
+ 2016/8/8  v1.0.1	Update period time to send.						Jason
  ===============================================================================
  */
 
@@ -162,10 +163,10 @@ int main(void) {
 	//
 	// Other
 	//
-	CTimeout	tm, period;
+	CTimeout	tm, period, avg;
 	uint8_t		buffer[64];
 	uint16_t 	size, value1, value2;
-	float 		minOffset = 0, last  = 0, sensorValue = 0;
+	float 		minOffset = 50, last  = 0, sensorValue = 0;
 	uint16_t 	offset = 0;
 
 	Console con(ser);
@@ -181,38 +182,62 @@ int main(void) {
     while(1) {
 
     	WDT::feed();
+
+    	//
+		// receive configurations from Science Journal
+    	//
+		size = bleScience.readable();
+		if ( size > 0 ) {
+			bleScience.read(buffer, size);
+			handle(buffer, size);
+			sendForFirst = true;
+			DBG("Google Pin:%d\n", pin);
+			avg.reset();
+			minOffset = offset+5;
+		}
+
     	//
 		// read analog
     	//
 		if ( pin_type == ANALOG ) {
 
 			switch(pin) {
-			// measure Analog
+			// measure Analog Pin
 			case 0:
+				// Measure the air voltage for the Earthquake analysis.
 				CAdc::read(AD1, value1);
 				CAdc::read(AD3, value2);
 				sensorValue = (value1 - value2) * 3600.0f / 1024;
-				minOffset = 200;
 				break;
 			case 1:
 			case 2:
 			case 3:
 			case 4:
 			case 5:
+				// Normal analog measurement
 				CAdc::read(analog_pin[pin+1], value1);
 				sensorValue = (value1 * 3600.0f / 1024);
-				minOffset = 100;
 				break;
 
-			// measure I2C device
-			default:
+			// measure I2C device (for Magnetic Fields)
+			case 6:
 				if ( mag.getReadyStatus() ) {
 					mag.getHeading(&x, &y, &z);
 					sensorValue = sqrt1((x*x) + (y*y) + (z*z));
-					minOffset = 10;
 				}
+				break;
+
+			// other, no supported.
+			default:
+				sensorValue = 0;
+				break;
 			}
 			offset = fabs(last - sensorValue);
+
+			// calibrate min. offset
+			if ( avg.isExpired(10000)==false )  {
+				minOffset = (minOffset + offset) / 2 + 10;
+			}
 		//
 		// read digital data
 		//
@@ -223,22 +248,13 @@ int main(void) {
 		}
 
 		//
-		// Science Journal App connected
+		// Science Journal is connected
 		//
     	if ( bleScience.isAvailable() ) {	// check BLE NUS service
     		led2 = LED_ON;
 
-    		// receive configurations
-    		size = bleScience.readable();
-    		if ( size > 0 ) {
-    			bleScience.read(buffer, size);
-    			handle(buffer, size);
-    			sendForFirst = true;
-    			DBG("Google Pin:%d\n", pin);
-    		}
-
-			// send data every 30 seconds
-			if ( period.isExpired(30000) || offset >= minOffset || sendForFirst ) {
+			// send data every 60 seconds
+			if ( period.isExpired(60000) || offset > minOffset || sendForFirst ) {
 				led3 = LED_ON;
 				period.reset();
 				bleScience.waitTxEmpty();	// Separates BLE data package
@@ -259,7 +275,7 @@ int main(void) {
     		led2 = LED_OFF;
     		// Serial Data
     		if ( dbg.isDebugMode() == false ) {
-				if ( period.isExpired(1000) || (offset >= minOffset && period.isExpired(10)) ) {
+				if ( period.isExpired(1000) || (offset > minOffset && period.isExpired(10)) ) {
 					led3 = LED_ON;
 					period.reset();
 					con.printf("%d,%0.2f\n",  GetSystemTickCount(), sensorValue);
