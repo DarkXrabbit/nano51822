@@ -98,7 +98,7 @@ int main(void) {
 
 	// GAP
 	char *device_name = spn_malloc(17, "地震電訊%02X", ble.address()[0]);
-	ble.m_gap.settings(device_name, 20, 20);	// set Device Name on GAP
+	ble.m_gap.settings(device_name, 12, 20);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_4dBm);	// set Output power
 	free(device_name);
 
@@ -236,7 +236,7 @@ int main(void) {
 
 			// calibrate min. offset
 			if ( avg.isExpired(10000)==false )  {
-				minOffset = (minOffset + offset) / 2 + 10;
+				minOffset = (minOffset + offset) / 2 + 20;
 			}
 		//
 		// read digital data
