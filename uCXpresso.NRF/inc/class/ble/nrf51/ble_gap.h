@@ -81,6 +81,7 @@ enum BLE_GAP_SVCS
 #define BLE_GAP_ADDR_TYPE_RANDOM_STATIC                 0x01 /**< Random Static address. */
 #define BLE_GAP_ADDR_TYPE_RANDOM_PRIVATE_RESOLVABLE     0x02 /**< Private Resolvable address. */
 #define BLE_GAP_ADDR_TYPE_RANDOM_PRIVATE_NON_RESOLVABLE 0x03 /**< Private Non-Resolvable address. */
+#define BLE_GAP_ADDR_TYPE_PUBLIC_RANDOM					0x0F /**< Set addresses directly, no automatic address cycling */
 /**@} */
 
 /**@defgroup BLE_GAP_ADDR_CYCLE_MODES GAP Address cycle modes

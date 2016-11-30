@@ -82,7 +82,7 @@ int main(void) {
 	ble.m_advertising.interval(APP_ADV_INTERVAL);					// set advertising interval
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
 	ble.m_advertising.tx_power_level(&txPowerLevel);
-	ble.m_advertising.add_uuid_to_complete_list(BLE_UUID_DEVICE_INFORMATION_SERVICE);
+	ble.m_advertising.add_uuid_to_complete_list(nus);
 //	ble.m_advertising.add_uuid_to_complete_list(bat);
 
 	ble.m_advertising.update();										// update advertising data

@@ -193,7 +193,7 @@ int main(void) {
 			sendForFirst = true;
 			DBG("Google Pin:%d\n", pin);
 			avg.reset();
-			minOffset = offset+5;
+			minOffset = offset + 5;
 		}
 
     	//
@@ -236,7 +236,7 @@ int main(void) {
 
 			// calibrate min. offset
 			if ( avg.isExpired(10000)==false )  {
-				minOffset = (minOffset + offset) / 2 + 20;
+				minOffset = (minOffset + offset) / 2 + 15;
 			}
 		//
 		// read digital data

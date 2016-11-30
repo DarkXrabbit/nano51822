@@ -38,11 +38,12 @@
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nanoUART"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     1000                   /**< The advertising interval (in ms). */
+#define APP_ADV_INTERVAL                     500                   /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
 //#define BOARD_PCA10001
-#define BOARD_LILYPAD
+//#define BOARD_LILYPAD
+#define BOARD_NANO51822_UDK
 #include <config/board.h>
 
 CPin ledLeft(LED_PIN_0);	// for left
@@ -173,6 +174,7 @@ int main(void) {
 	//
 	// BLE Advertising
 	//
+	ble.m_advertising.add_uuid_to_complete_list(nus);
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);// add company identifier
 	ble.m_advertising.update();						// update advertising data
 
@@ -213,6 +215,7 @@ int main(void) {
 				ch = nus.read();
 				if ( ch ) {
 					cmd.input(ch);
+					dbg.putc(ch);
 				}
 			}
 		} else {

@@ -21,10 +21,10 @@ extern "C" {
 /*! \cond PRIVATE */
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		1
-#define uCXpresso_VER_REV		2
+#define uCXpresso_VER_REV		3
 #define uCXpresso_VER_RC		RELEASED
-#define uCXpresso_VER_BUILD		"2016/8/3"
-#define uCXpresso_VER_STR		"V1.1.2"
+#define uCXpresso_VER_BUILD		"2016/11/30"
+#define uCXpresso_VER_STR		"V1.1.3"
 
 //
 //	defined

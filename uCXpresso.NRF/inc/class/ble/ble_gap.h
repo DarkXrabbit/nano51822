@@ -111,6 +111,41 @@ public:
 	 */
 	virtual uint32_t disconnect(GAP_DISCONN_REASON_T reason=BTLE_REMOTE_USER_TERMINATED_CONNECTION);
 
+	/**@brief Get local Bluetooth address.
+	 *
+	 * @param[out] p_addr Pointer to address structure.
+	 *
+	 * @return @ref NRF_SUCCESS Address successfully retrieved.
+	 * @return @ref NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
+	 */
+	uint32_t getAddress(ble_gap_addr_t *p_addr);
+
+	/**@brief Set, clear or update advertisement and scan response data.
+	 *
+	 * @note The format of the advertisement data will be checked by this call to ensure interoperability.
+	 *       Limitations imposed by this API call to the data provided include having a flags data type in the scan response data and
+	 *       duplicating the local name in the advertisement data and scan response data.
+	 *
+	 * @note: To clear the advertisement data and set it to a 0-length packet, simply provide a valid pointer (p_data/p_sr_data) with its corresponding
+	 *        length (dlen/srdlen) set to 0.
+	 *
+	 * @note: The call will fail if p_data and p_sr_data are both NULL since this would have no effect.
+	 *
+	 * @param[in] p_data    Raw data to be placed in advertisement packet. If NULL, no changes are made to the current advertisement packet data.
+	 * @param[in] dlen      Data length for p_data. Max size: @ref BLE_GAP_ADV_MAX_SIZE octets. Should be 0 if p_data is NULL, can be 0 if p_data is not NULL.
+	 * @param[in] p_sr_data Raw data to be placed in scan response packet. If NULL, no changes are made to the current scan response packet data.
+	 * @param[in] srdlen    Data length for p_sr_data. Max size: @ref BLE_GAP_ADV_MAX_SIZE octets. Should be 0 if p_sr_data is NULL, can be 0 if p_data is not NULL.
+	 *
+	 * @return @ref NRF_SUCCESS Advertisement data successfully updated or cleared.
+	 * @return @ref NRF_ERROR_INVALID_ADDR Invalid pointer supplied.
+	 * @return @ref NRF_ERROR_INVALID_FLAGS Invalid combination of advertising flags supplied.
+	 * @return @ref NRF_ERROR_INVALID_DATA Invalid data type(s) supplied, check the advertising data format specification.
+	 * @return @ref NRF_ERROR_INVALID_LENGTH Invalid data length(s) supplied.
+	 * @return @ref BLE_ERROR_GAP_UUID_LIST_MISMATCH Invalid UUID list supplied.
+	 * @return @ref NRF_ERROR_BUSY The stack is busy, process pending events and retry.
+	 */
+	uint32_t setAddress(ble_gap_addr_t *p_addr, uint8_t addr_cycle_mode = BLE_GAP_ADDR_CYCLE_MODE_NONE);
+
 	//
 	/// @cond PRIVATE (internal used)
 	//
