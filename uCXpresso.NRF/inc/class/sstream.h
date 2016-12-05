@@ -2,8 +2,6 @@
  ===============================================================================
  Name        : SStream
  Author      : Jason
- Version     : v1.0.0
- Date		 : 2015/2/1
  Copyright   : Copyright (C) www.embeda.com.tw
  Description : Secure Stream (AES 128 CFB)
  ===============================================================================
@@ -13,6 +11,7 @@
  ---------+---------+--------------------------------------------+-------------
  2015/2/1	v1.0.0	First Edition									Jason
  2015/3/11	v1.0.1	Add event handle.								Jason
+ 2016/12/2  v1.1.0	Improve performance 							Jason
  ===============================================================================
  */
 
@@ -38,8 +37,7 @@ typedef enum {
  * @class SStream sstream.h "class/sstream.h"
  * @ingroup Peripherals
  */
-class SStream: public CThread, public CStream {
-	typedef void (*ss_event_handle_t) (SStream *p_ss, SS_EVENT_T event);
+class SStream:public CStream {
 public:
 	/**
 	 * @brief SStream constructor
@@ -49,44 +47,35 @@ public:
 	 * @param tx_fifo_size	Indicate the fifo size for TX buffer.
 	 * @param rx_fifo_size	Indicate the fifo size for RX buffer.
 	 */
-	SStream(const uint8_t *tx_key, const uint8_t *rx_key,CStream &s, size_t tx_fifo_size=32, size_t rx_fifo_size=32);
+	SStream(const uint8_t *tx_key, const uint8_t *rx_key,CStream &s);
 
 	/**
 	 * @brief Check the stream connection.
 	 */
-	virtual inline bool isConnected() {
-		return m_stream->isConnected();
-	}
 
-	/**
-	 * @brief Override the @ref CStream::wait member function.
-	 */
-	virtual bool wait(uint32_t timeout=MAX_DELAY_TIME);
+	// Need to run in Main-Loop
+	virtual bool isConnected();
 
-	/**
-	 * @brief Start the Secure Stream component.
-	 */
-	virtual bool start(int stack=88);
+	virtual int	 readable();
 
-	/**
-	 * Set SStream Events Handle
-	 */
-	inline void event(ss_event_handle_t func) {
-		m_on_event = func;
-	}
+	virtual int	 writeable();
 
+	virtual int  read(void *plaintext, int len, uint32_t block=MAX_DELAY_TIME);
+
+	virtual int  write(const void *plaintext, int len, uint32_t block=MAX_DELAY_TIME);
+
+	virtual void flush();
 	//
 	///@cond PRIVATE
 	//
 	virtual ~SStream();
 	virtual void onSend(bool fromISR);
+	virtual bool isTxBusy();
 protected:
-	ss_event_handle_t	m_on_event;
-	CSemaphore 	m_semWaitForConnected;
 	aesCFB		m_txCFB;
 	aesCFB		m_rxCFB;
 	CStream 	*m_stream;
-	virtual void run();
+	uint8_t		m_flag;
 	///@endcond
 };
 

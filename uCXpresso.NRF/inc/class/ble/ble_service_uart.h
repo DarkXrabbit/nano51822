@@ -54,8 +54,8 @@ public:
 				   uint16_t service_uuid = BLE_UUID_UART_SERVICE,
 				   uint16_t tx_char_uuid = BLE_UUID_UART_TX_CHARACTERISTIC,
 				   uint16_t rx_char_uuid = BLE_UUID_UART_RX_CHARACTERISTIC,
-				   size_t tx_fifo_size = 64,
-				   size_t rx_fifo_size = 64);
+				   size_t tx_fifo_size = 128,
+				   size_t rx_fifo_size = 128);
 
 	/**
 	 * @brief Check the TX char. be listened.
