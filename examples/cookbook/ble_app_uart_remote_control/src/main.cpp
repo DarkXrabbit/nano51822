@@ -36,14 +36,14 @@
 #include <class/string.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "nanoUART"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                          "nanoRemote"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     500                   /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
 //#define BOARD_PCA10001
-//#define BOARD_LILYPAD
-#define BOARD_NANO51822_UDK
+#define BOARD_LILYPAD
+//#define BOARD_NANO51822_UDK
 #include <config/board.h>
 
 CPin ledLeft(LED_PIN_0);	// for left

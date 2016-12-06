@@ -31,16 +31,19 @@
 #include <class/pin.h>
 
 #include <class/ble/ble_service_uart.h>
+#include <class/ble/ble_service_dfu.h>
 #include <class/ble/ble_conn_params.h>
 #include <class/timeout.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                          "nanoUART"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     50                    	/**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059					/**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
 #define BLE_ECHO	1
+
+//#define BOARD_LILYPAD
 #define BOARD_NANO51822_UDK
 #include <config/board.h>
 

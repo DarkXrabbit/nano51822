@@ -36,10 +36,14 @@
 #include <class/pin.h>
 
 // TODO: insert other definitions and declarations here
-#define DEVICE_NAME                          "nano51822"            /**< Name of device. Will be included in the advertising data. */
+#define DEVICE_NAME                          "nanoRF51"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                     500                    /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
+
+//#define BOARD_LILYPAD
+#define BOARD_NANO51822_UDK
+#include <config/board.h>
 
 //
 // Main Routine
@@ -80,10 +84,8 @@ int main(void) {
 	ble.m_advertising.commpany_identifier(APP_COMPANY_IDENTIFIER);	// add company identifier
 
 	// Optional: add standard profile uuid in advertisement.
-//	ble.m_advertising.add_uuid_to_complete_list(hrm);				// add hrm object to the uuid list of advertising
 
 	// Optional: add appearance to indicate who you are in advertisement.
-//	ble.m_advertising.appearance(BLE_APPEARANCE_HEART_RATE_SENSOR_HEART_RATE_BELT);
 	ble.m_advertising.update();										// update advertisement data
 
 	// Start advertising
@@ -99,7 +101,8 @@ int main(void) {
 	//
 	// Your Application setup code here
 	//
-
+	CPin led(LED_PIN_0);
+	led.output();
 
 	//
     // Enter main loop.
@@ -113,6 +116,6 @@ int main(void) {
     	//
     	// Your loop code here
     	//
-
+    	led.invert();
     }
 }
