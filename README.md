@@ -11,6 +11,12 @@ A RTOS C/C++ Framework for nRF51 (Bluetooth Low Energy)
 [Japan /Switch Sciencehttps](http://international.switch-science.com/catalog/2158) <br />
 [UK & Europe / Vurt BLE](http://vurt.blue/products/lilypad-for-nano51822?variant=1095070781) <br />
 
+v1.2.0 released 4th November 2016
+--------------------------------
+###Details: 
+	1. Kernal RTOS update to v9.0.0
+	2. Improve proformance of the secure stream.
+	3. bug fixed.
 
 v1.1.2 released 3th August 2016
 --------------------------------
