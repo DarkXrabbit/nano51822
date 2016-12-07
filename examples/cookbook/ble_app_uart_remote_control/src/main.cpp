@@ -27,18 +27,19 @@
 
 // TODO: insert other include files here
 #include <class/ble/ble_device.h>
+#include <class/ble/ble_conn_params.h>
 #include <class/ble/ble_service.h>
+#include <class/ble/ble_service_uart.h>
+#include <class/ble/uuid.h>
 #include <class/pin.h>
 #include <class/power.h>
-#include <class/ble/ble_service_uart.h>
-#include <class/ble/ble_conn_params.h>
 #include <class/timeout.h>
 #include <class/string.h>
 
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nanoRemote"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     500                   /**< The advertising interval (in ms). */
+#define APP_ADV_INTERVAL                     127                   /**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059                 /**< Company identifier for Apple Inc. as per www.bluetooth.org. */
 
 //#define BOARD_PCA10001
@@ -164,7 +165,7 @@ int main(void) {
 	//
 	// Add BLE UART Service
 	//
-	bleServiceUART nus(ble);	// declare a BLE "Nordic UART Service" (NUS) object
+	bleServiceUART nus(ble);
 
 	//
 	// Add "connection parameters update" negotiation. (optional)
@@ -215,7 +216,9 @@ int main(void) {
 				ch = nus.read();
 				if ( ch ) {
 					cmd.input(ch);
+#ifdef DEBUG
 					dbg.putc(ch);
+#endif
 				}
 			}
 		} else {

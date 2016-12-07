@@ -27,25 +27,30 @@
 
 // TODO: insert other include files here
 #include <class/ble/ble_device.h>
-#include <class/ble/ble_service.h>
-#include <class/pin.h>
-
-#include <class/ble/ble_service_uart.h>
-#include <class/ble/ble_service_dfu.h>
 #include <class/ble/ble_conn_params.h>
+#include <class/ble/ble_service.h>
+#include <class/ble/ble_service_uart.h>
+#include <class/ble/uuid.h>
+#include <class/pin.h>
 #include <class/timeout.h>
+#include <class/sstream.h>
 
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "nanoUART"            /**< Name of device. Will be included in the advertising data. */
 #define MANUFACTURER_NAME                    "uCXpresso.NRF"        /**< Manufacturer. Will be passed to Device Information Service. */
-#define APP_ADV_INTERVAL                     50                    	/**< The advertising interval (in ms). */
+#define APP_ADV_INTERVAL                     127                    	/**< The advertising interval (in ms). */
 #define APP_COMPANY_IDENTIFIER           	 0x0059					/**< Company identifier for Nordic Semi. as per www.bluetooth.org. */
 
 #define BLE_ECHO	1
+#define AES_STREAM	1
 
 //#define BOARD_LILYPAD
 #define BOARD_NANO51822_UDK
 #include <config/board.h>
+
+const char *uuid_service_base = "6E400000-B5A3-F393-E0A9-E50E24DCCA9E";
+const uint8_t txKey[] = {0x1B, 0xDE, 0x2A, 0xE5, 0x86, 0x2D, 0x17, 0x48, 0xE5, 0x3F, 0xE9, 0xB1, 0xFF, 0x97, 0x21, 0x1B};    // for BLE -> iOS
+const uint8_t rxKey[] = {0x1B, 0xEC, 0x2A, 0xE6, 0x87, 0x2D, 0x17, 0x48, 0xC5, 0x3F, 0xE9, 0xB1, 0xFE, 0x77, 0x23, 0x1B};    // for iOS -> BLE
 
 //
 // Main Routine
@@ -71,7 +76,8 @@ int main(void) {
 	//
 	// Add BLE UART Service
 	//
-	bleServiceUART nus(ble);			// declare a BLE "Nordic UART Service" (NUS) object
+	CUUID base(uuid_service_base);
+	bleServiceUART nus(ble, &base.uuid);			// declare a BLE "Nordic UART Service" (NUS) object
 
 	//
 	// Add "connection parameters update" negotiation. (optional)
@@ -96,6 +102,12 @@ int main(void) {
 	//
 	// Your Application setup code here
 	//
+#if AES_STREAM
+	SStream aes(txKey, rxKey, nus);
+	CStream *air = &aes;
+#else
+	CStream *air = &nus;
+#endif
 
 	CPin led1(LED1);	// led0 on P0.18
 	CPin led2(LED2);	// led1 on P0.19
@@ -104,31 +116,32 @@ int main(void) {
 	led2.output();	// set led1 as an output pin
 
 	CTimeout	tm;
-	uint8_t		ch, len, buffer[64];
+	uint8_t		len, buffer[64];
 
 	//
     // Enter main loop.
 	//
     while(1) {
-    	if ( nus.isAvailable() ) {	// check BLE NUS service
-    		if ( nus.readable() ) {
+    	if ( air->isConnected() ) {	// check BLE NUS service
+    		if ( air->readable() ) {
     			led2.invert();
-    			len = nus.read(buffer, nus.available());
+    			len = air->read(buffer, air->available());
 #if BLE_ECHO
-    			nus.write(buffer, len);
-    			for (ch=0; ch<len; ch++) {
+    			air->write(buffer, len);
+#endif
+
+#ifdef DEBUG
+    			for (uint8_t ch=0; ch<len; ch++) {
     				dbg.putc(buffer[ch]);
     			}
-#else
-    			dbg.write(buffer, len);		// echo to Debug Console
 #endif
     		}
 
+#ifdef DEBUG
     		if ( dbg.available() ) {
-    			ch = dbg.read();
-    			nus.write(ch);		// echo to BLE NUS service
+    			air->write(dbg.read());		// echo to BLE NUS service
     		}
-
+#endif
     	} else {
     		led2 = LED_OFF;
     	}
