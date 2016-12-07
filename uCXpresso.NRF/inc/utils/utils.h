@@ -24,6 +24,7 @@ extern int strifind(LPCTSTR str, LPCTSTR find);
 
 #define CMPIC(a, b) (((a)>='A' && (a)<='Z' ? (a)-'A' + 'a' : (a)) == ((b)>='A' && (b)<='Z' ? (b)-'A' + 'a' : (b)))
 
+extern int isNumber(char ch);
 extern uint32_t	gethex(LPCTSTR s);
 
 //extern double	fmodf(double f, double div); // include <arm_math.h>

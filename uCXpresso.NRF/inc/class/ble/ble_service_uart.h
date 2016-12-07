@@ -49,11 +49,11 @@ public:
 	 *
 	 */
 	bleServiceUART(bleDevice &ble,
-				   bool write_wo_resp = false,
 				   ble_uuid128_t const *base_uuid = &nus_base_uuid,
 				   uint16_t service_uuid = BLE_UUID_UART_SERVICE,
 				   uint16_t tx_char_uuid = BLE_UUID_UART_TX_CHARACTERISTIC,
 				   uint16_t rx_char_uuid = BLE_UUID_UART_RX_CHARACTERISTIC,
+				   bool write_wo_resp = false,
 				   size_t tx_fifo_size = 128,
 				   size_t rx_fifo_size = 128);
 
