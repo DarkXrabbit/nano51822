@@ -32,7 +32,8 @@ typedef struct swiftIO_packet {
 }swiftIO_packet_t;
 
 typedef enum opcode_e {
-	OP_DO_SET = 0
+	OP_DO_SET = 0,
+	OP_DI_GET
 }opcode_t;
 
 //
@@ -48,12 +49,15 @@ public:
 	bool writeable();
 	bool readable();
 
-	void runloop();
+	bool isConnected();
 
 	virtual ~swiftIO();
 protected:
-	CStream *m_stream;
-	CList	m_list;
+	CStream 			*m_stream;
+	CList				m_list;
+	swiftIO_packet_t 	*m_packet;
+	uint8_t 			m_step;
+	uint8_t 			m_index;
 };
 
 #endif /* SWIFTIO_H_ */

@@ -75,7 +75,7 @@ int main(void) {
 //	bleDeviceManager man(ble);
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME);	// set Device Name on GAP
+	ble.m_gap.settings(DEVICE_NAME, 7.5, 10);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);
 
 	//
@@ -130,21 +130,34 @@ int main(void) {
 	//
     while(1) {
 
-		swift.runloop();
+		if ( swift.isConnected() ) {
+			if ( (packet_in = swift.read()) != NULL ) {
+				switch(packet_in->opcode) {
+				case OP_DO_SET:{
+					// data[0] : pin number
+					// data[1] : pin value  0=LOW, 1=HIGH
+					uint8_t pin = packet_in->data[0];
+					CPin DO(pin);
+					DO.output((PIN_LEVEL_T) packet_in->data[1]);
+					}break;
 
-		if ( (packet_in = swift.read()) != NULL ) {
-			switch(packet_in->opcode) {
-			case OP_DO_SET:
-				// data[0] : pin number
-				// data[1] : pin value  0=LOW, 1=HIGH
-				uint8_t pin = packet_in->data[0];
-				CPin DO(pin);
-				DO.output((PIN_LEVEL_T) packet_in->data[1]);
-				break;
+				case OP_DI_GET:{
+					// data[0] : pin number
+					// data[1] : pin Input Mode
+					uint8_t pin = packet_in->data[0];
+					CPin DI(pin);
+					DI.input((PIN_INPUT_MODE_T) packet_in->data[1]);
+					// reply
+					uint8_t data[2];
+					data[0] = pin;
+					data[1] = DI.read();
+					swift.send(OP_DI_GET, 2,data);
+					}break;
+				}
+				// free packet_in & data
+				delete packet_in->data;
+				delete packet_in;
 			}
-			// free packet & data
-			delete packet_in->data;
-			delete packet_in;
 		}
 
 		if ( tm.isExpired(500) ) {
