@@ -70,7 +70,7 @@ int main(void) {
 	ble.enable();	// enable BLE SoftDevice stack
 
 	// GAP
-	ble.m_gap.settings(DEVICE_NAME, 50, 50, 0, 3000);	// set Device Name on GAP
+	ble.m_gap.settings(DEVICE_NAME, 7.5, 7.5);	// set Device Name on GAP
 	ble.m_gap.tx_power(BLE_TX_0dBm);	// set Output power
 
 	//
@@ -132,7 +132,8 @@ int main(void) {
 
 #ifdef DEBUG
     			for (uint8_t ch=0; ch<len; ch++) {
-    				dbg.putc(buffer[ch]);
+    				//dbg.putc(buffer[ch]);
+    				dbg.printf("%02x", buffer[ch]);
     			}
 #endif
     		}
