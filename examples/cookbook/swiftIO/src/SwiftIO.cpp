@@ -5,6 +5,7 @@
  Version     : v1.0.0
  Date		 : 2016年12月6日
  Copyright   : Copyright (C) www.embeda.com.tw
+ License	 : CC BY-NC-SA
  Description : TODO
  ===============================================================================
  History
@@ -18,7 +19,7 @@
 #include <string.h>
 #include <SwiftIO.h>
 
-#if defined(DEBUG)
+#if defined(DEBUG) && 0
 #include <debug.h>
 #include <class/serial.h>
 #define DBG 	dbg_printf

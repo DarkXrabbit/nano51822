@@ -4,7 +4,7 @@
  Author      :
  Version     : v1.0.0
  Copyright   : www.ucxpresso.net
- License	 :
+ License	 : CC BY-NC-SA
  Description :
 ===============================================================================
  	 	 	 	 	 	 	 	 History
@@ -35,7 +35,15 @@
 #include <class/ble/ble_service_uart.h>
 #include <class/ble/uuid.h>
 #include <class/power.h>
+
+#include <stdlib.h>
+#include <string.h>
+#include <class/thread.h>
+#include <class/list.h>
 #include <class/pin.h>
+#include <class/adc.h>
+#include <class/gpio_int.h>
+#include <class/sw_pwm.h>
 
 // TODO: insert other definitions and declarations here
 #define DEVICE_NAME                          "swiftIO"            /**< Name of device. Will be included in the advertising data. */
@@ -54,6 +62,44 @@
 //
 #include "SwiftIO.h"
 const char *swiftIO_base_uuid = "AFEA0000-17D0-42B2-BBD2-14718591D65E";
+
+//
+// GPIO Interrupt
+//
+swiftIO *pSwift;
+//class myInt: public gpioINT {
+//public:
+//	myInt(INT_T number,  uint8_t pin, SENSE_T sense=FALLING, PIN_INPUT_MODE_T mode=INTERNAL_PULL_UP) :
+//	gpioINT(number, NULL, pin, sense, mode) {
+//	}
+//
+//	virtual void onEvent() {
+//		pSwift->send(OP_INT_TOG, 1, &m_pin);
+//	}
+//};
+
+void senseTask(CThread *pthread, void *param) {
+	CList *interrupts = (CList *) param;
+
+	CPin led(LED_PIN_2);
+	led.output(LED_ON);
+
+	gpioSense::enable();
+	while(true) {
+		gpioSense::wait();
+		led.invert();
+
+		LIST_POS pos = interrupts->getHeadPos();
+		while( pos != NULL ) {
+			gpioSense *irq = (gpioSense *) interrupts->getAt(pos);
+			if ( irq->isActived() ) {
+				uint8_t pin = irq->pin();
+				pSwift->send(OP_INT_TOG, 1, &pin);
+			}
+			pos = interrupts->getNext(pos);
+		}
+	}
+}
 
 //
 // Main Routine
@@ -116,12 +162,27 @@ int main(void) {
 	//
 	// Your Application setup code here
 	//
-	CPin led(LED_PIN_0);
+	CPin led(LED_PIN_3);
 	led.output();
 
 	// Declare SwiftIO
 	swiftIO swift(stream2);
 	swiftIO_packet_t *packet_in;
+	pSwift = &swift;
+
+	// Analog
+	CAdc::init();
+	CAdc::enable();
+
+	// PWM
+	swPWM pwm(TIMER_1);
+	pwm.period(0.02);	// 20ms
+	pwm.enable();
+
+	// Interrupt Task
+	CList 	m_interrupts;
+	CThread thread(senseTask, &m_interrupts);
+	thread.start("irq", 96, PRI_HARDWARE);
 
 	CTimeout tm;
 
@@ -151,8 +212,67 @@ int main(void) {
 					uint8_t data[2];
 					data[0] = pin;
 					data[1] = DI.read();
-					swift.send(OP_DI_GET, 2,data);
+					swift.send(OP_DI_GET, sizeof(data), data);
 					}break;
+
+				case OP_AD_REF: {
+					CAdc::disable();
+					CAdc::reference((AREF_T)packet_in->data[0]);
+					CAdc::source((ADC_SOURCE_T)packet_in->data[1]);
+					CAdc::enable();
+					}break;
+
+				case OP_AD_GET: {
+					uint8_t pin = packet_in->data[0];
+					uint8_t data[3];
+					uint16_t value = 0;
+					data[0] = pin;
+					if ( pin > 0 && pin <= 6 ) {
+						if ( CAdc::read(analog_pin[pin], value) ) {
+							memcpy(data+1, &value, sizeof(value));
+						}
+					} else {
+						if ( CAdc::read(value) ) {
+							memcpy(data+1, &value, sizeof(value));
+						}
+					}
+					swift.send(OP_AD_GET, sizeof(data), data);
+					}break;
+
+				case OP_PWM_SET: {	// set PWM period (ms)
+					float second;
+					memcpy(&second, packet_in->data, sizeof(second));
+					pwm.period(second);
+					}break;
+
+				case OP_PWM_OUT: {
+					uint8_t pin = packet_in->data[0];
+					float second;
+					memcpy(&second, packet_in->data+1, sizeof(second));
+					pwm.pulsewidth(pin, second);
+					}break;
+
+				case OP_INT_SET: {
+					uint8_t pin = packet_in->data[0];
+					uint8_t sense = packet_in->data[1];
+					uint8_t mode = packet_in->data[2];
+					gpioSense *irq = new gpioSense(pin, (SENSE_T)sense, (PIN_INPUT_MODE_T)mode);
+					irq->enable();
+					m_interrupts.addHead(irq);
+					}break;
+
+				case OP_INT_DEL: {
+					uint8_t pin = packet_in->data[0];
+					for (uint8_t index=0; index<m_interrupts.count(); index++) {
+						gpioSense *irq = (gpioSense *) m_interrupts.getAt(index);
+						if ( irq != NULL && irq->pin() == pin ) {
+							m_interrupts.removeAt(index);
+							delete irq;
+							break;	// exit for-loop
+						}
+					}
+					}break;
+
 				}
 				// free packet_in & data
 				delete packet_in->data;

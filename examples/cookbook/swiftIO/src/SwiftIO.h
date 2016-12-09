@@ -5,6 +5,7 @@
  Version     : v1.0.0
  Date		 : 2016年12月6日
  Copyright   : Copyright (C) www.embeda.com.tw
+ License	 : CC BY-NC-SA
  Description : TODO
  ===============================================================================
  History
@@ -32,8 +33,17 @@ typedef struct swiftIO_packet {
 }swiftIO_packet_t;
 
 typedef enum opcode_e {
-	OP_DO_SET = 0,
-	OP_DI_GET
+	OP_HW_ID = 0,
+	OP_DI_MOD,
+	OP_DO_SET,
+	OP_DI_GET,
+	OP_AD_REF,
+	OP_AD_GET,
+	OP_PWM_SET,
+	OP_PWM_OUT,
+	OP_INT_SET,
+	OP_INT_DEL,
+	OP_INT_TOG
 }opcode_t;
 
 //

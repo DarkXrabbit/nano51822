@@ -51,11 +51,9 @@ int main(void) {
 	//
 	swPWM pwm(TIMER_1);
 	pwm.period(0.01);		// set the period time of PWM to 10ms.
-	pwm.add_channel(LED_PIN_0);	// add PWM channel with LED0
-	pwm.add_channel(LED_PIN_1);	// add PWM channel with LED1
-	pwm.add_channel(LED_PIN_2);	// add PWM channel with LED2
-	pwm.add_channel(LED_PIN_3);	// add PWM channel with LED3
 	pwm.enable();			// start the pwm
+
+	int pins[] = {LED_PIN_0, LED_PIN_1, LED_PIN_2, LED_PIN_3};
 
 	float y;
 	int x[4] = { 0, 10, 20, 30 };        // initialize all channels x degree
@@ -70,7 +68,7 @@ int main(void) {
 		for (int ch = 0; ch < 4; ch++) {
 			x[ch] = (x[ch] + 10) % 360;							// degree 0~360, step by 2
 			y = arm_sin_f32((x[ch] * M_PI) / 180.0f);           // y = sine @x
-			pwm.update(ch, map(y, -1.0f, 1.0f, 0.0f, 1.0f)); 	// update the duty-cycle of channel
+			pwm.output(pins[ch], map(y, -1.0f, 1.0f, 0.0f, 1.0f)); 	// update the duty-cycle of channel
 		}
 		sleep(10);    // speed
     }
