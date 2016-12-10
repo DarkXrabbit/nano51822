@@ -23,7 +23,7 @@
 #include <class/list.h>
 #include <class/pin.h>
 
-#define SW_PWM_RESOLUTION	(0.000064f)		///< PWM resolution = 64us.
+#define SW_PWM_RESOLUTION	(0.000028f)		///< PWM resolution was 64us.
 
 /**
  * @brief Sowftware PWM (slow)
@@ -56,26 +56,26 @@ public:
 	 */
 	virtual void disable();
 
-	/**
-	 * @brief add a PWM channel
-
-	 * @param pin To connect the pin to the PWM channel.
-	 * @param dutyCycle To set the duty cycle of PWM channel, the duty cycle is a percentage value. (ex. 0.1=10%, 0.52=52%)
-	 *
-	 * @retval channel number.
+	/** @brief set duty-cycle output
+	 * @param pin To connect the pin to the PWM pin.
+	 * @param value To set the duty cycle of PWM pin, the duty cycle is a percentage value. (ex. 0.1=10%, 0.52=52%)
 	 */
-	virtual int  add_channel(int pin, float dutyCycle=0.0f);
+	virtual void dutyCycle(int pin, float percent);
+
+	/** @brief set pulsewidth output in seconds.
+	 *
+	 */
+	virtual void pulsewidth(int pin, float seconds);
+
+	/**@brief RAW data output to PWM  pin
+	 *
+	 */
+	virtual void output(int pin, uint16_t pulsewidth);
 
 	/**
-	 * @brief update the channel duty-cycle of PWM.
-	 *
-	 * @prarm channel	Specified the PWM channel which created by "add_channel".
-	 * @param dutyCycle Update he new duty cycle value.
-	 *
-	 * @return
-	 * @retval	true	If update the duty cycle of channel successful.
+	 * @brief stop PWM on pin
 	 */
-	virtual bool update(int channel, float dutyCycle);
+	virtual void stop(int pin);
 
 	/**
 	 * @brief Get PWM channel count.
@@ -98,9 +98,12 @@ public:
 	virtual ~swPWM();
 	virtual void onTimer();
 protected:
+	ELEM_PTR find(int pin);
+
 	CList	 m_lstPin;
-	uint16_t m_cycle;
+	float	 m_period;
 	uint16_t m_sample_level;
+	uint16_t m_cycle;
 	///@endcond
 };
 

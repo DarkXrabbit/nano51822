@@ -96,6 +96,8 @@ public:
 	 */
 	virtual ELEM_PTR removeAt(LIST_POS pos);
 
+	virtual ELEM_PTR removeAt(int index);
+
 	/**Remove all element from the list.
 	 * \param free_elem is boolean value to indicate whether free the elements memory.
 	 * \param isObj is boolean value, if free_elem is true, and isObj is true, the elements will be freed with the CObject type.

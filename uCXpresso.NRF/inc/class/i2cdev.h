@@ -33,7 +33,7 @@
  *
  * @ingroup Peripherals
  */
-class I2Cdev: public twiMaster {
+class I2Cdev {
 public:
 	I2Cdev(int dat_pin=DEF_I2C_SDA_PIN, int clk_pin=DEF_I2C_SCL_PIN, TWI_FREQ_T freq=TWI_FREQ_100KHZ);
 

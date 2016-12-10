@@ -56,7 +56,7 @@ int main(void) {
 	led1.output();
 
 	I2Cdev i2c(28, 29);	// declare the i2c on the P0.28 (SDA) and P0.29 (SCL)
-	i2c.enable();		// enable the i2c
+	//i2c.enable();		// enable the i2c
 
 	CTimeout tm;
 

@@ -29,6 +29,9 @@ typedef enum {
 	TWI_FREQ_400KHZ = 0x06680000UL
 }TWI_FREQ_T;
 
+const TWI_FREQ_T twi_freqs[] = {TWI_FREQ_100KHZ, TWI_FREQ_250KHZ, TWI_FREQ_400KHZ};
+
+#define TWI_READ_BIT	0
 
 class twiMaster: public CPeripheral {
 public:
@@ -38,7 +41,7 @@ public:
 	 * @param dat_pin Specify a data pin number.
 	 * @param clk_pin Specify a clock pin number.
 	 */
-	twiMaster(int dat_pin, int clk_pin, TWI_FREQ_T freq);
+	static void init(int dat_pin, int clk_pin, TWI_FREQ_T freq);
 
 	/**
 	 * @brief To enable the two wires interface.
@@ -49,12 +52,12 @@ public:
 	 * @retval	true 	If enable successful.
 	 * @retval	false	If enable failed.
 	 */
-	virtual bool enable();
+	static bool enable();
 
 	/**
 	 * @brief To disable the two wires interface.
 	 */
-	virtual void disable();
+	static void disable();
 
 	/**
 	 * @brief Function for transferring data over TWI bus.
@@ -79,7 +82,7 @@ public:
 	 * @retval true Data transfer succeeded without errors.
 	 * @retval false Data transfer failed.
 	 */
-	virtual bool transfer(uint8_t address, uint8_t *data, uint8_t length, bool issue_stop_condition);
+	static bool transfer(uint8_t address, uint8_t *data, uint8_t length, bool issue_stop_condition);
 };
 
 #endif /* TWI_MASTER_H_ */
