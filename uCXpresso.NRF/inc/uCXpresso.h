@@ -22,9 +22,9 @@ extern "C" {
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		2
 #define uCXpresso_VER_REV		1
-#define uCXpresso_VER_RC		3
-#define uCXpresso_VER_BUILD		"2016/12/9"
-#define uCXpresso_VER_STR		"V1.2.1 rc3"
+#define uCXpresso_VER_RC		4
+#define uCXpresso_VER_BUILD		"2016/12/12"
+#define uCXpresso_VER_STR		"V1.2.1 rc4"
 
 //
 //	defined
@@ -153,6 +153,7 @@ extern uint32_t GetSystemTickCount();
 #define bit_set(f,b)	f |= bit(b)
 #define bit_clr(f,b)	f &= ~bit(b)
 #define bit_chk(f,b)    ((f & bit(b))? true : false)
+#define bit_get(f,b)	((f >> b) & 1)
 
 //
 // pool memory functions

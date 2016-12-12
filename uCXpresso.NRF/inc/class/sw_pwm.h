@@ -20,10 +20,11 @@
 
 #include <class/thread.h>
 #include <class/timer.h>
-#include <class/list.h>
+#include <class/mutex.h>
 #include <class/pin.h>
 
-#define SW_PWM_RESOLUTION	(0.000028f)		///< PWM resolution was 64us.
+#define SW_PWM_RESOLUTION	(0.000064f)		///< PWM resolution was 64us.
+#define MAX_PWM_PIN			6
 
 /**
  * @brief Sowftware PWM (slow)
@@ -73,17 +74,14 @@ public:
 	virtual void output(int pin, uint16_t pulsewidth);
 
 	/**
-	 * @brief stop PWM on pin
+	 * @brief remove All PWM pin
 	 */
-	virtual void stop(int pin);
+	virtual void removeAll();
 
 	/**
-	 * @brief Get PWM channel count.
-	 * @return Number of channel of PWM.
+	 * @brief remove a PWM pin
 	 */
-	inline int count() {
-		return m_lstPin.count();
-	}
+	virtual void remove(int pin);
 
 	/**
 	 * @brief Get current sample level.
@@ -98,9 +96,7 @@ public:
 	virtual ~swPWM();
 	virtual void onTimer();
 protected:
-	ELEM_PTR find(int pin);
-
-	CList	 m_lstPin;
+	int find(int pin);
 	float	 m_period;
 	uint16_t m_sample_level;
 	uint16_t m_cycle;

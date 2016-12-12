@@ -87,6 +87,7 @@ public:
 protected:
 	uint8_t	m_sense;
 	uint8_t m_mode;
+	uint8_t m_laststate;
 	/// @endcond
 };
 
