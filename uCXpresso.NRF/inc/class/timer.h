@@ -68,12 +68,22 @@ public:
 	 * @brief Enable the timer.
 	 * @warning To set the period time before to enable the timer !!
 	 */
-	virtual void enable();	// start
+	virtual void enable(bool start = true);	// start
 
 	/**
 	 * @brief Disable the timer.
 	 */
 	virtual void disable();	// stop
+
+	/*
+	 * @brief start to resume the stoped timer
+	 */
+	void start();
+
+	/**
+	 * @brief stop the timer
+	 */
+	void stop();
 
 	/**
 	 * @brief Waiting for timer interrupt.

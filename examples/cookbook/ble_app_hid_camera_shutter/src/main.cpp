@@ -41,11 +41,6 @@
 #define MANUFACTURER_NAME                "uCXpresso.NRF"		/**< Manufacturer. Will be passed to Device Information Service. */
 #define APP_ADV_INTERVAL                 2000					/**< The advertising interval (in ms). */
 
-#define PNP_ID_VENDOR_ID_SOURCE          0x02					/**< Vendor ID Source. */
-#define PNP_ID_VENDOR_ID                 0x1915					/**< Vendor ID. */
-#define PNP_ID_PRODUCT_ID                0xEEEE					/**< Product ID. */
-#define PNP_ID_PRODUCT_VERSION           0x0001					/**< Product Version. */
-
 //
 // Board LED define
 //
@@ -112,26 +107,6 @@ int main(void) {
 	//
 	bleDevice ble;
 	ble.enable("Shutter", "1234");	// enable BLE SoftDevice task
-
-	//
-	// update device information
-	//
-	ble_dis_pnp_id_t pnp_id;
-    pnp_id.vendor_id_source = PNP_ID_VENDOR_ID_SOURCE;
-    pnp_id.vendor_id        = PNP_ID_VENDOR_ID;
-    pnp_id.product_id       = PNP_ID_PRODUCT_ID;
-    pnp_id.product_version  = PNP_ID_PRODUCT_VERSION;
-
-// remove from v1.1.0+, and move to ble.enable(...)
-//	ble.information("uCXpresso",
-//					"shutter",
-//					"1234",
-//					NULL,
-//					NULL,
-//					NULL,
-//					NULL,
-//					&pnp_id
-//					);
 
 	// Pin to clear all center list
 	CPin btn(17);
