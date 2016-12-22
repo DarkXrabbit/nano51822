@@ -21,10 +21,10 @@ extern "C" {
 /*! \cond PRIVATE */
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		2
-#define uCXpresso_VER_REV		1
+#define uCXpresso_VER_REV		2
 #define uCXpresso_VER_RC		RELEASED
 #define uCXpresso_VER_BUILD		"2016/12/16"
-#define uCXpresso_VER_STR		"V1.2.1"
+#define uCXpresso_VER_STR		"V1.2.2"
 
 //
 //	defined
@@ -43,7 +43,8 @@ extern "C" {
 //	#define FALSE	false
 //	#define BOOL	bool
 //	#define __packed __attribute__ ((__packed__))
-#define ALIGN4 __attribute__ ((aligned (4)))
+#define ALIGN4 	__attribute__ ((aligned (4)))
+#define WEAK 	__attribute__ ((weak))
 #endif
 
 typedef const char*			LPCTSTR;

@@ -57,6 +57,7 @@ const ble_uuid128_t science_base_uuid = {
 #include "goosci_utility.h"
 #include <class/adc.h>
 #include <utils/utils.h>
+#include <dust_density.h>
 
 //
 // Main Routine
@@ -87,7 +88,6 @@ int main(void) {
 	// Add BLE UART Service
 	//
 	bleServiceUART	bleScience( ble,
-								false,
 								&science_base_uuid,
 								UUID_SCIENCE_SERVICE,
 								UUID_SCIENCE_VALUE,
@@ -124,8 +124,12 @@ int main(void) {
 	//
 	// Initialize & enable the ADC core
 	//
-	CAdc::init();
+	CAdc::init();	// Input Range. 0 - 3.6V  =  0 - 1023
 	CAdc::enable();
+
+	// GP2Y1010AU0F
+	GP2Y1010 gp2y(1, 30);
+	gp2y.enable();
 
 	//
 	CTimeout	tm, period;
@@ -148,11 +152,14 @@ int main(void) {
     		if ( period.isExpired(1000) ) {
     			period.reset();
 				if ( pin_type == ANALOG ) {
-					if ( pin <= 5) { // AD0 - AD5
-						CAdc::pin(analog_pin[pin+1]);
-						CAdc::read(value);
+					// AD0 - to read the PM2.5 sensor
+					if ( pin == 0 ) {
+						sensorValue = (uint16_t) (gp2y.value() * 1000);	// x1000 = ug/m3
+
+					// AD1 - AD5
+					} else if ( pin <= 5) {
+						CAdc::read(analog_pin[pin+1], value);
 						sensorValue = (value * 3.52f); 	// mV = (value x 3.6V / 1024) x 1000
-						DBG("analog[%d] = %d\n", pin, sensorValue);
 					}
 				} else {
 					CPin di(pin);

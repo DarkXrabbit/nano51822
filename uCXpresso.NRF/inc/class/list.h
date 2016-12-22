@@ -81,6 +81,11 @@ public:
 	 */
 	virtual ELEM_PTR getAt(int index);
 
+	/**
+	 * @brief Remove element from list.
+	 */
+	virtual bool remove(ELEM_PTR elem);
+
 	/**Remove element from head of list.
 	 * \return the element point from the list, if return NULL, means failed.
 	 */
@@ -146,6 +151,10 @@ public:
 	 */
 	virtual LIST_POS insertAfter(LIST_POS pos, ELEM_PTR elem);
 
+
+	/**
+	 * @brief Array operator []
+	 */
 	virtual inline ELEM_PTR operator [](int index) {
 		return getAt(index);
 	}
