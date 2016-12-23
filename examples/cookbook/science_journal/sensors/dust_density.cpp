@@ -18,7 +18,7 @@
 #include "dust_density.h"
 #include <class/adc.h>
 #include <class/pin.h>
-#include <class/kalman.h>
+#include <class/middle_filter.h>
 
 #define SENSOR_DEBUG	0
 
@@ -61,7 +61,7 @@ void GP2Y1010::run() {
 	CPin led(m_led_pin);
 	uint16_t raw_value;
 	float voltage;
-	CKalman kalman;
+	CMiddleFilter filter(15);
 	led.output(HIGH);
 	while(isAlive()) {
 		led = LOW;		// LED_ON
@@ -73,10 +73,13 @@ void GP2Y1010::run() {
 		// VCC = 5V
 		//voltage = map(raw_value, 0, 1023, 0, 5.0);
 
-		// VCC = 3V, map to 5V
-		voltage = map(raw_value, 0, 512, 0, 5.0);
-		if ( voltage <= 1.176 && voltage > 0.588) {	// noise filter
-			m_value = kalman.filter((voltage * 6.f / 35.f) - 0.1);
+		// VCC = 3V, map to 5V. 852 = (3v x 1024 /3.6) - 1
+		voltage = map(raw_value, 0, 852, 0, 5.0);
+
+		// Voc = no dust = 0.1v
+		if (  voltage >= 0.1) {
+			// map Voc ~ Vmax to 0 ~ 0.5 mg/m3
+			m_value = filter.update(map(voltage, 0.1, 3.75, 0, 0.5));
 		}
 		DBG("raw:%d voltage:%0.2f value:%0.4f\n", raw_value, voltage, m_value);
 		sleep(100);

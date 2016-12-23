@@ -148,8 +148,8 @@ int main(void) {
     			handle(buffer, size);
     		}
 
-    		// send data at every 60 second
-    		if ( period.isExpired(60*1000) ) {
+    		// send data at every 10 second
+    		if ( period.isExpired(10*1000) ) {
     			period.reset();
 				if ( pin_type == ANALOG ) {
 					// AD0 - to read the PM2.5 sensor
