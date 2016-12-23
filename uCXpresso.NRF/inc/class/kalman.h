@@ -43,7 +43,7 @@ public:
 	 *
 	 * @return the filter result.
 	 */
-	virtual float filter(float value);
+	virtual float update(float value);
 
 	//
 	///@cond

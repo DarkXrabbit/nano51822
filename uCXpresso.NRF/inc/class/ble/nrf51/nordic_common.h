@@ -28,10 +28,14 @@
 
 /** Leaves the minimum of the two arguments */
 /*lint -emacro(506, MIN) */ /* Suppress "Constant value Boolean */ 
+#ifndef MIN
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
+#endif
 /** Leaves the maximum of the two arguments */
 /*lint -emacro(506, MAX) */ /* Suppress "Constant value Boolean */ 
+#ifndef MAX
 #define MAX(a, b) ((a) < (b) ? (b) : (a))
+#endif
 
 #define BIT_0 0x01 /**< The value of bit 0 */
 #define BIT_1 0x02 /**< The value of bit 1 */

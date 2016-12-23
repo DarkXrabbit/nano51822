@@ -21,10 +21,10 @@ extern "C" {
 /*! \cond PRIVATE */
 #define uCXpresso_VER_MAJOR		1
 #define uCXpresso_VER_MINOR		2
-#define uCXpresso_VER_REV		2
-#define uCXpresso_VER_RC		RELEASED
+#define uCXpresso_VER_REV		3
+#define uCXpresso_VER_RC		1
 #define uCXpresso_VER_BUILD		"2016/12/16"
-#define uCXpresso_VER_STR		"V1.2.2"
+#define uCXpresso_VER_STR		"V1.2.3"
 
 //
 //	defined
@@ -190,13 +190,17 @@ extern void *tryMalloc(size_t size);	// try to malloc a memory with
 //
 #define MHZ(x)				(x*1000000ul)
 #define KHZ(x)				(x*1000ul)
-//#define MAX(a, b)			(((a) > (b)) ? (a) : (b))
-//#define MIN(a, b)			(((a) < (b)) ? (a) : (b))
 #define ABS(a)				(((a) < 0) ? -(a) : (a))
 #define OFFSET(a, b, max)	(((a) >= (b)) ? (a-b):(max-b+a+1))		// offset
-
 #define MAX_UINT32			0xffffffff
 #define CRLF				"\r\n"
+#define loopIn(x, min, max) ((x+1) <= max ? x+1 : min)
+#ifndef MAX
+#define MAX(a, b)			(((a) > (b)) ? (a) : (b))
+#endif
+#ifndef MIN
+#define MIN(a, b)			(((a) < (b)) ? (a) : (b))
+#endif
 
 //#ifndef MSB
 //#define MSB(a) (uint8_t)(((a) & 0xFF00) >> 8)
